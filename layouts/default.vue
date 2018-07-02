@@ -1,9 +1,7 @@
 <template>
   <div>
     <div>
-    <b-navbar  style="background-color: #C4F8E5 !important; border-bottom: 1px;
-    border-bottom: solid;
-    border-bottom-color:#e6eae99e" toggleable variant="light">
+    <b-navbar  style="   background: linear-gradient(to right bottom, rgb(205, 244, 215) 21%, rgba(100, 231, 231, 0.94) 135%); !important; box-shadow: 0px 2px 4px -1px rgba(0,0,0,0.2), 0px 4px 5px 0px rgba(0, 0, 0, 0), 0px 1px 10px 0px #00000003;" toggleable variant="light">
         <b-navbar-toggle style="border-color: rgba(0, 0, 0, 0);    padding-left: 0px;
     padding-right: 0px;" target="nav_text_collapse"></b-navbar-toggle>
         <!-- <b-navbar-brand>BootstrapVue</b-navbar-brand> -->
