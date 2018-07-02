@@ -6,12 +6,12 @@
 
 <b-row class="my-1">
     <b-col sm="10">
-      <b-form-input id="input-large" size="lg" v-model="name" type="text" placeholder="ชื่อเพจของคุณ"></b-form-input>
+      <b-form-input required id="input-large" size="lg" v-model="name" type="text" placeholder="ชื่อเพจของคุณ"></b-form-input>
     </b-col>
   </b-row>
     <b-row class="my-1">
     <b-col sm="10" style="margin-top: 19px;">
-      <b-form-input id="input-large" size="lg" v-model="contactUrl" type="text" placeholder="Line url / Facebook page url "></b-form-input>
+      <b-form-input required id="input-large" size="lg" v-model="contactUrl" type="text" placeholder="Line url / Facebook page url "></b-form-input>
     </b-col>
   </b-row>
 <br>
@@ -41,11 +41,15 @@ import axios from 'axios';
  
  let data = {
           name: this.name,
-          contactUrl: this.contactUrl  
+          contactUrl: this.contactUrl,
+          username: this.$store.state.user.username  
         }
  
-        axios.post('http://localhost:8000/agent/create', data)
-          .then(res => console.log(res.data))
+        axios.patch('http://localhost:8000/agent/update', data)
+          .then((res) => {
+            this.$router.push('/user/create')
+            console.log(res.data)
+          })
           .catch(error => console.log(error))
 
           //    axios.post('https://tutor-8e729.firebaseio.com/agent/create.json', data)

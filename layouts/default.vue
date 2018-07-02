@@ -12,7 +12,7 @@
                 <nuxt-link to="/profile">Profile</nuxt-link>
                 <nuxt-link to="/tutor/job">job</nuxt-link>
                 <nuxt-link to="/user/seeall">Seeall</nuxt-link>
-                <nuxt-link to="/user/create">Profile</nuxt-link>
+                <nuxt-link to="/user/create">Create</nuxt-link>
                 <nuxt-link to="/signup">Signup</nuxt-link>
                 
 

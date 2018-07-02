@@ -3,7 +3,7 @@
 <br><br>
   <div>
     <h5 style="color: #8f9aa4;">วางงานของคุณที่นี่</h5>
-    <b-form-textarea id="textarea1"
+    <b-form-textarea required id="textarea1"
                      v-model="text"
                      placeholder="Enter something"
                      :rows="8"

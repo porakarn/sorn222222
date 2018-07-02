@@ -6,18 +6,18 @@
 
 <b-row class="my-1">
     <b-col sm="10">
-      <b-form-input id="input-large" size="lg"  type="text" placeholder="Username"></b-form-input>
+      <b-form-input required id="input-large" size="lg" v-model="username" type="text" placeholder="Username"></b-form-input>
     </b-col>
   </b-row>
-    <b-row class="my-1">
+    <!-- <b-row class="my-1">
     <b-col sm="10" style="margin-top: 19px;">
       <b-form-input id="input-large" size="lg"  type="text" placeholder="Password"></b-form-input>
     </b-col>
-  </b-row>
+  </b-row> -->
 <br>
   <div>
-  <b-button type="submit" style="background-color: #33C1C1; border: 0px; padding-left: 36px;
-    padding-right: 36px;">สมัคร</b-button>
+  <b-button type="submit" size="lg" style="background-color: #33C1C1; border: 0px; padding-left: 56px;
+    padding-right: 56px;">สมัคร</b-button>
 </div>
       </form>
 
@@ -31,7 +31,7 @@ import axios from 'axios';
  export default {
     data(){
     return {
-      
+        username:'',
     }
 },
 
@@ -39,10 +39,26 @@ import axios from 'axios';
     onCreate() {
  
 
+ let data = {
+          username: this.username,
+          
+        }
  
-        // axios.post('http://localhost:8000/agent/create', data)
-        //   .then(res => console.log(res.data))
-        //   .catch(error => console.log(error))
+        axios.post('http://localhost:8000/signup', data)
+          .then((res) => { 
+              
+              console.log(res.data)
+              
+   this.$store.dispatch('setToken', res.data.token)
+   this.$store.dispatch('setUser', res.data.user)
+   this.$router.push('/user/user')
+
+          })
+          .catch(error => console.log(error))
+
+
+//    this.$store.dispatch('setToken', 'sss')
+//    this.$store.dispatch('setUser','ssdd')
 
           //    axios.post('https://tutor-8e729.firebaseio.com/agent/create.json', data)
           // .then(res => console.log(res.data))
