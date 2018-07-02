@@ -42,8 +42,8 @@
                      :max-rows="9">
     </b-form-textarea>
     <br>
-    <b-button style="background-color: #33C1C1; border: 0px; padding-left: 36px;
-    padding-right: 36px;">สมัคร</b-button>
+    <b-button size="lg" style="background-color: #33C1C1; border: 0px; padding-left: 56px;
+    padding-right: 56px;">สมัคร</b-button>
 </b-container>
 </template>
 
@@ -68,11 +68,11 @@ border-top: 0px;
          color: #ffffff;
     text-decoration: none;
     background-color: #33C1C1;
-    padding: 2px;
+    padding: 5px;
     padding-left: 7px;
     padding-right: 7px;
     border-radius: 4px;
-    font-size: 15px;
+    font-size: 18px;
 
 }
 </style>
