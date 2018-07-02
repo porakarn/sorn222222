@@ -8,6 +8,15 @@
         <b-collapse is-nav id="nav_text_collapse">
             <b-navbar-nav>
                 <b-nav-text>Navbar text</b-nav-text>
+                <nuxt-link to="/user/user">Users</nuxt-link>
+                <nuxt-link to="/profile">Profile</nuxt-link>
+                <nuxt-link to="/tutor/job">job</nuxt-link>
+                <nuxt-link to="/user/seeall">Seeall</nuxt-link>
+                <nuxt-link to="/user/create">Profile</nuxt-link>
+                <nuxt-link to="/signup">Signup</nuxt-link>
+                
+
+
             </b-navbar-nav>
         </b-collapse>
     </b-navbar>

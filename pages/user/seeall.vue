@@ -181,6 +181,48 @@
          </b-row>
           </b-modal>
 </div>
+
+
+
+<div style="position: fixed;
+  bottom: -1px; 
+  background-color: white;">
+<b-row>
+ิ<b-col>
+
+
+<p>Seeall</p>
+
+</b-col> 
+<b-col>
+
+
+<p>Seeall</p>
+
+</b-col>
+<b-col>
+
+
+<p>Seeall</p>
+
+</b-col>
+<b-col>
+
+
+<p>Profile</p>
+
+
+</b-col>
+
+
+</b-row>
+
+</div>
+
+
+
+
+
 </b-container fluid>
 
 </template>
