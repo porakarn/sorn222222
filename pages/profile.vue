@@ -32,7 +32,7 @@
                   <a href="#"
            class="card-link">IELTS</a>
         <b-link href="#"
-                class="card-link">ENG</b-link></div>
+                class="card-link">เคมี</b-link></div>
 <br>
                  <p style="color: #8f9aa4; border:1px !important;">วางงานของคุณที่นี่</p>
     <b-form-textarea id="textarea1"
@@ -69,8 +69,8 @@ border-top: 0px;
     text-decoration: none;
     background-color: #33C1C1;
     padding: 5px;
-    padding-left: 7px;
-    padding-right: 7px;
+    padding-left: 9px;
+    padding-right: 9px;
     border-radius: 4px;
     font-size: 18px;
 
