@@ -44,7 +44,7 @@ import axios from 'axios';
           
         }
  
-        axios.post('http://localhost:8000/signup', data)
+        axios.post('https://frozen-mesa-40722.herokuapp.com/signup', data)
           .then((res) => { 
               
               console.log(res.data)
