@@ -26,12 +26,12 @@
 
   bottom: 0px; 
   background-color: white;
-  height: 51px;">
+  height: 53px;">
 
-<b-row style="    margin-top: 13px;">    
+<b-row style="    margin-top: 14px;">    
         
 <b-col cols="3" style="text-align: center;" >
-<div><i style=" font-size: 26px; color: #7f8082;" class="fa fa-search mx-auto" aria-hidden="true"></i>
+<div><i style=" font-size: 28px; color: #7f8082;" class="fa fa-search mx-auto" aria-hidden="true"></i>
 </div>
 
 
@@ -39,13 +39,13 @@
 </b-col> 
 
 <b-col cols="3" style="text-align: center;" >
-<div><i style="font-size: 29px; color: #7f8082;"  class="fa fa-plus-square-o mx-auto " aria-hidden="true"></i>
+<div><i style="font-size: 31px; color: #7f8082;"  class="fa fa-plus-square-o mx-auto " aria-hidden="true"></i>
 </div>
 
 
 </b-col>
 <b-col cols="3" style="text-align: center;" >
-<div><i style=" font-size: 26px; color: #7f8082;"  class="fa fa-bell-o mx-auto" aria-hidden="true"></i>
+<div><i style=" font-size: 28px; color: #7f8082;"  class="fa fa-bell-o mx-auto" aria-hidden="true"></i>
 </div>
 
 
@@ -53,7 +53,7 @@
 </b-col>
 
 <b-col cols="3" style="text-align: center;"  >
-<div><i style=" font-size: 26px; color: #7f8082;"  class="fa fa-user-circle mx-auto" aria-hidden="true"></i>
+<div><i style=" font-size: 28px; color: #7f8082;"  class="fa fa-user-circle mx-auto" aria-hidden="true"></i>
 </div>
 
 
