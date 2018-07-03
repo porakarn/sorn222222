@@ -7,16 +7,18 @@
   <b-nav-item>ปิดแล้ว</b-nav-item>
 </b-nav>
 <br>
-    <div>
+    <div v-for="course in courses" >
+
+
     <b-card v-b-modal.modal-center style="    margin-bottom: 5px;   box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.1);
 " 
            > <b-row>  <b-col cols="10" style="    padding-right: 0px;
 ">
-        <p style=" color:#2f2f2f" class="card-text">A123 IELTS ขอพี่ จุฬา
-             <br>ช ม 4 ( สวนกุหลาบ ) 
+        <p style="  white-space: pre-wrap; color:#2f2f2f"  class="card-text"> {{ course.job}}
+             <!-- <br>ช ม 4 ( สวนกุหลาบ ) 
 <br>  สยามพารากอน ส-อ 12-14 น
 <br> ค่าสอน 600 fee 1200
- 
+  -->
          </p>
          <div class="por" >
         <a href="#"
@@ -27,130 +29,10 @@
     padding-right: 3px;" cols="2">ว่าง</b-col> </b-row>
 
     </b-card>
-    <b-card style="    margin-bottom: 5px;   box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.1);
-" 
-           > <b-row>  <b-col cols="10" style="    padding-right: 0px;
-">
-        <p style=" color:#2f2f2f" class="card-text">A123 IELTS ขอพี่ จุฬา
-             <br>ช ม 4 ( สวนกุหลาบ ) 
-<br>  สยามพารากอน ส-อ 12-14 น
-<br> ค่าสอน 600 fee 1200
- 
-         </p>
-         <div class="por" >
-        <a href="#"
-           class="card-link">IELTS</a>
-        <b-link href="#"
-                class="card-link">ENG</b-link></div></b-col> 
-                        <b-col style="    padding-left: 10px;
-    padding-right: 3px;" cols="2">ว่าง</b-col> </b-row>
-
-    </b-card>
-    <b-card style="    margin-bottom: 5px;   box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.1);
-" 
-           > <b-row>  <b-col cols="10" style="    padding-right: 0px;
-">
-        <p style=" color:#2f2f2f" class="card-text">A123 IELTS ขอพี่ จุฬา
-             <br>ช ม 4 ( สวนกุหลาบ ) 
-<br>  สยามพารากอน ส-อ 12-14 น
-<br> ค่าสอน 600 fee 1200
- 
-         </p>
-         <div class="por" >
-        <a href="#"
-           class="card-link">IELTS</a>
-        <b-link href="#"
-                class="card-link">ENG</b-link></div></b-col> 
-                        <b-col style="    padding-left: 10px;
-    padding-right: 3px;" cols="2">ว่าง</b-col> </b-row>
-
-    </b-card>
-    <b-card style="    margin-bottom: 5px;   box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.1);
-" 
-           > <b-row>  <b-col cols="10" style="    padding-right: 0px;
-">
-        <p style=" color:#2f2f2f" class="card-text">A123 IELTS ขอพี่ จุฬา
-             <br>ช ม 4 ( สวนกุหลาบ ) 
-<br>  สยามพารากอน ส-อ 12-14 น
-<br> ค่าสอน 600 fee 1200
- 
-         </p>
-         <div class="por" >
-        <a href="#"
-           class="card-link">IELTS</a>
-        <b-link href="#"
-                class="card-link">ENG</b-link></div></b-col> 
-                        <b-col style="    padding-left: 10px;
-    padding-right: 3px;" cols="2">ว่าง</b-col> </b-row>
-
-    </b-card>
-    <b-card style="    margin-bottom: 5px;   box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.1);
-" 
-           > <b-row>  <b-col cols="10" style="    padding-right: 0px;
-">
-        <p style=" color:#2f2f2f" class="card-text">A123 IELTS ขอพี่ จุฬา
-             <br>ช ม 4 ( สวนกุหลาบ ) 
-<br>  สยามพารากอน ส-อ 12-14 น
-<br> ค่าสอน 600 fee 1200
- 
-         </p>
-         <div class="por" >
-        <a href="#"
-           class="card-link">IELTS</a>
-        <b-link href="#"
-                class="card-link">ENG</b-link></div></b-col> 
-                        <b-col style="    padding-left: 10px;
-    padding-right: 3px;" cols="2">ว่าง</b-col> </b-row>
-
-    </b-card>
-    <b-card style="    margin-bottom: 5px;   box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.1);
-" 
-           > <b-row>  <b-col cols="10" style="    padding-right: 0px;
-">
-        <p style=" color:#2f2f2f" class="card-text">A123 IELTS ขอพี่ จุฬา
-             <br>ช ม 4 ( สวนกุหลาบ ) 
-<br>  สยามพารากอน ส-อ 12-14 น
-<br> ค่าสอน 600 fee 1200
- 
-         </p>
-         <div class="por" >
-        <a href="#"
-           class="card-link">IELTS</a>
-        <b-link href="#"
-                class="card-link">ENG</b-link></div></b-col> 
-                        <b-col style="    padding-left: 10px;
-    padding-right: 3px;" cols="2">ว่าง</b-col> </b-row>
-
-    </b-card>
-    <b-card   style="    margin-bottom: 5px;"
-           >
-        <p style=" color:#2f2f2f" class="card-text">A123 IELTS ขอพี่ จุฬา
-             <br>ช ม 4 ( สวนกุหลาบ ) 
-<br>  สยามพารากอน ส-อ 12-14 น
-<br> ค่าสอน 600 fee 1200
- 
-         </p>
-         <div class="por" >
-        <a href="#"
-           class="card-link">IELTS</a>
-        <b-link href="#"
-                class="card-link">ENG</b-link></div>
-    </b-card>
-    <b-card   style="    margin-bottom: 5px;"
-           >
-        <p style=" color:#2f2f2f" class="card-text">A123 IELTS ขอพี่ จุฬา
-             <br>ช ม 4 ( สวนกุหลาบ ) 
-<br>  สยามพารากอน ส-อ 12-14 น
-<br> ค่าสอน 600 fee 1200
- 
-         </p>
-         <div class="por" >
-        <a href="#"
-           class="card-link">IELTS</a>
-        <b-link href="#"
-                class="card-link">ENG</b-link>
-                </div>
-    </b-card>
+   
+    
+   
+   
      <b-modal hide-header  hide-footer id="modal-center" centered title="Bootstrap-Vue">
  <p style=" color:#2f2f2f" class="card-text">A123 IELTS ขอพี่ จุฬา
              <br>ช ม 4 ( สวนกุหลาบ ) 
@@ -180,6 +62,14 @@
 
          </b-row>
           </b-modal>
+
+
+
+
+
+
+
+
 </div>
 
 
@@ -194,11 +84,22 @@
 
 </template>
 <script>
+import axios from 'axios';
+
 export default {
-  data () {
-    return {
-      text: ''
-    }
+     data() {
+      courses : null
+
+},
+  asyncData () {
+
+    return axios.get('http://localhost:8000/job/all')
+    .then((res) => {
+      return { courses: res.data,
+               
+         
+            }
+    })
   }
 }
 </script>
