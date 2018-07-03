@@ -47,6 +47,20 @@ for (i = 0; i < job2.length; i++) {
 
 
 var str1 = job2[i] 
+ var str2 = str1.replace('\n\n',"");
+
+if (str2.substr(str2.length - 1) === '\n'){
+   str2 =  str2.slice(0,-1)
+// str2 = str2.replace( '\n', '' ) 
+}
+
+// str2.indexOf( '\' ) == 0 ? str2 = str2.replace( '|', '' ) : str2;
+
+// 2 ตัวหน้า
+
+   if (str2.substr(0,1) === '\n'){
+    str2 =  str2.slice( 1)
+}
 
 var math1 = ["PAT1", "PAT 1", "math", "คณิต", "คณิตศาสตร์", "เลข"];
 var eng1 = ["GAT ENG","ENG","Eng","Gat Eng","IELTS", "Ielts", "อังกฤษ" ]
@@ -98,7 +112,7 @@ if ( mon2 === true ) {
 
   let createPost = {
       
-        job: job2[i],
+        job: str2,
         _creator: this.$store.state.user._id,
         day : this.day,
         subject : this.subject
@@ -107,7 +121,7 @@ if ( mon2 === true ) {
    console.log(createPost);
    
  
-        axios.post('http://localhost:8000/job/create', createPost)
+        axios.post('https://frozen-mesa-40722.herokuapp.com/job/create', createPost)
           .then((res) => { 
               
               console.log(res.data)
@@ -123,4 +137,5 @@ if ( mon2 === true ) {
  }   
 
 }
+
 </script>

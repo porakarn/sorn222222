@@ -1,30 +1,30 @@
 <template>
 <b-container fluid>
-  <b-nav tabs>
+  <!-- <b-nav tabs>
   <b-nav-item>All</b-nav-item>
     <b-nav-item>ว่าง</b-nav-item>
   <b-nav-item>รอจ่ายเงิน</b-nav-item>
   <b-nav-item>ปิดแล้ว</b-nav-item>
+</b-nav> -->
+<b-nav fill tabs>
+  <b-nav-item>ทั้งหมด</b-nav-item>
+    <b-nav-item>งานแนะนำ</b-nav-item>
+ 
 </b-nav>
 <br>
     <div v-for="course in courses" >
 
 
-    <b-card v-b-modal.modal-center style="    margin-bottom: 5px;   box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.1);
+    <b-card v-b-modal.modal-center style="   margin-bottom: 5px;   box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.1);
 " 
            > <b-row>  <b-col cols="10" style="    padding-right: 0px;
 ">
-        <p style="  white-space: pre-wrap; color:#2f2f2f"  class="card-text"> {{ course.job}}
-             <!-- <br>ช ม 4 ( สวนกุหลาบ ) 
-<br>  สยามพารากอน ส-อ 12-14 น
-<br> ค่าสอน 600 fee 1200
-  -->
-         </p>
-         <div class="por" >
+        <p style=" white-space: pre-wrap;   color:#2f2f2f"  class="card-text">{{ course.job}}</p>
+ <div class="por" >
         <a href="#"
-           class="card-link">IELTS</a>
+           class="card-link">{{course.subject}}</a>
         <b-link href="#"
-                class="card-link">ENG</b-link></div></b-col> 
+                class="card-link">{{course.day}}</b-link></div></b-col> 
                         <b-col style="    padding-left: 10px;
     padding-right: 3px;" cols="2">ว่าง</b-col> </b-row>
 
@@ -93,7 +93,7 @@ export default {
 },
   asyncData () {
 
-    return axios.get('http://localhost:8000/job/all')
+    return axios.get('https://frozen-mesa-40722.herokuapp.com/job/all')
     .then((res) => {
       return { courses: res.data,
                
