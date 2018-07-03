@@ -30,30 +30,32 @@
 
 <b-row>    
         
-<b-col cols="3" >
-<td >
-<i style="margin: 50%; font-size: 25px; color: #7f8082;" class="fa fa-search" aria-hidden="true"></i>
-</td>
+<b-col cols="3" style="text-align: center;" >
+<div><i style=" font-size: 25px; color: #7f8082;" class="fa fa-search mx-auto" aria-hidden="true"></i>
+</div>
+
 
 
 </b-col> 
-<b-col cols="3" >
-<td>
-<i style="margin: 50%;font-size: 28px; color: #7f8082;"  class="fa fa-plus-square-o " aria-hidden="true"></i>
-</td>
+
+<b-col cols="3" style="text-align: center;" >
+<div><i style="font-size: 28px; color: #7f8082;"  class="fa fa-plus-square-o mx-auto " aria-hidden="true"></i>
+</div>
+
 
 </b-col>
-<b-col cols="3"  >
-<td >
-<i style="margin: 50%; font-size: 25px; color: #7f8082;"  class="fa fa-bell-o" aria-hidden="true"></i>
-</td>
+<b-col cols="3" style="text-align: center;" >
+<div><i style=" font-size: 25px; color: #7f8082;"  class="fa fa-bell-o mx-auto" aria-hidden="true"></i>
+</div>
+
+
 
 </b-col>
 
-<b-col cols="3"  >
-<td >
-<i style="margin: 50%; font-size: 25px; color: #7f8082;"  class="fa fa-user-circle" aria-hidden="true"></i>
-</td>
+<b-col cols="3" style="text-align: center;"  >
+<div><i style=" font-size: 25px; color: #7f8082;"  class="fa fa-user-circle mx-auto" aria-hidden="true"></i>
+</div>
+
 
 </b-col>
 
