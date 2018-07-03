@@ -28,7 +28,7 @@
   background-color: white;
   height: 53px;">
 
-<b-row style="    margin-top: 14px;">    
+<b-row style="    margin-top: 13px;">    
         
 <b-col cols="3" style="text-align: center;" >
 <div><i style=" font-size: 28px; color: #7f8082;" class="fa fa-search mx-auto" aria-hidden="true"></i>
