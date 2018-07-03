@@ -192,7 +192,7 @@
         
 <b-col >
 
-<i style="margin: 50%" class="fa fa-search" aria-hidden="true"></i>
+<i style="margin: 50%; font-size: 25px; color: #7f8082;" class="fa fa-search" aria-hidden="true"></i>
 
 
 
@@ -200,19 +200,19 @@
 <b-col  >
 
 
-<i style="margin: 50%"  class="fa fa-bell-o" aria-hidden="true"></i>
+<i style="margin: 50%; font-size: 25px; color: #7f8082;"  class="fa fa-bell-o" aria-hidden="true"></i>
 
 </b-col>
 <b-col  >
 
 
-<i style="margin: 50%"  class="fa fa-plus-square-o" aria-hidden="true"></i>
+<i style="margin: 50%; font-size: 25px; color: #7f8082;"  class="fa fa-plus-square-o" aria-hidden="true"></i>
 
 </b-col>
 <b-col >
 
 
-<i style="margin: 50%"  class="fa fa-user-circle" aria-hidden="true"></i>
+<i style="margin: 50%; font-size: 25px; color: #7f8082;"  class="fa fa-user-circle" aria-hidden="true"></i>
 
 
 </b-col>
