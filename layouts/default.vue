@@ -22,6 +22,43 @@
     </b-navbar>
 </div>
     <nuxt/>
+    <b-container fluid class="bv-example-row"   style="position: fixed;     width: 100%;
+
+  bottom: 0px; 
+  background-color: white;
+  height: 41px;">
+
+<b-row>    
+        
+<b-col cols="3" >
+<td >
+<i style="margin: 50%; font-size: 25px; color: #7f8082;" class="fa fa-search" aria-hidden="true"></i>
+</td>
+
+
+</b-col> 
+<b-col cols="3" >
+<td>
+<i style="margin: 50%;font-size: 28px; color: #7f8082;"  class="fa fa-plus-square-o " aria-hidden="true"></i>
+</td>
+
+</b-col>
+<b-col cols="3"  >
+<td >
+<i style="margin: 50%; font-size: 25px; color: #7f8082;"  class="fa fa-bell-o" aria-hidden="true"></i>
+</td>
+
+</b-col>
+
+<b-col cols="3"  >
+<td >
+<i style="margin: 50%; font-size: 25px; color: #7f8082;"  class="fa fa-user-circle" aria-hidden="true"></i>
+</td>
+
+</b-col>
+
+</b-row>
+  </b-container>
   </div>
 </template>
 
@@ -70,5 +107,11 @@ html
 {
   color: #fff;
   background-color: #35495e;
+}
+
+
+.tds{
+  text-align: center;
+  margin: auto
 }
 </style>
