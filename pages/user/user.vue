@@ -18,6 +18,9 @@
   <div>
   <b-button type="submit" style="background-color: #33C1C1; border: 0px; padding-left: 36px;
     padding-right: 36px;">สมัคร</b-button>
+  
+
+<p>d</p>
 </div>
       </form>
 

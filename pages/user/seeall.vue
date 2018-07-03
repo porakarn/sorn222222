@@ -183,41 +183,44 @@
 </div>
 
 
+<b-container class="bv-example-row"   style="position: fixed;     width: 100%;
 
-<div style="position: fixed;
   bottom: -1px; 
   background-color: white;">
-<b-row>
-ิ<b-col>
+
+<b-row>    
+        
+<b-col >
+
+<i style="margin: 50%" class="fa fa-search" aria-hidden="true"></i>
 
 
-<p>Seeall</p>
 
 </b-col> 
-<b-col>
+<b-col  >
 
 
-<p>Seeall</p>
-
-</b-col>
-<b-col>
-
-
-<p>Seeall</p>
+<i style="margin: 50%"  class="fa fa-bell-o" aria-hidden="true"></i>
 
 </b-col>
-<b-col>
+<b-col  >
 
 
-<p>Profile</p>
+<i style="margin: 50%"  class="fa fa-plus-square-o" aria-hidden="true"></i>
+
+</b-col>
+<b-col >
+
+
+<i style="margin: 50%"  class="fa fa-user-circle" aria-hidden="true"></i>
 
 
 </b-col>
 
 
 </b-row>
+  </b-container>
 
-</div>
 
 
 

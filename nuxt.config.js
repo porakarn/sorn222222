@@ -15,7 +15,18 @@ module.exports = {
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
-    ]
+//       { rel: 'stylesheet', type: 'image/x-icon', href: '/favicon.ico' }
+// <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+
+    ],
+    script: [
+      {
+        src: 'https://use.fontawesome.com/a276f3cb54.js'
+      }
+  ]
+
+
+
   },
 
   /*
@@ -38,6 +49,7 @@ module.exports = {
       src: '~/plugins/localStorage.js',
       ssr: false
     }
+   
 
   ],
 
@@ -48,7 +60,10 @@ module.exports = {
     // Doc: https://github.com/nuxt-community/axios-module#usage
     '@nuxtjs/axios',
     // Doc: https://bootstrap-vue.js.org/docs/
-    'bootstrap-vue/nuxt'
+    'bootstrap-vue/nuxt',
+    'nuxt-fontawesome',
+
+
   ],
   /*
   ** Axios module configuration
