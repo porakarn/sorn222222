@@ -22,13 +22,13 @@
     </b-navbar>
 </div>
     <nuxt/>
-    <b-container fluid class="bv-example-row"   style="position: fixed;     width: 100%;
+    <b-container fluid class="bv-example-row"   style="box-shadow: rgba(0, 0, 0, 0.2) 0px 3px 8px 0px, rgba(0, 0, 0, 0) 0px 4px 5px 0px, rgba(0, 0, 0, 0.01) 0px 1px 10px 0px; position: fixed;     width: 100%;
 
   bottom: 0px; 
   background-color: white;
-  height: 41px;">
+  height: 48px;">
 
-<b-row>    
+<b-row style="    margin-top: 11px;">    
         
 <b-col cols="3" style="text-align: center;" >
 <div><i style=" font-size: 25px; color: #7f8082;" class="fa fa-search mx-auto" aria-hidden="true"></i>
