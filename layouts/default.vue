@@ -31,16 +31,22 @@
 <b-row style="    margin-top: 13px;">    
         
 <b-col cols="3" style="text-align: center;" >
-<div><i style=" font-size: 28px; color: #7f8082;" class="fa fa-search mx-auto" aria-hidden="true"></i>
-</div>
+
+<nuxt-link to="/user/seeall"><div><i style=" font-size: 28px; color: #7f8082;" class="fa fa-search " aria-hidden="true"></i>
+</div></nuxt-link>
+
+
 
 
 
 </b-col> 
 
 <b-col cols="3" style="text-align: center;" >
-<div><i style="font-size: 31px; color: #7f8082;"  class="fa fa-plus-square-o mx-auto " aria-hidden="true"></i>
+
+<nuxt-link to="/user/create"><div><i style="font-size: 31px; color: #7f8082;"  class="fa fa-plus-square-o  " aria-hidden="true"></i>
 </div>
+</nuxt-link>
+
 
 
 </b-col>
@@ -52,9 +58,14 @@
 
 </b-col>
 
-<b-col cols="3" style="text-align: center;"  >
-<div><i style=" font-size: 28px; color: #7f8082;"  class="fa fa-user-circle mx-auto" aria-hidden="true"></i>
+<b-col cols="3" style="text-align: center;"  >    
+ <nuxt-link to="/profile">
+<div>
+  <i style=" font-size: 28px; color: #7f8082;"  class="fa fa-user-circle mx-auto" aria-hidden="true"></i>
 </div>
+
+</nuxt-link>
+
 
 
 </b-col>
