@@ -19,7 +19,7 @@
 " 
            > <b-row>  <b-col cols="10" style="    padding-right: 0px;
 ">
-        <p style=" white-space: pre-wrap; font-size: 15px;  color:#2f2f2f"  class="card-text">{{ course.job}}</p>
+        <p style=" white-space: pre-wrap; font-size: 16px; font-family:roboto;  color:#2f2f2f"  class="card-text">{{ course.job}}</p>
  <div class="por" >
         <a href="#"
            class="card-link">{{course.subject}}</a>
