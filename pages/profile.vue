@@ -3,10 +3,10 @@
     <br>
     <b-row>
         <b-col cols="3">
-  <b-img rounded="circle" src="https://scontent.fbkk5-4.fna.fbcdn.net/v/t1.0-9/15873069_1211350558943201_5314025003629794223_n.jpg?_nc_cat=0&oh=c1a059664ab99de2d57d302be4551693&oe=5BA53CA7"  width="75" height="75" alt="img" class="m-1" />
+  <b-img rounded="circle" style="width: 70px" :src="this.$store.state.user.picture"/>
         </b-col>
          <b-col cols="9">
-      <p>Porakarn Soonthorn</p>
+      <p>{{ this.$store.state.user.name}}</p>
       <p>อายุ 22 ปี</p>
          </b-col>     
     </b-row>
@@ -14,12 +14,12 @@
  <div class="ere">
    <b-row class="my-1">
     <b-col sm="10">
-      <b-form-input class="formpor" id="input-large"  type="text" placeholder="Email"></b-form-input>
+      <b-form-input class="formpor" id="input-large"  type="text" :placeholder="this.$store.state.user.email"></b-form-input>
     </b-col>
   </b-row>
     <b-row class="my-1">
     <b-col sm="10" style="margin-top: 14px;">
-      <b-form-input class="formpor" id="input-large"  type="text" placeholder="เบอร์โทร "></b-form-input>
+      <b-form-input class="formpor" id="input-large"  type="text" placeholder="เบอร์โทร ">{{phone}}</b-form-input>
     </b-col>
   </b-row></div>
  <p style="    margin-top: 17px;">วิชาที่คุณสอน
@@ -34,18 +34,65 @@
         <b-link href="#"
                 class="card-link">เคมี</b-link></div>
 <br>
-                 <p style="color: #8f9aa4; border:1px !important;">วางงานของคุณที่นี่</p>
+                 <p style="color: #8f9aa4; border:1px !important;">โปรไฟล์ของคุณ</p>
     <b-form-textarea id="textarea1"
-                     v-model="text"
+                     v-model="profile"
                      placeholder="Enter something"
                      :rows="5"
                      :max-rows="9">
     </b-form-textarea>
     <br>
-    <b-button size="lg" style="background-color: #33C1C1; border: 0px; padding-left: 56px;
+    <b-button @click="onSubmit" size="lg" style="background-color: #33C1C1; border: 0px; padding-left: 56px;
     padding-right: 56px;">สมัคร</b-button>
 </b-container>
 </template>
+
+<script>
+import axios from 'axios';
+
+export default {
+   data () {
+    return {
+    course: {},
+    phone: '',
+    profile: ''
+
+  
+    }
+  },
+//   asyncData (context, callback) {
+//  var por = ';;'
+//    return   axios.get('http://localhost:8000/user/profile', por )
+//     .then((res) => {
+//       // this.profile = res.data.profile
+//       // this.phone = res.data.phone                
+         
+//             })
+    
+//   }
+//   ,
+    methods: {
+      onSubmit(){
+           var data = {
+             profile : this.profile, 
+             phone : this.phone,
+             name: this.$store.state.user.username 
+              
+           }
+
+           axios.patch('http://localhost:8000/update', data).then((res) =>
+           {
+            console.log(res.data);
+            
+
+           }).catch((error) =>{ console.log(error) })
+           
+
+      }
+
+  }
+}
+</script>
 
 
 

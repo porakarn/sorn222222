@@ -8,6 +8,7 @@
   </div>
 <nuxt-link to="/user">Users</nuxt-link>
       
+      <button @click="logout" > Log out </button>
     </div>
   </section>
 </template>
@@ -19,6 +20,12 @@ export default {
     data () {
     return {
       text1: ''
+    }
+  },
+   methods: {
+    logout () {
+       this.$store.dispatch('setToken', null)
+      this.$store.dispatch('setUser', null)
     }
   },
   components: {

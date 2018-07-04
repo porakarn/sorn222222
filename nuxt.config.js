@@ -49,6 +49,7 @@ module.exports = {
       src: '~/plugins/localStorage.js',
       ssr: false
     }
+  
    
 
   ],
@@ -76,6 +77,9 @@ module.exports = {
   ** Build configuration
   */
   build: {
+
+  
+     
     /*
     ** You can extend webpack config here
     */

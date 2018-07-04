@@ -15,11 +15,11 @@
     <div v-for="course in courses" >
 
 
-    <b-card v-b-modal.modal-center style="   margin-bottom: 5px;   box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.1);
+    <b-card @click="showModal(course)" style="   margin-bottom: 5px;   box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.1);
 " 
            > <b-row>  <b-col cols="10" style="    padding-right: 0px;
 ">
-        <p style=" white-space: pre-wrap;   color:#2f2f2f"  class="card-text">{{ course.job}}</p>
+        <p style=" white-space: pre-wrap; font-size: 15px;  color:#2f2f2f"  class="card-text">{{ course.job}}</p>
  <div class="por" >
         <a href="#"
            class="card-link">{{course.subject}}</a>
@@ -33,12 +33,47 @@
     
    
    
-     <b-modal hide-header  hide-footer id="modal-center" centered title="Bootstrap-Vue">
+
+
+
+
+
+
+</div>
+
+ <b-modal hide-header  hide-footer  centered ref="myModalRef" hide-footer title="Using Component Methods">
+      <div class="d-block ">
+          <div style="white-space: pre-wrap;">{{job3}}</div>
+
+      
+             <p style="color: grey"> ส่งโปรไฟล์ของคุณ</p>
+         <b-form-textarea id="textarea1"
+                     v-model="text"
+                     placeholder="Enter something"
+                     :rows="4"
+                     :max-rows="6">
+    </b-form-textarea>
+    <p style="color: grey">  Copy</p>
+   <b-row>
+             <b-col cols="9" >
+     <b-button size="lg" style="  background-color: #33C1C1; border: 0px; padding-left: 66px;
+    padding-right: 66px;">ติดต่อ</b-button>  
+             </b-col>
+               <b-col cols="3">
+      <b-img style="border-radius: 5px" width="50px" height="50px" fluid src="https://picsum.photos/250/250/?image=54" alt="Thumbnail" />
+
+               </b-col>         
+
+         </b-row>
+      </div>
+    </b-modal>
+
+     <!-- <b-modal hide-header  hide-footer id="modal-center" centered title="Bootstrap-Vue">
  <p style=" color:#2f2f2f" class="card-text">A123 IELTS ขอพี่ จุฬา
              <br>ช ม 4 ( สวนกุหลาบ ) 
 <br>  สยามพารากอน ส-อ 12-14 น
 <br> ค่าสอน 600 fee 1200
- 
+ {{ job}}
          </p> 
          
                
@@ -63,16 +98,7 @@
          </b-row>
           </b-modal>
 
-
-
-
-
-
-
-
-</div>
-
-
+ -->
 
 
 
@@ -87,10 +113,14 @@
 import axios from 'axios';
 
 export default {
-     data() {
-      courses : null
-
-},
+   data () {
+    return {
+      course: null,
+      job3: '',
+     
+  
+    }
+  },
   asyncData () {
 
     return axios.get('https://frozen-mesa-40722.herokuapp.com/job/all')
@@ -100,6 +130,20 @@ export default {
          
             }
     })
+  },
+    methods: {
+    showModal (item) {
+      this.$refs.myModalRef.show(item) 
+      this.job3 = item.job
+      console.log(item.job  );
+      
+
+    
+    
+    },
+    hideModal () {
+      this.$refs.myModalRef.hide()
+    }
   }
 }
 </script>

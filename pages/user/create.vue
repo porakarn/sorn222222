@@ -45,9 +45,10 @@ console.log(job2);
 var i;
 for (i = 0; i < job2.length; i++) {
 
-
 var str1 = job2[i] 
  var str2 = str1.replace('\n\n',"");
+
+ 
 
 if (str2.substr(str2.length - 1) === '\n'){
    str2 =  str2.slice(0,-1)
@@ -61,6 +62,9 @@ if (str2.substr(str2.length - 1) === '\n'){
    if (str2.substr(0,1) === '\n'){
     str2 =  str2.slice( 1)
 }
+
+
+
 
 var math1 = ["PAT1", "PAT 1", "math", "คณิต", "คณิตศาสตร์", "เลข"];
 var eng1 = ["GAT ENG","ENG","Eng","Gat Eng","IELTS", "Ielts", "อังกฤษ" ]
@@ -120,8 +124,11 @@ if ( mon2 === true ) {
       }
    console.log(createPost);
    
- 
-        axios.post('https://frozen-mesa-40722.herokuapp.com/job/create', createPost)
+    if ( str2.length < 7 ) {
+    console.log("น้อยกว่า 7")
+    
+    } else {
+        axios.post('http://localhost:8000/job/create', createPost)
           .then((res) => { 
               
               console.log(res.data)
@@ -129,7 +136,9 @@ if ( mon2 === true ) {
   
           })
           .catch(error => console.log(error))
+    }
 
+ 
 
 }
 

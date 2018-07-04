@@ -2,7 +2,7 @@ import Vuex from 'vuex'
 import createPersistedState from 'vuex-persistedstate'
 
 
-const createStore = () => {
+const store = () => {
   return new Vuex.Store({
       
     state: {
@@ -44,7 +44,7 @@ const createStore = () => {
   })
 }
 
-export default createStore
+export default store
 
 // export default ({store}) => {
 //   // why this work? is this workaround elegant?
