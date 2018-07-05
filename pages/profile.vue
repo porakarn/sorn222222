@@ -24,7 +24,12 @@
   </b-row></div>
  <p style="    margin-top: 17px;">วิชาที่คุณสอน
 </p>
-  <div class="por" >
+  <b-row class="my-1">
+    <b-col sm="10">
+      <b-form-input focus="false"  class="formpor" id="input-large"  type="text" :placeholder="this.$store.state.user.email"></b-form-input>
+    </b-col>
+  </b-row>
+  <!-- <div class="por" >
         <a href="#"
            class="card-link">IELTS</a>
         <b-link href="#"
@@ -32,12 +37,12 @@
                   <a href="#"
            class="card-link">IELTS</a>
         <b-link href="#"
-                class="card-link">เคมี</b-link></div>
+                class="card-link">เคมี</b-link></div> -->
 <br>
                  <p style="color: #8f9aa4; border:1px !important;">โปรไฟล์ของคุณ</p>
-    <b-form-textarea id="textarea1"
+    <b-form-textarea   id="textarea1"
                      v-model="profile"
-                     placeholder="Enter something"
+                     placeholder="เขียนโปรไฟล์ของคุณ.."
                      :rows="5"
                      :max-rows="9">
     </b-form-textarea>
@@ -121,5 +126,13 @@ border-top: 0px;
     border-radius: 4px;
     font-size: 18px;
 
+}
+
+.form-control:focus {
+    color: #495057;
+    background-color: #fff;
+    border-color: #80bdff;
+    outline: 0;
+    /* box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, .25); */
 }
 </style>
