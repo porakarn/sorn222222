@@ -25,7 +25,7 @@
       <b-form-input class="formpor" id="input-large"  type="text" placeholder="เบอร์โทร ">{{phone}}</b-form-input>
     </b-col>
   </b-row></div></b-container>
- <p style=" color: #8f9aa4 ;  margin-top: 17px;">วิชาที่คุณสอน
+ <p style="margin-bottom: 0px; color: #8f9aa4 ;  margin-top: 17px;">วิชาที่คุณสอน
 </p>
   <b-row class="my-1">
     <b-col sm="10">
@@ -33,7 +33,7 @@
 " class="formpor" id="textarea1"
                      v-model="text"
                      placeholder=""
-                     :rows="1"
+                     :rows="2"
                      :max-rows="6">
     </b-form-textarea>
       <!-- <b-form-input focus="false"  class="formpor" id="input-large"  type="text" :placeholder="this.$store.state.user.email"></b-form-input> -->
@@ -49,11 +49,11 @@
         <b-link href="#"
                 class="card-link">เคมี</b-link></div> -->
 <br>
-                 <p style="    padding-top: 0px !important;
+                 <p style=" margin-bottom: 0px;   padding-top: 0px !important;
  color: #8f9aa4; border:1px !important;">โปรไฟล์ของคุณ</p>
     <b-form-textarea class="formpor"  id="textarea1"
                      v-model="text2"
-                     :rows="4"
+                     :rows="5"
                      :max-rows="9">
     </b-form-textarea>
     <br>
@@ -145,6 +145,6 @@ border-top: 0px;
     background-color: #fff;
     border-color: #80bdff;
     outline: 0;
-box-shadow: 0 0 0 0.1rem rgba(0, 123, 255, .25) !important;
+box-shadow: 0 0 0 0rem rgba(0, 123, 255, .25) !important;
 }
 </style>
