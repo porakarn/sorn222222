@@ -3,31 +3,40 @@
     <br>
     <b-row>
         <b-col cols="3">
-  <b-img rounded="circle" style="width: 70px" :src="this.$store.state.user.picture"/>
+  <!-- <b-img rounded="circle" style="width: 70px" :src="this.$store.state.user.picture"/> -->
+    <b-img rounded="circle" style="width: 70px" src="https://scontent.fbkk5-6.fna.fbcdn.net/v/t1.0-1/p240x240/15873069_1211350558943201_5314025003629794223_n.jpg?_nc_cat=0&oh=429da1d277ec885fbbc86409fac1dd86&oe=5BA39AF5"/>
+
         </b-col>
          <b-col cols="9">
       <p>{{ this.$store.state.user.name}}</p>
       <p>อายุ 22 ปี</p>
          </b-col>     
     </b-row>
-<b-container fluid style="   padding: 3!important">
+<b-container fluid style="   padding: 0!important">
 
  <div class="ere">
-   <b-row class="my-1">
+   <!-- <b-row class="my-1">
     <b-col sm="10">
       <b-form-input class="formpor" id="input-large"  type="text" :placeholder="this.$store.state.user.email"></b-form-input>
     </b-col>
-  </b-row>
+  </b-row> -->
     <b-row class="my-1">
     <b-col sm="10" style="margin-top: 14px;">
       <b-form-input class="formpor" id="input-large"  type="text" placeholder="เบอร์โทร ">{{phone}}</b-form-input>
     </b-col>
   </b-row></div></b-container>
- <p style="    margin-top: 17px;">วิชาที่คุณสอน
+ <p style=" color: #8f9aa4 ;  margin-top: 17px;">วิชาที่คุณสอน
 </p>
   <b-row class="my-1">
     <b-col sm="10">
-      <b-form-input focus="false"  class="formpor" id="input-large"  type="text" :placeholder="this.$store.state.user.email"></b-form-input>
+       <b-form-textarea style="    padding-top: 0px;
+" class="formpor" id="textarea1"
+                     v-model="text"
+                     placeholder=""
+                     :rows="1"
+                     :max-rows="6">
+    </b-form-textarea>
+      <!-- <b-form-input focus="false"  class="formpor" id="input-large"  type="text" :placeholder="this.$store.state.user.email"></b-form-input> -->
     </b-col>
   </b-row>
   <!-- <div class="por" >
@@ -40,10 +49,11 @@
         <b-link href="#"
                 class="card-link">เคมี</b-link></div> -->
 <br>
-                 <p style="color: #8f9aa4; border:1px !important;">โปรไฟล์ของคุณ</p>
-    <b-form-textarea style="border: 0px"   id="textarea1"
-                     placeholder="เขียนโปรไฟล์ของคุณ.."
-                     :rows="5"
+                 <p style="    padding-top: 0px !important;
+ color: #8f9aa4; border:1px !important;">โปรไฟล์ของคุณ</p>
+    <b-form-textarea class="formpor"  id="textarea1"
+                     v-model="text2"
+                     :rows="4"
                      :max-rows="9">
     </b-form-textarea>
     <br>
@@ -60,8 +70,9 @@ export default {
     return {
     course: {},
     phone: '',
-    profile: ''
-
+    profile: '',
+    text2: '',
+    text:''
   
     }
   },
@@ -134,6 +145,6 @@ border-top: 0px;
     background-color: #fff;
     border-color: #80bdff;
     outline: 0;
-box-shadow: 0 0 0 0rem rgba(0, 123, 255, .25) !important;
+box-shadow: 0 0 0 0.1rem rgba(0, 123, 255, .25) !important;
 }
 </style>
