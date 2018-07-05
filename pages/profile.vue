@@ -41,7 +41,6 @@
 <br>
                  <p style="color: #8f9aa4; border:1px !important;">โปรไฟล์ของคุณ</p>
     <b-form-textarea   id="textarea1"
-                     v-model="profile"
                      placeholder="เขียนโปรไฟล์ของคุณ.."
                      :rows="5"
                      :max-rows="9">
@@ -133,6 +132,6 @@ border-top: 0px;
     background-color: #fff;
     border-color: #80bdff;
     outline: 0;
-    /* box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, .25); */
+box-shadow: 0 0 0 0rem rgba(0, 123, 255, .25) !important;
 }
 </style>
