@@ -10,6 +10,7 @@
       <p>อายุ 22 ปี</p>
          </b-col>     
     </b-row>
+<b-container fluid style="   padding: 3!important">
 
  <div class="ere">
    <b-row class="my-1">
@@ -21,7 +22,7 @@
     <b-col sm="10" style="margin-top: 14px;">
       <b-form-input class="formpor" id="input-large"  type="text" placeholder="เบอร์โทร ">{{phone}}</b-form-input>
     </b-col>
-  </b-row></div>
+  </b-row></div></b-container>
  <p style="    margin-top: 17px;">วิชาที่คุณสอน
 </p>
   <b-row class="my-1">
@@ -40,7 +41,7 @@
                 class="card-link">เคมี</b-link></div> -->
 <br>
                  <p style="color: #8f9aa4; border:1px !important;">โปรไฟล์ของคุณ</p>
-    <b-form-textarea   id="textarea1"
+    <b-form-textarea style="border: 0px"   id="textarea1"
                      placeholder="เขียนโปรไฟล์ของคุณ.."
                      :rows="5"
                      :max-rows="9">
@@ -112,6 +113,7 @@ border-top: 0px;
     border-right: 0px;
     border-left: 0px;
     border-radius: 0;
+    padding-left: 4px;
 }
 
 .card-link{
