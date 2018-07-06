@@ -10,9 +10,9 @@
 
         </b-col>
          <b-col cols="8">
-      <p style="color: rgb(117, 119, 120); font-size: 18px;margin-bottom: 7px;font-weight: bold;">Porakarn Soonthornsittipo</p>
+      <p style="color: #484848; font-size: 18px;margin-bottom: 7px;font-weight: bold;">Porakarn Soonthornsittipo</p>
       <!-- <p style="color: rgb(117, 119, 120);">{{ this.$store.state.user.name}}</p> -->
-      <p style="color: rgb(158, 158, 158);  font-size: 16px; "><i style="color: #F1F182;" class="fa fa-star" aria-hidden="true"></i>
+      <p style="color:#484848;  font-size: 16px; "><i style="color: #F1F182;" class="fa fa-star" aria-hidden="true"></i>
 </i> 4.6 (10)  	&nbsp;&nbsp; <i class="fa fa-user" aria-hidden="true"></i> 12 (30 ครั้ง)
   </p>
   <nuxt-link to="/tutor/profile/edit">
@@ -37,7 +37,7 @@
     </b-col>
   </b-row> -->
    </div></b-container>
- <p style="margin-bottom: 0px; color: rgb(117, 119, 120);  margin-top: 17px; font-size: 19px">วิชาที่คุณสอน
+ <p style="margin-bottom: 0px; color:#484848;  margin-top: 17px; font-size: 19px">วิชาที่คุณสอน
 </p>
   <b-row class="my-1">
     <b-col sm="10">
@@ -59,7 +59,7 @@
                 class="card-link">เคมี</b-link></div> -->
 <br>
                  <p style=" margin-bottom: 0px;   padding-top: 0px !important; font-size: 19px;
-color: rgb(117, 119, 120); border:1px !important;">โปรไฟล์ของคุณ</p>
+color: #484848; border:1px !important;">โปรไฟล์ของคุณ</p>
    <p  v-if="this.$store.state.haveProfile"
 > {{this.$store.state.user.profile}} </p>
 
