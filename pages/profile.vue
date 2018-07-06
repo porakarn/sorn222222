@@ -4,23 +4,20 @@
     <b-row>
         <b-col cols="4">
   <!-- <b-img rounded="circle" style="width: 70px" :src="this.$store.state.user.picture"/> -->
-    <b-img  style="width: 110px; border-radius: 21px" src="https://scontent.fbkk5-6.fna.fbcdn.net/v/t1.0-1/p240x240/15873069_1211350558943201_5314025003629794223_n.jpg?_nc_cat=0&oh=429da1d277ec885fbbc86409fac1dd86&oe=5BA39AF5"/>
+    <b-img  style="width: 114px; border-radius: 21px" src="https://scontent.fbkk5-6.fna.fbcdn.net/v/t1.0-1/p240x240/15873069_1211350558943201_5314025003629794223_n.jpg?_nc_cat=0&oh=429da1d277ec885fbbc86409fac1dd86&oe=5BA39AF5"/>
 
         </b-col>
          <b-col cols="8">
       <p style="color: rgb(117, 119, 120); font-size: 18px;margin-bottom: 7px;">Porakarn Soonthornsittipong</p>
       <!-- <p style="color: rgb(117, 119, 120);">{{ this.$store.state.user.name}}</p> -->
       <p style="color: rgb(158, 158, 158);  font-size: 18px; margin-bottom: 0px;"><i style="color: #F1F182;" class="fa fa-star" aria-hidden="true"></i>
-</i> 4.6 (10)  	&nbsp;&nbsp; <i class="fa fa-user" aria-hidden="true"></i> 12 (30)
+</i> 4.6 (10)  	&nbsp;&nbsp; <i class="fa fa-user" aria-hidden="true"></i> 12 (30 ครั้ง)
   </p>
   <b-row class="my-1">
-    <b-col cols="6" sm="10" style="margin-top: 14px;padding-right: 8px;">
-      <b-form-input class="formpor" id="input-large"  type="text" placeholder="เบอร์โทร ">{{phone}}</b-form-input>
+    <b-col cols="12" sm="10" style="margin-top: 14px;    padding-right: 34px;">
+      <b-form-input style="margin-top: -12px;" class="formpor" id="input-large"  type="text" placeholder="เบอร์โทร ">{{phone}}</b-form-input>
     </b-col>
-    <b-col cols="6" sm="10" style="margin-top: 14px;padding-left: 0px;
-}">
-      <b-form-input class="formpor" id="input-large"  type="text" placeholder="Line ">{{phone}}</b-form-input>
-    </b-col>
+  
   </b-row>
          </b-col> 
              
@@ -66,8 +63,8 @@ color: rgb(117, 119, 120); border:1px !important;">โปรไฟล์ขอ�
                      :max-rows="9">
     </b-form-textarea>
     <br>
-    <b-button @click="onSubmit" size="lg" style="background-color: #33C1C1; border: 0px; padding-left: 56px;
-    padding-right: 56px;">สมัคร</b-button>
+    <b-button @click="onSubmit" size="lg" style="background-color: #33C1C1; border: 0px; padding-left: 66px;
+    padding-right: 66px;">สมัคร</b-button>
 </b-container>
 </template>
 
