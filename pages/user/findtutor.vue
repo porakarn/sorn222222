@@ -21,7 +21,7 @@
 
    
     <b-card @click="showModal(course)" style="     padding-bottom: 8px;
-    padding-top: 8px;  margin-bottom: 5px;  box-shadow: rgba(111, 111, 111, 0) 0px 1px 0px 0px;
+    padding-top: 8px;  margin-bottom: 5px; 
 ;
 
 "> 
@@ -228,7 +228,9 @@
     padding-top: 0px;
 }
 
-
+.card{
+    border: 1px solid rgba(255, 255, 255, 0.12)!important;
+}
 
 .card-text{
         color: #2f2f2f;
