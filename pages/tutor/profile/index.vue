@@ -13,19 +13,19 @@
 
 <b-row>
 <b-col cols="4" style="    padding-right: 0px;">
-<p style="  font-size :17px;
+<p style="  font-size :18px;
      text-align: center; font-weight: bold; margin-bottom: 0px;">4.6</p>
 <p style=" 
    color:#949494;  text-align: center;  font-size:14px;  margin-bottom: 0px;"><i style="color: #F1F182;" class="fa fa-star" aria-hidden="true"></i> รีวิว</p>
 </b-col>
 <b-col cols="4">
-<p style="  font-size :17px;
+<p style="  font-size :18px;
      text-align: center; font-weight: bold; margin-bottom: 0px;">12</p>
-<p style="  font-size :17px;
+<p style=" 
    color:#949494;   text-align: center; font-size:14px;  margin-bottom: 0px;">นักเรียน</p>
 </b-col>
 <b-col cols="4" style="padding-left: 0px;"    >
-<p style=" 
+<p style="  font-size :18px;
      text-align: center; font-weight: bold;  margin-bottom: 0px;">12</p>
 <p style=" 
     color:#949494;  text-align: center; font-size:14px;   margin-bottom: 0px;">ครั้งที่สอน</p>
@@ -64,10 +64,10 @@
   </b-row> -->
    </div></b-container>
    <br>
-         <p style="color: #484848; font-size: 18px;margin-bottom: 7px;font-weight: bold;">Porakarn Soonthornsittipong (22 ปี)</p>
+         <p style="color: #484848; font-size: 17px;margin-bottom: 7px;font-weight: bold;">Porakarn Soonthornsittipong (22 ปี)</p>
 
- <p style="margin-bottom: 0px; color:#484848;  margin-top: 17px; font-size: 19px">วิชาที่คุณสอน
-</p>
+ <!-- <p style="margin-bottom: 0px; color:#484848;  margin-top: 17px; font-size: 19px">วิชาที่คุณสอน
+</p> -->
   <b-row class="my-1">
     <b-col sm="10">
    
@@ -87,8 +87,8 @@
         <b-link href="#"
                 class="card-link">เคมี</b-link></div> -->
 <br>
-                 <p style=" margin-bottom: 0px;   padding-top: 0px !important; font-size: 19px;
-color: #484848; border:1px !important;">โปรไฟล์ของคุณ</p>
+                 <!-- <p style=" margin-bottom: 0px;   padding-top: 0px !important; font-size: 19px;
+color: #484848; border:1px !important;">โปรไฟล์ของคุณ</p> -->
    <p  v-if="this.$store.state.haveProfile"
 > {{this.$store.state.user.profile}} </p>
 
