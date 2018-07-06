@@ -15,7 +15,7 @@
   </p>
   <b-row class="my-1">
     <b-col cols="12" sm="10" style="margin-top: 14px;    padding-right: 34px;">
-      <b-form-input style="margin-top: -6px;" class="formpor" id="input-large"  type="text" placeholder="เบอร์โทร ">{{phone}}</b-form-input>
+      <b-form-input style="margin-top: -6px;" v-model="phone" class="formpor" id="input-large"   type="text" placeholder="เบอร์โทร ">{{phone}}</b-form-input>
     </b-col>
   
   </b-row>
@@ -37,7 +37,7 @@
     <b-col sm="10">
        <b-form-textarea style="    padding-top: 0px;
 " class="formpor" id="textarea1"
-                     v-model="text"
+                     v-model="subject"
                      placeholder=""
                      :rows="2"
                      :max-rows="6">
@@ -58,7 +58,7 @@
                  <p style=" margin-bottom: 0px;   padding-top: 0px !important;
 color: rgb(117, 119, 120); border:1px !important;">โปรไฟล์ของคุณ</p>
     <b-form-textarea class="formpor"  id="textarea1"
-                     v-model="text2"
+                     v-model="profile"
                      :rows="5"
                      :max-rows="9">
     </b-form-textarea>
@@ -77,10 +77,17 @@ export default {
     course: {},
     phone: '',
     profile: '',
+    subject: '',
     text2: '',
-    text:''
+    tag:''
+
   
     }
+  },
+  mounted() {
+    this.phone = this.$store.state.user.phone,
+    this.profile = this.$store.state.user.profile,
+    this.subject = this.$store.state.user.subject
   },
 //   asyncData (context, callback) {
 //  var por = ';;'
@@ -95,17 +102,87 @@ export default {
 //   ,
     methods: {
       onSubmit(){
-           var data = {
+          var str1 = this.subject
+
+var math1 = ["PAT1", "PAT 1", "math", "คณิต", "คณิตศาสตร์", "เลข"];
+var eng1 = ["GAT ENG","ENG","Eng","Gat Eng","IELTS", "Ielts", "อังกฤษ", "Speaking","speaking", "ielts","eng" ]
+var science = ["เคมี","chemistry","Chemistry","วิทย์","ฟิสิกส์", "Physics", "Physic", "วิทยาศาสตร์", "Science","science" ]
+var chinese = ["จีน","Chinese","chinese"]
+var japan = ["ญี่ปุ่น","Japanese","Japan", "japanese","japan"]
+var korea = ["เกาหลี", "Korean", "korean"]
+var thai = ["ภาษาไทย", "Thai", "ไทย"]
+var social = ["สังคม"]
+
+
+
+
+var math2 = math1.some(el => str1.includes(el));
+var eng2 = eng1.some(el => str1.includes(el));
+var science2 = science.some(el => str1.includes(el));
+var chinese2 = chinese.some(el => str1.includes(el));
+var japan2 = japan.some(el => str1.includes(el));
+var korea2 = korea.some(el => str1.includes(el));
+var thai2 = thai.some(el => str1.includes(el));
+var social2 = social.some(el => str1.includes(el));
+
+
+
+if ( math2 === true ) {
+  this.tag = "คณิต"
+} else if ( eng2 === true ) {
+   this.tag = "ENG"
+}  else if ( science2 === true ) {
+   this.tag = "วิทย์"
+} else if ( chinese2 === true ) {
+   this.tag = "จีน"
+} else if ( japan2 === true ) {
+   this.tag = "ญี่ปุ่น"
+}  else if ( korea2 === true ) {
+   this.tag = "Korean"
+} else if ( thai2 === true ) {
+   this.tag = "ไทย"
+} else if ( social2 === true ) {
+   this.tag = "สังคม"
+} 
+ 
+ 
+
+ 
+ 
+
+
+
+ var data = {
              profile : this.profile, 
              phone : this.phone,
-             name: this.$store.state.user.username 
+             subject: this.subject,
+             name: this.$store.state.user.name, 
+             tag: this.tag
+
+           }
+
+  var data2 = {
+             profile : this.profile, 
+             phone : this.phone,
+             subject: this.subject,
+             name: this.$store.state.user.name,
+             email: this.$store.state.user.email,
+             _id: this.$store.state.user._id,
+             picture: this.$store.state.user.picture,
+             tag: this.tag
               
            }
+                       console.log(data2);
+
+          //  axios.patch('https://tutor-8e729.firebaseio.com/chawwww.json', data).then((res) =>
 
            axios.patch('http://localhost:8000/update', data).then((res) =>
            {
             console.log(res.data);
-            
+
+               this.$store.dispatch('setUser', data2 )
+              this.$store.dispatch('setProfile', true )
+
 
            }).catch((error) =>{ console.log(error) })
            

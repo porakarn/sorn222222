@@ -7,16 +7,12 @@
   <b-nav-item>ปิดแล้ว</b-nav-item>
 </b-nav> -->
 <b-nav fill tabs>
-  <b-nav-item>ทั้งหมด</b-nav-item>
- <b-nav-item @click="nextPage">งานแนะนำ</b-nav-item>
+  <b-nav-item @click="nextPage">ทั้งหมด</b-nav-item>
+    <b-nav-item>งานแนะนำ</b-nav-item>
  
 </b-nav>
 <br>
-  <!-- <div>
-    <b-form-input size="lg" v-model="text1"
-                  type="text"
-                  placeholder="Search วิชา วันเวลา สถานที่"></b-form-input>
-  </div><br> -->
+   แนะนำ
     <div v-for="course in courses" >
 
 
@@ -53,7 +49,6 @@
       
              <p style="color: grey"> ส่งโปรไฟล์ของคุณ</p>
          <b-form-textarea id="textarea1"
-                     v-model="text"
                      placeholder="Enter something"
                      :rows="4"
                      :max-rows="6">
@@ -120,15 +115,24 @@ import axios from 'axios';
 export default {
    data () {
     return {
-      course: null,
+      courses: null,
       job3: '',
      
   
     }
   },
-  asyncData () {
+  asyncData (context) {
 
-    return axios.get('https://frozen-mesa-40722.herokuapp.com/job/all')
+let suggest = {
+      
+        tag: context.store.state.user.tag,
+        
+
+      }
+      console.log(suggest);
+      console.log(context);
+      
+    return axios.get('http://localhost:8000/job/suggest', suggest)
     .then((res) => { console.log(res.data)
       return { courses: res.data,
                
@@ -136,12 +140,34 @@ export default {
 
     })
   },
+
     methods: {
 
-      nextPage(){
-                    this.$router.push('/user/suggest')
+por(){
+let suggest = {
+      
+        tag: this.$store.state.user.tag,
+        
+
+      }
+      console.log(suggest);
+      
+    axios.get('http://localhost:8000/job/suggest', suggest )
+    .then((res) => {
+     this.courses = res.data
+       console.log(res.data);
+       
+    }).catch(error => console.log(error))
+
+},
+
+
+  nextPage(){
+                    this.$router.push('/user/seeall')
 
       },
+
+
     showModal (item) {
       this.$refs.myModalRef.show(item) 
       this.job3 = item.job

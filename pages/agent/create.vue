@@ -4,6 +4,10 @@
 <br><br>
       <form @submit.prevent="onCreate">
 
+    <input type="file" @change="onFileChange">
+                     <img :src="image" height="100"> 
+
+
 <b-row class="my-1">
     <b-col sm="10">
       <b-form-input required id="input-large" size="lg" v-model="name" type="text" placeholder="ชื่อเพจของคุณ"></b-form-input>
@@ -35,19 +39,56 @@ import axios from 'axios';
     data(){
     return {
         name: '',
-        contactUrl: ''
+        contactUrl: '',
+        image:null,
+
     }
 },
 
   methods: {
+     onFileChange(e) {
+      var files = e.target.files || e.dataTransfer.files;
+      if (!files.length)
+        return;
+      this.createImage(files[0]);
+      
+    },
+    createImage(file) {
+      var image = new Image();
+      var reader = new FileReader();
+      var vm = this;
+
+      reader.onload = (e) => {
+        vm.image = e.target.result;
+      };
+      reader.readAsDataURL(file);
+    },
+
     onCreate() {
  
  let data = {
           name: this.name,
           contactUrl: this.contactUrl,
-          username: this.$store.state.user.username  
+          username: this.$store.state.agent.username,
+          picture: this.image
+          
         }
- 
+
+let data2 = {
+          name: this.name,
+          contactUrl: this.contactUrl,
+          username: this.$store.state.agent.username,
+          picture: this.image,
+          _id: this.$store.state.agent._id
+        }
+
+         this.$store.dispatch('setAgent', data2)
+         console.log(this.$store.state.agent.username);
+         console.log(this.$store.state.agent._id);
+         
+         
+        console.log(data);
+        
         axios.patch('http://localhost:8000/agent/update', data)
           .then((res) => {
             this.$router.push('/user/create')

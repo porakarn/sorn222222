@@ -3,7 +3,6 @@
 <br><br>
   <div>
           <form @submit.prevent="onCreate">
-
     <h5 style="color: #8f9aa4;">วางงานของคุณที่นี่</h5>
     <b-form-textarea required id="textarea1"
                      v-model="job"
@@ -66,8 +65,15 @@ if (str2.substr(str2.length - 1) === '\n'){
 
 
 
-var math1 = ["PAT1", "PAT 1", "math", "คณิต", "คณิตศาสตร์", "เลข"];
-var eng1 = ["GAT ENG","ENG","Eng","Gat Eng","IELTS", "Ielts", "อังกฤษ" ]
+var math1 = ["PAT1", "PAT 1", "math", "คณิต", "คณิตศาสตร์", "เลข", "Math"];
+var eng1 = ["GAT ENG","ENG","Eng","Gat Eng","IELTS", "Ielts", "อังกฤษ", "Speaking","speaking", "ielts" ]
+var science = ["เคมี","chemistry","Chemistry","วิทย์","ฟิสิกส์", "Physics", "Physic", "วิทยาศาสตร์", "Science","science" ]
+var chinese = ["จีน","Chinese","chinese"]
+var japan = ["ญี่ปุ่น","Japanese","Japan", "japanese","japan"]
+var korea = ["เกาหลี", "Korean", "korean"]
+var thai = ["ภาษาไทย", "Thai", "ไทย"]
+var social = ["สังคม"]
+
 
 var mon = ["จันทร์", "จัน", "Monday", "monday", ]
 var tues = ["อังคาร", "Tue", "Tuesday", "อ-" ]
@@ -78,8 +84,16 @@ var sat = ["เสาร์", "ส.", "ส-" ]
 var sun = ["อาทิตย์", "อาทิต", "อ-", "sun" ]
 
 
+
 var math2 = math1.some(el => str1.includes(el));
 var eng2 = eng1.some(el => str1.includes(el));
+var science2 = science.some(el => str1.includes(el));
+var chinese2 = chinese.some(el => str1.includes(el));
+var japan2 = japan.some(el => str1.includes(el));
+var korea2 = korea.some(el => str1.includes(el));
+var thai2 = thai.some(el => str1.includes(el));
+var social2 = social.some(el => str1.includes(el));
+
 
 var mon2 = mon.some(el => str1.includes(el));
 var tues2 = tues.some(el => str1.includes(el));
@@ -90,11 +104,28 @@ var sat2 = sat.some(el => str1.includes(el));
 var sun2 = sun.some(el => str1.includes(el));
 
 
+
+
 if ( math2 === true ) {
   this.subject = "คณิต"
 } else if ( eng2 === true ) {
    this.subject = "ENG"
+}  else if ( science2 === true ) {
+   this.subject = "วิทย์"
+} else if ( chinese2 === true ) {
+   this.subject = "จีน"
+} else if ( japan2 === true ) {
+   this.subject = "ญี่ปุ่น"
+}  else if ( korea2 === true ) {
+   this.subject = "Korean"
+} else if ( thai2 === true ) {
+   this.subject = "ไทย"
+} else if ( social2 === true ) {
+   this.subject = "สังคม"
 } 
+ 
+
+
 
 if ( mon2 === true ) {
   this.day = "จันทร์"
@@ -117,7 +148,7 @@ if ( mon2 === true ) {
   let createPost = {
       
         job: str2,
-        _creator: this.$store.state.user._id,
+        _creator: this.$store.state.agent._id,
         day : this.day,
         subject : this.subject
 

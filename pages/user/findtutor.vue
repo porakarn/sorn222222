@@ -17,22 +17,23 @@
                   type="text"
                   placeholder="Search วิชา วันเวลา สถานที่"></b-form-input>
   </div><br> -->
-    <div v-for="course in courses" >
+<div>
 
+    <b-card @click="showModal(course)" style="   margin-bottom: 5px;   box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.1);"> 
+    <b-row>
+    <b-col cols="4">
+           <b-img  style="width: 118px; border-radius: 21px" src="https://scontent.fbkk5-6.fna.fbcdn.net/v/t1.0-1/p240x240/15873069_1211350558943201_5314025003629794223_n.jpg?_nc_cat=0&oh=429da1d277ec885fbbc86409fac1dd86&oe=5BA39AF5"/>
 
-    <b-card @click="showModal(course)" style="   margin-bottom: 5px;   box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.1);
-" 
-           > <b-row>  <b-col cols="10" style="    padding-right: 0px;
-">
-        <p style=" white-space: pre-wrap; font-size: 16px; font-family:roboto;  color:#2f2f2f"  class="card-text">{{ course.job}}</p>
- <div class="por" >
-        <a href="#"
-           class="card-link">{{course.subject}}</a>
-        <b-link href="#"
-                class="card-link">{{course.day}}</b-link></div></b-col> 
-                        <b-col style="    padding-left: 10px;
-    padding-right: 3px;" cols="2">ว่าง</b-col> </b-row>
-
+    </b-col>    
+  <b-col cols="8">
+    <p style="font-size: 18px">Porakarn Soonthornsittipong</p> 
+  <p>IELTS , CU-AAT,  SAT MATH</p> 
+     <p style="color: rgb(158, 158, 158);  font-size: 18px;     margin-bottom: 0px;
+ "><i style="color: #F1F182;" class="fa fa-star" aria-hidden="true"></i>
+</i> 4.6 (10)  	&nbsp;&nbsp; <i class="fa fa-user" aria-hidden="true"></i> 12 (30 ครั้ง)
+  </p>
+    </b-col> 
+    </b-row>
     </b-card>
    
     
@@ -114,49 +115,49 @@
 </b-container fluid>
 
 </template>
-<script>
-import axios from 'axios';
+// <script>
+// import axios from 'axios';
 
-export default {
-   data () {
-    return {
-      course: null,
-      job3: '',
+// export default {
+//    data () {
+//     return {
+//       course: null,
+//       job3: '',
      
   
-    }
-  },
-  asyncData () {
+//     }
+//   },
+//   asyncData () {
 
-    return axios.get('https://frozen-mesa-40722.herokuapp.com/job/all')
-    .then((res) => { console.log(res.data)
-      return { courses: res.data,
+//     return axios.get('http://localhost:8000/tutor/all')
+//     .then((res) => { console.log(res.data)
+//       return { courses: res.data,
                
-            }        
+//             }        
 
-    })
-  },
-    methods: {
+//     })
+//   },
+//     methods: {
 
-      nextPage(){
-                    this.$router.push('/user/suggest')
+//       nextPage(){
+//                     this.$router.push('/user/suggest')
 
-      },
-    showModal (item) {
-      this.$refs.myModalRef.show(item) 
-      this.job3 = item.job
-      console.log(item.job  );
+//       },
+//     showModal (item) {
+//       this.$refs.myModalRef.show(item) 
+//       this.job3 = item.job
+//       console.log(item.job  );
       
 
     
     
-    },
-    hideModal () {
-      this.$refs.myModalRef.hide()
-    }
-  }
-}
-</script>
+//     },
+//     hideModal () {
+//       this.$refs.myModalRef.hide()
+//     }
+//   }
+// }
+// </script>
 
 
 <style scoped>

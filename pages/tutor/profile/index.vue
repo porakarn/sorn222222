@@ -16,10 +16,13 @@
   <nuxt-link to="/tutor/profile/edit">
   <b-button @click="onSubmit" style="background-color: #33C1C1; border: 0px; padding-left: 66px;
     padding-right: 66px;">เขียนโปรไฟล์</b-button>
-
 </nuxt-link>
 
   
+  <p  v-if="isUserLoggedIn"
+> {{this.$store.state.user.name}} </p>
+ <p  v-if="this.$store.state.haveProfile"
+> {{this.$store.state.user.subject}} </p>
          </b-col> 
              
     </b-row>
@@ -36,7 +39,10 @@
 </p>
   <b-row class="my-1">
     <b-col sm="10">
-    
+   
+     <p  v-if="this.$store.state.haveProfile"
+> {{this.$store.state.user.subject}} </p>
+
       <!-- <b-form-input focus="false"  class="formpor" id="input-large"  type="text" :placeholder="this.$store.state.user.email"></b-form-input> -->
     </b-col>
   </b-row>
@@ -52,7 +58,9 @@
 <br>
                  <p style=" margin-bottom: 0px;   padding-top: 0px !important;
 color: rgb(117, 119, 120); border:1px !important;">โปรไฟล์ของคุณ</p>
-    
+   <p  v-if="this.$store.state.haveProfile"
+> {{this.$store.state.user.profile}} </p>
+
     <br>
  
 </b-container>
@@ -68,8 +76,25 @@ export default {
     phone: '',
     profile: '',
     text2: '',
-    text:''
+    text:'',
+    subject:''
   
+    }
+  },
+  dataAsync() {
+return 
+    if(isUserLoggedIn)
+    {
+      this.subject = this.$store.state.user.subject
+      console.log('ddd')
+    }
+    //     this.phone = this.$store.state.user.phone,
+    // this.profile = this.$store.state.user.profile,
+    // this.subject = this.$store.state.user.subject
+  },
+    computed: {
+    isUserLoggedIn () {
+      return this.$store.state.isUserLoggedIn
     }
   },
 //   asyncData (context, callback) {

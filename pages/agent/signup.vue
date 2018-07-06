@@ -27,7 +27,7 @@
 
 <script>
 import axios from 'axios';
-import store from '../store/index'; // path to your Vuex store
+import store from '../../store/index'; // path to your Vuex store
 
  export default {
     data(){
@@ -50,9 +50,9 @@ import store from '../store/index'; // path to your Vuex store
               
               console.log(res.data)
               
-   store.dispatch('setToken', res.data.token)
-   store.dispatch('setUser', res.data.user)
-   this.$router.push('/user/user')
+   this.$store.dispatch('setToken', res.data.token)
+   this.$store.dispatch('setAgent', res.data.user)
+   this.$router.push('/agent/create')
 
           })
           .catch(error => console.log(error))

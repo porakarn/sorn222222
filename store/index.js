@@ -8,8 +8,9 @@ const store = () => {
     state: {
       token: null,
       user: null,
-      isUserLoggedIn: false
-
+      isUserLoggedIn: false,
+      haveProfile: false,
+      agent: null
 
 
     },
@@ -22,22 +23,30 @@ const store = () => {
           state.isUserLoggedIn = false
         }
       },
-      setUser(state, user) {
-        state.user = user
-      }
+      setProfile(state , profile) {
+        state.haveProfile = profile
+      },
+       setUser(state, user) {
+         state.user = user
+       },
+       setAgent(state, agent) {
+         state.agent = agent
+       }
     },
     actions: {
-        
-      setToken({
-        commit
-      }, token) {
+         setProfile({commit}, profile) {
+           commit('setProfile', profile)
+         },
+
+      setToken({commit}, token) {
         commit('setToken', token)
       },
-      setUser({
-        commit
-      }, user) {
+      setUser({commit}, user) {
         commit('setUser', user)
       },
+      setAgent({commit}, agent) {
+         commit('setAgent', agent)
+       }
 
     }
 
