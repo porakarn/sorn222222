@@ -8,11 +8,11 @@
 
         </b-col>
          <b-col cols="8">
-      <p style="color: rgb(117, 119, 120);">Porakarn Soonthornsittipong</p>
+      <p style="color: rgb(117, 119, 120); font-size: 19px">Porakarn Soonthornsittipong</p>
       <!-- <p style="color: rgb(117, 119, 120);">{{ this.$store.state.user.name}}</p> -->
-      <p style="color: rgb(117, 119, 120);"><i style="color: #F1F182;" class="fa fa-star" aria-hidden="true"></i>
-</i> 4.6 ( 10 )</p>
-      <i style=" font-size: 28px; color: #7f8082;"  class="fa fa-bell-o mx-auto" aria-hidden="true"/>
+      <p style="color: rgb(117, 119, 120);  font-size: 19px"><i style="color: #F1F182;" class="fa fa-star" aria-hidden="true"></i>
+</i> 4.6 (10)  	&nbsp;   <i class="fa fa-user" aria-hidden="true"></i> 12 (30)
+  </p>
          </b-col>     
     </b-row>
 <b-container fluid style="   padding: 0!important">
