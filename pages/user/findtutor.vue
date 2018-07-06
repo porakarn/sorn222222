@@ -40,9 +40,48 @@
     </b-col> 
     </b-row>
     </b-card>
-     <b-card @click="showModal(course)" style="     padding-bottom: 8px;
-    padding-top: 8px;  margin-bottom: 5px; box-shadow: rgba(111, 111, 111, 0) 0px 1px 0px 0px;
+    <b-card @click="showModal(course)" style="     padding-bottom: 8px;
+    padding-top: 8px;  margin-bottom: 5px; 
+;
+
 "> 
+    <b-row>
+    <b-col cols="4">
+           <b-img  style="width: 100px; border-radius: 21px" src="https://scontent.fbkk5-6.fna.fbcdn.net/v/t1.0-1/p240x240/15873069_1211350558943201_5314025003629794223_n.jpg?_nc_cat=0&oh=429da1d277ec885fbbc86409fac1dd86&oe=5BA39AF5"/>
+
+    </b-col>    
+  <b-col cols="8" style="padding-left: 0px;">
+    <p style="font-size: 18px; font-weight: bold;    margin-bottom: 6px; color: #777777">Porakarn Soonthornsittipon</p> 
+  <p style="margin-bottom: 8px;">IELTS , CU-AAT,  SAT MATH</p> 
+     <p style="color: rgb(158, 158, 158);  font-size: 16px;     margin-bottom: 0px;
+ "><i style="color: #F1F182;" class="fa fa-star" aria-hidden="true"></i>
+</i> 4.6 (10)  	&nbsp;&nbsp; <i class="fa fa-user" aria-hidden="true"></i> 12 
+  </p>
+    </b-col> 
+    </b-row>
+    </b-card>
+    <b-card @click="showModal(course)" style="     padding-bottom: 8px;
+    padding-top: 8px;  margin-bottom: 5px; 
+;
+
+"> 
+    <b-row>
+    <b-col cols="4">
+           <b-img  style="width: 100px; border-radius: 21px" src="https://scontent.fbkk5-6.fna.fbcdn.net/v/t1.0-1/p240x240/15873069_1211350558943201_5314025003629794223_n.jpg?_nc_cat=0&oh=429da1d277ec885fbbc86409fac1dd86&oe=5BA39AF5"/>
+
+    </b-col>    
+  <b-col cols="8" style="padding-left: 0px;">
+    <p style="font-size: 18px; font-weight: bold;    margin-bottom: 6px; color: #777777">Porakarn Soonthornsittipon</p> 
+  <p style="margin-bottom: 8px;">IELTS , CU-AAT,  SAT MATH</p> 
+     <p style="color: rgb(158, 158, 158);  font-size: 16px;     margin-bottom: 0px;
+ "><i style="color: #F1F182;" class="fa fa-star" aria-hidden="true"></i>
+</i> 4.6 (10)  	&nbsp;&nbsp; <i class="fa fa-user" aria-hidden="true"></i> 12 
+  </p>
+    </b-col> 
+    </b-row>
+    </b-card>
+     <b-card @click="showModal(course)" style="     padding-bottom: 8px;
+    padding-top: 8px;  margin-bottom: 5px; "> 
     <b-row>
     <b-col cols="4">
            <b-img  style="width: 100px; border-radius: 21px" src="https://scontent.fbkk5-7.fna.fbcdn.net/v/t1.0-1/p240x240/36383496_10156333480193418_3343711179003396096_n.jpg?_nc_cat=0&oh=66d291970c4c9e638538bb719840d369&oe=5BEA485A"/>
