@@ -21,7 +21,8 @@
 
    
     <b-card @click="showModal(course)" style="     padding-bottom: 8px;
-    padding-top: 8px;  margin-bottom: 5px;   box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.1);"> 
+    padding-top: 8px;  margin-bottom: 5px;   box-shadow: 0 1px 8px 0px rgba(0, 0, 0, 0.1);
+"> 
     <b-row>
     <b-col cols="4">
            <b-img  style="width: 100px; border-radius: 21px" src="https://scontent.fbkk5-6.fna.fbcdn.net/v/t1.0-1/p240x240/15873069_1211350558943201_5314025003629794223_n.jpg?_nc_cat=0&oh=429da1d277ec885fbbc86409fac1dd86&oe=5BA39AF5"/>
@@ -38,7 +39,8 @@
     </b-row>
     </b-card>
      <b-card @click="showModal(course)" style="     padding-bottom: 8px;
-    padding-top: 8px;  margin-bottom: 5px;   box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.1);"> 
+    padding-top: 8px;  margin-bottom: 5px;  box-shadow: 0 1px 8px 0px rgba(0, 0, 0, 0.1);
+"> 
     <b-row>
     <b-col cols="4">
            <b-img  style="width: 100px; border-radius: 21px" src="https://scontent.fbkk5-7.fna.fbcdn.net/v/t1.0-1/p240x240/36383496_10156333480193418_3343711179003396096_n.jpg?_nc_cat=0&oh=66d291970c4c9e638538bb719840d369&oe=5BEA485A"/>
@@ -55,7 +57,7 @@
     </b-row>
     </b-card>
      <b-card @click="showModal(course)" style="     padding-bottom: 8px;
-    padding-top: 8px;  margin-bottom: 5px;   box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.1);"> 
+    padding-top: 8px;  margin-bottom: 5px;   box-shadow: 0 1px 8px 0px rgba(0, 0, 0, 0.1);"> 
     <b-row>
     <b-col cols="4">
            <b-img  style="width: 100px; border-radius: 21px" src="https://scontent.fbkk5-7.fna.fbcdn.net/v/t1.0-1/p240x240/23795772_1560095860735987_1941231139152526865_n.jpg?_nc_cat=0&oh=ca9ffeab8f6932596624c66e31cb20b9&oe=5BEB4C36"/>
@@ -72,7 +74,8 @@
     </b-row>
     </b-card>
      <b-card @click="showModal(course)" style="     padding-bottom: 8px;
-    padding-top: 8px;  margin-bottom: 5px;   box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.1);"> 
+    padding-top: 8px;  margin-bottom: 5px;  box-shadow: 0 1px 8px 0px rgba(0, 0, 0, 0.1);
+"> 
     <b-row>
     <b-col cols="4">
            <b-img  style="width: 100px; border-radius: 21px" src="https://scontent.fbkk5-7.fna.fbcdn.net/v/t31.0-1/29665581_597950253904227_448139003977618527_o.jpg?_nc_cat=0&oh=deec3490ffbb580ce7071a17df86eee5&oe=5BE0E849"/>
