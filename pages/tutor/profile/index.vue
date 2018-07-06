@@ -9,7 +9,7 @@
     <b-img  style="width: 95px; " rounded="circle" src="https://scontent.fbkk5-6.fna.fbcdn.net/v/t1.0-1/p240x240/15873069_1211350558943201_5314025003629794223_n.jpg?_nc_cat=0&oh=429da1d277ec885fbbc86409fac1dd86&oe=5BA39AF5"/>
 
         </b-col>
-         <b-col cols="8">
+         <b-col cols="8" style="    padding-left: 2px;">
 
 <b-row>
 <b-col cols="4">
