@@ -8,13 +8,13 @@
 
         </b-col>
          <b-col cols="8">
-      <p style="color: rgb(117, 119, 120); font-size: 18px;margin-bottom: 7px;">Porakarn Soonthornsittipong</p>
+      <p style="color: rgb(117, 119, 120); font-size: 18px;margin-bottom: 7px;font-weight: bold;">Porakarn Soonthornsittipo</p>
       <!-- <p style="color: rgb(117, 119, 120);">{{ this.$store.state.user.name}}</p> -->
       <p style="color: rgb(158, 158, 158);  font-size: 18px; "><i style="color: #F1F182;" class="fa fa-star" aria-hidden="true"></i>
 </i> 4.6 (10)  	&nbsp;&nbsp; <i class="fa fa-user" aria-hidden="true"></i> 12 (30 ครั้ง)
   </p>
   <nuxt-link to="/tutor/profile/edit">
-  <b-button @click="onSubmit" style="background-color: #33C1C1; border: 0px; padding-left: 66px;
+  <b-button @click="onSubmit" style="background-color: #33C1C1; border: 0px; padding-left: 66px;font-weight: bold;
     padding-right: 66px;">เขียนโปรไฟล์</b-button>
 </nuxt-link>
 
@@ -35,12 +35,12 @@
     </b-col>
   </b-row> -->
    </div></b-container>
- <p style="margin-bottom: 0px; color: rgb(117, 119, 120);  margin-top: 17px;">วิชาที่คุณสอน
+ <p style="margin-bottom: 0px; color: rgb(117, 119, 120);  margin-top: 17px; font-weight: bold;">วิชาที่คุณสอน
 </p>
   <b-row class="my-1">
     <b-col sm="10">
    
-     <p  v-if="this.$store.state.haveProfile"
+     <p   v-if="this.$store.state.haveProfile"
 > {{this.$store.state.user.subject}} </p>
 
       <!-- <b-form-input focus="false"  class="formpor" id="input-large"  type="text" :placeholder="this.$store.state.user.email"></b-form-input> -->
@@ -56,7 +56,7 @@
         <b-link href="#"
                 class="card-link">เคมี</b-link></div> -->
 <br>
-                 <p style=" margin-bottom: 0px;   padding-top: 0px !important;
+                 <p style=" margin-bottom: 0px;   padding-top: 0px !important; font-weight: bold;
 color: rgb(117, 119, 120); border:1px !important;">โปรไฟล์ของคุณ</p>
    <p  v-if="this.$store.state.haveProfile"
 > {{this.$store.state.user.profile}} </p>
