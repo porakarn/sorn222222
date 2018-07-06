@@ -59,7 +59,7 @@
 </b-col>
 
 <b-col cols="3" style="text-align: center;"  >    
- <nuxt-link to="/profile">
+ <nuxt-link to="/tutor/profile">
 <div>
   <i style=" font-size: 28px; color: #7f8082;"  class="fa fa-user-circle mx-auto" aria-hidden="true"></i>
 </div>
