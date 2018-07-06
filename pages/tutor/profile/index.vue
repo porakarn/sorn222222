@@ -13,15 +13,15 @@
 
 <b-row>
 <b-col cols="4" style="    padding-right: 0px;">
-<p style=" 
+<p style="  font-size :17px;
      text-align: center; font-weight: bold; margin-bottom: 0px;">4.6</p>
 <p style=" 
      text-align: center;  font-size:14px;  margin-bottom: 0px;"><i style="color: #F1F182;" class="fa fa-star" aria-hidden="true"></i> รีวิว</p>
 </b-col>
 <b-col cols="4">
-<p style=" 
+<p style="  font-size :17px;
      text-align: center; font-weight: bold; margin-bottom: 0px;">12</p>
-<p style=" 
+<p style="  font-size :17px;
      text-align: center; font-size:14px;  margin-bottom: 0px;">นักเรียน</p>
 </b-col>
 <b-col cols="4" style="padding-left: 0px;"    >
