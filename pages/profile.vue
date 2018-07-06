@@ -4,12 +4,12 @@
     <b-row>
         <b-col cols="4">
   <!-- <b-img rounded="circle" style="width: 70px" :src="this.$store.state.user.picture"/> -->
-    <b-img  style="width: 90px; border-radius: 21px" src="https://scontent.fbkk5-6.fna.fbcdn.net/v/t1.0-1/p240x240/15873069_1211350558943201_5314025003629794223_n.jpg?_nc_cat=0&oh=429da1d277ec885fbbc86409fac1dd86&oe=5BA39AF5"/>
+    <b-img  style="width: 115px; border-radius: 21px" src="https://scontent.fbkk5-6.fna.fbcdn.net/v/t1.0-1/p240x240/15873069_1211350558943201_5314025003629794223_n.jpg?_nc_cat=0&oh=429da1d277ec885fbbc86409fac1dd86&oe=5BA39AF5"/>
 
         </b-col>
          <b-col cols="8">
-      <p>{{ this.$store.state.user.name}}</p>
-      <p>อายุ 22 ปี</p>
+      <p style="color: rgb(117, 119, 120);">{{ this.$store.state.user.name}}</p>
+      <p style="color: rgb(117, 119, 120);">อายุ 22 ปี</p>
          </b-col>     
     </b-row>
 <b-container fluid style="   padding: 0!important">
@@ -21,11 +21,14 @@
     </b-col>
   </b-row> -->
     <b-row class="my-1">
-    <b-col sm="10" style="margin-top: 14px;">
+    <b-col cols="6" sm="10" style="margin-top: 14px;">
       <b-form-input class="formpor" id="input-large"  type="text" placeholder="เบอร์โทร ">{{phone}}</b-form-input>
     </b-col>
+    <b-col cols="6" sm="10" style="margin-top: 14px;">
+      <b-form-input class="formpor" id="input-large"  type="text" placeholder="Line ">{{phone}}</b-form-input>
+    </b-col>
   </b-row></div></b-container>
- <p style="margin-bottom: 0px; color: #8f9aa4 ;  margin-top: 17px;">วิชาที่คุณสอน
+ <p style="margin-bottom: 0px; color: rgb(117, 119, 120);  margin-top: 17px;">วิชาที่คุณสอน
 </p>
   <b-row class="my-1">
     <b-col sm="10">
@@ -50,7 +53,7 @@
                 class="card-link">เคมี</b-link></div> -->
 <br>
                  <p style=" margin-bottom: 0px;   padding-top: 0px !important;
- color: #8f9aa4; border:1px !important;">โปรไฟล์ของคุณ</p>
+color: rgb(117, 119, 120); border:1px !important;">โปรไฟล์ของคุณ</p>
     <b-form-textarea class="formpor"  id="textarea1"
                      v-model="text2"
                      :rows="5"
