@@ -19,6 +19,7 @@
   </div><br> -->
 <div>
 
+   
     <b-card @click="showModal(course)" style="     padding-bottom: 8px;
     padding-top: 8px;  margin-bottom: 5px;   box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.1);"> 
     <b-row>
@@ -27,7 +28,58 @@
 
     </b-col>    
   <b-col cols="8" style="padding-left: 0px;">
-    <p style="font-size: 18px; font-weight: bold;    margin-bottom: 6px;">Porakarn Soonthornsi..</p> 
+    <p style="font-size: 18px; font-weight: bold;    margin-bottom: 6px;">Porakarn Soonthornsittipon</p> 
+  <p style="margin-bottom: 8px;">IELTS , CU-AAT,  SAT MATH</p> 
+     <p style="color: rgb(158, 158, 158);  font-size: 18px;     margin-bottom: 0px;
+ "><i style="color: #F1F182;" class="fa fa-star" aria-hidden="true"></i>
+</i> 4.6 (10)  	&nbsp;&nbsp; <i class="fa fa-user" aria-hidden="true"></i> 12 (30 ครั้ง)
+  </p>
+    </b-col> 
+    </b-row>
+    </b-card>
+     <b-card @click="showModal(course)" style="     padding-bottom: 8px;
+    padding-top: 8px;  margin-bottom: 5px;   box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.1);"> 
+    <b-row>
+    <b-col cols="4">
+           <b-img  style="width: 100px; border-radius: 21px" src="https://scontent.fbkk5-7.fna.fbcdn.net/v/t1.0-1/p240x240/36383496_10156333480193418_3343711179003396096_n.jpg?_nc_cat=0&oh=66d291970c4c9e638538bb719840d369&oe=5BEA485A"/>
+
+    </b-col>    
+  <b-col cols="8" style="padding-left: 0px;">
+    <p style="font-size: 18px; font-weight: bold;    margin-bottom: 6px;">Porakarn Soonthornsittipon</p> 
+  <p style="margin-bottom: 8px;">IELTS , CU-AAT,  SAT MATH</p> 
+     <p style="color: rgb(158, 158, 158);  font-size: 18px;     margin-bottom: 0px;
+ "><i style="color: #F1F182;" class="fa fa-star" aria-hidden="true"></i>
+</i> 4.6 (10)  	&nbsp;&nbsp; <i class="fa fa-user" aria-hidden="true"></i> 12 (30 ครั้ง)
+  </p>
+    </b-col> 
+    </b-row>
+    </b-card>
+     <b-card @click="showModal(course)" style="     padding-bottom: 8px;
+    padding-top: 8px;  margin-bottom: 5px;   box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.1);"> 
+    <b-row>
+    <b-col cols="4">
+           <b-img  style="width: 100px; border-radius: 21px" src="https://scontent.fbkk5-7.fna.fbcdn.net/v/t1.0-1/p240x240/23795772_1560095860735987_1941231139152526865_n.jpg?_nc_cat=0&oh=ca9ffeab8f6932596624c66e31cb20b9&oe=5BEB4C36"/>
+
+    </b-col>    
+  <b-col cols="8" style="padding-left: 0px;">
+    <p style="font-size: 18px; font-weight: bold;    margin-bottom: 6px;">Porakarn Soonthornsittipon</p> 
+  <p style="margin-bottom: 8px;">IELTS , CU-AAT,  SAT MATH</p> 
+     <p style="color: rgb(158, 158, 158);  font-size: 18px;     margin-bottom: 0px;
+ "><i style="color: #F1F182;" class="fa fa-star" aria-hidden="true"></i>
+</i> 4.6 (10)  	&nbsp;&nbsp; <i class="fa fa-user" aria-hidden="true"></i> 12 (30 ครั้ง)
+  </p>
+    </b-col> 
+    </b-row>
+    </b-card>
+     <b-card @click="showModal(course)" style="     padding-bottom: 8px;
+    padding-top: 8px;  margin-bottom: 5px;   box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.1);"> 
+    <b-row>
+    <b-col cols="4">
+           <b-img  style="width: 100px; border-radius: 21px" src="https://scontent.fbkk5-7.fna.fbcdn.net/v/t31.0-1/29665581_597950253904227_448139003977618527_o.jpg?_nc_cat=0&oh=deec3490ffbb580ce7071a17df86eee5&oe=5BE0E849"/>
+
+    </b-col>    
+  <b-col cols="8" style="padding-left: 0px;">
+    <p style="font-size: 18px; font-weight: bold;    margin-bottom: 6px;">Porakarn Soonthornsittipon</p> 
   <p style="margin-bottom: 8px;">IELTS , CU-AAT,  SAT MATH</p> 
      <p style="color: rgb(158, 158, 158);  font-size: 18px;     margin-bottom: 0px;
  "><i style="color: #F1F182;" class="fa fa-star" aria-hidden="true"></i>
@@ -166,7 +218,8 @@
     -ms-flex: 1 1 auto;
     flex: 1 1 auto;
     padding: 11px;
-    padding-top: 6px;
+       padding-bottom: 0px;
+    padding-top: 0px;
 }
 
 
