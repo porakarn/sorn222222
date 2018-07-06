@@ -59,8 +59,9 @@ color: rgb(117, 119, 120); border:1px !important;">โปรไฟล์ขอ�
                      :max-rows="9">
     </b-form-textarea>
     <br>
-    <b-button @click="onSubmit" size="lg" style="background-color: #33C1C1; border: 0px; padding-left: 66px;
-    padding-right: 66px;">สมัคร</b-button>
+    <b-button @click="onSubmit"  style="background-color: #33C1C1; border: 0px; padding-left: 66px;
+    padding-right: 66px;    box-shadow: 0 1px 1px 1px rgba(111, 111, 111, 0.23);
+}">สมัคร</b-button>
 </b-container>
 </template>
 
