@@ -32,7 +32,7 @@
   <p style="margin-bottom: 8px;">IELTS , CU-AAT,  SAT MATH</p> 
      <p style="color: rgb(158, 158, 158);  font-size: 16px;     margin-bottom: 0px;
  "><i style="color: #F1F182;" class="fa fa-star" aria-hidden="true"></i>
-</i> 4.6 (10)  	&nbsp;&nbsp; <i class="fa fa-user" aria-hidden="true"></i> 12 (30 ครั้ง)
+</i> 4.6 (10)  	&nbsp;&nbsp; <i class="fa fa-user" aria-hidden="true"></i> 12 
   </p>
     </b-col> 
     </b-row>
@@ -47,9 +47,9 @@
   <b-col cols="8" style="padding-left: 0px;">
     <p style="font-size: 18px; font-weight: bold;    margin-bottom: 6px;">Porakarn Soonthornsittipon</p> 
   <p style="margin-bottom: 8px;">IELTS , CU-AAT,  SAT MATH</p> 
-     <p style="color: rgb(158, 158, 158);  font-size: 18px;     margin-bottom: 0px;
+     <p style="color: rgb(158, 158, 158);  font-size: 16px;     margin-bottom: 0px;
  "><i style="color: #F1F182;" class="fa fa-star" aria-hidden="true"></i>
-</i> 4.6 (10)  	&nbsp;&nbsp; <i class="fa fa-user" aria-hidden="true"></i> 12 (30 ครั้ง)
+</i> 4.6 (10)  	&nbsp;&nbsp; <i class="fa fa-user" aria-hidden="true"></i> 12 
   </p>
     </b-col> 
     </b-row>
@@ -64,9 +64,9 @@
   <b-col cols="8" style="padding-left: 0px;">
     <p style="font-size: 18px; font-weight: bold;    margin-bottom: 6px;">Porakarn Soonthornsittipon</p> 
   <p style="margin-bottom: 8px;">IELTS , CU-AAT,  SAT MATH</p> 
-     <p style="color: rgb(158, 158, 158);  font-size: 18px;     margin-bottom: 0px;
+     <p style="color: rgb(158, 158, 158);  font-size: 16px;     margin-bottom: 0px;
  "><i style="color: #F1F182;" class="fa fa-star" aria-hidden="true"></i>
-</i> 4.6 (10)  	&nbsp;&nbsp; <i class="fa fa-user" aria-hidden="true"></i> 12 (30 ครั้ง)
+</i> 4.6 (10)  	&nbsp;&nbsp; <i class="fa fa-user" aria-hidden="true"></i> 12 
   </p>
     </b-col> 
     </b-row>
@@ -81,9 +81,9 @@
   <b-col cols="8" style="padding-left: 0px;">
     <p style="font-size: 18px; font-weight: bold;    margin-bottom: 6px;">Porakarn Soonthornsittipon</p> 
   <p style="margin-bottom: 8px;">IELTS , CU-AAT,  SAT MATH</p> 
-     <p style="color: rgb(158, 158, 158);  font-size: 18px;     margin-bottom: 0px;
+     <p style="color: rgb(158, 158, 158);  font-size: 16px;     margin-bottom: 0px;
  "><i style="color: #F1F182;" class="fa fa-star" aria-hidden="true"></i>
-</i> 4.6 (10)  	&nbsp;&nbsp; <i class="fa fa-user" aria-hidden="true"></i> 12 (30 ครั้ง)
+</i> 4.6 (10)  	&nbsp;&nbsp; <i class="fa fa-user" aria-hidden="true"></i> 12 
   </p>
     </b-col> 
     </b-row>
