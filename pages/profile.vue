@@ -2,12 +2,12 @@
 <b-container fluid>
     <br>
     <b-row>
-        <b-col cols="3">
+        <b-col cols="4">
   <!-- <b-img rounded="circle" style="width: 70px" :src="this.$store.state.user.picture"/> -->
-    <b-img rounded="circle" style="width: 70px" src="https://scontent.fbkk5-6.fna.fbcdn.net/v/t1.0-1/p240x240/15873069_1211350558943201_5314025003629794223_n.jpg?_nc_cat=0&oh=429da1d277ec885fbbc86409fac1dd86&oe=5BA39AF5"/>
+    <b-img  style="width: 90px; border-radius: 21px" src="https://scontent.fbkk5-6.fna.fbcdn.net/v/t1.0-1/p240x240/15873069_1211350558943201_5314025003629794223_n.jpg?_nc_cat=0&oh=429da1d277ec885fbbc86409fac1dd86&oe=5BA39AF5"/>
 
         </b-col>
-         <b-col cols="9">
+         <b-col cols="8">
       <p>{{ this.$store.state.user.name}}</p>
       <p>อายุ 22 ปี</p>
          </b-col>     
