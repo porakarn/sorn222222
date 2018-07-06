@@ -37,7 +37,7 @@
     </b-col>
   </b-row> -->
    </div></b-container>
- <p style="margin-bottom: 0px; color: rgb(117, 119, 120);  margin-top: 17px; font-weight: bold;">วิชาที่คุณสอน
+ <p style="margin-bottom: 0px; color: rgb(117, 119, 120);  margin-top: 17px; font-size: 19px">วิชาที่คุณสอน
 </p>
   <b-row class="my-1">
     <b-col sm="10">
@@ -58,7 +58,7 @@
         <b-link href="#"
                 class="card-link">เคมี</b-link></div> -->
 <br>
-                 <p style=" margin-bottom: 0px;   padding-top: 0px !important; font-weight: bold;
+                 <p style=" margin-bottom: 0px;   padding-top: 0px !important; font-size: 19px;
 color: rgb(117, 119, 120); border:1px !important;">โปรไฟล์ของคุณ</p>
    <p  v-if="this.$store.state.haveProfile"
 > {{this.$store.state.user.profile}} </p>
