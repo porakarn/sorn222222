@@ -1,5 +1,10 @@
 <template>
 <b-container fluid>
+  <b-nav fill tabs>
+  <b-nav-item>ทั้งหมด</b-nav-item>
+ <b-nav-item @click="nextPage">งานแนะนำ</b-nav-item>
+ 
+</b-nav>
 <br><br>
   <div>
           <form @submit.prevent="onCreate">
