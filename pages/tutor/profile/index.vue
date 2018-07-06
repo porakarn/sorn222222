@@ -6,26 +6,25 @@
     <b-row>
         <b-col cols="4">
   <!-- <b-img rounded="circle" style="width: 70px" :src="this.$store.state.user.picture"/> -->
-    <b-img  style="width: 110px; border-radius: 21px" src="https://scontent.fbkk5-6.fna.fbcdn.net/v/t1.0-1/p240x240/15873069_1211350558943201_5314025003629794223_n.jpg?_nc_cat=0&oh=429da1d277ec885fbbc86409fac1dd86&oe=5BA39AF5"/>
+    <b-img  style="width: 100px; " rounded="circle" src="https://scontent.fbkk5-6.fna.fbcdn.net/v/t1.0-1/p240x240/15873069_1211350558943201_5314025003629794223_n.jpg?_nc_cat=0&oh=429da1d277ec885fbbc86409fac1dd86&oe=5BA39AF5"/>
 
         </b-col>
          <b-col cols="8">
-      <p style="color: #484848; font-size: 18px;margin-bottom: 7px;font-weight: bold;">Porakarn Soonthornsittipo</p>
       <!-- <p style="color: rgb(117, 119, 120);">{{ this.$store.state.user.name}}</p> -->
       <p style="color:#484848;  font-size: 16px; "><i style="color: #F1F182;" class="fa fa-star" aria-hidden="true"></i>
 </i> 4.6 (10)  	&nbsp;&nbsp; <i class="fa fa-user" aria-hidden="true"></i> 12 (30 ครั้ง)
   </p>
   <nuxt-link to="/tutor/profile/edit">
-  <b-button @click="onSubmit" style="background-color: #33C1C1;    box-shadow: 0 1px 1px 1px rgba(111, 111, 111, 0.23);
+  <b-button @click="onSubmit" style="background-color: #33C1C1;      margin-top: 18px;  box-shadow: 0 1px 1px 1px rgba(111, 111, 111, 0.23);
 ; border: 0px; padding-left: 66px;
     padding-right: 66px;">เขียนโปรไฟล์</b-button>
 </nuxt-link>
 
   
-  <p  v-if="isUserLoggedIn"
+  <!-- <p  v-if="isUserLoggedIn"
 > {{this.$store.state.user.name}} </p>
  <p  v-if="this.$store.state.haveProfile"
-> {{this.$store.state.user.subject}} </p>
+> {{this.$store.state.user.subject}} </p> -->
          </b-col> 
              
     </b-row>
@@ -38,6 +37,9 @@
     </b-col>
   </b-row> -->
    </div></b-container>
+   <br>
+         <p style="color: #484848; font-size: 18px;margin-bottom: 7px;font-weight: bold;">Porakarn Soonthornsittipong</p>
+
  <p style="margin-bottom: 0px; color:#484848;  margin-top: 17px; font-size: 19px">วิชาที่คุณสอน
 </p>
   <b-row class="my-1">
