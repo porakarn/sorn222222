@@ -1,5 +1,6 @@
 <template>
-<b-container fluid>
+<b-container fluid style="    padding-left: 3px;
+    padding-right: 3px;">
   <!-- <b-nav tabs>
   <b-nav-item>All</b-nav-item>
     <b-nav-item>ว่าง</b-nav-item>
