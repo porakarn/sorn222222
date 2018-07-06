@@ -8,12 +8,21 @@
 
         </b-col>
          <b-col cols="8">
-      <p style="color: rgb(117, 119, 120); font-size: 19px">Porakarn Soonthornsittipong</p>
+      <p style="color: rgb(117, 119, 120); font-size: 18px;margin-bottom: 7px;">Porakarn Soonthornsittipong</p>
       <!-- <p style="color: rgb(117, 119, 120);">{{ this.$store.state.user.name}}</p> -->
-      <p style="color: rgb(117, 119, 120);  font-size: 19px"><i style="color: #F1F182;" class="fa fa-star" aria-hidden="true"></i>
-</i> 4.6 (10)  	&nbsp;   <i class="fa fa-user" aria-hidden="true"></i> 12 (30)
+      <p style="color: rgb(117, 119, 120);  font-size: 19px; margin-bottom: 0px;"><i style="color: #F1F182;" class="fa fa-star" aria-hidden="true"></i>
+</i> 4.6 (10)  	&nbsp;&nbsp; <i class="fa fa-user" aria-hidden="true"></i> 12 (30)
   </p>
-         </b-col>     
+  <b-row class="my-1">
+    <b-col cols="6" sm="10" style="margin-top: 14px;">
+      <b-form-input class="formpor" id="input-large"  type="text" placeholder="เบอร์โทร ">{{phone}}</b-form-input>
+    </b-col>
+    <b-col cols="6" sm="10" style="margin-top: 14px;">
+      <b-form-input class="formpor" id="input-large"  type="text" placeholder="Line ">{{phone}}</b-form-input>
+    </b-col>
+  </b-row>
+         </b-col> 
+             
     </b-row>
 <b-container fluid style="   padding: 0!important">
 
@@ -23,14 +32,7 @@
       <b-form-input class="formpor" id="input-large"  type="text" :placeholder="this.$store.state.user.email"></b-form-input>
     </b-col>
   </b-row> -->
-    <b-row class="my-1">
-    <b-col cols="6" sm="10" style="margin-top: 14px;">
-      <b-form-input class="formpor" id="input-large"  type="text" placeholder="เบอร์โทร ">{{phone}}</b-form-input>
-    </b-col>
-    <b-col cols="6" sm="10" style="margin-top: 14px;">
-      <b-form-input class="formpor" id="input-large"  type="text" placeholder="Line ">{{phone}}</b-form-input>
-    </b-col>
-  </b-row></div></b-container>
+   </div></b-container>
  <p style="margin-bottom: 0px; color: rgb(117, 119, 120);  margin-top: 17px;">วิชาที่คุณสอน
 </p>
   <b-row class="my-1">
