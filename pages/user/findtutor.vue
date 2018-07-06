@@ -22,11 +22,11 @@
     <b-card @click="showModal(course)" style="   margin-bottom: 5px;   box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.1);"> 
     <b-row>
     <b-col cols="4">
-           <b-img  style="width: 118px; border-radius: 21px" src="https://scontent.fbkk5-6.fna.fbcdn.net/v/t1.0-1/p240x240/15873069_1211350558943201_5314025003629794223_n.jpg?_nc_cat=0&oh=429da1d277ec885fbbc86409fac1dd86&oe=5BA39AF5"/>
+           <b-img  style="width: 100px; border-radius: 21px" src="https://scontent.fbkk5-6.fna.fbcdn.net/v/t1.0-1/p240x240/15873069_1211350558943201_5314025003629794223_n.jpg?_nc_cat=0&oh=429da1d277ec885fbbc86409fac1dd86&oe=5BA39AF5"/>
 
     </b-col>    
   <b-col cols="8">
-    <p style="font-size: 18px">Porakarn Soonthornsittipong</p> 
+    <p style="font-size: 18px; font-weight: bold;">Porakarn Soonthornsi..</p> 
   <p>IELTS , CU-AAT,  SAT MATH</p> 
      <p style="color: rgb(158, 158, 158);  font-size: 18px;     margin-bottom: 0px;
  "><i style="color: #F1F182;" class="fa fa-star" aria-hidden="true"></i>
