@@ -21,7 +21,8 @@
 <div>
 
    
-    <b-card @click="showModal(course)" style="     padding-bottom: 8px;
+    <b-card @click="showModal(course)" style=" box-shadow: rgba(150, 150, 150, 0.12) 0px 1px 0px 0px;
+    padding-bottom: 8px;
     padding-top: 8px;  margin-bottom: 5px; 
 ;
 
@@ -41,7 +42,7 @@
     </b-col> 
     </b-row>
     </b-card>
-    <b-card @click="showModal(course)" style="     padding-bottom: 8px;
+    <b-card @click="showModal(course)" style="   box-shadow: rgba(150, 150, 150, 0.12) 0px 1px 0px 0px;  padding-bottom: 8px;
     padding-top: 8px;  margin-bottom: 5px; 
 ;
 
@@ -61,7 +62,7 @@
     </b-col> 
     </b-row>
     </b-card>
-    <b-card @click="showModal(course)" style="     padding-bottom: 8px;
+    <b-card @click="showModal(course)" style=" box-shadow: rgba(150, 150, 150, 0.12) 0px 1px 0px 0px;    padding-bottom: 8px;
     padding-top: 8px;  margin-bottom: 5px; 
 ;
 
@@ -81,7 +82,7 @@
     </b-col> 
     </b-row>
     </b-card>
-     <b-card @click="showModal(course)" style="     padding-bottom: 8px;
+     <b-card @click="showModal(course)" style=" box-shadow: rgba(150, 150, 150, 0.12) 0px 1px 0px 0px;    padding-bottom: 8px;
     padding-top: 8px;  margin-bottom: 5px; "> 
     <b-row>
     <b-col cols="4">
@@ -99,8 +100,7 @@
     </b-row>
     </b-card>
      <b-card @click="showModal(course)" style="     padding-bottom: 8px;
-    padding-top: 8px;  margin-bottom: 5px; box-shadow: rgba(111, 111, 111, 0) 0px 1px 0px 0px;
-"> 
+    padding-top: 8px;  margin-bottom: 5px; box-shadow: rgba(150, 150, 150, 0.12) 0px 1px 0px 0px;"> 
     <b-row>
     <b-col cols="4">
            <b-img  style="width: 100px; border-radius: 21px" src="https://scontent.fbkk5-7.fna.fbcdn.net/v/t1.0-1/p240x240/23795772_1560095860735987_1941231139152526865_n.jpg?_nc_cat=0&oh=ca9ffeab8f6932596624c66e31cb20b9&oe=5BEB4C36"/>
@@ -117,8 +117,7 @@
     </b-row>
     </b-card>
      <b-card @click="showModal(course)" style="     padding-bottom: 8px;
-    padding-top: 8px;  margin-bottom: 5px; box-shadow: rgba(111, 111, 111, 0) 0px 1px 0px 0px;
-"> 
+    padding-top: 8px;  margin-bottom: 5px; box-shadow: rgba(150, 150, 150, 0.12) 0px 1px 0px 0px;"> 
     <b-row>
     <b-col cols="4">
            <b-img  style="width: 100px; border-radius: 21px" src="https://scontent.fbkk5-7.fna.fbcdn.net/v/t31.0-1/29665581_597950253904227_448139003977618527_o.jpg?_nc_cat=0&oh=deec3490ffbb580ce7071a17df86eee5&oe=5BE0E849"/>
@@ -269,7 +268,7 @@
 }
 
 .card{
-    border: 1px solid rgba(255, 255, 255, 0.12)!important;
+    border: 1px solid rgb(255, 255, 255)!important;
 }
 
 .card-text{
