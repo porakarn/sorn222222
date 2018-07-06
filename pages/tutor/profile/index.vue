@@ -16,7 +16,8 @@
 </i> 4.6 (10)  	&nbsp;&nbsp; <i class="fa fa-user" aria-hidden="true"></i> 12 (30 ครั้ง)
   </p>
   <nuxt-link to="/tutor/profile/edit">
-  <b-button @click="onSubmit" style="background-color: #33C1C1; border: 0px; padding-left: 66px;
+  <b-button @click="onSubmit" style="background-color: #33C1C1;    box-shadow: 0 1px 1px 1px rgba(111, 111, 111, 0.23);
+; border: 0px; padding-left: 66px;
     padding-right: 66px;">เขียนโปรไฟล์</b-button>
 </nuxt-link>
 
