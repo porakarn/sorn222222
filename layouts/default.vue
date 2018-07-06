@@ -52,9 +52,9 @@
 
 </b-col>
 <b-col cols="3" style="text-align: center;" >
-<div><i style=" font-size: 28px; color: #7f8082;"  class="fa fa-bell-o mx-auto" aria-hidden="true"></i>
+<nuxt-link to="/user/findtutor"><div><i style=" font-size: 28px; color: #7f8082;"  class="fa fa-bell-o mx-auto" aria-hidden="true"></i>
 </div>
-
+</nuxt-link>
 
 
 </b-col>
