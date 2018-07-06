@@ -21,7 +21,7 @@
 
    
     <b-card @click="showModal(course)" style="     padding-bottom: 8px;
-    padding-top: 8px;  margin-bottom: 5px;  box-shadow: 0 1px 2px 0px rgba(111, 111, 111, 0.1);
+    padding-top: 8px;  margin-bottom: 5px;  box-shadow: rgba(111, 111, 111, 0) 0px 1px 0px 0px;
 ;
 
 "> 
@@ -41,8 +41,7 @@
     </b-row>
     </b-card>
      <b-card @click="showModal(course)" style="     padding-bottom: 8px;
-    padding-top: 8px;  margin-bottom: 5px; box-shadow: 0 1px 2px 0px rgba(111, 111, 111, 0.1);
-
+    padding-top: 8px;  margin-bottom: 5px; box-shadow: rgba(111, 111, 111, 0) 0px 1px 0px 0px;
 "> 
     <b-row>
     <b-col cols="4">
@@ -60,7 +59,7 @@
     </b-row>
     </b-card>
      <b-card @click="showModal(course)" style="     padding-bottom: 8px;
-    padding-top: 8px;  margin-bottom: 5px; box-shadow: 0 1px 2px 0px rgba(111, 111, 111, 0.1);
+    padding-top: 8px;  margin-bottom: 5px; box-shadow: rgba(111, 111, 111, 0) 0px 1px 0px 0px;
 "> 
     <b-row>
     <b-col cols="4">
@@ -78,7 +77,7 @@
     </b-row>
     </b-card>
      <b-card @click="showModal(course)" style="     padding-bottom: 8px;
-    padding-top: 8px;  margin-bottom: 5px; box-shadow: 0 1px 2px 0px rgba(111, 111, 111, 0.1);
+    padding-top: 8px;  margin-bottom: 5px; box-shadow: rgba(111, 111, 111, 0) 0px 1px 0px 0px;
 "> 
     <b-row>
     <b-col cols="4">
