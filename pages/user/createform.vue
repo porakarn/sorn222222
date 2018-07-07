@@ -94,3 +94,11 @@ export default {
 }
 </script>
 
+
+<style scoped>
+
+input{
+  padding-top: 11px;
+    padding-bottom: 11px;
+}
+</style>
