@@ -7,7 +7,8 @@
 </b-nav>
 <br><br>
   <div> <div class="my-3">
-  <p style="float:right;" placement='topleft'
+  <p style="float:right;  color: #8f9aa4;"  topleft          placement="placement"
+
  v-b-popover.hover="'07029 : อังกฤษ * เพิ่มเกรด \n - ช.1 คน ม.5 (สาธิตสวนสุนันทา) \n - บางบัวทอง ติดมบ.กฤษฎา นคร 11 ถ.บางกรวย-ไทรน้อย \n- อาทิตย์ 9.00-11.00 \n - 2 ชม.600 : fee 1,200'">
 ตัวอย่าง 
   </p>
