@@ -1,25 +1,28 @@
 <template>
+
 <b-container fluid>
   <b-nav fill tabs>
   <b-nav-item @click="nextPage">ทั้งหมด</b-nav-item>
  <b-nav-item >งานแนะนำ</b-nav-item>
  
 </b-nav>
+
+
 <br><br>
   <div>
     <b-form @submit="onSubmit" @reset="onReset" v-if="show">
-      <b-form-group id="exampleInputGroup1"
-                    label="Email address:"
+      <b-form-group  id="exampleInputGroup1"
+                    label="วิชา"
                     label-for="exampleInput1"
-                    description="We'll never share your email with anyone else.">
-        <b-form-input id="exampleInput1"
-                      type="email"
+                    description="วิชาที่อยากเรียน ตัวอย่าง ภาษาอังกฤษ GAT ENG">
+        <b-form-input id="exampleInput1" size="lg" 
+                      type="text"
                       v-model="form.email"
                       required
-                      placeholder="Enter email">
+                      placeholder="วิชาที่อยากเรียน">
         </b-form-input>
       </b-form-group>
-      <b-form-group id="exampleInputGroup2"
+      <!-- <b-form-group id="exampleInputGroup2"
                     label="Your Name:"
                     label-for="exampleInput2">
         <b-form-input id="exampleInput2"
@@ -28,11 +31,11 @@
                       required
                       placeholder="Enter name">
         </b-form-input>
-      </b-form-group>
+      </b-form-group> -->
       <b-form-group id="exampleInputGroup3"
-                    label="Food:"
+                    label="ระดับชั้น"
                     label-for="exampleInput3">
-        <b-form-select id="exampleInput3"
+        <b-form-select id="exampleInput3" size="lg"
                       :options="foods"
                       required
                       v-model="form.food">
@@ -44,7 +47,7 @@
           <b-form-checkbox value="that">Check that out</b-form-checkbox>
         </b-form-checkbox-group>
       </b-form-group>
-      <b-button type="submit" variant="primary">Submit</b-button>
+      <b-button type="submit" variant="primary">Subhhhmit</b-button>
       <b-button type="reset" variant="danger">Reset</b-button>
     </b-form>
   </div>
