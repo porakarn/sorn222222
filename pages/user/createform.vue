@@ -15,7 +15,7 @@
                     
                     label-for="exampleInput1"
                     description=" ตัวอย่าง ภาษาอังกฤษ GAT ENG">
-        <b-form-input id="exampleInput1" size="lg" 
+        <b-form-input  class="formpor" id="exampleInput1" size="lg" 
                       type="text"
                       v-model="form.email"
                       required
@@ -32,20 +32,20 @@
                       placeholder="Enter name">
         </b-form-input>
       </b-form-group> -->
-      <b-form-group id="exampleInputGroup3"
+      <b-form-group  id="exampleInputGroup3"
                   
                     label-for="exampleInput3">
-        <b-form-select id="exampleInput3" size="lg"
+        <b-form-select  class="formpor" id="exampleInput3" size="lg"
                       :options="foods"
                       required
                       v-model="form.food">
         </b-form-select>
       </b-form-group>
-        <b-form-group  id="exampleInputGroup1"
+        <b-form-group   id="exampleInputGroup1"
                     
                     label-for="exampleInput1"
                     description=" ตัวอย่าง ภาษาอังกฤษ GAT ENG">
-        <b-form-input id="exampleInput1" size="lg" 
+        <b-form-input  class="formpor" id="exampleInput1" size="lg" 
                       type="text"
                       v-model="form.email"
                       required
@@ -57,7 +57,7 @@
                     
                     label-for="exampleInput1"
                     description=" ตัวอย่าง ภาษาอังกฤษ GAT ENG">
-        <b-form-input id="exampleInput1" size="lg" 
+        <b-form-input class="formpor" id="exampleInput1" size="lg" 
                       type="text"
                       v-model="form.email"
                       required
@@ -68,7 +68,7 @@
                     
                     label-for="exampleInput1"
                     description=" ตัวอย่าง ภาษาอังกฤษ GAT ENG">
-        <b-form-input id="exampleInput1" size="lg" 
+        <b-form-input id="exampleInput1" size="lg"  class="formpor"
                       type="text"
                       v-model="form.email"
                       required
@@ -128,5 +128,13 @@ export default {
 input{
   padding-top: 11px;
     padding-bottom: 11px;
+}
+
+.formpor{
+border-top: 0px;
+    border-right: 0px;
+    border-left: 0px;
+    border-radius: 0;
+    padding-left: 4px;
 }
 </style>
