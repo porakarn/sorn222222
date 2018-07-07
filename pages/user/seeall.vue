@@ -8,7 +8,9 @@
   <b-nav-item>ปิดแล้ว</b-nav-item>
 </b-nav> -->
 <b-nav fill tabs>
-  <b-nav-item>ทั้งหมด</b-nav-item>
+  <b-nav-item  style="border-bottom: 2px solid;
+    border-bottom-color: #82d9d9;
+">ทั้งหมด</b-nav-item>
  <b-nav-item @click="nextPage">งานแนะนำ</b-nav-item>
  
 </b-nav>
@@ -196,5 +198,10 @@ export default {
 box-shadow: 0 1px 2px 0px rgba(0, 0, 0, 0.1);
 border: 1px solid rgba(193, 193, 193, 0.12);
     border-radius: 6px;
+}
+
+.nav-link:focus {
+    border-color: #e9ecef00;
+    
 }
 </style>

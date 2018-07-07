@@ -8,7 +8,9 @@
 </b-nav> -->
 <b-nav fill tabs>
   <b-nav-item @click="nextPage">ทั้งหมด</b-nav-item>
-    <b-nav-item>งานแนะนำ</b-nav-item>
+    <b-nav-item style="border-bottom: 2px solid;
+    border-bottom-color: #82d9d9;
+">งานแนะนำ</b-nav-item>
  
 </b-nav>
 <br>

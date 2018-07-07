@@ -190,3 +190,10 @@ if ( mon2 === true ) {
 }
 
 </script>
+
+<style scoped>
+.nav-link:focus {
+    border-color: #e9ecef #e9ecef #dee2e6;
+    border-bottom: 2px solid !important;
+}
+</style>
