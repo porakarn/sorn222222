@@ -42,7 +42,7 @@
 
 </b-col> 
 
-<b-col cols="3" style="text-align: center;" >
+<b-col  cols="3" style="text-align: center;" >
 
 <nuxt-link to="/user/create"><div><i style="font-size: 31px; color: #7f8082;"  class="fa fa-plus-square-o  " aria-hidden="true"></i>
 </div>
