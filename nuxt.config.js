@@ -35,7 +35,7 @@ module.exports = {
   ** Customize the progress-bar color
   */
   loading: {
-      color: '#82D9D9',
+      color: '#19b585',
       height: '3px'
  },
 
@@ -94,10 +94,10 @@ module.exports = {
     }
   },
 
-transition: {
- name: 'fade',
- mode: 'out-in'
+// transition: {
+//  name: 'fade',
+//  mode: 'out-in'
 
-}
+// }
 
 }
