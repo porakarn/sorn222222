@@ -44,6 +44,12 @@ export default {
     }
   },
  methods: {
+    nextPage(){
+   this.$router.push('/user/createform')
+
+    }
+
+   ,
     onCreate() {
  var job1 = this.job
 
