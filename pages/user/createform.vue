@@ -41,17 +41,45 @@
                       v-model="form.food">
         </b-form-select>
       </b-form-group>
-      <b-form-group id="exampleGroup4">
-        <b-form-checkbox-group v-model="form.checked" id="exampleChecks">
-          <b-form-checkbox value="me">Check me out</b-form-checkbox>
-          <b-form-checkbox value="that">Check that out</b-form-checkbox>
-        </b-form-checkbox-group>
+        <b-form-group  id="exampleInputGroup1"
+                    
+                    label-for="exampleInput1"
+                    description=" ตัวอย่าง ภาษาอังกฤษ GAT ENG">
+        <b-form-input id="exampleInput1" size="lg" 
+                      type="text"
+                      v-model="form.email"
+                      required
+                      placeholder="วัน เวลาเรียน สถานที่">
+        </b-form-input>
+      </b-form-group>
+      
+        <b-form-group  id="exampleInputGroup1"
+                    
+                    label-for="exampleInput1"
+                    description=" ตัวอย่าง ภาษาอังกฤษ GAT ENG">
+        <b-form-input id="exampleInput1" size="lg" 
+                      type="text"
+                      v-model="form.email"
+                      required
+                      placeholder="ค่าสอน ค่าแนะนำ (ถ้ามี)">
+        </b-form-input>
+      </b-form-group>
+       <b-form-group  id="exampleInputGroup1"
+                    
+                    label-for="exampleInput1"
+                    description=" ตัวอย่าง ภาษาอังกฤษ GAT ENG">
+        <b-form-input id="exampleInput1" size="lg" 
+                      type="text"
+                      v-model="form.email"
+                      required
+                      placeholder="หมายเหตุเพิ่มเติม">
+        </b-form-input>
       </b-form-group>
       <b-button type="submit" variant="primary">Subhhhmit</b-button>
-      <b-button type="reset" variant="danger">Reset</b-button>
+    
     </b-form>
   </div>
-ds
+
 </b-container>
 </template>
 
