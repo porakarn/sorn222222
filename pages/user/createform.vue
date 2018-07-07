@@ -12,9 +12,9 @@
   <div>
     <b-form @submit="onSubmit" @reset="onReset" v-if="show">
       <b-form-group  id="exampleInputGroup1"
-                    label="วิชา"
+                    
                     label-for="exampleInput1"
-                    description="วิชาที่อยากเรียน ตัวอย่าง ภาษาอังกฤษ GAT ENG">
+                    description=" ตัวอย่าง ภาษาอังกฤษ GAT ENG">
         <b-form-input id="exampleInput1" size="lg" 
                       type="text"
                       v-model="form.email"
@@ -33,7 +33,7 @@
         </b-form-input>
       </b-form-group> -->
       <b-form-group id="exampleInputGroup3"
-                    label="ระดับชั้น"
+                  
                     label-for="exampleInput3">
         <b-form-select id="exampleInput3" size="lg"
                       :options="foods"
@@ -68,7 +68,7 @@ export default {
         checked: []
       },
       foods: [
-        { text: 'Select One', value: null },
+        { text: 'ระดับชั้น', value: null },
         'Carrots', 'Beans', 'Tomatoes', 'Corn'
       ],
       show: true
