@@ -125,10 +125,7 @@ export default {
 
 <style scoped>
 
-input{
-  padding-top: 11px;
-    padding-bottom: 11px;
-}
+
 
 .formpor{
 border-top: 0px;
@@ -137,4 +134,11 @@ border-top: 0px;
     border-radius: 0;
     padding-left: 4px;
 }
+
+
+.form-group {
+  
+    margin-bottom: 24px;
+}
+
 </style>
