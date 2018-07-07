@@ -1,6 +1,5 @@
 <template>
-<b-container fluid style="    padding-left: 20px;
-    padding-right: 20px;">
+<b-container fluid style="padding:0px">
   <!-- <b-nav tabs>
   <b-nav-item>All</b-nav-item>
     <b-nav-item>ว่าง</b-nav-item>
@@ -14,6 +13,10 @@
  <b-nav-item @click="nextPage">งานแนะนำ</b-nav-item>
  
 </b-nav>
+
+<b-container style="border-bottom: 2px solid;
+    border-bottom-color: #82d9d9;
+">
 <br>
   <!-- <div>
     <b-form-input size="lg" v-model="text1"
@@ -112,9 +115,9 @@
 
 
 
+</b-container>
 
-
-</b-container fluid>
+</b-container >
 
 </template>
 <script>
