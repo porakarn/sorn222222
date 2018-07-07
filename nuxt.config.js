@@ -34,12 +34,16 @@ module.exports = {
   /*
   ** Customize the progress-bar color
   */
-  loading: { color: '#FFFFFF' },
+  loading: {
+      color: 'red',
+      height: '5px'
+ },
 
   /*
   ** Global CSS
   */
   css: [
+    '~assets/styles/main.css'
   ],
 
   /*
@@ -88,5 +92,12 @@ module.exports = {
     extend(config, ctx) {
       
     }
-  }
+  },
+
+transition: {
+ name: 'fade',
+ mode: 'out-in'
+
+}
+
 }
