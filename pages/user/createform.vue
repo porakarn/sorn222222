@@ -48,8 +48,8 @@
 
 
     <!-- <pre class="mt-3">{{ text }}</pre> -->
-        <b-button style="background-color: #33C1C1; border: 0px; padding-left: 36px;
-    padding-right: 36px;" @click.prevent="next()">Next</b-button>
+        <b-button style="background-color: #33C1C1; border: 0px; padding-left: 46px;
+    padding-right: 46px;" @click.prevent="next()">Next</b-button>
 
               </div>
     <div v-if="step === 2">
@@ -78,10 +78,10 @@
         </b-form-input>
       </b-form-group>
 
-        <b-button style="background-color: #33C1C1; border: 0px; padding-left: 36px;
-    padding-right: 36px;" @click.prevent="next()">Next</b-button>
+        <b-button style="background-color: #33C1C1; border: 0px; padding-left: 46px;
+    padding-right: 46px;" @click.prevent="next()">Next</b-button>
 
-        <b-button style="background-color: #33C1C1; border: 0px; padding-left: 36px;
+        <b-button style="background-color: white; border: 0px; padding-left: 36px;  color: grey;
     padding-right: 36px;" @click.prevent="prev()">Previous</b-button>
 
     </div>
@@ -99,9 +99,9 @@
                       placeholder="หมายเหตุเพิ่มเติม">
         </b-form-input>
       </b-form-group>
-       <b-button type="submit" style="background-color: #33C1C1; border: 0px; padding-left: 36px;
-    padding-right: 36px;">เรียบร้อย</b-button>
-         <b-button style="background-color: #33C1C1; border: 0px; padding-left: 36px;
+       <b-button type="submit" style="background-color: #33C1C1; border: 0px; padding-left: 46px;
+    padding-right: 46px;">เรียบร้อย</b-button>
+         <b-button style="background-color: white; border: 0px; padding-left: 36px; color: grey;
     padding-right: 36px;" @click.prevent="prev()">Previous</b-button>
             </div>
 
