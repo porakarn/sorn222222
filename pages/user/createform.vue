@@ -33,7 +33,9 @@
                       placeholder="Enter name">
         </b-form-input>
       </b-form-group> -->
-      <b-form-group  id="exampleInputGroup3"
+      <b-row>
+  <b-col cols="6">
+<b-form-group  id="exampleInputGroup3"
                   
                     label-for="exampleInput3">
         <b-form-select  class="formpor" id="exampleInput3" size="lg"
@@ -44,6 +46,23 @@
       </b-form-group>
 
 
+  </b-col>
+    <b-col cols="6">
+    <b-form-group  id="exampleInputGroup3"
+                  
+                    label-for="exampleInput3">
+        <b-form-select  class="formpor" id="exampleInput3" size="lg"
+                      :options="genders"
+                      required
+                      v-model="form.gender">
+        </b-form-select>
+      </b-form-group>
+
+
+  </b-col>
+
+      </b-row>
+      
 
 
 
@@ -62,7 +81,7 @@
                       type="text"
                       v-model="form.email"
                       required
-                      placeholder="วัน เวลาเรียน สถานที่">
+                      placeholder="วัน เวลาเรียน ">
         </b-form-input>
       </b-form-group>
       
@@ -92,12 +111,12 @@
         <b-form-group  id="exampleInputGroup1"
                     
                     label-for="exampleInput1"
-                    description=" ตัวอย่าง ภาษาอังกฤษ GAT ENG">
+                    description=" ตัวอย่าง ค่าสอน 300/ชม ค่าแนะนำ 600 บาท (ถ้ามี)">
         <b-form-input class="formpor" id="exampleInput1" size="lg" 
                       type="text"
                       v-model="form.email"
                       required
-                      placeholder="ค่าสอน ค่าแนะนำ (ถ้ามี)">
+                      placeholder="ค่าสอน">
         </b-form-input>
       </b-form-group>
 
@@ -109,7 +128,7 @@
                       type="text"
                       v-model="form.email"
                       required
-                      placeholder="หมายเหตุเพิ่มเติม">
+                      placeholder="หมายเหตุเพิ่มเติม (ถ้ามี)">
         </b-form-input>
       </b-form-group>
        <b-button type="submit" style="background-color: #33C1C1; border: 0px; padding-left: 46px;
@@ -141,11 +160,16 @@ export default {
         email: '',
         name: '',
         food: null,
+        gender: null,
         checked: []
       },
       foods: [
         { text: 'ระดับชั้น', value: null },
        'มหาลัย', 'ม.6', 'ม.5', 'ม.4', 'ม.3', 'ม.2', 'ม.1', 'ป.6','ป.5','ป.4','ป.3','ป.2','ป.1','อนุบาล','อื่นๆ',
+      ],
+       genders: [
+        { text: 'เพศนักเรียน', value: null },
+       'ชาย', 'หญิง',
       ],
   
     }
