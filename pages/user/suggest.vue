@@ -14,8 +14,8 @@
  
 </b-nav>
 <br>
-   แนะนำ
-    <div v-for="course in courses" >
+  
+   <div v-for="course in courses" >
 
 
     <b-card @click="showModal(course)" style="   margin-bottom: 5px;   box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.1);
@@ -24,10 +24,10 @@
 ">
         <p style=" white-space: pre-wrap; font-size: 16px; font-family:roboto;  color:#2f2f2f"  class="card-text">{{ course.job}}</p>
  <div class="por" >
-        <a href="#"
+        <a   href="#" v-show="course.subject.length >1"
            class="card-link">{{course.subject}}</a>
-        <b-link href="#"
-                class="card-link">{{course.day}}</b-link></div></b-col> 
+        <b-link href="#" v-show="course.day.length >1"
+                class="card-link"   >{{course.day}}</b-link></div></b-col> 
                         <b-col style="    padding-left: 10px;
     padding-right: 3px;" cols="2">ว่าง</b-col> </b-row>
 
@@ -124,7 +124,7 @@ export default {
     }
   },
   asyncData (context) {
-
+if(context.store.state.user.tag.length>1){
 let suggest = {
       
         tag: context.store.state.user.tag,
@@ -134,13 +134,16 @@ let suggest = {
       console.log(suggest);
       console.log(context);
       
-    return axios.get('https://frozen-mesa-40722.herokuapp.com/job/suggest', suggest)
+    return axios.post('https://frozen-mesa-40722.herokuapp.com/job/suggest', suggest)
     .then((res) => { console.log(res.data)
       return { courses: res.data,
                
             }        
 
     })
+  
+}
+
   },
 
     methods: {

@@ -41,7 +41,6 @@
       
              <p style="color: grey"> ส่งโปรไฟล์ของคุณ</p>
          <b-form-textarea id="textarea1"
-                     v-model="text"
                      placeholder="Enter something"
                      :rows="4"
                      :max-rows="6">
@@ -83,9 +82,15 @@ export default {
   
     }
   },
-  asyncData () {
+  asyncData (context) {
+let suggest = {
+      
+        tutorid: context.store.state.user._id
+        
 
-    return axios.get('https://frozen-mesa-40722.herokuapp.com/job/tutorown')
+      }
+      console.log(suggest)
+    return axios.post('http://localhost:8000/job/tutorown', suggest)
     .then((res) => { console.log(res.data)
       return { courses: res.data,
                

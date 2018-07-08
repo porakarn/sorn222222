@@ -14,9 +14,7 @@
  
 </b-nav>
 
-<b-container style="border-bottom: 2px solid;
-    border-bottom-color: #82d9d9;
-">
+<b-container >
 <br>
   <!-- <div>
     <b-form-input size="lg" v-model="text1"
