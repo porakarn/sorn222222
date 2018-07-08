@@ -94,6 +94,16 @@ color: #484848; border:1px !important;">โปรไฟล์ของคุณ<
 
     <br>
  
+ <b-nav fill tabs style="box-shadow: rgba(0, 0, 0, 0.2) 0px 3px 8px 0px, rgba(0, 0, 0, 0) 0px 4px 5px 0px, rgba(0, 0, 0, 0.01) 0px 1px 10px 0px; position: fixed;     width: 100%;
+
+  bottom: 44px; 
+  background-color: white;
+  height: 58px;">
+  <b-nav-item >ให้นักเรียนริวิว</b-nav-item>
+ <b-nav-item @click="nextPage">งานของคุณ</b-nav-item>
+ 
+</b-nav>
+
 </b-container>
 </template>
 

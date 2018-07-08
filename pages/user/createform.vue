@@ -163,7 +163,8 @@
          <div style="white-space: pre-wrap;">{{str5}}</div> 
       </div>  <br>
           <b-button @click="onSubmit" style="background-color: #33C1C1; border: 0px; padding-left: 46px;
-    padding-right: 46px;">เรียบร้อย</b-button>
+    padding-right: 46px;">ยืนยัน</b-button> <b-button style="background-color: white; border: 0px; padding-left: 36px; color: grey;
+    padding-right: 36px;" @click="hideModal">แก้ไข</b-button>
     </b-modal>
 </b-container>
 </template>
@@ -216,6 +217,9 @@ methods: {
     }
 
    ,
+     hideModal () {
+      this.$refs.myModalRef.hide()
+    },
     onCreate() {
       this.str5 = this.form.subject + ' ' + this.form.note +'\n- '+ this.form.gender + ' ' + this.form.food + ' (' + this.form.school +') \n- '+this.form.location +'\n- '+this.form.dayandtime +'\n- '+this.form.tuitionfee
     // alert(this.str5)
