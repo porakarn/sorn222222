@@ -19,7 +19,11 @@
         <b-link href="#" v-show="course.day.length >1"
                 class="card-link"   >{{course.day}}</b-link></div></b-col> 
                         <b-col style="    padding-left: 10px;
-    padding-right: 3px;" cols="2">ว่าง</b-col> </b-row>
+    padding-right: 3px;" cols="2">{{course.status}}  
+    
+    
+    
+    </b-col> </b-row>
 
     </b-card>
    
@@ -36,32 +40,77 @@
 
  <b-modal hide-header  hide-footer  centered ref="myModalRef" hide-footer title="Using Component Methods">
       <div class="d-block ">
-          <div style="white-space: pre-wrap;">{{job3}}</div>
-
       
-             <p style="color: grey"> ส่งโปรไฟล์ของคุณ</p>
-         <b-form-textarea id="textarea1"
+<b-row>  <b-col cols="12" >
+  <b-form-textarea style=" white-space: pre-wrap; margin-bottom: 4px;" required id="textarea1"
+                     v-model="job4"
                      placeholder="Enter something"
-                     :rows="4"
-                     :max-rows="6">
+                     :rows="5"
+                     :max-rows="7">
     </b-form-textarea>
-    <p style="color: grey">  Copy</p>
-   <b-row>
-             <b-col cols="9" >
-     <b-button size="lg" style="  background-color: #33C1C1; border: 0px; padding-left: 66px;
-    padding-right: 66px;">ติดต่อ</b-button>  
-             </b-col>
-               <b-col cols="3">
-      <b-img style="border-radius: 5px" width="50px" height="50px" fluid src="https://picsum.photos/250/250/?image=54" alt="Thumbnail" />
+        <!-- <p style=" white-space: pre-wrap; font-size: 15px; font-family:roboto;  color:#2f2f2f"  class="card-text">{{job4}}</p> -->
+</b-col> 
+                       </b-row>
+      
+      <b-row>
+        <b-col>
+            <b-button  @click="editjob" style=" padding-right:23px;  background-color: white; color: grey; border: 0px;
+    "> <i class="fa fa-floppy-o" aria-hidden="true"></i>
+</i>
+Save </b-button>  
+        <b-button v-b-modal.modal1 style="  background-color: white; color: grey; border: 0px;">
+      <i class="fa fa-trash-o" aria-hidden="true"></i>
+ลบ </b-button>  
+        </b-col>
+         <b-col>
+         
 
-               </b-col>         
+  <div style="    margin-top: 5px;">สถานะ : {{status2}} </div> 
+</b-col>
+ </b-row>  
+
+<br>
+   <b-row v-if="status2 == 'ว่าง'">
+             <b-col cols="6" >
+     <b-button  @click="closejob" style="  background-color: white; color: grey; border: 0px; padding-left: 46px;
+    padding-right: 46px;">ปิดงาน</b-button>  
+    
+             </b-col>
+             <b-col cols="6" >
+     <b-button @click="openjob" style="  background-color: #33C1C1; border: 0px; padding-left: 46px;
+    padding-right: 46px;">ว่าง</b-button>  
+             </b-col>
+                 
+
+         </b-row>
+         <b-row v-if="status2 == 'ปิด'">
+             <b-col cols="6" >
+     <b-button  @click="closejob" style="  background-color: #33C1C1; border: 0px; padding-left: 46px;
+    padding-right: 46px;">ปิดงาน</b-button>  
+    
+             </b-col>
+             <b-col cols="6" >
+     <b-button @click="openjob" style="  background-color:white ; color: grey; border: 0px; padding-left: 46px;
+    padding-right: 46px;">ว่าง</b-button>  
+             </b-col>
+                 
 
          </b-row>
       </div>
     </b-modal>
 
 
-
+  <b-modal ref="myModalRef2" hide-footer  centered id="modal1" title="ต้องการลบงานนี้ใช่หรือไม่">
+    <p style=" white-space: pre-wrap;" class="my-4">{{job4}}</p>
+    <b-row>
+     <b-col cols="6" >
+     <b-button  @click="deletejob" style="  background-color: #33C1C1; border: 0px; padding-left: 46px;
+    padding-right: 46px;">ลบ</b-button>  
+    
+             </b-col>
+            
+             </b-row>
+  </b-modal>
  
 </b-container>
 
@@ -77,7 +126,9 @@ export default {
     return {
       course: null,
       job3: '',
-      isblank: ''
+      job4: '',
+      isblank: '',
+      status2:''
      
   
     }
@@ -99,6 +150,101 @@ let suggest = {
     })
   },
     methods: {
+    deletejob(){
+        let data = {
+        _id: this.job3,
+
+      }
+axios.post('http://localhost:8000/job/delete', data)
+    .then((res) => { console.log(res.data)
+     let suggest = {
+        tutorid: this.$store.state.user._id
+      }
+      console.log(suggest)
+     axios.post('http://localhost:8000/job/tutorown', suggest)
+    .then((res) => { console.log(res.data)
+      this.courses = res.data
+                    this.$refs.myModalRef2.hide()
+
+            })
+    
+    
+    })
+
+    },
+
+   editjob(){
+   let edit = {
+        _id: this.job3,
+        job: this.job4
+
+      }
+axios.patch('http://localhost:8000/job/update', edit)
+    .then((res) => { console.log(res.data)
+    let suggest = {
+      
+        tutorid: this.$store.state.user._id
+        
+
+      }
+      console.log(suggest)
+     axios.post('http://localhost:8000/job/tutorown', suggest)
+    .then((res) => { console.log(res.data)
+      this.courses = res.data
+              
+            })
+    
+    })
+
+   },
+
+
+      closejob(){
+        let close = {
+        status: 'ปิด',
+        _id: this.job3
+
+      }
+axios.patch('http://localhost:8000/job/update', close)
+    .then((res) => { console.log(res.data)
+let suggest = {
+      
+        tutorid: this.$store.state.user._id
+        
+
+      }
+      console.log(suggest)
+     axios.post('http://localhost:8000/job/tutorown', suggest)
+    .then((res) => { console.log(res.data)
+      this.courses = res.data
+               this.hideModal()
+            })
+      })
+      },
+       openjob(){
+        let close = {
+        status: 'ว่าง',
+        _id: this.job3
+
+      }
+axios.patch('http://localhost:8000/job/update', close)
+    .then((res) => { console.log(res.data)
+let suggest = {
+      
+        tutorid: this.$store.state.user._id
+        
+
+      }
+      console.log(suggest)
+     axios.post('http://localhost:8000/job/tutorown', suggest)
+    .then((res) => { console.log(res.data)
+      this.courses = res.data
+               this.hideModal()
+            }        
+
+    )
+      })
+      },
 
       nextPage(){
                     this.$router.push('/user/suggest')
@@ -106,8 +252,10 @@ let suggest = {
       },
     showModal (item) {
       this.$refs.myModalRef.show(item) 
-      this.job3 = item.job
-      console.log(item.job  );
+      this.job3 = item._id
+      this.job4 = item.job
+      this.status2 = item.status
+      console.log(this.status2);
       
 
     
@@ -115,6 +263,9 @@ let suggest = {
     },
     hideModal () {
       this.$refs.myModalRef.hide()
+    },
+    hideModal2 () {
+      this.$refs.myModalRef2.hide()
     }
   }
 }
@@ -162,5 +313,10 @@ border: 1px solid rgba(193, 193, 193, 0.12);
 .nav-link:focus {
     border-color: #e9ecef00;
     
+}
+
+
+.btn-secondary:not(:disabled):not(.disabled):active:focus, .btn-secondary:not(:disabled):not(.disabled).active:focus, .show > .btn-secondary.dropdown-toggle:focus {
+    box-shadow: 0 0 0 0.2rem rgba(255, 255, 255, 0.5);
 }
 </style>

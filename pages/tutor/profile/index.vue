@@ -104,7 +104,7 @@ color: #484848; border:1px !important;">โปรไฟล์ของคุณ<
   bottom: 44px; 
   background-color: white;
   height: 58px;">
-  <b-nav-item >ให้นักเรียนริวิว</b-nav-item>
+  <b-nav-item >ให้นักเรียนรีวิว</b-nav-item>
  <b-nav-item @click="nextPage">งานของคุณ</b-nav-item>
  
 </b-nav>
