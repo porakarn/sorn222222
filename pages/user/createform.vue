@@ -146,7 +146,7 @@
                       placeholder="หมายเหตุเพิ่มเติม (ถ้ามี)">
         </b-form-input>
       </b-form-group>
-       <b-button type="submit" style="background-color: #33C1C1; border: 0px; padding-left: 46px;
+       <b-button  type="submit" style="background-color: #33C1C1; border: 0px; padding-left: 46px;
     padding-right: 46px;">เรียบร้อย</b-button>
          <b-button style="background-color: white; border: 0px; padding-left: 36px; color: grey;
     padding-right: 36px;" @click.prevent="prev()">กลับ</b-button>
@@ -158,6 +158,13 @@
           </form>
   </div>
 
+<b-modal  hide-header  hide-footer  centered ref="myModalRef" hide-footer title="Using Component Methods">
+      <div class="d-block ">
+         <div style="white-space: pre-wrap;">{{str5}}</div> 
+      </div>  <br>
+          <b-button @click="onSubmit" style="background-color: #33C1C1; border: 0px; padding-left: 46px;
+    padding-right: 46px;">เรียบร้อย</b-button>
+    </b-modal>
 </b-container>
 </template>
 
@@ -168,6 +175,8 @@ export default {
   data () {
     return {
        step:1,
+       str5:'',
+       subject:'',
       job: '',
       day: '',
        form: {
@@ -208,9 +217,111 @@ methods: {
 
    ,
     onCreate() {
-      var str5 = this.form.subject + ' ' + this.form.school
-    alert(str5)
+      this.str5 = this.form.subject + ' ' + this.form.note +'\n- '+ this.form.gender + ' ' + this.form.food + ' (' + this.form.school +') \n- '+this.form.location +'\n- '+this.form.dayandtime +'\n- '+this.form.tuitionfee
+    // alert(this.str5)
+        this.$refs.myModalRef.show() 
+    },
+    onSubmit(){
+      var math1 = ["PAT1", "PAT 1", "math", "คณิต", "คณิตศาสตร์", "เลข", "Math"];
+var eng1 = ["GAT ENG","ENG","Eng","Gat Eng","IELTS", "Ielts", "อังกฤษ", "Speaking","speaking", "ielts" ]
+var science = ["เคมี","chemistry","Chemistry","วิทย์","ฟิสิกส์", "Physics", "Physic", "วิทยาศาสตร์", "Science","science" ]
+var chinese = ["จีน","Chinese","chinese"]
+var japan = ["ญี่ปุ่น","Japanese","Japan", "japanese","japan"]
+var korea = ["เกาหลี", "Korean", "korean"]
+var thai = ["ภาษาไทย", "Thai", "ไทย"]
+var social = ["สังคม"]
+
+
+var mon = ["จันทร์", "จัน", "Monday", "monday", ]
+var tues = ["อังคาร", "Tue", "Tuesday", "อ-" ]
+var wed = ["พุธ", "wed", "Wednesday", "พ-" ]
+var thu = ["พถ", "พฤหัส", "Thu", "พฤ" ]
+var fri = ["ศุกร์", "Fri", "ศุก", "fri" ]
+var sat = ["เสาร์", "ส.", "ส-" ]
+var sun = ["อาทิตย์", "อาทิต", "อ-", "sun" ]
+
+
+
+var math2 = math1.some(el => this.str5.includes(el));
+var eng2 = eng1.some(el => this.str5.includes(el));
+var science2 = science.some(el => this.str5.includes(el));
+var chinese2 = chinese.some(el => this.str5.includes(el));
+var japan2 = japan.some(el => this.str5.includes(el));
+var korea2 = korea.some(el => this.str5.includes(el));
+var thai2 = thai.some(el => this.str5.includes(el));
+var social2 = social.some(el => this.str5.includes(el));
+
+
+var mon2 = mon.some(el => this.str5.includes(el));
+var tues2 = tues.some(el => this.str5.includes(el));
+var wed2 = wed.some(el => this.str5.includes(el));
+var thu2 = thu.some(el => this.str5.includes(el));
+var fri2 = fri.some(el => this.str5.includes(el));
+var sat2 = sat.some(el => this.str5.includes(el));
+var sun2 = sun.some(el => this.str5.includes(el));
+
+
+
+
+if ( math2 === true ) {
+  this.subject = "คณิต"
+} else if ( eng2 === true ) {
+   this.subject = "ENG"
+}  else if ( science2 === true ) {
+   this.subject = "วิทย์"
+} else if ( chinese2 === true ) {
+   this.subject = "จีน"
+} else if ( japan2 === true ) {
+   this.subject = "ญี่ปุ่น"
+}  else if ( korea2 === true ) {
+   this.subject = "Korean"
+} else if ( thai2 === true ) {
+   this.subject = "ไทย"
+} else if ( social2 === true ) {
+   this.subject = "สังคม"
+} 
+ 
+
+
+
+if ( mon2 === true ) {
+  this.day = "จันทร์"
+} else if ( tues2 === true ) {
+    this.day = "อังคาร"
+} else if ( wed2 === true ) {
+      this.day = "พุธ"
+} else if ( thu2 === true ) {
+      this.day = "พฤหัส"
+} else if ( fri2 === true ) {
+    this.day = "ศุกร์"
+} else if ( sat2 === true ) {
+    this.day = "เสาร์"
+} else if ( sun2 === true ) {
+    this.day = "อาทิตย์"
+} 
+
+
+
+  let createPost = {
       
+        job: this.str5,
+        _creator: this.$store.state.agent._id,
+        day : this.day,
+        subject : this.subject
+
+      }
+   console.log(createPost);
+   
+   
+        axios.post('http://localhost:8000/job/create', createPost)
+          .then((res) => { 
+              
+              console.log(res.data)
+              
+  
+          })
+          .catch(error => console.log(error))
+    
     }
 }
 }
