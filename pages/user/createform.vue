@@ -97,7 +97,7 @@ export default {
       },
       foods: [
         { text: 'ระดับชั้น', value: null },
-        'Carrots', 'Beans', 'Tomatoes', 'Corn'
+        'ม.6', 'ม.5', 'ม.4', 'ม.3', 'ม.2', 'ม.1', 'ป.6','ป.5','ป.4','ป.3','ป.2','ป.1','อนุบาล','มหาลัย','อื่นๆ',
       ],
       show: true
     }
@@ -138,7 +138,7 @@ border-top: 0px;
 
 .form-group {
   
-    margin-bottom: 24px;
+    margin-bottom: 30px;
 }
 
 </style>
