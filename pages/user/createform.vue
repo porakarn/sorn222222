@@ -33,8 +33,7 @@
                       placeholder="Enter name">
         </b-form-input>
       </b-form-group> -->
-      <b-row>
-  <b-col cols="6">
+  
 <b-form-group  id="exampleInputGroup3"
                   
                     label-for="exampleInput3">
@@ -45,10 +44,14 @@
         </b-form-select>
       </b-form-group>
 
+    <!-- <pre class="mt-3">{{ text }}</pre> -->
+        <b-button style="background-color: #33C1C1; border: 0px; padding-left: 46px;
+    padding-right: 46px;" @click.prevent="next()">ต่อไป</b-button>
 
-  </b-col>
-    <b-col cols="6">
-    <b-form-group  id="exampleInputGroup3"
+              </div>
+
+ <div v-if="step === 2">
+  <b-form-group  id="exampleInputGroup3"
                   
                     label-for="exampleInput3">
         <b-form-select  class="formpor" id="exampleInput3" size="lg"
@@ -58,20 +61,29 @@
         </b-form-select>
       </b-form-group>
 
+  <b-form-group   id="exampleInputGroup1"
+                    
+                    label-for="exampleInput1"
+                    description="โรงเรียน หรือ มหาลัยของนักเรียน">
+        <b-form-input  class="formpor" id="exampleInput1" size="lg" 
+                      type="text"
+                      v-model="form.email"
+                      required
+                      placeholder="โรงเรียน ">
+        </b-form-input>
+      </b-form-group>
+     
 
-  </b-col>
-
-      </b-row>
-      
-
-
-
-    <!-- <pre class="mt-3">{{ text }}</pre> -->
         <b-button style="background-color: #33C1C1; border: 0px; padding-left: 46px;
     padding-right: 46px;" @click.prevent="next()">ต่อไป</b-button>
 
-              </div>
-    <div v-if="step === 2">
+        <b-button style="background-color: white; border: 0px; padding-left: 36px;  color: grey;
+    padding-right: 36px;" @click.prevent="prev()">กลับ</b-button>
+
+    </div>
+
+
+    <div v-if="step === 3">
 
   <b-form-group   id="exampleInputGroup1"
                     
@@ -106,7 +118,7 @@
 
     </div>
 
-   <div v-if="step === 3">
+   <div v-if="step === 4">
 
         <b-form-group  id="exampleInputGroup1"
                     
