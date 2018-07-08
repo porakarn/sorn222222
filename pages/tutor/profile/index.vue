@@ -100,7 +100,7 @@ color: #484848; border:1px !important;">โปรไฟล์ของคุณ<
 
 <b-nav fill tabs style=" position: fixed;    width:100%;
   border-top:1px solid;
-  border-color: #e2e5e9;
+  border-color: #e2e5e957;
   bottom: 44px; 
   background-color: white;
   height: 58px;">
