@@ -173,7 +173,7 @@ if ( math2 === true ) {
 
           //  axios.patch('https://tutor-8e729.firebaseio.com/chawwww.json', data).then((res) =>
 
-           axios.patch('http://localhost:8000/update', data).then((res) =>
+           axios.patch('https://frozen-mesa-40722.herokuapp.com/update', data).then((res) =>
            {
             console.log(res.data);
 

@@ -178,7 +178,9 @@ if ( mon2 === true ) {
         job: str2,
         _creator: this.$store.state.agent._id,
         day : this.day,
-        subject : this.subject
+        subject : this.subject,
+        tutorid: this.$store.state.user._id
+
 
       }
    console.log(createPost);
@@ -187,7 +189,7 @@ if ( mon2 === true ) {
     console.log("น้อยกว่า 7")
     
     } else {
-        axios.post('http://localhost:8000/job/create', createPost)
+        axios.post('https://frozen-mesa-40722.herokuapp.com/job/create', createPost)
           .then((res) => { 
               
               console.log(res.data)

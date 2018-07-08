@@ -311,13 +311,14 @@ if ( mon2 === true ) {
         job: this.str5,
         _creator: this.$store.state.agent._id,
         day : this.day,
-        subject : this.subject
+        subject : this.subject,
+        tutorid: this.$store.state.user._id
 
       }
    console.log(createPost);
    
    
-        axios.post('http://localhost:8000/job/create', createPost)
+        axios.post('https://frozen-mesa-40722.herokuapp.com/job/create', createPost)
           .then((res) => { 
               
               console.log(res.data)

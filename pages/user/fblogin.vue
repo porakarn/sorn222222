@@ -184,7 +184,7 @@ console.log('r6');
  console.log(response6);
 console.log('r6');
 
- axios.post('http://localhost:8000/tutor/signup', response6)
+ axios.post('https://frozen-mesa-40722.herokuapp.com/tutor/signup', response6)
           .then((res) => { 
                   // var vm = this
                                 //  this.login()
