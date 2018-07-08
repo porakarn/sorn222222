@@ -15,6 +15,7 @@
                 <nuxt-link to="/user/seeall">Seeall</nuxt-link>
                 <nuxt-link to="/user/create">Create</nuxt-link>
                 <nuxt-link to="/agent/signup">Signup</nuxt-link>
+                <nuxt-link to="/choose">Choose</nuxt-link>
                 
 
 

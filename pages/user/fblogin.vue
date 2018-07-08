@@ -3,7 +3,7 @@
 <b-container fluid>
 
 
-
+<br>
 
   
 <img style="    width: 100%;" src="https://www.sorns.co/wp-content/uploads/2018/01/sds.png" alt="">
@@ -13,7 +13,6 @@
           <img style="width: 340px;" src="https://i.stack.imgur.com/oL5c2.png" alt="">
         </a>
    
-   <button @click="login">Login</button>
   
  <br><br>
 <br><br><br>
