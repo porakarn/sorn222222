@@ -1,8 +1,10 @@
 <template>
 <b-container fluid>
   <b-nav fill tabs>
-  <b-nav-item>ทั้งหมด</b-nav-item>
- <b-nav-item @click="nextPage">งานแนะนำ</b-nav-item>
+  <b-nav-item @click="nextPage">กรอกเอง</b-nav-item>
+ <b-nav-item style="border-bottom: 2px solid;
+    border-bottom-color: #82d9d9;
+">ใช้แบบฟอร์ม</b-nav-item>
  
 </b-nav>
 <br><br>
@@ -20,6 +22,7 @@
         <b-form-input  class="formpor" id="exampleInput1" size="lg" 
                       type="text"
                       required
+                      v-model="form.subject"
                       placeholder="วิชาที่อยากเรียน">
         </b-form-input>
       </b-form-group>
@@ -67,7 +70,7 @@
                     description="โรงเรียน หรือ มหาลัยของนักเรียน">
         <b-form-input  class="formpor" id="exampleInput1" size="lg" 
                       type="text"
-                      v-model="form.email"
+                      v-model="form.school"
                       required
                       placeholder="โรงเรียน ">
         </b-form-input>
@@ -91,7 +94,7 @@
                     description=" ตัวอย่าง ภาษาอังกฤษ GAT ENG">
         <b-form-input  class="formpor" id="exampleInput1" size="lg" 
                       type="text"
-                      v-model="form.email"
+                      v-model="form.dayandtime"
                       required
                       placeholder="วัน เวลาเรียน ">
         </b-form-input>
@@ -103,7 +106,7 @@
                     description=" ตัวอย่าง ภาษาอังกฤษ GAT ENG">
         <b-form-input  class="formpor" id="exampleInput1" size="lg" 
                       type="text"
-                      v-model="form.email"
+                      v-model="form.location"
                       required
                       placeholder="สถานที่เรียน">
         </b-form-input>
@@ -126,7 +129,7 @@
                     description=" ตัวอย่าง ค่าสอน 300/ชม ค่าแนะนำ 600 บาท (ถ้ามี)">
         <b-form-input class="formpor" id="exampleInput1" size="lg" 
                       type="text"
-                      v-model="form.email"
+                      v-model="form.tuitionfee"
                       required
                       placeholder="ค่าสอน">
         </b-form-input>
@@ -138,7 +141,7 @@
                     description=" ตัวอย่าง ภาษาอังกฤษ GAT ENG">
         <b-form-input id="exampleInput1" size="lg"  class="formpor"
                       type="text"
-                      v-model="form.email"
+                      v-model="form.note"
                       required
                       placeholder="หมายเหตุเพิ่มเติม (ถ้ามี)">
         </b-form-input>
@@ -166,11 +169,15 @@ export default {
     return {
        step:1,
       job: '',
-      subject: '',
       day: '',
        form: {
         email: '',
-        name: '',
+        subject: '',
+        note: '',
+        tuitionfee: '',
+        school: '',
+        dayandtime: '',
+        location: '',
         food: null,
         gender: null,
         checked: []
@@ -195,13 +202,14 @@ methods: {
       this.step++;
     },
     nextPage(){
-   this.$router.push('/user/createform')
+   this.$router.push('/user/create')
 
     }
 
    ,
     onCreate() {
-      console.log('por')
+      var str5 = this.form.subject + ' ' + this.form.school
+    alert(str5)
       
     }
 }

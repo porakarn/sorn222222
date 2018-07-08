@@ -1,8 +1,10 @@
 <template>
 <b-container fluid>
   <b-nav fill tabs>
-  <b-nav-item>ทั้งหมด</b-nav-item>
- <b-nav-item @click="nextPage">งานแนะนำ</b-nav-item>
+  <b-nav-item style="border-bottom: 2px solid;
+    border-bottom-color: #82d9d9;
+">กรอกเอง</b-nav-item>
+ <b-nav-item @click="nextPage">ใช้แบบฟอร์ม</b-nav-item>
  
 </b-nav>
 <br><br>
@@ -15,7 +17,7 @@
 </div>
           <form @submit.prevent="onCreate">
 
-              <div v-if="step === 1">
+              
 
     <h5 style="color: #8f9aa4;">วางงานของคุณที่นี่</h5>
     <b-form-textarea required id="textarea1"
@@ -25,14 +27,9 @@
                      :max-rows="9">
     </b-form-textarea>
     <!-- <pre class="mt-3">{{ text }}</pre> -->
-        <button @click.prevent="next()">Next</button>
 
-              </div>
-    <div v-if="step === 2">
-por
-        <button @click.prevent="prev()">Previous</button>
-
-    </div>
+           
+ 
     
     <br>
       <b-button type="submit" style="background-color: #33C1C1; border: 0px; padding-left: 36px;
@@ -49,7 +46,7 @@ import axios from 'axios';
 export default {
   data () {
     return {
-       step:1,
+    
       job: '',
       subject: '',
       day: ''
@@ -57,12 +54,7 @@ export default {
     }
   },
  methods: {
-    prev() {
-      this.step--;
-    },
-    next() {
-      this.step++;
-    },
+  
     nextPage(){
    this.$router.push('/user/createform')
 
