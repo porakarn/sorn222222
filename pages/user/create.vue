@@ -14,6 +14,9 @@
   </p>
 </div>
           <form @submit.prevent="onCreate">
+
+              <div v-if="step === 1">
+
     <h5 style="color: #8f9aa4;">วางงานของคุณที่นี่</h5>
     <b-form-textarea required id="textarea1"
                      v-model="job"
@@ -22,6 +25,15 @@
                      :max-rows="9">
     </b-form-textarea>
     <!-- <pre class="mt-3">{{ text }}</pre> -->
+        <button @click.prevent="next()">Next</button>
+
+              </div>
+    <div v-if="step === 2">
+por
+        <button @click.prevent="prev()">Previous</button>
+
+    </div>
+    
     <br>
       <b-button type="submit" style="background-color: #33C1C1; border: 0px; padding-left: 36px;
     padding-right: 36px;">เรียบร้อย</b-button>
@@ -37,6 +49,7 @@ import axios from 'axios';
 export default {
   data () {
     return {
+       step:1,
       job: '',
       subject: '',
       day: ''
@@ -44,6 +57,12 @@ export default {
     }
   },
  methods: {
+    prev() {
+      this.step--;
+    },
+    next() {
+      this.step++;
+    },
     nextPage(){
    this.$router.push('/user/createform')
 

@@ -1,24 +1,25 @@
 <template>
+
 <b-container fluid>
   <b-nav fill tabs>
-  <b-nav-item>ทั้งหมด</b-nav-item>
- <b-nav-item @click="nextPage">งานแนะนำ</b-nav-item>
+  <b-nav-item @click="nextPage">ทั้งหมด</b-nav-item>
+ <b-nav-item >งานแนะนำ</b-nav-item>
  
 </b-nav>
+
+
 <br><br>
-  <div> <div class="my-3">
- 
-</div>
-          <form @submit.prevent="onCreate">
+  <div>
+             <form @submit.prevent="onCreate">
 
-              <div v-if="step === 1">
-
-    <b-form-group  id="exampleInputGroup1"
+        <div v-if="step === 1">
+      <b-form-group  id="exampleInputGroup1"
                     
                     label-for="exampleInput1"
                     description=" ตัวอย่าง ภาษาอังกฤษ GAT ENG">
         <b-form-input  class="formpor" id="exampleInput1" size="lg" 
                       type="text"
+                      v-model="form.email"
                       required
                       placeholder="วิชาที่อยากเรียน">
         </b-form-input>
@@ -42,19 +43,12 @@
                       v-model="form.food">
         </b-form-select>
       </b-form-group>
+        <button @click.prevent="next()">Next</button>
 
+        </div>
+          <div v-if="step === 2">
 
-
-
-
-    <!-- <pre class="mt-3">{{ text }}</pre> -->
-        <b-button style="background-color: #33C1C1; border: 0px; padding-left: 36px;
-    padding-right: 36px;" @click.prevent="next()">Next</b-button>
-
-              </div>
-    <div v-if="step === 2">
-
-  <b-form-group   id="exampleInputGroup1"
+        <b-form-group   id="exampleInputGroup1"
                     
                     label-for="exampleInput1"
                     description=" ตัวอย่าง ภาษาอังกฤษ GAT ENG">
@@ -77,16 +71,10 @@
                       placeholder="ค่าสอน ค่าแนะนำ (ถ้ามี)">
         </b-form-input>
       </b-form-group>
-
-        <b-button style="background-color: #33C1C1; border: 0px; padding-left: 36px;
-    padding-right: 36px;" @click.prevent="next()">Next</b-button>
-
-        <b-button style="background-color: #33C1C1; border: 0px; padding-left: 36px;
-    padding-right: 36px;" @click.prevent="prev()">Previous</b-button>
-
-    </div>
-
-   <div v-if="step === 3">
+        <button @click.prevent="prev()">Previous</button>
+    <button @click.prevent="next()">Next</button>
+          </div>
+            <div v-if="step === 3">
 
        <b-form-group  id="exampleInputGroup1"
                     
@@ -101,14 +89,9 @@
       </b-form-group>
        <b-button type="submit" style="background-color: #33C1C1; border: 0px; padding-left: 36px;
     padding-right: 36px;">เรียบร้อย</b-button>
-         <b-button style="background-color: #33C1C1; border: 0px; padding-left: 36px;
-    padding-right: 36px;" @click.prevent="prev()">Previous</b-button>
+         <button @click.prevent="prev()">Previous</button>
             </div>
-
-    
-    <br>
- 
-          </form>
+             </form>
   </div>
 
 </b-container>
@@ -121,10 +104,7 @@ export default {
   data () {
     return {
        step:1,
-      job: '',
-      subject: '',
-      day: '',
-       form: {
+      form: {
         email: '',
         name: '',
         food: null,
@@ -134,48 +114,26 @@ export default {
         { text: 'ระดับชั้น', value: null },
        'มหาลัย', 'ม.6', 'ม.5', 'ม.4', 'ม.3', 'ม.2', 'ม.1', 'ป.6','ป.5','ป.4','ป.3','ป.2','ป.1','อนุบาล','อื่นๆ',
       ],
-  
+   
     }
   },
-
-methods: {
-    prev() {
+  methods: {
+    onCreate(){
+      alert('por')
+    },
+     prev() {
       this.step--;
+      console.log(this.step);
+      
     },
     next() {
       this.step++;
     },
-    nextPage(){
-   this.$router.push('/user/createform')
-
-    }
-
-   ,
-    onCreate() {
-      console.log('por')
-      
-    }
-}
+    // onSubmit (evt) {
+    //   evt.preventDefault();
+    //   alert(JSON.stringify(this.form));
+    // },
+ 
+  }
 }
 </script>
-      
-<style scoped>
-
-
-
-.formpor{
-border-top: 0px;
-    border-right: 0px;
-    border-left: 0px;
-    border-radius: 0;
-    padding-left: 4px;
-}
-
-
-.form-group {
-  
-    margin-bottom: 30px;
-}
-
-
-</style>
