@@ -1,7 +1,8 @@
 <template>
+<b-container fluid style="padding: 0px;">
+
 <b-container fluid>
 
-</b-nav>
     <br>
     <b-row>
         <b-col cols="4">
@@ -94,8 +95,12 @@ color: #484848; border:1px !important;">โปรไฟล์ของคุณ<
 
     <br>
  
- <b-nav fill tabs style="box-shadow: rgba(0, 0, 0, 0.2) 0px 3px 8px 0px, rgba(0, 0, 0, 0) 0px 4px 5px 0px, rgba(0, 0, 0, 0.01) 0px 1px 10px 0px; position: fixed;     width: 100%;
+ 
+</b-container>
 
+<b-nav fill tabs style=" position: fixed;    width:100%;
+  border-top:1px solid;
+  border-color: #e2e5e9;
   bottom: 44px; 
   background-color: white;
   height: 58px;">
