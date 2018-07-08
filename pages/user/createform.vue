@@ -49,7 +49,7 @@
 
     <!-- <pre class="mt-3">{{ text }}</pre> -->
         <b-button style="background-color: #33C1C1; border: 0px; padding-left: 46px;
-    padding-right: 46px;" @click.prevent="next()">Next</b-button>
+    padding-right: 46px;" @click.prevent="next()">ต่อไป</b-button>
 
               </div>
     <div v-if="step === 2">
@@ -66,6 +66,29 @@
         </b-form-input>
       </b-form-group>
       
+        <b-form-group   id="exampleInputGroup1"
+                    
+                    label-for="exampleInput1"
+                    description=" ตัวอย่าง ภาษาอังกฤษ GAT ENG">
+        <b-form-input  class="formpor" id="exampleInput1" size="lg" 
+                      type="text"
+                      v-model="form.email"
+                      required
+                      placeholder="สถานที่เรียน">
+        </b-form-input>
+     
+ </b-form-group>
+
+        <b-button style="background-color: #33C1C1; border: 0px; padding-left: 46px;
+    padding-right: 46px;" @click.prevent="next()">ต่อไป</b-button>
+
+        <b-button style="background-color: white; border: 0px; padding-left: 36px;  color: grey;
+    padding-right: 36px;" @click.prevent="prev()">กลับ</b-button>
+
+    </div>
+
+   <div v-if="step === 3">
+
         <b-form-group  id="exampleInputGroup1"
                     
                     label-for="exampleInput1"
@@ -77,16 +100,6 @@
                       placeholder="ค่าสอน ค่าแนะนำ (ถ้ามี)">
         </b-form-input>
       </b-form-group>
-
-        <b-button style="background-color: #33C1C1; border: 0px; padding-left: 46px;
-    padding-right: 46px;" @click.prevent="next()">Next</b-button>
-
-        <b-button style="background-color: white; border: 0px; padding-left: 36px;  color: grey;
-    padding-right: 36px;" @click.prevent="prev()">Previous</b-button>
-
-    </div>
-
-   <div v-if="step === 3">
 
        <b-form-group  id="exampleInputGroup1"
                     
@@ -102,7 +115,7 @@
        <b-button type="submit" style="background-color: #33C1C1; border: 0px; padding-left: 46px;
     padding-right: 46px;">เรียบร้อย</b-button>
          <b-button style="background-color: white; border: 0px; padding-left: 36px; color: grey;
-    padding-right: 36px;" @click.prevent="prev()">Previous</b-button>
+    padding-right: 36px;" @click.prevent="prev()">กลับ</b-button>
             </div>
 
     
@@ -177,5 +190,7 @@ border-top: 0px;
     margin-bottom: 30px;
 }
 
-
+.btn-secondary:focus, .btn-secondary.focus {
+    box-shadow: 0 0 0 0.2rem rgba(255, 255, 255, 0.5);
+}
 </style>
