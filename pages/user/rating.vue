@@ -18,7 +18,18 @@
    :star-points="[23,2, 14,17, 0,19, 10,34, 7,50, 23,43, 38,50, 36,34, 46,19, 31,17]"></star-rating>
 </div>
 
-
+<br>
+<br>
+<b-form-textarea id="textarea1" size="lg"
+                     v-model="text"
+                     placeholder="Enter something"
+                     :rows="2"
+                     :max-rows="4">
+    </b-form-textarea>
+    <br>
+   <b-button type="submit" style="background-color: #33C1C1; border: 0px; padding-left: 36px;
+    padding-right: 36px;">เรียบร้อย</b-button>
+    <br><br><br><br>
 </b-container>
 </template>
 
