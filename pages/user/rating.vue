@@ -9,7 +9,11 @@
 "  src="https://scontent.fbkk5-6.fna.fbcdn.net/v/t1.0-1/p240x240/15873069_1211350558943201_5314025003629794223_n.jpg?_nc_cat=0&oh=429da1d277ec885fbbc86409fac1dd86&oe=5BA39AF5"/>
 </div>
 <br><br>
-<div style="text-align:center"  @click="por">
+<div style="width: 267px;
+    padding-left: auto;
+    margin-left: auto;
+    margin-right: auto;
+}"  @click="por">
   <star-rating  v-bind:increment="0.25"  v-model="rating" :border-width="1" border-color="#d8d8d8" :rounded-corners="true"
    :star-points="[23,2, 14,17, 0,19, 10,34, 7,50, 23,43, 38,50, 36,34, 46,19, 31,17]"></star-rating>
 </div>
