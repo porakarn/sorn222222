@@ -19,15 +19,15 @@
 </div>
 
 <br>
-<br>
-<b-form-textarea id="textarea1" size="lg"
+
+<b-form-textarea class="formpor" id="textarea1" size="lg"
                      v-model="text"
                      placeholder="Enter something"
-                     :rows="2"
+                     :rows="1"
                      :max-rows="4">
     </b-form-textarea>
     <br>
-   <b-button type="submit" style="background-color: #33C1C1; border: 0px; padding-left: 36px;
+   <b-button size="lg" type="submit" style="background-color: #33C1C1; border: 0px; padding-left: 36px;
     padding-right: 36px;">เรียบร้อย</b-button>
     <br><br><br><br>
 </b-container>
@@ -68,6 +68,21 @@ export default {
   background: #fff;
 }
 
+.formpor{
+border-top: 0px;
+    border-right: 0px;
+    border-left: 0px;
+    border-radius: 0;
+    padding-left: 4px;
+}
 
+.form-control:focus {
+    color: #495057;
+    background-color: #fff;
+    border-bottom: 0px;
+    border-color: #80bdff;
+    outline: 0;
+box-shadow: 1px 1px 0px 0rem rgba(0, 123, 255, .25);
+}
 
 </style>
