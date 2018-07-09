@@ -54,9 +54,5 @@ export default {
 }
 
 
-.vue-star-rating{
-margin-left: auto !important;
-    margin-right: auto !important;
 
-}
 </style>
