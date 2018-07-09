@@ -21,6 +21,7 @@
                   type="text"
                   placeholder="Search วิชา วันเวลา สถานที่"></b-form-input>
   </div><br> -->
+
     <div v-for="course in courses" >
 
 
@@ -42,7 +43,6 @@
     
    
    
-
 
 
 
@@ -122,6 +122,7 @@
 import axios from 'axios';
 
 export default {
+   
    data () {
     return {
       course: null,
@@ -159,7 +160,9 @@ export default {
     hideModal () {
       this.$refs.myModalRef.hide()
     }
-  }
+  },
+     layout: 'agent'
+
 }
 </script>
 

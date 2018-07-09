@@ -214,7 +214,7 @@ methods: {
       this.step++;
     },
     nextPage(){
-   this.$router.push('/user/create')
+   this.$router.push('/agent/create')
 
     }
 
@@ -311,9 +311,9 @@ if ( mon2 === true ) {
   let createPost = {
       
         job: this.str5,
+        _creator: this.$store.state.agent._id,
         day : this.day,
         subject : this.subject,
-        tutorid: this.$store.state.user._id
 
       }
    console.log(createPost);
@@ -323,13 +323,16 @@ if ( mon2 === true ) {
           .then((res) => { 
               
               console.log(res.data)
-              
+                    this.$refs.myModalRef.hide()
+
   
           })
           .catch(error => console.log(error))
     
     }
-}
+},
+     layout: 'agent'
+
 }
 </script>
       

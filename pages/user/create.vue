@@ -1,5 +1,5 @@
 <template>
-<b-container fluid>
+<b-container fluid style="padding: 0px">
   <b-nav fill tabs>
   <b-nav-item style="border-bottom: 2px solid;
     border-bottom-color: #82d9d9;
@@ -7,6 +7,8 @@
  <b-nav-item @click="nextPage">ใช้แบบฟอร์ม</b-nav-item>
  
 </b-nav>
+
+<b-container fluid>
 <br><br>
   <div> <div class="my-3">
   <p style="float:right;  color: #8f9aa4;"  topleft          placement="placement"
@@ -36,7 +38,7 @@
     padding-right: 36px;">เรียบร้อย</b-button>
           </form>
   </div>
-
+</b-container>
 </b-container>
 </template>
 
@@ -176,7 +178,6 @@ if ( mon2 === true ) {
   let createPost = {
       
         job: str2,
-        _creator: this.$store.state.agent._id,
         day : this.day,
         subject : this.subject,
         tutorid: this.$store.state.user._id

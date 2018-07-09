@@ -1,6 +1,16 @@
 <template>
 <b-container fluid style="padding: 0px;">
+<b-nav fill tabs>
+  <b-nav-item  style="border-bottom: 2px solid;
+    border-bottom-color: #82d9d9;
+">ทั้งหมด</b-nav-item>
+ <b-nav-item @click="nextPage">ว่าง</b-nav-item>
+  <b-nav-item @click="nextPage">รอจ่ายเงิน</b-nav-item>
+    <b-nav-item @click="nextPage">ปิดแล้ว</b-nav-item>
 
+
+ 
+</b-nav>
 <b-container fluid>
 
    <br>
@@ -71,28 +81,60 @@ Save </b-button>
 
 <br>
    <b-row v-if="status2 == 'ว่าง'">
-             <b-col cols="6" >
-     <b-button  @click="closejob" style="  background-color: white; color: grey; border: 0px; padding-left: 46px;
-    padding-right: 46px;">ปิดงาน</b-button>  
+      <b-col cols="3" >
+     <b-button @click="openjob" style="  background-color: #33C1C1; border: 0px; padding-left: 26px;
+    padding-right: 26px;">ว่าง</b-button>  
+             </b-col>
+                  <b-col cols="4" >
+     <b-button   @click="waitjob"  style="  background-color: white; color: grey; border: 0px; padding-left: 36px;
+    padding-right: 36px;">รอจ่ายเงิน</b-button>  
     
              </b-col>
-             <b-col cols="6" >
-     <b-button @click="openjob" style="  background-color: #33C1C1; border: 0px; padding-left: 46px;
-    padding-right: 46px;">ว่าง</b-button>  
+            
+             <b-col cols="4" >
+     <b-button  @click="closejob" style="  background-color: white; color: grey; border: 0px; padding-left: 36px;
+    padding-right: 36px;">ปิดงาน</b-button>  
+    
              </b-col>
+            
                  
 
          </b-row>
-         <b-row v-if="status2 == 'ปิด'">
-             <b-col cols="6" >
-     <b-button  @click="closejob" style="  background-color: #33C1C1; border: 0px; padding-left: 46px;
+         <b-row v-if="status2 == 'รอจ่าย'">
+            <b-col cols="3" >
+     <b-button @click="openjob" style="  background-color:white ; color: grey; border: 0px; padding-left: 26px;
+    padding-right: 26px;">ว่าง</b-button>  
+             </b-col>
+                <b-col cols="4" >
+     <b-button   @click="waitjob"  style="  background-color: #33C1C1; border: 0px; padding-left: 46px;
+    padding-right: 46px;">รอจ่ายเงิน</b-button>  
+    
+             </b-col>
+             <b-col cols="4" >
+     <b-button  @click="closejob" style="  background-color:white ; color: grey; border: 0px; padding-left: 46px;
     padding-right: 46px;">ปิดงาน</b-button>  
     
              </b-col>
-             <b-col cols="6" >
-     <b-button @click="openjob" style="  background-color:white ; color: grey; border: 0px; padding-left: 46px;
-    padding-right: 46px;">ว่าง</b-button>  
+            
+                 
+
+         </b-row>
+          <b-row v-if="status2 == 'ปิด'">
+            <b-col cols="3" >
+     <b-button @click="openjob" style="  background-color:white ; color: grey; border: 0px; padding-left: 26px;
+    padding-right: 26px;">ว่าง</b-button>  
              </b-col>
+                <b-col cols="4" >
+     <b-button   @click="waitjob"  style=" background-color:white ; color: grey; border: 0px; padding-left: 46px;
+    padding-right: 46px;">รอจ่ายเงิน</b-button>  
+    
+             </b-col>
+             <b-col cols="4" >
+     <b-button  @click="closejob" style=" background-color: #33C1C1; border: 0px; padding-left: 46px;
+    padding-right: 46px;">ปิดงาน</b-button>  
+    
+             </b-col>
+            
                  
 
          </b-row>
@@ -136,12 +178,14 @@ export default {
   asyncData (context) {
 let suggest = {
       
-        tutorid: context.store.state.user._id
-        
+        _creator: context.store.state.agent._id,
+        status: 'ว่าง'
+
+      
 
       }
       console.log(suggest)
-    return axios.post('http://localhost:8000/job/tutorown', suggest)
+    return axios.post('http://localhost:8000/agent/checkstatus', suggest)
     .then((res) => { console.log(res.data)
       return { courses: res.data,
                
@@ -150,6 +194,31 @@ let suggest = {
     })
   },
     methods: {
+         waitjob(){
+let wait = {
+        status: 'รอจ่าย',
+        _id: this.job3
+
+      }
+axios.patch('http://localhost:8000/job/update', wait)
+    .then((res) => { console.log(res.data)
+let suggest = {
+      
+        _creator: this.$store.state.agent._id,
+        status: 'ว่าง'
+
+        
+
+      }
+      console.log(suggest)
+  axios.post('http://localhost:8000/agent/checkstatus', suggest)
+    .then((res) => { console.log(res.data)
+      this.courses = res.data
+               this.hideModal()
+            })
+      })
+      },
+
     deletejob(){
         let data = {
         _id: this.job3,
@@ -158,10 +227,11 @@ let suggest = {
 axios.post('https://frozen-mesa-40722.herokuapp.com/job/delete', data)
     .then((res) => { console.log(res.data)
      let suggest = {
-        tutorid: this.$store.state.user._id
+        _creator: this.$store.state.agent._id,
+          status: 'ว่าง'
       }
       console.log(suggest)
-     axios.post('https://frozen-mesa-40722.herokuapp.com/job/tutorown', suggest)
+  axios.post('http://localhost:8000/agent/checkstatus', suggest)
     .then((res) => { console.log(res.data)
       this.courses = res.data
                     this.$refs.myModalRef2.hide()
@@ -181,15 +251,13 @@ axios.post('https://frozen-mesa-40722.herokuapp.com/job/delete', data)
       }
 axios.patch('http://localhost:8000/job/update', edit)
     .then((res) => { console.log(res.data)
-    let suggest = {
-      
-        tutorid: this.$store.state.user._id
-        
-
+     let suggest = {
+        _creator: this.$store.state.agent._id,
+          status: 'ว่าง'
       }
       console.log(suggest)
-     axios.post('http://localhost:8000/job/tutorown', suggest)
-    .then((res) => { console.log(res.data)
+axios.post('http://localhost:8000/agent/checkstatus', suggest)
+.then((res) => { console.log(res.data)
       this.courses = res.data
               
             })
@@ -207,15 +275,12 @@ axios.patch('http://localhost:8000/job/update', edit)
       }
 axios.patch('http://localhost:8000/job/update', close)
     .then((res) => { console.log(res.data)
-let suggest = {
-      
-        tutorid: this.$store.state.user._id
-        
-
+  let suggest = {
+        _creator: this.$store.state.agent._id,
+          status: 'ว่าง'
       }
-      console.log(suggest)
-     axios.post('http://localhost:8000/job/tutorown', suggest)
-    .then((res) => { console.log(res.data)
+axios.post('http://localhost:8000/agent/checkstatus', suggest)    
+.then((res) => { console.log(res.data)
       this.courses = res.data
                this.hideModal()
             })
@@ -229,14 +294,11 @@ let suggest = {
       }
 axios.patch('http://localhost:8000/job/update', close)
     .then((res) => { console.log(res.data)
-let suggest = {
-      
-        tutorid: this.$store.state.user._id
-        
-
+  let suggest = {
+        _creator: this.$store.state.agent._id,
+          status: 'ว่าง'
       }
-      console.log(suggest)
-     axios.post('http://localhost:8000/job/tutorown', suggest)
+axios.post('http://localhost:8000/agent/checkstatus', suggest)
     .then((res) => { console.log(res.data)
       this.courses = res.data
                this.hideModal()
@@ -267,7 +329,9 @@ let suggest = {
     hideModal2 () {
       this.$refs.myModalRef2.hide()
     }
-  }
+  },
+       layout: 'agent'
+
 }
 </script>
 

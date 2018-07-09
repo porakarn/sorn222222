@@ -72,7 +72,7 @@
   <b-row class="my-1">
     <b-col sm="10">
    
-     <p   v-if="this.$store.state.haveProfile"
+     <p style=" white-space: pre-wrap;"  v-if="this.$store.state.haveProfile"
 > {{this.$store.state.user.subject}} </p>
 
       <!-- <b-form-input focus="false"  class="formpor" id="input-large"  type="text" :placeholder="this.$store.state.user.email"></b-form-input> -->
@@ -90,7 +90,7 @@
 <br>
                  <!-- <p style=" margin-bottom: 0px;   padding-top: 0px !important; font-size: 19px;
 color: #484848; border:1px !important;">โปรไฟล์ของคุณ</p> -->
-   <p  v-if="this.$store.state.haveProfile"
+   <p style=" white-space: pre-wrap;" v-if="this.$store.state.haveProfile"
 > {{this.$store.state.user.profile}} </p>
 
     <br>
@@ -116,6 +116,7 @@ color: #484848; border:1px !important;">โปรไฟล์ของคุณ<
 import axios from 'axios';
 
 export default {
+  
    data () {
     return {
     course: {},

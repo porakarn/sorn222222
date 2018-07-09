@@ -8,8 +8,8 @@
         <b-button size="lg" style="  background-color: white; border: 0px; padding-left: 66px; color:#33C1C1;
     padding-right: 66px;">สมัครนักเรียน</b-button>  
 <br>
-        <b-button size="lg" style="  background-color: #cdf4d7; border: 0px; padding-left: 66px;color:#618f82;
-    padding-right: 66px;">สมัครนายหน้า</b-button>  
+    <nuxt-link to="agent/signup">   <b-button size="lg" style="  background-color: #cdf4d7; border: 0px; padding-left: 66px;color:#618f82;
+    padding-right: 66px;">สมัครนายหน้า</b-button>  </nuxt-link>
 </div>
 <br>
 <img centered style="width :95%" src="https://www.sorns.co/wp-content/uploads/2018/01/sds.png" alt="">

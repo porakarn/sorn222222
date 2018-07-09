@@ -51,7 +51,7 @@
 
 <b-col  cols="3" style="text-align: center;" >
 
-<nuxt-link to="/user/create"><div><i style="font-size: 31px; color: #7f8082;"  class="fa fa-plus-square-o  " aria-hidden="true"></i>
+<nuxt-link to="/agent/create"><div><i style="font-size: 31px; color: #7f8082;"  class="fa fa-plus-square-o  " aria-hidden="true"></i>
 </div>
 </nuxt-link>
 
@@ -67,7 +67,7 @@
 </b-col>
 
 <b-col cols="3" style="text-align: center;"  >    
- <nuxt-link to="/tutor/profile">
+ <nuxt-link to="/agent/myjob">
 <div>
   <i style=" font-size: 28px; color: #7f8082;"  class="fa fa-user-circle mx-auto" aria-hidden="true"></i>
 </div>

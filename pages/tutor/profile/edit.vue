@@ -31,7 +31,7 @@
 </p>
   <b-row class="my-1">
     <b-col sm="10">
-       <b-form-textarea style="    padding-top: 0px;
+       <b-form-textarea style="  white-space: pre-wrap;   padding-top: 0px;
 " class="formpor" id="textarea1"
                      v-model="subject"
                      placeholder=""
@@ -51,7 +51,7 @@
         <b-link href="#"
                 class="card-link">เคมี</b-link></div> -->
 <br>
-                 <p style=" margin-bottom: 0px;   padding-top: 0px !important;
+                 <p style=" margin-bottom: 0px;  white-space: pre-wrap;  padding-top: 0px !important;
 color: rgb(117, 119, 120); border:1px !important;">โปรไฟล์ของคุณ</p>
     <b-form-textarea class="formpor"  id="textarea1"
                      v-model="profile"

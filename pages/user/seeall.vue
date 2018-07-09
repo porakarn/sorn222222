@@ -15,7 +15,7 @@
 </b-nav>
 
 <b-container >
-<br>
+<br> 
   <!-- <div>
     <b-form-input size="lg" v-model="text1"
                   type="text"
@@ -49,6 +49,7 @@
 
 
 </div>
+<br><br><br>
 
  <b-modal hide-header  hide-footer  centered ref="myModalRef" hide-footer title="Using Component Methods">
       <div class="d-block ">
