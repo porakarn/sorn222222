@@ -227,7 +227,7 @@
 //   },
 //   asyncData () {
 
-//     return axios.get('http://localhost:8000/tutor/all')
+//     return axios.get('https://frozen-mesa-40722.herokuapp.com/tutor/all')
 //     .then((res) => { console.log(res.data)
 //       return { courses: res.data,
                

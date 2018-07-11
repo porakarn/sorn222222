@@ -88,7 +88,7 @@ export default {
   },
 //   asyncData (context, callback) {
 //  var por = ';;'
-//    return   axios.get('http://localhost:8000/user/profile', por )
+//    return   axios.get('https://frozen-mesa-40722.herokuapp.com/user/profile', por )
 //     .then((res) => {
 //       // this.profile = res.data.profile
 //       // this.phone = res.data.phone                

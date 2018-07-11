@@ -157,7 +157,7 @@ let suggest = {
       }
       console.log(suggest);
       
-    axios.get('http://localhost:8000/job/suggest', suggest )
+    axios.get('https://frozen-mesa-40722.herokuapp.com/job/suggest', suggest )
     .then((res) => {
      this.courses = res.data
        console.log(res.data);

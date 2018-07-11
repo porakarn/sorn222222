@@ -183,7 +183,7 @@ let suggest = {
 
       }
       console.log(suggest)
-    return axios.post('http://localhost:8000/job/agentown', suggest)
+    return axios.post('https://frozen-mesa-40722.herokuapp.com/job/agentown', suggest)
     .then((res) => { console.log(res.data)
       return { courses: res.data,
                
@@ -198,7 +198,7 @@ let wait = {
         _id: this.job3
 
       }
-axios.patch('http://localhost:8000/job/update', wait)
+axios.patch('https://frozen-mesa-40722.herokuapp.com/job/update', wait)
     .then((res) => { console.log(res.data)
 let suggest = {
       
@@ -207,7 +207,7 @@ let suggest = {
 
       }
       console.log(suggest)
-     axios.post('http://localhost:8000/job/agentown', suggest)
+     axios.post('https://frozen-mesa-40722.herokuapp.com/job/agentown', suggest)
     .then((res) => { console.log(res.data)
       this.courses = res.data
                this.hideModal()
@@ -223,13 +223,13 @@ let suggest = {
         _id: this.job3,
 
       }
-axios.post('http://localhost:8000/job/delete', data)
+axios.post('https://frozen-mesa-40722.herokuapp.com/job/delete', data)
     .then((res) => { console.log(res.data)
      let suggest = {
         _creator: this.$store.state.agent._id
       }
       console.log(suggest)
-     axios.post('http://localhost:8000/job/agentown', suggest)
+     axios.post('https://frozen-mesa-40722.herokuapp.com/job/agentown', suggest)
     .then((res) => { console.log(res.data)
       this.courses = res.data
                     this.$refs.myModalRef2.hide()
@@ -247,7 +247,7 @@ axios.post('http://localhost:8000/job/delete', data)
         job: this.job4
 
       }
-axios.patch('http://localhost:8000/job/update', edit)
+axios.patch('https://frozen-mesa-40722.herokuapp.com/job/update', edit)
     .then((res) => { console.log(res.data)
     let suggest = {
       
@@ -256,7 +256,7 @@ axios.patch('http://localhost:8000/job/update', edit)
 
       }
       console.log(suggest)
-     axios.post('http://localhost:8000/job/agentrown', suggest)
+     axios.post('https://frozen-mesa-40722.herokuapp.com/job/agentrown', suggest)
     .then((res) => { console.log(res.data)
       this.courses = res.data
               
@@ -273,7 +273,7 @@ axios.patch('http://localhost:8000/job/update', edit)
         _id: this.job3
 
       }
-axios.patch('http://localhost:8000/job/update', close)
+axios.patch('https://frozen-mesa-40722.herokuapp.com/job/update', close)
     .then((res) => { console.log(res.data)
 let suggest = {
       
@@ -282,7 +282,7 @@ let suggest = {
 
       }
       console.log(suggest)
-     axios.post('http://localhost:8000/job/agentown', suggest)
+     axios.post('https://frozen-mesa-40722.herokuapp.com/job/agentown', suggest)
     .then((res) => { console.log(res.data)
       this.courses = res.data
                this.hideModal()
@@ -295,7 +295,7 @@ let suggest = {
         _id: this.job3
 
       }
-axios.patch('http://localhost:8000/job/update', close)
+axios.patch('https://frozen-mesa-40722.herokuapp.com/job/update', close)
     .then((res) => { console.log(res.data)
 let suggest = {
       
@@ -304,7 +304,7 @@ let suggest = {
 
       }
       console.log(suggest)
-     axios.post('http://localhost:8000/job/agentown', suggest)
+     axios.post('https://frozen-mesa-40722.herokuapp.com/job/agentown', suggest)
     .then((res) => { console.log(res.data)
       this.courses = res.data
                this.hideModal()

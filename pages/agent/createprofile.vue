@@ -1,3 +1,4 @@
+
 <template>
 <b-container fluid>
 
@@ -89,7 +90,7 @@ let data2 = {
          
         console.log(data);
         
-        axios.patch('http://localhost:8000/agent/update', data)
+        axios.patch('https://frozen-mesa-40722.herokuapp.com/agent/update', data)
           .then((res) => {
             this.$router.push('/user/create')
             console.log(res.data)
