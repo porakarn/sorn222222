@@ -29,9 +29,7 @@
         </b-collapse>
     </b-navbar>
 </div>
- <li class="nav-item"><nuxt-link to="/user/rating">Blog</nuxt-link></li>
-        <li class="nav-item"><nuxt-link to="/user/findtutor">About</nuxt-link></li>
-        <li class="nav-item"><nuxt-link to="/user/seeall">Admin</nuxt-link></li>
+
     <nuxt/>
  
     <b-container fluid class="bv-example-row"   style="box-shadow: rgba(0, 0, 0, 0.2) 0px 3px 8px 0px, rgba(0, 0, 0, 0) 0px 4px 5px 0px, rgba(0, 0, 0, 0.01) 0px 1px 10px 0px; position: fixed;     width: 100%;
@@ -44,7 +42,7 @@
         
 <b-col cols="3" style="text-align: center;" >
 
-<nuxt-link class="porakarn" to="/user/seeall"><div><i style=" font-size: 28px; color: #7f8082;" class="fa fa-search " aria-hidden="true"></i>
+<nuxt-link class="porakarn" to="/user/seeall"><div><i style=" font-size: 28px; color: #7f8082;" class="fa fa-search nav-item " aria-hidden="true"></i>
 </div></nuxt-link>
 
 
@@ -55,7 +53,7 @@
 
 <b-col class="porakarn"  cols="3" style="text-align: center;" >
 
-<nuxt-link  to="/user/create"><div><i style="font-size: 31px; color: #7f8082;"  class="fa fa-plus-square-o  " aria-hidden="true"></i>
+<nuxt-link  to="/user/create"><div><i style="font-size: 31px; color: #7f8082;"  class="fa fa-plus-square-o nav-item " aria-hidden="true"></i>
 </div>
 </nuxt-link>
 
@@ -63,7 +61,7 @@
 
 </b-col>
 <b-col cols="3" style="text-align: center;" >
-<nuxt-link  to="/user/findtutor"><div><i style=" font-size: 28px; color: #7f8082;"  class="fa fa-bell-o mx-auto nav-item" aria-hidden="true"></i>
+<nuxt-link  to="/user/findtutor"><div><i style=" font-size: 28px; color: #7f8082;"  class="fa fa-bell-o mx-auto nav-item " aria-hidden="true"></i>
 </div>
 </nuxt-link>
 
@@ -166,10 +164,6 @@ html
   background-color: red;
 }
 
-.nav-item a {
-  text-decoration: none;
-  color: white;
-}
 
 .nav-item:hover,
 .nav-item:active,
