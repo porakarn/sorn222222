@@ -123,28 +123,64 @@ export default {
   
     }
   },
-  asyncData (context) {
-if(context.store.state.user.tag.length>1){
+mounted() {
+  
+if(this.$store.state.user.tag.length>1){
 let suggest = {
       
-        tag: context.store.state.user.tag,
+        tag: this.$store.state.user.tag
         
 
       }
       console.log(suggest);
-      console.log(context);
+
       
     return axios.post('https://frozen-mesa-40722.herokuapp.com/job/suggest', suggest)
-    .then((res) => { console.log(res.data)
-      return { courses: res.data,
+    .then((res) => { 
+      console.log(res.data)
+     this.courses = res.data
                
-            }        
+            })        
 
-    })
+    }
   
-}
 
-  },
+
+},
+
+
+
+  //  fetch ({ context, params }) {
+  //   return axios.get('https://frozen-mesa-40722.herokuapp.com/job/all')
+  //   .then((res) => {
+  //     console.log(context.store.state.user.tag);
+      
+
+  //   })
+  // },
+
+//   asyncData (context) {
+// if(context.store.state.user.tag.length>1){
+// let suggest = {
+      
+//         tag: context.store.state.user.tag,
+        
+
+//       }
+//       console.log(suggest);
+//       console.log(context);
+      
+//     return axios.post('https://frozen-mesa-40722.herokuapp.com/job/suggest', suggest)
+//     .then((res) => { console.log(res.data)
+//       return { courses: res.data,
+               
+//             }        
+
+//     })
+  
+// }
+
+//   },
 
     methods: {
 
