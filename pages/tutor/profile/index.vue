@@ -128,6 +128,7 @@ export default {
   
     }
   },
+  
   dataAsync() {
 return 
     if(isUserLoggedIn)

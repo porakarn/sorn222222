@@ -34,7 +34,8 @@ export default {
   },
   components: {
     Logo
-  }
+  },
+           layout: 'auth'
 }
 </script>
 

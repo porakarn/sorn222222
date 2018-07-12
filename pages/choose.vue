@@ -32,7 +32,9 @@
      },
 
 
-    }
+    },
+           layout: 'auth'
+
 }
 
 </script>

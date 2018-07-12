@@ -237,8 +237,8 @@ console.log('error');
  }
 
 
-}
-
+},
+         layout: 'auth'
   }
 
 
