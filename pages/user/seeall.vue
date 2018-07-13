@@ -367,4 +367,8 @@ label{
   font-size: 18px;
   margin-top: -2px;
 }
+
+.btn-secondary:focus, .btn-secondary.focus {
+    box-shadow: 0 0 0 0.2rem rgba(108, 117, 125, 0);
+}
 </style>
