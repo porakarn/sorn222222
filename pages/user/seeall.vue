@@ -50,7 +50,7 @@
 <div>
   เลือกวิชาที่อยากสอน <i class="fa fa-sort-desc" aria-hidden="true"></i>
 
-    <b-form-select multiple :select-size="6" size="lg"   v-model="selected" :options="options" class="mb-3">
+    <b-form-select multiple :select-size="6"    v-model="selected" :options="options" class="mb-3">
     </b-form-select>
     <div>Selected: <strong>{{ selected }}</strong></div>
   </div>
@@ -64,7 +64,8 @@
 <br><br>
       <input type="checkbox" id="jack" value="จันทร์" v-model="checkedNames">
   <label for="jack">จันทร์</label>
-  <input type="checkbox" id="john" value="อังคาร" v-model="checkedNames">
+  <input step="    height: 31px;
+    width: 31px;" type="checkbox" id="john" value="อังคาร" v-model="checkedNames">
   <label for="john">อังคาร</label>
   <input type="checkbox" id="mike" value="พุธ" v-model="checkedNames">
   <label for="mike">พุธ</label>
