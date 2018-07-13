@@ -48,7 +48,11 @@
   <b-modal no-fade hide-header  hide-footer  id="modal1" >
 
 <div>
-   
+    <b-form-select multiple :select-size="4" v-model="selected" :options="options" class="mb-3">
+    </b-form-select>
+    <div>Selected: <strong>{{ selected }}</strong></div>
+  </div>
+
 
       <input type="checkbox" id="jack" value="ENG" v-model="checkedsubjects">
   <label for="jack">Eng</label>
@@ -193,6 +197,16 @@ import axios from 'axios';
 export default {
    data () {
     return {
+       selected: ['b'], // Array reference
+      options: [
+        { value: 'a', text: 'This is First option' },
+        { value: 'b', text: 'Default Selected Option' },
+        { value: 'c', text: 'This is another option' },
+        { value: 'd', text: 'This one is disabled', disabled: true },
+        { value: 'e', text: 'This is option e' },
+        { value: 'f', text: 'This is option f' },
+        { value: 'g', text: 'This is option g' }
+      ],
        checkedNames: [],
       checkedsubjects: [],
       course: null,
@@ -309,11 +323,14 @@ border: 1px solid rgba(193, 193, 193, 0.12);
 }
 
 .modal-dialog modal-md{
-    position: relative;
-    width: auto;
-    margin: 0px !important;
+    position: relative  !important;
+    width: auto  !important;
+    
     margin: 0.0rem !important;
-    pointer-events: none;
+    pointer-events: none  !important;
+        margin-top: 0px  !important;
+    margin-left: 0px  !important;
+    margin-right: 0px  !important;
 }
 
 </style>
