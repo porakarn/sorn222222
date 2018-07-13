@@ -50,8 +50,8 @@ export default {
     return {
     
       job: '',
-      subject: [],
-      day: []
+      // subject: [],
+      // day: []
   
     }
   },
@@ -76,6 +76,9 @@ console.log(job2);
 
 var i;
 for (i = 0; i < job2.length; i++) {
+
+ var subject = []
+ var day = []
 
 var str1 = job2[i] 
  var str2 = str1.replace('\n\n',"");
@@ -140,53 +143,53 @@ var sun2 = sun.some(el => str1.includes(el));
 
 
 if ( math2 === true ) {
-  this.subject.push("คณิต")
+  subject.push("คณิต")
 } 
  if ( eng2 === true ) {
-   this.subject.push("ENG") 
+   subject.push("ENG") 
 }  
  if ( science2 === true ) {
-   this.subject.push("วิทย์")
+   subject.push("วิทย์")
 } 
 if ( chinese2 === true ) {
-   this.subject.push("จีน") 
+   subject.push("จีน") 
 }
  if ( japan2 === true ) {
-   this.subject.push("ญี่ปุ่น") 
+   subject.push("ญี่ปุ่น") 
 }  
  if ( korea2 === true ) {
-   this.subject.push("Korean")  
+   subject.push("Korean")  
 } 
 if ( thai2 === true ) {
-   this.subject.push("ไทย") 
+   subject.push("ไทย") 
 } 
  if ( social2 === true ) {
-   this.subject.push("สังคม") 
+   subject.push("สังคม") 
 } 
  
 
 
 
 if ( mon2 === true ) {
-  this.day.push("จันทร์")  
+  day.push("จันทร์")  
 } 
 if ( tues2 === true ) {
-    this.day.push("อังคาร")  
+    day.push("อังคาร")  
 } 
  if ( wed2 === true ) {
-      this.day.push("พุธ") 
+      day.push("พุธ") 
 } 
  if ( thu2 === true ) {
-      this.day.push("พฤหัส")  
+      day.push("พฤหัส")  
 }
 if ( fri2 === true ) {
-    this.day.push("ศุกร์")  
+    day.push("ศุกร์")  
 } 
 if ( sat2 === true ) {
-    this.day.push("เสาร์")  
+    day.push("เสาร์")  
 } 
  if ( sun2 === true ) {
-    this.day.push("อาทิตย์")  
+    day.push("อาทิตย์")  
 } 
 
 
@@ -194,14 +197,13 @@ if ( sat2 === true ) {
   let createPost = {
       
         job: str2,
-        day : this.day,
-        subject : this.subject,
+        day : day,
+        subject : subject,
         tutorid: this.$store.state.user._id,
         subjectss :  ["Green", "red"]
 
       }
    console.log(createPost);
-      console.log(this.day + ': thisday');
 
    
     if ( str2.length < 7 ) {
@@ -214,8 +216,11 @@ if ( sat2 === true ) {
           .then((res) => { 
               
               console.log(res.data)
-              this.day = []
-              this.subject = []
+              day.length = 0
+              subject.length = 0
+              console.log(day);
+              console.log(subject);
+              
   
           })
           .catch(error => console.log(error))
