@@ -50,7 +50,7 @@
 <div>
   เลือกวิชาที่อยากสอน <i class="fa fa-sort-desc" aria-hidden="true"></i>
 
-    <b-form-select multiple :select-size="6"   v-model="selected" :options="options" class="mb-3">
+    <b-form-select multiple :select-size="6" size="lg"   v-model="selected" :options="options" class="mb-3">
     </b-form-select>
     <div>Selected: <strong>{{ selected }}</strong></div>
   </div>
@@ -193,7 +193,7 @@ export default {
    data () {
     return {
       status: 'not_accepted',
-       selected: [''], // Array reference
+       selected: [], // Array reference
       options: [
         { value:  ''   , text: 'เลือกวิชาที่อยากสอน',  disabled: true },
         { value: 'ENG', text: 'ENG' },
@@ -336,4 +336,14 @@ border: 1px solid rgba(193, 193, 193, 0.12);
     margin-right: 0px  !important;
 }
 
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: #eee;
+    border : 2px solid blue;
+    border-radius : 5px
+}
 </style>
