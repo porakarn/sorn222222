@@ -63,19 +63,19 @@
 
 <br><br>
       <input type="checkbox" id="jack" value="จันทร์" v-model="checkedNames">
-  <label for="jack">จันทร์</label>
+  <label for="jack">จันทร์</label> &nbsp;
   <input step="    height: 31px;
     width: 31px;" type="checkbox" id="john" value="อังคาร" v-model="checkedNames">
-  <label for="john">อังคาร</label>
+  <label for="john">อังคาร</label>&nbsp;
   <input type="checkbox" id="mike" value="พุธ" v-model="checkedNames">
-  <label for="mike">พุธ</label>
-  <br>
+  <label for="mike">พุธ</label>&nbsp;
   <input type="checkbox" id="mike" value="พฤหัส" v-model="checkedNames">
   <label for="mike">พฤหัส</label>
+  <br>
   <input type="checkbox" id="mike" value="ศุกร์" v-model="checkedNames">
-  <label for="mike">ศุกร์</label>
+  <label for="mike">ศุกร์</label>&nbsp;
   <input type="checkbox" id="mike" value="เสาร์" v-model="checkedNames">
-  <label for="mike">เสาร์</label>
+  <label for="mike">เสาร์</label>&nbsp;
   <input type="checkbox" id="mike" value="อาทิตย์" v-model="checkedNames">
   <label for="mike">อาทิตย์</label>
    <br>
@@ -346,5 +346,10 @@ border: 1px solid rgba(193, 193, 193, 0.12);
     background-color: #eee;
     border : 2px solid blue;
     border-radius : 5px
+}
+
+
+label{
+  padding-left: 2px;
 }
 </style>
