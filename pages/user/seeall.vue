@@ -52,7 +52,9 @@
 
     <b-form-select multiple :select-size="6"    v-model="selected" :options="options" class="mb-3">
     </b-form-select>
-    <div>Selected: <strong>{{ selected }}</strong></div>
+   <strong v-show="selected.length >0" style="    background-color: #c6f1d0;
+    padding: 5px;
+    border-radius: 4px;"> {{ selected.toString().split(',').join(' ') }}</strong></div>
   </div>
 
 
@@ -61,7 +63,7 @@
 
 
 
-<br><br>
+<br>
       <input type="checkbox" id="jack" value="จันทร์" v-model="checkedNames">
   <label for="jack">จันทร์</label> &nbsp;
   <input step="    height: 31px;
