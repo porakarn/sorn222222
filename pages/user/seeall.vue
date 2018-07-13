@@ -48,7 +48,7 @@
   <b-modal no-fade hide-header  hide-footer  id="modal1" >
 
 <div>
-    <b-form-select multiple :select-size="6"  v-model="selected" :options="options" class="mb-3">
+    <b-form-select multiple :select-size="6"  text='เลือกวิชาที่อยากสอน' v-model="selected" :options="options" class="mb-3">
     </b-form-select>
     <div>Selected: <strong>{{ selected }}</strong></div>
   </div>
@@ -202,7 +202,7 @@ export default {
    data () {
     return {
       status: 'not_accepted',
-       selected: [''], // Array reference
+       selected: [], // Array reference
       options: [
         { value:   ''   , text: 'เลือกวิชาที่อยากสอน',  disabled: true },
         { value: 'ENG', text: 'ENG' },
