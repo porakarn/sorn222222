@@ -48,7 +48,8 @@
   <b-modal no-fade hide-header  hide-footer  id="modal1" >
 
 <div>
-  เลือกวิชาที่อยากสอน
+  เลือกวิชาที่อยากสอน <i class="fa fa-sort-desc" aria-hidden="true"></i>
+
     <b-form-select multiple :select-size="6"   v-model="selected" :options="options" class="mb-3">
     </b-form-select>
     <div>Selected: <strong>{{ selected }}</strong></div>
@@ -192,9 +193,9 @@ export default {
    data () {
     return {
       status: 'not_accepted',
-       selected: [], // Array reference
+       selected: [''], // Array reference
       options: [
-        { value:   ''   , text: 'เลือกวิชาที่อยากสอน',  disabled: true },
+        { value:  ''   , text: 'เลือกวิชาที่อยากสอน',  disabled: true },
         { value: 'ENG', text: 'ENG' },
         { value: 'คณิต', text: 'คณิตศาสตร์' },
         { value: 'วิทย์', text: 'วิทยาศาสตร์' },
