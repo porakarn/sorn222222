@@ -47,10 +47,10 @@
 <b-container >
   <b-modal no-fade hide-header  hide-footer  id="modal1" >
 
-<div><br>
-  เลือกวิชาที่อยากสอน <i style=" font-size: 20px; color: #667a6b;" class="fa fa-search nav-item " aria-hidden="true"></i>
+<div>
+  <p style="font-size:20px;"> เลือกวิชาที่อยากสอน <i style=" font-size: 20px; color: #667a6b;" class="fa fa-search nav-item " aria-hidden="true"></i></p>
 
-    <b-form-select style="  margin-top:2px ; padding-top: 10px;
+    <b-form-select style="  padding-top: 10px;
     padding-bottom: 10px;" multiple :select-size="6"    v-model="selected" :options="options" class="mb-3">
     </b-form-select>
    <strong v-show="selected.length >0" style="    background-color: #c6f1d0;
@@ -363,7 +363,7 @@ border: 1px solid rgba(193, 193, 193, 0.12);
 
 
 label{
-  padding-left: 2px;
+  padding-left: 4px;
   font-size: 18px;
   margin-top: -2px;
 }
