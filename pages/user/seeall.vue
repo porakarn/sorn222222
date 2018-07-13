@@ -45,7 +45,7 @@
 </b-nav>
 
 <b-container >
-  <b-modal hide-header  hide-footer id="modal1" >
+  <b-modal no-fade hide-header  hide-footer  id="modal1" >
 
 <div>
    
@@ -308,5 +308,12 @@ border: 1px solid rgba(193, 193, 193, 0.12);
     
 }
 
+.modal-dialog modal-md{
+    position: relative;
+    width: auto;
+    margin: 0px !important;
+    margin: 0.0rem !important;
+    pointer-events: none;
+}
 
 </style>
