@@ -127,7 +127,7 @@
 </div>
 <br><br><br>
 
- <b-modal hide-header  hide-footer  centered ref="myModalRef" hide-footer title="Using Component Methods">
+ <b-modal no-fade hide-header  hide-footer  centered ref="myModalRef" hide-footer title="Using Component Methods">
       <div class="d-block ">
           <div style="white-space: pre-wrap;">{{job3}}</div>
 

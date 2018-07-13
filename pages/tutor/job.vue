@@ -38,7 +38,7 @@
 
 </div>
 
- <b-modal hide-header  hide-footer  centered ref="myModalRef" hide-footer title="Using Component Methods">
+ <b-modal no-fade hide-header  hide-footer  centered ref="myModalRef" hide-footer title="Using Component Methods">
       <div class="d-block ">
       
 <b-row>  <b-col cols="12" >
@@ -100,7 +100,7 @@ Save </b-button>
     </b-modal>
 
 
-  <b-modal ref="myModalRef2" hide-footer  centered id="modal1" title="ต้องการลบงานนี้ใช่หรือไม่">
+  <b-modal ref="myModalRef2" no-fade hide-footer  centered id="modal1" title="ต้องการลบงานนี้ใช่หรือไม่">
     <p style=" white-space: pre-wrap;" class="my-4">{{job4}}</p>
     <b-row>
      <b-col cols="6" >
