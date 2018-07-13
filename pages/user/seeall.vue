@@ -54,6 +54,17 @@
   </div>
 
 
+<b-form-checkbox id="checkbox1"
+                     v-model="status"
+                     value="accepted"
+                     unchecked-value="not_accepted">
+      I accept the terms and use
+    </b-form-checkbox>
+    <div>State: <strong>{{status}}</strong></div>
+
+
+
+
       <input type="checkbox" id="jack" value="ENG" v-model="checkedsubjects">
   <label for="jack">Eng</label>
   <input type="checkbox" id="john" value="ไทย" v-model="checkedsubjects">
@@ -197,6 +208,7 @@ import axios from 'axios';
 export default {
    data () {
     return {
+      status: 'not_accepted',
        selected: ['b'], // Array reference
       options: [
         { value: 'a', text: 'This is First option' },
