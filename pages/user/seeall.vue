@@ -54,13 +54,6 @@
   </div>
 
 
-<b-form-checkbox id="checkbox1"
-                     v-model="status"
-                     value="accepted"
-                     unchecked-value="not_accepted">
-      I accept the terms and use
-    </b-form-checkbox>
-    <div>State: <strong>{{status}}</strong></div>
 
 
 
@@ -209,7 +202,7 @@ export default {
    data () {
     return {
       status: 'not_accepted',
-       selected: [], // Array reference
+       selected: [''], // Array reference
       options: [
         { value:   ''   , text: 'เลือกวิชาที่อยากสอน',  disabled: true },
         { value: 'ENG', text: 'ENG' },
