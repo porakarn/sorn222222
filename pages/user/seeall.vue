@@ -219,6 +219,10 @@ export default {
         { value: 'สังคม', text: 'สังคม' },
         { value: 'เคมี', text: 'เคมี' },
         { value: 'ชีวะ', text: 'ชีวะ' },
+        { value: 'จีน', text: 'จีน' },
+        { value: 'ญี่ปุ่น', text: 'ญี่ปุ่น' },
+        { value: 'เกาหลี', text: 'เกาหลี' },
+
 
       ],
        checkedNames: [],
