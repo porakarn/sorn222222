@@ -48,7 +48,7 @@
   <b-modal no-fade hide-header  hide-footer  id="modal1" >
 
 <div>
-    <b-form-select multiple :select-size="4" v-model="selected" :options="options" class="mb-3">
+    <b-form-select multiple :select-size="6"  v-model="selected" :options="options" class="mb-3">
     </b-form-select>
     <div>Selected: <strong>{{ selected }}</strong></div>
   </div>
@@ -209,15 +209,17 @@ export default {
    data () {
     return {
       status: 'not_accepted',
-       selected: ['b'], // Array reference
+       selected: [null], // Array reference
       options: [
-        { value: 'a', text: 'This is First option' },
-        { value: 'b', text: 'Default Selected Option' },
-        { value: 'c', text: 'This is another option' },
-        { value: 'd', text: 'This one is disabled', disabled: true },
-        { value: 'e', text: 'This is option e' },
-        { value: 'f', text: 'This is option f' },
-        { value: 'g', text: 'This is option g' }
+        { value: null , text: 'เลือกวิชาที่อยากสอน',  disabled: true },
+        { value: 'ENG', text: 'ENG' },
+        { value: 'คณิต', text: 'คณิต' },
+        { value: 'วิทย์', text: 'วิทย์' },
+        { value: 'ไทย', text: 'ไทย' },
+        { value: 'สังคม', text: 'สังคม' },
+        { value: 'เคมี', text: 'เคมี' },
+        { value: 'ชีวะ', text: 'ชีวะ' },
+
       ],
        checkedNames: [],
       checkedsubjects: [],
