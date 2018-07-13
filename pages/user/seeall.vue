@@ -209,19 +209,20 @@ export default {
    data () {
     return {
       status: 'not_accepted',
-       selected: [null], // Array reference
+       selected: [], // Array reference
       options: [
-        { value: null , text: 'เลือกวิชาที่อยากสอน',  disabled: true },
+        { value:   ''   , text: 'เลือกวิชาที่อยากสอน',  disabled: true },
         { value: 'ENG', text: 'ENG' },
-        { value: 'คณิต', text: 'คณิต' },
-        { value: 'วิทย์', text: 'วิทย์' },
+        { value: 'คณิต', text: 'คณิตศาสตร์' },
+        { value: 'วิทย์', text: 'วิทยาศาสตร์' },
         { value: 'ไทย', text: 'ไทย' },
         { value: 'สังคม', text: 'สังคม' },
+        { value: 'ฟิสิกส์', text: 'ฟิสิกส์' },
         { value: 'เคมี', text: 'เคมี' },
         { value: 'ชีวะ', text: 'ชีวะ' },
-        { value: 'จีน', text: 'จีน' },
-        { value: 'ญี่ปุ่น', text: 'ญี่ปุ่น' },
-        { value: 'เกาหลี', text: 'เกาหลี' },
+        { value: 'จีน', text: 'ภาษาจีน' },
+        { value: 'ญี่ปุ่น', text: 'ภาษาญี่ปุ่น' },
+        { value: 'เกาหลี', text: 'ภาษาเกาหลี' },
 
 
       ],
