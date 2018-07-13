@@ -173,8 +173,8 @@ html
 }
 
 .btn-secondary {
-    color: #fff;
-    background-color: #B7E8C3;
+    color: #667a6b;
+    background-color: #effdf3;
     border-color: #6c757d00;
     border-radius: 18px;
 }
