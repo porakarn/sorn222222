@@ -48,7 +48,8 @@
   <b-modal no-fade hide-header  hide-footer  id="modal1" >
 
 <div>
-    <b-form-select multiple :select-size="6"  text='เลือกวิชาที่อยากสอน' v-model="selected" :options="options" class="mb-3">
+  เลือกวิชาที่อยากสอน
+    <b-form-select multiple :select-size="6"   v-model="selected" :options="options" class="mb-3">
     </b-form-select>
     <div>Selected: <strong>{{ selected }}</strong></div>
   </div>
@@ -57,15 +58,6 @@
 
 
 
-
-      <input type="checkbox" id="jack" value="ENG" v-model="checkedsubjects">
-  <label for="jack">Eng</label>
-  <input type="checkbox" id="john" value="ไทย" v-model="checkedsubjects">
-  <label for="john">ไทย</label>
-  <input type="checkbox" id="mike" value="คณิต" v-model="checkedsubjects">
-  <label for="mike">คณิต</label>
-  <br>
-  
 
 
 <br><br>
@@ -85,8 +77,6 @@
   <input type="checkbox" id="mike" value="อาทิตย์" v-model="checkedNames">
   <label for="mike">อาทิตย์</label>
    <br>
-  <span>Checked names: {{ checkedNames }}</span> <br>
-  <span>Checked subject: {{ checkedsubjects }}</span>
 <br>
   <button @click="sendout">send</button>
   </div>
