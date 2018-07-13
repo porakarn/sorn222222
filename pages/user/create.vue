@@ -209,7 +209,7 @@ if ( sat2 === true ) {
     console.log("น้อยกว่า 7")
     
     } else {
-        axios.post('http://localhost:8000/job/create', createPost)
+        axios.post('https://frozen-mesa-40722.herokuapp.com/job/create', createPost)
                 // axios.post('http://localhost:8000/multi', createPost)
 
           .then((res) => { 

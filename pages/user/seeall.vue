@@ -84,6 +84,8 @@
   </div>
   </b-modal>
 <br> 
+
+
   <!-- <div>
     <b-form-input size="lg" v-model="text1"
                   type="text"
@@ -98,10 +100,10 @@
 ">
         <p style=" white-space: pre-wrap; font-size: 16px; font-family:roboto;  color:#2f2f2f"  class="card-text">{{ course.job}}</p>
  <div class="por" >
-        <a   href="#" v-show="course.subject.length >1"
-           class="card-link">{{course.subject.split(',').join(' ')}}</a>
-        <b-link href="#" v-show="course.day.length >1"
-                class="card-link"   >{{course.day.split(',').join(' ')}}</b-link></div></b-col> 
+        <a   href="#" v-show="course.subject.length >0"
+           class="card-link">{{course.subject.toString().split(',').join(' ')}}</a>
+        <b-link href="#" v-show="course.day.length >0"
+                class="card-link"   >{{course.day.toString().split(',').join(' ')}}</b-link></div></b-col> 
                         <b-col style="    padding-left: 10px;
     padding-right: 3px;" cols="2">ว่าง</b-col> </b-row>
 
@@ -213,13 +215,14 @@ export default {
       ],
        checkedNames: [],
       checkedsubjects: [],
-      course: null,
+      courses: null,
       job3: '',
       isblank: ''
      
   
     }
   },
+
   asyncData () {
 
     return axios.get('https://frozen-mesa-40722.herokuapp.com/job/all')
@@ -231,30 +234,34 @@ export default {
     })
   },
     methods: {
+     
+
+
         sendout(){
 
       console.log(this.checkedNames);
-            console.log(this.checkedsubjects);
+            console.log(this.selected);
 
 
 let createPost = {
       
     
         day : this.checkedNames,
-        subject :this.checkedsubjects,
+        subject :this.selected,
      
+
        
 
       }
       console.log(createPost);
       
- axios.post('http://localhost:8000/multi3', createPost)
-                // axios.post('http://localhost:8000/multi', createPost)
+ axios.post('https://frozen-mesa-40722.herokuapp.com/multi3', createPost)
+                // axios.get('http://localhost:8000/job/all')
 
           .then((res) => { 
               
               console.log(res.data)
-              
+              this.courses = res.data
   
           })
           .catch(error => console.log(error))
