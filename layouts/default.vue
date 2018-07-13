@@ -172,6 +172,11 @@ html
   color: rgba(51, 193, 195, 1)!important;
 }
 
+
+</style>
+
+
+<style scoped>
 .btn-secondary {
     color: #667a6b;
     background-color: #effdf3;
