@@ -45,7 +45,7 @@
 </b-nav>
 
 <b-container >
-  <b-modal no-fade hide-header  hide-footer  id="modal1" >
+  <b-modal no-fade hide-header  hide-footer ref="myModalRef4"  id="modal1" >
 
 <div>
   <p style="font-size:20px;"> เลือกวิชาที่อยากสอน <i style=" font-size: 20px; color: #667a6b;" class="fa fa-search nav-item " aria-hidden="true"></i></p>
@@ -204,7 +204,6 @@ export default {
       status: 'not_accepted',
        selected: [], // Array reference
       options: [
-        { value:  ''   , text: 'เลือกวิชาที่อยากสอน',  disabled: true },
         { value: 'ENG', text: 'ENG' },
         { value: 'คณิต', text: 'คณิตศาสตร์' },
         { value: 'วิทย์', text: 'วิทยาศาสตร์' },
@@ -268,7 +267,7 @@ let createPost = {
               
               console.log(res.data)
               this.courses = res.data
-  
+             this.hideModal ()
           })
           .catch(error => console.log(error))
       
@@ -289,6 +288,7 @@ let createPost = {
     },
     hideModal () {
       this.$refs.myModalRef.hide()
+      this.$refs.myModalRef4.hide()
     }
   },
         layout: 'nohead'
