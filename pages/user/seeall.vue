@@ -47,10 +47,11 @@
 <b-container >
   <b-modal no-fade hide-header  hide-footer  id="modal1" >
 
-<div>
-  เลือกวิชาที่อยากสอน <i class="fa fa-sort-desc" aria-hidden="true"></i>
+<div><br>
+  เลือกวิชาที่อยากสอน <i style=" font-size: 20px; color: #667a6b;" class="fa fa-search nav-item " aria-hidden="true"></i>
 
-    <b-form-select multiple :select-size="6"    v-model="selected" :options="options" class="mb-3">
+    <b-form-select style="  margin-top:2px ; padding-top: 10px;
+    padding-bottom: 10px;" multiple :select-size="6"    v-model="selected" :options="options" class="mb-3">
     </b-form-select>
    <strong v-show="selected.length >0" style="    background-color: #c6f1d0;
     padding: 5px;
@@ -64,26 +65,28 @@
 
 
 
-<br>
+<br><br>
       <input type="checkbox" id="jack" value="จันทร์" v-model="checkedNames">
-  <label for="jack">จันทร์</label> &nbsp;&nbsp;
+  <label for="jack">จันทร์</label> &nbsp;&nbsp;&nbsp;
   <input step="    height: 31px;
     width: 31px;" type="checkbox" id="john" value="อังคาร" v-model="checkedNames">
-  <label for="john">อังคาร</label>&nbsp;&nbsp;
+  <label for="john">อังคาร</label>&nbsp;&nbsp;&nbsp;
   <input type="checkbox" id="mike" value="พุธ" v-model="checkedNames">
-  <label for="mike">พุธ</label>&nbsp;&nbsp;
+  <label for="mike">พุธ</label>&nbsp;&nbsp;&nbsp;
   <input type="checkbox" id="mike" value="พฤหัส" v-model="checkedNames">
   <label for="mike">พฤหัส</label>
   <br>
   <input type="checkbox" id="mike" value="ศุกร์" v-model="checkedNames">
-  <label for="mike">ศุกร์</label>&nbsp;&nbsp;
+  <label for="mike">ศุกร์</label>&nbsp;&nbsp;&nbsp;
   <input type="checkbox" id="mike" value="เสาร์" v-model="checkedNames">
-  <label for="mike">เสาร์</label>&nbsp;&nbsp;
+  <label for="mike">เสาร์</label>&nbsp;&nbsp;&nbsp;
   <input type="checkbox" id="mike" value="อาทิตย์" v-model="checkedNames">
   <label for="mike">อาทิตย์</label>
    <br>
 <br>
-  <button @click="sendout">send</button>
+  <!-- <button @click="sendout">send</button> -->
+    <b-button  @click="sendout" style="  background-color: #33C1C1; border: 0px; padding-left: 66px;
+    padding-right: 66px;">ทำการค้นหา</b-button>  
   </div>
   </b-modal>
 <br> 
@@ -362,5 +365,6 @@ border: 1px solid rgba(193, 193, 193, 0.12);
 label{
   padding-left: 2px;
   font-size: 18px;
+  margin-top: -2px;
 }
 </style>
