@@ -1,34 +1,6 @@
 <template>
   <div>
-    <div>
-    <b-navbar  style="    padding-bottom: 12px;
-    padding-top: 12px;  background-color:#cdf4d7!important; box-shadow: 0px 2px 3px -1px rgba(126, 126, 126, 0.2), 0px 4px 5px 0px rgba(0, 0, 0, 0), 0px 1px 10px 0px #00000003;"toggleable variant="light">
-        <b-navbar-toggle style="border-color: rgba(0, 0, 0, 0);    padding-left: 0px;
-    padding-right: 0px;" target="nav_text_collapse"></b-navbar-toggle>
-        <!-- <b-navbar-brand>BootstrapVue</b-navbar-brand> -->
-        <b-collapse is-nav id="nav_text_collapse">
-            <b-navbar-nav>
-                <b-nav-text>Navbar text</b-nav-text>
-                <nuxt-link to="/user/user">Users</nuxt-link>
-                <nuxt-link to="/profile">Profile</nuxt-link>
-                <nuxt-link to="/tutor/job">job</nuxt-link>
-                <nuxt-link to="/user/seeall">Seeall</nuxt-link>
-                <nuxt-link to="/user/createprofile">Createprofileagent</nuxt-link>
-                <nuxt-link to="/agent/signup">Signup</nuxt-link>
-                <nuxt-link to="/choose">Choose</nuxt-link>
-                <nuxt-link to="/agent/myjob">myjob</nuxt-link>
-                <nuxt-link to="/agent/status/1">ว่าง</nuxt-link>
-                <nuxt-link to="/agent/status/2">รอ</nuxt-link>
-                <nuxt-link to="/agent/status/3">ปิดแล้ว</nuxt-link>
-                
-                
-                
-
-
-            </b-navbar-nav>
-        </b-collapse>
-    </b-navbar>
-</div>
+ 
     <nuxt/>
   </div>
 

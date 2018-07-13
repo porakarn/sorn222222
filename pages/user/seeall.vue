@@ -1,11 +1,41 @@
 <template>
 <b-container fluid style="padding:0px">
-  <!-- <b-nav tabs>
-  <b-nav-item>All</b-nav-item>
-    <b-nav-item>ว่าง</b-nav-item>
-  <b-nav-item>รอจ่ายเงิน</b-nav-item>
-  <b-nav-item>ปิดแล้ว</b-nav-item>
-</b-nav> -->
+
+   <b-navbar  style="    padding-bottom: 12px;
+    padding-top: 12px;  background-color:#cdf4d7!important; box-shadow: 0px 2px 3px -1px rgba(126, 126, 126, 0.2), 0px 4px 5px 0px rgba(0, 0, 0, 0), 0px 1px 10px 0px #00000003;"toggleable variant="light">
+        <b-navbar-toggle style="border-color: rgba(0, 0, 0, 0);    padding-left: 0px;
+    padding-right: 0px;" target="nav_text_collapse"></b-navbar-toggle>
+        <!-- <b-navbar-brand>BootstrapVue</b-navbar-brand> -->
+          <b-button v-b-modal.modal1  style="font-size: 17px; color: #667a6b;
+    background-color: #effdf3;
+    border-color: #6c757d00;
+    border-radius: 18px;
+"><i style=" font-size: 20px; color: #667a6b;" class="fa fa-search nav-item " aria-hidden="true"></i> ลองค้นหางานดูสิ</b-button>
+        <b-collapse is-nav id="nav_text_collapse">
+            <b-navbar-nav>
+                <b-nav-text>Navbar text</b-nav-text>
+                <nuxt-link to="/user/user">Users</nuxt-link>
+                <nuxt-link to="/profile">Profile</nuxt-link>
+                <nuxt-link to="/tutor/job">job</nuxt-link>
+                <nuxt-link to="/user/seeall">Seeall</nuxt-link>
+                <nuxt-link to="/user/createprofile">Createprofileagent</nuxt-link>
+                <nuxt-link to="/agent/signup">Signup</nuxt-link>
+                <nuxt-link to="/choose">Choose</nuxt-link>
+                <nuxt-link to="/agent/myjob">myjob</nuxt-link>
+                <nuxt-link to="/agent/status/1">ว่าง</nuxt-link>
+                <nuxt-link to="/agent/status/2">รอ</nuxt-link>
+                <nuxt-link to="/agent/status/3">ปิดแล้ว</nuxt-link>
+                
+                
+                
+
+
+            </b-navbar-nav>
+        </b-collapse>
+    </b-navbar>
+
+
+
 <b-nav fill tabs>
   <b-nav-item  style="border-bottom: 2px solid;
     border-bottom-color: #82d9d9;
@@ -15,6 +45,44 @@
 </b-nav>
 
 <b-container >
+  <b-modal hide-header  hide-footer id="modal1" >
+
+<div>
+   
+
+      <input type="checkbox" id="jack" value="ENG" v-model="checkedsubjects">
+  <label for="jack">Eng</label>
+  <input type="checkbox" id="john" value="ไทย" v-model="checkedsubjects">
+  <label for="john">ไทย</label>
+  <input type="checkbox" id="mike" value="คณิต" v-model="checkedsubjects">
+  <label for="mike">คณิต</label>
+  <br>
+  
+
+
+<br><br>
+      <input type="checkbox" id="jack" value="จันทร์" v-model="checkedNames">
+  <label for="jack">จันทร์</label>
+  <input type="checkbox" id="john" value="อังคาร" v-model="checkedNames">
+  <label for="john">อังคาร</label>
+  <input type="checkbox" id="mike" value="พุธ" v-model="checkedNames">
+  <label for="mike">พุธ</label>
+  <br>
+  <input type="checkbox" id="mike" value="พฤหัส" v-model="checkedNames">
+  <label for="mike">พฤหัส</label>
+  <input type="checkbox" id="mike" value="ศุกร์" v-model="checkedNames">
+  <label for="mike">ศุกร์</label>
+  <input type="checkbox" id="mike" value="เสาร์" v-model="checkedNames">
+  <label for="mike">เสาร์</label>
+  <input type="checkbox" id="mike" value="อาทิตย์" v-model="checkedNames">
+  <label for="mike">อาทิตย์</label>
+   <br>
+  <span>Checked names: {{ checkedNames }}</span> <br>
+  <span>Checked subject: {{ checkedsubjects }}</span>
+<br>
+  <button @click="sendout">send</button>
+  </div>
+  </b-modal>
 <br> 
   <!-- <div>
     <b-form-input size="lg" v-model="text1"
@@ -125,6 +193,8 @@ import axios from 'axios';
 export default {
    data () {
     return {
+       checkedNames: [],
+      checkedsubjects: [],
       course: null,
       job3: '',
       isblank: ''
@@ -143,6 +213,35 @@ export default {
     })
   },
     methods: {
+        sendout(){
+
+      console.log(this.checkedNames);
+            console.log(this.checkedsubjects);
+
+
+let createPost = {
+      
+    
+        day : this.checkedNames,
+        subject :this.checkedsubjects,
+     
+       
+
+      }
+      console.log(createPost);
+      
+ axios.post('http://localhost:8000/multi3', createPost)
+                // axios.post('http://localhost:8000/multi', createPost)
+
+          .then((res) => { 
+              
+              console.log(res.data)
+              
+  
+          })
+          .catch(error => console.log(error))
+      
+    },
 
       nextPage(){
                     this.$router.push('/user/suggest')
@@ -160,7 +259,8 @@ export default {
     hideModal () {
       this.$refs.myModalRef.hide()
     }
-  }
+  },
+        layout: 'nohead'
 }
 </script>
 
@@ -207,4 +307,6 @@ border: 1px solid rgba(193, 193, 193, 0.12);
     border-color: #e9ecef00;
     
 }
+
+
 </style>
