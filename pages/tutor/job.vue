@@ -14,10 +14,10 @@
 ">
         <p style=" white-space: pre-wrap; font-size: 16px; font-family:roboto;  color:#2f2f2f"  class="card-text">{{ course.job}}</p>
  <div class="por" >
-        <a   href="#" v-show="course.subject.length >1"
-           class="card-link">{{course.subject}}</a>
-        <b-link href="#" v-show="course.day.length >1"
-                class="card-link"   >{{course.day}}</b-link></div></b-col> 
+        <a   href="#" v-show="course.subject.length >0"
+           class="card-link">{{course.subject.toString().split(',').join(' ')}}</a>
+        <b-link href="#" v-show="course.day.length >0"
+                class="card-link"   >{{course.day.toString().split(',').join(' ')}}</b-link></div></b-col> 
                         <b-col style="    padding-left: 10px;
     padding-right: 3px;" cols="2">{{course.status}}  
     

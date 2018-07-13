@@ -1,5 +1,5 @@
 <template>
-<b-container fluid>
+<b-container fluid style="padding:0px;">
   <!-- <b-nav tabs>
   <b-nav-item>All</b-nav-item>
     <b-nav-item>ว่าง</b-nav-item>
@@ -13,6 +13,8 @@
 ">งานแนะนำ</b-nav-item>
  
 </b-nav>
+
+<b-container fluid> 
 <br>
   
    <div v-for="course in courses" >
@@ -106,7 +108,7 @@
 
 
 
-
+</b-container>
 
 </b-container fluid>
 

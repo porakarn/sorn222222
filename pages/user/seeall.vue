@@ -111,7 +111,7 @@
         <b-link href="#" v-show="course.day.length >0"
                 class="card-link"   >{{course.day.toString().split(',').join(' ')}}</b-link></div></b-col> 
                         <b-col style="    padding-left: 10px;
-    padding-right: 3px;" cols="2">ว่าง</b-col> </b-row>
+    padding-right: 3px;" cols="2">{{course.status}}</b-col> </b-row>
 
     </b-card>
    

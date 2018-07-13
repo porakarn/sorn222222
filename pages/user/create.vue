@@ -31,9 +31,8 @@
     <!-- <pre class="mt-3">{{ text }}</pre> -->
 
            
- {{day}}
+
     
-    <button @click="addarray"> add  </button>
     <br>
       <b-button type="submit" style="background-color: #33C1C1; border: 0px; padding-left: 36px;
     padding-right: 36px;">เรียบร้อย</b-button>
@@ -215,7 +214,8 @@ if ( sat2 === true ) {
           .then((res) => { 
               
               console.log(res.data)
-              
+              this.day = []
+              this.subject = []
   
           })
           .catch(error => console.log(error))
