@@ -6,6 +6,7 @@
         <b-navbar-toggle style="border-color: rgba(0, 0, 0, 0);    padding-left: 0px;
     padding-right: 0px;" target="nav_text_collapse"></b-navbar-toggle>
         <!-- <b-navbar-brand>BootstrapVue</b-navbar-brand> -->
+          <b-button class="background-color: #B7E8C3!important;"><i style=" font-size: 20px; color: #667a6b;" class="fa fa-search nav-item " aria-hidden="true"></i> ลองค้นหางานดูสิ</b-button>
         <b-collapse is-nav id="nav_text_collapse">
             <b-navbar-nav>
                 <b-nav-text>Navbar text</b-nav-text>
@@ -171,5 +172,11 @@ html
   color: rgba(51, 193, 195, 1)!important;
 }
 
+.btn-secondary {
+    color: #fff;
+    background-color: #B7E8C3;
+    border-color: #6c757d00;
+    border-radius: 18px;
+}
 
 </style>

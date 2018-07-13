@@ -181,6 +181,7 @@ if ( mon2 === true ) {
         _creator: this.$store.state.agent._id,
         day : this.day,
         subject : this.subject,
+        subjectss : ['qwe', 'wer']
 
 
       }

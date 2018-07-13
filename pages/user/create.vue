@@ -31,8 +31,9 @@
     <!-- <pre class="mt-3">{{ text }}</pre> -->
 
            
- 
+ {{day}}
     
+    <button @click="addarray"> add  </button>
     <br>
       <b-button type="submit" style="background-color: #33C1C1; border: 0px; padding-left: 36px;
     padding-right: 36px;">เรียบร้อย</b-button>
@@ -50,12 +51,15 @@ export default {
     return {
     
       job: '',
-      subject: '',
-      day: ''
+      subject: [],
+      day: []
   
     }
   },
  methods: {
+   addarray(){
+   this.day.push("จันทร์")
+   },
   
     nextPage(){
    this.$router.push('/user/createform')
@@ -137,40 +141,53 @@ var sun2 = sun.some(el => str1.includes(el));
 
 
 if ( math2 === true ) {
-  this.subject = "คณิต"
-} else if ( eng2 === true ) {
-   this.subject = "ENG"
-}  else if ( science2 === true ) {
-   this.subject = "วิทย์"
-} else if ( chinese2 === true ) {
-   this.subject = "จีน"
-} else if ( japan2 === true ) {
-   this.subject = "ญี่ปุ่น"
-}  else if ( korea2 === true ) {
-   this.subject = "Korean"
-} else if ( thai2 === true ) {
-   this.subject = "ไทย"
-} else if ( social2 === true ) {
-   this.subject = "สังคม"
+  this.subject.push("คณิต")
+} 
+ if ( eng2 === true ) {
+   this.subject.push("ENG") 
+}  
+ if ( science2 === true ) {
+   this.subject.push("วิทย์")
+} 
+if ( chinese2 === true ) {
+   this.subject.push("จีน") 
+}
+ if ( japan2 === true ) {
+   this.subject.push("ญี่ปุ่น") 
+}  
+ if ( korea2 === true ) {
+   this.subject.push("Korean")  
+} 
+if ( thai2 === true ) {
+   this.subject.push("ไทย") 
+} 
+ if ( social2 === true ) {
+   this.subject.push("สังคม") 
 } 
  
 
 
 
 if ( mon2 === true ) {
-  this.day = "จันทร์"
-} else if ( tues2 === true ) {
-    this.day = "อังคาร"
-} else if ( wed2 === true ) {
-      this.day = "พุธ"
-} else if ( thu2 === true ) {
-      this.day = "พฤหัส"
-} else if ( fri2 === true ) {
-    this.day = "ศุกร์"
-} else if ( sat2 === true ) {
-    this.day = "เสาร์"
-} else if ( sun2 === true ) {
-    this.day = "อาทิตย์"
+  this.day.push("จันทร์")  
+} 
+if ( tues2 === true ) {
+    this.day.push("อังคาร")  
+} 
+ if ( wed2 === true ) {
+      this.day.push("พุธ") 
+} 
+ if ( thu2 === true ) {
+      this.day.push("พฤหัส")  
+}
+if ( fri2 === true ) {
+    this.day.push("ศุกร์")  
+} 
+if ( sat2 === true ) {
+    this.day.push("เสาร์")  
+} 
+ if ( sun2 === true ) {
+    this.day.push("อาทิตย์")  
 } 
 
 
@@ -180,17 +197,21 @@ if ( mon2 === true ) {
         job: str2,
         day : this.day,
         subject : this.subject,
-        tutorid: this.$store.state.user._id
-
+        tutorid: this.$store.state.user._id,
+        subjectss :  ["Green", "red"]
 
       }
    console.log(createPost);
+      console.log(this.day + ': thisday');
+
    
     if ( str2.length < 7 ) {
     console.log("น้อยกว่า 7")
     
     } else {
-        axios.post('https://frozen-mesa-40722.herokuapp.com/job/create', createPost)
+        axios.post('http://localhost:8000/job/create', createPost)
+                // axios.post('http://localhost:8000/multi', createPost)
+
           .then((res) => { 
               
               console.log(res.data)

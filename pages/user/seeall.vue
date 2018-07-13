@@ -31,9 +31,9 @@
         <p style=" white-space: pre-wrap; font-size: 16px; font-family:roboto;  color:#2f2f2f"  class="card-text">{{ course.job}}</p>
  <div class="por" >
         <a   href="#" v-show="course.subject.length >1"
-           class="card-link">{{course.subject}}</a>
+           class="card-link">{{course.subject.split(',').join(' ')}}</a>
         <b-link href="#" v-show="course.day.length >1"
-                class="card-link"   >{{course.day}}</b-link></div></b-col> 
+                class="card-link"   >{{course.day.split(',').join(' ')}}</b-link></div></b-col> 
                         <b-col style="    padding-left: 10px;
     padding-right: 3px;" cols="2">ว่าง</b-col> </b-row>
 
