@@ -98,14 +98,13 @@ color: #484848; border:1px !important;">โปรไฟล์ของคุณ<
     <br>
   <div v-for="review in reviews" >
     <b-row>
-   <b-col cols="3">
-    <img  style="width: 50px"  :src="review.studentid.picture"  alt="">
+   <b-col cols="2">
+    <img  style="width: 60px;     border-radius: 50%;"  :src="review.studentid.picture"  alt="">
 
    </b-col>
-     <b-col  cols="9">
+     <b-col  cols="10">
      <Strong>{{review.studentid.name}}</Strong>
 <p>{{review.review_write}}</p>
-
 <p>{{ review.rating}}</p>
    </b-col>
 
