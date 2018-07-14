@@ -2,12 +2,12 @@
 <b-container fluid style="padding: 0px;">
 
 <b-container fluid>
-
+ <button @click="porakarn">Porakarn</button>
     <br>
     <b-row>
         <b-col cols="4">
   <!-- <b-img rounded="circle" style="width: 70px" :src="this.$store.state.user.picture"/> -->
-    <b-img  style="width: 90px; " rounded="circle" src="https://scontent.fbkk5-6.fna.fbcdn.net/v/t1.0-1/p240x240/15873069_1211350558943201_5314025003629794223_n.jpg?_nc_cat=0&oh=429da1d277ec885fbbc86409fac1dd86&oe=5BA39AF5"/>
+    <!-- <b-img  style="width: 90px; " rounded="circle" :src="$store.state.user.picture" /> -->
 
         </b-col>
          <b-col cols="8" style="    padding-left: 2px;">
@@ -69,6 +69,8 @@
 
  <!-- <p style="margin-bottom: 0px; color:#484848;  margin-top: 17px; font-size: 19px">วิชาที่คุณสอน
 </p> -->
+
+ 
   <b-row class="my-1">
     <b-col sm="10">
    
@@ -94,8 +96,24 @@ color: #484848; border:1px !important;">โปรไฟล์ของคุณ<
 > {{this.$store.state.user.profile}} </p>
 
     <br>
- 
- 
+  <div v-for="review in reviews" >
+    <b-row>
+   <b-col cols="3">
+    <img  style="width: 50px"  :src="review.studentid.picture"  alt="">
+
+   </b-col>
+     <b-col  cols="9">
+     <Strong>{{review.studentid.name}}</Strong>
+<p>{{review.review_write}}</p>
+
+<p>{{ review.rating}}</p>
+   </b-col>
+
+    </b-row>
+
+
+
+  </div>
 </b-container>
 
 <b-nav fill tabs style=" position: fixed;    width:100%;
@@ -124,7 +142,8 @@ export default {
     profile: '',
     text2: '',
     text:'',
-    subject:''
+    subject:'',
+    reviews:''
   
     }
   },
@@ -157,6 +176,22 @@ return
 //   }
 //   ,
     methods: {
+      porakarn(){
+    
+    var data = {
+      tutorid : this.$store.state.user._id
+    }
+  // axios.post('http://localhost:8000/user/profile2', data).then((res) =>{
+            axios.post('https://frozen-mesa-40722.herokuapp.com/user/profile2', data).then((res) =>{
+
+            console.log(res.data)
+             this.reviews = res.data._review
+            
+
+           }).catch((error) =>{ console.log(error) })
+           
+
+      },
       nextPage(){
              this.$router.push('/tutor/job')
       }

@@ -10,7 +10,8 @@ const store = () => {
       user: null,
       isUserLoggedIn: false,
       haveProfile: false,
-      agent: null
+      agent: null,
+      student: null
 
 
     },
@@ -31,7 +32,10 @@ const store = () => {
        },
        setAgent(state, agent) {
          state.agent = agent
-       }
+       },
+       setStudent(state, student) {
+          state.student = student
+        }
     },
     actions: {
          setProfile({commit}, profile) {
@@ -46,6 +50,9 @@ const store = () => {
       },
       setAgent({commit}, agent) {
          commit('setAgent', agent)
+       },
+      setStudent({commit}, student) {
+         commit('setStudent', student)
        }
 
     }

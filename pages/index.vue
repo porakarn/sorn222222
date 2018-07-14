@@ -28,6 +28,8 @@ export default {
               this.$store.dispatch('setAgent', null)
 
       this.$store.dispatch('setUser', null)
+       this.$store.dispatch('setStudent', null)
+
             // this.$store.dispatch('setProfile', null)
 
     }

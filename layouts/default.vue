@@ -20,6 +20,10 @@
                 <nuxt-link to="/agent/status/1">ว่าง</nuxt-link>
                 <nuxt-link to="/agent/status/2">รอ</nuxt-link>
                 <nuxt-link to="/agent/status/3">ปิดแล้ว</nuxt-link>
+                <nuxt-link to="/user/rating">rating</nuxt-link>
+                <nuxt-link to="/tutor/givelink">givelink</nuxt-link>
+
+
                 
                 
                 
