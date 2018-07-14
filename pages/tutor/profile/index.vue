@@ -2,7 +2,6 @@
 <b-container fluid style="padding: 0px;">
 
 <b-container fluid>
- <button @click="porakarn">Porakarn</button>
     <br>
     <b-row>
         <b-col cols="4">
@@ -89,30 +88,42 @@
            class="card-link">IELTS</a>
         <b-link href="#"
                 class="card-link">เคมี</b-link></div> -->
-<br>
+
                  <!-- <p style=" margin-bottom: 0px;   padding-top: 0px !important; font-size: 19px;
 color: #484848; border:1px !important;">โปรไฟล์ของคุณ</p> -->
    <p style=" white-space: pre-wrap;" v-if="this.$store.state.haveProfile"
 > {{this.$store.state.user.profile}} </p>
 
-    <br>
+    <b-button @click="porakarn">รีวิว</b-button> <br>
+
   <div v-for="review in reviews" >
     <b-row>
    <b-col cols="2">
     <img  style="width: 60px;     border-radius: 50%;"  :src="review.studentid.picture"  alt="">
 
    </b-col>
-     <b-col  cols="10">
+     <b-col  cols="8">
      <Strong>{{review.studentid.name}}</Strong>
 <p>{{review.review_write}}</p>
+
+   </b-col>
+    <b-col  cols="2">
 <p>{{ review.rating}}</p>
    </b-col>
 
     </b-row>
 
 
-
   </div>
+  <br><br><br> 
+<p>ddd</p>
+<p>dddd</p>
+<p>dddd</p>
+<p>fff</p>
+<p>ddd</p>
+<p>dddd</p>
+<p>dddd</p>
+<p>fff</p>
 </b-container>
 
 <b-nav fill tabs style=" position: fixed;    width:100%;
