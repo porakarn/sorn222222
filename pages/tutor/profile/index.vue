@@ -103,21 +103,21 @@ color: #484848; border:1px !important;">โปรไฟล์ของคุณ<
     <img  style="width: 60px;     border-radius: 50%;"  :src="review.studentid.picture"  alt="">
 
    </b-col>
-     <b-col  cols="8" style="padding-left: 20px">
+     <b-col  cols="10" style="padding-left: 20px">
      <Strong style="font-weight: 400;
     font-size: 17px;
     background-color: #f5f5f5;
     padding: 8px;
-    border-radius: 14px;">{{review.review_write}}</Strong>
+    border-radius: 14px;">{{review.review_write}}  </Strong><i style="color: #F8E217;" class="fa fa-star" aria-hidden="true"></i> {{ review.rating}} 
 
-     <p style="    font-size: 17px;">{{review.studentid.name}}</p>
+     <p style="    font-size: 17px;">{{review.studentid.name.split(" ").slice(0, -1).join(" ")}}</p>
 
 
 
    </b-col>
-    <b-col  cols="2" style="    padding-right: 9px;" >
+    <!-- <b-col  cols="2" style="    padding-right: 9px;" >
 <p><i style="color: #F8E217;" class="fa fa-star" aria-hidden="true"></i> {{ review.rating}} </p>
-   </b-col>
+   </b-col> -->
 
     </b-row>
 
