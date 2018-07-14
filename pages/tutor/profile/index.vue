@@ -105,7 +105,7 @@ color: #484848; border:1px !important;">โปรไฟล์ของคุณ<
    </b-col>
      <b-col  cols="8" style="padding-left: 20px">
      <Strong style="    font-size: 17px;">{{review.studentid.name}}</Strong>
-<p>{{review.review_write}}</p>
+<p style="color: #636363;">{{review.review_write}}</p>
 
    </b-col>
     <b-col  cols="2" style="    padding-right: 9px;" >
