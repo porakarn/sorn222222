@@ -112,7 +112,7 @@ color: #484848; border:1px !important;">โปรไฟล์ของคุณ<
     padding-right: 12px;
     border-radius: 14px;">{{review.review_write}}  </Strong>
 
-     <p style="    font-size: 17px;">{{review.studentid.name.split(" ").slice(0, -1).join(" ")}} <i style="color: #F8E217;" class="fa fa-star" aria-hidden="true"></i> {{ review.rating}} </p>
+     <p style="     margin-top: 6px;   font-size: 17px;">{{review.studentid.name.split(" ").slice(0, -1).join(" ")}} <i style="color: #F8E217;" class="fa fa-star" aria-hidden="true"></i> {{ review.rating}} </p>
 
 
 
