@@ -113,7 +113,7 @@ color: #484848; border:1px !important;">โปรไฟล์ของคุณ<
      <p style="    font-size: 17px;">{{review.studentid.name}}</p>
 
 
-<div>ddd</div>
+
    </b-col>
     <b-col  cols="2" style="    padding-right: 9px;" >
 <p><i style="color: #F8E217;" class="fa fa-star" aria-hidden="true"></i> {{ review.rating}} </p>
