@@ -94,21 +94,22 @@ color: #484848; border:1px !important;">โปรไฟล์ของคุณ<
    <p style=" white-space: pre-wrap;" v-if="this.$store.state.haveProfile"
 > {{this.$store.state.user.profile}} </p>
 
-    <b-button @click="porakarn">รีวิว</b-button> <br>
+    <b-button @click="porakarn">รีวิว</b-button> 
+    <br><br>
 
   <div v-for="review in reviews" >
-    <b-row>
+    <b-row style="margin-bottom: 12px;">
    <b-col cols="2">
     <img  style="width: 60px;     border-radius: 50%;"  :src="review.studentid.picture"  alt="">
 
    </b-col>
-     <b-col  cols="8">
-     <Strong>{{review.studentid.name}}</Strong>
+     <b-col  cols="8" style="padding-left: 20px">
+     <Strong style="    font-size: 17px;">{{review.studentid.name}}</Strong>
 <p>{{review.review_write}}</p>
 
    </b-col>
     <b-col  cols="2">
-<p>{{ review.rating}}</p>
+<p><i style="color: #F1F182;" class="fa fa-star" aria-hidden="true"></i> {{ review.rating}} </p>
    </b-col>
 
     </b-row>
