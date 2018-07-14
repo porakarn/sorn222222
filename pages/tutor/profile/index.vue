@@ -104,9 +104,16 @@ color: #484848; border:1px !important;">โปรไฟล์ของคุณ<
 
    </b-col>
      <b-col  cols="8" style="padding-left: 20px">
-     <Strong style="    font-size: 17px;">{{review.studentid.name}}</Strong>
-<p style="color: #636363;">{{review.review_write}}</p>
+     <Strong style="font-weight: 400;
+    font-size: 17px;
+    background-color: #f5f5f5;
+    padding: 8px;
+    border-radius: 14px;">{{review.review_write}}</Strong>
 
+     <p style="    font-size: 17px;">{{review.studentid.name}}</p>
+
+
+<div>ddd</div>
    </b-col>
     <b-col  cols="2" style="    padding-right: 9px;" >
 <p><i style="color: #F8E217;" class="fa fa-star" aria-hidden="true"></i> {{ review.rating}} </p>
