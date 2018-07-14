@@ -108,8 +108,8 @@ color: #484848; border:1px !important;">โปรไฟล์ของคุณ<
 <p>{{review.review_write}}</p>
 
    </b-col>
-    <b-col  cols="2">
-<p><i style="color: #F1F182;" class="fa fa-star" aria-hidden="true"></i> {{ review.rating}} </p>
+    <b-col  cols="2" style="    padding-right: 9px;" >
+<p><i style="color: #F8E217;" class="fa fa-star" aria-hidden="true"></i> {{ review.rating}} </p>
    </b-col>
 
     </b-row>
