@@ -116,7 +116,7 @@
            class="card-link">{{course.subject.toString().split(',').join(' ')}}</a>
         <b-link href="#" v-show="course.day.length >0"
                 class="card-link"   >{{course.day.toString().split(',').join(' ')}}</b-link> 
-                 <strong style="color:#c4d2dc;  font-size: 14px; margin-top: 4px;  float:right;  margin-bottom: 0px; font-weight:400">{{ displayTimestamp(course.createdAt) }}  </strong>  
+                 <strong style="color:#a5cae4;  font-size: 14px; margin-top: 4px;  float:right;  margin-bottom: 0px; font-weight:400">{{ displayTimestamp(course.createdAt) }}  </strong>  
 </b-col>
     </b-row>
 
