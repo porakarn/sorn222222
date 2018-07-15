@@ -115,7 +115,8 @@
  <a   href="#" v-show="course.subject.length >0"
            class="card-link">{{course.subject.toString().split(',').join(' ')}}</a>
         <b-link href="#" v-show="course.day.length >0"
-                class="card-link"   >{{course.day.toString().split(',').join(' ')}}</b-link>  <strong style="color:grey;  font-size: 14px;   float:right;  margin-bottom: 0px; font-weight:400">{{ displayTimestamp(course.createdAt) }}  </strong>  
+                class="card-link"   >{{course.day.toString().split(',').join(' ')}}</b-link> 
+                 <strong style="color:#c4d2dc;  font-size: 14px; margin-top: 4px;  float:right;  margin-bottom: 0px; font-weight:400">{{ displayTimestamp(course.createdAt) }}  </strong>  
 </b-col>
     </b-row>
 
@@ -248,7 +249,7 @@ export default {
   },
     methods: {
         displayTimestamp(t){
-                return moment(t).fromNow()
+                return moment(t).locale('th').fromNow()
             },
      
 
