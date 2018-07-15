@@ -2,7 +2,7 @@
 <b-container fluid style="padding:0px">
 
    <b-navbar  style="    padding-bottom: 12px;
-    padding-top: 12px;  background-color:#cdf4d7!important; box-shadow: 0px 2px 3px -1px rgba(126, 126, 126, 0.2), 0px 4px 5px 0px rgba(0, 0, 0, 0), 0px 1px 10px 0px #00000003;"toggleable variant="light">
+    padding-top: 12px;  background-color: #E80064!important; box-shadow: 0px 2px 3px -1px rgba(126, 126, 126, 0.2), 0px 4px 5px 0px rgba(0, 0, 0, 0), 0px 1px 10px 0px #00000003;"toggleable variant="light">
         <b-navbar-toggle style="border-color: rgba(0, 0, 0, 0);    padding-left: 0px;
     padding-right: 0px;" target="nav_text_collapse"></b-navbar-toggle>
         <!-- <b-navbar-brand>BootstrapVue</b-navbar-brand> -->
@@ -38,7 +38,7 @@
 
 <b-nav fill tabs>
   <b-nav-item  style="border-bottom: 2px solid;
-    border-bottom-color: #82d9d9;
+    border-bottom-color: #ffb9cb;
 ">ทั้งหมด</b-nav-item>
  <b-nav-item @click="nextPage">งานแนะนำ</b-nav-item>
  
@@ -329,7 +329,7 @@ let createPost = {
         margin-left: 7px;
          color: #ffffff;
     text-decoration: none;
-    background-color: #82D9D9;
+    background-color: #ffb9cb;
     padding: 2px;
     padding-left: 7px;
     padding-right: 7px;
