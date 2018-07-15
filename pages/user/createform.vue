@@ -13,7 +13,7 @@
  
 </div>
           <form @submit.prevent="onCreate">
-
+<b-row> <b-col md="6" offset-md="3">
               <div v-if="step === 1">
 
     <b-form-group  id="exampleInputGroup1"
@@ -155,7 +155,7 @@
 
     
     <br>
- 
+ </b-col></b-row>
           </form>
   </div>
 

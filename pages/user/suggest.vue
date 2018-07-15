@@ -20,21 +20,39 @@
    <div v-for="course in courses" >
 
 
-    <b-card @click="showModal(course)" style="   margin-bottom: 5px;   box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.1);
+   <b-row>
+  <b-col offset-lg="2" lg="8">
+    <b-card @click="showModal(course)" style="   margin-bottom: 5px; 
+    box-shadow: rgba(146, 146, 146, 0.1) 0px 1px 3px 0px;
 " 
            > <b-row>  <b-col cols="10" style="    padding-right: 0px;
 ">
         <p style=" white-space: pre-wrap; font-size: 16px; font-family:roboto;  color:#2f2f2f"  class="card-text">{{ course.job}}</p>
  <div class="por" >
-        <a   href="#" v-show="course.subject.length >1"
-           class="card-link">{{course.subject}}</a>
-        <b-link href="#" v-show="course.day.length >1"
-                class="card-link"   >{{course.day}}</b-link></div></b-col> 
+       
+</div></b-col> 
                         <b-col style="    padding-left: 10px;
-    padding-right: 3px;" cols="2">ว่าง</b-col> </b-row>
+    padding-right: 3px;" cols="2">{{course.status}}</b-col> </b-row>
+    <b-row>
+      <b-col style="padding-left: 8px;">
+ <a   href="#" v-show="course.subject.length >0"
+           class="card-link">{{course.subject.toString().split(',').join(' ')}}</a>
+        <b-link href="#" v-show="course.day.length >0"
+                class="card-link"   >{{course.day.toString().split(',').join(' ')}}</b-link> 
+                 <strong style="color:#a5cae4;  font-size: 14px; margin-top: 4px;  float:right;  margin-bottom: 0px; font-weight:400">{{ displayTimestamp(course.createdAt) }}  </strong>  
+</b-col>
+    </b-row>
 
     </b-card>
+
+   </b-col>
+
+
+
+</b-row>
+    
    
+
     
    
    
@@ -115,7 +133,7 @@
 </template>
 <script>
 import axios from 'axios';
-
+import moment from 'moment'
 export default {
    data () {
     return {
@@ -185,6 +203,10 @@ let suggest = {
 //   },
 
     methods: {
+      displayTimestamp(t){
+                return moment(t).locale('th').fromNow()
+            },
+     
 
 por(){
 let suggest = {

@@ -19,7 +19,8 @@
 </div>
           <form @submit.prevent="onCreate">
 
-              
+              <b-row>
+  <b-col offset-lg="3" lg="6">
 
     <h5 style="color: #8f9aa4;">วางงานของคุณที่นี่</h5>
     <b-form-textarea required id="textarea1"
@@ -36,7 +37,8 @@
     <br>
       <b-button type="submit" style="background-color: #33C1C1; border: 0px; padding-left: 36px;
     padding-right: 36px;">เรียบร้อย</b-button>
-          </form>
+  </b-col></b-row>    </form>
+          
   </div>
 </b-container>
 </b-container>

@@ -100,7 +100,7 @@
     <div v-for="course in courses" >
 
 <b-row>
-  <b-col offset-lg="3" lg="6">
+  <b-col offset-lg="2" lg="8">
     <b-card @click="showModal(course)" style="   margin-bottom: 5px; 
     box-shadow: rgba(146, 146, 146, 0.1) 0px 1px 3px 0px;
 " 
