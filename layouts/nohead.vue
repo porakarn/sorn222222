@@ -4,7 +4,7 @@
 
     <nuxt/>
  
-    <b-container fluid class="bv-example-row"   style="box-shadow: rgba(0, 0, 0, 0.2) 0px 3px 8px 0px, rgba(0, 0, 0, 0) 0px 4px 5px 0px, rgba(0, 0, 0, 0.01) 0px 1px 10px 0px; position: fixed;     width: 100%;
+    <b-container fluid class="bv-example-row responsive "   style="box-shadow: rgba(0, 0, 0, 0.2) 0px 3px 8px 0px, rgba(0, 0, 0, 0) 0px 4px 5px 0px, rgba(0, 0, 0, 0.01) 0px 1px 10px 0px; position: fixed;     width: 100%;
 
   bottom: 0px; 
   background-color: white;
@@ -147,3 +147,17 @@ html
 </style>
 
 
+<style scoped>
+
+.responsive {
+  display: none;
+}
+
+/*show for small screens */
+@media screen and (max-width: 1023px) { /* I've given 1023px but you can change to proper width */
+    .responsive {
+        display: block;
+    }
+}
+
+</style>

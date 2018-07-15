@@ -36,11 +36,11 @@
 
 
 
-<b-nav fill tabs>
-  <b-nav-item  style="border-bottom: 2px solid;
+<b-nav fill tabs >
+  <b-nav-item  class="responsive"  style="border-bottom: 2px solid;
     border-bottom-color: #82d9d9;
 ">ทั้งหมด</b-nav-item>
- <b-nav-item @click="nextPage">งานแนะนำ</b-nav-item>
+ <b-nav-item class="responsive"  @click="nextPage">งานแนะนำ</b-nav-item>
  
 </b-nav>
 
@@ -99,7 +99,8 @@
   </div><br> -->
     <div v-for="course in courses" >
 
-
+<b-row>
+  <b-col offset-lg="3" lg="6">
     <b-card @click="showModal(course)" style="   margin-bottom: 5px; 
     box-shadow: rgba(146, 146, 146, 0.1) 0px 1px 3px 0px;
 " 
@@ -122,12 +123,14 @@
     </b-row>
 
     </b-card>
-   
+
+   </b-col>
+
+
+
+</b-row>
     
    
-   
-
-
 
 
 
@@ -384,4 +387,16 @@ label{
 .btn-secondary:focus, .btn-secondary.focus {
     box-shadow: 0 0 0 0.2rem rgba(108, 117, 125, 0);
 }
+
+.responsive {
+  display: none;
+}
+
+/*show for small screens */
+@media screen and (max-width: 1023px) { /* I've given 1023px but you can change to proper width */
+    .responsive {
+        display: block;
+    }
+}
+
 </style>
