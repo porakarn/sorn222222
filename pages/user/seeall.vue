@@ -111,11 +111,11 @@
                         <b-col style="    padding-left: 10px;
     padding-right: 3px;" cols="2">{{course.status}}</b-col> </b-row>
     <b-row>
-      <b-col>
+      <b-col style="padding-left: 8px;">
  <a   href="#" v-show="course.subject.length >0"
            class="card-link">{{course.subject.toString().split(',').join(' ')}}</a>
         <b-link href="#" v-show="course.day.length >0"
-                class="card-link"   >{{course.day.toString().split(',').join(' ')}}</b-link>  <strong style="color:grey;  font-size: 15px;   float:right;  margin-bottom: 0px; font-weight:400">{{ displayTimestamp(course.createdAt) }}  </strong>  
+                class="card-link"   >{{course.day.toString().split(',').join(' ')}}</b-link>  <strong style="color:grey;  font-size: 14px;   float:right;  margin-bottom: 0px; font-weight:400">{{ displayTimestamp(course.createdAt) }}  </strong>  
 </b-col>
     </b-row>
 
