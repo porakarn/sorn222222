@@ -101,7 +101,8 @@
 
 
     <b-card @click="showModal(course)" style="   margin-bottom: 5px; 
-   box-shadow: rgba(119, 118, 118, 0.1) 0px 1px 11px 0px;
+   box-shadow: rgba(146, 146, 146, 0.1) 0px 1px 8px 0px;
+
 " 
            > <b-row>  <b-col cols="10" style="    padding-right: 0px;
 ">
