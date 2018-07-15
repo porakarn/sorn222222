@@ -1,12 +1,12 @@
 <template>
 <b-container fluid style="padding: 0px;">
 <b-nav fill tabs>
-  <b-nav-item  style="border-bottom: 2px solid;
+  <b-nav-item   style="border-bottom: 2px solid;
     border-bottom-color: #82d9d9;
-">ทั้งหมด</b-nav-item>
- <b-nav-item @click="nextPage">ว่าง</b-nav-item>
-  <b-nav-item @click="nextPage">รอจ่ายเงิน</b-nav-item>
-    <b-nav-item @click="nextPage">ปิดแล้ว</b-nav-item>
+"> <nuxt-link to="/agent/myjob">ทั้งหมด</nuxt-link></b-nav-item>
+ <b-nav-item >  <nuxt-link to="/agent/status/1">ว่าง </nuxt-link></b-nav-item>
+  <b-nav-item > <nuxt-link to="/agent/status/2">รอจ่ายเงิน</nuxt-link></b-nav-item>
+    <b-nav-item ><nuxt-link to="/agent/status/3">ปิดแล้ว</nuxt-link></b-nav-item>
 
 
  
@@ -17,7 +17,7 @@
 
  <div v-for="course in courses" >
 <b-row>
-  <b-col offset-lg="2" lg="8">
+  <b-col offset-lg="3" lg="6">
 
     <b-card @click="showModal(course)" style="   margin-bottom: 5px;   box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.1);
 " 
@@ -25,16 +25,19 @@
 ">
         <p style=" white-space: pre-wrap; font-size: 16px; font-family:roboto;  color:#2f2f2f"  class="card-text">{{ course.job}}</p>
  <div class="por" >
-        <a   href="#" v-show="course.subject.length >0"
+       
+</div></b-col> 
+                        <b-col style="    padding-left: 10px;
+    padding-right: 3px;" cols="2">{{course.status}}</b-col> </b-row>
+    <b-row>
+      <b-col style="padding-left: 8px;">
+ <a   href="#" v-show="course.subject.length >0"
            class="card-link">{{course.subject.toString().split(',').join(' ')}}</a>
         <b-link href="#" v-show="course.day.length >0"
-                class="card-link"   >{{course.day.toString().split(',').join(' ')}}</b-link></div></b-col> 
-                        <b-col style="    padding-left: 10px;
-    padding-right: 3px;" cols="2">{{course.status}}  
-    
-    
-    
-    </b-col> </b-row>
+                class="card-link"   >{{course.day.toString().split(',').join(' ')}}</b-link> 
+                 <strong style="color:#a5cae4;  font-size: 14px; margin-top: 4px;  float:right;  margin-bottom: 0px; font-weight:400">{{ displayTimestamp(course.createdAt) }}  </strong>  
+</b-col>
+    </b-row>
 
     </b-card>
    
@@ -87,14 +90,14 @@ Save </b-button>
     padding-right: 26px;">ว่าง</b-button>  
              </b-col>
                   <b-col cols="4" >
-     <b-button  @click="waitjob"  style="  background-color: white; color: grey; border: 0px; padding-left: 36px;
-    padding-right: 36px;">รอจ่ายเงิน</b-button>  
+     <b-button  @click="waitjob"  style="  background-color: white; color: grey; border: 0px; padding-left: 26px;
+    padding-right: 26px;">รอจ่ายเงิน</b-button>  
     
              </b-col>
             
              <b-col cols="4" >
-     <b-button  @click="closejob" style="  background-color: white; color: grey; border: 0px; padding-left: 36px;
-    padding-right: 36px;">ปิดงาน</b-button>  
+     <b-button  @click="closejob" style="  background-color: white; color: grey; border: 0px; padding-left: 26px;
+    padding-right: 26px;">ปิดงาน</b-button>  
     
              </b-col>
             
@@ -107,13 +110,13 @@ Save </b-button>
     padding-right: 26px;">ว่าง</b-button>  
              </b-col>
                 <b-col cols="4" >
-     <b-button   @click="waitjob" style="  background-color: #33C1C1; border: 0px; padding-left: 46px;
-    padding-right: 46px;">รอจ่ายเงิน</b-button>  
+     <b-button   @click="waitjob" style="  background-color: #33C1C1; border: 0px; padding-left: 26px;
+    padding-right: 26px;">รอจ่ายเงิน</b-button>  
     
              </b-col>
              <b-col cols="4" >
-     <b-button  @click="closejob" style="  background-color:white ; color: grey; border: 0px; padding-left: 46px;
-    padding-right: 46px;">ปิดงาน</b-button>  
+     <b-button  @click="closejob" style="  background-color:white ; color: grey; border: 0px; padding-left: 26px;
+    padding-right: 26px;">ปิดงาน</b-button>  
     
              </b-col>
             
@@ -163,6 +166,7 @@ Save </b-button>
 
 <script>
 import axios from 'axios';
+import moment from 'moment'
 
 export default {
    data () {
@@ -193,6 +197,10 @@ let suggest = {
     })
   },
     methods: {
+      displayTimestamp(t){
+                return moment(t).locale('th').fromNow()
+            },
+     
     waitjob(){
 let wait = {
         status: 'รอจ่าย',
@@ -256,12 +264,17 @@ axios.patch('https://frozen-mesa-40722.herokuapp.com/job/update', edit)
         
 
       }
+      
       console.log(suggest)
-     axios.post('https://frozen-mesa-40722.herokuapp.com/job/agentrown', suggest)
+
+  axios.post('https://frozen-mesa-40722.herokuapp.com/job/agentown', suggest)
     .then((res) => { console.log(res.data)
       this.courses = res.data
-              
+                    this.$refs.myModalRef.hide()
+
             })
+    
+
     
     })
 

@@ -3,20 +3,46 @@
 <b-container fluid>
 
 <br><br>
+<b-row>
+<b-col md="4" offset-md="4">
+
+
+
+
       <form @submit.prevent="onCreate">
-
-    <input type="file" @change="onFileChange">
-                     <img :src="image" height="100"> 
-
+<div style="text-align:center" >
+                     <img :src="image" style="border-radius: 5px" height="100"> 
+</div>
+<br>
 
 <b-row class="my-1">
-    <b-col sm="10">
+    <b-col >
+      <b-form-group  id="exampleInputGroup1"
+                    
+                    label-for="exampleInput1"
+                    description="ชื่อเพจของคุณ">
       <b-form-input required id="input-large" size="lg" v-model="pagename" type="text" placeholder="ชื่อเพจของคุณ"></b-form-input>
+    
+      </b-form-group>
     </b-col>
   </b-row>
     <b-row class="my-1">
-    <b-col sm="10" style="margin-top: 19px;">
+    <b-col  style="margin-top: 19px;">
+          <b-form-group  id="exampleInputGroup1"
+                    
+                    label-for="exampleInput1"
+                    description="Line url / Facebook page url ">
       <b-form-input required id="input-large" size="lg" v-model="contactUrl" type="text" placeholder="Line url / Facebook page url "></b-form-input>
+          </b-form-group>
+    </b-col>
+
+  </b-row>
+  <br>
+<b-row class="my-1">
+    <b-col sm="10">
+      <p>อัพโหลดรูปเพจของคุณ</p>
+              <input type="file" @change="onFileChange">
+
     </b-col>
   </b-row>
 <br>
@@ -24,10 +50,15 @@
   <b-button type="submit" style="background-color: #33C1C1; border: 0px; padding-left: 36px;
     padding-right: 36px;">สมัคร</b-button>
   
-
-<p>d</p>
+<br>
+<br>
+<br>
+<br>
 </div>
       </form>
+      </b-col>
+
+</b-row>
 
 </b-container>
 
@@ -45,7 +76,11 @@ import axios from 'axios';
 
     }
 },
-
+mounted() {
+  this.pagename = this.$store.state.agent.pagename
+  this.contactUrl = this.$store.state.agent.contactUrl
+  this.image = this.$store.state.agent.picture
+},
   methods: {
      onFileChange(e) {
       var files = e.target.files || e.dataTransfer.files;
@@ -70,7 +105,7 @@ import axios from 'axios';
  let data = {
           pagename: this.pagename,
           contactUrl: this.contactUrl,
-          name: this.$store.state.agent.username,
+          name: this.$store.state.agent.name,
           picture: this.image
           
         }
@@ -92,7 +127,7 @@ let data2 = {
         
         axios.patch('https://frozen-mesa-40722.herokuapp.com/agent/update', data)
           .then((res) => {
-            this.$router.push('/user/create')
+            // this.$router.push('/agent/create')
             console.log(res.data)
           })
           .catch(error => console.log(error))
@@ -122,5 +157,14 @@ border-top: 0px;
     border-right: 0px;
     border-left: 0px;
     border-radius: 0;
+}
+
+.form-control:focus {
+    color: #495057;
+    background-color: #fff;
+    border-color: #80bdff;
+    /* border-bottom: 2px; */
+    outline: 0;
+    box-shadow: 0px 1px 0px 0rem rgba(199, 199, 199, 0.25);
 }
 </style>

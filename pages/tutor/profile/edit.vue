@@ -179,7 +179,7 @@ if ( math2 === true ) {
 
                this.$store.dispatch('setUser', data2 )
               this.$store.dispatch('setProfile', true )
-
+this.$router.go(-1)
 
            }).catch((error) =>{ console.log(error) })
            

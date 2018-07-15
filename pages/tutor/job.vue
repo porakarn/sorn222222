@@ -4,11 +4,12 @@
 <b-container fluid>
 
    <br>
-
+            <p style="    text-align: center;
+" v-if="!course5" >คุณยังไม่มีงานที่โพสไว้</p>
  <div v-for="course in courses" >
 
 <b-row>
-  <b-col offset-lg="2" lg="8">
+   <b-col offset-lg="3" lg="6">
     <b-card @click="showModal(course)" style="   margin-bottom: 5px;   box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.1);
 " 
            > <b-row>  <b-col cols="10" style="    padding-right: 0px;
@@ -129,27 +130,54 @@ export default {
       job3: '',
       job4: '',
       isblank: '',
-      status2:''
-     
+      status2:'',
+      course5: false,
+     courses: {}
   
     }
   },
-  asyncData (context) {
-let suggest = {
+mounted() {
+
+
+
+  let suggest = {
       
-        tutorid: context.store.state.user._id
+        tutorid: this.$store.state.user._id
+  }
+        console.log(suggest)
+    axios.post('https://frozen-mesa-40722.herokuapp.com/job/tutorown', suggest)
+    .then((res) => { console.log(res.data)
+       this.courses= res.data
+               
+            })        
+
+
+    
+if (this.courses) {
+  this.course5 = true
+}
+
+      
+},
+
+
+
+//   asyncData (context) {
+// let suggest = {
+      
+//         tutorid: context.store.state.user._id
         
 
-      }
-      console.log(suggest)
-    return axios.post('https://frozen-mesa-40722.herokuapp.com/job/tutorown', suggest)
-    .then((res) => { console.log(res.data)
-      return { courses: res.data,
+//       }
+//       console.log(suggest)
+//     return axios.post('https://frozen-mesa-40722.herokuapp.com/job/tutorown', suggest)
+//     .then((res) => { console.log(res.data)
+//       return { courses: res.data,
                
-            }        
+//             }        
 
-    })
-  },
+//     })
+//   },
     methods: {
     deletejob(){
         let data = {

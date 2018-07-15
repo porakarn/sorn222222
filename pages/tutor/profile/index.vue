@@ -9,7 +9,7 @@
     <!-- <b-img  style="width: 90px; " rounded="circle" :src="$store.state.user.picture" /> -->
 
         </b-col>
-         <b-col cols="8" style="    padding-left: 2px;">
+         <b-col cols="8" style="        padding-left: 15px;">
 
 <b-row>
 <!-- <b-col cols="4" style="    padding-right: 0px;">
@@ -65,7 +65,7 @@
    </div></b-container>
    <br>
   <b-row> <b-col md="8" offset-md="2">
-         <p style="color: #484848; font-size: 17px;margin-bottom: 7px;font-weight: bold;">Porakarn Soonthornsittipong (22 ปี)</p>
+         <p style="color: #484848; font-size: 17px;margin-bottom: 7px;font-weight: bold;">{{name}}</p>
 
  <!-- <p style="margin-bottom: 0px; color:#484848;  margin-top: 17px; font-size: 19px">วิชาที่คุณสอน
 </p> -->
@@ -99,7 +99,9 @@ color: #484848; border:1px !important;">โปรไฟล์ของคุณ<
  </b-col></b-row>
 
   <b-row> <b-col md="6" offset-md="2">
-    <b-button @click="porakarn">รีวิว</b-button> 
+    <b-button style="color: #2b92ff;
+    background-color: #ffffff;
+    border-color: #ffffff;" @click="porakarn">รีวิว</b-button> 
     <br><br>
 
   <div v-for="review in reviews" >
@@ -143,7 +145,7 @@ color: #484848; border:1px !important;">โปรไฟล์ของคุณ<
   bottom: 44px; 
   background-color: white;
   height: 58px;">
-  <b-nav-item >ให้นักเรียนรีวิว</b-nav-item>
+  <b-nav-item  >   <nuxt-link to="/tutor/givelink"> ให้นักเรียนรีวิว </nuxt-link>  </b-nav-item>
  <b-nav-item @click="nextPage">งานของคุณ</b-nav-item>
  
 </b-nav>
@@ -166,7 +168,8 @@ export default {
     text2: '',
     text:'',
     subject:'',
-    reviews:''
+    reviews:'',
+    name:''
   
     }
   },
@@ -181,6 +184,9 @@ return
     //     this.phone = this.$store.state.user.phone,
     // this.profile = this.$store.state.user.profile,
     // this.subject = this.$store.state.user.subject
+  },
+  mounted() {
+    this.name = this.$store.state.user.name
   },
     computed: {
     isUserLoggedIn () {

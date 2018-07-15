@@ -119,10 +119,11 @@ border-top: 0px;
 .form-control:focus {
     color: #495057;
     background-color: #fff;
-    border-bottom: 0px;
     border-color: #80bdff;
+    /* border-bottom: 2px; */
     outline: 0;
-box-shadow: 1px 1px 0px 0rem rgba(0, 123, 255, .25);
+    box-shadow: 0px 1px 0px 0rem rgba(199, 199, 199, 0.25);
 }
+
 
 </style>

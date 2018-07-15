@@ -10,7 +10,7 @@
 
 <b-container fluid>
 <br><br>
-  <div> <div class="my-3">
+    <b-row> <b-col md="6" offset-md="3"> <div> <div class="my-3">
   <p style="float:right;  color: #8f9aa4;"  topleft          placement="placement"
 
  v-b-popover.hover="'07029 : อังกฤษ * เพิ่มเกรด \n - ช.1 คน ม.5 (สาธิตสวนสุนันทา) \n - บางบัวทอง ติดมบ.กฤษฎา นคร 11 ถ.บางกรวย-ไทรน้อย \n- อาทิตย์ 9.00-11.00 \n - 2 ชม.600 : fee 1,200'">
@@ -19,8 +19,7 @@
 </div>
           <form @submit.prevent="onCreate">
 
-              <b-row>
-  <b-col offset-lg="3" lg="6">
+       
 
     <h5 style="color: #8f9aa4;">วางงานของคุณที่นี่</h5>
     <b-form-textarea required id="textarea1"
@@ -37,9 +36,10 @@
     <br>
       <b-button type="submit" style="background-color: #33C1C1; border: 0px; padding-left: 36px;
     padding-right: 36px;">เรียบร้อย</b-button>
-  </b-col></b-row>    </form>
+   </form>
           
   </div>
+  </b-col></b-row>
 </b-container>
 </b-container>
 </template>
@@ -79,7 +79,8 @@ for (i = 0; i < job2.length; i++) {
 var str1 = job2[i] 
  var str2 = str1.replace('\n\n',"");
 
- 
+  var subject = []
+ var day = []
 
 if (str2.substr(str2.length - 1) === '\n'){
    str2 =  str2.slice(0,-1)
@@ -139,41 +140,55 @@ var sun2 = sun.some(el => str1.includes(el));
 
 
 if ( math2 === true ) {
-  this.subject = "คณิต"
-} else if ( eng2 === true ) {
-   this.subject = "ENG"
-}  else if ( science2 === true ) {
-   this.subject = "วิทย์"
-} else if ( chinese2 === true ) {
-   this.subject = "จีน"
-} else if ( japan2 === true ) {
-   this.subject = "ญี่ปุ่น"
-}  else if ( korea2 === true ) {
-   this.subject = "Korean"
-} else if ( thai2 === true ) {
-   this.subject = "ไทย"
-} else if ( social2 === true ) {
-   this.subject = "สังคม"
+  subject.push("คณิต")
+} 
+ if ( eng2 === true ) {
+   subject.push("ENG") 
+}  
+ if ( science2 === true ) {
+   subject.push("วิทย์")
+} 
+if ( chinese2 === true ) {
+   subject.push("จีน") 
+}
+ if ( japan2 === true ) {
+   subject.push("ญี่ปุ่น") 
+}  
+ if ( korea2 === true ) {
+   subject.push("Korean")  
+} 
+if ( thai2 === true ) {
+   subject.push("ไทย") 
+} 
+ if ( social2 === true ) {
+   subject.push("สังคม") 
 } 
  
 
 
 
 if ( mon2 === true ) {
-  this.day = "จันทร์"
-} else if ( tues2 === true ) {
-    this.day = "อังคาร"
-} else if ( wed2 === true ) {
-      this.day = "พุธ"
-} else if ( thu2 === true ) {
-      this.day = "พฤหัส"
-} else if ( fri2 === true ) {
-    this.day = "ศุกร์"
-} else if ( sat2 === true ) {
-    this.day = "เสาร์"
-} else if ( sun2 === true ) {
-    this.day = "อาทิตย์"
+  day.push("จันทร์")  
 } 
+if ( tues2 === true ) {
+    day.push("อังคาร")  
+} 
+ if ( wed2 === true ) {
+      day.push("พุธ") 
+} 
+ if ( thu2 === true ) {
+      day.push("พฤหัส")  
+}
+if ( fri2 === true ) {
+    day.push("ศุกร์")  
+} 
+if ( sat2 === true ) {
+    day.push("เสาร์")  
+} 
+ if ( sun2 === true ) {
+    day.push("อาทิตย์")  
+} 
+
 
 
 
@@ -181,9 +196,9 @@ if ( mon2 === true ) {
       
         job: str2,
         _creator: this.$store.state.agent._id,
-        day : this.day,
-        subject : this.subject,
-        subjectss : ['qwe', 'wer']
+         day : day,
+        subject : subject
+    
 
 
       }
@@ -197,7 +212,8 @@ if ( mon2 === true ) {
           .then((res) => { 
               
               console.log(res.data)
-              
+              day.length = 0
+              subject.length = 0
   
           })
           .catch(error => console.log(error))

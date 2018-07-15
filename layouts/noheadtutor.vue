@@ -4,7 +4,7 @@
 
     <nuxt/>
  
-     <b-container fluid class="bv-example-row"   style="box-shadow: rgba(0, 0, 0, 0.2) 0px 3px 8px 0px, rgba(0, 0, 0, 0) 0px 4px 5px 0px, rgba(0, 0, 0, 0.01) 0px 1px 10px 0px; position: fixed;     width: 100%;
+     <b-container fluid class="bv-example-row responsive "   style="box-shadow: rgba(0, 0, 0, 0.2) 0px 3px 8px 0px, rgba(0, 0, 0, 0) 0px 4px 5px 0px, rgba(0, 0, 0, 0.01) 0px 1px 10px 0px; position: fixed;     width: 100%;
 
   bottom: 0px; 
   background-color: white;
@@ -14,7 +14,7 @@
         
 <b-col cols="3" style="text-align: center;" >
 
-<nuxt-link to="/agent/seeall"><div><i style=" font-size: 28px; color: #7f8082;" class="fa fa-search " aria-hidden="true"></i>
+<nuxt-link class="porakarn" to="/user/seeall"><div><i style=" font-size: 28px; color: #7f8082;" class="fa fa-search nav-item " aria-hidden="true"></i>
 </div></nuxt-link>
 
 
@@ -23,9 +23,9 @@
 
 </b-col> 
 
-<b-col  cols="3" style="text-align: center;" >
+<b-col class="porakarn"  cols="3" style="text-align: center;" >
 
-<nuxt-link to="/agent/create"><div><i style="font-size: 31px; color: #7f8082;"  class="fa fa-plus-square-o  " aria-hidden="true"></i>
+<nuxt-link  to="/user/create"><div><i style="font-size: 31px; color: #7f8082;"  class="fa fa-plus-square-o nav-item " aria-hidden="true"></i>
 </div>
 </nuxt-link>
 
@@ -33,7 +33,7 @@
 
 </b-col>
 <b-col cols="3" style="text-align: center;" >
-<nuxt-link to="/agent/myjob"><div><i style=" font-size: 28px; color: #7f8082;"  class="fa fa-bell-o mx-auto" aria-hidden="true"></i>
+<nuxt-link  to="/user/findtutor"><div><i style=" font-size: 28px; color: #7f8082;"  class="fa fa-bell-o mx-auto nav-item " aria-hidden="true"></i>
 </div>
 </nuxt-link>
 
@@ -41,9 +41,9 @@
 </b-col>
 
 <b-col cols="3" style="text-align: center;"  >    
- <nuxt-link to="/agent/createprofile">
+ <nuxt-link  to="/tutor/profile">
 <div>
-  <i style=" font-size: 28px; color: #7f8082;"  class="fa fa-user-circle mx-auto" aria-hidden="true"></i>
+  <i style=" font-size: 28px; color: #7f8082;"  class="fa fa-user-circle mx-auto nav-item" aria-hidden="true"></i>
 </div>
 
 </nuxt-link>

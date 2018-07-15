@@ -5,14 +5,21 @@
 
 <br>
 
-  
+  <b-row>
+<b-col md="6" offset-md="3">
 <img style="    width: 100%;" src="https://www.sorns.co/wp-content/uploads/2018/01/sds.png" alt="">
         <br><br>
-       <a href="#" @click="doLogin" >
+       
+</b-col></b-row>
+
+
+  <b-row>
+<b-col md="6" offset-md="4">
+<a href="#" @click="doLogin" >
          
           <img style="width: 340px;" src="https://i.stack.imgur.com/oL5c2.png" alt="">
         </a>
-   
+</b-col></b-row>
   
  <br><br>
 <br><br><br>

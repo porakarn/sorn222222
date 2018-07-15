@@ -10,7 +10,7 @@
 
 <b-container fluid>
 <br><br>
-  <div>    <b-row> <b-col md="8" offset-md="2"> <div class="my-3">
+  <div>    <b-row> <b-col md="6" offset-md="3"> <div class="my-3">
   <p style="float:right;  color: #8f9aa4;"  topleft          placement="placement"
 
  v-b-popover.hover="'07029 : อังกฤษ * เพิ่มเกรด \n - ช.1 คน ม.5 (สาธิตสวนสุนันทา) \n - บางบัวทอง ติดมบ.กฤษฎา นคร 11 ถ.บางกรวย-ไทรน้อย \n- อาทิตย์ 9.00-11.00 \n - 2 ชม.600 : fee 1,200'">
@@ -199,8 +199,8 @@ if ( sat2 === true ) {
         job: str2,
         day : day,
         subject : subject,
-        tutorid: this.$store.state.user._id,
-        subjectss :  ["Green", "red"]
+        tutorid: this.$store.state.user._id
+       
 
       }
    console.log(createPost);

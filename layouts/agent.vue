@@ -40,7 +40,7 @@
         
 <b-col cols="3" style="text-align: center;" >
 
-<nuxt-link to="/user/seeall"><div><i style=" font-size: 28px; color: #7f8082;" class="fa fa-search " aria-hidden="true"></i>
+<nuxt-link to="/agent/seeall"><div><i style=" font-size: 28px; color: #7f8082;" class="fa fa-search " aria-hidden="true"></i>
 </div></nuxt-link>
 
 
@@ -59,7 +59,7 @@
 
 </b-col>
 <b-col cols="3" style="text-align: center;" >
-<nuxt-link to="/user/findtutor"><div><i style=" font-size: 28px; color: #7f8082;"  class="fa fa-bell-o mx-auto" aria-hidden="true"></i>
+<nuxt-link to="/agent/myjob"><div><i style=" font-size: 28px; color: #7f8082;"  class="fa fa-bell-o mx-auto" aria-hidden="true"></i>
 </div>
 </nuxt-link>
 
@@ -67,7 +67,7 @@
 </b-col>
 
 <b-col cols="3" style="text-align: center;"  >    
- <nuxt-link to="/agent/myjob">
+ <nuxt-link to="/agent/createprofile">
 <div>
   <i style=" font-size: 28px; color: #7f8082;"  class="fa fa-user-circle mx-auto" aria-hidden="true"></i>
 </div>

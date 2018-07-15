@@ -93,7 +93,7 @@
   <b-form-group   id="exampleInputGroup1"
                     
                     label-for="exampleInput1"
-                    description=" ตัวอย่าง ภาษาอังกฤษ GAT ENG">
+                    description="วัน เวลาเรียน">
         <b-form-input  class="formpor" id="exampleInput1" size="lg" 
                       type="text"
                       v-model="form.dayandtime"
@@ -105,7 +105,7 @@
         <b-form-group   id="exampleInputGroup1"
                     
                     label-for="exampleInput1"
-                    description=" ตัวอย่าง ภาษาอังกฤษ GAT ENG">
+                    description="สถานที่เรียน">
         <b-form-input  class="formpor" id="exampleInput1" size="lg" 
                       type="text"
                       v-model="form.location"
@@ -133,14 +133,14 @@
                       type="text"
                       v-model="form.tuitionfee"
                       required
-                      placeholder="ค่าสอน">
+                      placeholder="ค่าสอน ค่าแนะนำ">
         </b-form-input>
       </b-form-group>
 
        <b-form-group  id="exampleInputGroup1"
                     
                     label-for="exampleInput1"
-                    description=" ตัวอย่าง ภาษาอังกฤษ GAT ENG">
+                    description=" เช่น ขอติวเตอร์หญิง">
         <b-form-input id="exampleInput1" size="lg"  class="formpor"
                       type="text"
                       v-model="form.note"
@@ -267,54 +267,66 @@ var fri2 = fri.some(el => this.str5.includes(el));
 var sat2 = sat.some(el => this.str5.includes(el));
 var sun2 = sun.some(el => this.str5.includes(el));
 
-
-
+var subject = []
+ var day = []
 
 if ( math2 === true ) {
-  this.subject = "คณิต"
-} else if ( eng2 === true ) {
-   this.subject = "ENG"
-}  else if ( science2 === true ) {
-   this.subject = "วิทย์"
-} else if ( chinese2 === true ) {
-   this.subject = "จีน"
-} else if ( japan2 === true ) {
-   this.subject = "ญี่ปุ่น"
-}  else if ( korea2 === true ) {
-   this.subject = "Korean"
-} else if ( thai2 === true ) {
-   this.subject = "ไทย"
-} else if ( social2 === true ) {
-   this.subject = "สังคม"
+  subject.push("คณิต")
+} 
+ if ( eng2 === true ) {
+   subject.push("ENG") 
+}  
+ if ( science2 === true ) {
+   subject.push("วิทย์")
+} 
+if ( chinese2 === true ) {
+   subject.push("จีน") 
+}
+ if ( japan2 === true ) {
+   subject.push("ญี่ปุ่น") 
+}  
+ if ( korea2 === true ) {
+   subject.push("Korean")  
+} 
+if ( thai2 === true ) {
+   subject.push("ไทย") 
+} 
+ if ( social2 === true ) {
+   subject.push("สังคม") 
 } 
  
 
 
 
 if ( mon2 === true ) {
-  this.day = "จันทร์"
-} else if ( tues2 === true ) {
-    this.day = "อังคาร"
-} else if ( wed2 === true ) {
-      this.day = "พุธ"
-} else if ( thu2 === true ) {
-      this.day = "พฤหัส"
-} else if ( fri2 === true ) {
-    this.day = "ศุกร์"
-} else if ( sat2 === true ) {
-    this.day = "เสาร์"
-} else if ( sun2 === true ) {
-    this.day = "อาทิตย์"
+  day.push("จันทร์")  
 } 
-
+if ( tues2 === true ) {
+    day.push("อังคาร")  
+} 
+ if ( wed2 === true ) {
+      day.push("พุธ") 
+} 
+ if ( thu2 === true ) {
+      day.push("พฤหัส")  
+}
+if ( fri2 === true ) {
+    day.push("ศุกร์")  
+} 
+if ( sat2 === true ) {
+    day.push("เสาร์")  
+} 
+ if ( sun2 === true ) {
+    day.push("อาทิตย์")  
+} 
 
 
   let createPost = {
       
         job: this.str5,
         _creator: this.$store.state.agent._id,
-        day : this.day,
-        subject : this.subject,
+        day : day,
+        subject : subject,
 
       }
    console.log(createPost);
@@ -324,8 +336,20 @@ if ( mon2 === true ) {
           .then((res) => { 
               
               console.log(res.data)
-                    this.$refs.myModalRef.hide()
-
+                  
+   this.$refs.myModalRef.hide()
+     
+       this.form.email = ''
+       this.form.subject = ''
+        this.form.note = ''
+        this.form.tuitionfee = ''
+        this.form.school = ''
+       this.form.dayandtime = ''
+        this.form.location = ''
+        this.form.food = null
+        this.form.gender = null
+     
+      
   
           })
           .catch(error => console.log(error))
@@ -357,5 +381,14 @@ border-top: 0px;
 
 .btn-secondary:focus, .btn-secondary.focus {
     box-shadow: 0 0 0 0.2rem rgba(255, 255, 255, 0.5);
+}
+
+.form-control:focus {
+    color: #495057;
+    background-color: #fff;
+    border-color: #80bdff;
+    /* border-bottom: 2px; */
+    outline: 0;
+    box-shadow: 0px 1px 0px 0rem rgba(199, 199, 199, 0.25);
 }
 </style>

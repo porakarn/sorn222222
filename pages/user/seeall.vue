@@ -100,7 +100,7 @@
     <div v-for="course in courses" >
 
 <b-row>
-  <b-col offset-lg="2" lg="8">
+  <b-col offset-lg="3" lg="6">
     <b-card @click="showModal(course)" style="   margin-bottom: 5px; 
     box-shadow: rgba(146, 146, 146, 0.1) 0px 1px 3px 0px;
 " 
@@ -140,6 +140,7 @@
 
  <b-modal no-fade hide-header  hide-footer  centered ref="myModalRef" hide-footer title="Using Component Methods">
       <div class="d-block ">
+        <div v-if="profile2">
           <div style="white-space: pre-wrap;">{{job3}}</div>
 
       
@@ -151,6 +152,7 @@
                      :max-rows="6">
     </b-form-textarea>
     <p style="color: grey">  Copy</p>
+    
    <b-row>
              <b-col cols="9" >
      <b-button size="lg" style="  background-color: #33C1C1; border: 0px; padding-left: 66px;
@@ -162,6 +164,15 @@
                </b-col>         
 
          </b-row>
+           </div>
+
+           <div v-if="!profile2">
+      <h5 style="margin-bottom: 25px;"> กรุณาสร้างโปรไฟล์ติวเตอร์ </h5>
+      <p> หลังจากนั้นคุณสามารถส่งโปรไฟล์ ที่คุณกรอกไว้ ส่งให้เจ้าของงาน หรือ สามารถติดต่อเจ้าของงานได้โดยตรงเลยครับ</p>
+          <br>
+        <nuxt-link to="/tutor/profile/edit">    <b-button  style="  background-color: #33C1C1; border: 0px; padding-left: 86px;
+    padding-right: 86px;">สร้างโปรไฟล์</b-button>  </nuxt-link> <br>
+           </div>
       </div>
     </b-modal>
 
@@ -235,7 +246,9 @@ export default {
       checkedsubjects: [],
       courses: null,
       job3: '',
-      isblank: ''
+      isblank: '',
+      text:'',
+      profile2: false,
      
   
     }
@@ -296,8 +309,12 @@ let createPost = {
     showModal (item) {
       this.$refs.myModalRef.show(item) 
       this.job3 = item.job
+      this.text = 'วิชาที่สอน: '+ this.$store.state.user.subject + this.$store.state.user.profile
       console.log(item.job  );
-      
+
+      if (this.$store.state.user.profile) {
+        this.profile2 = true
+      }
 
     
     
@@ -307,7 +324,7 @@ let createPost = {
       this.$refs.myModalRef4.hide()
     }
   },
-        layout: 'nohead'
+        layout: 'noheadtutor'
 }
 </script>
 
