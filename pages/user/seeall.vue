@@ -2,7 +2,7 @@
 <b-container fluid style="padding:0px">
 
    <b-navbar  style="    padding-bottom: 12px;
-    padding-top: 12px;  background-color: #ff547fd9!important; box-shadow: 0px 2px 3px -1px rgba(126, 126, 126, 0.2), 0px 4px 5px 0px rgba(0, 0, 0, 0), 0px 1px 10px 0px #00000003;"toggleable variant="light">
+    padding-top: 12px;  background-color: #ff4d79e6!important; box-shadow: 0px 2px 3px -1px rgba(126, 126, 126, 0.2), 0px 4px 5px 0px rgba(0, 0, 0, 0), 0px 1px 10px 0px #00000003;"toggleable variant="light">
         <b-navbar-toggle style="border-color: rgba(0, 0, 0, 0);    padding-left: 0px;
     padding-right: 0px;" target="nav_text_collapse"></b-navbar-toggle>
         <!-- <b-navbar-brand>BootstrapVue</b-navbar-brand> -->
@@ -101,8 +101,7 @@
 
 
     <b-card @click="showModal(course)" style="   margin-bottom: 5px; 
-    box-shadow: rgba(146, 146, 146, 0.1) 0px 1px 4px 0px;
-
+       box-shadow: rgba(146, 146, 146, 0.1) 0px 1px 3px 0px;
 " 
            > <b-row>  <b-col cols="10" style="    padding-right: 0px;
 ">
@@ -329,7 +328,10 @@ let createPost = {
         margin-left: 7px;
          color: #ffffff;
     text-decoration: none;
-    background-color: #ffb9cb;
+    /* background-color: #ffb9cb; */
+        background-color: #ff4484c2;
+
+    
     padding: 2px;
     padding-left: 7px;
     padding-right: 7px;
