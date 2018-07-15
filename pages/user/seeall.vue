@@ -100,7 +100,8 @@
     <div v-for="course in courses" >
 
 
-    <b-card @click="showModal(course)" style="   margin-bottom: 5px;   box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.1);
+    <b-card @click="showModal(course)" style="   margin-bottom: 5px;  box-shadow: rgba(119, 118, 118, 0.1) 0px 1px 1px 0px
+;
 " 
            > <b-row>  <b-col cols="10" style="    padding-right: 0px;
 ">
