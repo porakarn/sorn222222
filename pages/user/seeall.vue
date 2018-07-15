@@ -112,6 +112,7 @@
                 class="card-link"   >{{course.day.toString().split(',').join(' ')}}</b-link></div></b-col> 
                         <b-col style="    padding-left: 10px;
     padding-right: 3px;" cols="2">{{course.status}}</b-col> </b-row>
+  <p style="color:grey;">{{ displayTimestamp(course.createdAt) }}  </p>  
 
     </b-card>
    
@@ -196,6 +197,8 @@
 
 </template>
 <script>
+import moment from 'moment'
+
 import axios from 'axios';
 
 export default {
@@ -239,6 +242,9 @@ export default {
     })
   },
     methods: {
+        displayTimestamp(t){
+                return moment(t).fromNow()
+            },
      
 
 

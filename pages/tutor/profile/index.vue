@@ -113,7 +113,8 @@ color: #484848; border:1px !important;">โปรไฟล์ของคุณ<
     border-radius: 14px;
  ">{{review.review_write}}  </div>
 
-     <p style="     margin-top: 6px;   font-size: 17px;">{{review.studentid.name.split(" ").slice(0, -1).join(" ")}} <i style="color: #F8E217;" class="fa fa-star" aria-hidden="true"></i> {{ review.rating}} </p>
+     <p style="     margin-top: 6px;   font-size: 17px;">{{review.studentid.name.split(" ").slice(0, -1).join(" ")}} <i style="color: #F8E217;" class="fa fa-star" aria-hidden="true"></i> {{ review.rating}}    <p style="color:grey;">{{ displayTimestamp(course.createdAt) }}  </p>  
+</p>
 
 
 
@@ -153,6 +154,8 @@ color: #484848; border:1px !important;">โปรไฟล์ของคุณ<
 
 <script>
 import axios from 'axios';
+import moment from 'moment'
+
 
 export default {
   
@@ -197,6 +200,10 @@ return
 //   }
 //   ,
     methods: {
+       displayTimestamp(t){
+                return moment(t).fromNow()
+            },
+
       porakarn(){
     
     var data = {

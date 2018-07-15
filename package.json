@@ -16,6 +16,7 @@
     "bootstrap": "^4.1.1",
     "bootstrap-vue": "^1.0.2",
     "font-awesome": "^4.7.0",
+    "moment": "^2.22.2",
     "nuxt": "^1.0.0",
     "nuxt-fontawesome": "^0.3.0",
     "vue-clipboard2": "^0.2.0",
