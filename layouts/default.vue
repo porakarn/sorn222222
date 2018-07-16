@@ -9,14 +9,16 @@
          <!-- <b-navbar-brand style="    color: rgb(51, 193, 193);
     font-size: 28px;
     font-weight: 500;margin-left: 55px;" href="#">Sorns</b-navbar-brand> -->
-   <b-button   style="    font-size: 22px;
-     color: rgb(57, 204, 168);
-    font-weight: 600;
+   <b-button   style="       font-size: 21px;
+    color: rgb(57, 204, 168);
+    font-weight: 500;
     background-color: #effdf3;
     border-color: #6c757d00;
     border-radius: 18px;
-        padding-top: 2px;
+    padding-top: 0px;
     padding-bottom: 3px;
+    padding-left: 4px;
+    padding-right: 4px;
 "> Sorns</b-button>
         <b-collapse is-nav id="nav_text_collapse">
             <b-navbar-nav class="ml-auto">
@@ -26,8 +28,8 @@
                 <b-nav-item href="#">โปรไฟล์ของคุณ</b-nav-item> -->
             <b-nav-item  style=" color:#345d46;   padding-right: 65px;">   <nuxt-link class="nav-item" style="color:#345d46; " to="/user/seeall">  <i class="fa fa-search " aria-hidden="true"></i>  Search  </nuxt-link></b-nav-item>
              <b-nav-item  style="    padding-right: 65px;">  <nuxt-link class="nav-item" style="color:#345d46; " to="/user/create">  <i class="fa fa-pencil" aria-hidden="true"></i> Add New  </nuxt-link></b-nav-item>
-             <b-nav-item  style="    padding-right: 65px;"><nuxt-link class="nav-item" style="color:#345d46; " to="/agent/myjob"> <i class="fa fa-book" aria-hidden="true"></i> My Jobs </nuxt-link></b-nav-item>
-             <b-nav-item style="    padding-right: 65px;"><nuxt-link class="nav-item" style="color:#345d46; " to="/tutor/profile/index"><i class="fa fa-user-circle" aria-hidden="true"></i> Profile </nuxt-link></b-nav-item>
+             <b-nav-item  style="    padding-right: 65px;"><nuxt-link class="nav-item" style="color:#345d46; " to="/user/findtutor"> <i class="fa fa-book" aria-hidden="true"></i> All Tutor </nuxt-link></b-nav-item>
+             <b-nav-item style="    padding-right: 65px;"><nuxt-link class="nav-item" style="color:#345d46; " to="/tutor/profile"><i class="fa fa-user-circle" aria-hidden="true"></i> Profile </nuxt-link></b-nav-item>
               <b-nav-item  @click="logout" style="    padding-right: 100px;"><nuxt-link  style="color:#345d46; " to="/choose"><i class="fa fa-sign-out" aria-hidden="true"></i> Logout </nuxt-link></b-nav-item>
 
                 
