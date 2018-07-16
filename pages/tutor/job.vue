@@ -3,9 +3,13 @@
 
 <b-container fluid>
 
-   <br>
+   <br> 
             <p style="    text-align: center;
 " v-if="!course5" >คุณยังไม่มีงานที่โพสไว้</p>
+
+        <p style=" color:#86a5ca ; text-align: center;
+" ><i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+ งานที่คุณโพสไว้</p>
  <div v-for="course in courses" >
 
 <b-row>
@@ -98,6 +102,9 @@ Save </b-button>
                  
 
          </b-row>
+         <div style="color: grey" class="loading-page" v-if="loading">
+    Loading...
+  </div>
       </div>
     </b-modal>
 
@@ -108,6 +115,9 @@ Save </b-button>
      <b-col cols="6" >
      <b-button  @click="deletejob" style="  background-color: #33C1C1; border: 0px; padding-left: 46px;
     padding-right: 46px;">ลบ</b-button>  
+     <div style="color: grey" class="loading-page" v-if="loading">
+    Loading...
+  </div>
     
              </b-col>
             
@@ -126,6 +136,7 @@ import axios from 'axios';
 export default {
    data () {
     return {
+      loading: false,
       course: null,
       job3: '',
       job4: '',
@@ -137,7 +148,7 @@ export default {
     }
   },
 mounted() {
-
+    this.loading = true
 
 
   let suggest = {
@@ -157,7 +168,8 @@ if (this.courses) {
   this.course5 = true
 }
 
-      
+          this.loading = false
+  
 },
 
 
@@ -180,6 +192,8 @@ if (this.courses) {
 //   },
     methods: {
     deletejob(){
+                    this.loading = true
+
         let data = {
         _id: this.job3,
 
@@ -194,6 +208,8 @@ axios.post('https://frozen-mesa-40722.herokuapp.com/job/delete', data)
     .then((res) => { console.log(res.data)
       this.courses = res.data
                     this.$refs.myModalRef2.hide()
+                                  this.loading = false
+
 
             })
     
@@ -203,6 +219,8 @@ axios.post('https://frozen-mesa-40722.herokuapp.com/job/delete', data)
     },
 
    editjob(){
+                   this.loading = true
+
    let edit = {
         _id: this.job3,
         job: this.job4
@@ -220,7 +238,8 @@ axios.patch('https://frozen-mesa-40722.herokuapp.com/job/update', edit)
      axios.post('https://frozen-mesa-40722.herokuapp.com/job/tutorown', suggest)
     .then((res) => { console.log(res.data)
       this.courses = res.data
-              
+    this.loading = false
+
             })
     
     })
@@ -229,6 +248,7 @@ axios.patch('https://frozen-mesa-40722.herokuapp.com/job/update', edit)
 
 
       closejob(){
+        this.loading = true
         let close = {
         status: 'ปิด',
         _id: this.job3
@@ -247,10 +267,12 @@ let suggest = {
     .then((res) => { console.log(res.data)
       this.courses = res.data
                this.hideModal()
+               this.loading = false
             })
       })
       },
        openjob(){
+         this.loading = true
         let close = {
         status: 'ว่าง',
         _id: this.job3
@@ -269,6 +291,7 @@ let suggest = {
     .then((res) => { console.log(res.data)
       this.courses = res.data
                this.hideModal()
+               this.loading = false
             }        
 
     )

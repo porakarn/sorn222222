@@ -254,4 +254,8 @@ if ( sat2 === true ) {
     border-color: #e9ecef #e9ecef #dee2e6;
     border-bottom: 2px solid !important;
 }
+
+button{
+       box-shadow: 0 1px 1px 1px rgba(111, 111, 111, 0.23);
+}
 </style>

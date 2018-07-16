@@ -22,8 +22,14 @@
     </b-form-textarea>
 
     <br>
-   <b-button   v-clipboard:copy="thingToCopy"  size="lg"  style="background-color: #33C1C1; border: 0px; padding-left: 36px;
-    padding-right: 36px;">copy</b-button>
+   <b-button @click=" clickcopy"  v-clipboard:copy="thingToCopy"  size="lg"  style="background-color: #33C1C1; border: 0px; padding-left: 36px;
+    padding-right: 36px;"><i class="fa fa-clone" aria-hidden="true"></i>
+  Copy</b-button>
+
+      <div class="loading-page" v-if="loading2">
+    <p style="color: #54c686;margin-top: 10px; font-size:19px;"><i class="fa fa-clone" aria-hidden="true"></i></i>
+ คุณได้ทำการ copy แล้ว สามารถเอาไป paste ในแชทของนักเรียน เพื่อให้นักเรียนรีวิวคุณได้เลย</p>
+  </div>
       
     <br><br><br><br>
 </b-container>
@@ -39,7 +45,7 @@ export default {
       data () {
     return {
           
-
+      loading2: false,
     //    userid: 's' ,
        text: '' ,
        thingToCopy: `A string that's not all that long or important. Sorry to disappoint.`
@@ -54,7 +60,9 @@ export default {
   },
 
   methods: {
-     
+     clickcopy(){
+          this.loading2 = true
+     }
   }
 
 
@@ -93,5 +101,8 @@ border-top: 0px;
     box-shadow: 0px 1px 0px 0rem rgba(199, 199, 199, 0.25);
 }
 
-
+button{
+      margin-top: 9px; 
+       box-shadow: 0 1px 1px 1px rgba(111, 111, 111, 0.23);
+}
 </style>

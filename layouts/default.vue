@@ -6,9 +6,14 @@
         <b-navbar-toggle style="border-color: rgba(0, 0, 0, 0);    padding-left: 0px;
     padding-right: 0px;" target="nav_text_collapse"></b-navbar-toggle>
         <!-- <b-navbar-brand>BootstrapVue</b-navbar-brand> -->
+          <b-navbar-brand style="    color: rgb(51, 193, 193);
+    font-size: 28px;
+    font-weight: 500;" href="#">Sorns</b-navbar-brand>
+
         <b-collapse is-nav id="nav_text_collapse">
             <b-navbar-nav>
-                <b-nav-text>Navbar text</b-nav-text>
+                <b-nav-item href="#">Home</b-nav-item>
+                <b-nav-item href="#">Link</b-nav-item>
                 <nuxt-link to="/user/user">Users</nuxt-link>
                 <nuxt-link to="/profile">Profile</nuxt-link>
                 <nuxt-link to="/tutor/job">job</nuxt-link>

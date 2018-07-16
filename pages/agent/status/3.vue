@@ -1,5 +1,6 @@
 <template>
 <b-container fluid style="padding: 0px;">
+    <div class="responsive" >
 <b-nav fill tabs>
   <b-nav-item  > <nuxt-link to="/agent/myjob">ทั้งหมด</nuxt-link></b-nav-item>
  <b-nav-item >  <nuxt-link to="/agent/status/1">ว่าง </nuxt-link></b-nav-item>
@@ -10,7 +11,7 @@
 
 
  
-</b-nav>
+</b-nav></div>
 <b-container fluid>
 
    <br>
@@ -363,8 +364,7 @@ axios.post('https://frozen-mesa-40722.herokuapp.com/agent/checkstatus', suggest)
       this.$refs.myModalRef2.hide()
     }
   },
-       layout: 'agent'
-
+   layout: 'agentwithtab'
 }
 </script>
 
@@ -415,5 +415,16 @@ border: 1px solid rgba(193, 193, 193, 0.12);
 
 .btn-secondary:not(:disabled):not(.disabled):active:focus, .btn-secondary:not(:disabled):not(.disabled).active:focus, .show > .btn-secondary.dropdown-toggle:focus {
     box-shadow: 0 0 0 0.2rem rgba(255, 255, 255, 0.5);
+}
+
+.responsive {
+  display: none;
+}
+
+/*show for small screens */
+@media screen and (max-width: 1023px) { /* I've given 1023px but you can change to proper width */
+    .responsive {
+        display: block;
+    }
 }
 </style>

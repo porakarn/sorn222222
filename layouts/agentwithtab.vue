@@ -29,6 +29,23 @@
             </b-navbar-nav>
         </b-collapse>
     </b-navbar>
+<b-row>
+<b-col  md="6" offset-md="3">
+
+<b-nav fill tabs>
+  <b-nav-item class="nav-item" > <nuxt-link class="nav-item" to="/agent/myjob">ทั้งหมด</nuxt-link></b-nav-item>
+ <b-nav-item class="nav-item" >  <nuxt-link class="nav-item" to="/agent/status/1">ว่าง </nuxt-link></b-nav-item>
+  <b-nav-item class="nav-item" > <nuxt-link class="nav-item" to="/agent/status/2">รอจ่ายเงิน</nuxt-link></b-nav-item>
+    <b-nav-item class="nav-item" ><nuxt-link class="nav-item" to="/agent/status/3">ปิดแล้ว</nuxt-link></b-nav-item>
+
+
+ 
+</b-nav>
+</b-col>
+
+</b-row>
+
+
 </div>
     <nuxt/>
    
@@ -115,6 +132,11 @@ html
 .nav-item:active,
 .nav-item.nuxt-link-active {
   color: #0baa8a!important;
+  border-bottom: 2px solid;
+    border-bottom-color: #82d9d9;
 }
+
+
+
 
 </style>
