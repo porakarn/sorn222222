@@ -6,9 +6,16 @@
         <b-navbar-toggle style="border-color: rgba(0, 0, 0, 0);    padding-left: 0px;
     padding-right: 0px;" target="nav_text_collapse"></b-navbar-toggle>
         <!-- <b-navbar-brand>BootstrapVue</b-navbar-brand> -->
-         <b-navbar-brand style="    color: rgb(51, 193, 193);
+         <!-- <b-navbar-brand style="    color: rgb(51, 193, 193);
     font-size: 20px;
-    font-weight: 500;margin-left: 55px;" href="#">Sorns</b-navbar-brand>
+    font-weight: 500;margin-left: 55px;" href="#">Sorns</b-navbar-brand> -->
+      <b-button   style="font-size: 18px; 
+     color: rgb(57, 204, 168);
+    font-weight: 600;
+    background-color: #effdf3;
+    border-color: #6c757d00;
+    border-radius: 18px;
+"> Sorns</b-button>
         <b-collapse is-nav id="nav_text_collapse">
             <b-navbar-nav class="ml-auto">
                  <!-- <b-nav-item href="#">ค้นหางาน</b-nav-item>
