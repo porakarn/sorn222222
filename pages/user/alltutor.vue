@@ -1,4 +1,3 @@
-
 <template>
   <b-container>
 <br>
@@ -53,3 +52,4 @@ border: 1px solid rgba(193, 193, 193, 0.12);
     border-radius: 6px;
 }
 </style>
+

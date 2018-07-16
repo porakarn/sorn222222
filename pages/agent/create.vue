@@ -230,7 +230,7 @@ if ( sat2 === true ) {
         this.$nuxt.$loading.finish()
           this.loading = false
                this.loading2 = true
-
+               this.job = ''
           })
           .catch(error => console.log(error))
     }

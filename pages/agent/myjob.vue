@@ -15,7 +15,9 @@
 <b-container fluid>
 
    <br>
-
+<p style=" color:#86a5ca ; text-align: center;
+" >
+ งานของคุณทั้งหมด</p>
  <div v-for="course in courses" >
 <b-row>
   <b-col offset-lg="3" lg="6">
@@ -167,7 +169,7 @@ Save </b-button>
             
              </b-row>
   </b-modal>
- 
+ <br> <br> <br>
 </b-container>
 
 

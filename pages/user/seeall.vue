@@ -1,7 +1,12 @@
 <template>
-<b-container fluid style="padding:0px">
-
-   <b-navbar  style="    padding-bottom: 12px;
+<b-container fluid style="padding:0px;">
+  <!-- <b-nav tabs>
+  <b-nav-item>All</b-nav-item>
+    <b-nav-item>ว่าง</b-nav-item>
+  <b-nav-item>รอจ่ายเงิน</b-nav-item>
+  <b-nav-item>ปิดแล้ว</b-nav-item>
+</b-nav> -->
+<b-navbar  style="    padding-bottom: 12px;
     padding-top: 12px;  background-color:#cdf4d7!important; box-shadow: 0px 2px 3px -1px rgba(126, 126, 126, 0.2), 0px 4px 5px 0px rgba(0, 0, 0, 0), 0px 1px 10px 0px #00000003;"toggleable variant="light">
         <b-navbar-toggle style="border-color: rgba(0, 0, 0, 0);    padding-left: 0px;
     padding-right: 0px;" target="nav_text_collapse"></b-navbar-toggle>
@@ -53,6 +58,7 @@
 
 
 
+
 <b-nav fill tabs >
   <b-nav-item  class="responsive"  style="border-bottom: 2px solid;
     border-bottom-color: #82d9d9;
@@ -60,9 +66,7 @@
  <b-nav-item class="responsive"  @click="nextPage">งานแนะนำ</b-nav-item>
  
 </b-nav>
-
-<b-container >
-  <b-modal no-fade hide-header  hide-footer ref="myModalRef4"  id="modal1" >
+ <b-modal no-fade hide-header  hide-footer ref="myModalRef4"  id="modal1" >
 
 <div>
   <p style="font-size:20px;"> เลือกวิชาที่อยากสอน <i style=" font-size: 20px; color: #667a6b;" class="fa fa-search nav-item " aria-hidden="true"></i></p>
@@ -111,13 +115,9 @@
   </b-modal>
 <br> 
 
+<b-container fluid> 
 
-  <!-- <div>
-    <b-form-input size="lg" v-model="text1"
-                  type="text"
-                  placeholder="Search วิชา วันเวลา สถานที่"></b-form-input>
-  </div><br> -->
-<b-row class="responsive2">
+  <b-row class="responsive2">
  <b-col offset-lg="3" lg="6">
    <div style="text-align: center;">
  <b-button v-b-modal.modal1   style="font-size: 17px; color: #667a6b; 
@@ -133,11 +133,11 @@
    </div> <br>
  </b-col></b-row>
 
+   <div v-for="course in courses" >
 
-    <div v-for="course in courses" >
 
-<b-row>
-  <b-col offset-lg="3" lg="6">
+   <b-row>
+   <b-col offset-lg="3" lg="6">
     <b-card @click="showModal(course)" style="   margin-bottom: 5px; 
     box-shadow: rgba(146, 146, 146, 0.1) 0px 1px 3px 0px;
 " 
@@ -169,12 +169,16 @@
     
    
 
+    
+   
+   
+
+
+
 
 
 
 </div>
-<br><br><br>
-
  <b-modal no-fade hide-header  hide-footer  centered ref="myModalRef" hide-footer title="Using Component Methods">
       <div class="d-block ">
         <div v-if="profile2">
@@ -212,6 +216,26 @@
            </div>
       </div>
     </b-modal>
+
+ <!-- <b-modal hide-header  hide-footer  centered ref="myModalRef" hide-footer title="Using Component Methods">
+      <div class="d-block ">
+          <div style="white-space: pre-wrap;">{{job3}}</div>
+
+      <br>
+         
+   <b-row>
+             <b-col cols="9" >
+     <b-button size="lg" style="  background-color: #33C1C1; border: 0px; padding-left: 66px;
+    padding-right: 66px;">ติดต่อ</b-button>  
+             </b-col>
+               <b-col cols="3">
+      <b-img style="border-radius: 5px" width="50px" height="50px" fluid src="https://picsum.photos/250/250/?image=54" alt="Thumbnail" />
+
+               </b-col>         
+
+         </b-row>
+      </div>
+    </b-modal> -->
 
      <!-- <b-modal hide-header  hide-footer id="modal-center" centered title="Bootstrap-Vue">
  <p style=" color:#2f2f2f" class="card-text">A123 IELTS ขอพี่ จุฬา
@@ -251,18 +275,18 @@
 
 </b-container>
 
-</b-container >
+</b-container fluid>
 
 </template>
 <script>
-import moment from 'moment'
-
 import axios from 'axios';
-
+import moment from 'moment'
 export default {
    data () {
     return {
-      loading: false,
+  
+     
+ loading: false,
       status: 'not_accepted',
        selected: [], // Array reference
       options: [
@@ -288,12 +312,45 @@ export default {
       text:'',
       profile2: false,
      
+
   
     }
   },
+// mounted() {
+  
 
-  asyncData () {
+     
 
+      
+//     return axios.get('https://frozen-mesa-40722.herokuapp.com/job/all')
+//     .then((res) => { 
+//       console.log(res.data)
+//      this.courses = res.data
+               
+//             })        
+
+    
+  
+
+
+// },
+
+
+
+  //  fetch ({ context, params }) {
+  //   return axios.get('https://frozen-mesa-40722.herokuapp.com/job/all')
+  //   .then((res) => {
+  //     console.log(context.store.state.user.tag);
+      
+
+  //   })
+  // },
+
+  asyncData (context) {
+
+    
+      console.log(context);
+      
     return axios.get('https://frozen-mesa-40722.herokuapp.com/job/all')
     .then((res) => { console.log(res.data)
       return { courses: res.data,
@@ -301,9 +358,13 @@ export default {
             }        
 
     })
+  
+
+
   },
+
     methods: {
-       logout(){
+logout(){
   this.$store.dispatch('setToken', null)
               this.$store.dispatch('setAgent', null)
 
@@ -312,11 +373,11 @@ export default {
      this.$router.push('/')
 
       },
-        displayTimestamp(t){
+
+      displayTimestamp(t){
                 return moment(t).locale('th').fromNow()
             },
      
-
 
         sendout(){
 this.loading = true
@@ -344,7 +405,7 @@ let createPost = {
               
               console.log(res.data)
               this.courses = res.data
-             this.hideModal ()
+             this.$refs.myModalRef4.hide()
              this.loading = false
                this.$nuxt.$loading.finish()
 
@@ -352,16 +413,20 @@ let createPost = {
           .catch(error => console.log(error))
       
     },
+// 
 
-      nextPage(){
+
+  nextPage(){
                     this.$router.push('/user/suggest')
 
       },
+
+
     showModal (item) {
       this.$refs.myModalRef.show(item) 
       this.job3 = item.job
-      this.text = 'วิชาที่สอน: '+ this.$store.state.user.subject + this.$store.state.user.profile
       console.log(item.job  );
+            this.text = 'วิชาที่สอน: '+ this.$store.state.user.subject + this.$store.state.user.profile
 
       if (this.$store.state.user.profile) {
         this.profile2 = true
@@ -372,10 +437,9 @@ let createPost = {
     },
     hideModal () {
       this.$refs.myModalRef.hide()
-      this.$refs.myModalRef4.hide()
     }
   },
-        layout: 'noheadtutor'
+    layout: 'nohead'
 }
 </script>
 
@@ -418,44 +482,6 @@ border: 1px solid rgba(193, 193, 193, 0.12);
     border-radius: 6px;
 }
 
-.nav-link:focus {
-    border-color: #e9ecef00;
-    
-}
-
-.modal-dialog modal-md{
-    position: relative  !important;
-    width: auto  !important;
-    
-    margin: 0.0rem !important;
-    pointer-events: none  !important;
-        margin-top: 0px  !important;
-    margin-left: 0px  !important;
-    margin-right: 0px  !important;
-}
-
-.checkmark {
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 25px;
-    width: 25px;
-    background-color: #eee;
-    border : 2px solid blue;
-    border-radius : 5px
-}
-
-
-label{
-  padding-left: 4px;
-  font-size: 18px;
-  margin-top: -2px;
-}
-
-.btn-secondary:focus, .btn-secondary.focus {
-    box-shadow: 0 0 0 0.2rem rgba(108, 117, 125, 0);
-}
-
 .responsive {
   display: none;
 }
@@ -473,5 +499,4 @@ label{
   display: none;
 }
 }
-
 </style>

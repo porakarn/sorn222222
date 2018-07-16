@@ -37,6 +37,18 @@
     </b-col>
 
   </b-row>
+
+  <b-row class="my-1">
+    <b-col >
+      <b-form-group  id="exampleInputGroup1"
+                    
+                    label-for="exampleInput1"
+                    description="Contact เบอร์ติดต่อ และ line">
+      <b-form-input required id="input-large" size="lg" v-model="contact" type="text" placeholder="Contact"></b-form-input>
+    
+      </b-form-group>
+    </b-col>
+  </b-row>
   <br>
 <b-row class="my-1">
     <b-col sm="10">
@@ -81,7 +93,8 @@ import axios from 'axios';
         contactUrl: '',
         image:null,
         loading: false,
-        loading2: false
+        loading2: false,
+        contact: ''
 
     }
 },
@@ -89,6 +102,7 @@ mounted() {
   this.pagename = this.$store.state.agent.pagename
   this.contactUrl = this.$store.state.agent.contactUrl
   this.image = this.$store.state.agent.picture
+  this.contact = this.$store.state.agent.contact
 },
   methods: {
      onFileChange(e) {
@@ -116,7 +130,8 @@ mounted() {
           pagename: this.pagename,
           contactUrl: this.contactUrl,
           name: this.$store.state.agent.name,
-          picture: this.image
+          picture: this.image,
+          contact: this.contact
           
         }
 
@@ -125,7 +140,9 @@ let data2 = {
           contactUrl: this.contactUrl,
           name: this.$store.state.agent.name,
           picture: this.image,
-          _id: this.$store.state.agent._id
+          _id: this.$store.state.agent._id,
+         contact: this.contact
+
         }
 
          this.$store.dispatch('setAgent', data2)
