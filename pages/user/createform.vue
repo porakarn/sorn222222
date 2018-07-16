@@ -338,7 +338,10 @@ if ( sat2 === true ) {
         job: this.str5,
         day : day,
         subject : subject,
-        tutorid: this.$store.state.user._id
+        tutorid: this.$store.state.user._id,
+        picture: this.$store.state.user.picture,
+        contact: this.$store.state.user.phone,
+        creator_name : this.$store.state.user.name
 
       }
    console.log(createPost);
