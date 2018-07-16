@@ -6,14 +6,31 @@
         <b-navbar-toggle style="border-color: rgba(0, 0, 0, 0);    padding-left: 0px;
     padding-right: 0px;" target="nav_text_collapse"></b-navbar-toggle>
         <!-- <b-navbar-brand>BootstrapVue</b-navbar-brand> -->
-          <b-button v-b-modal.modal1  style="font-size: 17px; color: #667a6b;
+        <b-navbar-brand class="responsive2" style="       color: rgb(51, 193, 193);
+    font-size: 28px;
+    font-weight: 500;
+    background-color: #ecfcec;
+    margin-left: 55px;
+    border-radius: 19px;
+    padding-right: 7px;
+    padding-left: 7px;
+    padding-top: 0px;
+    padding-bottom: 0px;" href="#">Sorns</b-navbar-brand>
+        
+          <b-button v-b-modal.modal1  class="responsive" style="font-size: 17px; color: #667a6b; float:right;
     background-color: #effdf3;
     border-color: #6c757d00;
     border-radius: 18px;
 "><i style=" font-size: 20px; color: #667a6b;" class="fa fa-search nav-item " aria-hidden="true"></i> ลองค้นหางานดูสิ</b-button>
         <b-collapse is-nav id="nav_text_collapse">
-            <b-navbar-nav>
-                <b-nav-text>Navbar text</b-nav-text>
+            <b-navbar-nav class="ml-auto">
+               <b-nav-item  style=" color:#345d46;   padding-right: 65px;">   <nuxt-link class="nav-item" style="color:#345d46; " to="/user/seeall">  <i class="fa fa-search " aria-hidden="true"></i>  Search  </nuxt-link></b-nav-item>
+             <b-nav-item  style="    padding-right: 65px;">  <nuxt-link class="nav-item" style="color:#345d46; " to="/user/create">  <i class="fa fa-pencil" aria-hidden="true"></i> Add New  </nuxt-link></b-nav-item>
+             <b-nav-item  style="    padding-right: 65px;"><nuxt-link class="nav-item" style="color:#345d46; " to="/user/alltutor"> <i class="fa fa-book" aria-hidden="true"></i> All Tutor </nuxt-link></b-nav-item>
+             <b-nav-item style="    padding-right: 65px;"><nuxt-link class="nav-item" style="color:#345d46; " to="/tutor/profile"><i class="fa fa-user-circle" aria-hidden="true"></i> Profile </nuxt-link></b-nav-item>
+              <b-nav-item  @click="logout" style="    padding-right: 100px;"><nuxt-link  style="color:#345d46; " to="/tutor/createprofile"><i class="fa fa-sign-out" aria-hidden="true"></i> Logout </nuxt-link></b-nav-item>
+
+                <!-- <b-nav-text>Navbar text</b-nav-text>
                 <nuxt-link to="/user/user">Users</nuxt-link>
                 <nuxt-link to="/profile">Profile</nuxt-link>
                 <nuxt-link to="/tutor/job">job</nuxt-link>
@@ -27,7 +44,7 @@
                 <nuxt-link to="/agent/status/3">ปิดแล้ว</nuxt-link>
                 
                 
-                
+                 -->
 
 
             </b-navbar-nav>
@@ -100,6 +117,23 @@
                   type="text"
                   placeholder="Search วิชา วันเวลา สถานที่"></b-form-input>
   </div><br> -->
+<b-row class="responsive2">
+ <b-col offset-lg="3" lg="6">
+   <div style="text-align: center;">
+ <b-button v-b-modal.modal1   style="font-size: 17px; color: #667a6b; 
+  font-size: 18px;
+    color: #454e47;
+    background-color: #f3f3f3;
+    border-color: #6c757d00;
+    border-radius: 18px;
+    padding-left: 60px;
+    padding-right: 60px;
+
+"><i style=" font-size: 20px; color: #667a6b;" class="fa fa-search nav-item " aria-hidden="true"></i> ลองค้นหางานดูสิ</b-button>
+   </div> <br>
+ </b-col></b-row>
+
+
     <div v-for="course in courses" >
 
 <b-row>
@@ -269,6 +303,15 @@ export default {
     })
   },
     methods: {
+       logout(){
+  this.$store.dispatch('setToken', null)
+              this.$store.dispatch('setAgent', null)
+
+      this.$store.dispatch('setUser', null)
+       this.$store.dispatch('setStudent', null)
+     this.$router.push('/')
+
+      },
         displayTimestamp(t){
                 return moment(t).locale('th').fromNow()
             },
@@ -417,11 +460,18 @@ label{
   display: none;
 }
 
+.responsive2 {
+  display: block;
+}
+
 /*show for small screens */
 @media screen and (max-width: 1023px) { /* I've given 1023px but you can change to proper width */
     .responsive {
         display: block;
     }
+    .responsive2 {
+  display: none;
+}
 }
 
 </style>

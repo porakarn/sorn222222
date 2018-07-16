@@ -6,9 +6,16 @@
         <b-navbar-toggle style="border-color: rgba(0, 0, 0, 0);    padding-left: 0px;
     padding-right: 0px;" target="nav_text_collapse"></b-navbar-toggle>
         <!-- <b-navbar-brand>BootstrapVue</b-navbar-brand> -->
-         <b-navbar-brand class="responsive2" style="    color: rgb(51, 193, 193);
+         <b-navbar-brand class="responsive2" style="       color: rgb(51, 193, 193);
     font-size: 28px;
-    font-weight: 500;margin-left: 55px;" href="#">Sorns</b-navbar-brand>
+    font-weight: 500;
+    background-color: #ecfcec;
+    margin-left: 55px;
+    border-radius: 19px;
+    padding-right: 7px;
+    padding-left: 7px;
+    padding-top: 0px;
+    padding-bottom: 0px;" href="#">Sorns</b-navbar-brand>
         
           <b-button v-b-modal.modal1  class="responsive" style="font-size: 17px; color: #667a6b; float:right;
     background-color: #effdf3;
