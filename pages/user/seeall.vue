@@ -87,6 +87,9 @@
   <!-- <button @click="sendout">send</button> -->
     <b-button  @click="sendout" style="  background-color: #33C1C1; border: 0px; padding-left: 66px;
     padding-right: 66px;">ทำการค้นหา</b-button>  
+      <div style="color: grey" class="loading-page" v-if="loading">
+    Loading...
+  </div>
   </div>
   </b-modal>
 <br> 
@@ -225,6 +228,7 @@ import axios from 'axios';
 export default {
    data () {
     return {
+      loading: false,
       status: 'not_accepted',
        selected: [], // Array reference
       options: [
@@ -272,7 +276,8 @@ export default {
 
 
         sendout(){
-
+this.loading = true
+  this.$nuxt.$loading.start()
       console.log(this.checkedNames);
             console.log(this.selected);
 
@@ -297,6 +302,9 @@ let createPost = {
               console.log(res.data)
               this.courses = res.data
              this.hideModal ()
+             this.loading = false
+               this.$nuxt.$loading.finish()
+
           })
           .catch(error => console.log(error))
       

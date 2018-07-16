@@ -144,7 +144,7 @@ Save </b-button>
 
          </b-row>
        
-      <div class="loading-page" v-if="loading2">
+      <div style="color:grey" class="loading-page" v-if="loading2">
     Loading...
   </div> 
       </div>

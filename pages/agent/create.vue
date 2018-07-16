@@ -36,11 +36,11 @@
     <br>
       <b-button type="submit" style="background-color: #33C1C1; border: 0px; padding-left: 36px;
     padding-right: 36px;">โพสงาน</b-button>
-      <div class="loading-page" v-if="loading">
+      <div style="color: grey" class="loading-page" v-if="loading">
     <p>Loading...</p>
   </div>
     <div class="loading-page" v-if="loading2">
-    <p style="color: #54c686"><i class="fa fa-check-circle" aria-hidden="true"></i>
+    <p style="color: #54c686;margin-top: 7px;"><i class="fa fa-check-circle" aria-hidden="true"></i>
  เรียบร้อย</p>
   </div>
   

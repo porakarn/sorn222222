@@ -144,7 +144,7 @@ Save </b-button>
 
          </b-row>
        
-      <div class="loading-page" v-if="loading2">
+      <div style="color:grey; margin-top: 7px" class="loading-page" v-if="loading2">
     Loading...
   </div> 
       </div>
@@ -158,7 +158,7 @@ Save </b-button>
      <b-col cols="6" >
      <b-button  @click="deletejob" style="  background-color: #33C1C1; border: 0px; padding-left: 46px;
     padding-right: 46px;">ลบ</b-button>  
-    <div class="loading-page" v-if="loading">
+    <div style="color:grey  margin-top: 7px" class="loading-page" v-if="loading">
     กำลังลบ...
   </div> 
     
