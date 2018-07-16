@@ -7,7 +7,7 @@
     padding-right: 0px;" target="nav_text_collapse"></b-navbar-toggle>
         <!-- <b-navbar-brand>BootstrapVue</b-navbar-brand> -->
          <b-navbar-brand style="    color: rgb(51, 193, 193);
-    font-size: 28px;
+    font-size: 20px;
     font-weight: 500;margin-left: 55px;" href="#">Sorns</b-navbar-brand>
         <b-collapse is-nav id="nav_text_collapse">
             <b-navbar-nav class="ml-auto">
@@ -29,14 +29,14 @@
             </b-navbar-nav>
         </b-collapse>
     </b-navbar>
-<b-row>
+<b-row class="responsive">
 <b-col  md="6" offset-md="3">
-
+<br>
 <b-nav fill tabs>
-  <b-nav-item class="nav-item" > <nuxt-link class="nav-item" to="/agent/myjob">ทั้งหมด</nuxt-link></b-nav-item>
- <b-nav-item class="nav-item" >  <nuxt-link class="nav-item" to="/agent/status/1">ว่าง </nuxt-link></b-nav-item>
-  <b-nav-item class="nav-item" > <nuxt-link class="nav-item" to="/agent/status/2">รอจ่ายเงิน</nuxt-link></b-nav-item>
-    <b-nav-item class="nav-item" ><nuxt-link class="nav-item" to="/agent/status/3">ปิดแล้ว</nuxt-link></b-nav-item>
+  <b-nav-item @click="all" class="nav-item" > <nuxt-link class="nav-item" to="/agent/myjob">ทั้งหมด</nuxt-link></b-nav-item>
+ <b-nav-item  @click="status1" >  <nuxt-link class="nav-item" to="/agent/status/1">ว่าง </nuxt-link></b-nav-item>
+  <b-nav-item @click="status2" > <nuxt-link class="nav-item" to="/agent/status/2">รอจ่ายเงิน</nuxt-link></b-nav-item>
+    <b-nav-item @click="status3" class="nav-item" ><nuxt-link class="nav-item" to="/agent/status/3">ปิดแล้ว</nuxt-link></b-nav-item>
 
 
  
@@ -48,6 +48,57 @@
 
 </div>
     <nuxt/>
+    
+    <b-container fluid class="bv-example-row responsive2 "   style="box-shadow: rgba(0, 0, 0, 0.2) 0px 3px 8px 0px, rgba(0, 0, 0, 0) 0px 4px 5px 0px, rgba(0, 0, 0, 0.01) 0px 1px 10px 0px; position: fixed;     width: 100%;
+
+  bottom: 0px; 
+  background-color: white;
+  height: 58px;">
+
+<b-row style="    margin-top: 13px;">    
+        
+<b-col cols="3" style="text-align: center;" >
+
+<nuxt-link class="porakarn" to="/agent/seeall"><div><i style=" font-size: 28px; color: #7f8082;" class="fa fa-search nav-item " aria-hidden="true"></i>
+</div></nuxt-link>
+
+
+
+
+
+</b-col> 
+
+<b-col class="porakarn"  cols="3" style="text-align: center;" >
+
+<nuxt-link  to="/agent/create"><div><i style="font-size: 31px; color: #7f8082;"  class="fa fa-plus-square-o nav-item " aria-hidden="true"></i>
+</div>
+</nuxt-link>
+
+
+
+</b-col>
+<b-col cols="3" style="text-align: center;" >
+<nuxt-link  to="/agent/myjob"><div><i style=" font-size: 28px; color: #7f8082;"  class="fa fa-bell-o mx-auto nav-item " aria-hidden="true"></i>
+</div>
+</nuxt-link>
+
+
+</b-col>
+
+<b-col cols="3" style="text-align: center;"  >    
+ <nuxt-link  to="/agent/createprofile">
+<div>
+  <i style=" font-size: 28px; color: #7f8082;"  class="fa fa-user-circle mx-auto nav-item" aria-hidden="true"></i>
+</div>
+
+</nuxt-link>
+
+
+
+</b-col>
+
+</b-row>
+  </b-container>
    
   </div>
 </template>
@@ -68,6 +119,19 @@ methods: {
       this.$store.dispatch('setUser', null)
        this.$store.dispatch('setStudent', null)
      this.$router.push('/')
+   },
+
+   all(){
+     this.$router.push('/agent/myjob')
+   },
+   status1(){
+     this.$router.push('/agent/status/1')
+   },
+    status2(){
+     this.$router.push('/agent/status/2')
+   },
+    status3(){
+     this.$router.push('/agent/status/3')
    }
 },
 }
@@ -132,11 +196,26 @@ html
 .nav-item:active,
 .nav-item.nuxt-link-active {
   color: #0baa8a!important;
-  border-bottom: 2px solid;
-    border-bottom-color: #82d9d9;
+ 
 }
 
+.responsive {
+  display: block;
+}
 
+.responsive2 {
+  display: none;
+}
+/*show for small screens */
+@media screen and (max-width: 1023px) { /* I've given 1023px but you can change to proper width */
+    .responsive {
+        display: none;
+    }
+
+    .responsive2 {
+  display: block;
+}
+}
 
 
 </style>

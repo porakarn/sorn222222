@@ -9,7 +9,6 @@
          <b-navbar-brand class="responsive2" style="    color: rgb(51, 193, 193);
     font-size: 28px;
     font-weight: 500;margin-left: 55px;" href="#">Sorns</b-navbar-brand>
-        
           <b-button v-b-modal.modal1  class="responsive" style="font-size: 17px; color: #667a6b; float:right;
     background-color: #effdf3;
     border-color: #6c757d00;
@@ -118,9 +117,9 @@
   <b-row>
  <b-col offset-lg="3" lg="6">
    <div style="text-align: center;">
- <b-button v-b-modal.modal1  class="responsive2" style="font-size: 17px; color: #667a6b; 
-  font-size: 18px;
-    color: #454e47;
+ <b-button  class="responsive2" style="font-size: 17px; color: #667a6b; 
+  font-size: 17px;
+    color: #292e2a;
     background-color: #f3f3f3;
     border-color: #6c757d00;
     border-radius: 18px;
@@ -295,15 +294,6 @@ export default {
     })
   },
     methods: {
-      logout(){
-  this.$store.dispatch('setToken', null)
-              this.$store.dispatch('setAgent', null)
-
-      this.$store.dispatch('setUser', null)
-       this.$store.dispatch('setStudent', null)
-     this.$router.push('/')
-
-      },
         displayTimestamp(t){
                 return moment(t).locale('th').fromNow()
             },
