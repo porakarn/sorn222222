@@ -9,12 +9,14 @@
          <!-- <b-navbar-brand style="    color: rgb(51, 193, 193);
     font-size: 20px;
     font-weight: 500;margin-left: 55px;" href="#">Sorns</b-navbar-brand> -->
-      <b-button   style="font-size: 18px; 
+ <b-button   style="    font-size: 22px;
      color: rgb(57, 204, 168);
     font-weight: 600;
     background-color: #effdf3;
     border-color: #6c757d00;
     border-radius: 18px;
+        padding-top: 2px;
+    padding-bottom: 3px;
 "> Sorns</b-button>
         <b-collapse is-nav id="nav_text_collapse">
             <b-navbar-nav class="ml-auto">

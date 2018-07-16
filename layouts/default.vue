@@ -6,12 +6,14 @@
         <b-navbar-toggle style="border-color: rgba(0, 0, 0, 0);    padding-left: 0px;
     padding-right: 0px;" target="nav_text_collapse"></b-navbar-toggle>
         <!-- <b-navbar-brand>BootstrapVue</b-navbar-brand> -->
-           <b-button   style="font-size: 18px; 
+           <b-button   style="    font-size: 22px;
      color: rgb(57, 204, 168);
     font-weight: 600;
     background-color: #effdf3;
     border-color: #6c757d00;
     border-radius: 18px;
+        padding-top: 2px;
+    padding-bottom: 3px;
 "> Sorns</b-button>
 
         <b-collapse is-nav id="nav_text_collapse">
