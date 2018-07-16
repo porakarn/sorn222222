@@ -11,7 +11,7 @@
     font-weight: 500;margin-left: 55px;" href="#">Sorns</b-navbar-brand> -->
  <b-button   style="    font-size: 22px;
      color: rgb(57, 204, 168);
-    font-weight: 600;
+    font-weight: 500;
     background-color: #effdf3;
     border-color: #6c757d00;
     border-radius: 18px;

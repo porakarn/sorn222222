@@ -1,12 +1,15 @@
 <template>
   <div>
     <div>
-    <b-navbar  style="    padding-bottom: 12px;
+     <b-navbar  style="    padding-bottom: 12px;
     padding-top: 12px;  background-color:#cdf4d7!important; box-shadow: 0px 2px 3px -1px rgba(126, 126, 126, 0.2), 0px 4px 5px 0px rgba(0, 0, 0, 0), 0px 1px 10px 0px #00000003;"toggleable variant="light">
         <b-navbar-toggle style="border-color: rgba(0, 0, 0, 0);    padding-left: 0px;
     padding-right: 0px;" target="nav_text_collapse"></b-navbar-toggle>
         <!-- <b-navbar-brand>BootstrapVue</b-navbar-brand> -->
-           <b-button   style="    font-size: 22px;
+         <!-- <b-navbar-brand style="    color: rgb(51, 193, 193);
+    font-size: 28px;
+    font-weight: 500;margin-left: 55px;" href="#">Sorns</b-navbar-brand> -->
+   <b-button   style="    font-size: 22px;
      color: rgb(57, 204, 168);
     font-weight: 600;
     background-color: #effdf3;
@@ -15,32 +18,24 @@
         padding-top: 2px;
     padding-bottom: 3px;
 "> Sorns</b-button>
-
         <b-collapse is-nav id="nav_text_collapse">
-            <!-- <b-navbar-nav>
-                <b-nav-item href="#">Home</b-nav-item>
-                <b-nav-item href="#">Link</b-nav-item>
-                <nuxt-link to="/user/user">Users</nuxt-link>
-                <nuxt-link to="/profile">Profile</nuxt-link>
-                <nuxt-link to="/tutor/job">job</nuxt-link>
-                <nuxt-link to="/user/seeall">Seeall</nuxt-link>
-                <nuxt-link to="/user/createprofile">Createprofileagent</nuxt-link>
-                <nuxt-link to="/agent/signup">Signup</nuxt-link>
-                <nuxt-link to="/choose">Choose</nuxt-link>
-                <nuxt-link to="/agent/myjob">myjob</nuxt-link>
-                <nuxt-link to="/agent/status/1">ว่าง</nuxt-link>
-                <nuxt-link to="/agent/status/2">รอ</nuxt-link>
-                <nuxt-link to="/agent/status/3">ปิดแล้ว</nuxt-link>
-                <nuxt-link to="/user/rating">rating</nuxt-link>
-                <nuxt-link to="/tutor/givelink">givelink</nuxt-link>
-
+            <b-navbar-nav class="ml-auto">
+                 <!-- <b-nav-item href="#">ค้นหางาน</b-nav-item>
+                <b-nav-item href="#">สร้างงานใหม่</b-nav-item>
+                <b-nav-item href="#">งานของคุณ</b-nav-item>
+                <b-nav-item href="#">โปรไฟล์ของคุณ</b-nav-item> -->
+            <b-nav-item  style=" color:#345d46;   padding-right: 65px;">   <nuxt-link class="nav-item" style="color:#345d46; " to="/user/seeall">  <i class="fa fa-search " aria-hidden="true"></i>  Search  </nuxt-link></b-nav-item>
+             <b-nav-item  style="    padding-right: 65px;">  <nuxt-link class="nav-item" style="color:#345d46; " to="/user/create">  <i class="fa fa-pencil" aria-hidden="true"></i> Add New  </nuxt-link></b-nav-item>
+             <b-nav-item  style="    padding-right: 65px;"><nuxt-link class="nav-item" style="color:#345d46; " to="/agent/myjob"> <i class="fa fa-book" aria-hidden="true"></i> My Jobs </nuxt-link></b-nav-item>
+             <b-nav-item style="    padding-right: 65px;"><nuxt-link class="nav-item" style="color:#345d46; " to="/tutor/profile/index"><i class="fa fa-user-circle" aria-hidden="true"></i> Profile </nuxt-link></b-nav-item>
+              <b-nav-item  @click="logout" style="    padding-right: 100px;"><nuxt-link  style="color:#345d46; " to="/choose"><i class="fa fa-sign-out" aria-hidden="true"></i> Logout </nuxt-link></b-nav-item>
 
                 
                 
                 
 
 
-            </b-navbar-nav> -->
+            </b-navbar-nav>
         </b-collapse>
     </b-navbar>
 </div>
@@ -113,7 +108,16 @@ mounted() {
         //   context.redirect('/')
      }
 },
-   
+   methods: {
+   logout(){
+    this.$store.dispatch('setToken', null)
+              this.$store.dispatch('setAgent', null)
+
+      this.$store.dispatch('setUser', null)
+       this.$store.dispatch('setStudent', null)
+     this.$router.push('/')
+   }
+},
 
 
 }
