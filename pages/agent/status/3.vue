@@ -17,7 +17,7 @@
 
  <div v-for="course in courses" >
 <b-row>
-   <b-col offset-lg="3" lg="6">
+  <b-col offset-lg="3" lg="6">
 
     <b-card @click="showModal(course)" style="   margin-bottom: 5px;   box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.1);
 " 
@@ -52,9 +52,9 @@
 
 </div>
 
- <b-modal hide-header  hide-footer  centered ref="myModalRef" hide-footer title="Using Component Methods">
+ <b-modal no-fade hide-header  hide-footer  centered ref="myModalRef" hide-footer title="Using Component Methods">
       <div class="d-block ">
-      
+     
 <b-row>  <b-col cols="12" >
   <b-form-textarea style=" white-space: pre-wrap; margin-bottom: 4px;" required id="textarea1"
                      v-model="job4"
@@ -74,7 +74,8 @@
 Save </b-button>  
         <b-button v-b-modal.modal1 style="  background-color: white; color: grey; border: 0px;">
       <i class="fa fa-trash-o" aria-hidden="true"></i>
-ลบ </b-button>  
+ลบ </b-button> 
+  
         </b-col>
          <b-col>
          
@@ -142,16 +143,24 @@ Save </b-button>
                  
 
          </b-row>
+       
+      <div class="loading-page" v-if="loading2">
+    Loading...
+  </div> 
       </div>
+         
     </b-modal>
 
 
-  <b-modal ref="myModalRef2" hide-footer  centered id="modal1" title="ต้องการลบงานนี้ใช่หรือไม่">
+  <b-modal no-fade ref="myModalRef2" hide-footer  centered id="modal1" title="ต้องการลบงานนี้ใช่หรือไม่">
     <p style=" white-space: pre-wrap;" class="my-4">{{job4}}</p>
     <b-row>
      <b-col cols="6" >
      <b-button  @click="deletejob" style="  background-color: #33C1C1; border: 0px; padding-left: 46px;
     padding-right: 46px;">ลบ</b-button>  
+    <div class="loading-page" v-if="loading">
+    กำลังลบ...
+  </div> 
     
              </b-col>
             
@@ -159,7 +168,6 @@ Save </b-button>
   </b-modal>
  
 </b-container>
-
 
 
 </b-container>
@@ -172,6 +180,8 @@ import moment from 'moment'
 export default {
    data () {
     return {
+      loading: false,
+      loading2: false,
       course: null,
       job3: '',
       job4: '',
@@ -205,6 +215,7 @@ let suggest = {
             },
 
          waitjob(){
+     this.loading2 = true
 let wait = {
         status: 'รอจ่าย',
         _id: this.job3
@@ -224,11 +235,13 @@ let suggest = {
     .then((res) => { console.log(res.data)
       this.courses = res.data
                this.hideModal()
+               this.loading2 = false
             })
       })
       },
 
     deletejob(){
+       this.loading = true
         let data = {
         _id: this.job3,
 
@@ -244,7 +257,7 @@ axios.post('https://frozen-mesa-40722.herokuapp.com/job/delete', data)
     .then((res) => { console.log(res.data)
       this.courses = res.data
                     this.$refs.myModalRef2.hide()
-
+ this.loading = false
             })
     
     
@@ -253,6 +266,7 @@ axios.post('https://frozen-mesa-40722.herokuapp.com/job/delete', data)
     },
 
    editjob(){
+      this.loading2 = true
    let edit = {
         _id: this.job3,
         job: this.job4
@@ -273,7 +287,7 @@ axios.patch('https://frozen-mesa-40722.herokuapp.com/job/update', edit)
     .then((res) => { console.log(res.data)
       this.courses = res.data
                     this.$refs.myModalRef.hide()
-
+ this.loading2 = false
             })
     
 
@@ -284,6 +298,7 @@ axios.patch('https://frozen-mesa-40722.herokuapp.com/job/update', edit)
 
 
       closejob(){
+         this.loading2 = true
         let close = {
         status: 'ปิด',
         _id: this.job3
@@ -303,6 +318,7 @@ axios.post('https://frozen-mesa-40722.herokuapp.com/agent/checkstatus', suggest)
       })
       },
        openjob(){
+           this.loading2 = true
         let close = {
         status: 'ว่าง',
         _id: this.job3
@@ -318,6 +334,7 @@ axios.post('https://frozen-mesa-40722.herokuapp.com/agent/checkstatus', suggest)
     .then((res) => { console.log(res.data)
       this.courses = res.data
                this.hideModal()
+                this.loading2 = false
             }        
 
     )

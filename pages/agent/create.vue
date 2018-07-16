@@ -35,7 +35,15 @@
     
     <br>
       <b-button type="submit" style="background-color: #33C1C1; border: 0px; padding-left: 36px;
-    padding-right: 36px;">เรียบร้อย</b-button>
+    padding-right: 36px;">โพสงาน</b-button>
+      <div class="loading-page" v-if="loading">
+    <p>Loading...</p>
+  </div>
+    <div class="loading-page" v-if="loading2">
+    <p style="color: #54c686"><i class="fa fa-check-circle" aria-hidden="true"></i>
+ เรียบร้อย</p>
+  </div>
+  
    </form>
           
   </div>
@@ -50,6 +58,8 @@ import axios from 'axios';
 export default {
   data () {
     return {
+          loading: false,
+             loading2: false,
     
       job: '',
       subject: '',
@@ -66,6 +76,9 @@ export default {
 
    ,
     onCreate() {
+            this.$nuxt.$loading.start()
+              this.loading = true
+
  var job1 = this.job
 
 var separators = [ '------', '-----', '----', '---', '\n\n', '______', '_____', '____','___'];
@@ -214,7 +227,10 @@ if ( sat2 === true ) {
               console.log(res.data)
               day.length = 0
               subject.length = 0
-  
+        this.$nuxt.$loading.finish()
+          this.loading = false
+               this.loading2 = true
+
           })
           .catch(error => console.log(error))
     }

@@ -157,15 +157,23 @@
     <br>
  </b-col></b-row>
           </form>
+           <div class="loading-page" v-if="loading2">
+    <p style="color: #54c686; margin-top: 7px;"><i class="fa fa-check-circle" aria-hidden="true"></i>
+ เรียบร้อย</p>
+  </div>
   </div>
 
-<b-modal  hide-header  hide-footer  centered ref="myModalRef" hide-footer title="Using Component Methods">
+<b-modal no-fade hide-header  hide-footer  centered ref="myModalRef" hide-footer title="Using Component Methods">
       <div class="d-block ">
          <div style="white-space: pre-wrap;">{{str5}}</div> 
       </div>  <br>
           <b-button @click="onSubmit" style="background-color: #33C1C1; border: 0px; padding-left: 46px;
     padding-right: 46px;">ยืนยัน</b-button> <b-button style="background-color: white; border: 0px; padding-left: 36px; color: grey;
     padding-right: 36px;" @click="hideModal">แก้ไข</b-button>
+       <div class="loading-page" v-if="loading">
+    Loading...
+  </div>
+   
     </b-modal>
 </b-container>
 </b-container>
@@ -177,6 +185,8 @@ import axios from 'axios';
 export default {
   data () {
     return {
+       loading: false,
+      loading2: false,
        step:1,
        str5:'',
        subject:'',
@@ -228,6 +238,8 @@ methods: {
         this.$refs.myModalRef.show() 
     },
     onSubmit(){
+         this.$nuxt.$loading.start()
+              this.loading = true
       var math1 = ["PAT1", "PAT 1", "math", "คณิต", "คณิตศาสตร์", "เลข", "Math"];
 var eng1 = ["GAT ENG","ENG","Eng","Gat Eng","IELTS", "Ielts", "อังกฤษ", "Speaking","speaking", "ielts" ]
 var science = ["เคมี","chemistry","Chemistry","วิทย์","ฟิสิกส์", "Physics", "Physic", "วิทยาศาสตร์", "Science","science" ]
@@ -349,6 +361,9 @@ if ( sat2 === true ) {
         this.form.gender = null
      
       
+              this.loading = false
+               this.loading2 = true
+                this.$nuxt.$loading.finish()
   
           })
           .catch(error => console.log(error))

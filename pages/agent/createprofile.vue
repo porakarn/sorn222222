@@ -50,6 +50,13 @@
   <b-button type="submit" style="background-color: #33C1C1; border: 0px; padding-left: 36px;
     padding-right: 36px;">สมัคร</b-button>
   
+    <div class="loading-page" v-if="loading">
+    <p>Loading...</p>
+  </div>
+    <div class="loading-page" v-if="loading2">
+    <p style="color: #54c686; margin-top: 7px;"><i class="fa fa-check-circle" aria-hidden="true"></i>
+ คุณได้ทำการสร้างโปรไฟล์เรียบร้อย</p>
+  </div>
 <br>
 <br>
 <br>
@@ -73,6 +80,8 @@ import axios from 'axios';
         pagename: '',
         contactUrl: '',
         image:null,
+        loading: false,
+        loading2: false
 
     }
 },
@@ -101,7 +110,8 @@ mounted() {
     },
 
     onCreate() {
- 
+ this.$nuxt.$loading.start()
+  this.loading = true
  let data = {
           pagename: this.pagename,
           contactUrl: this.contactUrl,
@@ -129,6 +139,9 @@ let data2 = {
           .then((res) => {
             // this.$router.push('/agent/create')
             console.log(res.data)
+            this.$nuxt.$loading.finish()
+             this.loading = false
+             this.loading2 = true
           })
           .catch(error => console.log(error))
 

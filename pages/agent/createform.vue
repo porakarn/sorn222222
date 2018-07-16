@@ -153,11 +153,19 @@
          <b-button style="background-color: white; border: 0px; padding-left: 36px; color: grey;
     padding-right: 36px;" @click.prevent="prev()">กลับ</b-button>
             </div>
+              <div class="loading-page" v-if="loading">
+    <p>Loading...</p>
+  </div>
+    
 
     
     <br>
   </b-col></b-row>
           </form>
+          <div class="loading-page" v-if="loading2">
+    <p style="color: #54c686; margin-top: 7px;"><i class="fa fa-check-circle" aria-hidden="true"></i>
+ เรียบร้อย</p>
+  </div>
   </div>
 
 <b-modal  hide-header  hide-footer  centered ref="myModalRef" hide-footer title="Using Component Methods">
@@ -178,6 +186,9 @@ import axios from 'axios';
 export default {
   data () {
     return {
+      loading: false,
+      loading2: false,
+    
        step:1,
        str5:'',
        subject:'',
@@ -224,6 +235,8 @@ methods: {
       this.$refs.myModalRef.hide()
     },
     onCreate() {
+       this.$nuxt.$loading.start()
+              this.loading = true
       this.str5 = this.form.subject + ' ' + this.form.note +'\n- '+ this.form.gender + ' ' + this.form.food + ' (' + this.form.school +') \n- '+this.form.location +'\n- '+this.form.dayandtime +'\n- '+this.form.tuitionfee
     // alert(this.str5)
         this.$refs.myModalRef.show() 
@@ -349,7 +362,10 @@ if ( sat2 === true ) {
         this.form.food = null
         this.form.gender = null
      
-      
+              this.loading = false
+               this.loading2 = true
+                this.$nuxt.$loading.finish()
+
   
           })
           .catch(error => console.log(error))

@@ -159,7 +159,7 @@ if (response.status === 'connected'){
 
 
 async testAPI(){
-
+ this.$nuxt.$loading.start()
   if (process.browser) {
 
 
@@ -200,6 +200,7 @@ console.log('r6');
    this.$store.dispatch('setUser', res.data.user)
         console.log('res444')
         this.$router.push('/user/seeall')
+        this.$nuxt.$loading.finish()
                 // console.log(res.data.token)
                 // console.log(this.token)
 

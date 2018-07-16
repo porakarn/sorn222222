@@ -1,9 +1,16 @@
 <template>
 
 <b-container fluid>
+<div class="loading-page" v-if="loading">
+    <p>Loading...</p>
+  </div>
+
 
 
 <br>
+
+
+
   <b-row>
 <b-col md="6" offset-md="3">
   
@@ -41,6 +48,7 @@ import store from '@/store/index'; // path to your Vuex store
   export default {
     data () {
       return {
+        loading: false,
         
         username: '',
         password: '',
@@ -110,6 +118,8 @@ mounted(){
 ,
  methods: {
 
+
+
     doLogin: async function () {
       var vm = this
       FB.login( async function (response) {
@@ -162,7 +172,8 @@ if (response.status === 'connected'){
 
 
 async testAPI(){
-
+       this.$nuxt.$loading.start()
+ this.loading = true
   if (process.browser) {
 
 
@@ -211,8 +222,8 @@ console.log(res.data);
    
                 // console.log(res.data.token)
                 // console.log(this.token)
-
-
+     this.loading = false
+this.$nuxt.$loading.finish()
 
   //  this.$router.push('/user/user')
 
@@ -283,5 +294,18 @@ border-top: 0px;
     border-right: 0px;
     border-left: 0px;
     border-radius: 0;
+}
+
+loading-page {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.8);
+  text-align: center;
+  padding-top: 200px;
+  font-size: 30px;
+  font-family: sans-serif;
 }
 </style>
