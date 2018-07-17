@@ -160,7 +160,7 @@
 
 
 <b-col cols="4" style="margin-top: -15px; ">
-   <strong style="color:#bbbcbd;  font-size: 14px; margin-top: -0px;  float:right;   margin-bottom: 0px; font-weight:400"><i style="font-size:13px;" class="fa fa-user-o" aria-hidden="true"></i>
+   <strong style="color:#cbcdd0;  font-size: 14px; margin-top: -0px;  float:right;   margin-bottom: 0px; font-weight:400"><i style="font-size:12px;" class="fa fa-user-o" aria-hidden="true"></i>
  {{course.creator_name }}  </strong>  
 
  <strong style="color:#a5cae4;  font-size: 14px; margin-top: -0px;  float:right;  margin-bottom: 0px; font-weight:400">{{ displayTimestamp(course.createdAt) }}  </strong>  
