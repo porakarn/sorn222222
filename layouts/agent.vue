@@ -11,7 +11,7 @@
     font-weight: 500;margin-left: 55px;" href="#">Sorns</b-navbar-brand> -->
    <b-button   style="  font-size: 21px;
     color: #64E2CD;
-    font-weight: 400;
+    font-weight: 500;
     background-color: #effdf3;
     border-color: #6c757d00;
     border-radius: 18px;
@@ -21,6 +21,7 @@
     padding-right: 8px;
     font-family: kanit;
     border-top-width: 0px;
+        border-bottom-width: 0px
 "> Sorns</b-button>
         <b-collapse is-nav id="nav_text_collapse">
             <b-navbar-nav class="ml-auto">
