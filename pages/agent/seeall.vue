@@ -108,7 +108,7 @@
    <br>
 <br>
   <!-- <button @click="sendout">send</button> -->
-    <b-button  @click="sendout" style="  background-color: #33C1C1; border: 0px; padding-left: 66px;
+    <b-button  @click="sendout" style="    width: 100%;  background-color: #33C1C1; border: 0px; padding-left: 66px;
     padding-right: 66px;">ทำการค้นหา</b-button>  
       <div style="color: grey" class="loading-page" v-if="loading">
     Loading...

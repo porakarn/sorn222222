@@ -210,5 +210,12 @@ html
     }
 }
 
+:focus {
+    outline: -webkit-focus-ring-color auto 5px;
+    outline-color:#ffffff00;
+    outline-style: auto;
+    outline-width: 5px;
+}
+
 </style>
 

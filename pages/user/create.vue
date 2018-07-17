@@ -267,4 +267,9 @@ a{
     font-size: 18px;
     font-family:"Sukhumvit Set",sans-serif; 
 }
+
+.nav-link:focus {
+    border-color: #e9ecef #e9ecef #dee2e6;
+    border-bottom: 0px solid !important;
+}
 </style>

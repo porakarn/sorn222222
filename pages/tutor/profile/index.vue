@@ -290,5 +290,8 @@ border-top: 0px;
 box-shadow: 0 0 0 0rem rgba(0, 123, 255, .25) !important;
 }
 
+.btn-secondary:not(:disabled):not(.disabled):active:focus, .btn-secondary:not(:disabled):not(.disabled).active:focus, .show > .btn-secondary.dropdown-toggle:focus {
+    box-shadow: 0 0 0 0.2rem rgba(255, 255, 255, 0.5);
+}
 
 </style>
