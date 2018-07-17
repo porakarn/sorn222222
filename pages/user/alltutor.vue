@@ -13,7 +13,8 @@
  ติดตามอัพเดทต่างๆได้ที่ </p>
 
 <div style="text-align:center">
-    <b-button href="https://line.me/R/ti/p/%40dxc2481h"  style="    width: 60%;  background-color: #33C1C1; border: 0px; padding-left: 66px;
+    <b-button href="https://line.me/R/ti/p/%40dxc2481h" size="lg" style="box-shadow: 0 1px 1px 1px rgba(111, 111, 111, .23);
+    width: 60%;  background-color: #33C1C1; border: 0px; padding-left: 66px;
     padding-right: 66px;">ติดตามเรา</b-button>  
 </div>
   </b-container>
