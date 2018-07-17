@@ -529,7 +529,22 @@ label{
 
   margin-left: 6px!important;
 }
-.btn-secondary:not(:disabled):not(.disabled):active:focus, .btn-secondary:not(:disabled):not(.disabled).active:focus, .show > .btn-secondary.dropdown-toggle:focus {
-    box-shadow: 0 0 0 0.2rem rgba(255, 255, 255, 0);
+/* .btn-secondary:not(:disabled):not(.disabled):active:focus, .btn-secondary:not(:disabled):not(.disabled).active:focus, .show > .btn-secondary.dropdown-toggle:focus {
+ 
+
+    box-shadow: 0 0 0 0.2rem rgba(108, 117, 125, 0);
+} */
+
+.btn-secondary.focus, .btn-secondary:focus {
+    box-shadow: 0 0 0 0.2rem hsla(208, 7%, 46%, 0);
+}
+
+.btn.focus, .btn:focus {
+    outline: 0;
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0);
+}
+
+.btn-secondary.focus, .btn-secondary:focus {
+    box-shadow: 0 0 0 0.2rem hsla(208, 7%, 46%, 0);
 }
 </style>

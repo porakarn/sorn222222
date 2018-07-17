@@ -21,7 +21,7 @@
                     
                     label-for="exampleInput1"
                     description="ชื่อเพจของคุณ">
-      <b-form-input required id="input-large" size="lg" v-model="pagename" type="text" placeholder="ชื่อเพจของคุณ"></b-form-input>
+      <b-form-input class="formpor" required id="input-large" size="lg" v-model="pagename" type="text" placeholder="ชื่อเพจของคุณ"></b-form-input>
     
       </b-form-group>
     </b-col>
@@ -32,7 +32,7 @@
                     
                     label-for="exampleInput1"
                     description="Line url / Facebook page url ">
-      <b-form-input required id="input-large" size="lg" v-model="contactUrl" type="text" placeholder="Line url / Facebook page url "></b-form-input>
+      <b-form-input class="formpor" required id="input-large" size="lg" v-model="contactUrl" type="text" placeholder="Line url / Facebook page url "></b-form-input>
           </b-form-group>
     </b-col>
 
@@ -44,7 +44,7 @@
                     
                     label-for="exampleInput1"
                     description="Contact เบอร์ติดต่อ และ line">
-      <b-form-input required id="input-large" size="lg" v-model="contact" type="text" placeholder="Contact"></b-form-input>
+      <b-form-input class="formpor" required id="input-large" size="lg" v-model="contact" type="text" placeholder="Contact"></b-form-input>
     
       </b-form-group>
     </b-col>
@@ -189,11 +189,23 @@ border-top: 0px;
     border-radius: 0;
 }
 
+.formpor{
+border-top: 0px;
+    border-right: 0px;
+    border-left: 0px;
+    border-radius: 0;
+   padding-left: 4px;
+
+}
+
+
+
 .form-control:focus {
     color: #495057;
     background-color: #fff;
     border-color: #80bdff;
     /* border-bottom: 2px; */
+    
     outline: 0;
     box-shadow: 0px 1px 0px 0rem rgba(199, 199, 199, 0.25);
 }

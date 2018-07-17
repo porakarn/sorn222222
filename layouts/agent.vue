@@ -177,6 +177,8 @@ html
   margin: auto
 }
 
+
+
 .nav-item:hover,
 .nav-item:active,
 .nav-item.nuxt-link-active {

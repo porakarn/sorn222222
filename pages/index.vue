@@ -15,7 +15,7 @@
 <b-row>
 <b-col md="6" offset-md="3">
 <img centered style="width :95%" src="https://www.sorns.co/wp-content/uploads/2018/01/sds.png" alt="">
-       <button @click="logout" > Log out </button>
+    
 </b-col>
 </b-row>
 

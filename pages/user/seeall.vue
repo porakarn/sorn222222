@@ -160,9 +160,9 @@
 </b-col>
 
 
-<b-col cols="4" style="margin-top: -15px; ">
+<b-col cols="4" style="margin-top: -15px; padding-left: 20px; ">
     <strong v-if="course.contactUrl" style="color:#cbcdd0;  font-size: 14px; margin-top: -0px;  float:right;   margin-bottom: 0px; font-weight:400">
- {{course.creator_name}}  </strong> 
+ {{course.creator_name}} xx </strong> 
 
    <strong v-else style="color:#cbcdd0;  font-size: 14px; margin-top: -0px;  float:right;   margin-bottom: 0px; font-weight:400">
  {{course.creator_name.replace(/\w+[.!?]?$/, '')}}  </strong>  
@@ -360,7 +360,6 @@ export default {
   asyncData (context) {
 
     
-      console.log(context);
       
     return axios.get('https://frozen-mesa-40722.herokuapp.com/job/all')
     .then((res) => { console.log(res.data)
