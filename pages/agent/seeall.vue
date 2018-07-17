@@ -474,7 +474,7 @@ border: 1px solid rgba(193, 193, 193, 0.12);
 
 a{
 
-    color: #415953d4;
+    color: #415953ba;
     font-weight: 600;
     font-size: 17px;
 }
