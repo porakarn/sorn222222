@@ -39,6 +39,12 @@ module.exports = {
       height: '3px'
  },
 
+
+ manifest: {
+   name: 'Sorns',
+   display: 'browser',
+
+ },
   /*
   ** Global CSS
   */
