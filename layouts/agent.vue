@@ -10,15 +10,17 @@
     font-size: 28px;
     font-weight: 500;margin-left: 55px;" href="#">Sorns</b-navbar-brand> -->
    <b-button   style="  font-size: 21px;
-    color: rgb(57, 204, 168);
-    font-weight: 500;
+    color: #64E2CD;
+    font-weight: 400;
     background-color: #effdf3;
     border-color: #6c757d00;
     border-radius: 18px;
-    padding-top: 2px;
-    padding-bottom: 2px;
-    padding-left: 6px;
-    padding-right: 6px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    padding-left: 8px;
+    padding-right: 8px;
+    font-family: kanit;
+    border-top-width: 0px;
 "> Sorns</b-button>
         <b-collapse is-nav id="nav_text_collapse">
             <b-navbar-nav class="ml-auto">
