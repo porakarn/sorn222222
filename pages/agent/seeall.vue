@@ -115,7 +115,8 @@
   </b-modal>
 <br> 
 
-<b-container fluid> 
+<b-container fluid style="padding-left: 13px;
+    padding-right: 13px;"> 
 
   <b-row class="responsive2">
  <b-col offset-lg="3" lg="6">
