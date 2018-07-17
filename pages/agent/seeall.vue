@@ -476,7 +476,7 @@ a{
 
     color: #4159539c;
     font-weight: 600;
-    font-size: 17px;
+    font-size: 18px;
     font-family:"Sukhumvit Set",sans-serif; 
 }
 </style>
