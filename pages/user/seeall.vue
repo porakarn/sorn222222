@@ -26,7 +26,8 @@
     background-color: #effdf3;
     border-color: #6c757d00;
     border-radius: 18px;
-"><i style=" font-size: 20px; color: #667a6b;" class="fa fa-search nav-item " aria-hidden="true"></i> ลองค้นหางานดูสิ</b-button>
+"><i style=" font-size: 20px; color: #667a6b;     padding-left: 17px;
+    padding-right: 20px;" class="fa fa-search nav-item " aria-hidden="true"></i> ลองค้นหางานดูสิ</b-button>
         <b-collapse is-nav id="nav_text_collapse">
             <b-navbar-nav class="ml-auto">
                <b-nav-item  style=" color:#345d46;   padding-right: 65px;">   <nuxt-link class="nav-item" style="color:#345d46; " to="/user/seeall">  <i class="fa fa-search " aria-hidden="true"></i>  Search  </nuxt-link></b-nav-item>
