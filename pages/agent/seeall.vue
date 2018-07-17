@@ -474,8 +474,9 @@ border: 1px solid rgba(193, 193, 193, 0.12);
 
 a{
 
-    color: #415953ba;
+    color: #4159539c;
     font-weight: 600;
     font-size: 17px;
+    font-family:"Sukhumvit Set",sans-serif; 
 }
 </style>
