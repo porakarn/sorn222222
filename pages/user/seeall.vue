@@ -7,7 +7,7 @@
   <b-nav-item>ปิดแล้ว</b-nav-item>
 </b-nav> -->
 <b-navbar  style="    padding-bottom: 12px;
-    padding-top: 12px;  background-color:#cdf4d7!important; box-shadow: 0px 2px 3px -1px rgba(126, 126, 126, 0.2), 0px 4px 5px 0px rgba(0, 0, 0, 0), 0px 1px 10px 0px #00000003;"toggleable variant="light">
+    padding-top: 12px;  background-color:#cdf4d7!important; "toggleable variant="light">
         <b-navbar-toggle style="border-color: rgba(0, 0, 0, 0);    padding-left: 0px;
     padding-right: 0px;" target="nav_text_collapse"></b-navbar-toggle>
         <!-- <b-navbar-brand>BootstrapVue</b-navbar-brand> -->
@@ -59,10 +59,11 @@
 
 
 
-<b-nav fill tabs >
-  <b-nav-item  class="responsive"  style="border-bottom: 2px solid;
-    border-bottom-color: #82d9d9;
-">ทั้งหมด</b-nav-item>
+<b-nav fill tabs  style="margin-top:-7px;    background-color: #cdf4d7; box-shadow: 0px 2px 3px -1px rgba(126, 126, 126, 0.2), 0px 4px 5px 0px rgba(0, 0, 0, 0), 0px 1px 10px 0px #00000003;">
+   <b-nav-item  class="responsive"  style="border-bottom: 4px solid;
+    border-bottom-color: #ffffff; color: #5b7a69; padding-right: 12px;
+    padding-left: 12px;
+">ทั้งหมด </b-nav-item>
  <b-nav-item class="responsive"  @click="nextPage">งานแนะนำ</b-nav-item>
  
 </b-nav>
@@ -439,7 +440,7 @@ let createPost = {
       this.$refs.myModalRef.hide()
     }
   },
-    layout: 'nohead'
+    layout: 'noheadtutor'
 }
 </script>
 
@@ -498,5 +499,14 @@ border: 1px solid rgba(193, 193, 193, 0.12);
     .responsive2 {
   display: none;
 }
+}
+
+
+a{
+
+    color: #4159539c;
+    font-weight: 600;
+    font-size: 18px;
+    font-family:"Sukhumvit Set",sans-serif; 
 }
 </style>

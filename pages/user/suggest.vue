@@ -6,10 +6,11 @@
   <b-nav-item>รอจ่ายเงิน</b-nav-item>
   <b-nav-item>ปิดแล้ว</b-nav-item>
 </b-nav> -->
-<b-nav fill tabs>
-  <b-nav-item @click="nextPage">ทั้งหมด</b-nav-item>
-    <b-nav-item style="border-bottom: 2px solid;
-    border-bottom-color: #82d9d9;
+<b-nav fill tabs  style="margin-top:-7px;    background-color: #cdf4d7; box-shadow: 0px 2px 3px -1px rgba(126, 126, 126, 0.2), 0px 4px 5px 0px rgba(0, 0, 0, 0), 0px 1px 10px 0px #00000003;">
+  <b-nav-item style="padding-right: 12px;
+    padding-left: 12px;" @click="nextPage">ทั้งหมด</b-nav-item>
+    <b-nav-item  style="border-bottom: 4px solid;
+    border-bottom-color: #ffffff; color: #5b7a69;
 ">งานแนะนำ</b-nav-item>
  
 </b-nav>
@@ -286,5 +287,14 @@ let suggest = {
 box-shadow: 0 1px 2px 0px rgba(0, 0, 0, 0.1);
 border: 1px solid rgba(193, 193, 193, 0.12);
     border-radius: 6px;
+}
+
+
+a{
+
+    color: #4159539c;
+    font-weight: 600;
+    font-size: 18px;
+    font-family:"Sukhumvit Set",sans-serif; 
 }
 </style>
