@@ -340,7 +340,6 @@ if ( sat2 === true ) {
         _creator: this.$store.state.agent._id,
         day : day,
         subject : subject,
-        picture: this.$store.state.agent.picture,
         contact: this.$store.state.agent.contact,
         contactUrl: this.$store.state.agent.contactUrl,
         creator_name : this.$store.state.agent.pagename
