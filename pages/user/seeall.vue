@@ -151,13 +151,21 @@
                         <b-col style="    padding-left: 10px;
     padding-right: 3px;" cols="2">{{course.status}}</b-col> </b-row>
     <b-row>
-      <b-col style="padding-left: 8px;">
+      <b-col cols="8" style="padding-left: 8px;">
  <a   href="#" v-show="course.subject.length >0"
            class="card-link">{{course.subject.toString().split(',').join(' ')}}</a>
         <b-link href="#" v-show="course.day.length >0"
                 class="card-link"   >{{course.day.toString().split(',').join(' ')}}</b-link> 
-                 <strong style="color:#a5cae4;  font-size: 14px; margin-top: 4px;  float:right;  margin-bottom: 0px; font-weight:400">{{ displayTimestamp(course.createdAt) }}  </strong>  
 </b-col>
+
+
+<b-col cols="4" style="margin-top: -15px; ">
+   <strong style="color:#cbcdd0;  font-size: 14px; margin-top: -0px;  float:right;   margin-bottom: 0px; font-weight:400">
+ {{course.creator_name }}  </strong>  
+
+ <strong style="color:#a5cae4;  font-size: 14px; margin-top: -0px;  float:right;  margin-bottom: 0px; font-weight:400">{{ displayTimestamp(course.createdAt) }}  </strong>  
+</b-col>
+
     </b-row>
 
     </b-card>
@@ -196,13 +204,24 @@
     <p style="color: grey">  Copy</p>
     
    <b-row>
-             <b-col cols="9" >
-     <b-button size="lg" style="  background-color: #33C1C1; border: 0px; padding-left: 66px;
+             <b-col cols="7" >
+
+
+
+     <b-button  style="  background-color: #33C1C1; border: 0px; padding-left: 66px;
     padding-right: 66px;">ติดต่อ</b-button>  
              </b-col>
-               <b-col cols="3">
-      <b-img style="border-radius: 5px" width="50px" height="50px" fluid src="https://picsum.photos/250/250/?image=54" alt="Thumbnail" />
-
+               <b-col cols="5">
+      <!-- <b-img style="border-radius: 5px" width="50px" height="50px" fluid src="https://picsum.photos/250/250/?image=54" alt="Thumbnail" /> -->
+              <strong style="    color: rgb(49, 103, 183);
+    font-size: 16px;
+    margin-top: 11px;
+    float: right;
+    margin-bottom: 0px;
+    font-weight: 400;
+    padding-right: 10px;
+"> {{ contact2  }} {{ line2}}
+ By {{creator_name2 }}  </strong>  
                </b-col>         
 
          </b-row>
@@ -312,6 +331,10 @@ export default {
       isblank: '',
       text:'',
       profile2: false,
+      creator_name2 : '',
+      contact2:'',
+      contactUrl2 :'',
+      line2:''
      
 
   
@@ -385,7 +408,7 @@ this.loading = true
   this.$nuxt.$loading.start()
       console.log(this.checkedNames);
             console.log(this.selected);
-
+         
 
 let createPost = {
       
@@ -428,7 +451,11 @@ let createPost = {
       this.job3 = item.job
       console.log(item.job  );
             this.text = 'วิชาที่สอน: '+ this.$store.state.user.subject + this.$store.state.user.profile
-
+ 
+    this.creator_name2 = item.creator_name
+    this.contact2 = item.contact
+    this.contactUrl2 = item.contactUrl
+    this.line2 = item.line
       if (this.$store.state.user.profile) {
         this.profile2 = true
       }

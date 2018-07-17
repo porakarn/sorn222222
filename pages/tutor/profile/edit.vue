@@ -5,32 +5,59 @@
 </b-nav>
     <br>
     <b-row>
-     
-         <b-col cols="12">
+
+
+
+
+
+         <b-col cols="12"  sm="6" offset-sm="3" >
       <!-- <p style="color: rgb(117, 119, 120);">{{ this.$store.state.user.name}}</p> -->
    
-  <b-row class="my-1">
-    <b-col cols="12" sm="10" style="margin-top: 14px;  ">
-      <b-form-input style="margin-top: -6px;" v-model="phone" class="formpor" id="input-large"   type="text" placeholder="เบอร์โทร ">{{phone}}</b-form-input>
+  <b-row class="my-1" style="    height: 70px;
+">
+    <b-col cols="6"style="margin-top: 14px;  ">
+       <b-form-group  id="exampleInputGroup1"
+                    
+                    label-for="exampleInput1"
+                    description="เบอร์ติดต่อ">
+      <b-form-input
+       style="margin-top: -6px;" 
+      v-model="phone" 
+      class="formpor" 
+      id="input-large"   
+      type="text" 
+      placeholder="เบอร์โทร ">{{phone}}</b-form-input></b-form-group>
+    </b-col>
+
+     <b-col cols="6"style="margin-top: 14px;  ">
+     <b-form-group  id="exampleInputGroup1"
+                    
+                    label-for="exampleInput1"
+                    description="line">
+      <b-form-input
+       style="margin-top: -6px;"
+       v-model="line"
+        class="formpor"
+        id="input-large"   
+        type="text" 
+        placeholder="Line">{{line}}</b-form-input></b-form-group>
     </b-col>
   
   </b-row>
-         </b-col> 
+     
              
-    </b-row>
+   
 <b-container fluid style="   padding: 0!important">
 
- <div class="ere">
-   <!-- <b-row class="my-1">
-    <b-col sm="10">
-      <b-form-input class="formpor" id="input-large"  type="text" :placeholder="this.$store.state.user.email"></b-form-input>
-    </b-col>
-  </b-row> -->
-   </div></b-container>
+ </b-container>
+
+
+
+
  <p style="margin-bottom: 0px; color: rgb(117, 119, 120);  margin-top: 17px;">วิชาที่คุณสอน
 </p>
   <b-row class="my-1">
-    <b-col sm="10">
+    <b-col >
        <b-form-textarea style="  white-space: pre-wrap;   padding-top: 0px;
 " class="formpor" id="textarea1"
                      v-model="subject"
@@ -41,21 +68,13 @@
       <!-- <b-form-input focus="false"  class="formpor" id="input-large"  type="text" :placeholder="this.$store.state.user.email"></b-form-input> -->
     </b-col>
   </b-row>
-  <!-- <div class="por" >
-        <a href="#"
-           class="card-link">IELTS</a>
-        <b-link href="#"
-                class="card-link">ENG</b-link>
-                  <a href="#"
-           class="card-link">IELTS</a>
-        <b-link href="#"
-                class="card-link">เคมี</b-link></div> -->
+ 
 <br>
                  <p style=" margin-bottom: 0px;  white-space: pre-wrap;  padding-top: 0px !important;
 color: rgb(117, 119, 120); border:1px !important;">โปรไฟล์ของคุณ</p>
     <b-form-textarea class="formpor"  id="textarea1"
                      v-model="profile"
-                     :rows="5"
+                     :rows="8"
                      :max-rows="9">
     </b-form-textarea>
     <br>
@@ -65,6 +84,8 @@ color: rgb(117, 119, 120); border:1px !important;">โปรไฟล์ขอ�
  <div style="color: grey" class="loading-page" v-if="loading">
     <p>Loading...</p>
   </div>
+      </b-col> 
+    </b-row>
 </b-container>
 </template>
 
@@ -80,7 +101,8 @@ export default {
     profile: '',
     subject: '',
     text2: '',
-    tag:''
+    tag:'',
+    line:''
 
   
     }
@@ -89,6 +111,7 @@ export default {
     this.phone = this.$store.state.user.phone,
     this.profile = this.$store.state.user.profile,
     this.subject = this.$store.state.user.subject
+    this.line = this.$store.state.user.line
   },
 //   asyncData (context, callback) {
 //  var por = ';;'
@@ -159,7 +182,8 @@ if ( math2 === true ) {
              phone : this.phone,
              subject: this.subject,
              name: this.$store.state.user.name, 
-             tag: this.tag
+             tag: this.tag,
+             line: this.line
 
            }
 
@@ -171,8 +195,9 @@ if ( math2 === true ) {
              email: this.$store.state.user.email,
              _id: this.$store.state.user._id,
              picture: this.$store.state.user.picture,
-             tag: this.tag
-              
+             tag: this.tag,
+            line: this.line
+
            }
                        console.log(data2);
 

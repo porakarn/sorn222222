@@ -22,7 +22,7 @@
     font-family: kanit;
     border-top-width: 0px;
         border-bottom-width: 0px
-"> Sorns</b-button>
+"> sorns</b-button>
         <b-collapse is-nav id="nav_text_collapse">
             <b-navbar-nav class="ml-auto">
                  <!-- <b-nav-item href="#">ค้นหางาน</b-nav-item>

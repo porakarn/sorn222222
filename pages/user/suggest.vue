@@ -35,12 +35,18 @@
                         <b-col style="    padding-left: 10px;
     padding-right: 3px;" cols="2">{{course.status}}</b-col> </b-row>
     <b-row>
-      <b-col style="padding-left: 8px;">
+      <b-col cols="8" style="padding-left: 8px;">
  <a   href="#" v-show="course.subject.length >0"
            class="card-link">{{course.subject.toString().split(',').join(' ')}}</a>
         <b-link href="#" v-show="course.day.length >0"
                 class="card-link"   >{{course.day.toString().split(',').join(' ')}}</b-link> 
-                 <strong style="color:#a5cae4;  font-size: 14px; margin-top: 4px;  float:right;  margin-bottom: 0px; font-weight:400">{{ displayTimestamp(course.createdAt) }}  </strong>  
+</b-col>
+
+<b-col cols="4" style="margin-top: -15px; ">
+   <strong style="color:#cbcdd0;  font-size: 14px; margin-top: -0px;  float:right;   margin-bottom: 0px; font-weight:400">
+ {{course.creator_name }}  </strong>  
+
+ <strong style="color:#a5cae4;  font-size: 14px; margin-top: -0px;  float:right;  margin-bottom: 0px; font-weight:400">{{ displayTimestamp(course.createdAt) }}  </strong>  
 </b-col>
     </b-row>
 
