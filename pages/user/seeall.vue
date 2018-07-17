@@ -131,9 +131,7 @@
 "><i style=" font-size: 20px; color: #667a6b;" class="fa fa-search nav-item " aria-hidden="true"></i> ลองค้นหางานดูสิ</b-button>
    </div> <br>
  </b-col></b-row>
-    <b-button  v-clipboard:copy="thingToCopy"   style="background-color: #33C1C1; border: 0px; padding-left: 36px;
-    padding-right: 36px;"><i class="fa fa-clone" aria-hidden="true"></i>
-  Copy</b-button>
+   
     
 
 
@@ -163,8 +161,11 @@
 
 
 <b-col cols="4" style="margin-top: -15px; ">
-   <strong style="color:#cbcdd0;  font-size: 14px; margin-top: -0px;  float:right;   margin-bottom: 0px; font-weight:400">
- {{course.creator_name }}  </strong>  
+    <strong v-if="course.contactUrl" style="color:#cbcdd0;  font-size: 14px; margin-top: -0px;  float:right;   margin-bottom: 0px; font-weight:400">
+ {{course.creator_name}}  </strong> 
+
+   <strong v-else style="color:#cbcdd0;  font-size: 14px; margin-top: -0px;  float:right;   margin-bottom: 0px; font-weight:400">
+ {{course.creator_name.replace(/\w+[.!?]?$/, '')}}  </strong>  
 
  <strong style="color:#a5cae4;  font-size: 14px; margin-top: -0px;  float:right;  margin-bottom: 0px; font-weight:400">{{ displayTimestamp(course.createdAt) }}  </strong>  
 </b-col>
@@ -197,7 +198,7 @@
           <div style="     margin-bottom: 10px;white-space: pre-wrap;">{{job3}}</div>
 
       
-             <strong style="color: grey"> ส่งโปรไฟล์ของคุณ</strong>
+             <strong style="color: grey"> Copy โปรไฟล์ของคุณ</strong>
               <strong style="    color: rgb(49, 103, 183);
     font-size: 17px;
     margin-top: 0px;
@@ -209,28 +210,33 @@
          <b-form-textarea id="textarea1"
                      v-model="text"
                      placeholder="Enter something"
-                     :rows="3"
+                     :rows="5"
                      :max-rows="6">
     </b-form-textarea>
 
-    <br>
 
-     <b-button  v-clipboard:copy="thingToCopy"   style="background-color: #33C1C1; border: 0px; padding-left: 36px;
-    padding-right: 36px;"><i class="fa fa-clone" aria-hidden="true"></i>
-  Copy</b-button>
-    
+
 
 <b-row style="    margin-bottom: 16px;">
 
      <b-col cols="12">
       <!-- <b-img style="border-radius: 5px" width="50px" height="50px" fluid src="https://picsum.photos/250/250/?image=54" alt="Thumbnail" /> -->
+              <p style="    color: rgb(49, 103, 183);
+    font-size: 16px;
+  
+    margin-bottom: 0px;
+    font-weight: 400;
+    padding-right: 10px;
+    margin-top: 7px;
+"> Contact เจ้าของงาน
+   </p>  
               <strong style="    color: rgb(49, 103, 183);
     font-size: 16px;
   
     margin-bottom: 0px;
     font-weight: 400;
     padding-right: 10px;
-"> {{'Line/เบอร์: ' + contact2 }}
+"> {{'Phone/Line : ' + contact2 }}
    </strong>  
                </b-col>   
 </b-row>
@@ -240,7 +246,7 @@
 
 
 
-     <b-button  :href="contactUrl2" style=" width:100%;  background-color: #33C1C1; border: 0px; padding-left: 66px;
+     <b-button v-if="contactUrl2"  :href="contactUrl2" style=" width:100%;     color: white; background-color: #33C1C1; border: 0px; padding-left: 66px;
     padding-right: 66px;">ติดต่อ</b-button>  
              </b-col>
                   
@@ -276,14 +282,12 @@
 import axios from 'axios';
 import moment from 'moment'
 
-import VueClipboard from 'vue-clipboard2'
-import Vue from 'vue';
 
-Vue.use(VueClipboard);
 export default {
    data () {
     return {
-  
+        
+
      
  loading: false,
       status: 'not_accepted',
@@ -313,21 +317,13 @@ export default {
       creator_name2 : '',
       contact2:'',
       contactUrl2 :'',
-      thingToCopy: `A string that's not all that long or important. Sorry to disappoint.`
 
 
   
     }
   },
 
-  // mounted() {
-  //   this.text2 = 'dsdddd'
-  //     // this.text2 = this.$store.state.user.profile + '\n ' + 'วิชาที่สอน: ' + this.$store.state.user.subject + '\n ' +'เบอร์ติดต่อ: '+ this.$store.state.user.phone 
-  //     this.thingToCopy = this.text2
-  //     console.log(' text2:' + this.text2);
-  //     console.log(' text2:' + this.thingToCopy);
-      
-  // },
+
 
 
 
@@ -378,11 +374,7 @@ export default {
 
   },
 
-  mounted() {
-      this.text = 'http://localhddd/user/rating/'+this.$store.state.user._id
-      this.thingToCopy = this.text
-  },
-
+ 
 
     methods: {
 logout(){
@@ -535,5 +527,14 @@ a{
     font-weight: 600;
     font-size: 18px;
     font-family:"Sukhumvit Set",sans-serif; 
+}
+
+
+label{
+
+  margin-left: 6px!important;
+}
+.btn-secondary:not(:disabled):not(.disabled):active:focus, .btn-secondary:not(:disabled):not(.disabled).active:focus, .show > .btn-secondary.dropdown-toggle:focus {
+    box-shadow: 0 0 0 0.2rem rgba(255, 255, 255, 0);
 }
 </style>

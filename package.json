@@ -21,6 +21,7 @@
     "nuxt": "^1.0.0",
     "nuxt-fontawesome": "^0.3.0",
     "vue-clipboard2": "^0.2.0",
+    "vue-clipboards": "^1.2.4",
     "vue-star-rating": "^1.6.0",
     "vuex-persistedstate": "^2.5.4"
   },

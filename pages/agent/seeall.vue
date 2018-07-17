@@ -163,8 +163,11 @@
 
 
 <b-col cols="4" style="margin-top: -15px; ">
-   <strong style="color:#cbcdd0;  font-size: 14px; margin-top: -0px;  float:right;   margin-bottom: 0px; font-weight:400">
- {{course.creator_name }}  </strong>  
+  <strong v-if="course.contactUrl" style="color:#cbcdd0;  font-size: 14px; margin-top: -0px;  float:right;   margin-bottom: 0px; font-weight:400">
+ {{course.creator_name}}  </strong> 
+
+   <strong v-else style="color:#cbcdd0;  font-size: 14px; margin-top: -0px;  float:right;   margin-bottom: 0px; font-weight:400">
+ {{course.creator_name.replace(/\w+[.!?]?$/, '')}}  </strong> 
 
  <strong style="color:#a5cae4;  font-size: 14px; margin-top: -0px;  float:right;  margin-bottom: 0px; font-weight:400">{{ displayTimestamp(course.createdAt) }}  </strong>  
 </b-col>
@@ -192,20 +195,52 @@
 </div>
 
  <b-modal hide-header  hide-footer  centered ref="myModalRef" hide-footer title="Using Component Methods">
-      <div class="d-block ">
-          <div style="white-space: pre-wrap;">{{job3}}</div>
+        <div class="d-block ">
+          <div style="     margin-bottom: 10px;white-space: pre-wrap;">{{job3}}</div>
 
-      <br>
-         
+      
+              <strong style="    color: rgb(49, 103, 183);
+    font-size: 17px;
+    margin-top: 0px;
+    margin-bottom: 3px;
+    font-weight: 400;
+    padding-right: 10px;
+"> By {{creator_name2 }}  </strong> 
+       
+
+   <b-row style="    margin-bottom: 16px;">
+
+     <b-col cols="12">
+      <!-- <b-img style="border-radius: 5px" width="50px" height="50px" fluid src="https://picsum.photos/250/250/?image=54" alt="Thumbnail" /> -->
+              <p style="    color: rgb(49, 103, 183);
+    font-size: 16px;
+  
+    margin-bottom: 0px;
+    font-weight: 400;
+    padding-right: 10px;
+    margin-top: 7px;
+"> Contact เจ้าของงาน
+   </p>  
+              <strong style="    color: rgb(49, 103, 183);
+    font-size: 16px;
+  
+    margin-bottom: 0px;
+    font-weight: 400;
+    padding-right: 10px;
+"> {{'Line/เบอร์: ' + contact2 }}
+   </strong>  
+               </b-col>   
+</b-row>
+
    <b-row>
-             <b-col cols="9" >
-     <b-button size="lg" style="  background-color: #33C1C1; border: 0px; padding-left: 66px;
+             <b-col cols="12" >
+
+
+
+     <b-button v-if="contactUrl2"  :href="contactUrl2" style=" width:100%;     color: white; background-color: #33C1C1; border: 0px; padding-left: 66px;
     padding-right: 66px;">ติดต่อ</b-button>  
              </b-col>
-               <b-col cols="3">
-      <b-img style="border-radius: 5px" width="50px" height="50px" fluid src="https://picsum.photos/250/250/?image=54" alt="Thumbnail" />
-
-               </b-col>         
+                  
 
          </b-row>
       </div>
@@ -286,7 +321,10 @@ export default {
       isblank: '',
       text:'',
       profile2: false,
-     
+      creator_name2 : '',
+      contact2:'',
+      contactUrl2 :'',
+
 
   
     }
@@ -401,7 +439,11 @@ let createPost = {
       this.$refs.myModalRef.show(item) 
       this.job3 = item.job
       console.log(item.job  );
-      
+          this.creator_name2 = item.creator_name
+    this.contact2 = item.contact
+    this.contactUrl2 = item.contactUrl
+    console.log(this.contactUrl2);
+    
 
     
     
@@ -480,5 +522,14 @@ a{
     font-weight: 600;
     font-size: 18px;
     font-family:"Sukhumvit Set",sans-serif; 
+}
+
+
+label{
+
+  margin-left: 6px!important;
+}
+.btn-secondary:not(:disabled):not(.disabled):active:focus, .btn-secondary:not(:disabled):not(.disabled).active:focus, .show > .btn-secondary.dropdown-toggle:focus {
+    box-shadow: 0 0 0 0.2rem rgba(255, 255, 255, 0);
 }
 </style>
