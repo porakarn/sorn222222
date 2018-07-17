@@ -1,12 +1,12 @@
 <template>
 <b-container fluid style="padding: 0px;">
     <div class="responsive" >
-<b-nav fill tabs>
+<b-nav fill tabs style="margin-top:-7px;    background-color: #cdf4d7; box-shadow: 0px 2px 3px -1px rgba(126, 126, 126, 0.2), 0px 4px 5px 0px rgba(0, 0, 0, 0), 0px 1px 10px 0px #00000003;">
   <b-nav-item  > <nuxt-link to="/agent/myjob">ทั้งหมด</nuxt-link></b-nav-item>
  <b-nav-item >  <nuxt-link to="/agent/status/1">ว่าง </nuxt-link></b-nav-item>
   <b-nav-item > <nuxt-link to="/agent/status/2">รอจ่ายเงิน</nuxt-link></b-nav-item>
-    <b-nav-item   style="border-bottom: 2px solid;
-    border-bottom-color: #82d9d9;
+    <b-nav-item  style="border-bottom: 4px solid;
+    border-bottom-color: #ffffff; color: #5b7a69;
 " ><nuxt-link to="/agent/status/3">ปิดแล้ว</nuxt-link></b-nav-item>
 
 
@@ -426,5 +426,12 @@ border: 1px solid rgba(193, 193, 193, 0.12);
     .responsive {
         display: block;
     }
+    a{
+
+    color: #4159539c;
+    font-weight: 500;
+    font-size: 17px;
+    font-family:"Sukhumvit Set",sans-serif; 
+}
 }
 </style>
