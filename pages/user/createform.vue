@@ -340,7 +340,7 @@ if ( sat2 === true ) {
         day : day,
         subject : subject,
         tutorid: this.$store.state.user._id,
-        contact: this.$store.state.user.phone,
+        contact: this.$store.state.user.line,
         creator_name : this.$store.state.user.name
 
       }

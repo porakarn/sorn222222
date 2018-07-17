@@ -22,7 +22,7 @@
     </b-form-textarea>
 
     <br>
-   <b-button @click=" clickcopy"  v-clipboard:copy="thingToCopy"  size="lg"  style="background-color: #33C1C1; border: 0px; padding-left: 36px;
+   <b-button @click="clickcopy"  v-clipboard:copy="thingToCopy"  size="lg"  style="background-color: #33C1C1; border: 0px; padding-left: 36px;
     padding-right: 36px;"><i class="fa fa-clone" aria-hidden="true"></i>
   Copy</b-button>
 

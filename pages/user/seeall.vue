@@ -85,8 +85,6 @@
 
 
 
-
-
 <br><br>
       <input type="checkbox" id="jack" value="จันทร์" v-model="checkedNames">
   <label for="jack">จันทร์</label> &nbsp;&nbsp;&nbsp;
@@ -133,6 +131,11 @@
 "><i style=" font-size: 20px; color: #667a6b;" class="fa fa-search nav-item " aria-hidden="true"></i> ลองค้นหางานดูสิ</b-button>
    </div> <br>
  </b-col></b-row>
+    <b-button  v-clipboard:copy="thingToCopy"   style="background-color: #33C1C1; border: 0px; padding-left: 36px;
+    padding-right: 36px;"><i class="fa fa-clone" aria-hidden="true"></i>
+  Copy</b-button>
+    
+
 
    <div v-for="course in courses" >
 
@@ -191,40 +194,60 @@
  <b-modal no-fade hide-header  hide-footer  centered ref="myModalRef" hide-footer title="Using Component Methods">
       <div class="d-block ">
         <div v-if="profile2">
-          <div style="white-space: pre-wrap;">{{job3}}</div>
+          <div style="     margin-bottom: 10px;white-space: pre-wrap;">{{job3}}</div>
 
       
-             <p style="color: grey"> ส่งโปรไฟล์ของคุณ</p>
+             <strong style="color: grey"> ส่งโปรไฟล์ของคุณ</strong>
+              <strong style="    color: rgb(49, 103, 183);
+    font-size: 17px;
+    margin-top: 0px;
+    float: right;
+    margin-bottom: 3px;
+    font-weight: 400;
+    padding-right: 10px;
+"> By {{creator_name2 }}  </strong> 
          <b-form-textarea id="textarea1"
                      v-model="text"
                      placeholder="Enter something"
-                     :rows="4"
+                     :rows="3"
                      :max-rows="6">
     </b-form-textarea>
-    <p style="color: grey">  Copy</p>
+
+    <br>
+
+     <b-button  v-clipboard:copy="thingToCopy"   style="background-color: #33C1C1; border: 0px; padding-left: 36px;
+    padding-right: 36px;"><i class="fa fa-clone" aria-hidden="true"></i>
+  Copy</b-button>
     
-   <b-row>
-             <b-col cols="7" >
 
+<b-row style="    margin-bottom: 16px;">
 
-
-     <b-button  style="  background-color: #33C1C1; border: 0px; padding-left: 66px;
-    padding-right: 66px;">ติดต่อ</b-button>  
-             </b-col>
-               <b-col cols="5">
+     <b-col cols="12">
       <!-- <b-img style="border-radius: 5px" width="50px" height="50px" fluid src="https://picsum.photos/250/250/?image=54" alt="Thumbnail" /> -->
               <strong style="    color: rgb(49, 103, 183);
     font-size: 16px;
-    margin-top: 11px;
-    float: right;
+  
     margin-bottom: 0px;
     font-weight: 400;
     padding-right: 10px;
-"> {{ contact2  }} {{ line2}}
- By {{creator_name2 }}  </strong>  
-               </b-col>         
+"> {{'Line/เบอร์: ' + contact2 }}
+   </strong>  
+               </b-col>   
+</b-row>
+
+   <b-row>
+             <b-col cols="12" >
+
+
+
+     <b-button  :href="contactUrl2" style=" width:100%;  background-color: #33C1C1; border: 0px; padding-left: 66px;
+    padding-right: 66px;">ติดต่อ</b-button>  
+             </b-col>
+                  
 
          </b-row>
+
+
            </div>
 
            <div v-if="!profile2">
@@ -237,57 +260,8 @@
       </div>
     </b-modal>
 
- <!-- <b-modal hide-header  hide-footer  centered ref="myModalRef" hide-footer title="Using Component Methods">
-      <div class="d-block ">
-          <div style="white-space: pre-wrap;">{{job3}}</div>
-
-      <br>
-         
-   <b-row>
-             <b-col cols="9" >
-     <b-button size="lg" style="  background-color: #33C1C1; border: 0px; padding-left: 66px;
-    padding-right: 66px;">ติดต่อ</b-button>  
-             </b-col>
-               <b-col cols="3">
-      <b-img style="border-radius: 5px" width="50px" height="50px" fluid src="https://picsum.photos/250/250/?image=54" alt="Thumbnail" />
-
-               </b-col>         
-
-         </b-row>
-      </div>
-    </b-modal> -->
-
-     <!-- <b-modal hide-header  hide-footer id="modal-center" centered title="Bootstrap-Vue">
- <p style=" color:#2f2f2f" class="card-text">A123 IELTS ขอพี่ จุฬา
-             <br>ช ม 4 ( สวนกุหลาบ ) 
-<br>  สยามพารากอน ส-อ 12-14 น
-<br> ค่าสอน 600 fee 1200
- {{ job}}
-         </p> 
-         
-               
-             <p style="color: grey"> ส่งโปรไฟล์ของคุณ</p>
-         <b-form-textarea id="textarea1"
-                     v-model="text"
-                     placeholder="Enter something"
-                     :rows="4"
-                     :max-rows="6">
-    </b-form-textarea>
-    <p style="color: grey">  Copy</p>
-   <b-row>
-             <b-col cols="9" >
-     <b-button size="lg" style="  background-color: #33C1C1; border: 0px; padding-left: 66px;
-    padding-right: 66px;">ติดต่อ</b-button>  
-             </b-col>
-               <b-col cols="3">
-      <b-img style="border-radius: 5px" width="50px" height="50px" fluid src="https://picsum.photos/250/250/?image=54" alt="Thumbnail" />
-
-               </b-col>         
-
-         </b-row>
-          </b-modal>
-
- -->
+ 
+ 
 
 
 
@@ -301,6 +275,11 @@
 <script>
 import axios from 'axios';
 import moment from 'moment'
+
+import VueClipboard from 'vue-clipboard2'
+import Vue from 'vue';
+
+Vue.use(VueClipboard);
 export default {
    data () {
     return {
@@ -334,12 +313,24 @@ export default {
       creator_name2 : '',
       contact2:'',
       contactUrl2 :'',
-      line2:''
-     
+      thingToCopy: `A string that's not all that long or important. Sorry to disappoint.`
+
 
   
     }
   },
+
+  // mounted() {
+  //   this.text2 = 'dsdddd'
+  //     // this.text2 = this.$store.state.user.profile + '\n ' + 'วิชาที่สอน: ' + this.$store.state.user.subject + '\n ' +'เบอร์ติดต่อ: '+ this.$store.state.user.phone 
+  //     this.thingToCopy = this.text2
+  //     console.log(' text2:' + this.text2);
+  //     console.log(' text2:' + this.thingToCopy);
+      
+  // },
+
+
+
 // mounted() {
   
 
@@ -386,6 +377,12 @@ export default {
 
 
   },
+
+  mounted() {
+      this.text = 'http://localhddd/user/rating/'+this.$store.state.user._id
+      this.thingToCopy = this.text
+  },
+
 
     methods: {
 logout(){
@@ -450,12 +447,15 @@ let createPost = {
       this.$refs.myModalRef.show(item) 
       this.job3 = item.job
       console.log(item.job  );
-            this.text = 'วิชาที่สอน: '+ this.$store.state.user.subject + this.$store.state.user.profile
- 
+           
+  this.text = this.$store.state.user.profile + '\n ' + 'วิชาที่สอน: ' + this.$store.state.user.subject + '\n ' +'เบอร์ติดต่อ: '+ this.$store.state.user.phone 
     this.creator_name2 = item.creator_name
     this.contact2 = item.contact
     this.contactUrl2 = item.contactUrl
-    this.line2 = item.line
+    console.log(this.contactUrl2);
+    
+    
+    
       if (this.$store.state.user.profile) {
         this.profile2 = true
       }
