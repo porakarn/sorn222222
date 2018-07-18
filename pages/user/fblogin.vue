@@ -7,16 +7,18 @@
 
   <b-row>
 <b-col md="6" offset-md="3">
-<img style="    width: 100%;" src="https://www.sorns.co/wp-content/uploads/2018/01/sds.png" alt="">
+<img style="    width: 100%;"  src="/sornspic4.png"/>
       <br>
       <br>
 </b-col></b-row>
 
    <b-row>
-<b-col md="6" offset-md="4">
+<b-col >
 <a href="#" @click="doLogin" >
-         
+         <div style="text-align: center">
           <img style="width: 340px;" src="https://i.stack.imgur.com/oL5c2.png" alt="">
+
+         </div>
         </a>
 </b-col></b-row>
  <br><br>
