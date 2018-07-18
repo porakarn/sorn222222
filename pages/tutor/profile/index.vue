@@ -11,7 +11,7 @@
     <b-row>
         <b-col cols="4">
           
-  <b-img rounded="circle" v-if="this.$store.state.haveProfile" style="width: 70px" :src="this.$store.state.user.picture"/>
+  <b-img rounded="circle" style="width: 70px" :src="picture"/>
     <!-- <b-img  style="width: 90px; " rounded="circle" :src="$store.state.user.picture" /> -->
 
         </b-col>
@@ -186,6 +186,7 @@ return
   },
   mounted() {
     this.name = this.$store.state.user.name
+    this.picture = this.$store.state.user.picture
   },
     computed: {
     isUserLoggedIn () {
