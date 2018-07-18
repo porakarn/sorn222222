@@ -55,7 +55,7 @@ export default {
     }
   },
   mounted() {
-      this.text = 'http://localhost:3000/user/rating/'+this.$store.state.user._id
+      this.text = 'https://sorns.co/'+this.$store.state.user._id
       this.thingToCopy = this.text
   },
 
