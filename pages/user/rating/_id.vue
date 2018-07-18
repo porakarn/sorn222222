@@ -8,7 +8,8 @@
     
  
     width:40%
-"  src="https://scontent.fbkk5-6.fna.fbcdn.net/v/t1.0-1/p240x240/15873069_1211350558943201_5314025003629794223_n.jpg?_nc_cat=0&oh=429da1d277ec885fbbc86409fac1dd86&oe=5BA39AF5"/>
+"  :src="picture"/>
+
 </div>
 <br><br>
 <div style="width: 267px;
