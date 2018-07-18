@@ -24,7 +24,7 @@
     font-family: kanit;
     border-top-width: 0px;
         border-bottom-width: 0px
-"> sorns</b-button>
+"> sornss</b-button>
         
           <b-button v-b-modal.modal1  class="responsive" style="font-size: 17px; color: #667a6b; float:right;
     background-color: #effdf3;

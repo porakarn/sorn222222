@@ -428,7 +428,7 @@ border-top: 0px;
 a{
 
     color: #4159539c;
-    font-weight: 600;
+    font-weight: 6s00;
     font-size: 18px;
     font-family:"Sukhumvit Set",sans-serif; 
 }
