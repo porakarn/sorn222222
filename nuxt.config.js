@@ -59,10 +59,17 @@ module.exports = {
 
     {
       src: '~/plugins/localStorage.js',
-      ssr: false
-    }
+      ssr: false,
+    
+    },
+
+        {
+          src: '~/plugins/hotjar',
+          ssr: false
+        }
+
   
-   
+  
 
   ],
 
