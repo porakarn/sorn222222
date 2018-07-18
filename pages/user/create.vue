@@ -10,7 +10,7 @@
 </b-nav>
 
 <b-container fluid>
-<br><br>
+<br>
 
 <div v-if="!line" style="text-align: center;">
 <p style=" color:#86a5ca" > ติวเตอร์ก็สามารถโพสงานสอนเหมือนนายหน้าได้
