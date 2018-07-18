@@ -31,6 +31,14 @@
     }
     },
    
+   head () {
+    return {
+      title: this.title,
+      meta: [
+        { hid: 'description', name: 'description', content: 'สร้าง Community ของการสอนไปด้วยกัน' }
+      ]
+    }
+  },
     methods: {
 
      totutor(){
