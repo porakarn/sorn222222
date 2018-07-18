@@ -11,7 +11,11 @@
  </div>
 
 <br>
-
+<p style=" color:#86a5ca ; text-align: center;
+" >
+ส่ง link เชิญให้นักเรียนของคุณเข้ามา review คุณ 
+ช่วยให้ โปรไฟล์คุณน่าเชื่อถือขึ้น  + ได้นักเรียนใหม่มากขึ้น
+</p>
 
     <br>
     <b-form-textarea class="formpor" id="textarea1" size="lg"
