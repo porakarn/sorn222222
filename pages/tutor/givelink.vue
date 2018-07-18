@@ -59,7 +59,7 @@ export default {
     }
   },
   mounted() {
-      this.text = 'https://sorns.co/'+this.$store.state.user._id
+      this.text = 'https://sorns.co/user/rating/'+this.$store.state.user._id
       this.thingToCopy = this.text
   },
 

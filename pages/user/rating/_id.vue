@@ -1,6 +1,8 @@
 <template>
 <b-container fluid>
 <br>
+<b-col md="6" offset-md="3">
+
 <div style="text-align:center" >
     <b-img centered  style="width: 90px; border-radius:15px ;
     
@@ -29,7 +31,11 @@
     <br>
    <b-button @click="por" size="lg" type="submit" style="background-color: #33C1C1; border: 0px; padding-left: 36px;
     padding-right: 36px;">เรียบร้อย</b-button>
-    <br><br><br><br>
+    <br> <br> <p style="color:#1ea71e;">{{message}}</p> 
+    
+    <p style="color: red;">{{error}}</p>
+     <br><br><br>
+</b-col>
 </b-container>
 </template>
 
@@ -45,7 +51,10 @@ export default {
     review_write: '',
     topic: '',
     studentid: '',
-    tutorid: ''
+    tutorid: '',
+    picture: '',
+    message: '',
+    error: ''
      
     }
   },
@@ -55,6 +64,16 @@ mounted() {
      this.$router.push('/student/login')
 
     }
+ var createpost = {
+        tutorid: this.$route.params.id
+
+ }
+
+  axios.post('http://localhost:8000/findtutorbyid', createpost)
+          .then((res) => { 
+              this.picture = res.data.picture
+              console.log(res.data)
+          }).catch(error => console.log(error))
 },
 
 
@@ -73,15 +92,25 @@ mounted() {
            
 
              console.log(createpost);
-            //  axios.post('https://frozen-mesa-40722.herokuapp.com/job/create', createPost)
+
+if (this.rating > 0) {
+     //  axios.post('https://frozen-mesa-40722.herokuapp.com/job/create', createPost)
                 axios.post('http://localhost:8000/review', createpost)
           .then((res) => { 
               
               console.log(res.data)
-        
-  
+              this.review_write = ''
+              this.message = 'คุณได้ทำการรีวิวติวเตอร์เรียบร้อย Thank you '
+              this.error =''
+              this.rating = 0
           })
           .catch(error => console.log(error))
+} else {
+
+    this.error = 'ต่ำสุดคือ 0.5 คะแนน'
+}
+
+           
     
 
       }
