@@ -1,8 +1,10 @@
 <template>
 <b-container fluid style="padding: 0px;">
-<b-row>
-<b-col md="6" offset-md="3">
+
 <b-container fluid>
+
+  <b-row>
+<b-col md="6" offset-md="3">
     <br>
 
 
@@ -131,11 +133,11 @@ color: #484848; border:1px !important;">โปรไฟล์ของคุณ<
   </div>
      </b-col></b-row>
   <br><br><br> 
-
+</b-col></b-row>
 </b-container>
 
 
-</b-col></b-row>
+
 <b-nav fill tabs style=" position: fixed;    width:100%;
   border-top:1px solid;
   border-color: #e2e5e957;

@@ -35,11 +35,11 @@
 "><i style=" font-size: 20px; color: #667a6b;   " class="fa fa-search nav-item " aria-hidden="true"></i> ลองค้นหางานดูสิ</b-button>
         <b-collapse is-nav id="nav_text_collapse">
             <b-navbar-nav class="ml-auto">
-               <b-nav-item  style=" color:#345d46;   padding-right: 65px;">   <nuxt-link class="nav-item" style="color:#345d46; " to="/user/seeall">  <i class="fa fa-search " aria-hidden="true"></i>  Search  </nuxt-link></b-nav-item>
-             <b-nav-item  style="    padding-right: 65px;">  <nuxt-link class="nav-item" style="color:#345d46; " to="/user/create">  <i class="fa fa-pencil" aria-hidden="true"></i> Add New  </nuxt-link></b-nav-item>
-             <b-nav-item  style="    padding-right: 65px;"><nuxt-link class="nav-item" style="color:#345d46; " to="/user/alltutor"> <i class="fa fa-book" aria-hidden="true"></i> All Tutor </nuxt-link></b-nav-item>
-             <b-nav-item style="    padding-right: 65px;"><nuxt-link class="nav-item" style="color:#345d46; " to="/tutor/profile"><i class="fa fa-user-circle" aria-hidden="true"></i> Profile </nuxt-link></b-nav-item>
-              <b-nav-item  @click="logout" style="    padding-right: 100px;"><nuxt-link  style="color:#345d46; " to="/tutor/createprofile"><i class="fa fa-sign-out" aria-hidden="true"></i> Logout </nuxt-link></b-nav-item>
+               <b-nav-item  style=" color:#345d46;   padding-right: 65px;">   <nuxt-link class="nav-item" style="color:#345d46; font-weight: 400; font-size:16px " to="/user/seeall">  <i class="fa fa-search " aria-hidden="true"></i>  Search  </nuxt-link></b-nav-item>
+             <b-nav-item  style="    padding-right: 65px;">  <nuxt-link class="nav-item" style="color:#345d46;  font-weight: 400; font-size:16px" to="/user/create">  <i class="fa fa-pencil" aria-hidden="true"></i> Add New  </nuxt-link></b-nav-item>
+             <b-nav-item  style="    padding-right: 65px;"><nuxt-link class="nav-item" style="color:#345d46; font-weight: 400; font-size:16px font-weight: 400; font-size:16px " to="/user/alltutor"> <i class="fa fa-book" aria-hidden="true"></i> All Tutor </nuxt-link></b-nav-item>
+             <b-nav-item style="    padding-right: 65px;"><nuxt-link class="nav-item" style="color:#345d46; font-weight: 400; font-size:16px " to="/tutor/profile"><i class="fa fa-user-circle" aria-hidden="true"></i> Profile </nuxt-link></b-nav-item>
+              <b-nav-item  @click="logout" style="    padding-right: 100px;"><nuxt-link  style="color:#345d46;  font-weight: 400; font-size:16px" to="/tutor/createprofile"><i class="fa fa-sign-out" aria-hidden="true"></i> Logout </nuxt-link></b-nav-item>
 
                 <!-- <b-nav-text>Navbar text</b-nav-text>
                 <nuxt-link to="/user/user">Users</nuxt-link>
@@ -274,8 +274,8 @@
 
  
  
+      <br><br>
 
-ิ<br><br>
 
 
 

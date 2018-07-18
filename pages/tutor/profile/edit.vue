@@ -74,7 +74,7 @@
 color: rgb(117, 119, 120); border:1px !important;">โปรไฟล์ของคุณ</p>
     <b-form-textarea class="formpor"  id="textarea1"
                      v-model="profile"
-                     :rows="8"
+                     :rows="6"
                      :max-rows="9">
     </b-form-textarea>
     <br>
