@@ -9,7 +9,19 @@
  
 </b-nav>
 <b-container fluid>
-<br><br>
+<br>
+
+<div v-if="!line" style="text-align: center;">
+<p style=" color:#86a5ca" > ติวเตอร์ก็สามารถโพสงานสอนเหมือนนายหน้าได้
+ กรุณากรอกเบอร์โทร กับ Line ก่อน จึงสามารถโพสงานสอนของคุณได้</p>
+  <nuxt-link to="/tutor/profile/edit">
+    <b-button   style="box-shadow: 0 1px 1px 1px rgba(111, 111, 111, .23);
+    width: auto;  background-color: #33C1C1; border: 0px; padding-left: 46px; color:white;
+    padding-right: 46px;">กรอกโปรไฟล์</b-button>  </nuxt-link>
+</div>
+
+
+<br>
   <div> <div class="my-3">
  
 </div>
@@ -50,7 +62,7 @@
       </b-form-group>
 
     <!-- <pre class="mt-3">{{ text }}</pre> -->
-        <b-button style="background-color: #33C1C1; border: 0px; padding-left: 46px;
+        <b-button v-if="line" style="background-color: #33C1C1; border: 0px; padding-left: 46px;
     padding-right: 46px;" @click.prevent="next()">ต่อไป</b-button>
 
               </div>
@@ -191,6 +203,7 @@ export default {
        step:1,
        str5:'',
        subject:'',
+       line:'',
       job: '',
       day: '',
        form: {
@@ -215,6 +228,9 @@ export default {
       ],
   
     }
+  },
+    mounted() {
+    this.line = this.$store.state.user.line
   },
 
 methods: {
@@ -412,7 +428,7 @@ border-top: 0px;
 a{
 
     color: #4159539c;
-    font-weight: 500;
+    font-weight: 600;
     font-size: 18px;
     font-family:"Sukhumvit Set",sans-serif; 
 }

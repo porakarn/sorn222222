@@ -1,26 +1,52 @@
 <template>
-  <b-container>
+  <b-container fluid>
 <br>
+
+<b-row>
+    <b-col>
 <p style=" color:#86a5ca ; text-align: center;
 " >
  Comming Soon</p>
+    </b-col>
+
+</b-row>
+
+<b-row>
+<b-col>
 <p style=" color:#86a5ca ; text-align: center;
 " >
  ระบบแชร์เอกสาร กับ ส่วนลดโปรโมชั่นตามร้านกาแฟ Co-Working Space is comming soon</p>      
  <br>
- 
-   <p style=" color:#86a5ca ; text-align: center;" >
+</b-col>
+</b-row>
+
+
+<b-row>
+  <b-col>
+<p style=" color:#86a5ca ; text-align: center;
+" >
  ติดตามอัพเดทต่างๆได้ที่ </p>
+    </b-col>
+
+
+    
+
+</b-row>
+
 
 <div style="text-align:center">
-    <b-button href="https://line.me/R/ti/p/%40dxc2481h" size="lg" style="box-shadow: 0 1px 1px 1px rgba(111, 111, 111, .23);
-    width: 60%;  background-color: #33C1C1; border: 0px; padding-left: 66px;
+   <b-button href="https://line.me/R/ti/p/%40dxc2481h" size="lg" style="box-shadow: 0 1px 1px 1px rgba(111, 111, 111, .23);
+    width: auto;  background-color: #33C1C1; border: 0px; padding-left: 66px;
     padding-right: 66px;">ติดตามเรา</b-button>  
 </div>
-  </b-container>
 
 
+ 
+
+ 
+ 
   </b-container>
+
 
 
 

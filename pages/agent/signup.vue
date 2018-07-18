@@ -218,7 +218,7 @@ console.log(res.data);
 
          this.$store.dispatch('setToken', res.data.token)
    this.$store.dispatch('setAgent', res.data.user)
-   this.$router.push('/agent/createprofile')
+   this.$router.push('/agent/createprofilefirst')
    
                 // console.log(res.data.token)
                 // console.log(this.token)

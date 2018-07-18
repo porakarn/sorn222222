@@ -4,12 +4,14 @@
 <b-container fluid>
 
    <br> 
-            <p style="    text-align: center;
-" v-if="!course5" >คุณยังไม่มีงานที่โพสไว้</p>
-
+          
         <p style=" color:#86a5ca ; text-align: center;
 " ><i class="fa fa-pencil-square-o" aria-hidden="true"></i>
  งานที่คุณโพสไว้</p>
+
+   <p style="    text-align: center;
+" v-if="courses.length < 1" >คุณยังไม่มีงานที่โพสไว้</p>
+
  <div v-for="course in courses" >
 
 <b-row>

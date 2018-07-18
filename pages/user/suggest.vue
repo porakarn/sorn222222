@@ -16,7 +16,26 @@
 </b-nav>
 
 <b-container fluid> 
+   <p style="  color:#86a5ca ;  margin-top:15px;  text-align: center;
+" v-if="courses.length < 1" >คุณยังไม่มีงานแนะนำ</p>
+
+        <br>
+ 
+<div v-if="!subject" style="text-align:center">
+
+ <p style="  color:#86a5ca ; 
+"  >กรุณากรอกโปรไฟล์ให้ครบก่อน หลังจากนั้น ระบบจะช่วย recommend งานสอนตามวิชาที่คุณสอนกับโปรไฟล์ของคุณ</p>
+
+    <nuxt-link to="/tutor/profile/edit">
+    <b-button   style="box-shadow: 0 1px 1px 1px rgba(111, 111, 111, .23);
+    width: auto;  background-color: #33C1C1; border: 0px; padding-left: 46px; color:white;
+    padding-right: 46px;">กรอกโปรไฟล์</b-button>  </nuxt-link>
+
+</div>
+
+
 <br>
+ 
   
    <div v-for="course in courses" >
 
@@ -150,7 +169,7 @@ import moment from 'moment'
 export default {
    data () {
     return {
-      courses: null,
+      courses: {},
       job3: '',
         isblank: '',
       text:'',
@@ -158,12 +177,15 @@ export default {
       creator_name2 : '',
       contact2:'',
       contactUrl2 :'',
+      subject:''
      
   
     }
   },
 mounted() {
   
+this.subject = this.$store.state.user.subject
+
 if(this.$store.state.user.tag.length>1){
 let suggest = {
       

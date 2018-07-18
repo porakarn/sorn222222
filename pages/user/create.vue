@@ -11,6 +11,18 @@
 
 <b-container fluid>
 <br><br>
+
+<div v-if="!line" style="text-align: center;">
+<p style=" color:#86a5ca" > ติวเตอร์ก็สามารถโพสงานสอนเหมือนนายหน้าได้
+ กรุณากรอกเบอร์โทร กับ Line ก่อน จึงสามารถโพสงานสอนของคุณได้</p>
+  <nuxt-link to="/tutor/profile/edit">
+    <b-button   style="box-shadow: 0 1px 1px 1px rgba(111, 111, 111, .23);
+    width: auto;  background-color: #33C1C1; border: 0px; padding-left: 46px; color:white;
+    padding-right: 46px;">กรอกโปรไฟล์</b-button>  </nuxt-link>
+</div>
+
+<br>
+
   <div>    <b-row> <b-col md="6" offset-md="3"> <div class="my-3">
   <p style="float:right;  color: #8f9aa4;"  topleft          placement="placement"
 
@@ -32,10 +44,14 @@
     <!-- <pre class="mt-3">{{ text }}</pre> -->
 
            
+           
 
     
+
+
+
     <br>
-      <b-button type="submit" style="background-color: #33C1C1; border: 0px; padding-left: 36px;
+      <b-button v-if="line" type="submit" style="background-color: #33C1C1; border: 0px; padding-left: 36px;
     padding-right: 36px;">เรียบร้อย</b-button>
      <div style="color: grey" class="loading-page" v-if="loading">
     <p>Loading...</p>
@@ -59,10 +75,14 @@ export default {
        loading: false,
        loading2: false,
       job: '',
+      line: '',
       // subject: [],
       // day: []
   
     }
+  },
+  mounted() {
+    this.line = this.$store.state.user.line
   },
  methods: {
    addarray(){

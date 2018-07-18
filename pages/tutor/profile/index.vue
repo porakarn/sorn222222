@@ -1,11 +1,15 @@
 <template>
 <b-container fluid style="padding: 0px;">
-
+<b-row>
+<b-col md="6" offset-md="3">
 <b-container fluid>
     <br>
+
+
     <b-row>
         <b-col cols="4">
-  <!-- <b-img rounded="circle" style="width: 70px" :src="this.$store.state.user.picture"/> -->
+          
+  <b-img rounded="circle" v-if="this.$store.state.haveProfile" style="width: 70px" :src="this.$store.state.user.picture"/>
     <!-- <b-img  style="width: 90px; " rounded="circle" :src="$store.state.user.picture" /> -->
 
         </b-col>
@@ -41,9 +45,8 @@
 </i> 4.6 (10)  	&nbsp;&nbsp; <i class="fa fa-user" aria-hidden="true"></i> 12 (30 ครั้ง)
   </p> -->
   <nuxt-link to="/tutor/profile/edit">
-  <b-button @click="onSubmit" style="background-color: #33C1C1;      margin-top: 9px;  box-shadow: 0 1px 1px 1px rgba(111, 111, 111, 0.23);
-; border: 0px;    padding-left: 63px;
-    padding-right: 63px;">เขียนโปรไฟล์</b-button>
+  <b-button size="lg" @click="onSubmit" style="background-color: #33C1C1;      margin-top: 9px;  box-shadow: 0 1px 1px 1px rgba(111, 111, 111, 0.23);
+; border: 0px;     width: -webkit-fill-available;">เขียนโปรไฟล์</b-button>
 </nuxt-link>
 
   
@@ -54,17 +57,9 @@
          </b-col> 
              
     </b-row>
-<b-container fluid style="   padding: 0!important">
 
- <div class="ere">
-   <!-- <b-row class="my-1">
-    <b-col sm="10">
-      <b-form-input class="formpor" id="input-large"  type="text" :placeholder="this.$store.state.user.email"></b-form-input>
-    </b-col>
-  </b-row> -->
-   </div></b-container>
    <br>
-  <b-row> <b-col md="8" offset-md="2">
+  <b-row> <b-col >
          <p style="color: #484848; font-size: 17px;margin-bottom: 7px;font-weight: bold;">{{name}}</p>
 
  <!-- <p style="margin-bottom: 0px; color:#484848;  margin-top: 17px; font-size: 19px">วิชาที่คุณสอน
@@ -73,7 +68,7 @@
   
 
   <b-row class="my-1">
-    <b-col sm="10">
+    <b-col >
    
      <p style=" white-space: pre-wrap;"  v-if="this.$store.state.haveProfile"
 > {{this.$store.state.user.subject}} </p>
@@ -98,8 +93,8 @@ color: #484848; border:1px !important;">โปรไฟล์ของคุณ<
 > {{this.$store.state.user.profile}} </p>
  </b-col></b-row>
 
-  <b-row> <b-col md="6" offset-md="2">
-    <b-button style="color: #2b92ff;
+  <b-row> <b-col >
+    <b-button v-if="review" style="color: #2b92ff;
     background-color: #ffffff;
     border-color: #ffffff;" @click="porakarn">รีวิว</b-button> 
     <br><br>
@@ -139,6 +134,8 @@ color: #484848; border:1px !important;">โปรไฟล์ของคุณ<
 
 </b-container>
 
+
+</b-col></b-row>
 <b-nav fill tabs style=" position: fixed;    width:100%;
   border-top:1px solid;
   border-color: #e2e5e957;
@@ -149,7 +146,6 @@ color: #484848; border:1px !important;">โปรไฟล์ของคุณ<
  <b-nav-item @click="nextPage">งานของคุณ</b-nav-item>
  
 </b-nav>
-
 </b-container>
 </template>
 
@@ -169,7 +165,8 @@ export default {
     text:'',
     subject:'',
     reviews:'',
-    name:''
+    name:'',
+    picture: ''
   
     }
   },

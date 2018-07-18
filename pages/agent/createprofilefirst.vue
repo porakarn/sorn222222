@@ -1,5 +1,31 @@
 
 <template>
+
+<b-container fluid style="padding:0px;">
+
+   <div>
+    <b-navbar  style="    padding-bottom: 12px;
+    padding-top: 12px;  background-color:#cdf4d7!important;"toggleable variant="light">
+   
+      
+   <b-button   style="  font-size: 21px;
+    color: #64e2cd94;
+    font-weight: 500;
+    background-color: #effdf3;
+    border-color: #6c757d00;
+    border-radius: 18px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    padding-left: 8px;
+    padding-right: 8px;
+    font-family: kanit;
+    border-top-width: 0px;
+        border-bottom-width: 0px
+"> sorns</b-button>
+       
+    </b-navbar>
+</div>
+
 <b-container fluid>
 
 <br><br>
@@ -92,7 +118,7 @@
 </b-row>
 
 </b-container>
-
+</b-container>
 </template>
 
 <script>
@@ -111,13 +137,17 @@ import axios from 'axios';
 
     }
 },
+
 mounted() {
-  this.pagename = this.$store.state.agent.pagename
-  this.contactUrl = this.$store.state.agent.contactUrl
-  this.image = this.$store.state.agent.picture
-  this.contact = this.$store.state.agent.contact
-  this.line = this.$store.state.agent.line
+  if (this.$store.state.agent.pagename) {
+this.$router.push('/agent/create')
+
+  }
 },
+
+
+
+
   methods: {
      onFileChange(e) {
       var files = e.target.files || e.dataTransfer.files;
@@ -174,6 +204,8 @@ let data2 = {
             this.$nuxt.$loading.finish()
              this.loading = false
              this.loading2 = true
+
+             this.$router.push('/agent/create')
           })
           .catch(error => console.log(error))
 
@@ -183,7 +215,7 @@ let data2 = {
 
 }
  },
-      layout: 'agent'
+      layout: 'auth'
    
 
 }
