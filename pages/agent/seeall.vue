@@ -204,15 +204,25 @@
         <div class="d-block ">
           <div style="     margin-bottom: 10px;white-space: pre-wrap;">{{job3}}</div>
 
-      
-              <strong style="    color: rgb(49, 103, 183);
+          <nuxt-link v-if="tutorid2"  :to="tutorid3">    <strong style="    color: rgb(49, 103, 183);
     font-size: 17px;
     margin-top: 0px;
-    margin-bottom: 6px;
+    float: right;
+    margin-bottom: 3px;
     font-weight: 400;
     padding-right: 10px;
 "> <i class="fa fa-user-o" style="    font-size: 16px;
-    color: grey;" aria-hidden="true"></i> {{creator_name2 }}  </strong> 
+    color: grey;" aria-hidden="true"></i> {{creator_name2.replace(/\w+[.!?]?$/, '') }}  </strong> </nuxt-link>
+
+    <nuxt-link v-if="agentid2"  :to="agentid3">    <strong style="    color: rgb(49, 103, 183);
+    font-size: 17px;
+    margin-top: 0px;
+    float: right;
+    margin-bottom: 3px;
+    font-weight: 400;
+    padding-right: 10px;
+"> <i class="fa fa-user-o" style="    font-size: 16px;
+    color: grey;" aria-hidden="true"></i> {{creator_name2.replace(/\w+[.!?]?$/, '') }}  </strong> </nuxt-link>
        
 
    <b-row style="   margin-top: 8px;   margin-bottom: 16px;">
@@ -302,7 +312,12 @@ export default {
       creator_name2 : '',
       contact2:'',
       line2 :'',
-      linelink:''
+      linelink:'',
+        tutorid2:'',
+      tutorid3:'',
+      agentid2:'',
+      agentid3:''
+
 
 
   
@@ -422,6 +437,10 @@ let createPost = {
     this.contact2 = item.contact
     this.line2 = item.line
     this.linelink = 'http://line.me/ti/p/~' + item.line
+    this.tutorid2 = item.tutorid
+    this.tutorid3 = '/tutor/' + item.tutorid
+    this.agentid2  = item._creator 
+    this.agentid3 = '/agent/' + item._creator
 
     console.log(this.linelink);
     

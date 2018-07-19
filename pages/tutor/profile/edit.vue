@@ -101,7 +101,7 @@ export default {
     profile: '',
     subject: '',
     text2: '',
-    tag:'',
+    
     line:''
 
   
@@ -129,6 +129,8 @@ export default {
         this.loading = true
           var str1 = this.subject
 
+var tag = []
+
 var math1 = ["PAT1", "PAT 1", "math", "คณิต", "คณิตศาสตร์", "เลข"];
 var eng1 = ["GAT ENG","ENG","Eng","Gat Eng","IELTS", "Ielts", "อังกฤษ", "Speaking","speaking", "ielts","eng" ]
 var science = ["เคมี","chemistry","Chemistry","วิทย์","ฟิสิกส์", "Physics", "Physic", "วิทยาศาสตร์", "Science","science" ]
@@ -153,27 +155,36 @@ var social2 = social.some(el => str1.includes(el));
 
 
 if ( math2 === true ) {
-  this.tag = "คณิต"
-} else if ( eng2 === true ) {
-   this.tag = "ENG"
-}  else if ( science2 === true ) {
-   this.tag = "วิทย์"
-} else if ( chinese2 === true ) {
-   this.tag = "จีน"
-} else if ( japan2 === true ) {
-   this.tag = "ญี่ปุ่น"
-}  else if ( korea2 === true ) {
-   this.tag = "Korean"
-} else if ( thai2 === true ) {
-   this.tag = "ไทย"
-} else if ( social2 === true ) {
-   this.tag = "สังคม"
+   tag.push("คณิต")
+} 
+
+if ( eng2 === true ) {
+   tag.push("ENG")
+}  
+if ( science2 === true ) {
+     tag.push("วิทย์")
+} 
+ if ( chinese2 === true ) {
+     tag.push("จีน")
+} 
+ if ( japan2 === true ) {
+   tag.push("ญี่ปุ่น")
+} 
+ if ( korea2 === true ) {
+   tag.push("Korean")
+} 
+if ( thai2 === true ) {
+   tag.push("ไทย")
+} 
+ if ( social2 === true ) {
+   tag.push("สังคม")
 } 
  
  
 
  
  
+console.log(tag);
 
 
 
@@ -182,7 +193,7 @@ if ( math2 === true ) {
              phone : this.phone,
              subject: this.subject,
              name: this.$store.state.user.name, 
-             tag: this.tag,
+             tag: tag,
              line: this.line
 
            }
@@ -195,7 +206,7 @@ if ( math2 === true ) {
              email: this.$store.state.user.email,
              _id: this.$store.state.user._id,
              picture: this.$store.state.user.picture,
-             tag: this.tag,
+             tag: tag,
             line: this.line
 
            }

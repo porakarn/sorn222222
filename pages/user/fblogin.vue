@@ -200,6 +200,8 @@ console.log('r6');
   //             console.log(res.data)
     this.$store.dispatch('setToken', res.data.token)
    this.$store.dispatch('setUser', res.data.user)
+       this.$store.dispatch('setAgent', null)
+
         console.log('res444')
         this.$router.push('/user/seeall')
         this.$nuxt.$loading.finish()

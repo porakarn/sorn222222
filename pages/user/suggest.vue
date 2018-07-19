@@ -99,7 +99,7 @@
 
       
               <strong style="color: grey"> Copy โปรไฟล์ของคุณ</strong>
-              <strong style="    color: rgb(49, 103, 183);
+            <nuxt-link v-if="tutorid2"  :to="tutorid3">    <strong style="    color: rgb(49, 103, 183);
     font-size: 17px;
     margin-top: 0px;
     float: right;
@@ -107,7 +107,17 @@
     font-weight: 400;
     padding-right: 10px;
 "> <i class="fa fa-user-o" style="    font-size: 16px;
-    color: grey;" aria-hidden="true"></i> {{creator_name2 }}  </strong> 
+    color: grey;" aria-hidden="true"></i> {{creator_name2.replace(/\w+[.!?]?$/, '') }}  </strong> </nuxt-link>
+
+    <nuxt-link v-if="agentid2"  :to="agentid3">    <strong style="    color: rgb(49, 103, 183);
+    font-size: 17px;
+    margin-top: 0px;
+    float: right;
+    margin-bottom: 3px;
+    font-weight: 400;
+    padding-right: 10px;
+"> <i class="fa fa-user-o" style="    font-size: 16px;
+    color: grey;" aria-hidden="true"></i> {{creator_name2.replace(/\w+[.!?]?$/, '') }}  </strong> </nuxt-link>
          <b-form-textarea id="textarea1"
                      v-model="text"
                      style="font-size: 14px;"
@@ -167,7 +177,7 @@
     </b-modal>
 
 
-
+<br><br>
 
 
 
@@ -192,7 +202,11 @@ export default {
       subject:'',
       contact2:'',
       line2 :'',
-      linelink:''
+      linelink:'',
+       tutorid2:'',
+      tutorid3:'',
+      agentid2:'',
+      agentid3:''
      
   
     }
@@ -298,6 +312,10 @@ let suggest = {
    this.contact2 = item.contact
     this.line2 = item.line
     this.linelink = 'http://line.me/ti/p/~' + item.line
+      this.tutorid2 = item.tutorid
+    this.tutorid3 = '/tutor/' + item.tutorid
+    this.agentid2  = item._creator 
+    this.agentid3 = '/agent/' + item._creator
 
     
     
