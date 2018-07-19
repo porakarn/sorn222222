@@ -2,68 +2,43 @@
 <b-container fluid style="padding: 0px;">
 
 <b-container fluid>
-
+  <br><br>
   <b-row>
-<b-col md="6" offset-md="3">
-    <br>
-
-
-    <b-row>
-        <b-col cols="4">
-          
-  <b-img rounded="circle" style="width: 70px" :src="courses.picture"/>
-    <!-- <b-img  style="width: 90px; " rounded="circle" :src="$store.state.user.picture" /> -->
-
-        </b-col>
-         <b-col cols="8" style="        padding-left: 15px;">
-
-<b-row>
-<!-- <b-col cols="4" style="    padding-right: 0px;">
-<p style="  font-size :18px;
-     text-align: center; font-weight: bold; margin-bottom: 0px;">4.6</p>
-<p style=" 
-   color:#949494;  text-align: center;  font-size:14px;  margin-bottom: 0px;"><i style="color: #F1F182;" class="fa fa-star" aria-hidden="true"></i> รีวิว</p>
-</b-col> -->
-<!-- <b-col cols="4">
-<p style="  font-size :18px;
-     text-align: center; font-weight: bold; margin-bottom: 0px;">12</p>
-<p style=" 
-   color:#949494;   text-align: center; font-size:14px;  margin-bottom: 0px;">นักเรียน</p>
-</b-col> -->
-<!-- <b-col cols="4" style="padding-left: 0px;"    >
-<p style="  font-size :18px;
-     text-align: center; font-weight: bold;  margin-bottom: 0px;">12</p>
-<p style=" 
-    color:#949494;  text-align: center; font-size:14px;   margin-bottom: 0px;">ครั้งที่สอน</p>
-</b-col> -->
-
-
-</b-row>
-
-      <!-- <p style="color: rgb(117, 119, 120);">{{ this.$store.state.user.name}}</p> -->
-      <!-- <p style="color:#484848;  font-size: 16px;     margin-bottom: 0px;
-    margin-top: 12px;
- "><i style="color: #F1F182;" class="fa fa-star" aria-hidden="true"></i>
-</i> 4.6 (10)  	&nbsp;&nbsp; <i class="fa fa-user" aria-hidden="true"></i> 12 (30 ครั้ง)
-  </p> -->
-
-  <b-button size="lg"  :href="linelink" style="background-color: #33C1C1;      margin-top: 9px;  box-shadow: 0 1px 1px 1px rgba(111, 111, 111, 0.23);
-; border: 0px;     width: -webkit-fill-available;">ติดต่อ</b-button></a>
-
-
   
-  <!-- <p  v-if="isUserLoggedIn"
-> {{this.$store.state.user.name}} </p>
- <p  v-if="this.$store.state.haveProfile"
-> {{this.$store.state.user.subject}} </p> -->
-         </b-col> 
-             
-    </b-row>
+<b-col md="6" offset-md="3">
+
+<div style="text-align:center" >
+                     <img :src="courses.picture" style="border-radius: 5px" height="100"> 
+</div>
+<br>
+ <div style="text-align:center;">
+<b-row class="my-1">
+    <b-col >
+  <h3>{{courses.name}}</h3> 
+    </b-col>
+  </b-row> </div>
+   
+<div style="text-align:center;">
+  <b-row class="my-1">
+    <b-col cols="12" >
+    <i class="fa fa-phone" aria-hidden="true"></i> {{courses.phone}}  &nbsp;&nbsp; Line: <a :href="linelink">{{courses.line}}</a>
+    </b-col>
+
+  </b-row>
+ </div>
+
+ <div style="text-align:center; margin-top:10px;">
+     <b-button  :href="linelink" size="lg" style=" width:60%;     color: white; background-color: #33C1C1; border: 0px; 
+ ">ติดต่อ</b-button>  
+</div>
+
+
+
+    
 
    <br>
   <b-row> <b-col >
-         <p style="color: #484848; font-size: 17px;margin-bottom: 7px;
-         font-weight: bold;">{{courses.name}}</p>
+       
 
  <!-- <p style="margin-bottom: 0px; color:#484848;  margin-top: 17px; font-size: 19px">วิชาที่คุณสอน
 </p> -->
@@ -98,24 +73,12 @@ color: #484848; border:1px !important;">โปรไฟล์ของคุณ<
 
 
 
-  <b-row class="my-1">
-    <b-col >
-   
-     <p style=" margin-bottom: 4px; white-space: pre-wrap;" 
-><i class="fa fa-phone" aria-hidden="true"></i> <a :href="phoneprompt"></a>  {{courses.phone}}</p>
- <p style="margin-bottom: 3px;"> Line: <a :href="linelink">{{courses.line}}</a>  </p>
-
-      <!-- <b-form-input focus="false"  class="formpor" id="input-large"  type="text" :placeholder="this.$store.state.user.email"></b-form-input> -->
-    </b-col>
-  </b-row>
 
 
 
   <b-row> <b-col >
       <br>
-    <p style="color: #2b92ff;
- 
-    ">รีวิว</p> 
+    <p>รีวิว ({{reviews.length}})</p>  
    
 
   <div v-for="review in reviews" >
@@ -126,7 +89,7 @@ color: #484848; border:1px !important;">โปรไฟล์ของคุณ<
    </b-col>
      <b-col  cols="10" style="padding-left: 20px ;    flex: none; width: fit-content;">
      <div style="font-weight: 400;
-    font-size: 15px;
+    font-size: 16px;
     background-color: #f5f5f5;
     padding: 8px;
     padding-left: 12px;
@@ -156,7 +119,7 @@ color: #484848; border:1px !important;">โปรไฟล์ของคุณ<
     <b-col >
    <br> <br>
      <p style="" 
->งานที่โพสหาติวเตอร์:  </p>
+>งานที่โพสหาติวเตอร์ ({{jobs.length}})  </p>
 
 
  <div v-for="job in jobs" >
@@ -227,6 +190,10 @@ color: #484848; border:1px !important;">โปรไฟล์ของคุณ<
      </b-col></b-row>
   <br><br><br> <br>
 </b-col></b-row>
+
+     </b-col> 
+             
+    </b-row>
 </b-container>
 
 
@@ -281,8 +248,7 @@ export default {
 
   },
   mounted() {
-    this.name = this.$store.state.user.name
-    this.picture = this.$store.state.user.picture
+  
 
      
 
@@ -317,55 +283,17 @@ var data = {
 //   }
 //   ,
     methods: {
-    dddd(){
-console.log(this.courses);
-
-
-    },
+ 
 
 
        displayTimestamp(t){
                 return moment(t).fromNow()
             },
 
-      porakarn(){
+     
+      
+
     
-    var data = {
-      tutorid : this.$store.state.user._id
-    }
-  // axios.post('http://localhost:8000/user/profile2', data).then((res) =>{
-            axios.post('https://frozen-mesa-40722.herokuapp.com/user/profile2', data).then((res) =>{
-
-            console.log(res.data)
-             this.reviews = res.data._review
-            
-
-           }).catch((error) =>{ console.log(error) })
-           
-
-      },
-      nextPage(){
-             this.$router.push('/tutor/job')
-      }
-      ,
-
-      onSubmit(){
-           var data = {
-             profile : this.profile, 
-             phone : this.phone,
-             name: this.$store.state.user.username 
-              
-           }
-
-           axios.patch('https://frozen-mesa-40722.herokuapp.com/update', data).then((res) =>
-           {
-            console.log(res.data);
-            
-
-           }).catch((error) =>{ console.log(error) })
-           
-
-      }
 
   },
         layout: 'auth'
