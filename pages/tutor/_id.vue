@@ -208,6 +208,8 @@ import moment from 'moment'
 
 export default {
   
+
+  
    data () {
     return {
     course: {},
@@ -296,7 +298,8 @@ var data = {
     
 
   },
-        layout: 'auth'
+        layout: 'auth',
+          scrollToTop: true
 }
 </script>
 
