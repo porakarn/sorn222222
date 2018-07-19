@@ -133,7 +133,12 @@ var tag = []
 
 var math1 = ["PAT1", "PAT 1", "math", "คณิต", "คณิตศาสตร์", "เลข"];
 var eng1 = ["GAT ENG","ENG","Eng","Gat Eng","IELTS", "Ielts", "อังกฤษ", "Speaking","speaking", "ielts","eng" ]
-var science = ["เคมี","chemistry","Chemistry","วิทย์","ฟิสิกส์", "Physics", "Physic", "วิทยาศาสตร์", "Science","science" ]
+var science = ["วิทย์", "วิทยาศาสตร์", "Science","science","PAT 2","Pat 2", "Pat2" ]
+var physic = ["ฟิสิกส์", "Physics", "Physic", "PAT3", "Pat3", "PAT 3", "Pat 3"]
+var chemistry = ["เคมี","chemistry","Chemistry","PAT 2","Pat 2", "Pat2"]
+var biology = ["ชีวะ","Biology","biology", "PAT 2","Pat 2", "Pat2"]
+
+
 var chinese = ["จีน","Chinese","chinese"]
 var japan = ["ญี่ปุ่น","Japanese","Japan", "japanese","japan"]
 var korea = ["เกาหลี", "Korean", "korean"]
@@ -146,11 +151,15 @@ var social = ["สังคม"]
 var math2 = math1.some(el => str1.includes(el));
 var eng2 = eng1.some(el => str1.includes(el));
 var science2 = science.some(el => str1.includes(el));
+var physic2 = physic.some(el => str1.includes(el));
+var chemistry2 = chemistry.some(el => str1.includes(el));
+var biology2 = biology.some(el => str1.includes(el));
 var chinese2 = chinese.some(el => str1.includes(el));
 var japan2 = japan.some(el => str1.includes(el));
 var korea2 = korea.some(el => str1.includes(el));
 var thai2 = thai.some(el => str1.includes(el));
 var social2 = social.some(el => str1.includes(el));
+
 
 
 
@@ -164,6 +173,17 @@ if ( eng2 === true ) {
 if ( science2 === true ) {
      tag.push("วิทย์")
 } 
+if ( physic2 === true ) {
+     tag.push("ฟิสิกส์")
+} 
+if ( chemistry2 === true ) {
+     tag.push("เคมี")
+} 
+if ( biology2 === true ) {
+     tag.push("ชีวะ")
+} 
+
+
  if ( chinese2 === true ) {
      tag.push("จีน")
 } 

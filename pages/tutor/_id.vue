@@ -1,6 +1,33 @@
 <template>
 <b-container fluid style="padding: 0px;">
 
+<b-navbar  style="  box-shadow: 0px 2px 3px -1px rgba(126, 126, 126, 0.2), 0px 4px 5px 0px rgba(0, 0, 0, 0), 0px 1px 10px 0px #00000003;   padding-bottom: 12px;
+    padding-top: 12px;  background-color:#cdf4d7!important; "toggleable variant="light">
+     <i @click="goback" style=" font-size: 25px;
+    padding-left: 4px;
+    color: white;
+" class="fa fa-arrow-left responsive" aria-hidden="true"></i>
+        <!-- <b-navbar-brand>BootstrapVue</b-navbar-brand> -->
+     <b-button   style="  font-size: 21px;
+    color: #64e2cd94;
+    font-weight: 500;
+    background-color: #effdf3;
+    border-color: #6c757d00;
+    border-radius: 18px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    padding-left: 8px;
+    padding-right: 8px;
+    font-family: kanit;
+    border-top-width: 0px;
+        border-bottom-width: 0px
+"> sorns</b-button>
+        
+       
+       
+    </b-navbar>
+
+
 <b-container fluid>
   <br><br>
   <b-row>
@@ -8,7 +35,7 @@
 <b-col md="6" offset-md="3">
 
 <div style="text-align:center" >
-                     <img :src="courses.picture" style="border-radius: 5px" height="100"> 
+                     <img :src="courses.picture" style="border-radius: 5px" height="120"> 
 </div>
 <br>
  <div style="text-align:center;">
@@ -78,10 +105,10 @@ color: #484848; border:1px !important;">โปรไฟล์ของคุณ<
 
   <b-row> <b-col >
       <br>
-    <p>รีวิว ({{reviews.length}})</p>  
-   
+    <p style="    margin-bottom: 8px;">รีวิว ({{reviews.length}})   </p>  
+  <p style="font-weight:400; color:#3e9dd6;" @click="showreview1" >See all</p>  
 
-  <div v-for="review in reviews" >
+  <div v-if="showreview" v-for="review in reviews" >
     <b-row style="margin-bottom: 8px;">
    <b-col cols="2">
     <img  style="width: 60px;     border-radius: 50%;"  :src="review.studentid.picture"  alt="">
@@ -117,7 +144,7 @@ color: #484848; border:1px !important;">โปรไฟล์ของคุณ<
 
     <b-row class="my-1">
     <b-col >
-   <br> <br>
+   <br> 
      <p style="" 
 >งานที่โพสหาติวเตอร์ ({{jobs.length}})  </p>
 
@@ -221,7 +248,9 @@ export default {
     reviews:'',
     name:'',
     picture: '',
-    jobs:{}
+    jobs:{},
+    showreview: false
+
   
     }
   },
@@ -285,7 +314,14 @@ var data = {
 //   }
 //   ,
     methods: {
- 
+        goback(){
+            this.$router.go(-1)
+
+        },
+      
+      showreview1(){
+            this.showreview = !this.showreview 
+      } ,
 
 
        displayTimestamp(t){
@@ -368,6 +404,25 @@ box-shadow: 0 0 0 0rem rgba(0, 123, 255, .25) !important;
 
 .btn-secondary:not(:disabled):not(.disabled):active:focus, .btn-secondary:not(:disabled):not(.disabled).active:focus, .show > .btn-secondary.dropdown-toggle:focus {
     box-shadow: 0 0 0 0.2rem rgba(255, 255, 255, 0.5);
+}
+
+
+.responsive {
+  display: none;
+}
+
+.responsive2 {
+  display: block;
+}
+
+/*show for small screens */
+@media screen and (max-width: 1023px) { /* I've given 1023px but you can change to proper width */
+    .responsive {
+        display: block;
+    }
+    .responsive2 {
+  display: none;
+}
 }
 
 </style>

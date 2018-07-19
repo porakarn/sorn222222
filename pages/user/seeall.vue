@@ -41,22 +41,7 @@
              <b-nav-item style="    padding-right: 65px;"><nuxt-link class="nav-item" style="color:#345d46; font-weight: 400; font-size:16px " to="/tutor/profile"><i class="fa fa-user-circle" aria-hidden="true"></i> Profile </nuxt-link></b-nav-item>
               <b-nav-item  @click="logout" style="    padding-right: 100px;"><nuxt-link  style="color:#345d46;  font-weight: 400; font-size:16px" to="/tutor/createprofile"><i class="fa fa-sign-out" aria-hidden="true"></i> Logout </nuxt-link></b-nav-item>
 
-                <!-- <b-nav-text>Navbar text</b-nav-text>
-                <nuxt-link to="/user/user">Users</nuxt-link>
-                <nuxt-link to="/profile">Profile</nuxt-link>
-                <nuxt-link to="/tutor/job">job</nuxt-link>
-                <nuxt-link to="/user/seeall">Seeall</nuxt-link>
-                <nuxt-link to="/user/createprofile">Createprofileagent</nuxt-link>
-                <nuxt-link to="/agent/signup">Signup</nuxt-link>
-                <nuxt-link to="/choose">Choose</nuxt-link>
-                <nuxt-link to="/agent/myjob">myjob</nuxt-link>
-                <nuxt-link to="/agent/status/1">ว่าง</nuxt-link>
-                <nuxt-link to="/agent/status/2">รอ</nuxt-link>
-                <nuxt-link to="/agent/status/3">ปิดแล้ว</nuxt-link>
-                
-                
-                 -->
-
+    
 
             </b-navbar-nav>
         </b-collapse>
