@@ -26,7 +26,7 @@
       </b-form-group>
     </b-col>
   </b-row>
-    <b-row class="my-1">
+    <!-- <b-row class="my-1">
     <b-col  style="margin-top: 19px;">
           <b-form-group  id="exampleInputGroup1"
                     
@@ -36,7 +36,7 @@
           </b-form-group>
     </b-col>
 
-  </b-row>
+  </b-row> -->
 
   <b-row class="my-1">
     <b-col cols="6" >
@@ -53,8 +53,14 @@
     <b-form-group  id="exampleInputGroup1"
                     
                     label-for="exampleInput1"
-                    description="Line id เช่น @chulatutor">
-      <b-form-input class="formpor" required id="input-large" size="lg" v-model="line" type="text" placeholder="Line id"></b-form-input>
+                    description="Line@id เพจของคุณเช่น @cututor">
+      <b-form-input class="formpor" 
+                    required
+                   id="input-large" 
+                   size="lg"
+                    v-model="line"
+                     type="text" 
+                     placeholder="Line@ id"></b-form-input>
     
       </b-form-group>
 
@@ -102,7 +108,6 @@ import axios from 'axios';
     data(){
     return {
         pagename: '',
-        contactUrl: '',
         image:null,
         loading: false,
         loading2: false,
@@ -113,7 +118,6 @@ import axios from 'axios';
 },
 mounted() {
   this.pagename = this.$store.state.agent.pagename
-  this.contactUrl = this.$store.state.agent.contactUrl
   this.image = this.$store.state.agent.picture
   this.contact = this.$store.state.agent.contact
   this.line = this.$store.state.agent.line
@@ -142,7 +146,6 @@ mounted() {
   this.loading = true
  let data = {
           pagename: this.pagename,
-          contactUrl: this.contactUrl,
           name: this.$store.state.agent.name,
           picture: this.image,
           contact: this.contact,
@@ -152,7 +155,6 @@ mounted() {
 
 let data2 = {
           pagename: this.pagename,
-          contactUrl: this.contactUrl,
           name: this.$store.state.agent.name,
           picture: this.image,
           _id: this.$store.state.agent._id,

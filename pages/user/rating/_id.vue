@@ -70,7 +70,7 @@ mounted() {
 
  }
 
-  axios.post('http://localhost:8000/findtutorbyid', createpost)
+  axios.post('https://frozen-mesa-40722.herokuapp.com/findtutorbyid', createpost)
           .then((res) => { 
               this.picture = res.data.picture
               console.log(res.data)
@@ -96,7 +96,7 @@ mounted() {
 
 if (this.rating > 0) {
      //  axios.post('https://frozen-mesa-40722.herokuapp.com/job/create', createPost)
-                axios.post('http://localhost:8000/review', createpost)
+                axios.post('https://frozen-mesa-40722.herokuapp.com/review', createpost)
           .then((res) => { 
               
               console.log(res.data)

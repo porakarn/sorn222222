@@ -179,6 +179,8 @@
 <b-modal no-fade hide-header  hide-footer  centered ref="myModalRef" hide-footer title="Using Component Methods">
       <div class="d-block ">
          <div style="white-space: pre-wrap;">{{str5}}</div> 
+         Contact  <br>
+          Line: {{line}} เบอร์: {{contact}}
       </div>  <br>
           <b-button @click="onSubmit" style="background-color: #33C1C1; border: 0px; padding-left: 46px;
     padding-right: 46px;">ยืนยัน</b-button> <b-button style="background-color: white; border: 0px; padding-left: 36px; color: grey;
@@ -204,6 +206,7 @@ export default {
        str5:'',
        subject:'',
        line:'',
+       contact: '',
       job: '',
       day: '',
        form: {
@@ -231,6 +234,8 @@ export default {
   },
     mounted() {
     this.line = this.$store.state.user.line
+        this.contact = this.$store.state.user.phone
+
   },
 
 methods: {
@@ -356,7 +361,8 @@ if ( sat2 === true ) {
         day : day,
         subject : subject,
         tutorid: this.$store.state.user._id,
-        contact: this.$store.state.user.line,
+        contact: this.$store.state.user.phone,
+        line: this.$store.state.user.line,
         creator_name : this.$store.state.user.name
 
       }

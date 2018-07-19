@@ -64,9 +64,14 @@ export default {
     
       job: '',
       subject: '',
-      day: ''
+      day: '',
+      line: '',
   
     }
+  },
+   mounted() {
+    this.line = this.$store.state.agent.line
+    this.contact = this.$store.state.agent.contact
   },
  methods: {
   
@@ -212,9 +217,9 @@ if ( sat2 === true ) {
         _creator: this.$store.state.agent._id,
          day : day,
         subject : subject,
-        contact: this.$store.state.agent.contact + ' Line: '+ this.$store.state.agent.line ,
-        contactUrl: this.$store.state.agent.contactUrl,
-        creator_name : this.$store.state.agent.pagename
+        creator_name : this.$store.state.agent.pagename,
+         contact: this.contact,
+         line: this.line,
 
     
 

@@ -341,8 +341,8 @@ if ( sat2 === true ) {
         _creator: this.$store.state.agent._id,
         day : day,
         subject : subject,
-        contact: this.$store.state.agent.contact + ' Line: '+ this.$store.state.agent.line ,
-        contactUrl: this.$store.state.agent.contactUrl,
+        contact: this.$store.state.agent.contact,
+        line: this.$store.state.agent.line,
         creator_name : this.$store.state.agent.pagename
 
       }

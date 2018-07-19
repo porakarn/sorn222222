@@ -76,6 +76,7 @@ export default {
        loading2: false,
       job: '',
       line: '',
+
       // subject: [],
       // day: []
   
@@ -83,6 +84,7 @@ export default {
   },
   mounted() {
     this.line = this.$store.state.user.line
+    this.contact = this.$store.state.user.phone
   },
  methods: {
    addarray(){
@@ -231,7 +233,9 @@ if ( sat2 === true ) {
         day : day,
         subject : subject,
         tutorid: this.$store.state.user._id,
-         contact: this.$store.state.user.line,
+         contact: this.contact,
+         line: this.line,
+         
         creator_name : this.$store.state.user.name
       }
    console.log(createPost);
@@ -254,6 +258,8 @@ if ( sat2 === true ) {
           this.$nuxt.$loading.finish()
           this.loading = false
           this.loading2 = true
+                this.job = ''
+
   
           })
           .catch(error => console.log(error))

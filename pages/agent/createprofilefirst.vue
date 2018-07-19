@@ -52,7 +52,7 @@
       </b-form-group>
     </b-col>
   </b-row>
-    <b-row class="my-1">
+    <!-- <b-row class="my-1">
     <b-col  style="margin-top: 19px;">
           <b-form-group  id="exampleInputGroup1"
                     
@@ -62,7 +62,7 @@
           </b-form-group>
     </b-col>
 
-  </b-row>
+  </b-row> -->
 
   <b-row class="my-1">
     <b-col cols="6" >
@@ -79,8 +79,8 @@
     <b-form-group  id="exampleInputGroup1"
                     
                     label-for="exampleInput1"
-                    description="Line id เช่น @chulatutor">
-      <b-form-input class="formpor" required id="input-large" size="lg" v-model="line" type="text" placeholder="Line id"></b-form-input>
+                    description="Line@id เพจของคุณเช่น @cututor">
+      <b-form-input class="formpor" required id="input-large" size="lg" v-model="line" type="text" placeholder="Line@ id"></b-form-input>
     
       </b-form-group>
 
@@ -128,7 +128,6 @@ import axios from 'axios';
     data(){
     return {
         pagename: '',
-        contactUrl: '',
         image:null,
         loading: false,
         loading2: false,
@@ -172,7 +171,6 @@ this.$router.push('/agent/create')
   this.loading = true
  let data = {
           pagename: this.pagename,
-          contactUrl: this.contactUrl,
           name: this.$store.state.agent.name,
           picture: this.image,
           contact: this.contact,
@@ -182,7 +180,6 @@ this.$router.push('/agent/create')
 
 let data2 = {
           pagename: this.pagename,
-          contactUrl: this.contactUrl,
           name: this.$store.state.agent.name,
           picture: this.image,
           _id: this.$store.state.agent._id,
