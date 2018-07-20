@@ -88,6 +88,7 @@ export default {
   background: #fff;
 }
 
+
 .formpor{
 border-top: 0px;
     border-right: 0px;
