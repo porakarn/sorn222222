@@ -12,7 +12,7 @@
     padding-right: 0px;" target="nav_text_collapse"></b-navbar-toggle>
         <!-- <b-navbar-brand>BootstrapVue</b-navbar-brand> -->
       <b-button  class="responsive2" style="  font-size: 21px;
-    color: #64e2cd94;
+    color: #a5efe3;
     font-weight: 500;
     background-color: #effdf3;
     border-color: #6c757d00;
