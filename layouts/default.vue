@@ -217,5 +217,11 @@ html
     outline-width: 5px;
 }
 
+.btn-secondary {
+    color: #fff;
+    background-color: #6c757d;
+    border-color: #ffffff00;
+}
+
 </style>
 
