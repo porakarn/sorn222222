@@ -40,7 +40,7 @@
     }
   },
   mounted() {
-    
+     window.location = this.url
           let code = this.$router.currentRoute.query.code
           console.log(code);
           
@@ -50,9 +50,7 @@
     },
     methods: {
 
-      gotofb(){
- window.location = this.url
-      },
+     
 
      totutor(){
  this.$router.push('/user/fblogin')
