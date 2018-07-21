@@ -269,9 +269,9 @@ var sun = ["อาทิตย์", "อาทิต", "อ-", "sun" ]
 var math2 = math1.some(el => this.str5.includes(el));
 var eng2 = eng1.some(el => this.str5.includes(el));
 var science2 = science.some(el => this.str5.includes(el));
-var physic2 = physic.some(el => str5.includes(el));
-var chemistry2 = chemistry.some(el => str5.includes(el));
-var biology2 = biology.some(el => str5.includes(el));
+var physic2 = physic.some(el => this.str5.includes(el));
+var chemistry2 = chemistry.some(el => this.str5.includes(el));
+var biology2 = biology.some(el => this.str5.includes(el));
 var chinese2 = chinese.some(el => this.str5.includes(el));
 var japan2 = japan.some(el => this.str5.includes(el));
 var korea2 = korea.some(el => this.str5.includes(el));
