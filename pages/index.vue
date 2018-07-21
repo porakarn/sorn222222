@@ -14,7 +14,7 @@
 <br>
 <b-row>
 <b-col md="6" offset-md="3">
-    <br><br><br><br><br>  <button @click="gotofb"> test</button>
+    <br><br>
 </b-col>
 </b-row>
 
@@ -25,7 +25,6 @@
     export default {
    data () {
     return {
-    url:'https://www.facebook.com/v3.0/dialog/oauth?client_id={1164801473596989}&redirect_uri={"https://sorns-co-beta.herokuapp.com/"}&state={"{st=state123abc,ds=123456789}"}'
 
   
     }
@@ -39,16 +38,7 @@
       ]
     }
   },
-  mounted() {
-    if (process.browser) {
-     window.location = this.url
-          let code = this.$router.currentRoute.query.code
-          console.log(code);
-          
-}
 
-          
-    },
     methods: {
 
      
