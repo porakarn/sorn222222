@@ -40,11 +40,12 @@
     }
   },
   mounted() {
+    if (process.browser) {
      window.location = this.url
           let code = this.$router.currentRoute.query.code
           console.log(code);
           
-
+}
 
           
     },
