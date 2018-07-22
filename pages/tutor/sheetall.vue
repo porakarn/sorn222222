@@ -11,8 +11,8 @@
         <b-col style="padding-right: 5px;
     padding-left: 5px;"> 
     
-     <b-card :href="sheet.docurl" style="margin-bottom:6px;     border: 1px solid rgba(164, 164, 164, 0.125);
-    border-radius: 15px; box-shadow: rgba(131, 122, 122, 0.2) 0px 1px 3px -1px, rgba(255, 251, 251, 0) 0px 4px 5px 0px, rgba(0, 0, 0, 0.01) 0px 1px 10px 0px;
+     <b-card :href="sheet.docurl" style="margin-bottom:1px;     border: 1px solid rgba(164, 164, 164, 0.125);
+    border-radius: 1px; box-shadow: rgba(131, 122, 122, 0.2) 0px 1px 3px -1px, rgba(255, 251, 251, 0) 0px 4px 5px 0px, rgba(0, 0, 0, 0.01) 0px 1px 10px 0px;
 "  v-for="sheet in sheets" :title="sheet.sheetname"
             :sub-title="sheet.gradeyear">
         
@@ -155,5 +155,12 @@ border-top: 0px;
 .card-body{
     padding-bottom: 13px;
     padding-top: 13px;
+}
+
+.card-title {
+    margin-bottom: 12px;
+    margin-bottom: 0.75rem;
+    font-size: 20px;
+    color: #5a5a5a;
 }
 </style>
