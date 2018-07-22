@@ -215,8 +215,8 @@ console.log(tag);
              subject: this.subject,
              name: this.$store.state.user.name, 
              tag: tag,
-             line: this.line
-
+             line: this.line,
+            _id: this.$store.state.user._id,
            }
 
   var data2 = {
@@ -228,12 +228,14 @@ console.log(tag);
              _id: this.$store.state.user._id,
              picture: this.$store.state.user.picture,
              tag: tag,
+             canseesheet: this.$store.state.user.canseesheet,
             line: this.line
 
            }
                        console.log(data2);
 
           //  axios.patch('https://tutor-8e729.firebaseio.com/chawwww.json', data).then((res) =>
+                // axios.get('http://localhost:8000/job/all')
 
            axios.patch('https://frozen-mesa-40722.herokuapp.com/update', data).then((res) =>
            {

@@ -215,7 +215,7 @@ mounted() {
   
 this.subject = this.$store.state.user.subject
 
-if(this.$store.state.user.tag.length>1){
+if(this.$store.state.user.tag.length>0){
 let suggest = {
       
         tag: this.$store.state.user.tag
