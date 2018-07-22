@@ -28,12 +28,12 @@
         
        <b-row style="margin-top: 10px;">
 
-        <b-col cols="3">
-                     <img :src="tutor.picture" style="border-radius: 5px" width="140%"> 
+        <b-col cols="4">
+                     <img :src="tutor.picture" style="border-radius: 5px" width="100%"> 
 
         </b-col>
-         <b-col cols="9">
-<p style="margin-bottom: 0px; font-weight:600; font-size:17px">{{tutor.name}}</p>
+         <b-col cols="8" style="margin-left:-5px;padding-left: 0px">
+<p style=" padding-left: 0px;margin-bottom: 0px; font-weight:600; font-size:17px">{{tutor.name}}</p>
 <p style="color:#545454; font-size:17px" v-if="tutor.subject">{{tutor.subject.substring(0,90)}}</p>
         </b-col>
 
