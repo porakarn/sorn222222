@@ -1,97 +1,210 @@
 <template>
-  <b-container fluid>
-<br>
 
-<b-row>
-    <b-col>
-<p style=" color:#86a5ca ; text-align: center;
+<b-container fluid style="padding:0px;">
+ <!-- <b-nav fill tabs style=" margin-top:-7px;    background-color: #cdf4d7;     box-shadow: 0px 2px 3px -1px rgba(126, 126, 126, 0.2), 0px 4px 5px 0px rgba(0, 0, 0, 0), 0px 1px 10px 0px #00000003;
 " >
- Comming Soon</p>
-    </b-col>
+  <b-nav-item  @click="nextPage2" class="responsive" >งานที่คุณโพส </b-nav-item>
+ <b-nav-item class="responsive"  style="border-bottom: 4px solid;
+    border-bottom-color: #ffffff; color: #5b7a69; 
+"   >เอกสารของคุณ</b-nav-item>
+ 
+</b-nav>
+  -->
 
-</b-row>
-
-<b-row>
-<b-col>
-<p style=" color:#86a5ca ; text-align: center;
+<b-container fluid >
+       <br>
+        <p style=" color:#86a5ca ; text-align: center;
 " >
- ระบบแชร์เอกสาร กับ ส่วนลดโปรโมชั่นตามร้านกาแฟ Co-Working Space is comming soon</p>      
- <br>
+ ติวเตอร์ทั้งหมด ({{ tutors.length }})</p>
+
+
+ 
+   
+     <b-card @click="seeeach(tutor._id)" style="margin-bottom:0px;     border: 1px solid rgba(164, 164, 164, 0.125);
+    border-radius: 1px;     box-shadow: rgba(148, 142, 142, 0) 0px 1px 3px -1px, rgba(255, 251, 251, 0) 0px 4px 5px 0px, rgba(0, 0, 0, 0.01) 0px 1px 10px 0px;
+
+"  v-for="tutor in tutors" :key="tutor._id" >
+         
+        
+       <b-row style="margin-top: 10px;">
+
+        <b-col cols="3">
+                     <img :src="tutor.picture" style="border-radius: 5px" height="80"> 
+
+        </b-col>
+         <b-col cols="9">
+<p style="margin-bottom: 0px; font-weight:600">{{tutor.name}}</p>
+<p style="color:#545454" v-if="tutor.subject">{{tutor.subject.substring(0,90)}}</p>
+        </b-col>
+
+     </b-row>
+     <b-row style="    margin-top: 5px;">
+  <b-col cols="7" style="padding-left: 15px;">
+ <a v-show="tutor.tag.length >0" style="     color: #ffffff;
+    text-decoration: none;
+    background-color: #82d9d9;   padding-top: 3px;
+    padding-bottom: 3px;
+    font-size:16px;
+    padding-left: 6px;
+    padding-right: 6px;
+    border-radius: 4px;"  href="#" 
+           class="card-link">{{tutor.tag.toString().split(',').join(' ')}}</a>
+     
+              <br>  
 </b-col>
-</b-row>
+<b-col cols="5" style="  padding-left: 20px; ">
 
 
-<b-row>
-  <b-col>
-<p style=" color:#86a5ca ; text-align: center;
-" >
- ติดตามอัพเดทต่างๆได้ที่ </p>
-    </b-col>
+   <!-- <strong style="color:#cbcdd0;  font-size: 14px; margin-top: -0px;  float:right;   margin-bottom: 0px; font-weight:400">
+ {{sheet.owner.replace(/\w+[.!?]?$/, '')}}  </strong>  -->
 
+ <strong style="color:#a5cae4;  font-size: 14px; margin-top: -0px;  float:right;  margin-bottom: 0px; font-weight:400">{{ displayTimestamp(tutor.createdAt) }}  </strong>  
+</b-col>
+
+     </b-row>
+    
+
+
+    </b-row>
+
+    </b-card>
+
+   </b-col>
+    </b-row>
+
+     
+
+
+
+  
+<br>
+<br>
+<br>
+<br>
 
     
 
-</b-row>
-
-
-<div style="text-align:center">
-   <b-button href="https://line.me/R/ti/p/%40dxc2481h" size="lg" style="box-shadow: 0 1px 1px 1px rgba(111, 111, 111, .23);
-    width: auto;  background-color: #33C1C1; border: 0px; padding-left: 66px;
-    padding-right: 66px;">ติดตามเรา</b-button>  
-</div>
-
-
- 
-
- 
- 
-  </b-container>
-
-
-
-
+</b-container>
+</b-container>
 </template>
+
+<script>
+import axios from 'axios';
+import moment from 'moment';
+
+
+ export default {
+    data(){
+    return {
+      tutors:{}
+    
+
+    }
+},
+  asyncData (context) {
+
+    return axios.get('https://frozen-mesa-40722.herokuapp.com/tutor/all')
+    .then((res) => { console.log(res.data)
+      return { tutors: res.data,
+               
+            }        
+
+    })
+  },
+
+
+mounted() {
+
+},
+
+
+
+
+  methods: {
+   seeeach(x){
+       this.$router.push(`/tutor/${x}`)
+   },
+
+       displayTimestamp(t){
+                return moment(t).locale('th').fromNow()
+            },
+            nextPage(){
+    this.$router.push('/tutor/sharesheet')
+},
+nextPage2(){
+    this.$router.push('/tutor/job')
+
+
+}, 
+
+ 
+
+
+
+                         // axios.get('http://localhost:8000/job/all')
+
+     
+}
+
+
+}
+</script>
+
 
 
 <style scoped>
-.card-body {
-    -ms-flex: 1 1 auto;
-    flex: 1 1 auto;
-    padding: 11px;
-       padding-bottom: 0px;
-    padding-top: 0px;
+::placeholder {
+    color: #C9C9C9;
+    opacity: 1; /* Firefox */
 }
 
-.card{
-    border: 1px solid rgb(255, 255, 255)!important;
+.form-control{
+border-top: 0px;
+    border-right: 0px;
+    border-left: 0px;
+    border-radius: 0;
 }
 
-.card-text{
-        color: #2f2f2f;
-    margin-bottom: 6px;
-}
-
-.card-link{
-        margin-left: 7px;
-         color: #ffffff;
-    text-decoration: none;
-    background-color: #82D9D9;
-    padding: 2px;
-    padding-left: 7px;
-    padding-right: 7px;
-    border-radius: 4px;
-    font-size: 15px;
+.formpor{
+border-top: 0px;
+    border-right: 0px;
+    border-left: 0px;
+    border-radius: 0;
+   padding-left: 4px;
 
 }
 
-.por{
-    margin-left: -7px
+
+
+.form-control:focus {
+    color: #495057;
+    background-color: #fff;
+    border-color: #80bdff;
+    /* border-bottom: 2px; */
+    
+    outline: 0;
+    box-shadow: 0px 1px 0px 0rem rgba(199, 199, 199, 0.25);
 }
-.card{
-      margin-bottom: 5px;
-box-shadow: 0 1px 2px 0px rgba(0, 0, 0, 0.1);
-border: 1px solid rgba(193, 193, 193, 0.12);
-    border-radius: 6px;
+
+.card-body{
+  padding-left: 10px;
+    padding-top: 2px;
+    padding-right: 10px;
 }
+
+.card-title {
+    margin-bottom: 12px;
+    margin-bottom: 0.75rem;
+    font-size: 20px;
+    color: #5a5a5a;
+}
+a{
+
+    color: #4159539c;
+    font-weight: 600;
+    font-size: 18px;
+    font-family:"Sukhumvit Set",sans-serif; 
+}
+
+
 </style>
-
