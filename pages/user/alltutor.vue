@@ -29,7 +29,7 @@
        <b-row style="margin-top: 10px;">
 
         <b-col cols="3">
-                     <img :src="tutor.picture" style="border-radius: 5px" height="90"> 
+                     <img :src="tutor.picture" style="border-radius: 5px" width="140%"> 
 
         </b-col>
          <b-col cols="9">
@@ -38,7 +38,7 @@
         </b-col>
 
      </b-row>
-     <b-row style="    margin-top: 5px;">
+     <b-row style="    margin-top: 7px;">
   <b-col cols="7" style="padding-left: 15px;">
  <a v-show="tutor.tag.length >0" style="    color: rgb(255, 255, 255);
     text-decoration: none;
@@ -192,7 +192,7 @@ border-top: 0px;
   padding-left: 10px;
     padding-top: 2px;
     padding-right: 10px;
-        padding-bottom: 12px;
+      padding-bottom: 7px;
 }
 
 .card-title {
