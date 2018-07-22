@@ -42,7 +42,7 @@
           <b-form-group  id="exampleInputGroup1"
                     
                     label-for="exampleInput1"
-                    description="ชีทคณิตศาสตร์ เรื่องตรีโกน">
+                    description="ชีทคณิตศาสตร์ เรื่องตรีโกณมิติ">
       <b-form-input class="formpor" required id="input-large" size="lg" v-model="sheetname" type="text" placeholder="ชื่อชีทเอกสาร"></b-form-input>
           </b-form-group>
     </b-col>
