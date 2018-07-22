@@ -11,7 +11,7 @@
 </b-nav>
   -->
 
-<b-container fluid >
+<b-container fluid style="padding:0px;" >
        <br>
         <p style=" color:#86a5ca ; text-align: center;
 " >
@@ -29,25 +29,27 @@
        <b-row style="margin-top: 10px;">
 
         <b-col cols="3">
-                     <img :src="tutor.picture" style="border-radius: 5px" height="80"> 
+                     <img :src="tutor.picture" style="border-radius: 5px" height="90"> 
 
         </b-col>
          <b-col cols="9">
-<p style="margin-bottom: 0px; font-weight:600">{{tutor.name}}</p>
-<p style="color:#545454" v-if="tutor.subject">{{tutor.subject.substring(0,90)}}</p>
+<p style="margin-bottom: 0px; font-weight:600; font-size:17px">{{tutor.name}}</p>
+<p style="color:#545454; font-size:17px" v-if="tutor.subject">{{tutor.subject.substring(0,90)}}</p>
         </b-col>
 
      </b-row>
      <b-row style="    margin-top: 5px;">
   <b-col cols="7" style="padding-left: 15px;">
- <a v-show="tutor.tag.length >0" style="     color: #ffffff;
+ <a v-show="tutor.tag.length >0" style="    color: rgb(255, 255, 255);
     text-decoration: none;
-    background-color: #82d9d9;   padding-top: 3px;
+    background-color: rgb(130, 217, 217);
+    padding-top: 3px;
+        margin-top: 7px;
     padding-bottom: 3px;
-    font-size:16px;
-    padding-left: 6px;
+    font-size: 16px;
     padding-right: 6px;
-    border-radius: 4px;"  href="#" 
+    border-radius: 4px;
+    padding-left: 6px;"  href="#" 
            class="card-link">{{tutor.tag.toString().split(',').join(' ')}}</a>
      
               <br>  
@@ -58,7 +60,7 @@
    <!-- <strong style="color:#cbcdd0;  font-size: 14px; margin-top: -0px;  float:right;   margin-bottom: 0px; font-weight:400">
  {{sheet.owner.replace(/\w+[.!?]?$/, '')}}  </strong>  -->
 
- <strong style="color:#a5cae4;  font-size: 14px; margin-top: -0px;  float:right;  margin-bottom: 0px; font-weight:400">{{ displayTimestamp(tutor.createdAt) }}  </strong>  
+ <strong style="color:#a5cae4;  font-size: 15px; margin-top: -0px;  float:right;  margin-bottom: 0px; font-weight:400">{{ displayTimestamp(tutor.createdAt) }}  </strong>  
 </b-col>
 
      </b-row>
@@ -190,6 +192,7 @@ border-top: 0px;
   padding-left: 10px;
     padding-top: 2px;
     padding-right: 10px;
+        padding-bottom: 12px;
 }
 
 .card-title {
