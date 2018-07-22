@@ -90,6 +90,10 @@
     <p style="color: #54c686; margin-top: 7px;"><i class="fa fa-check-circle" aria-hidden="true"></i>
  คุณได้ทำการ submit ชีทเรียบร้อยแล้ว</p>
   </div>
+  <div  >
+    <p style="color: red; margin-top: 7px;">
+ {{message}}</p>
+  </div>
 <br>
 <br>
 <br>
@@ -117,7 +121,7 @@ import axios from 'axios';
         sheetname: '',
         loading: false,
         loading2: false,
-     
+        message: '',
         subject: null,
         gradeyear: null,
            subjects: [
@@ -150,8 +154,7 @@ mounted() {
     },
     
     onCreate() {
- this.$nuxt.$loading.start()
-  this.loading = true
+
  let data = {
           docurl: this.docurl,
           sheetname: this.sheetname,
@@ -165,7 +168,10 @@ mounted() {
 
                          // axios.get('http://localhost:8000/job/all')
 
-         
+       if (this.docurl.includes("docs.google") )  {
+            this.$nuxt.$loading.start()
+             this.message = ''
+  this.loading = true
         console.log(data);
         
         axios.post('https://frozen-mesa-40722.herokuapp.com/sheet/create', data)
@@ -179,12 +185,38 @@ mounted() {
              this.sheetname = ''
              this.subject = null
              this.gradeyear = null
+         
           })
           .catch(error => console.log(error))
 
-          //    axios.post('https://tutor-8e729.firebaseio.com/agent/create.json', data)
-          // .then(res => console.log(res.data))
-          // .catch(error => console.log(error))
+    }  else{
+          this.message = 'คุณกรอก Googledoc url ไม่ถูกต้อง'
+    }
+          var data2 = {
+              canseesheet : true,
+              _id: this.$store.state.user._id 
+          }
+
+if (!this.$store.state.user.canseesheet ) {
+     if (this.docurl.includes("docs.google") )  {
+ this.message = ''
+  axios.patch('https://frozen-mesa-40722.herokuapp.com/update2', data2 )
+          .then((res) => {
+            // this.$router.push('/agent/create')
+            console.log(res.data)
+            this.$store.dispatch('setUser', res.data)
+           
+             
+          })
+          .catch(error => console.log(error))
+   this.$store.dispatch('setAgent', null)
+
+} else {
+  this.message = 'คุณกรอก Googledoc url ไม่ถูกต้อง'
+}
+
+
+}
 
 }
  }

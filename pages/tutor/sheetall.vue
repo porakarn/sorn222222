@@ -14,8 +14,9 @@
 
 <b-container fluid style="padding:0px;">
 <b-container class="bv-example-row">
-    <br>
-  
+    
+  <div v-if="!canseesheet">
+      <br>
        <p style=" color:#86a5ca ; text-align: center;
 " >
  หลังจากที่คุณแชร์ชีทสอนของคุณ คุณจะสามารถกดดูชีทสอนของติวเตอร์ท่านอื่นได้</p>
@@ -27,7 +28,7 @@
 
  </div>
   <br>
-    <div style="    opacity: 0.07;">
+    <div style="    opacity: 0.06;">
     <b-row>
         <b-col style="padding-right: 0px;
     padding-left: 0px;"> 
@@ -152,13 +153,13 @@ Copter  </strong>
    </b-col>
     </b-row>
 
-
+    </div>
   </div>
-    <b-row>
+    <b-row v-else>
         <b-col style="padding-right: 0px;
     padding-left: 0px;"> 
    
-     <b-card  :href="sheet.docurl" style="margin-bottom:0px;     border: 1px solid rgba(164, 164, 164, 0.125);
+     <b-card  @click="openWindow(sheet.docurl)" style="margin-bottom:0px;     border: 1px solid rgba(164, 164, 164, 0.125);
     border-radius: 1px;     box-shadow: rgba(148, 142, 142, 0) 0px 1px 3px -1px, rgba(255, 251, 251, 0) 0px 4px 5px 0px, rgba(0, 0, 0, 0.01) 0px 1px 10px 0px;
 
 "  v-for="sheet in sheets" :key="sheet._id" :title="sheet.sheetname"
@@ -223,8 +224,8 @@ import moment from 'moment';
  export default {
     data(){
     return {
-      sheets:{}
-    
+      sheets:{},
+      canseesheet: false
 
     }
 },
@@ -241,13 +242,18 @@ import moment from 'moment';
 
 
 mounted() {
-
+   this.canseesheet = this.$store.state.user.canseesheet
 },
 
 
 
 
   methods: {
+
+      openWindow(x){
+    window.open(x);
+
+      },
     
        displayTimestamp(t){
                 return moment(t).locale('th').fromNow()

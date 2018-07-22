@@ -74,8 +74,12 @@
   <b-button type="submit" style="background-color: #33C1C1; border: 0px; padding-left: 36px;
     padding-right: 36px;">แก้ไข</b-button>
 
-      <b-button @click="onDelete" style="background-color: #33C1C1; border: 0px; padding-left: 36px;
-    padding-right: 36px;">ลบ</b-button>
+      <b-button @click="onDelete" style="    background-color: rgb(196, 210, 210);
+    border: 0px;
+    padding-left: 36px;
+    padding-right: 36px;
+    margin-left: 23px;
+}">ลบ</b-button>
   
     <div class="loading-page" v-if="loading">
     <p>Loading...</p>
