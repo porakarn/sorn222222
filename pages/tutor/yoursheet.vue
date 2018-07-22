@@ -5,20 +5,19 @@
 " >
   <b-nav-item  @click="nextPage2" class="responsive" >งานที่คุณโพส </b-nav-item>
  <b-nav-item class="responsive"  style="border-bottom: 4px solid;
-    border-bottom-color: #ffffff; color: #5b7a69; padding-right: 12px;
-    padding-left: 12px;
+    border-bottom-color: #ffffff; color: #5b7a69; 
 "   >เอกสารของคุณ</b-nav-item>
  
 </b-nav>
  
 
-<b-container fluid style="padding:0px;">
+<b-container fluid >
        <br>
         <p style=" color:#86a5ca ; text-align: center;
 " ><i class="fa fa-pencil-square-o" aria-hidden="true"></i>
  งานที่คุณโพสไว้</p>
 
-<b-container class="bv-example-row">
+
     <b-row>
         <b-col style="padding-right: 0px;
     padding-left: 0px;"> 
@@ -62,9 +61,7 @@
     </b-row>
 
      
- 
-</b-container>
-  
+
 
  <b-modal no-fade hide-header  hide-footer  centered ref="myModalRef" hide-footer title="Using Component Methods">
       <div class="d-block ">

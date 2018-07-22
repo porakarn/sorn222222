@@ -12,8 +12,8 @@
 </b-nav>
  
 
-<b-container fluid style="padding:0px;">
-<b-container class="bv-example-row">
+<b-container fluid style="">
+
     
   <div v-if="!canseesheet">
       <br>
@@ -155,7 +155,7 @@ Copter  </strong>
 
     </div>
   </div>
-    <b-row v-else>
+    <b-row v-else >
         <b-col style="padding-right: 0px;
     padding-left: 0px;"> 
    
@@ -199,7 +199,7 @@ Copter  </strong>
 
      
  
-</b-container>
+
   
 
  
