@@ -1,17 +1,8 @@
-
 <template>
 
 <b-container fluid style="padding:0px;">
 
-  <b-nav fill tabs style=" margin-top:-7px;    background-color: #cdf4d7;     box-shadow: 0px 2px 3px -1px rgba(126, 126, 126, 0.2), 0px 4px 5px 0px rgba(0, 0, 0, 0), 0px 1px 10px 0px #00000003;
-" >
-  <b-nav-item @click="nextPage" class="responsive" >ค้นหาเอกสาร </b-nav-item>
- <b-nav-item class="responsive"   style="border-bottom: 4px solid;
-    border-bottom-color: #ffffff; color: #5b7a69; padding-right: 12px;
-    padding-left: 12px;
-" >แชร์เอกสาร</b-nav-item>
- 
-</b-nav>
+  
  
 <b-container fluid>
 
@@ -22,7 +13,7 @@
 
 
 
-      <form @submit.prevent="onCreate">
+      <form @submit.prevent="onEdit">
 
 <br>
 
@@ -81,14 +72,17 @@
 <br>
   <div>
   <b-button type="submit" style="background-color: #33C1C1; border: 0px; padding-left: 36px;
-    padding-right: 36px;">ส่ง</b-button>
+    padding-right: 36px;">แก้ไข</b-button>
+
+      <b-button @click="onDelete" style="background-color: #33C1C1; border: 0px; padding-left: 36px;
+    padding-right: 36px;">ลบ</b-button>
   
     <div class="loading-page" v-if="loading">
     <p>Loading...</p>
   </div>
     <div class="loading-page" v-if="loading2">
     <p style="color: #54c686; margin-top: 7px;"><i class="fa fa-check-circle" aria-hidden="true"></i>
- คุณได้ทำการ submit ชีทเรียบร้อยแล้ว</p>
+ คุณได้ทำการ แก้ไข ชีทเรียบร้อยแล้ว</p>
   </div>
 <br>
 <br>
@@ -117,7 +111,7 @@ import axios from 'axios';
         sheetname: '',
         loading: false,
         loading2: false,
-     
+      
         subject: null,
         gradeyear: null,
            subjects: [
@@ -139,6 +133,25 @@ import axios from 'axios';
 
 mounted() {
 
+console.log(  this.$route.params.id);
+
+    var data ={
+        _id : this.$route.params.id
+    }
+ axios.post('https://frozen-mesa-40722.herokuapp.com/sheet/seedetails', data)
+          .then((res) => {
+            // this.$router.push('/agent/create')
+            console.log(res.data)
+              this.docurl = res.data.docurl
+              this.sheetname = res.data.sheetname
+              this.subject = res.data.subject
+              this.gradeyear = res.data.gradeyear
+      
+          })
+          .catch(error => console.log(error))
+
+    
+
 },
 
 
@@ -148,8 +161,27 @@ mounted() {
     nextPage(){
         this.$router.push('/tutor/sheetall')
     },
+    onDelete(){
+let data = {
+           _id : this.$route.params.id
+          
+        }
+
+        console.log(data);
+        
+        axios.post('https://frozen-mesa-40722.herokuapp.com/sheet/delete', data)
+          .then((res) => {
+            // this.$router.push('/agent/create')
+            console.log(res.data)
+            this.$router.push('/tutor/yoursheet')
     
-    onCreate() {
+          })
+          .catch(error => console.log(error))
+
+
+    },
+    
+    onEdit() {
  this.$nuxt.$loading.start()
   this.loading = true
  let data = {
@@ -157,7 +189,8 @@ mounted() {
           sheetname: this.sheetname,
           subject: this.subject,
           gradeyear: this.gradeyear,
-          owner: this.$store.state.user.name
+          owner: this.$store.state.user.name,
+           _id : this.$route.params.id
           
         }
 
@@ -168,17 +201,14 @@ mounted() {
          
         console.log(data);
         
-        axios.post('https://frozen-mesa-40722.herokuapp.com/sheet/create', data)
+        axios.patch('https://frozen-mesa-40722.herokuapp.com/sheet/update', data)
           .then((res) => {
             // this.$router.push('/agent/create')
             console.log(res.data)
             this.$nuxt.$loading.finish()
              this.loading = false
              this.loading2 = true
-             this.docurl = ''
-             this.sheetname = ''
-             this.subject = null
-             this.gradeyear = null
+          
           })
           .catch(error => console.log(error))
 

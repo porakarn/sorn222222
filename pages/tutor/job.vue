@@ -1,6 +1,14 @@
 <template>
 <b-container fluid style="padding: 0px;">
-
+ <b-nav fill tabs style=" margin-top:-7px;    background-color: #cdf4d7;     box-shadow: 0px 2px 3px -1px rgba(126, 126, 126, 0.2), 0px 4px 5px 0px rgba(0, 0, 0, 0), 0px 1px 10px 0px #00000003;
+" >
+  <b-nav-item style=""  class="responsive"  style="border-bottom: 4px solid;
+    border-bottom-color: #ffffff; color: #5b7a69; padding-right: 12px;
+    padding-left: 12px;
+" >งานที่คุณโพส </b-nav-item>
+ <b-nav-item class="responsive" @click="nextPage2"   >เอกสารของคุณ</b-nav-item>
+ 
+</b-nav>
 <b-container fluid>
 
    <br> 
@@ -304,6 +312,10 @@ let suggest = {
                     this.$router.push('/user/suggest')
 
       },
+        nextPage2(){
+                    this.$router.push('/tutor/yoursheet')
+
+      },
     showModal (item) {
       this.$refs.myModalRef.show(item) 
       this.job3 = item._id
@@ -372,5 +384,12 @@ border: 1px solid rgba(193, 193, 193, 0.12);
 
 .btn-secondary:not(:disabled):not(.disabled):active:focus, .btn-secondary:not(:disabled):not(.disabled).active:focus, .show > .btn-secondary.dropdown-toggle:focus {
     box-shadow: 0 0 0 0.2rem rgba(255, 255, 255, 0.5);
+}
+
+a{
+     color: #4159539c;
+    font-weight: 600;
+    font-size: 18px;
+    font-family:"Sukhumvit Set",sans-serif; 
 }
 </style>

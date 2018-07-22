@@ -1,24 +1,29 @@
 <template>
 
 <b-container fluid style="padding:0px;">
-<b-nav fill tabs style=" margin-top:-7px;    background-color: #cdf4d7;     box-shadow: 0px 2px 3px -1px rgba(126, 126, 126, 0.2), 0px 4px 5px 0px rgba(0, 0, 0, 0), 0px 1px 10px 0px #00000003;
+ <b-nav fill tabs style=" margin-top:-7px;    background-color: #cdf4d7;     box-shadow: 0px 2px 3px -1px rgba(126, 126, 126, 0.2), 0px 4px 5px 0px rgba(0, 0, 0, 0), 0px 1px 10px 0px #00000003;
 " >
-  <b-nav-item  class="responsive"  style="border-bottom: 4px solid;
+  <b-nav-item  @click="nextPage2" class="responsive" >งานที่คุณโพส </b-nav-item>
+ <b-nav-item class="responsive"  style="border-bottom: 4px solid;
     border-bottom-color: #ffffff; color: #5b7a69; padding-right: 12px;
     padding-left: 12px;
-">ค้นหาเอกสาร </b-nav-item>
- <b-nav-item class="responsive"  @click="nextPage">แชร์เอกสาร</b-nav-item>
+"   >เอกสารของคุณ</b-nav-item>
  
 </b-nav>
  
 
 <b-container fluid style="padding:0px;">
+       <br>
+        <p style=" color:#86a5ca ; text-align: center;
+" ><i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+ งานที่คุณโพสไว้</p>
+
 <b-container class="bv-example-row">
     <b-row>
         <b-col style="padding-right: 0px;
     padding-left: 0px;"> 
    
-     <b-card  :href="sheet.docurl" style="margin-bottom:0px;     border: 1px solid rgba(164, 164, 164, 0.125);
+     <b-card @click="seedetail(sheet._id)"   style="margin-bottom:0px;     border: 1px solid rgba(164, 164, 164, 0.125);
     border-radius: 1px;     box-shadow: rgba(148, 142, 142, 0) 0px 1px 3px -1px, rgba(255, 251, 251, 0) 0px 4px 5px 0px, rgba(0, 0, 0, 0.01) 0px 1px 10px 0px;
 
 "  v-for="sheet in sheets" :key="sheet._id" :title="sheet.sheetname"
@@ -61,7 +66,40 @@
 </b-container>
   
 
- 
+ <b-modal no-fade hide-header  hide-footer  centered ref="myModalRef" hide-footer title="Using Component Methods">
+      <div class="d-block ">
+      
+<b-row>  <b-col cols="12" >
+
+        <!-- <p style=" white-space: pre-wrap; font-size: 15px; font-family:roboto;  color:#2f2f2f"  class="card-text">{{job4}}</p> -->
+</b-col> 
+                       </b-row>
+      
+      <b-row>
+        <b-col>
+            <b-button  @click="editjob" style=" padding-right:23px;  background-color: white; color: grey; border: 0px;
+    "> <i class="fa fa-floppy-o" aria-hidden="true"></i>
+</i>
+Save </b-button>  
+        <b-button v-b-modal.modal1 style="  background-color: white; color: grey; border: 0px;">
+      <i class="fa fa-trash-o" aria-hidden="true"></i>
+ลบ </b-button>  
+        </b-col>
+         <b-col>
+         
+
+
+</b-col>
+ </b-row>  
+
+<br>
+   
+        
+         <div style="color: grey" class="loading-page" v-if="loading">
+    Loading...
+  </div>
+      </div>
+    </b-modal>
   
   
 <br>
@@ -114,7 +152,17 @@ mounted() {
             },
             nextPage(){
     this.$router.push('/tutor/sharesheet')
+},
+nextPage2(){
+    this.$router.push('/tutor/job')
+
+
+}, 
+seedetail(x){
+ this.$router.push(`/tutor/editsheet/${x}`)
+
 }
+ 
 
 
 
