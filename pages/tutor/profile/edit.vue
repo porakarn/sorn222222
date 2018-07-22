@@ -132,7 +132,7 @@ export default {
 
 var tag = []
 
-var math1 = ["PAT1", "PAT 1", "math", "คณิต", "คณิตศาสตร์", "เลข"];
+var math1 = ["PAT1", "PAT 1", "math", "คณิต", "คณิตศาสตร์", "เลข", "Math", "MATH"];
 var eng1 = ["GAT ENG","ENG","Eng","Gat Eng","IELTS", "Ielts", "อังกฤษ", "Speaking","speaking", "ielts","eng" ]
 var science = ["วิทย์", "วิทยาศาสตร์", "Science","science","PAT 2","Pat 2", "Pat2" ]
 var physic = ["ฟิสิกส์", "Physics", "Physic", "PAT3", "Pat3", "PAT 3", "Pat 3"]
