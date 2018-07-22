@@ -4,15 +4,15 @@
 
  
 
-<b-container fluid style="padding:4px;">
+<b-container fluid style="padding:1px;">
 
 <b-container class="bv-example-row">
     <b-row>
         <b-col style="padding-right: 5px;
     padding-left: 5px;"> 
-    
+    <br>
      <b-card :href="sheet.docurl" style="margin-bottom:1px;     border: 1px solid rgba(164, 164, 164, 0.125);
-    border-radius: 1px; box-shadow: rgba(131, 122, 122, 0.2) 0px 1px 3px -1px, rgba(255, 251, 251, 0) 0px 4px 5px 0px, rgba(0, 0, 0, 0.01) 0px 1px 10px 0px;
+    border-radius: 1px; box-shadow: rgba(148, 142, 142, 0.2) 0px 1px 3px -1px, rgba(255, 251, 251, 0) 0px 4px 5px 0px, rgba(0, 0, 0, 0.01) 0px 1px 10px 0px;
 "  v-for="sheet in sheets" :title="sheet.sheetname"
             :sub-title="sheet.gradeyear">
         
