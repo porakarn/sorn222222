@@ -45,6 +45,7 @@ import store from '@/store/index'; // path to your Vuex store
         password: '',
         token:'',
         user:'',
+        access_token: '',
      
 
         // name: 'd',
@@ -77,6 +78,9 @@ FB.getLoginStatus(function(response) {
     vm.statusChangeCallback(response);
     console.log('00')
     console.log(response)
+       
+        
+
 });
 
   };
@@ -114,7 +118,10 @@ mounted(){
       FB.login( async function (response) {
         if (response.status === 'connected') {
           console.log('In response')
-          // auth.facebookLogin(response.authResponse, function () {
+      
+   
+          
+           // auth.facebookLogin(response.authResponse, function () {
                await vm.testAPI().then((res)=> {
 
               
@@ -143,7 +150,8 @@ mounted(){
  statusChangeCallback(response){
 if (response.status === 'connected'){
   console.log('Login and Authenticated');
-  // this.testAPI()
+  // this.testAPI() 
+ 
   console.log('11')
 } else {
   console.log('Not Authenticated');
