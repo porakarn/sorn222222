@@ -14,18 +14,23 @@
 
 <b-container fluid style="">
   <div style="text-align: center ;margin-top:20px;margin-bottom:20px">
-      <b-row>
+      <b-row  v-if="canseesheet">
           <b-col  md="6" offset-md="3">
+    
+              
  <nuxt-link to="/tutor/sharesheet">
-    <b-button   style="    box-shadow: rgba(111, 111, 111, 0.23) 0px 1px 1px 1px;
-    width: 80%;
+    <b-button size="lg"  style="    box-shadow: rgba(111, 111, 111, 0.23) 0px 1px 1px 1px;
+    width: 60%;
     background-color: rgb(245, 245, 245);
     border: 0px;
-    color: #687b71;
-    border-radius: 14px;
+    color: #606a66;
+    border-radius: 20px;
     font-weight: 500;
     padding-top: 8px;
+    margin-top: 6px;
+        margin-bottom: 6px;
     padding-bottom: 8px;">แชร์ชีทสอน</b-button>  </nuxt-link>
+      <br>
 
           </b-col>
       </b-row>
@@ -173,7 +178,9 @@ Copter  </strong>
     </div>
   </div>
     <b-row v-else >
-        <b-col style="padding-right: 0px;
+            <p style=" padding:17px; color:#86a5ca ; text-align: center;
+" >ทีมงานกำลังตรวจสอบชีทสอนของคุณ ใช้เวลา 1-2 วัน </p>
+        <!-- <b-col style="padding-right: 0px;
     padding-left: 0px;"> 
    
      <b-card  @click="openWindow(sheet.docurl)" style="margin-bottom:0px;     border: 1px solid rgba(164, 164, 164, 0.125);
@@ -211,7 +218,7 @@ Copter  </strong>
 
     </b-card>
 
-   </b-col>
+   </b-col> -->
     </b-row>
 
      
@@ -276,7 +283,7 @@ mounted() {
                 return moment(t).locale('th').fromNow()
             },
             nextPage(){
-    this.$router.push('/tutor/sharesheet')
+    this.$router.push('/user/alltutor')
 }
 
 
