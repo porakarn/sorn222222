@@ -13,7 +13,7 @@
 
   <b-row>
 <b-col md="6" offset-md="3">
-  <img style="    width: 90%;" src="/sorns22.png"/>
+  <img style="    width: 90%;" src="/sorns22.jpg"/>
 
         <br><br>
      

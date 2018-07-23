@@ -1,15 +1,15 @@
 <template>
 
 <b-container fluid style="padding:0px;">
- <!-- <b-nav fill tabs style=" margin-top:-7px;    background-color: #cdf4d7;     box-shadow: 0px 2px 3px -1px rgba(126, 126, 126, 0.2), 0px 4px 5px 0px rgba(0, 0, 0, 0), 0px 1px 10px 0px #00000003;
+<b-nav fill tabs style=" margin-top:-7px;    background-color: #cdf4d7;     box-shadow: 0px 2px 3px -1px rgba(126, 126, 126, 0.2), 0px 4px 5px 0px rgba(0, 0, 0, 0), 0px 1px 10px 0px #00000003;
 " >
-  <b-nav-item  @click="nextPage2" class="responsive" >งานที่คุณโพส </b-nav-item>
- <b-nav-item class="responsive"  style="border-bottom: 4px solid;
+  <b-nav-item  class="responsive"  style="border-bottom: 4px solid;
     border-bottom-color: #ffffff; color: #5b7a69; 
-"   >เอกสารของคุณ</b-nav-item>
+">ค้นหาติวเตอร์ </b-nav-item>
+ <b-nav-item style="padding-right: 10px;
+    padding-left: 10px;" class="responsive"  @click="nextPage">ค้นหาชีทสอน</b-nav-item>
  
 </b-nav>
-  -->
 
 <b-container fluid style="padding:0px;" >
        <br>
@@ -131,7 +131,7 @@ mounted() {
                 return moment(t).locale('th').fromNow()
             },
             nextPage(){
-    this.$router.push('/tutor/sharesheet')
+    this.$router.push('/tutor/sheetall')
 },
 nextPage2(){
     this.$router.push('/tutor/job')

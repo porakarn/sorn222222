@@ -3,23 +3,42 @@
 
 <b-container fluid style="padding:0px;">
 
-  <b-nav fill tabs style=" margin-top:-7px;    background-color: #cdf4d7;     box-shadow: 0px 2px 3px -1px rgba(126, 126, 126, 0.2), 0px 4px 5px 0px rgba(0, 0, 0, 0), 0px 1px 10px 0px #00000003;
-" >
-  <b-nav-item @click="nextPage" class="responsive" >ค้นหาชีทสอน </b-nav-item>
- <b-nav-item class="responsive"   style="border-bottom: 4px solid;
-    border-bottom-color: #ffffff; color: #5b7a69; padding-right: 12px;
-    padding-left: 12px;
-" >แชร์ชีทสอน</b-nav-item>
- 
-</b-nav>
+ <b-navbar  style="  box-shadow: 0px 2px 3px -1px rgba(126, 126, 126, 0.2), 0px 4px 5px 0px rgba(0, 0, 0, 0), 0px 1px 10px 0px #00000003;   padding-bottom: 12px;
+    padding-top: 12px;  background-color:#cdf4d7!important; "toggleable variant="light">
+     <i @click="goback" style=" font-size: 25px;
+    padding-left: 4px;
+    color: white;
+" class="fa fa-arrow-left responsive" aria-hidden="true"></i> 
+        <!-- <b-navbar-brand>BootstrapVue</b-navbar-brand> -->
+     <b-button   style="  font-size: 21px;
+    color: #64e2cd94;
+    font-weight: 500;
+    background-color: #effdf3;
+    border-color: #6c757d00;
+    border-radius: 18px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    padding-left: 8px;
+    padding-right: 8px;
+    font-family: kanit;
+    border-top-width: 0px;
+        border-bottom-width: 0px
+"> sorns</b-button>
+        
+       
+       
+    </b-navbar>
  
 <b-container fluid>
 
-<br><br>
+<br><strong v-b-toggle.collapse1 style="color:#6c757d; font-weight:500">ดูวิธีการแชร์ชีทสอน</strong> <br>
+ <b-collapse id="collapse1" class="mt-2">
+  <img style="    width: 90%;" src="/urlpic3.jpg"/>
+ </b-collapse>
 <b-row>
 <b-col md="4" offset-md="4">
 
-
+ 
 
 
       <form @submit.prevent="onCreate">
@@ -219,7 +238,9 @@ if (!this.$store.state.user.canseesheet ) {
 }
 
 }
- }
+ },
+        layout: 'noheadtutor',
+         
    
 
 }
@@ -267,5 +288,24 @@ a{
     font-size: 18px;
     font-family:"Sukhumvit Set",sans-serif; 
 }
+
+.responsive {
+  display: none;
+}
+
+.responsive2 {
+  display: block;
+}
+
+/*show for small screens */
+@media screen and (max-width: 1023px) { /* I've given 1023px but you can change to proper width */
+    .responsive {
+        display: block;
+    }
+    .responsive2 {
+  display: none;
+}
+}
+
 
 </style>
