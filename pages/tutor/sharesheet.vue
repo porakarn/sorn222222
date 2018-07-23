@@ -3,8 +3,8 @@
 
 <b-container fluid style="padding:0px;">
 
- <b-navbar  style="  box-shadow: 0px 2px 3px -1px rgba(126, 126, 126, 0.2), 0px 4px 5px 0px rgba(0, 0, 0, 0), 0px 1px 10px 0px #00000003;   padding-bottom: 12px;
-    padding-top: 12px;  background-color:#cdf4d7!important; "toggleable variant="light">
+ <b-navbar  style="  box-shadow: 0px 2px 3px -1px rgba(126, 126, 126, 0.2), 0px 4px 5px 0px rgba(0, 0, 0, 0), 0px 1px 10px 0px #00000003; padding-bottom: 15px;
+    padding-top: 15px;  background-color:#cdf4d7!important; "toggleable variant="light">
      <i @click="goback" style=" font-size: 25px;
     padding-left: 4px;
     color: white;
@@ -31,13 +31,16 @@
  
 <b-container fluid>
 
-<br><strong v-b-toggle.collapse1 style="color:#6c757d; font-weight:500">ดูวิธีการแชร์ชีทสอน</strong> <br>
+<br><strong v-b-toggle.collapse1 style="color: #4d90c1; font-weight:500">ดูวิธีการแชร์ชีทสอน</strong> <br>
  <b-collapse id="collapse1" class="mt-2">
+    <p style="margin-bottom: 8px;">1.อัพโหลดไฟล์ชีทสอนลง Google Drive</p>
+     <p>2.ทำการ copy url มาใส่ใน form ข้างล่าง</p>
+    
   <img style="    width: 90%;" src="/urlpic3.jpg"/>
  </b-collapse>
 <b-row>
 <b-col md="4" offset-md="4">
-
+<br>
  
 
 
@@ -168,6 +171,10 @@ mounted() {
 
 
   methods: {
+       goback(){
+            this.$router.go(-1)
+
+        },
     nextPage(){
         this.$router.push('/tutor/sheetall')
     },
