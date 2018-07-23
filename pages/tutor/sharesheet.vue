@@ -22,7 +22,9 @@
     padding-right: 8px;
     font-family: kanit;
     border-top-width: 0px;
-    border-bottom-width: 0px
+    border-bottom-width: 0px;
+    border: 0px;
+
 "> sorns</b-button>
         
        
