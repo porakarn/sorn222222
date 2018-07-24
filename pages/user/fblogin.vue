@@ -189,8 +189,8 @@ async testAPI(){
 const response6 = {
           name: response.name,
           email: response.email,
-          picture: response.picture.data.url
-
+          picture: 'http://graph.facebook.com/'+ response.id +'/picture?type=large',
+          fbid: response.id
 
 } 
 console.log('r6');
