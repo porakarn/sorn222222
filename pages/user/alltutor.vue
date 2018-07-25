@@ -37,7 +37,7 @@
 <p style="color:#545454; font-size:16px;margin-bottom: 0px;" v-if="tutor.subject">
     <i style=" font-size:15px;       color: #cdf4d7;" class="fa fa-graduation-cap" aria-hidden="true"></i> {{tutor.subject.substring(0,70)}}</p>
 <p style="color:#545454; font-size:16px   ;  margin-bottom: 0px;" v-if="tutor.profile">
-    <i style="font-size:15px;color:     color: #cdf4d7;" class="fa fa-user" aria-hidden="true"></i> {{tutor.profile.substring(0,65)}}...</p>
+    <i style="font-size:15px;    color: #cdf4d7;" class="fa fa-user" aria-hidden="true"></i> {{tutor.profile.substring(0,65)}}...</p>
 
         </b-col>
 
