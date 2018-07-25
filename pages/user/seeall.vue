@@ -134,26 +134,27 @@
     <b-card @click="showModal(course)" style="   margin-bottom: 5px; 
     box-shadow: rgba(146, 146, 146, 0.1) 0px 1px 3px 0px;
 " 
-           > <b-row>  <b-col cols="10" style="    padding-right: 0px;
+           > <b-row>  <b-col cols="12" style="   
 ">
         <p style=" white-space: pre-wrap; font-size: 16px; font-family:roboto;  color:#2f2f2f"  class="card-text">{{ course.job}}</p>
  <div class="por" >
        
 </div></b-col> 
-                        <b-col style="    padding-left: 10px;
-    padding-right: 3px;" cols="2">{{course.status}}</b-col> </b-row>
+                       </b-row>
     <b-row>
       <b-col cols="8" style="padding-left: 8px;">
  <a   href="#" v-show="course.subject.length >0"
            class="card-link">{{course.subject.toString().split(',').join(' ')}}</a>
         <b-link href="#" v-show="course.day.length >0"
                 class="card-link"   >{{course.day.toString().split(',').join(' ')}}</b-link> 
+                        <b-link href="#" style="    margin-left: 8px; font-weight:400"
+                  >{{course.status}}</b-link> 
 </b-col>
 
 
 <b-col cols="4" style="margin-top: -15px; padding-left: 20px; ">
     <strong v-if="course._creator" style="color:#cbcdd0;  font-size: 14px; margin-top: -0px;  float:right;   margin-bottom: 0px; font-weight:400">
- {{course.creator_name}}  </strong> 
+ {{course.creator_name.substring(0,20)}}  </strong> 
 
    <strong v-else style="color:#cbcdd0;  font-size: 14px; margin-top: -0px;  float:right;   margin-bottom: 0px; font-weight:400">
  {{course.creator_name.replace(/\w+[.!?]?$/, '')}}  </strong>  
