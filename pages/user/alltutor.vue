@@ -34,8 +34,8 @@
         </b-col>
          <b-col cols="8" style="margin-left:-5px;padding-left: 0px; padding-right: 2px;">
 <p style=" padding-left: 0px;margin-bottom: 0px; font-weight:600; font-size:17px; margin-top: -6px;">{{tutor.name}}</p>
-<p style="color:#545454; font-size:16px;margin-bottom: 0px;" v-if="tutor.subject">{{tutor.subject.substring(0,70)}}</p>
-<p style="color:#545454; font-size:16px   ;  margin-bottom: 0px;" v-if="tutor.profile">{{tutor.profile.substring(0,65)}}...</p>
+<p style="color:#545454; font-size:16px;margin-bottom: 0px;" v-if="tutor.subject"><i style=" font-size:14px;   color: rgb(130, 217, 217);" class="fa fa-graduation-cap" aria-hidden="true"></i> {{tutor.subject.substring(0,70)}}</p>
+<p style="color:#545454; font-size:16px   ;  margin-bottom: 0px;" v-if="tutor.profile"><i style="font-size:14px;color: rgb(130, 217, 217);" class="fa fa-user-o" aria-hidden="true"></i> {{tutor.profile.substring(0,65)}}...</p>
 
         </b-col>
 
