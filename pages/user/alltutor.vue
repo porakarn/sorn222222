@@ -32,7 +32,7 @@
                      <img :src="tutor.picture" style="border-radius: 5px" width="100%"> 
 
         </b-col>
-         <b-col cols="8" style="margin-left:-5px;padding-left: 0px">
+         <b-col cols="8" style="margin-left:-5px;padding-left: 0px; padding-right: 2px;">
 <p style=" padding-left: 0px;margin-bottom: 0px; font-weight:600; font-size:17px">{{tutor.name}}</p>
 <p style="color:#545454; font-size:17px;margin-bottom: 0px;" v-if="tutor.subject">{{tutor.subject.substring(0,70)}}</p>
 <p style="color:#545454; font-size:16px   ;  margin-bottom: 0px;" v-if="tutor.profile">{{tutor.profile.substring(0,65)}}...</p>
