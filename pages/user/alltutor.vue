@@ -39,7 +39,7 @@
 
      </b-row>
      <b-row style="    margin-top: 7px;">
-  <b-col cols="7" style="padding-left: 15px;">
+  <b-col cols="8" style="padding-left: 15px;">
  <!-- <a v-show="tutor.tag.length >0" style="    color: rgb(255, 255, 255);
     text-decoration: none;
     background-color: rgb(130, 217, 217);
@@ -61,14 +61,13 @@
         margin-top: 7px;
     padding-bottom: 3px;
     font-size: 16px;
-    padding-right: 6px;
+    padding-right: 8px;
     border-radius: 5px;
-    font-weight:500;
-    padding-left: 6px;"  href="#" 
+    padding-left: 8px;"  href="#" 
            class="card-link">{{tag.toString()}}</a>
               <br>  
 </b-col>
-<b-col cols="5" style="  padding-left: 20px; ">
+<b-col cols="4" style="  padding-left: 20px; ">
 
 
    <!-- <strong style="color:#cbcdd0;  font-size: 14px; margin-top: -0px;  float:right;   margin-bottom: 0px; font-weight:400">
