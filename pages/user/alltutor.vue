@@ -39,7 +39,8 @@
 
      </b-row>
      <b-row style="    margin-top: 7px;">
-  <b-col cols="8" style="padding-left: 15px;">
+  <b-col cols="8" style="    padding-left: 9px;
+    padding-right: 0px;">
  <!-- <a v-show="tutor.tag.length >0" style="    color: rgb(255, 255, 255);
     text-decoration: none;
     background-color: rgb(130, 217, 217);
