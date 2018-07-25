@@ -33,8 +33,8 @@
 
         </b-col>
          <b-col cols="8" style="margin-left:-5px;padding-left: 0px; padding-right: 2px;">
-<p style=" padding-left: 0px;margin-bottom: 0px; font-weight:600; font-size:17px">{{tutor.name}}</p>
-<p style="color:#545454; font-size:17px;margin-bottom: 0px;" v-if="tutor.subject">{{tutor.subject.substring(0,70)}}</p>
+<p style=" padding-left: 0px;margin-bottom: 0px; font-weight:600; font-size:17px; margin-top: -6px;">{{tutor.name}}</p>
+<p style="color:#545454; font-size:16px;margin-bottom: 0px;" v-if="tutor.subject">{{tutor.subject.substring(0,70)}}</p>
 <p style="color:#545454; font-size:16px   ;  margin-bottom: 0px;" v-if="tutor.profile">{{tutor.profile.substring(0,65)}}...</p>
 
         </b-col>
@@ -218,7 +218,8 @@ border-top: 0px;
   padding-left: 10px;
     padding-top: 2px;
     padding-right: 10px;
-      padding-bottom: 7px;
+      padding-bottom: 8px;
+      margin-top: 2px;
 }
 
 .card-title {
