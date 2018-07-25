@@ -55,16 +55,30 @@
 
       <a v-for="tag in tutor.tag" v-show="tutor.tag.length >0" style="    color: rgb(255, 255, 255);
     text-decoration: none;
-    background-color: rgb(130, 217, 217);
+    color: rgb(130, 217, 217);
+    border: 1px solid rgb(130, 217, 217);
     padding-top: 3px;
     margin-left: 6px;
-        margin-top: 7px;
+    margin-top: 7px;
     padding-bottom: 3px;
     font-size: 16px;
     padding-right: 8px;
     border-radius: 5px;
     padding-left: 8px;"  href="#" 
            class="card-link">{{tag.toString()}}</a>
+
+              <!-- <a v-for="tag in tutor.tag" v-show="tutor.tag.length >0" style="    color: rgb(255, 255, 255);
+    text-decoration: none;
+    background-color: rgb(130, 217, 217);
+    padding-top: 3px;
+    margin-left: 6px;
+    margin-top: 7px;
+    padding-bottom: 3px;
+    font-size: 16px;
+    padding-right: 8px;
+    border-radius: 5px;
+    padding-left: 8px;"  href="#" 
+           class="card-link">{{tag.toString()}}</a> -->
               <br>  
 </b-col>
 <b-col cols="4" style="  padding-left: 20px; ">
