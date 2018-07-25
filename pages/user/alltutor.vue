@@ -57,7 +57,7 @@
       <a v-for="tag in tutor.tag" v-show="tutor.tag.length >0" style="    color: rgb(255, 255, 255);
     text-decoration: none;
     color: rgb(130, 217, 217);
-    border: 1px solid rgb(130, 217, 217);
+    border: 1px solid rgb(181, 232, 232);
     padding-top: 3px;
     margin-left: 6px;
     margin-top: 7px;
