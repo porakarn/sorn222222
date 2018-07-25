@@ -147,14 +147,15 @@
            class="card-link">{{course.subject.toString().split(',').join(' ')}}</a>
         <b-link href="#" v-show="course.day.length >0"
                 class="card-link"   >{{course.day.toString().split(',').join(' ')}}</b-link> 
-                        <b-link href="#" style="    margin-left: 8px; font-weight:400"
+                        <b-link href="#" style=" font-size:16px; color: rgba(102, 117, 113, 0.61176);
+  margin-left: 8px; font-weight:400"
                   >{{course.status}}</b-link> 
 </b-col>
 
 
 <b-col cols="4" style="margin-top: -15px; padding-left: 20px; ">
     <strong v-if="course._creator" style="color:#cbcdd0;  font-size: 14px; margin-top: -0px;  float:right;   margin-bottom: 0px; font-weight:400">
- {{course.creator_name.substring(0,20)}}  </strong> 
+ {{course.creator_name}}  </strong> 
 
    <strong v-else style="color:#cbcdd0;  font-size: 14px; margin-top: -0px;  float:right;   margin-bottom: 0px; font-weight:400">
  {{course.creator_name.replace(/\w+[.!?]?$/, '')}}  </strong>  
