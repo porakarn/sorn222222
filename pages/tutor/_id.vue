@@ -8,8 +8,8 @@
     color: white;
 " class="fa fa-arrow-left responsive" aria-hidden="true"></i>
         <!-- <b-navbar-brand>BootstrapVue</b-navbar-brand> -->
-     <b-button   style="  font-size: 21px;
-    color: #64e2cd94;
+      <b-button   style="   font-size: 21px;
+     color: #a5efe3;
     font-weight: 500;
     background-color: #effdf3;
     border-color: #6c757d00;
@@ -20,7 +20,7 @@
     padding-right: 8px;
     font-family: kanit;
     border-top-width: 0px;
-        border-bottom-width: 0px
+    border-bottom-width: 0px
 "> sorns</b-button>
         
        
