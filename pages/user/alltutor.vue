@@ -40,7 +40,7 @@
      </b-row>
      <b-row style="    margin-top: 7px;">
   <b-col cols="7" style="padding-left: 15px;">
- <a v-show="tutor.tag.length >0" style="    color: rgb(255, 255, 255);
+ <!-- <a v-show="tutor.tag.length >0" style="    color: rgb(255, 255, 255);
     text-decoration: none;
     background-color: rgb(130, 217, 217);
     padding-top: 3px;
@@ -48,10 +48,24 @@
     padding-bottom: 3px;
     font-size: 16px;
     padding-right: 6px;
-    border-radius: 4px;
+    border-radius: 7px;
+    font-weight:400;
     padding-left: 6px;"  href="#" 
-           class="card-link">{{tutor.tag.toString().split(',').join(' ')}}</a>
-     
+           class="card-link">{{tutor.tag.toString().split(',').join(' ')}}</a> -->
+
+      <a v-for="tag in tutor.tag" v-show="tutor.tag.length >0" style="    color: rgb(255, 255, 255);
+    text-decoration: none;
+    background-color: rgb(130, 217, 217);
+    padding-top: 3px;
+    margin-left: 6px;
+        margin-top: 7px;
+    padding-bottom: 3px;
+    font-size: 16px;
+    padding-right: 6px;
+    border-radius: 5px;
+    font-weight:400;
+    padding-left: 6px;"  href="#" 
+           class="card-link">{{tag.toString()}}</a>
               <br>  
 </b-col>
 <b-col cols="5" style="  padding-left: 20px; ">

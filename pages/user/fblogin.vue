@@ -189,7 +189,7 @@ async testAPI(){
 const response6 = {
           name: response.name,
           email: response.email,
-          picture: 'http://graph.facebook.com/'+ response.id +'/picture?type=large',
+          picture: 'https://graph.facebook.com/'+ response.id +'/picture?type=large',
           fbid: response.id
 
 } 
