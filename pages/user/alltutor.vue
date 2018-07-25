@@ -63,7 +63,7 @@
     font-size: 16px;
     padding-right: 6px;
     border-radius: 5px;
-    font-weight:400;
+    font-weight:500;
     padding-left: 6px;"  href="#" 
            class="card-link">{{tag.toString()}}</a>
               <br>  
