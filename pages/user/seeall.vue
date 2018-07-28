@@ -291,7 +291,7 @@
 
 
 </b-container>
-
+<br><br>
 </b-container fluid>
 
 </template>
@@ -381,7 +381,9 @@ export default {
   asyncData (context) {
 
     
-      
+   
+          // return axios.get('http://localhost:8000/job/all')
+
     return axios.get('https://frozen-mesa-40722.herokuapp.com/job/all')
     .then((res) => { console.log(res.data)
       return { courses: res.data,
