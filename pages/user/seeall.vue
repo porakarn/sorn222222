@@ -136,7 +136,7 @@
 " 
            > <b-row>  <b-col cols="12" style="   
 ">
-        <p style=" white-space: pre-wrap; font-size: 16px; font-family:roboto;  color:#2f2f2f"  class="card-text">{{ course.job}}</p>
+        <p style=" white-space: pre-wrap; font-size: 15px; font-family:roboto;  color:#2f2f2f"  class="card-text">{{ course.job}}</p>
  <div class="por" >
        
 </div></b-col> 
