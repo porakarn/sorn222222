@@ -537,6 +537,9 @@ border: 1px solid rgba(193, 193, 193, 0.12);
   display: block;
 }
 
+.btn-secondary{
+  border-color: #effdf3;
+}
 /*show for small screens */
 @media screen and (max-width: 1023px) { /* I've given 1023px but you can change to proper width */
     .responsive {

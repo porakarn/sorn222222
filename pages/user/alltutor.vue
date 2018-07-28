@@ -13,9 +13,9 @@
 
 <b-container fluid style="padding:0px;" >
        <br>
-        <p style=" color:#86a5ca ; text-align: center;
+        <!-- <p style=" color:#86a5ca ; text-align: center;
 " >
- ติวเตอร์ทั้งหมด ({{ tutors.length }})</p>
+ ติวเตอร์ทั้งหมด ({{ tutors.length }})</p> -->
 
 
  

@@ -356,6 +356,9 @@ border-top: 0px;
     padding-left: 4px;
 }
 
+.btn-secondary{
+  border-color: #effdf3;
+}
 .card-body {
     -ms-flex: 1 1 auto;
     flex: 1 1 auto;
