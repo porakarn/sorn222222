@@ -16,10 +16,55 @@
         <!-- <p style=" color:#86a5ca ; text-align: center;
 " >
  ติวเตอร์ทั้งหมด ({{ tutors.length }})</p> -->
+<div style="text-align:center;">
+     <b-button v-b-modal.modal1  class="responsive" style="font-size: 17px;
+    color: #5f5f5f;
+    background-color: #f5f5f5;
+    border-color: rgba(108, 117, 125, 0);
+    border-radius: 18px;
+    padding-left: 17px;
+    padding-right: 20px;
+"><i style=" font-size: 20px; color: #5f5f5f;   " class="fa fa-search nav-item " aria-hidden="true"></i> ค้นหาติวเตอร์ตามวิชา</b-button>
+  </div>
+   <br>
+
+ <b-col style="    padding-left: 0px;
+    padding-right: 0px;" md="6" offset-md="3">
 
 
- 
+ <b-modal no-fade hide-header  hide-footer ref="myModalRef4"  id="modal1" >
+
+<div>
+  <p style="font-size:20px;"> ค้นหาติวเตอร์ตามวิชา <i style=" font-size: 20px; color: #667a6b;" class="fa fa-search nav-item " aria-hidden="true"></i></p>
+
+    <b-form-select style="  padding-top: 10px;
+    padding-bottom: 10px;" multiple :select-size="6"    v-model="selected" :options="options" class="mb-3">
+    </b-form-select>
+   <strong v-show="selected.length >0" style="    background-color: #c6f1d0;
+    padding: 5px;
+    border-radius: 4px;
+    color: #086542;"> {{ selected.toString().split(',').join(' ') }}</strong></div>
+  </div>
+
+
+
+
+
+
+
+
    
+<br>
+  <!-- <button @click="sendout">send</button> -->
+    <b-button  @click="sendout" style="    width: 100%;  background-color: #33C1C1; border: 0px; padding-left: 66px;
+    padding-right: 66px;">ทำการค้นหา</b-button>  
+      <div style="color: grey" class="loading-page" v-if="loading">
+    Loading...
+  </div>
+  </div>
+  </b-modal>
+
+
      <b-card @click="seeeach(tutor._id)" style="margin-bottom:0px;     border: 1px solid rgba(164, 164, 164, 0.125);
     border-radius: 1px;     box-shadow: rgba(148, 142, 142, 0) 0px 1px 3px -1px, rgba(255, 251, 251, 0) 0px 4px 5px 0px, rgba(0, 0, 0, 0.01) 0px 1px 10px 0px;
 
@@ -113,7 +158,7 @@
 <br>
 <br>
 
-    
+    </b-col>
 
 </b-container>
 </b-container>
@@ -127,7 +172,25 @@ import moment from 'moment';
  export default {
     data(){
     return {
-      tutors:{}
+      tutors:{},
+       loading: false,
+        selected: [], // Array reference
+      options: [
+        { value: 'ENG', text: 'ENG' },
+        { value: 'คณิต', text: 'คณิตศาสตร์' },
+        { value: 'วิทย์', text: 'วิทยาศาสตร์' },
+        { value: 'ไทย', text: 'ไทย' },
+        { value: 'สังคม', text: 'สังคม' },
+        { value: 'ฟิสิกส์', text: 'ฟิสิกส์' },
+        { value: 'เคมี', text: 'เคมี' },
+        { value: 'ชีวะ', text: 'ชีวะ' },
+        { value: 'จีน', text: 'ภาษาจีน' },
+        { value: 'ญี่ปุ่น', text: 'ภาษาญี่ปุ่น' },
+        { value: 'เกาหลี', text: 'ภาษาเกาหลี' },
+
+
+      ],
+    
     
 
     }
@@ -152,6 +215,44 @@ mounted() {
 
 
   methods: {
+
+    sendout(){
+this.loading = true
+  this.$nuxt.$loading.start()
+    
+            console.log(this.selected);
+         
+
+let createPost = {
+      
+    
+  
+        subject :this.selected,
+     
+
+       
+
+      }
+      console.log(createPost);
+      
+ axios.post('http://localhost:8000/tutor/filter', createPost)
+                // axios.get('http://localhost:8000/job/all')
+
+          .then((res) => { 
+              
+              console.log(res.data)
+            //   this.courses = res.data
+              this.tutors = res.data,
+             this.$refs.myModalRef4.hide()
+             this.loading = false
+               this.$nuxt.$loading.finish()
+
+          })
+          .catch(error => console.log(error))
+      
+    },
+
+
    seeeach(x){
        this.$router.push(`/tutor/${x}`)
    },
