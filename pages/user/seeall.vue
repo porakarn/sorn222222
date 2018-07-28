@@ -106,7 +106,7 @@
 
 
 <b-container fluid style="padding-left: 11px;
-    padding-right: 11px; background-color:#eaf7f7;"> 
+    padding-right: 11px; background-color:#f5fbfb;"> 
 <br> 
   <b-row class="responsive2">
  <b-col offset-lg="3" lg="6">
