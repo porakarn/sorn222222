@@ -103,11 +103,11 @@
   </div>
   </div>
   </b-modal>
-<br> 
+
 
 <b-container fluid style="padding-left: 11px;
-    padding-right: 11px; background-color:#edf7ff;"> 
-
+    padding-right: 11px; background-color:#eaf7f7;"> 
+<br> 
   <b-row class="responsive2">
  <b-col offset-lg="3" lg="6">
    <div style="text-align: center;">
