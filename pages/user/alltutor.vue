@@ -235,7 +235,7 @@ let createPost = {
       }
       console.log(createPost);
       
- axios.post('http://localhost:8000/tutor/filter', createPost)
+ axios.post('https://frozen-mesa-40722.herokuapp.com/tutor/filter', createPost)
                 // axios.get('http://localhost:8000/job/all')
 
           .then((res) => { 
@@ -306,7 +306,9 @@ border-top: 0px;
 
 }
 
-
+.btn-secondary:focus, .btn-secondary.focus {
+    box-shadow: 0 0 0 0.2rem rgba(255, 255, 255, 0.5);
+}
 
 .form-control:focus {
     color: #495057;
