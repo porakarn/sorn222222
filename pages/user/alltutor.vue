@@ -25,6 +25,10 @@
     padding-left: 17px;
     padding-right: 20px;
 "><i style=" font-size: 20px; color: #5f5f5f;   " class="fa fa-search nav-item " aria-hidden="true"></i> ค้นหาติวเตอร์ตามวิชา</b-button>
+ <br><br> <strong v-show="selected.length >0" style="    background-color: #c6f1d0;
+    padding: 5px;
+    border-radius: 4px;
+    color: #086542;"> {{ selected.toString().split(',').join(' ') }}</strong>
   </div>
    <br>
 
