@@ -25,12 +25,17 @@
     padding-left: 17px;
     padding-right: 20px;
 "><i style=" font-size: 20px; color: #5f5f5f;   " class="fa fa-search nav-item " aria-hidden="true"></i> ค้นหาติวเตอร์ตามวิชา</b-button>
- <br><br> <strong v-show="selected.length >0" style="    background-color: #c6f1d0;
+<div v-show="selected.length >0">
+ <br> <strong  v-for="selecting in selected" style="    background-color: #c6f1d0;
     padding: 5px;
-    border-radius: 4px;
-    color: #086542;"> {{ selected.toString().split(',').join(' ') }}</strong>
+    border-radius: 9px;
+    color: #086542;
+    margin-left: 5px;
+    padding-right: 10px;"> {{ selecting.toString() }}</strong>
+</div>
+
   </div>
-   <br>
+    <br>
 
  <b-col style="    padding-left: 0px;
     padding-right: 0px;" md="6" offset-md="3">
@@ -44,10 +49,12 @@
     <b-form-select style="  padding-top: 10px;
     padding-bottom: 10px;" multiple :select-size="6"    v-model="selected" :options="options" class="mb-3">
     </b-form-select>
-   <strong v-show="selected.length >0" style="    background-color: #c6f1d0;
+  <strong  v-for="selecting in selected" style="    background-color: #c6f1d0;
     padding: 5px;
-    border-radius: 4px;
-    color: #086542;"> {{ selected.toString().split(',').join(' ') }}</strong></div>
+    border-radius: 9px;
+    color: #086542;
+    margin-left: 5px;
+    padding-right: 10px;"> {{ selecting.toString() }}</strong></div>
   </div>
 
 
@@ -239,7 +246,9 @@ let createPost = {
       }
       console.log(createPost);
       
- axios.post('https://frozen-mesa-40722.herokuapp.com/tutor/filter', createPost)
+
+      if (this.selected.length > 0) {
+           axios.post('https://frozen-mesa-40722.herokuapp.com/tutor/filter', createPost)
                 // axios.get('http://localhost:8000/job/all')
 
           .then((res) => { 
@@ -253,6 +262,23 @@ let createPost = {
 
           })
           .catch(error => console.log(error))
+      } else {
+            axios.get('https://frozen-mesa-40722.herokuapp.com/tutor/all')
+                // axios.get('http://localhost:8000/job/all')
+
+          .then((res) => { 
+              
+              console.log(res.data)
+            //   this.courses = res.data
+              this.tutors = res.data,
+             this.$refs.myModalRef4.hide()
+             this.loading = false
+               this.$nuxt.$loading.finish()
+
+          })
+          .catch(error => console.log(error))
+      }
+
       
     },
 
