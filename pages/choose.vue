@@ -8,7 +8,7 @@
         <!-- <b-button size="lg" style="  background-color: white; border: 0px; padding-left: 66px; color:#33C1C1;
     padding-right: 66px;">สมัครนักเรียน</b-button>   -->
 <br>
-    <nuxt-link to="agent/signup">   <b-button size="lg" style="  background-color: #e997ae; border: 0px; padding-left: 66px;color:#618f82;
+    <nuxt-link to="agent/signup">   <b-button size="lg" style="  background-color: #f9a1b9; border: 0px; padding-left: 66px;color:#618f82;
     padding-right: 66px;">สมัครนายหน้า</b-button>  </nuxt-link>
 </div>
 <br>

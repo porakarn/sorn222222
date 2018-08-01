@@ -5,7 +5,7 @@
 
    <div>
     <b-navbar  style="    padding-bottom: 12px;
-    padding-top: 12px;  background-color:#e997ae!important;"toggleable variant="light">
+    padding-top: 12px;  background-color:#f9a1b9!important;"toggleable variant="light">
    
       
    <b-button   style="  font-size: 21px;
