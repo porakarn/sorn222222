@@ -12,9 +12,10 @@
     padding-right: 0px;" target="nav_text_collapse"></b-navbar-toggle>
         <!-- <b-navbar-brand>BootstrapVue</b-navbar-brand> -->
       <b-button  class="responsive2" style="  font-size: 21px;
-    color: #a5efe3;
+   
     font-weight: 500;
-    background-color: #effdf3;
+       color: rgb(223, 174, 169);
+    background-color: rgb(254, 241, 240);
     border-color: #6c757d00;
     border-radius: 18px;
     padding-top: 0px;
@@ -27,7 +28,7 @@
 "> sorns</b-button>
         
           <b-button v-b-modal.modal1  class="responsive" style="font-size: 17px; color: #667a6b; float:right;
-    background-color: #effdf3;
+    background-color: #white;
     border-color: #6c757d00;
     border-radius: 18px;
     padding-left: 17px;

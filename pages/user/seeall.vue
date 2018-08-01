@@ -106,7 +106,7 @@
 
 
 <b-container fluid style="padding-left: 11px;
-    padding-right: 11px; background-color:#fffaf9;margin-top: 5px;"> 
+    padding-right: 11px; margin-top: 5px;"> 
 <br> 
   <b-row class="responsive2">
  <b-col offset-lg="3" lg="6">
@@ -114,7 +114,7 @@
  <b-button v-b-modal.modal1   style="font-size: 17px; color: #667a6b; 
   font-size: 18px;
     color: #454e47;
-    background-color: #f3f3f3;
+    background-color: #ffffff;
     border-color: #6c757d00;
     border-radius: 18px;
     padding-left: 60px;
