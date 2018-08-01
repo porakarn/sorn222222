@@ -27,12 +27,15 @@
         border-bottom-width: 0px
 "> sorns</b-button>
         
-          <b-button v-b-modal.modal1  class="responsive" style="font-size: 17px; color: #667a6b; float:right;
-    background-color: #white;
+          <b-button v-b-modal.modal1  class="responsive" style="
+          font-size: 18px;
+        color: #616161;
+    background-color: white;
     border-color: #6c757d00;
     border-radius: 18px;
-    padding-left: 17px;
-    padding-right: 20px;
+    padding-left: 60px;
+    padding-right: 60px;
+
 "><i style=" font-size: 20px; color: #667a6b ; " class="fa fa-search nav-item " aria-hidden="true"></i> ลองค้นหางานดูสิ</b-button>
         <b-collapse is-nav id="nav_text_collapse">
             <b-navbar-nav class="ml-auto">
