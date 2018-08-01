@@ -43,6 +43,7 @@ module.exports = {
  manifest: {
    name: 'Sorns',
    display: 'standalone',
+  short_name: 'Sorns',
 
  },
   /*
