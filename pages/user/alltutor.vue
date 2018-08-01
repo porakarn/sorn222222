@@ -1,10 +1,10 @@
 <template>
 
 <b-container fluid style="padding:0px;">
-<b-nav fill tabs style=" margin-top:-7px;    background-color: #cdf4d7;     box-shadow: 0px 2px 3px -1px rgba(126, 126, 126, 0.2), 0px 4px 5px 0px rgba(0, 0, 0, 0), 0px 1px 10px 0px #00000003;
+<b-nav fill tabs style=" margin-top:-7px;    background-color: #DFAEA9;     box-shadow: 0px 2px 3px -1px rgba(126, 126, 126, 0.2), 0px 4px 5px 0px rgba(0, 0, 0, 0), 0px 1px 10px 0px #00000003;
 " >
   <b-nav-item  class="responsive"  style="border-bottom: 4px solid;
-    border-bottom-color: #ffffff; color: #5b7a69; 
+    border-bottom-color: #ffffff; color: #ffffff; 
 ">ค้นหาติวเตอร์ </b-nav-item>
  <b-nav-item style="padding-right: 10px;
     padding-left: 10px;" class="responsive"  @click="nextPage">ค้นหาชีทสอน</b-nav-item>
@@ -92,7 +92,7 @@
 <p style=" padding-left: 0px;margin-bottom: 0px; font-weight:600; font-size:17px; margin-top: -6px;">{{tutor.name}}</p>
 <p style="color:#545454; font-size:16px;margin-bottom: 0px;margin-bottom: 3px;
 " v-if="tutor.subject">
-    <i style=" font-size:15px;       color: #cdf4d7;" class="fa fa-graduation-cap" aria-hidden="true"></i> {{tutor.subject.substring(0,70)}}</p>
+    <i style=" font-size:15px;       color: #DFAEA9;" class="fa fa-graduation-cap" aria-hidden="true"></i> {{tutor.subject.substring(0,70)}}</p>
 <p style="color:#545454; font-size:16px   ;  margin-bottom: 0px;" v-if="tutor.profile">
     {{tutor.profile.substring(0,65)}}...</p>
 

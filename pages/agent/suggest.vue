@@ -1,7 +1,7 @@
 <template>
 <b-container fluid style="padding:0px;">
 <b-navbar  style="    padding-bottom: 12px;
-    padding-top: 12px;  background-color:#cdf4d7!important; "toggleable variant="light">
+    padding-top: 12px;  background-color:#DFAEA9!important; "toggleable variant="light">
         <b-navbar-toggle style="border-color: rgba(0, 0, 0, 0);    padding-left: 0px;
     padding-right: 0px;" target="nav_text_collapse"></b-navbar-toggle>
         <!-- <b-navbar-brand>BootstrapVue</b-navbar-brand> -->
@@ -49,12 +49,12 @@
 
 
 
-<b-nav fill tabs style=" margin-top:-7px;    background-color: #cdf4d7;     box-shadow: 0px 2px 3px -1px rgba(126, 126, 126, 0.2), 0px 4px 5px 0px rgba(0, 0, 0, 0), 0px 1px 10px 0px #00000003;
+<b-nav fill tabs style=" margin-top:-7px;    background-color: #DFAEA9;     box-shadow: 0px 2px 3px -1px rgba(126, 126, 126, 0.2), 0px 4px 5px 0px rgba(0, 0, 0, 0), 0px 1px 10px 0px #00000003;
 " >
   <b-nav-item @click="nextPage" class="responsive"  >ทั้งหมด </b-nav-item>
  <b-nav-item style="border-bottom: 4px solid; padding-right: 12px;
     padding-left: 12px;
-    border-bottom-color: #ffffff; color: #5b7a69; 
+    border-bottom-color: #ffffff; color: #ffffff; 
 " class="responsive"  >งานแนะนำ</b-nav-item>
 </b-nav>
 

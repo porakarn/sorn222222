@@ -173,7 +173,7 @@ async testAPI(){
   if (process.browser) {
 
 
- FB.api('/me?fields=id,name,email,gender,picture.type(large)', (response) =>{
+ FB.api('/me?fields=id,name,email,gender,age_range,birthday,picture.type(large)', (response) =>{
    if(response && !response.error){
      console.log(response);
      console.log(response.email)
