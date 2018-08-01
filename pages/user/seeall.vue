@@ -111,10 +111,10 @@
   <b-row class="responsive2">
  <b-col offset-lg="3" lg="6">
    <div style="text-align: center;">
- <b-button v-b-modal.modal1   style="font-size: 17px; color: #667a6b; 
+ <b-button v-b-modal.modal1   style="font-size: 17px; 
   font-size: 18px;
-    color: #454e47;
-    background-color: #ffffff;
+        color: #616161;
+    background-color: white;
     border-color: #6c757d00;
     border-radius: 18px;
     padding-left: 60px;
