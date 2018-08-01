@@ -33,8 +33,8 @@
     background-color: white;
     border-color: #6c757d00;
     border-radius: 18px;
-    padding-left: 60px;
-    padding-right: 60px;
+    padding-left: 50px;
+    padding-right: 50px;
 
 "><i style=" font-size: 20px; color: #667a6b ; " class="fa fa-search nav-item " aria-hidden="true"></i> ลองค้นหางานดูสิ</b-button>
         <b-collapse is-nav id="nav_text_collapse">
