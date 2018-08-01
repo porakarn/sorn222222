@@ -510,7 +510,7 @@ let createPost = {
         margin-left: 7px;
          color: #ffffff;
     text-decoration: none;
-    background-color: #f6b7b1;
+    background-color: #dfaea9;
     padding: 2px;
     padding-left: 7px;
     padding-right: 7px;

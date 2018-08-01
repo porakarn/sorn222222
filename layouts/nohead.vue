@@ -140,7 +140,7 @@ html
 .nav-item:hover,
 .nav-item:active,
 .nav-item.nuxt-link-active {
-  color: rgba(51, 193, 195, 1)!important;
+ color: #ecb1ab!important;
 }
 
 

@@ -182,7 +182,7 @@ html
 .nav-item:hover,
 .nav-item:active,
 .nav-item.nuxt-link-active {
-  color: #0baa8a!important;
+  color: #ecb1ab!important;
 }
 
 

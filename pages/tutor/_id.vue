@@ -9,9 +9,10 @@
 " class="fa fa-arrow-left responsive" aria-hidden="true"></i>
         <!-- <b-navbar-brand>BootstrapVue</b-navbar-brand> -->
       <b-button   style="   font-size: 21px;
-     color: #a5efe3;
+  
     font-weight: 500;
-    background-color: #effdf3;
+        color: rgb(223, 174, 169);
+    background-color: rgb(254, 241, 240);
     border-color: #6c757d00;
     border-radius: 18px;
     padding-top: 0px;

@@ -287,7 +287,7 @@ button{
 }
 a{
 
-    color: #4159539c;
+    color:  #ffffff;
     font-weight: 600;
     font-size: 18px;
     font-family:"Sukhumvit Set",sans-serif; 
