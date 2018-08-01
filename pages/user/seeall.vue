@@ -27,7 +27,7 @@
 "> sorns</b-button>
         
           <b-button v-b-modal.modal1  class="responsive" style="font-size: 17px; color: #667a6b; float:right;
-    background-color: #effdf3;
+    background-color: #fffaf9;
     border-color: #6c757d00;
     border-radius: 18px;
       padding-left: 17px;
@@ -106,7 +106,7 @@
 
 
 <b-container fluid style="padding-left: 11px;
-    padding-right: 11px; background-color:#f5fbfb;margin-top: 5px;"> 
+    padding-right: 11px; background-color:#fffaf9;margin-top: 5px;"> 
 <br> 
   <b-row class="responsive2">
  <b-col offset-lg="3" lg="6">
@@ -510,7 +510,7 @@ let createPost = {
         margin-left: 7px;
          color: #ffffff;
     text-decoration: none;
-    background-color: #82D9D9;
+    background-color: #f6b7b1;
     padding: 2px;
     padding-left: 7px;
     padding-right: 7px;
@@ -553,7 +553,8 @@ border: 1px solid rgba(193, 193, 193, 0.12);
 
 a{
 
-    color: #4159539c;
+    color:white;
+
     font-weight: 600;
     font-size: 18px;
     font-family:"Sukhumvit Set",sans-serif; 

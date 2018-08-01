@@ -132,7 +132,7 @@
  <b-button v-b-modal.modal1   style="font-size: 17px; color: #667a6b; 
   font-size: 18px;
     color: #454e47;
-    background-color: #f3f3f3;
+    background-color: #fff4f3;
     border-color: #6c757d00;
     border-radius: 18px;
     padding-left: 60px;
@@ -518,7 +518,7 @@ border: 1px solid rgba(193, 193, 193, 0.12);
 
 a{
 
-    color: #4159539c;
+    color:white;
     font-weight: 600;
     font-size: 18px;
     font-family:"Sukhumvit Set",sans-serif; 
