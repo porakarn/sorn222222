@@ -9,10 +9,14 @@
          <!-- <b-navbar-brand style="    color: rgb(51, 193, 193);
     font-size: 28px;
     font-weight: 500;margin-left: 55px;" href="#">Sorns</b-navbar-brand> -->
+     <!-- color: #a5efe3; -->
+    <!-- background-color: #effdf3; -->
+
    <b-button   style="   font-size: 21px;
-     color: #a5efe3;
+          color: #dfaea9;
+          background-color:#fef1f0
+     
     font-weight: 500;
-    background-color: #effdf3;
     border-color: #6c757d00;
     border-radius: 18px;
     padding-top: 0px;
