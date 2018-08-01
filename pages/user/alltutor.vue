@@ -18,7 +18,7 @@
  ติวเตอร์ทั้งหมด ({{ tutors.length }})</p> -->
 <div style="text-align:center;">
      <b-button v-b-modal.modal1  class="responsive" style="font-size: 17px;
-    color: #5f5f5f;
+    color: #5f5f5f; 
     background-color: #f5f5f5;
     border-color: rgba(108, 117, 125, 0);
     border-radius: 18px;
