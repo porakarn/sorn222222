@@ -92,7 +92,7 @@
 <p style=" padding-left: 0px;margin-bottom: 0px; font-weight:600; font-size:17px; margin-top: -6px;">{{tutor.name}}</p>
 <p style="color:#545454; font-size:16px;margin-bottom: 0px;margin-bottom: 3px;
 " v-if="tutor.subject">
-    <i style=" font-size:15px;       color: #cdf4d7;" class="fa fa-graduation-cap" aria-hidden="true"></i> {{tutor.subject.substring(0,70)}}</p>
+    <i style=" font-size:15px;       color:#9dd8bf;" class="fa fa-graduation-cap" aria-hidden="true"></i> {{tutor.subject.substring(0,70)}}</p>
 <p style="color:#545454; font-size:16px   ;  margin-bottom: 0px;" v-if="tutor.profile">
     {{tutor.profile.substring(0,65)}}...</p>
 
@@ -115,7 +115,7 @@
     padding-left: 6px;"  href="#" 
            class="card-link">{{tutor.tag.toString().split(',').join(' ')}}</a> -->
 
-      <a v-for="tag in tutor.tag" v-show="tutor.tag.length >0" style=" color: #8bd2b4;
+      <a v-for="tag in tutor.tag" v-show="tutor.tag.length >0" style=" color: #9dd8bf;
     text-decoration: none;
     border: 1px solid #8bd2b4;
     padding: 3px 8px;
@@ -144,8 +144,8 @@
 
    <!-- <strong style="color:#cbcdd0;  font-size: 14px; margin-top: -0px;  float:right;   margin-bottom: 0px; font-weight:400">
  {{sheet.owner.replace(/\w+[.!?]?$/, '')}}  </strong>  -->
-
- <strong style="color:#a5cae4;  font-size: 15px; margin-top: -0px;  float:right;  margin-bottom: 0px; font-weight:400">{{ displayTimestamp(tutor.createdAt) }}  </strong>  
+<!-- color:#a5cae4; -->
+ <strong style=" color:#9dd8bf;  font-size: 15px; margin-top: -0px;  float:right;  margin-bottom: 0px; font-weight:400">{{ displayTimestamp(tutor.createdAt) }}  </strong>  
 </b-col>
 
      </b-row>
@@ -365,9 +365,9 @@ border-top: 0px;
     color: #5a5a5a;
 }
 a{
-color: #708f7e;
+/* color: #708f7e; */
 /* color: #ffffff; */
-    /* color: #4159539c; */
+    color: #4159539c;
     font-weight: 600;
     font-size: 18px;
     font-family:"Sukhumvit Set",sans-serif; 
