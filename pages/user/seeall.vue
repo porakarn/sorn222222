@@ -138,7 +138,7 @@ background-color: rgb(250, 254, 251);
 " 
            > <b-row>  <b-col cols="12" style="   
 ">
-        <p style=" white-space: pre-wrap; font-size: 16px; font-family:roboto;  color:#2f2f2f"  class="card-text">{{ course.job.substring(0,150)}}..ดูเพิ่มเติม</p>
+        <p style=" white-space: pre-wrap; font-size: 16px; font-family:roboto;  color:#2f2f2f"  class="card-text">{{ course.job.substring(0,160)}} <p v-if="course.job.length > 160" style="color:grey; font-size:15px;">...ดูเพิ่มเติม</p></p>
  <div class="por" >
        
 </div></b-col> 
