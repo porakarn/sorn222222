@@ -28,7 +28,7 @@
 "> sorns</b-button>
         
           <b-button v-b-modal.modal1  class="responsive" style="font-size: 17px; color: #667a6b; float:right;
-    background-color: #fffaf9;
+background-color: rgb(250, 254, 251);
     border-color: #6c757d00;
     border-radius: 18px;
       padding-left: 17px;
@@ -138,7 +138,7 @@
 " 
            > <b-row>  <b-col cols="12" style="   
 ">
-        <p style=" white-space: pre-wrap; font-size: 16px; font-family:roboto;  color:#2f2f2f"  class="card-text">{{ course.job}}</p>
+        <p style=" white-space: pre-wrap; font-size: 16px; font-family:roboto;  color:#2f2f2f"  class="card-text">{{ course.job.substring(0,80)}}..ดูเพิ่มเติม</p>
  <div class="por" >
        
 </div></b-col> 
@@ -511,7 +511,7 @@ let createPost = {
         margin-left: 7px;
          color: #ffffff;
     text-decoration: none;
-    background-color: #cdf4d7;
+    background-color: #72d1d0;
     padding: 2px;
     padding-left: 7px;
     padding-right: 7px;
