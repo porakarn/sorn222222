@@ -1,7 +1,7 @@
 <template>
 
 <b-container fluid style="padding:0px;">
-<b-nav fill tabs style=" margin-top:-7px;    background-color: #efafa8;     box-shadow: 0px 2px 3px -1px rgba(126, 126, 126, 0.2), 0px 4px 5px 0px rgba(0, 0, 0, 0), 0px 1px 10px 0px #00000003;
+<b-nav fill tabs style=" margin-top:-7px;    background-color: #c6f1d1;     box-shadow: 0px 2px 3px -1px rgba(126, 126, 126, 0.2), 0px 4px 5px 0px rgba(0, 0, 0, 0), 0px 1px 10px 0px #00000003;
 " >
   <b-nav-item  class="responsive"  style="border-bottom: 4px solid;
     border-bottom-color: #ffffff; color: #ffffff; 
@@ -92,7 +92,7 @@
 <p style=" padding-left: 0px;margin-bottom: 0px; font-weight:600; font-size:17px; margin-top: -6px;">{{tutor.name}}</p>
 <p style="color:#545454; font-size:16px;margin-bottom: 0px;margin-bottom: 3px;
 " v-if="tutor.subject">
-    <i style=" font-size:15px;       color: #dfaea9;" class="fa fa-graduation-cap" aria-hidden="true"></i> {{tutor.subject.substring(0,70)}}</p>
+    <i style=" font-size:15px;       color: ##c6f1d1;" class="fa fa-graduation-cap" aria-hidden="true"></i> {{tutor.subject.substring(0,70)}}</p>
 <p style="color:#545454; font-size:16px   ;  margin-bottom: 0px;" v-if="tutor.profile">
     {{tutor.profile.substring(0,65)}}...</p>
 
@@ -115,9 +115,9 @@
     padding-left: 6px;"  href="#" 
            class="card-link">{{tutor.tag.toString().split(',').join(' ')}}</a> -->
 
-      <a v-for="tag in tutor.tag" v-show="tutor.tag.length >0" style=" color: #dfaea9;
+      <a v-for="tag in tutor.tag" v-show="tutor.tag.length >0" style=" color: ##c6f1d1;
     text-decoration: none;
-    border: 1px solid #dfaea9;
+    border: 1px solid ##c6f1d1;
     padding: 3px 8px;
     margin-left: 6px;
     margin-top: 7px;
@@ -365,8 +365,8 @@ border-top: 0px;
     color: #5a5a5a;
 }
 a{
-
-color: #ffffff;
+color: #708f7e;
+/* color: #ffffff; */
     /* color: #4159539c; */
     font-weight: 600;
     font-size: 18px;

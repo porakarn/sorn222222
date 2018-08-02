@@ -4,7 +4,7 @@
 <b-container fluid style="padding:0px;">
 
  <b-navbar  style="  box-shadow: 0px 2px 3px -1px rgba(126, 126, 126, 0.2), 0px 4px 5px 0px rgba(0, 0, 0, 0), 0px 1px 10px 0px #00000003; padding-bottom: 15px;
-    padding-top: 15px;  background-color:#dfaea9!important; "toggleable variant="light">
+    padding-top: 15px;  background-color:##c6f1d1!important; "toggleable variant="light">
      <i @click="goback" style=" font-size: 25px;
     padding-left: 4px;
     color: white;
