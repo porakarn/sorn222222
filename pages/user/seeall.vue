@@ -157,10 +157,10 @@ background-color: rgb(250, 254, 251);
 
 <b-col cols="4" style="margin-top: -15px; padding-left: 20px; ">
     <strong v-if="course._creator" style="color:#cbcdd0;  font-size: 14px; margin-top: -0px;  float:right;   margin-bottom: 0px; font-weight:400">
- {{course.creator_name}}  </strong> 
+ {{course.creator_name.substring(0,20)}}  </strong> 
 
    <strong v-else style="color:#cbcdd0;  font-size: 14px; margin-top: -0px;  float:right;   margin-bottom: 0px; font-weight:400">
- {{course.creator_name.replace(/\w+[.!?]?$/, '').substring(0,20)}}  </strong>  
+ {{course.creator_name.replace(/\w+[.!?]?$/, '')}}  </strong>  
 
  <strong style="color:#a5cae4;  font-size: 14px; margin-top: -0px;  float:right;  margin-bottom: 0px; font-weight:400">{{ displayTimestamp(course.createdAt) }}  </strong>  
 </b-col>
