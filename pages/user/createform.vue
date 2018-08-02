@@ -450,8 +450,8 @@ border-top: 0px;
 
 a{
 
-    color: #ffffff;
-    font-weight: 6s00;
+ color: #4159539c;
+     font-weight: 600;
     font-size: 18px;
     font-family:"Sukhumvit Set",sans-serif; 
 }

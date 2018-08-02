@@ -145,7 +145,7 @@
    <!-- <strong style="color:#cbcdd0;  font-size: 14px; margin-top: -0px;  float:right;   margin-bottom: 0px; font-weight:400">
  {{sheet.owner.replace(/\w+[.!?]?$/, '')}}  </strong>  -->
 <!-- color:#a5cae4; -->
- <strong style=" color:#9dd8bf;  font-size: 15px; margin-top: -0px;  float:right;  margin-bottom: 0px; font-weight:400">{{ displayTimestamp(tutor.createdAt) }}  </strong>  
+ <strong style=" color:#a5cae4;  font-size: 15px; margin-top: -0px;  float:right;  margin-bottom: 0px; font-weight:400">{{ displayTimestamp(tutor.createdAt) }}  </strong>  
 </b-col>
 
      </b-row>
