@@ -1,7 +1,7 @@
 <template>
 
 <b-container fluid style="padding:0px;">
-<b-nav fill tabs style=" margin-top:-7px;    background-color: cdf4d7;     box-shadow: 0px 2px 3px -1px rgba(126, 126, 126, 0.2), 0px 4px 5px 0px rgba(0, 0, 0, 0), 0px 1px 10px 0px #00000003;
+<b-nav fill tabs style=" margin-top:-7px;    background-color: #cdf4d7;     box-shadow: 0px 2px 3px -1px rgba(126, 126, 126, 0.2), 0px 4px 5px 0px rgba(0, 0, 0, 0), 0px 1px 10px 0px #00000003;
 " >
   <b-nav-item  class="responsive"  style="border-bottom: 4px solid;
     border-bottom-color: #ffffff; color: #ffffff; 
@@ -115,9 +115,9 @@
     padding-left: 6px;"  href="#" 
            class="card-link">{{tutor.tag.toString().split(',').join(' ')}}</a> -->
 
-      <a v-for="tag in tutor.tag" v-show="tutor.tag.length >0" style=" color: #cdf4d7;
+      <a v-for="tag in tutor.tag" v-show="tutor.tag.length >0" style=" color: #8bd2b4;
     text-decoration: none;
-    border: 1px solid #cdf4d7;
+    border: 1px solid #8bd2b4;
     padding: 3px 8px;
     margin-left: 6px;
     margin-top: 7px;
