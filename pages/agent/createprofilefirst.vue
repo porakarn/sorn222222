@@ -5,13 +5,15 @@
 
    <div>
     <b-navbar  style="    padding-bottom: 12px;
-    padding-top: 12px;  background-color:##c6f1d1!important;"toggleable variant="light">
+    padding-top: 12px;  background-color:#cdf4d7!important;"toggleable variant="light">
    
       
    <b-button   style="  font-size: 21px;
-    color: #64e2cd94;
+  
     font-weight: 500;
-    background-color: #effdf3;
+   
+       color: #b7e8d9;
+    background-color: #eefdf8;
     border-color: #6c757d00;
     border-radius: 18px;
     padding-top: 0px;

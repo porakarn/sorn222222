@@ -1,7 +1,7 @@
 <template>
 <b-container fluid style="padding: 0px;">
     <div class="responsive" >
-<b-nav fill tabs style="margin-top:-7px;    background-color: ##c6f1d1; box-shadow: 0px 2px 3px -1px rgba(126, 126, 126, 0.2), 0px 4px 5px 0px rgba(0, 0, 0, 0), 0px 1px 10px 0px #00000003;">
+<b-nav fill tabs style="margin-top:-7px;    background-color: #cdf4d7; box-shadow: 0px 2px 3px -1px rgba(126, 126, 126, 0.2), 0px 4px 5px 0px rgba(0, 0, 0, 0), 0px 1px 10px 0px #00000003;">
   <b-nav-item  > <nuxt-link to="/agent/myjob">ทั้งหมด</nuxt-link></b-nav-item>
  <b-nav-item >  <nuxt-link to="/agent/status/1">ว่าง </nuxt-link></b-nav-item>
   <b-nav-item > <nuxt-link to="/agent/status/2">รอจ่ายเงิน</nuxt-link></b-nav-item>

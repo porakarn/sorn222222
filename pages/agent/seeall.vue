@@ -7,15 +7,15 @@
   <b-nav-item>ปิดแล้ว</b-nav-item>
 </b-nav> -->
 <b-navbar  style="    padding-bottom: 12px;
-    padding-top: 12px;  background-color:##c6f1d1!important; "toggleable variant="light">
+    padding-top: 12px;  background-color:#cdf4d7!important; "toggleable variant="light">
         <b-navbar-toggle style="border-color: rgba(0, 0, 0, 0);    padding-left: 0px;
     padding-right: 0px;" target="nav_text_collapse"></b-navbar-toggle>
         <!-- <b-navbar-brand>BootstrapVue</b-navbar-brand> -->
       <b-button  class="responsive2" style="  font-size: 21px;
    
     font-weight: 500;
-       color: rgb(223, 174, 169);
-    background-color: rgb(254, 241, 240);
+         color: #b7e8d9;
+    background-color: #eefdf8;
     border-color: #6c757d00;
     border-radius: 18px;
     padding-top: 0px;
@@ -69,7 +69,7 @@
 
 
 
-<b-nav fill tabs style=" margin-top:-7px;    background-color: ##c6f1d1;     box-shadow: 0px 2px 3px -1px rgba(126, 126, 126, 0.2), 0px 4px 5px 0px rgba(0, 0, 0, 0), 0px 1px 10px 0px #00000003;
+<b-nav fill tabs style=" margin-top:-7px;    background-color: #cdf4d7;     box-shadow: 0px 2px 3px -1px rgba(126, 126, 126, 0.2), 0px 4px 5px 0px rgba(0, 0, 0, 0), 0px 1px 10px 0px #00000003;
 " >
   <b-nav-item  class="responsive"  style="border-bottom: 4px solid;
     border-bottom-color: #ffffff; color: #ffffff; padding-right: 12px;
@@ -482,7 +482,7 @@ let createPost = {
         margin-left: 7px;
          color: #ffffff;
     text-decoration: none;
-   background-color: ##c6f1d1;
+   background-color: #cdf4d7;
     padding: 2px;
     padding-left: 7px;
     padding-right: 7px;

@@ -2,7 +2,7 @@
   <div>
     <div>
      <b-navbar  style="    padding-bottom: 12px;
-    padding-top: 12px;  background-color:#c6f1d1!important; "toggleable variant="light">
+    padding-top: 12px;  background-color:cdf4d7!important; "toggleable variant="light">
         <b-navbar-toggle style="border-color: rgba(0, 0, 0, 0);    padding-left: 0px;
     padding-right: 0px;" target="nav_text_collapse"></b-navbar-toggle>
         <!-- <b-navbar-brand>BootstrapVue</b-navbar-brand> -->
@@ -13,8 +13,8 @@
     <!-- background-color: #effdf3; -->
 
    <b-button   style="   font-size: 21px;
-          color: ##c6f1d1;
-          background-color:#fef1f0
+           color: #b7e8d9;
+    background-color: #eefdf8;
      
     font-weight: 500;
     border-color: #6c757d00;

@@ -6,7 +6,7 @@
   <b-nav-item>รอจ่ายเงิน</b-nav-item>
   <b-nav-item>ปิดแล้ว</b-nav-item>
 </b-nav> -->
-<b-nav fill tabs  style="margin-top:-7px;    background-color: ##c6f1d1; box-shadow: 0px 2px 3px -1px rgba(126, 126, 126, 0.2), 0px 4px 5px 0px rgba(0, 0, 0, 0), 0px 1px 10px 0px #00000003;">
+<b-nav fill tabs  style="margin-top:-7px;    background-color: #cdf4d7; box-shadow: 0px 2px 3px -1px rgba(126, 126, 126, 0.2), 0px 4px 5px 0px rgba(0, 0, 0, 0), 0px 1px 10px 0px #00000003;">
   <b-nav-item style="padding-right: 12px;
     padding-left: 12px;" @click="nextPage">ทั้งหมด</b-nav-item>
     <b-nav-item  style="border-bottom: 4px solid;
