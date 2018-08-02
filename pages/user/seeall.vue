@@ -138,7 +138,7 @@ background-color: rgb(250, 254, 251);
 " 
            > <b-row>  <b-col cols="12" style="   
 ">
-        <p style=" white-space: pre-wrap; font-size: 16px; font-family:roboto;  color:#2f2f2f"  class="card-text">{{ course.job.substring(0,160)}} <strong v-if="course.job.length > 160" style="color:grey; font-size:15px; font-weight:400;">...ดูเพิ่มเติม</strong></p>
+        <p style=" white-space: pre-wrap; font-size: 16px; font-family:roboto;  color:#2f2f2f"  class="card-text">{{ course.job.substring(0,170)}}<strong v-if="course.job.length > 170" style="color:grey; font-size:15px; font-weight:400;">...ดูเพิ่มเติม</strong></p>
  <div class="por" >
        
 </div></b-col> 
@@ -160,7 +160,7 @@ background-color: rgb(250, 254, 251);
  {{course.creator_name}}  </strong> 
 
    <strong v-else style="color:#cbcdd0;  font-size: 14px; margin-top: -0px;  float:right;   margin-bottom: 0px; font-weight:400">
- {{course.creator_name.replace(/\w+[.!?]?$/, '')}}  </strong>  
+ {{course.creator_name.replace(/\w+[.!?]?$/, '').substring(0,20)}}  </strong>  
 
  <strong style="color:#a5cae4;  font-size: 14px; margin-top: -0px;  float:right;  margin-bottom: 0px; font-weight:400">{{ displayTimestamp(course.createdAt) }}  </strong>  
 </b-col>
