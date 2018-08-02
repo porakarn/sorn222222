@@ -30,11 +30,11 @@
           <b-button v-b-modal.modal1  class="responsive" style="
           font-size: 18px;
         color: #616161;
-    background-color: white;
+background-color: rgb(250, 254, 251);
     border-color: #6c757d00;
     border-radius: 18px;
-    padding-left: 50px;
-    padding-right: 50px;
+      padding-left: 17px;
+    padding-right: 20px;
 
 "><i style=" font-size: 20px; color: #667a6b ; " class="fa fa-search nav-item " aria-hidden="true"></i> ลองค้นหางานดูสิ</b-button>
         <b-collapse is-nav id="nav_text_collapse">
@@ -482,7 +482,7 @@ let createPost = {
         margin-left: 7px;
          color: #ffffff;
     text-decoration: none;
-   background-color: #cdf4d7;
+    background-color: #72d1d0;
     padding: 2px;
     padding-left: 7px;
     padding-right: 7px;

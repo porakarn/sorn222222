@@ -106,8 +106,8 @@ background-color: rgb(250, 254, 251);
   </b-modal>
 
 
-<b-container fluid style="padding-left: 11px;
-    padding-right: 11px; margin-top: 5px;"> 
+<b-container fluid style="padding-left: 13px;
+    padding-right: 13px; margin-top: 5px;"> 
 <br> 
   <b-row class="responsive2">
  <b-col offset-lg="3" lg="6">

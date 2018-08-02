@@ -11,8 +11,8 @@
       <b-button   style="   font-size: 21px;
   
     font-weight: 500;
-        color: rgb(223, 174, 169);
-    background-color: rgb(254, 241, 240);
+         color: #b7e8d9;
+    background-color: #eefdf8;
     border-color: #6c757d00;
     border-radius: 18px;
     padding-top: 0px;
