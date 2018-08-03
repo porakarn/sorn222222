@@ -33,7 +33,8 @@
  <br><br>
 <br><br><br>
  
-      
+      <br><br><br><br>
+       <nuxt-link class="nav-item" style="color:#345d46; " to="/testlogin">  <i class="fa fa-pencil" aria-hidden="true"></i> . </nuxt-link>
   
  
 
