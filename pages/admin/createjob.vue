@@ -309,7 +309,8 @@ if ( sat2 === true ) {
 
 }
  }   
-
+,
+     layout: 'agent'
 }
 
 </script>
