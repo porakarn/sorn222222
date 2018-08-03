@@ -44,7 +44,7 @@ import axios from 'axios';
        console.log(code);
 if (code) {
 
-axios.get(`https://graph.facebook.com/v3.0/oauth/access_token?client_id=1603228583057465&redirect_uri=https://sorns-co-beta.herokuapp.com/testlogin/&client_secret=666eb8afc3f586f2f319041ca47bf56f&code=${code}`)
+axios.get(`https://graph.facebook.com/v3.0/oauth/access_token?client_id=1603228583057465&redirect_uri=https://sorns-co-beta.herokuapp.com/testlogin&client_secret=666eb8afc3f586f2f319041ca47bf56f&code=${code}`)
     .then(x=>{
         let access_token = x.data.access_token
         console.log(access_token)
@@ -56,7 +56,7 @@ axios.get(`https://graph.facebook.com/v3.0/oauth/access_token?client_id=16032285
             // console.log(y.data)
             let {email,name,id} = y.data
   console.log(y.data);
-
+ alert(y.data)
                 console.log(   this.$router.currentRoute.query);
     console.log(code);
         })
