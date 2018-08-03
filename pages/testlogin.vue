@@ -2,6 +2,9 @@
 
 <div style="width: 100%">
  
+
+ {{name}}
+ {{email}}
    ffff
 </div>
 </template>
@@ -22,9 +25,8 @@ import axios from 'axios';
   export default {
     data () {
       return {
-   
-
-  
+   name: '',
+   email: '',
      
    e1: 'recent',
   url:'https://www.facebook.com/v3.0/dialog/oauth?client_id=1603228583057465&redirect_uri=https://sorns-co-beta.herokuapp.com/testlogin&scope=email'
@@ -57,6 +59,9 @@ axios.get(`https://graph.facebook.com/v3.0/oauth/access_token?client_id=16032285
             let {email,name,id} = y.data
   console.log(y.data);
  alert(y.data)
+ this.name = y.data.name
+  this.email = y.data.email
+
                 console.log(   this.$router.currentRoute.query);
     console.log(code);
         })
