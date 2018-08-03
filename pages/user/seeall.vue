@@ -28,7 +28,7 @@
 "> sorns</b-button>
         
           <b-button v-b-modal.modal1  class="responsive" style="font-size: 17px; color: #667a6b; float:right;
-background-color: rgb(250, 254, 251);
+    background-color: rgb(250, 255, 252);
     border-color: #6c757d00;
     border-radius: 18px;
       padding-left: 17px;
