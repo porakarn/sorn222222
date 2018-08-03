@@ -440,12 +440,19 @@ let createPost = {
           this.creator_name2 = item.creator_name
     this.contact2 = item.contact
     this.line2 = item.line
-    this.linelink = 'http://line.me/ti/p/~' + item.line
+    // this.linelink = 'http://line.me/ti/p/~' + item.line
     this.tutorid2 = item.tutorid
     this.tutorid3 = '/tutor/' + item.tutorid
     this.agentid2  = item._creator 
     this.agentid3 = '/agent/' + item._creator
 
+ if(item.contact = 'ติดต่อตรงปุ่มข้างล่าง'){
+       this.linelink = item.line
+    } else {
+          this.linelink = 'http://line.me/ti/p/~' + item.line
+
+    }
+    
     console.log(this.linelink);
     
 

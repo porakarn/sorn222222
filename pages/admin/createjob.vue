@@ -30,8 +30,8 @@
     <b-form-textarea required id="textarea1"
                      v-model="job"
                      placeholder="Enter something"
-                     :rows="8"
-                     :max-rows="9">
+                     :rows="13"
+                     :max-rows="20">
     </b-form-textarea>
     <!-- <pre class="mt-3">{{ text }}</pre> -->
 
