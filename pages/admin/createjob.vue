@@ -266,7 +266,7 @@ if ( sat2 === true ) {
          day : day,
         subject : subject,
         creator_name : this.name,
-         contact: '-',
+         contact: 'ติดต่อตรงปุ่มข้างล่าง',
          line: this.line5,
 
     

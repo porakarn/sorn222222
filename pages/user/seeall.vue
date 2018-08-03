@@ -340,7 +340,8 @@ export default {
       tutorid2:'',
       tutorid3:'',
       agentid2:'',
-      agentid3:''
+      agentid3:'',
+      adminlink: '',
 
   
     }
@@ -473,7 +474,12 @@ let createPost = {
     this.tutorid3 = '/tutor/' + item.tutorid
     this.agentid2  = item._creator 
     this.agentid3 = '/agent/' + item._creator
-    
+    if(item.contact = 'ติดต่อตรงปุ่มข้างล่าง'){
+       this.linelink = item.line
+    } else {
+          this.linelink = 'http://line.me/ti/p/~' + item.line
+
+    }
     
     
       if (this.$store.state.user.profile) {
