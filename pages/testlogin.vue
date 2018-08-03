@@ -120,6 +120,8 @@ axios.get(`https://graph.facebook.com/v3.0/oauth/access_token?client_id=16032285
      
     
     }
+    ,
+    layout: 'auth'
   }
 </script>
 
