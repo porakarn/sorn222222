@@ -42,7 +42,7 @@ module.exports = {
 
  manifest: {
    name: 'Sorns',
-   display: 'standalone',
+   display: 'browser',
   short_name: 'Sorns',
 
  },
