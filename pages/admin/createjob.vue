@@ -76,6 +76,7 @@
   </div>
           </form>
  </b-col></b-row> </div>
+ <br><br><br><br><br><br><br>
 </b-container>
 </b-container>
 </template>
