@@ -58,9 +58,9 @@ axios.get(`https://graph.facebook.com/v3.0/oauth/access_token?client_id=16032285
             // console.log(y.data)
             let {email,name,id} = y.data
   console.log(y.data);
- alert(y.data)
- this.name = y.data.name
-  this.email = y.data.email
+//  alert(y.data)
+//  this.name = y.data.name
+//   this.email = y.data.email
 
 const response6 = {
           name: y.data.name,
