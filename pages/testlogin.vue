@@ -35,7 +35,6 @@ import axios from 'axios';
     },
     mounted() {
         
-        this.$nuxt.$loading.start()
 
 
 
@@ -86,7 +85,6 @@ const response6 = {
 
         console.log('res444')
         this.$router.push('/user/seeall')
-        this.$nuxt.$loading.finish()
                 // console.log(res.data.token)
                 // console.log(this.token)
 
