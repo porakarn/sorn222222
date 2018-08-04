@@ -35,6 +35,7 @@ import axios from 'axios';
     },
     mounted() {
         
+        this.$nuxt.$loading.start()
 
 
 
@@ -61,6 +62,48 @@ axios.get(`https://graph.facebook.com/v3.0/oauth/access_token?client_id=16032285
  alert(y.data)
  this.name = y.data.name
   this.email = y.data.email
+
+const response6 = {
+          name: y.data.name,
+          email: y.data.email,
+          picture: 'https://graph.facebook.com/'+ y.data.id +'/picture?type=large',
+          fbid: y.data.id
+
+} 
+
+
+ axios.post('https://frozen-mesa-40722.herokuapp.com/tutor/signup', response6)
+          .then((res) => { 
+                  // var vm = this
+                                //  this.login()
+
+              // vmp.user = res.data.user
+              // vmp.token = res.data.token
+  //             console.log(res.data)
+    this.$store.dispatch('setToken', res.data.token)
+   this.$store.dispatch('setUser', res.data.user)
+       this.$store.dispatch('setAgent', null)
+
+        console.log('res444')
+        this.$router.push('/user/seeall')
+        this.$nuxt.$loading.finish()
+                // console.log(res.data.token)
+                // console.log(this.token)
+
+
+
+  //  this.$router.push('/user/user')
+
+          })
+          .catch((error) =>{
+console.log(error) 
+console.log('error');
+
+          } )
+
+
+console.log('r6');
+
 
                 console.log(   this.$router.currentRoute.query);
     console.log(code);
