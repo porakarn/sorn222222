@@ -1,11 +1,12 @@
 <template>
 
 <div style="width: 100%">
- 
+ <br><br>
 
- {{name}}
- {{email}}
-   ffff
+  <p style="text-align: center; color:grey;">
+  กำลังโหลด...
+
+  </p>
 </div>
 </template>
 
