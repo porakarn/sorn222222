@@ -61,8 +61,12 @@
 </div>
 
 
-
-    
+   <network network="facebook">
+            <i class="fa fa-facebook"></i> Facebook
+          </network>
+       <network network="line">
+        <i class="fa fa-line"></i> Line
+      </network>
 
    <br>
   <b-row> <b-col >
@@ -230,6 +234,10 @@ color: #484848; border:1px !important;">โปรไฟล์ของคุณ<
 </template>
 
 <script>
+import Vue from 'vue'
+import SocialSharing from 'vue-social-sharing'
+
+Vue.use(SocialSharing)
 import axios from 'axios';
 import moment from 'moment'
 
