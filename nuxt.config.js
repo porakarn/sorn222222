@@ -68,10 +68,10 @@ module.exports = {
           src: '~/plugins/hotjar',
           ssr: false
         },
-          plugins: [{
+         {
             src: '~plugins/social.js',
             ssr: true
-          }],
+          }
 
   
   
