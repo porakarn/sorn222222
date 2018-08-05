@@ -150,8 +150,8 @@ color: #484848; border:1px !important;">โปรไฟล์ของคุณ<
 
      <p style="     margin-top: 6px;   font-size: 15px;">{{review.studentid.name.split(" ").slice(0, -1).join(" ")}} <i style="color: #F8E217;" class="fa fa-star" aria-hidden="true"></i> {{ review.rating}}   </p>  
 </p>
- <star-rating  v-bind:increment="0.50"  v-model="review.rating" :border-width="1" border-color="#d8d8d8" :rounded-corners="true"
-   ></star-rating>
+ <star-rating  border-color="#d8d8d8"  v-bind:increment="0.50"  v-model="review.rating" v-bind:show-rating="false" v-bind:star-size="20"  :border-width="1"  :rounded-corners="true" :star-points="[23,2, 14,17, 0,19, 10,34, 7,50, 23,43, 38,50, 36,34, 46,19, 31,17]"
+   ></star-rating> <strong>{{review.rating}}</strong>
 
 
    </b-col>
@@ -464,5 +464,11 @@ box-shadow: 0 0 0 0rem rgba(0, 123, 255, .25) !important;
   display: none;
 }
 }
-
+span{
+    margin-top: -2px !important;
+}
+.text-class{
+margin-top :0px;
+color: blue;
+}
 </style>
