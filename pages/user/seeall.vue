@@ -352,7 +352,7 @@ mounted() {
      axios.get('https://frozen-mesa-40722.herokuapp.com/tutor/all')
     .then((res) => { console.log(res.data)
       //  tutors: res.data,
-           this.$store.dispatch('setAlltutor', res.data)
+           this.$store.dispatch('setalltutor', res.data)
 })
                
 },
