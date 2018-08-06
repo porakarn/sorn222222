@@ -11,8 +11,8 @@ const store = () => {
       isUserLoggedIn: false,
       haveProfile: false,
       agent: null,
-      student: null
-
+      student: null,
+      alltutor: null
 
     },
     mutations: {
@@ -35,7 +35,11 @@ const store = () => {
        },
        setStudent(state, student) {
           state.student = student
+        },
+        setAlltutor(state, alltutor) {
+          state.alltutor = alltutor
         }
+        
     },
     actions: {
          setProfile({commit}, profile) {
@@ -53,7 +57,10 @@ const store = () => {
        },
       setStudent({commit}, student) {
          commit('setStudent', student)
-       }
+       },
+         setAlltutor({commit}, alltutor) {
+         commit('setAlltutor', alltutor)
+       },
 
     }
 
