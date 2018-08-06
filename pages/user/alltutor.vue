@@ -98,7 +98,7 @@
     font-size: 14px;    float: right;
     margin-right: 4px;
         padding-top: 2px;
-    margin-top: 4px;"> 0 <i style="color:white;" class="fa fa-star" aria-hidden="true"></i>
+    margin-top: 4px;">{{ calculateScore(tutor.reviewscore)}} <i style="color:white;" class="fa fa-star" aria-hidden="true"></i>
  </strong></p>
 <p style="color:#545454; font-size:16px;margin-bottom: 0px;margin-bottom: 3px;
 " v-if="tutor.subject">
@@ -232,11 +232,34 @@ import moment from 'moment';
 mounted() {
 
 },
-
+//   computed: {
+//     calculateScore (x) {
+//      console.log(x);
+     
+// // this.sum = x.reduce(function(a, b) {
+// //   return a + b;
+// // });
+//     }
+//   },
 
 
 
   methods: {
+    calculateScore (x) {
+console.log( x.length);
+
+
+    var por =   x.reduce((a, b) => a + b, 0) 
+   
+  
+
+
+      
+  return por
+// this.sum = x.reduce(function(a, b) {
+//   return a + b;
+// });
+    },
 
     sendout(){
 this.loading = true
