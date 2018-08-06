@@ -92,11 +92,12 @@
 <p style=" padding-left: 0px;margin-bottom: 0px; font-weight:600; font-size:17px; margin-top: -6px;">{{tutor.name.substring(0,21)}}   <strong style=" background-color: #ffc107;
     border-radius: 4px;
     color: white;
-    font-weight: 400;
+    font-weight: 500;
     padding-right: 5px;
     padding-left: 4px;
     font-size: 14px;    float: right;
     margin-right: 4px;
+        padding-top: 2px;
     margin-top: 4px;"> 4.5 <i style="color:white;" class="fa fa-star" aria-hidden="true"></i>
  </strong></p>
 <p style="color:#545454; font-size:16px;margin-bottom: 0px;margin-bottom: 3px;
@@ -131,7 +132,7 @@
     padding: 3px 8px;
     margin-left: 6px;
     margin-top: 7px;
-    font-size: 16px;
+    font-size: 14px;
     border-radius: 11px;"  href="#" 
            class="card-link">{{tag.toString()}}</a>
 
