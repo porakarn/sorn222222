@@ -353,7 +353,7 @@ mounted() {
     .then((res) => { console.log(res.data)
       //  tutors: res.data,
            this.$store.dispatch('setAlltutor', res.data)
-}
+})
                
 },
 
