@@ -248,10 +248,17 @@ mounted() {
     calculateScore (x) {
 console.log( x.length);
 
-
-    var por =   x.reduce((a, b) => a + b, 0) 
+if (x.length > 0) {
+      var por2 =   x.reduce((a, b) => ( (a + b)     ) , 0) 
+     var por3 = por2 / x.length
+     var por = por3.toFixed(1)
+} else {
+     var por = 0
+}
+    // var por =   x.reduce((a, b) => ( (a + b)     ) , 0) / 
    
   
+// console.log(por);
 
 
       
