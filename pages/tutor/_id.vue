@@ -149,7 +149,7 @@ color: #484848; border:1px !important;">โปรไฟล์ของคุณ<
  <star-rating  border-color="#d8d8d8"  v-bind:increment="0.50"  v-model="review.rating" v-bind:show-rating="false" v-bind:star-size="20"  :border-width="1"  :rounded-corners="true" :star-points="[23,2, 14,17, 0,19, 10,34, 7,50, 23,43, 38,50, 36,34, 46,19, 31,17]"
    ></star-rating> <strong style="padding-left: 3px; font-weight: 400">{{review.rating}}</strong>
 
- <strong style="    color: #c2c4c5;
+ <strong style="    color: rgb(165, 202, 228);
     font-size: 13px;
     margin-top: 3px;
     float: right;
@@ -183,7 +183,7 @@ color: #484848; border:1px !important;">โปรไฟล์ของคุณ<
 
   </div>
 
-    <b-row class="my-1">
+    <!-- <b-row class="my-1">
     <b-col >
    <br> 
      <p style="" 
@@ -235,7 +235,7 @@ color: #484848; border:1px !important;">โปรไฟล์ของคุณ<
 
 </b-row>
     
-  
+   -->
 
     
    
