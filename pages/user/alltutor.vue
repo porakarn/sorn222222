@@ -98,7 +98,7 @@
     font-size: 14px;    float: right;
     margin-right: 4px;
         padding-top: 2px;
-    margin-top: 4px;"> 4.5 <i style="color:white;" class="fa fa-star" aria-hidden="true"></i>
+    margin-top: 4px;"> 0 <i style="color:white;" class="fa fa-star" aria-hidden="true"></i>
  </strong></p>
 <p style="color:#545454; font-size:16px;margin-bottom: 0px;margin-bottom: 3px;
 " v-if="tutor.subject">
@@ -132,7 +132,7 @@
     padding: 3px 8px;
     margin-left: 6px;
     margin-top: 7px;
-    font-size: 14px;
+    font-size: 15px;
     border-radius: 11px;"  href="#" 
            class="card-link">{{tag.toString()}}</a>
 
@@ -317,8 +317,9 @@ nextPage2(){
                          // axios.get('http://localhost:8000/job/all')
 
      
-},
-    layout: 'auth'
+}
+// ,
+//     layout: 'auth'
 
 
 
