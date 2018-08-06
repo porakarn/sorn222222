@@ -76,10 +76,10 @@
   </b-modal>
 
 
-     <b-card @click="seeeach(tutor._id)" style="margin-bottom:0px;     border: 1px solid rgba(164, 164, 164, 0.125);
+     <b-card @click="seeeach(tutor._id)"  style="margin-bottom:0px;     border: 1px solid rgba(164, 164, 164, 0.125);
     border-radius: 1px;     box-shadow: rgba(148, 142, 142, 0) 0px 1px 3px -1px, rgba(255, 251, 251, 0) 0px 4px 5px 0px, rgba(0, 0, 0, 0.01) 0px 1px 10px 0px;
 
-"  v-for="tutor in tutors" :key="tutor._id" >
+"  v-for="tutor in tutors" :key="tutor._id"  v-if="tutor.subject" >
          
         
        <b-row style="margin-top: 10px;">
