@@ -355,7 +355,20 @@ mounted() {
       var por = res.data
            this.$store.dispatch('setalltutor', por)
 })
-               
+          var data = {  
+            who :  this.$store.state.user.name,
+            image :    this.$store.state.user.picture,
+            tutorid : this.$store.state.user._id,
+          }
+             axios.post('https://frozen-mesa-40722.herokuapp.com/stat', data)
+    .then((res) => { console.log(res.data)
+      //  tutors: res.data,
+      // var por = res.data
+      //      this.$store.dispatch('setalltutor', por)
+})
+        
+
+
 },
 
 
