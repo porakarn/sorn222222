@@ -11,15 +11,31 @@
   <b-col offset-lg="3" lg="6">
               <div v-if="step === 1">
 
-   <b-form-group label="คุณคือใคร">
-      <b-form-radio-group id="btnradios2"
-                                button-variant="outline-primary"
+   <b-form-group   id="exampleInputGroup1"
+                    
+                    label-for="exampleInput1"
+                    description="วิชาที่อยากเรียน">
+        <b-form-input  class="formpor" id="exampleInput1" size="lg" 
+                      type="text"
+                      v-model="form.phone"
+                      required
+                      placeholder="วิชาที่อยากเรียน">
+        </b-form-input>
+      </b-form-group>
+     
 
-                          buttons
-                          v-model="selected"
-                          :options="options"
-                          name="radioBtnOutline" />
-    </b-form-group>
+  <b-form-group   id="exampleInputGroup1"
+                    
+                    label-for="exampleInput1"
+                    description="ระดับชั้น">
+        <b-form-input  class="formpor" id="exampleInput1" size="lg" 
+                      type="text"
+                      v-model="form.line"
+                      required
+                      placeholder="ระดับชั้น">
+        </b-form-input>
+      </b-form-group>
+     
 
 
 <br><br>
@@ -40,12 +56,12 @@
 <b-form-group   id="exampleInputGroup1"
                     
                     label-for="exampleInput1"
-                    description="เบอร์ติดต่อ">
+                    description="สถานที่เรียน">
         <b-form-input  class="formpor" id="exampleInput1" size="lg" 
                       type="text"
                       v-model="form.phone"
                       required
-                      placeholder="เบอร์ติดต่อ">
+                      placeholder="สถานที่เรียน">
         </b-form-input>
       </b-form-group>
      
@@ -53,12 +69,12 @@
   <b-form-group   id="exampleInputGroup1"
                     
                     label-for="exampleInput1"
-                    description="Line">
+                    description="วันเวลา เรียน">
         <b-form-input  class="formpor" id="exampleInput1" size="lg" 
                       type="text"
                       v-model="form.line"
                       required
-                      placeholder="Line">
+                      placeholder="วันเวลา เรียน">
         </b-form-input>
       </b-form-group>
      
@@ -74,28 +90,17 @@
 
     <div v-if="step === 3">
 
-<b-form-group  id="exampleInputGroup3"
-                  
-                    label-for="exampleInput3">
-        <b-form-select  class="formpor" id="exampleInput3" size="lg"
-                      :options="genders"
+<b-form-group   id="exampleInputGroup1"
+                    
+                    label-for="exampleInput1"
+                    description="เพิ่มเติม (ถ้ามี)">
+        <b-form-input  class="formpor" id="exampleInput1" size="lg" 
+                      type="text"
+                      v-model="form.line"
                       required
-                      v-model="form.gender">
-        </b-form-select>
+                      placeholder="เพิ่มเติม (ถ้ามี)">
+        </b-form-input>
       </b-form-group>
-
-
-
-   <b-form-group  id="exampleInputGroup3"
-                  
-                    label-for="exampleInput3">
-        <b-form-select  class="formpor" id="exampleInput3" size="lg"
-                      :options="grades"
-                      required
-                      v-model="form.grade">
-        </b-form-select>
-      </b-form-group>
-
       
       
          <b-button  type="submit" style="background-color: #33C1C1; border: 0px; padding-left: 46px;
