@@ -341,8 +341,10 @@ if ( sat2 === true ) {
         day : day,
         subject : subject,
         line: this.$store.state.student.line,
-        creator_name : this.$store.state.student.name
-
+        creator_name : this.$store.state.student.name,
+        picture: this.$store.state.student.picture,
+        is_student: 'student'
+  
       }
 
     

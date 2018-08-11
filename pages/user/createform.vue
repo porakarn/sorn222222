@@ -380,8 +380,9 @@ if ( sat2 === true ) {
         tutorid: this.$store.state.user._id,
         contact: this.$store.state.user.phone,
         line: this.$store.state.user.line,
-        creator_name : this.$store.state.user.name
-
+        creator_name : this.$store.state.user.name,
+         picture: this.$store.state.user.picture,
+         is_student: 'tutor'
       }
    console.log(createPost);
    

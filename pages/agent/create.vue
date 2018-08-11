@@ -238,7 +238,8 @@ if ( sat2 === true ) {
         creator_name : this.$store.state.agent.pagename,
          contact: this.contact,
          line: this.line,
-
+          picture: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTlxhsGV-_-Fxr0-74drOlYw5pi21K32Hq7FZMfk9VzAZTrvLJufg',
+         is_student: 'Agent'
     
 
 

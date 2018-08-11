@@ -253,6 +253,8 @@ if ( sat2 === true ) {
         tutorid: this.$store.state.user._id,
          contact: this.contact,
          line: this.line,
+         picture: this.$store.state.user.picture,
+         is_student: 'tutor',
          
         creator_name : this.$store.state.user.name
       }

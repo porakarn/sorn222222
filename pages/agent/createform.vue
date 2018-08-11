@@ -360,7 +360,9 @@ if ( sat2 === true ) {
         subject : subject,
         contact: this.$store.state.agent.contact,
         line: this.$store.state.agent.line,
-        creator_name : this.$store.state.agent.pagename
+        creator_name : this.$store.state.agent.pagename,
+         picture: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTlxhsGV-_-Fxr0-74drOlYw5pi21K32Hq7FZMfk9VzAZTrvLJufg',
+         is_student: 'Agent'
 
       }
    console.log(createPost);
