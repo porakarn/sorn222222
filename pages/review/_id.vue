@@ -66,7 +66,9 @@ mounted() {
 
     }
 
-    var porakarn = this.$route.params.id.replace(".", "%20")
+    var porakarn = this.$route.params.id.replace(".", " ")
+
+    
  var createpost = {
         name: porakarn
 
