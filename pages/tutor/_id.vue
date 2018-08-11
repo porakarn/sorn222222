@@ -104,14 +104,14 @@ color: #484848; border:1px !important;">โปรไฟล์ของคุณ<
     <a  v-show="courses.location" style=" color: #9dd8bf;
     text-decoration: none;
    
-    padding: 3px 8px;
+    
    margin-bottom:10px ;
-   
+    font-weight: 600px;
     font-size: 16px;
     border-radius: 11px;"  href="#" 
-           class="card-link"><i class="fa fa-map-marker" aria-hidden="true"></i> {{courses.location}}</a>
+           ><i class="fa fa-map-marker" aria-hidden="true"></i> {{courses.location}}</a>
 
-<br>
+<br><br>
 <social-sharing :url="url"
                       :title="title"
                       :description="title"
