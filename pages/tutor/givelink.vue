@@ -59,7 +59,7 @@ export default {
     }
   },
   mounted() {
-      this.text = 'https://sorns-co-beta.herokuapp.com/user/rating/'+this.$store.state.user._id
+      this.text = 'https://sorns-co-beta.herokuapp.com/review/'+this.$store.state.user.name
       this.thingToCopy = this.text
   },
 

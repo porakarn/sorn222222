@@ -176,7 +176,7 @@
  
       <nuxt-link  to="/student/createprofile">   <b-button style="background-color: #33C1C1; border: 0px; padding-left: 46px;
     padding-right: 46px;">Login</b-button></nuxt-link>
-    </div>
+    </div>  
     <br>
    </b-modal>
 <br>
