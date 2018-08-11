@@ -61,31 +61,11 @@
 </div>
 
 <br>
- <social-sharing :url="url"
-                      title="The Progressive JavaScript Framework"
-                      description="Intuitive, Fast and Composable MVVM for building interactive interfaces."
-                      hashtags="vuejs,javascript,framework"
-                      twitter-user="vuejs"
-                      inline-template>
-  <div>
-    
-      <network network="facebook">
-      <i style="color:blue;" class="fa fa-facebook-official" aria-hidden="true"></i> Facebook
-      </network>
-     
-      <network network="line">
-        <i class="fa fa-line"></i> Line
-      </network>
-      
-      
-    
-      <network network="twitter">
-        <i class="fa fa-twitter"></i> Twitter
-      </network>
-    
+
    
-  </div>
-</social-sharing>
+ 
+
+
    <br>
   <b-row> <b-col >
        
@@ -124,7 +104,46 @@ color: #484848; border:1px !important;">โปรไฟล์ของคุณ<
 
 
 
+<social-sharing :url="url"
+                      :title="title"
+                      description="สร้าง Community การสอน"
+                      hashtags="Sorns,tutor"
+                     
+                      inline-template>
+ <div style="text-align:center">
+    
+      <network style=" background-color: #3B5998;
+    color: white;
+    border-radius: 5px;
+    font-weight: 500;    font-size: 14px;  margin-left: 3px;
+    margin-right: 3px;
+    padding: 4px;" network="facebook">
+        <i class="fa fa-facebook"></i> share 
+      </network>
+     
+      <network style="    background-color: #00B900;
+    color: white;
+    border-radius: 5px;
+    font-weight: 500;    font-size: 14px;   margin-left: 3px;
+    margin-right: 3px;
+    padding: 4px; padding-left: 6px; padding-right: 6px;" network="line">
+     LINE
+      </network>
+      
+      
+    
+      <network style="  background-color: #1DA1F3;
+    color: white;
+    border-radius: 5px;
+    font-weight: 500;    font-size: 14px;
+    padding: 4px;     margin-left: 3px;
+    margin-right: 3px;" network="twitter">
+        <i class="fa fa-twitter"></i> Twitter
+      </network>
+    
+     </div>
 
+</social-sharing>
 
   <b-row> <b-col >
       <br>
@@ -297,6 +316,7 @@ export default {
     showreview: false,
     url:'',
     line: '',
+    
  
 
   
@@ -318,7 +338,8 @@ export default {
           courses: res.data,
           linelink: 'http://line.me/ti/p/~' + res.data.line,   
           phoneprompt : 'tel:' + res.data.phone,
-          reviews: res.data._review
+          reviews: res.data._review,
+          title: 'สมัครเรียนติวเตอร์กับ' + res.data.name 
             }        
 
     })
