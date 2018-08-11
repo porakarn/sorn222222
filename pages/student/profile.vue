@@ -9,9 +9,10 @@
           <form @submit.prevent="onSubmit">
 <b-row>
   <b-col offset-lg="3" lg="6">
-              <div v-if="step === 1">
 
-   <b-form-group label="คุณคือใคร">
+<div v-if="picture" style="text-align:center " >
+                     <img :src="picture" style="border-radius: 5px;margin-bottom: 18px;" height="100"> 
+                        <b-form-group>
       <b-form-radio-group id="btnradios2"
                                 button-variant="outline-primary"
 
@@ -22,20 +23,21 @@
     </b-form-group>
 
 
-<br><br>
+</div>
+
+
+
+
 
   
   
   
 
 
-    <!-- <pre class="mt-3">{{ text }}</pre> -->
-        <b-button style="background-color: #33C1C1; border: 0px; padding-left: 46px;
-    padding-right: 46px;" @click.prevent="next()">ต่อไป</b-button>
+ 
+           
 
-              </div>
-
- <div v-if="step === 2">
+ 
 
 <b-form-group   id="exampleInputGroup1"
                     
@@ -62,17 +64,12 @@
         </b-form-input>
       </b-form-group>
      
-  
-        <b-button style="background-color: #33C1C1; border: 0px; padding-left: 46px;
-    padding-right: 46px;" @click.prevent="next()">ต่อไป</b-button>
-
-        <b-button style="background-color: white; border: 0px; padding-left: 36px;  color: grey;
-    padding-right: 36px;" @click.prevent="prev()">กลับ</b-button>
-
-    </div>
 
 
-    <div v-if="step === 3">
+ 
+ <b-row class="my-1">
+    <b-col cols="6" >
+
 
 <b-form-group  id="exampleInputGroup3"
                   
@@ -84,8 +81,8 @@
         </b-form-select>
       </b-form-group>
 
-
-
+    </b-col>
+ <b-col cols="6" >
    <b-form-group  id="exampleInputGroup3"
                   
                     label-for="exampleInput3">
@@ -96,14 +93,13 @@
         </b-form-select>
       </b-form-group>
 
-      
+ </b-col>
+ </b-row>
       
          <b-button  type="submit" style="background-color: #33C1C1; border: 0px; padding-left: 46px;
     padding-right: 46px;">เรียบร้อย</b-button>
-        <b-button style="background-color: white; border: 0px; padding-left: 36px;  color: grey;
-    padding-right: 36px;" @click.prevent="prev()">กลับ</b-button>
-
-    </div>
+   
+   
 
   
               <div class="loading-page" v-if="loading">
@@ -121,14 +117,7 @@
   </div>
   </div>
 
-<b-modal  hide-header  hide-footer  centered ref="myModalRef" hide-footer title="Using Component Methods">
-      <div class="d-block ">
-         <div style="white-space: pre-wrap;">{{str5}}</div> 
-      </div>  <br>
-          <b-button @click="onSubmit" style="background-color: #33C1C1; border: 0px; padding-left: 46px;
-    padding-right: 46px;">ยืนยัน</b-button> <b-button style="background-color: white; border: 0px; padding-left: 36px; color: grey;
-    padding-right: 36px;" @click="hideModal">แก้ไข</b-button>
-    </b-modal>
+<br> <br> <br> <br> <br>
 </b-container>
 </b-container>
 </template>
@@ -152,6 +141,7 @@ export default {
        str5:'',
        subject:'',
       job: '',
+      picture: '',
       day: '',
        form: {
         email: '',
@@ -185,28 +175,32 @@ mounted() {
      this.$router.push('/student/login')
 
     }
+
+var data = {
+    name: this.$store.state.student.name
+}
+    axios.post('https://frozen-mesa-40722.herokuapp.com/student/profile', data ) .then((res) => { 
+              
+              console.log(res.data)
+      this.selected = res.data.parent_or_student
+        this.form.phone = res.data.phone
+        this.form.line = res.data.line
+        this.form.gender = res.data.gender
+        this.form.grade = res.data.grade
+        this.picture = res.data.picture
+          })
+          .catch(error => console.log(error))
 },
 methods: {
-    prev() {
-      this.step--;
-    },
-    next() {
-      this.step++;
-    },
+   
     nextPage(){
    this.$router.push('/agent/create')
 
     }
 
    ,
-     hideModal () {
-      this.$refs.myModalRef.hide()
-    },
-    onCreate() {
-       this.$nuxt.$loading.start()
-              this.loading = true
-    // alert(this.str5)
-    },
+     
+  
     onSubmit(){
     
 
@@ -223,7 +217,7 @@ methods: {
 
 
 
-      alert(createPost)
+    
    console.log(createPost);
    
    
@@ -232,17 +226,7 @@ methods: {
               
               console.log(res.data)
                   
-   this.$refs.myModalRef.hide()
-     
-       this.form.email = ''
-       this.form.subject = ''
-        this.form.note = ''
-        this.form.tuitionfee = ''
-        this.form.school = ''
-       this.form.dayandtime = ''
-        this.form.location = ''
-        this.form.food = null
-        this.form.gender = null
+
      
               this.loading = false
                this.loading2 = true
@@ -254,7 +238,7 @@ methods: {
     
     }
 },
-     layout: 'auth'
+     layout: 'student'
 
 }
 </script>

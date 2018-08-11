@@ -254,7 +254,7 @@ methods: {
     
     }
 },
-     layout: 'auth'
+     layout: 'student'
 
 }
 </script>
