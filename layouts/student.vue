@@ -111,11 +111,11 @@ export default {
   middleware: 'log',
    
 mounted() {
-    if (!this.$store.state.isUserLoggedIn) {
-       console.log('userlogin1111111');
-       this.$router.push('/')
-        //   context.redirect('/')
-     }
+    // if (!this.$store.state.isUserLoggedIn) {
+    //    console.log('userlogin1111111');
+    //    this.$router.push('/')
+    //     //   context.redirect('/')
+    //  }
 },
    methods: {
    logout(){
