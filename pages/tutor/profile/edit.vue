@@ -78,11 +78,11 @@ color: rgb(117, 119, 120); border:1px !important;">โปรไฟล์ขอ�
                      :max-rows="9">
     </b-form-textarea>
     <br>
-
+<br>
      <b-form-group  id="exampleInputGroup1"
                     
                     label-for="exampleInput1"
-                    description="line">
+                    description="เช่น สยาม,บางใหญ่,รอบแนว BTS, Online">
       <b-form-input
        style="margin-top: -6px;"
        v-model="location"
