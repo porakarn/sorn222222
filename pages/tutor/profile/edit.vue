@@ -217,7 +217,10 @@ console.log(tag);
              tag: tag,
              line: this.line,
             _id: this.$store.state.user._id,
+            profile_length: this.profile.length
            }
+
+console.log(data);
 
   var data2 = {
              profile : this.profile, 
