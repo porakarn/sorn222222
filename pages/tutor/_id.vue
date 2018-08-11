@@ -110,7 +110,7 @@ color: #484848; border:1px !important;">โปรไฟล์ของคุณ<
                       hashtags="Sorns,tutor"
                      
                       inline-template>
- <div style="text-align:center">
+ <div>
     
       <network style=" background-color: #3B5998;
     color: white;
