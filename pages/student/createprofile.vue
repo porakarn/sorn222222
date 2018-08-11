@@ -221,11 +221,24 @@ methods: {
 
       }
 
+       let createPost2 = {
+        parent_or_student: this.selected,
+        phone: this.form.phone,
+        line : this.form.line,
+        gender: this.form.gender,
+        grade: this.form.grade,
+        _id: this.$store.state.student._id,
+        name: this.$store.state.student.name,
+        email : this.$store.state.student.email,
+        picture: this.$store.state.student.picture,
+        fbid: this.$store.state.student.fbid
+      }
 
+  
 
       alert(createPost)
    console.log(createPost);
-   
+   this.$store.dispatch('setStudent', createPost2)
    
         axios.patch('https://frozen-mesa-40722.herokuapp.com/student/update', createPost)
           .then((res) => { 
