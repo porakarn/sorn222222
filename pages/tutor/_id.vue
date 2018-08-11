@@ -61,17 +61,16 @@
 </div>
 
 <br>
- <!-- <social-sharing :url="url"
+ <social-sharing :url="url"
                       title="The Progressive JavaScript Framework"
                       description="Intuitive, Fast and Composable MVVM for building interactive interfaces."
-                      quote="Vue is a progressive framework for building user interfaces."
                       hashtags="vuejs,javascript,framework"
                       twitter-user="vuejs"
                       inline-template>
   <div>
     
       <network network="facebook">
-        <i class="fa fa-facebook"></i> Facebook
+      <i style="color:blue;" class="fa fa-facebook-official" aria-hidden="true"></i> Facebook
       </network>
      
       <network network="line">
@@ -86,7 +85,7 @@
     
    
   </div>
-</social-sharing> -->
+</social-sharing>
    <br>
   <b-row> <b-col >
        
