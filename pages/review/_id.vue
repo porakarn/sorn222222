@@ -91,7 +91,7 @@ mounted() {
                  review_write: this.review_write,
                 //  topic: this.topic,
                  studentid: this.$store.state.student._id,
-                 tutorid:this.$route.params.id
+                 tutorid:this.$route.params.id.replace(".", " ")
 
              }
            
