@@ -172,10 +172,10 @@
 <br>
    <b-modal no-fade hide-header  hide-footer  centered ref="myModalRef" hide-footer title="Using Component Methods">
     <div style="text-align:center;">
-     <p> หลังจากที่คุณสร้างโปรไฟล์แล้ว จะสามารถดูโปรไฟล์ + contact ติวเตอร์ได้ </p> 
+     <p> หลังจากที่คุณ Login แล้ว จะสามารถดูโปรไฟล์ + contact ติวเตอร์ได้ </p> 
  
       <nuxt-link  to="/student/createprofile">   <b-button style="background-color: #33C1C1; border: 0px; padding-left: 46px;
-    padding-right: 46px;">สร้างโปรไฟล์</b-button></nuxt-link>
+    padding-right: 46px;">Login</b-button></nuxt-link>
     </div>
     <br>
    </b-modal>
