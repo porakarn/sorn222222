@@ -172,7 +172,7 @@ export default {
 
 mounted() {
       if (!this.$store.state.student) {
-     this.$router.push('/student/login')
+     this.$router.push('/student/testlogin')
 
     }
 
