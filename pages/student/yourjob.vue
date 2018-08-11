@@ -158,7 +158,7 @@ mounted() {
         tutorid: this.$store.state.student._id
   }
         console.log(suggest)
-    axios.post('https://frozen-mesa-40722.herokuapp.com/job/tutorown', suggest)
+    axios.post('https://frozen-mesa-40722.herokuapp.com/job/studentown', suggest)
     .then((res) => { console.log(res.data)
        this.courses= res.data
                
@@ -202,18 +202,18 @@ if (this.courses) {
       }
 axios.post('https://frozen-mesa-40722.herokuapp.com/job/delete', data)
     .then((res) => { console.log(res.data)
-     let suggest = {
-        tutorid: this.$store.state.user._id
-      }
-      console.log(suggest)
-     axios.post('https://frozen-mesa-40722.herokuapp.com/job/tutorown', suggest)
+   
+  let suggest = {
+      
+        tutorid: this.$store.state.student._id
+  }
+        console.log(suggest)
+    axios.post('https://frozen-mesa-40722.herokuapp.com/job/studentown', suggest)
     .then((res) => { console.log(res.data)
-      this.courses = res.data
-                    this.$refs.myModalRef2.hide()
+       this.courses= res.data
+            this.$refs.myModalRef2.hide()
                                   this.loading = false
-
-
-            })
+            })   
     
     
     })
@@ -230,19 +230,18 @@ axios.post('https://frozen-mesa-40722.herokuapp.com/job/delete', data)
       }
 axios.patch('https://frozen-mesa-40722.herokuapp.com/job/update', edit)
     .then((res) => { console.log(res.data)
-    let suggest = {
+   
+  let suggest = {
       
-        tutorid: this.$store.state.user._id
-        
-
-      }
-      console.log(suggest)
-     axios.post('https://frozen-mesa-40722.herokuapp.com/job/tutorown', suggest)
+        tutorid: this.$store.state.student._id
+  }
+        console.log(suggest)
+    axios.post('https://frozen-mesa-40722.herokuapp.com/job/studentown', suggest)
     .then((res) => { console.log(res.data)
-      this.courses = res.data
-    this.loading = false
-
-            })
+       this.courses= res.data
+                 this.hideModal()
+               this.loading = false
+            })   
     
     })
 
@@ -258,19 +257,18 @@ axios.patch('https://frozen-mesa-40722.herokuapp.com/job/update', edit)
       }
 axios.patch('https://frozen-mesa-40722.herokuapp.com/job/update', close)
     .then((res) => { console.log(res.data)
-let suggest = {
-      
-        tutorid: this.$store.state.user._id
-        
 
-      }
-      console.log(suggest)
-     axios.post('https://frozen-mesa-40722.herokuapp.com/job/tutorown', suggest)
+  let suggest = {
+      
+        tutorid: this.$store.state.student._id
+  }
+        console.log(suggest)
+    axios.post('https://frozen-mesa-40722.herokuapp.com/job/studentown', suggest)
     .then((res) => { console.log(res.data)
-      this.courses = res.data
-               this.hideModal()
+       this.courses= res.data
+                 this.hideModal()
                this.loading = false
-            })
+            })   
       })
       },
        openjob(){
@@ -282,21 +280,18 @@ let suggest = {
       }
 axios.patch('https://frozen-mesa-40722.herokuapp.com/job/update', close)
     .then((res) => { console.log(res.data)
-let suggest = {
+
+  let suggest = {
       
-        tutorid: this.$store.state.user._id
-        
-
-      }
-      console.log(suggest)
-     axios.post('https://frozen-mesa-40722.herokuapp.com/job/tutorown', suggest)
+        tutorid: this.$store.state.student._id
+  }
+        console.log(suggest)
+    axios.post('https://frozen-mesa-40722.herokuapp.com/job/studentown', suggest)
     .then((res) => { console.log(res.data)
-      this.courses = res.data
-               this.hideModal()
+       this.courses= res.data
+                 this.hideModal()
                this.loading = false
-            }        
-
-    )
+            })   
       })
       },
 
