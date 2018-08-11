@@ -137,7 +137,8 @@
 
 <b-modal  hide-header  hide-footer  centered ref="myModalRef" hide-footer title="Using Component Methods">
       <div class="d-block ">
-         <div style="white-space: pre-wrap;">{{str5}}</div> 
+         <div style="white-space: pre-wrap;">{{str5}} </div> 
+         <p>ช่องทางการติดต่อ Line : {{this.$store.state.student.line}}</p>
       </div>  <br>
           <b-button @click="onSubmit" style="background-color: #33C1C1; border: 0px; padding-left: 46px;
     padding-right: 46px;">ยืนยัน</b-button> <b-button style="background-color: white; border: 0px; padding-left: 36px; color: grey;
@@ -220,7 +221,7 @@ methods: {
        this.$nuxt.$loading.start()
               this.loading = true
           this.str5 = this.form.subject + ' ' + this.form.note +'\n- '+ this.$store.state.student.gender + ' \n- '+this.form.location +'\n- '+this.form.day +'\n- ค่าสอน ' + this.form.tuitionfee 
-    alert(this.str5)
+          
         this.$refs.myModalRef.show() 
     },
     onSubmit(){
