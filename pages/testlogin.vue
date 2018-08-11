@@ -33,7 +33,7 @@ import axios from 'axios';
    email: '',
      
    e1: 'recent',
-  url:'https://www.facebook.com/v3.0/dialog/oauth?client_id=1603228583057465&redirect_uri=https://sorns-co-beta.herokuapp.com/testlogin&scope=email'
+  url:'https://www.facebook.com/v3.0/dialog/oauth?client_id=1164801473596989&redirect_uri=https://sorns-co-beta.herokuapp.com/testlogin&scope=email'
 
       }
     },
@@ -50,7 +50,7 @@ import axios from 'axios';
        console.log(code);
 if (code) {
 
-axios.get(`https://graph.facebook.com/v3.0/oauth/access_token?client_id=1603228583057465&redirect_uri=https://sorns-co-beta.herokuapp.com/testlogin&client_secret=666eb8afc3f586f2f319041ca47bf56f&code=${code}`)
+axios.get(`https://graph.facebook.com/v3.0/oauth/access_token?client_id=1164801473596989&redirect_uri=https://sorns-co-beta.herokuapp.com/testlogin&client_secret=24ca12cded8182db8628ddf7772b746e&code=${code}`)
     .then(x=>{
         let access_token = x.data.access_token
         console.log(access_token)

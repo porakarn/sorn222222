@@ -296,7 +296,9 @@ export default {
     picture: '',
     jobs:{},
     showreview: false,
-    url:''
+    url:'',
+    line: '',
+ 
 
   
     }

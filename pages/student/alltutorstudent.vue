@@ -170,7 +170,15 @@
     padding-right: 46px;">โพสหาติวเตอร์</b-button></nuxt-link> </div> 
 
 <br>
-  
+   <b-modal no-fade hide-header  hide-footer  centered ref="myModalRef" hide-footer title="Using Component Methods">
+    <div style="text-align:center;">
+     <p> หลังจากที่คุณสร้างโปรไฟล์แล้ว จะสามารถดูโปรไฟล์ + contact ติวเตอร์ได้ </p> 
+ 
+      <nuxt-link  to="/student/createprofile">   <b-button style="background-color: #33C1C1; border: 0px; padding-left: 46px;
+    padding-right: 46px;">สร้างโปรไฟล์</b-button></nuxt-link>
+    </div>
+    <br>
+   </b-modal>
 <br>
 <br>
 <br>
@@ -192,6 +200,7 @@ import moment from 'moment';
     return {
       tutors:{},
        loading: false,
+           profile2: false,
         selected: [], // Array reference
       options: [
         { value: 'ENG', text: 'ENG' },
@@ -226,6 +235,7 @@ import moment from 'moment';
 
 
 mounted() {
+
 
 },
 //   computed: {
@@ -321,7 +331,15 @@ let createPost = {
 
 
    seeeach(x){
-       this.$router.push(`/tutor/${x}`)
+ 
+
+       if (this.$store.state.isUserLoggedIn) {
+ this.$router.push(`/tutor/${x}`)
+       } else{
+                                    this.$refs.myModalRef.show() 
+
+       }
+       
    },
 
        displayTimestamp(t){

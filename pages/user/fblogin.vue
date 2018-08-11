@@ -14,12 +14,12 @@
 
    <b-row>
 <b-col >
-<a href="#" @click="doLogin" >
+  <nuxt-link to="/testlogin">  
          <div style="text-align: center">
           <img style="width: 340px;" src="https://i.stack.imgur.com/oL5c2.png" alt="">
 
          </div>
-        </a>
+  </nuxt-link>
 </b-col></b-row>
  <br><br>
 <br><br><br>

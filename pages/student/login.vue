@@ -15,10 +15,14 @@
 
   <b-row>
 <b-col md="6" offset-md="4">
+  <div style="text-align:center">
+
 <a href="#" @click="doLogin" >
-         
-          <img style="width: 340px;" src="https://i.stack.imgur.com/oL5c2.png" alt="">
+ <img style="width: 340px;" src="https://i.stack.imgur.com/oL5c2.png" alt="">
         </a>
+  </div>
+         
+         
 </b-col></b-row>
   
  <br><br>
