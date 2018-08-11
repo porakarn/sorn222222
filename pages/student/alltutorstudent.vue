@@ -134,7 +134,7 @@
     padding: 3px 8px;
     margin-left: 6px;
     margin-top: 7px;
-    font-size: 15px;
+    font-size: 16px;
     border-radius: 11px;"  href="#" 
            class="card-link"><i class="fa fa-map-marker" aria-hidden="true"></i> {{tutor.location}}</a>
 

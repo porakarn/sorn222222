@@ -105,13 +105,13 @@ color: #484848; border:1px !important;">โปรไฟล์ของคุณ<
     text-decoration: none;
    
     padding: 3px 8px;
-    margin-left: 6px;
-    margin-top: 7px;
-    font-size: 15px;
+   margin-bottom:10px ;
+   
+    font-size: 16px;
     border-radius: 11px;"  href="#" 
            class="card-link"><i class="fa fa-map-marker" aria-hidden="true"></i> {{courses.location}}</a>
 
-
+<br>
 <social-sharing :url="url"
                       :title="title"
                       :description="title"
@@ -484,7 +484,7 @@ border-top: 0px;
         margin-left: 7px;
          color: #ffffff;
     text-decoration: none;
-    background-color: #82D9D9;
+  
     padding: 2px;
     padding-left: 7px;
     padding-right: 7px;
