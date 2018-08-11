@@ -59,7 +59,8 @@ export default {
     }
   },
   mounted() {
-      this.text = 'https://sorns-co-beta.herokuapp.com/review/'+this.$store.state.user.name
+      var porakarn = this.$store.state.user.name.replace(" ", ".")
+      this.text = 'https://sorns-co-beta.herokuapp.com/review/'+porakarn
       this.thingToCopy = this.text
   },
 

@@ -65,8 +65,10 @@ mounted() {
      this.$router.push('/student/login')
 
     }
+
+    var porakarn = this.$route.params.id.replace(".", "%20")
  var createpost = {
-        name: this.$route.params.id
+        name: porakarn
 
  }
 
