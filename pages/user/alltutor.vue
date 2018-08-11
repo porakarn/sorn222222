@@ -126,7 +126,7 @@
     padding-left: 6px;"  href="#" 
            class="card-link">{{tutor.tag.toString().split(',').join(' ')}}</a> -->
 
-      <a v-for="tag in tutor.tag" v-show="tutor.tag.length >0" style=" color: #9dd8bf;
+      <!-- <a v-for="tag in tutor.tag" v-show="tutor.tag.length >0" style=" color: #9dd8bf;
     text-decoration: none;
     border: 1px solid #8bd2b4;
     padding: 3px 8px;
@@ -134,7 +134,17 @@
     margin-top: 7px;
     font-size: 15px;
     border-radius: 11px;"  href="#" 
-           class="card-link">{{tag.toString()}}</a>
+           class="card-link">{{tag.toString()}}</a> -->
+
+           <a  v-show="tutor.location" style=" color: #9dd8bf;
+    text-decoration: none;
+    border: 1px solid #8bd2b4;
+    padding: 3px 8px;
+    margin-left: 6px;
+    margin-top: 7px;
+    font-size: 15px;
+    border-radius: 11px;"  href="#" 
+           class="card-link">{{tutor.location}}</a>
 
               <!-- <a v-for="tag in tutor.tag" v-show="tutor.tag.length >0" style="    color: rgb(255, 255, 255);
     text-decoration: none;

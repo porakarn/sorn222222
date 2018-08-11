@@ -82,15 +82,14 @@ color: rgb(117, 119, 120); border:1px !important;">โปรไฟล์ขอ�
      <b-form-group  id="exampleInputGroup1"
                     
                     label-for="exampleInput1"
-                    description="เช่น สยาม,บางใหญ่,รอบแนว BTS, Online">
+                    description="เช่น สยาม, บางใหญ่, รอบแนว BTS, Online">
       <b-form-input
        style="margin-top: -6px;"
        v-model="location"
         class="formpor"
         id="input-large"   
         type="text" 
-        placeholder="สถานที่สะดวกสอน">{{location}}</b-form-input></b-form-group>
-        <br>
+        placeholder="สถานที่สอน">{{location}}</b-form-input></b-form-group>
     <b-button @click="onSubmit"  style="background-color: #33C1C1; border: 0px; padding-left: 66px;
     padding-right: 66px;    box-shadow: 0 1px 1px 1px rgba(111, 111, 111, 0.23);
 ">สมัคร</b-button>
@@ -123,10 +122,11 @@ export default {
     }
   },
   mounted() {
-    this.phone = this.$store.state.user.phone,
-    this.profile = this.$store.state.user.profile,
+    this.phone = this.$store.state.user.phone
+    this.profile = this.$store.state.user.profile
     this.subject = this.$store.state.user.subject
     this.line = this.$store.state.user.line
+    this.location = this.$store.state.user.location
   },
 //   asyncData (context, callback) {
 //  var por = ';;'
