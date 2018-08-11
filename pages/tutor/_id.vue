@@ -335,7 +335,7 @@ var data5 = {
 }
                 // axios.post('http://localhost:8000/multi', createPost)
 
-     axios.post('http://localhost:8000/user/profile3', data5).then((res) =>{
+     axios.post('https://frozen-mesa-40722.herokuapp.com/user/profile3', data5).then((res) =>{
 
             console.log(res.data)
       
