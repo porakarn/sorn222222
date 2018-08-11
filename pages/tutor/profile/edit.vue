@@ -78,6 +78,19 @@ color: rgb(117, 119, 120); border:1px !important;">โปรไฟล์ขอ�
                      :max-rows="9">
     </b-form-textarea>
     <br>
+
+     <b-form-group  id="exampleInputGroup1"
+                    
+                    label-for="exampleInput1"
+                    description="line">
+      <b-form-input
+       style="margin-top: -6px;"
+       v-model="location"
+        class="formpor"
+        id="input-large"   
+        type="text" 
+        placeholder="สถานที่สะดวกสอน">{{location}}</b-form-input></b-form-group>
+        <br>
     <b-button @click="onSubmit"  style="background-color: #33C1C1; border: 0px; padding-left: 66px;
     padding-right: 66px;    box-shadow: 0 1px 1px 1px rgba(111, 111, 111, 0.23);
 ">สมัคร</b-button>
@@ -86,7 +99,7 @@ color: rgb(117, 119, 120); border:1px !important;">โปรไฟล์ขอ�
   </div>
       </b-col> 
     </b-row>
-    <br><br><br>
+    <br><br><br><br><br>
 </b-container>
 </template>
 
@@ -102,6 +115,7 @@ export default {
     profile: '',
     subject: '',
     text2: '',
+    location: '',
     
     line:''
 
@@ -217,7 +231,8 @@ console.log(tag);
              tag: tag,
              line: this.line,
             _id: this.$store.state.user._id,
-            profile_length: this.profile.length
+            profile_length: this.profile.length,
+            location: this.location
            }
 
 console.log(data);
@@ -232,7 +247,8 @@ console.log(data);
              picture: this.$store.state.user.picture,
              tag: tag,
              canseesheet: this.$store.state.user.canseesheet,
-            line: this.line
+            line: this.line,
+            location : this.location
 
            }
                        console.log(data2);
