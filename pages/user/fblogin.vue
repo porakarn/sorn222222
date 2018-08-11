@@ -21,8 +21,14 @@
          </div>
   </nuxt-link>
 </b-col></b-row>
- <br><br>
-<br><br><br>
+ <br><br><br><br>
+ <div style="text-align : center;">
+  <nuxt-link to="agent/signup">   <b-button size="lg" style=" border: 0px;
+    padding-left: 66px;
+    color: darkgrey;
+    padding-right: 66px;
+    background-color: white;">สมัครนายหน้า</b-button>  </nuxt-link></div>
+<br><br><br><br><br>
  
       
   
