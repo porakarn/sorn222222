@@ -106,9 +106,10 @@ color: #484848; border:1px !important;">โปรไฟล์ของคุณ<
 
 <social-sharing :url="url"
                       :title="title"
-                      description="สร้าง Community การสอน"
+                      :description="title"
                       hashtags="Sorns,tutor"
-                     
+                      :quote="title"
+
                       inline-template>
  <div>
     
@@ -339,7 +340,7 @@ export default {
           linelink: 'http://line.me/ti/p/~' + res.data.line,   
           phoneprompt : 'tel:' + res.data.phone,
           reviews: res.data._review,
-          title: 'สมัครเรียนติวเตอร์กับ' + res.data.name 
+          title: 'สมัครเรียนติวเตอร์กับ ' + res.data.name 
             }        
 
     })
