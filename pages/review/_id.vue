@@ -62,26 +62,26 @@ export default {
 
 
  
- asyncData (context) {
+//  asyncData (context) {
 
     
-       var createpost = {
-        name : context.route.params.id.replace(".", " ")
+//        var createpost = {
+//         name : context.route.params.id.replace(".", " ")
 
- }
- console.log(createpost);
+//  }
+//  console.log(createpost);
  
-    return axios.post('https://frozen-mesa-40722.herokuapp.com/user/profile', createpost)
-    .then((res) => { console.log(res.data)
-      return { 
-        picture : res.data.picture
-            }        
+//     return axios.post('https://frozen-mesa-40722.herokuapp.com/user/profile', createpost)
+//     .then((res) => { console.log(res.data)
+//       return { 
+//         picture : res.data.picture
+//             }        
 
-    })
+//     })
   
 
 
-  },
+//   },
 
 mounted() {
     if (!this.$store.state.student) {
