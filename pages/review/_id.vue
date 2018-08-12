@@ -35,6 +35,8 @@
     padding-right: 36px;">เรียบร้อย</b-button>
     <br> <br> <p style="color:#1ea71e;">{{message}}</p> 
     
+    <p  v-if="count == 1">คุณได้ทำการรีวิวไปแล้ว</p>
+
     <p style="color: red;">{{error}}</p>
      <br><br><br>
 </b-col>
@@ -121,7 +123,7 @@ mounted() {
 
              }
            
-     this.count = 1
+   
              console.log(createpost);
 
 if (this.rating > 0) {
@@ -134,6 +136,7 @@ if (this.rating > 0) {
               this.message = 'คุณได้ทำการรีวิวติวเตอร์เรียบร้อย Thank you '
               this.error =''
               this.rating = 0
+                this.count = 1
           })
           .catch(error => console.log(error))
 } else {
