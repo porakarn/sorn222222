@@ -185,13 +185,8 @@ var data = {
       this.selected = res.data.parent_or_student
         this.form.phone = res.data.phone
         this.form.line = res.data.line
-if (res.data.gender) {
-   this.form.gender = res.data.gender
-}
-
-        if (res.data.grade) {
-                  this.form.grade = res.data.grade
-        }
+        this.form.gender = res.data.gender
+        this.form.grade = res.data.grade
         this.picture = res.data.picture
           })
           .catch(error => console.log(error))

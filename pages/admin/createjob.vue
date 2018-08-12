@@ -321,10 +321,7 @@ if ( sat2 === true ) {
     border-bottom: 2px solid !important;
 }
 
-button{
-      box-shadow: 0 1px 3px 1px rgba(40, 36, 36, 0.23);
-}
-}
+
 
 a{
 
