@@ -406,7 +406,10 @@ border-top: 0px;
 .btn-secondary:focus, .btn-secondary.focus {
     box-shadow: 0 0 0 0.2rem rgba(255, 255, 255, 0.5);
 }
-
+button{
+      box-shadow: 0 1px 3px 1px rgba(40, 36, 36, 0.23);
+}
+}
 .form-control:focus {
     color: #495057;
     background-color: #fff;

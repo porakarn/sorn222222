@@ -30,7 +30,7 @@
 
 
     <!-- <pre class="mt-3">{{ text }}</pre> -->
-        <b-button style="background-color: #33C1C1; border: 0px; padding-left: 46px;
+        <b-button style="background-color: #33C1C1; border: 0px; padding-left: 46px; box-shadow: 0 1px 3px 1px rgba(40, 36, 36, 0.23);
     padding-right: 46px;" @click.prevent="next()">ต่อไป</b-button>
 
               </div>
@@ -63,7 +63,7 @@
       </b-form-group>
      
   
-        <b-button style="background-color: #33C1C1; border: 0px; padding-left: 46px;
+        <b-button style="background-color: #33C1C1; border: 0px; padding-left: 46px; box-shadow: 0 1px 3px 1px rgba(40, 36, 36, 0.23);
     padding-right: 46px;" @click.prevent="next()">ต่อไป</b-button>
 
         <b-button style="background-color: white; border: 0px; padding-left: 36px;  color: grey;
@@ -98,7 +98,7 @@
 
       
       
-         <b-button  type="submit" style="background-color: #33C1C1; border: 0px; padding-left: 46px;
+         <b-button  type="submit" style=" box-shadow: 0 1px 3px 1px rgba(40, 36, 36, 0.23);background-color: #33C1C1; border: 0px; padding-left: 46px;
     padding-right: 46px;">เรียบร้อย</b-button>
         <b-button style="background-color: white; border: 0px; padding-left: 36px;  color: grey;
     padding-right: 36px;" @click.prevent="prev()">กลับ</b-button>
@@ -314,6 +314,9 @@ a{
    
 
 }
+
+
+
 
 .btn-secondary{
     color: #fff;
