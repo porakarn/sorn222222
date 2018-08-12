@@ -89,19 +89,19 @@ mounted() {
 
     }
 
-//     var porakarn = this.$route.params.id.replace(".", " ")
+    var porakarn = this.$route.params.id.replace(".", " ")
 
     
-//  var createpost = {
-//         name: porakarn
+ var createpost = {
+        name: porakarn
 
-//  }
+ }
 
-//   axios.post('https://frozen-mesa-40722.herokuapp.com/user/profile', createpost)
-//           .then((res) => { 
-//               this.picture = res.data.picture
-//               console.log(res.data)
-//           }).catch(error => console.log(error))
+  axios.post('https://frozen-mesa-40722.herokuapp.com/user/profile', createpost)
+          .then((res) => { 
+              this.picture = res.data.picture
+              console.log(res.data)
+          }).catch(error => console.log(error))
 },
 
 
