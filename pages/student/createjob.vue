@@ -6,7 +6,18 @@
   <div> <div class="my-3">
  
 </div>
-          <form @submit.prevent="onCreate">
+
+<div v-if="!line" style="text-align: center;">
+<p style=" color:#86a5ca" >  ต้องกรอกโปรไฟล์ก่อนถึงจะสามารถโพสหาติวเตอร์ได้</p>
+  <nuxt-link to="/student/profile">
+    <b-button   style="box-shadow: 0 1px 1px 1px rgba(111, 111, 111, .23);
+    width: auto;  background-color: #33C1C1; border: 0px; padding-left: 46px; color:white;
+    padding-right: 46px;">สร้างโปรไฟล์</b-button>  </nuxt-link>
+</div>
+
+
+
+          <form v-if="line" @submit.prevent="onCreate">
 <b-row>
   <b-col offset-lg="3" lg="6">
               <div v-if="step === 1">
@@ -181,7 +192,7 @@ export default {
         grade: null,
         checked: []
       },
-     
+          line: '',
        genders: [
         { text: 'เพศนักเรียน', value: null },
        'ชาย', 'หญิง',
@@ -197,7 +208,7 @@ export default {
 
 mounted() {
       if (!this.$store.state.student) {
-     this.$router.push('/student/login')
+     this.$router.push('/student/profile')
 
     }
 },

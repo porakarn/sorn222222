@@ -237,7 +237,6 @@ methods: {
 
   
 
-      alert(createPost)
    console.log(createPost);
    this.$store.dispatch('setStudent', createPost2)
 

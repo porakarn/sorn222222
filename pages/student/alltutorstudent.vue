@@ -186,7 +186,7 @@
     <div style="text-align:center;">
      <p> หลังจากที่คุณ Login แล้ว จะสามารถดูโปรไฟล์ + contact ติวเตอร์ได้ </p> 
  
-      <nuxt-link  to="/student/createprofile">   <b-button style="background-color: #33C1C1; border: 0px; padding-left: 46px;
+      <nuxt-link  to="/student/profile">   <b-button style="background-color: #33C1C1; border: 0px; padding-left: 46px;
     padding-right: 46px;">Login</b-button></nuxt-link>
     </div>  
     <br>
