@@ -71,10 +71,10 @@
 
   <b-row class="my-1">
     <b-col >
- <nuxt-link to="/tutor/profile/edit">  <p v-if="this.$store.state.user.location" style=" color:#86a5ca"><i class="fa fa-plus-circle" aria-hidden="true"></i>
+ <!-- <nuxt-link to="/tutor/profile/edit">  <p v-if="this.$store.state.user.location" style=" color:#86a5ca"><i class="fa fa-plus-circle" aria-hidden="true"></i>
  เพิ่มสถานที่สอน</p></nuxt-link>
   <nuxt-link v-if="this.$store.state.haveProfile" to="/tutor/sharesheet">  <p v-if="this.$store.state.user.location" style=" color:#86a5ca"><i class="fa fa-plus-circle" aria-hidden="true"></i>
- อัพโหลดชีทสอน</p></nuxt-link>
+ อัพโหลดชีทสอน</p></nuxt-link> -->
      <p style=" white-space: pre-wrap;"  v-if="this.$store.state.haveProfile"
 > {{this.$store.state.user.subject}} </p>
 
