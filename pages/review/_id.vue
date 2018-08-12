@@ -1,4 +1,5 @@
 <template>
+  <no-ssr>
 <b-container fluid>
 <br>
 <b-col md="6" offset-md="3">
@@ -30,7 +31,7 @@
                      :max-rows="4">
     </b-form-textarea>
     <br>
-   <b-button @click="por" size="lg" type="submit" style="background-color: #33C1C1; border: 0px; padding-left: 36px;
+   <b-button v-if="count == 0" @click="por" size="lg" type="submit" style="background-color: #33C1C1; border: 0px; padding-left: 36px;
     padding-right: 36px;">เรียบร้อย</b-button>
     <br> <br> <p style="color:#1ea71e;">{{message}}</p> 
     
@@ -38,6 +39,7 @@
      <br><br><br>
 </b-col>
 </b-container>
+  <no-ssr>
 </template>
 
 <script>
@@ -55,7 +57,8 @@ export default {
     tutorid: '',
     picture: '',
     message: '',
-    error: ''
+    error: '',
+    count: 0
      
     }
   },
@@ -118,7 +121,7 @@ mounted() {
 
              }
            
-
+     this.count = 1
              console.log(createpost);
 
 if (this.rating > 0) {
