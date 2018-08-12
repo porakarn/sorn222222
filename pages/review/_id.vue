@@ -60,25 +60,48 @@ export default {
     }
   },
 
+
+ 
+ asyncData (context) {
+
+    
+       var createpost = {
+        name : context.route.params.id.replace(".", " ")
+
+ }
+ console.log(createpost);
+ 
+    return axios.post('https://frozen-mesa-40722.herokuapp.com/user/profile', createpost)
+    .then((res) => { console.log(res.data)
+      return { 
+        picture : res.data.picture
+            }        
+
+    })
+  
+
+
+  },
+
 mounted() {
     if (!this.$store.state.student) {
      this.$router.push('/student/testlogin')
 
     }
 
-    var porakarn = this.$route.params.id.replace(".", " ")
+//     var porakarn = this.$route.params.id.replace(".", " ")
 
     
- var createpost = {
-        name: porakarn
+//  var createpost = {
+//         name: porakarn
 
- }
+//  }
 
-  axios.post('https://frozen-mesa-40722.herokuapp.com/user/profile', createpost)
-          .then((res) => { 
-              this.picture = res.data.picture
-              console.log(res.data)
-          }).catch(error => console.log(error))
+//   axios.post('https://frozen-mesa-40722.herokuapp.com/user/profile', createpost)
+//           .then((res) => { 
+//               this.picture = res.data.picture
+//               console.log(res.data)
+//           }).catch(error => console.log(error))
 },
 
 
