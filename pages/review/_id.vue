@@ -41,7 +41,7 @@
      <br><br><br>
 </b-col>
 </b-container>
-  <no-ssr>
+  </no-ssr>
 </template>
 
 <script>

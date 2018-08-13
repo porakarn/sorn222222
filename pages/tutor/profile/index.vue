@@ -71,10 +71,12 @@
 
   <b-row class="my-1">
     <b-col >
- <nuxt-link to="/tutor/profile/edit">  <p v-if="location" style=" color:#86a5ca"><i class="fa fa-plus-circle" aria-hidden="true"></i>
+ <nuxt-link  v-if="this.$store.state.haveProfile" to="/tutor/profile/edit">  <p v-if="!location" style=" color:#86a5ca"><i class="fa fa-plus-circle" aria-hidden="true"></i>
  เพิ่มสถานที่สอน</p></nuxt-link>
   <nuxt-link v-if="this.$store.state.haveProfile" to="/tutor/sharesheet">  <p v-if="location" style=" color:#86a5ca"><i class="fa fa-plus-circle" aria-hidden="true"></i>
  อัพโหลดชีทสอน</p></nuxt-link>
+   <nuxt-link v-if="this.$store.state.haveProfile" href="https://line.me/R/ti/p/%40dxc2481h">  <p  style=" color:#86a5ca"><i class="fa fa-plus-circle" aria-hidden="true"></i>
+ เชื่อมต่อกับ Line</p></nuxt-link>
      <p style=" white-space: pre-wrap;"  v-if="this.$store.state.haveProfile"
 > {{this.$store.state.user.subject}} </p>
 

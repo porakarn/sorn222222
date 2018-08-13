@@ -10,7 +10,56 @@
   <div class="lds-facebook"><div></div><div></div><div></div></div>
 
   </div>
+
+<div>
+    <b-carousel id="carousel1"
+                style="text-shadow: 1px 1px 2px #333;"
+                controls
+                indicators
+                background="#ababab"
+                :interval="4000"
+                img-width="1024"
+                img-height="480"
+                v-model="slide"
+                @sliding-start="onSlideStart"
+                @sliding-end="onSlideEnd"
+    >
+
+      <!-- Text slides with image -->
+      <b-carousel-slide 
+                        img-src="/picture1.png"
+      ></b-carousel-slide>
+
+      <!-- Slides with custom text -->
+      <b-carousel-slide img-src="/picture2.png">
+    
+      </b-carousel-slide>
+
+      <!-- Slides with image only -->
+      <b-carousel-slide img-src="/picture3.png">
+      </b-carousel-slide>
+
+      <!-- Slides with img slot -->
+      <!-- Note the classes .d-block and .img-fluid to prevent browser default image alignment -->
+   <b-carousel-slide img-src="/picture4.png">
+      </b-carousel-slide>
+
+
+      <!-- Slide with blank fluid image to maintain slide aspect ratio -->
+  
+
+    </b-carousel>
+
+
+
+  </div>
+
+
 </div>
+
+
+
+
 </template>
 
 
@@ -31,6 +80,8 @@ import axios from 'axios';
       return {
    name: '',
    email: '',
+    slide: 0,
+      sliding: null,
      
    e1: 'recent',
   url:'https://www.facebook.com/v3.0/dialog/oauth?client_id=1164801473596989&redirect_uri=https://sorns-co-beta.herokuapp.com/testlogin&scope=email'
@@ -145,7 +196,12 @@ console.log('r6');
     
     methods: {
 
-      
+       onSlideStart (slide) {
+      this.sliding = true
+    },
+    onSlideEnd (slide) {
+      this.sliding = false
+    },
    
 
  
