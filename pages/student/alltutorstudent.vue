@@ -136,7 +136,7 @@
     margin-top: 7px;
     font-size: 16px;
     border-radius: 11px;"  href="#" 
-           class="card-link"><i class="fa fa-map-marker" aria-hidden="true"></i> {{tutor.location}}</a>
+           class="card-link"><i class="fa fa-map-marker" aria-hidden="true"></i> {{tutor.location.substring(0,37)}}</a>
 
               <!-- <a v-for="tag in tutor.tag" v-show="tutor.tag.length >0" style="    color: rgb(255, 255, 255);
     text-decoration: none;
