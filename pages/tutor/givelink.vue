@@ -2,7 +2,7 @@
 <b-container fluid>
 <br>
 
-<br><br>
+
 <div style="width: 267px;
     padding-left: auto;
     margin-left: auto;

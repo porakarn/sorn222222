@@ -11,7 +11,7 @@
         <!-- <b-button size="lg" style="  background-color: white; border: 0px; padding-left: 66px; color:#33C1C1;
     padding-right: 66px;">สมัครนักเรียน</b-button>   -->
 <br><br>
-   
+     
 </div>
 <br>
 <b-row>
