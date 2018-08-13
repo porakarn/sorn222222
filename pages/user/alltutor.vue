@@ -111,7 +111,7 @@
 
      </b-row>
      <b-row style="    margin-top: 7px;">
-  <b-col cols="10" style="    padding-left: 9px;
+  <b-col cols="8" style="    padding-left: 9px;
     padding-right: 0px;">
  <!-- <a v-show="tutor.tag.length >0" style="    color: rgb(255, 255, 255);
     text-decoration: none;
@@ -144,7 +144,7 @@
     margin-top: 7px;
     font-size: 16px;
     border-radius: 11px;"  href="#" 
-           class="card-link"><i class="fa fa-map-marker" aria-hidden="true"></i> {{tutor.location}}</a>
+           class="card-link"> {{tutor.location}}</a>
 
               <!-- <a v-for="tag in tutor.tag" v-show="tutor.tag.length >0" style="    color: rgb(255, 255, 255);
     text-decoration: none;
@@ -160,7 +160,7 @@
            class="card-link">{{tag.toString()}}</a> -->
               <br>  
 </b-col>
-<b-col cols="2" style="  padding-left: 20px; ">
+<b-col cols="4" style="  padding-left: 20px; ">
 
 
    <!-- <strong style="color:#cbcdd0;  font-size: 14px; margin-top: -0px;  float:right;   margin-bottom: 0px; font-weight:400">
