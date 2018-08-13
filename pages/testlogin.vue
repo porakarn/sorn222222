@@ -27,21 +27,21 @@
 
       <!-- Text slides with image -->
       <b-carousel-slide 
-                        img-src="/picture1.png"
+                        img-src="/Picture1.png"
       ></b-carousel-slide>
 
       <!-- Slides with custom text -->
-      <b-carousel-slide img-src="/picture2.png">
+      <b-carousel-slide img-src="/Picture2.png">
     
       </b-carousel-slide>
 
       <!-- Slides with image only -->
-      <b-carousel-slide img-src="/picture3.png">
+      <b-carousel-slide img-src="/Picture3.png">
       </b-carousel-slide>
 
       <!-- Slides with img slot -->
       <!-- Note the classes .d-block and .img-fluid to prevent browser default image alignment -->
-   <b-carousel-slide img-src="/picture4.png">
+   <b-carousel-slide img-src="/Picture4.png">
       </b-carousel-slide>
 
 

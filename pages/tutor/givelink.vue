@@ -10,12 +10,44 @@
 "  >
  </div>
 
-<br>
-<p style=" color:#86a5ca ; text-align: center;
-" >
-ส่ง link เชิญให้นักเรียนของคุณเข้ามา review คุณ 
-ช่วยให้ โปรไฟล์คุณน่าเชื่อถือขึ้น  + ได้นักเรียนใหม่มากขึ้น
-</p>
+ <b-row> <b-col md="6" offset-md="3"> 
+  <b-carousel id="carousel1"
+                style="text-shadow: 1px 1px 2px #333;"
+                controls
+                indicators
+                background="#ababab"
+                :interval="4000"
+                img-width="1024"
+                img-height="480"
+                v-model="slide"
+                @sliding-start="onSlideStart"
+                @sliding-end="onSlideEnd"
+    >
+
+      <!-- Text slides with image -->
+      <b-carousel-slide img-src="/Picture4.png">
+      </b-carousel-slide>
+
+      <!-- Slides with custom text -->
+      <b-carousel-slide img-src="/Picture2.png">
+    
+      </b-carousel-slide>
+
+      <!-- Slides with image only -->
+      <b-carousel-slide img-src="/Picture3.png">
+      </b-carousel-slide>
+
+      <!-- Slides with img slot -->
+      <!-- Note the classes .d-block and .img-fluid to prevent browser default image alignment -->
+ 
+
+
+      <!-- Slide with blank fluid image to maintain slide aspect ratio -->
+  
+
+    </b-carousel>
+
+</b-col></b-row>
 
     <br>
     <b-form-textarea class="formpor" id="textarea1" size="lg"
@@ -48,7 +80,8 @@ Vue.use(VueClipboard);
 export default {
       data () {
     return {
-          
+           slide: 0,
+      sliding: null,
       loading2: false,
     //    userid: 's' ,
        text: '' ,
@@ -67,7 +100,13 @@ export default {
   methods: {
      clickcopy(){
           this.loading2 = true
-     }
+     },
+      onSlideStart (slide) {
+      this.sliding = true
+    },
+    onSlideEnd (slide) {
+      this.sliding = false
+    }
   }
 
 
