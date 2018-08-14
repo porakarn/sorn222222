@@ -55,13 +55,14 @@
   </b-row>
  </div>
 
- <div style="text-align:center; margin-top:10px;">
-     <b-button  @click="track" :href="linelink" size="lg" style=" width:60%;     color: white; background-color: #33C1C1; border: 0px; 
+ <div  @click="track" style="text-align:center; margin-top:10px;">
+     <b-button  :href="linelink" size="lg" style=" width:60%;     color: white; background-color: #33C1C1; border: 0px; 
  ">ติดต่อ</b-button>  
 </div>
 
 <br>
-
+  <b-button   @click="track" size="lg" style=" width:60%;     color: white; background-color: #33C1C1; border: 0px; 
+ ">track</b-button> 
    
  
 
