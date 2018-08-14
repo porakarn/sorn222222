@@ -56,7 +56,7 @@
  </div>
 
  <div style="text-align:center; margin-top:10px;">
-     <b-button  :href="linelink" size="lg" style=" width:60%;     color: white; background-color: #33C1C1; border: 0px; 
+     <b-button  @click="track" :href="linelink" size="lg" style=" width:60%;     color: white; background-color: #33C1C1; border: 0px; 
  ">ติดต่อ</b-button>  
 </div>
 
@@ -411,6 +411,35 @@ var data = {
 //   }
 //   ,
     methods: {
+    track(){
+
+if (this.$store.state.student) {
+  var data = {
+    studentname:  this.$store.state.student.name,
+    picture: this.$store.state.student.picture, 
+ _studentid:  this.$store.state.student._id,
+    tutorid: this.courses._id,
+    tutorname: this.courses_name, 
+}
+console.log(data);
+
+  axios.post('https://frozen-mesa-40722.herokuapp.com/track', data)
+          .then((res) => { 
+              
+              console.log(res.data)
+                  
+          })
+          .catch(error => console.log(error))
+}
+
+   
+   
+
+
+
+
+    },
+
 
     displayTimestamp(t){
                 return moment(t).locale('th').fromNow()
