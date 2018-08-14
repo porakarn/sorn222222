@@ -414,7 +414,7 @@ var data = {
     methods: {
     track(){
 
-if (this.$store.state.student) {
+// if (this.$store.state.student) {
   var data = {
     studentname:  this.$store.state.student.name,
     picture: this.$store.state.student.picture, 
@@ -433,7 +433,7 @@ console.log(data);
                   
           })
           .catch(error => console.log(error))
-}
+// }
 
    
    
