@@ -209,10 +209,12 @@ export default {
 mounted() {
       if (!this.$store.state.student) {
      this.$router.push('/student/profile')
-      this.line = this.$store.state.student.line
-      console.log(this.line);
+     
       
     }
+     this.line = this.$store.state.student.line
+      console.log(this.line);
+     
 },
 methods: {
     prev() {
