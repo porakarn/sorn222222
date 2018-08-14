@@ -61,8 +61,7 @@
 </div>
 
 <br>
-  <b-button   @click="track" size="lg" style=" width:60%;     color: white; background-color: #33C1C1; border: 0px; 
- ">track</b-button> 
+
    
  
 
@@ -414,26 +413,26 @@ var data = {
     methods: {
     track(){
 
-// if (this.$store.state.student) {
+if (this.$store.state.student.name) {
   var data = {
     studentname:  this.$store.state.student.name,
     picture: this.$store.state.student.picture, 
  _studentid:  this.$store.state.student._id,
     tutorid: this.courses._id,
-    tutorname: this.courses_name, 
+    tutorname: this.courses.name, 
 }
 console.log(data);
 
-  axios.post('http://localhost:8000/track', data)
+  // axios.post('http://localhost:8000/track', data)
 
-  // axios.post('https://frozen-mesa-40722.herokuapp.com/track', data)
+  axios.post('https://frozen-mesa-40722.herokuapp.com/track', data)
           .then((res) => { 
               
               console.log(res.data)
                   
           })
           .catch(error => console.log(error))
-// }
+}
 
    
    
