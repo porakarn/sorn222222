@@ -423,7 +423,9 @@ if (this.$store.state.student) {
 }
 console.log(data);
 
-  axios.post('https://frozen-mesa-40722.herokuapp.com/track', data)
+  axios.post('http://localhost:8000/track', data)
+
+  // axios.post('https://frozen-mesa-40722.herokuapp.com/track', data)
           .then((res) => { 
               
               console.log(res.data)
