@@ -212,7 +212,7 @@ Copter  </strong>
    <strong style="color:#cbcdd0;  font-size: 14px; margin-top: -0px;  float:right;   margin-bottom: 0px; font-weight:400">
  {{sheet.owner.replace(/\w+[.!?]?$/, '')}}  </strong> 
 
- <strong style="color:#a5cae4;  font-size: 14px; margin-top: -0px;  float:right;  margin-bottom: 0px; font-weight:400">{{ displayTimestamp(sheet.createdAt) }}  </strong>  
+ <!-- <strong style="color:#a5cae4;  font-size: 14px; margin-top: -0px;  float:right;  margin-bottom: 0px; font-weight:400">{{ displayTimestamp(sheet.createdAt) }}  </strong>   -->
 </b-col>
     </b-row>
 
