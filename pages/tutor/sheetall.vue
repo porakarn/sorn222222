@@ -37,7 +37,7 @@
 
  </div>
     
-  <div v-if="!canseesheet">
+  <!-- <div v-if="!canseesheet">
       <br>
        <p style=" color:#86a5ca ; text-align: center;
 " >
@@ -176,11 +176,11 @@ Copter  </strong>
     </b-row>
 
     </div>
-  </div>
-    <b-row v-else >
-            <p style=" padding:17px; color:#86a5ca ; text-align: center;
-" >ทีมงานกำลังตรวจสอบชีทสอนของคุณ ใช้เวลา 1-2 วัน </p>
-        <!-- <b-col style="padding-right: 0px;
+  </div> -->
+    <b-row  >
+            <!-- <p style=" padding:17px; color:#86a5ca ; text-align: center;
+" >ทีมงานกำลังตรวจสอบชีทสอนของคุณ ใช้เวลา 1-2 วัน </p> -->
+        <b-col style="padding-right: 0px;
     padding-left: 0px;"> 
    
      <b-card  @click="openWindow(sheet.docurl)" style="margin-bottom:0px;     border: 1px solid rgba(164, 164, 164, 0.125);
@@ -218,7 +218,7 @@ Copter  </strong>
 
     </b-card>
 
-   </b-col> -->
+   </b-col>
     </b-row>
 
      
