@@ -24,7 +24,7 @@
     background-color: rgb(245, 245, 245);
     border: 0px;
     color: #606a66;
-    border-radius: 20px;
+    border-radius: 10px;
     font-weight: 500;
     padding-top: 8px;
     margin-top: 6px;

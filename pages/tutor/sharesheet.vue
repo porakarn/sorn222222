@@ -197,7 +197,7 @@ mounted() {
 
                          // axios.get('http://localhost:8000/job/all')
 
-       if (this.docurl.includes("docs.google") )  {
+   
             this.$nuxt.$loading.start()
              this.message = ''
   this.loading = true
@@ -218,9 +218,7 @@ mounted() {
           })
           .catch(error => console.log(error))
 
-    }  else{
-          this.message = 'คุณกรอก Googledoc url ไม่ถูกต้อง'
-    }
+   
           var data2 = {
               canseesheet : true,
               _id: this.$store.state.user._id 
