@@ -102,8 +102,8 @@
         </b-col>
 
      </b-row>
-     <b-row style="    margin-top: 7px;">
-  <b-col cols="8" style="    padding-left: 9px;
+     <b-row style=" margin-bottom:-23px;   margin-top: 4px;">
+  <b-col cols="9" style="    padding-left: 9px;
     padding-right: 0px;">
  <!-- <a v-show="tutor.tag.length >0" style="    color: rgb(255, 255, 255);
     text-decoration: none;
@@ -127,8 +127,10 @@
     font-size: 15px;
     border-radius: 11px;"  href="#" 
            class="card-link">{{tag.toString()}}</a> -->
-
-               <a  v-show="tutor.location" style=" color: #9dd8bf;
+<div style="    background-color: #f9fbfa;
+    border-radius: 13px;
+" class=" scrolling-wrapper">
+               <a   style=" color: #9dd8bf;
     text-decoration: none;
    
     padding: 3px 8px;
@@ -136,8 +138,9 @@
     margin-top: 7px;
     font-size: 16px;
     border-radius: 11px;"  href="#" 
-           class="card-link"> {{tutor.location}}</a>
-
+           class="card-link"><i class="fa fa-map-marker" aria-hidden="true"></i>
+{{tutor.location}}</a>
+</div>
               <!-- <a v-for="tag in tutor.tag" v-show="tutor.tag.length >0" style="    color: rgb(255, 255, 255);
     text-decoration: none;
     background-color: rgb(130, 217, 217);
@@ -152,7 +155,7 @@
            class="card-link">{{tag.toString()}}</a> -->
               <br>  
 </b-col>
-<b-col cols="4" style="  padding-left: 20px; ">
+<b-col cols="3" style="  padding-left: 20px; ">
 
 
    <!-- <strong style="color:#cbcdd0;  font-size: 14px; margin-top: -0px;  float:right;   margin-bottom: 0px; font-weight:400">
@@ -396,6 +399,17 @@ border-top: 0px;
     border-left: 0px;
     border-radius: 0;
 }
+
+.scrolling-wrapper {
+   overflow-x: scroll !important;
+  overflow-y: hidden !important;
+  white-space: nowrap !important;
+ &::-webkit-scrollbar {
+    display: none!important;
+  }
+ 
+}
+
 
 .formpor{
 border-top: 0px;
