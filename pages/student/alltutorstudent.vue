@@ -378,7 +378,7 @@ nextPage2(){
      
 }
 ,
-    layout: 'student'
+    layout: 'student2'
 
 
 

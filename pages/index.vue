@@ -2,7 +2,7 @@
     <b-container fluid>
         <br>
         <div style="text-align: center;">
-           <nuxt-link to="student/alltutorstudent">   <b-button size="lg" style="  background-color:#5ab592; border: 0px; padding-left: 66px;color: rgb(255, 255, 255);
+           <nuxt-link to="student/testlogin">   <b-button size="lg" style="  background-color:#5ab592; border: 0px; padding-left: 66px;color: rgb(255, 255, 255);
     padding-right: 66px;">สมัครนักเรียน</b-button>  </nuxt-link>
    
 <br><br>

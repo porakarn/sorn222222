@@ -1,22 +1,16 @@
 <template>
   <div>
     <div>
-     <b-navbar  style="  box-shadow: -1px 2px 6px 0px #9c9c9c44;  padding-bottom: 12px;
+   <b-navbar  style="    padding-bottom: 12px;
     padding-top: 12px;  background-color:#cdf4d7!important; "toggleable variant="light">
         <b-navbar-toggle style="border-color: rgba(0, 0, 0, 0);    padding-left: 0px;
     padding-right: 0px;" target="nav_text_collapse"></b-navbar-toggle>
         <!-- <b-navbar-brand>BootstrapVue</b-navbar-brand> -->
-         <!-- <b-navbar-brand style="    color: rgb(51, 193, 193);
-    font-size: 28px;
-    font-weight: 500;margin-left: 55px;" href="#">Sorns</b-navbar-brand> -->
-     <!-- color: #a5efe3; -->
-    <!-- background-color: #effdf3; -->
-
-   <b-button   style="   font-size: 21px;
-           color: #b7e8d9;
+     <b-button  class="responsive2" style="  font-size: 21px;
+         color: #b7e8d9;
     background-color: #eefdf8;
-     
     font-weight: 500;
+ 
     border-color: #6c757d00;
     border-radius: 18px;
     padding-top: 0px;
@@ -25,28 +19,37 @@
     padding-right: 8px;
     font-family: kanit;
     border-top-width: 0px;
-    border-bottom-width: 0px
+        border-bottom-width: 0px
 "> sorns</b-button>
+        
+         
         <b-collapse is-nav id="nav_text_collapse">
             <b-navbar-nav class="ml-auto">
-                 <!-- <b-nav-item href="#">ค้นหางาน</b-nav-item>
-                <b-nav-item href="#">สร้างงานใหม่</b-nav-item>
-                <b-nav-item href="#">งานของคุณ</b-nav-item>
-                <b-nav-item href="#">โปรไฟล์ของคุณ</b-nav-item> -->
-            <b-nav-item  style=" color:#345d46;   padding-right: 65px;">   <nuxt-link class="nav-item" style="color:#345d46; " to="/student/alltutorstudent">  <i class="fa fa-search " aria-hidden="true"></i>  Search Tutor </nuxt-link></b-nav-item>
-             <b-nav-item  style="    padding-right: 65px;">  <nuxt-link class="nav-item" style="color:#345d46; " to="/student/createjob">  <i class="fa fa-pencil" aria-hidden="true"></i> Create Post  </nuxt-link></b-nav-item>
-             <b-nav-item  style="    padding-right: 65px;"><nuxt-link class="nav-item" style="color:#345d46; " to="/student/yourjob"> <i class="fa fa-book" aria-hidden="true"></i> Message </nuxt-link></b-nav-item>
-             <b-nav-item style="    padding-right: 65px;"><nuxt-link class="nav-item" style="color:#345d46; " to="/student/profile"><i class="fa fa-user-circle" aria-hidden="true"></i> Profile </nuxt-link></b-nav-item>
-              <b-nav-item  @click="logout" style="    padding-right: 100px;"><nuxt-link  style="color:#345d46; " to="/choose"><i class="fa fa-sign-out" aria-hidden="true"></i> Logout </nuxt-link></b-nav-item>
+               <b-nav-item  style=" color:#345d46;   padding-right: 65px;">   <nuxt-link class="nav-item" style="color:#345d46; font-weight: 400; font-size:16px " to="/user/seeall">  <i class="fa fa-search " aria-hidden="true"></i>  Search  </nuxt-link></b-nav-item>
+             <b-nav-item  style="    padding-right: 65px;">  <nuxt-link class="nav-item" style="color:#345d46;  font-weight: 400; font-size:16px" to="/user/create">  <i class="fa fa-pencil" aria-hidden="true"></i> Add New  </nuxt-link></b-nav-item>
+             <b-nav-item  style="    padding-right: 65px;"><nuxt-link class="nav-item" style="color:#345d46; font-weight: 400; font-size:16px font-weight: 400; font-size:16px " to="/user/alltutor"> <i class="fa fa-book" aria-hidden="true"></i> All Tutor </nuxt-link></b-nav-item>
+             <b-nav-item style="    padding-right: 65px;"><nuxt-link class="nav-item" style="color:#345d46; font-weight: 400; font-size:16px " to="/tutor/profile"><i class="fa fa-user-circle" aria-hidden="true"></i> Profile </nuxt-link></b-nav-item>
+              <b-nav-item  @click="logout" style="    padding-right: 100px;"><nuxt-link  style="color:#345d46;  font-weight: 400; font-size:16px" to="/tutor/createprofile"><i class="fa fa-sign-out" aria-hidden="true"></i> Logout </nuxt-link></b-nav-item>
 
-                
-                
-                
-
+    
 
             </b-navbar-nav>
         </b-collapse>
     </b-navbar>
+
+
+
+
+<b-nav fill tabs  style="margin-top:-7px;    background-color: #cdf4d7; box-shadow: 0px 2px 3px -1px rgba(126, 126, 126, 0.2), 0px 4px 5px 0px rgba(0, 0, 0, 0), 0px 1px 10px 0px #00000003;">
+   <b-nav-item  class="responsive"  style="
+    color: #ffffff; padding-right: 12px;
+    padding-left: 12px;border-bottom: 4px solid;
+    border-bottom-color: #ffffff;
+">  <nuxt-link to="/student/alltutorstudent">ติวเตอร์</nuxt-link> </b-nav-item> 
+ 
+ <b-nav-item class="responsive" > <nuxt-link to="/quiz/allquiz">แบบฝึกหัด </nuxt-link></b-nav-item>
+
+</b-nav>
 </div>
 
     <nuxt/>
@@ -95,7 +98,7 @@
 
 </nuxt-link>
 
-
+ิ<br><br><br>
 
 </b-col>
 
@@ -178,7 +181,14 @@ html
   background-color: #35495e;
 }
 
+a{
 
+    color: #4159539c;
+
+    font-weight: 600;
+    font-size: 18px;
+    font-family:"Sukhumvit Set",sans-serif; 
+}
 .tds{
   text-align: center;
   margin: auto

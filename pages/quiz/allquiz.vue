@@ -19,7 +19,7 @@
 <br>
   <p style="text-align:center;color:grey;">เตรียมพบกับแบบฝึกหัดออนไลน์อีกมากมายเร็วๆนี้</p>
  <div style="text-align:center;">
-  <a href="https://line.me/R/ti/p/%40dxc2481h"> <b-button style="    color: #477e56;
+  <a href="https://line.me/ti/g2/XCHDP8K2M9"> <b-button style="    color: #477e56;
     background-color: #cafbd7;
     border-color: #f0f0f0;
 ">เข้าร่วมกลุ่ม Line</b-button></a>
@@ -64,7 +64,7 @@ gotocourse(x){
 },
 
 
-         layout: 'student'
+         layout: 'student2.1'
   }
 
   
