@@ -1,25 +1,22 @@
 <template>
 <b-container fluid>
-  <b-card v-for="course in courses" :title="course.name"
+    <b-row>
+         <b-col cols="12"  sm="6" offset-sm="3" >
+  <b-card @click="gotocourse(course._id)" style="box-shadow: -1px 1px 6px 0px #f3f3f3; border-radius:4px;
+" v-for="course in courses" :title="course.name"
           :img-src="course.picture"
           img-alt="Image"
           img-top
           tag="article"
-          style="max-width: 20rem;"
           class="mb-2">
     <p class="card-text">
-<div>{{course.subject}}</div> <strong v-if="course._questions">จำนวนข้อ : {{course._questions.length}}</strong>
-        {{course._id}}
+ <strong v-if="course._questions">({{course._questions.length}}) ข้อ</strong>
           </div>
     </p>
-     <a href="#"
-           class="card-link">Card link</a>
-        <b-link href="#"
-                class="card-link">Another link</b-link>
-            <b-link href="#"
-                class="card-link">เพิ่ม Question</b-link>
+     
   </b-card>
-
+</b-col>
+    </b-row>
 </b-container>    
 </template>
 
@@ -45,6 +42,17 @@ mounted() {
     )
 },
 
+methods: {
+
+gotocourse(x){
+      
+       this.$router.push(`/quiz/doquiz/${x}`)
+   
+
+}
+
+},
+
 
          layout: 'auth'
   }
@@ -57,5 +65,12 @@ mounted() {
 .card-img-top {
     width: auto;
     max-height: 180px;
+}
+.mb-2{
+    max-width: 100%;
+
+
+}
+.card{
 }
 </style>
