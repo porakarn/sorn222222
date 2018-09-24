@@ -1,7 +1,9 @@
 <template>
 
 
-  <b-container fluid>
+  <b-container fluid style="padding:0px;">
+        <b-container fluid  >
+
   <br><br>
      
   <!-- index is used to check with current question index -->
@@ -25,10 +27,10 @@
         <label style="width:100%" class="container1">
             <div class="pora" style="  padding: 7px; margin-top:-44px; 
     padding-right:15px; 
-    padding-top:15px;
+    padding-top:17px;
     border-radius: 0px;
     margin: 0px;
-    padding-bottom: 15px; border-bottom: 2px solid #f1efef;">
+    padding-bottom: 17px; border-bottom: 2px solid #f1efef;">
           <!-- <input   type="checkbox"  :key="key"  :name="index"  :value="answer"  :v-model="answers[index2]"   > {{answer}} -->
         <input  type="radio" 
                    v-bind:value="answer" 
@@ -87,6 +89,62 @@
 <br>
 <br>
 <br>
+        </b-container>
+   <b-container fluid class="bv-example-row responsive "   style="box-shadow: rgba(0, 0, 0, 0.2) 0px 3px 8px 0px, rgba(0, 0, 0, 0) 0px 4px 5px 0px, rgba(0, 0, 0, 0.01) 0px 1px 10px 0px; position: fixed;     width: 100%;
+
+  bottom: 0px; 
+  background-color: white;
+  height: 58px;">
+
+<b-row style="    margin-top: 13px;">    
+        
+<b-col cols="6" style="text-align: center; padding-left: 0px;
+    padding-right: 0px;" >
+
+
+  <b-button style="     padding-left: 68px;
+    padding-right: 71px;
+    background-color: white;
+    border: 0px;
+    color: grey;
+    padding-top: 12px;
+    padding-bottom: 12px;"  @click="prev">Prev</b-button>
+
+
+
+
+
+
+
+</b-col> 
+
+
+
+<b-col cols="6" style="text-align: center;padding-left: 0px;
+    padding-right: 0px;"  >    
+ 
+  <b-button style=" 
+
+    padding-left: 68px;
+    padding-right: 71px;
+    background-color: rgb(247, 247, 247);
+    border: 0px;
+    color: grey;
+    padding-top: 12px;
+    padding-bottom: 12px;"  @click="next">Next</b-button>
+
+
+</nuxt-link>
+
+
+
+</b-col>
+
+</b-row>
+  </b-container>
+
+
+
   </b-container>
  
 
@@ -225,7 +283,7 @@ MathJax.Hub.Queue(["Typeset",MathJax.Hub])
   
 
 
-    }, layout: 'student'
+    }, layout: 'quiz'
 
   }
 </script>
