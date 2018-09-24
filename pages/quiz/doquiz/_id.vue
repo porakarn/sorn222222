@@ -46,6 +46,26 @@
     <!-- <p>เฉลยละเอียด</p>
 <p v-if="quiz.answerdetail">{{quiz.answerdetail}}</p> -->
 
+ <div style="text-align: center; margin-bottom: -33px;">
+    <button style="; background-color:white; color:grey; font-size: 18px;  border: 1px solid  #dae0dd; padding: 3px; margin-top: 20px; padding-left:8px; padding-right:8px;  border-radius: 6px;" @click="nowcansee()">
+          ดูคำตอบ
+
+      </button>
+      </div>
+<div v-if="quiz.question.length > 300">
+   <div  v-if="questionindex < quizes.length">
+      <button style="background-color:white; color:grey ;font-size: 18px; float:left; border: 1px solid #dae0dd; padding: 3px; border-radius: 6px;" v-if="questionindex > 0" @click="prev">
+        Prev
+      </button>
+      <button style="background-color:white; color:grey; font-size: 18px; float:right; border: 1px solid  #dae0dd; padding: 3px;  border-radius: 6px;" @click="next">
+        Next
+      </button>
+    </div>
+    </div>
+    <br><br>
+    <!-- {{answers[index]}} -->
+   <p v-show="cansee" > {{quiz.correct_answer.toString().split(',').join(' ')}}</p> 
+   <p v-show="cansee">{{quiz.answerdetail}}</p> 
   </div>
 
 
@@ -60,21 +80,7 @@
 
   </div>
   <br> -->
-  <div style="text-align: center; margin-bottom: -33px;">
-    <button style="; background-color:white; color:grey; font-size: 18px;  border: 1px solid  #dae0dd; padding: 3px; margin-top: 20px; padding-left:8px; padding-right:8px;  border-radius: 6px;" @click="next">
-          ดูคำตอบ
-
-      </button>
-      </div>
-
-   <div  v-if="questionindex < quizes.length">
-      <button style="background-color:white; color:grey ;font-size: 18px; float:left; border: 1px solid #dae0dd; padding: 3px; border-radius: 6px;" v-if="questionindex > 0" @click="prev">
-        Prev
-      </button>
-      <button style="background-color:white; color:grey; font-size: 18px; float:right; border: 1px solid  #dae0dd; padding: 3px;  border-radius: 6px;" @click="next">
-        Next
-      </button>
-    </div>
+ 
 
   <!-- <button v-if="questionindex > 0" @click="prev">
         prev
@@ -96,7 +102,7 @@
   background-color: white;
   height: 58px;">
 
-<b-row style="    margin-top: 13px;">    
+<b-row style="    margin-top: 0px;">    
         
 <b-col cols="6" style="text-align: center; padding-left: 0px;
     padding-right: 0px;" >
@@ -104,11 +110,11 @@
 
   <b-button style="     padding-left: 68px;
     padding-right: 71px;
-    background-color: white;
+    background-color:white;
     border: 0px;
     color: grey;
-    padding-top: 12px;
-    padding-bottom: 12px;"  @click="prev">Prev</b-button>
+  padding-top: 18px;
+    padding-bottom: 16px;"  @click="prev">Prev</b-button>
 
 
 
@@ -130,8 +136,8 @@
     background-color: rgb(247, 247, 247);
     border: 0px;
     color: grey;
-    padding-top: 12px;
-    padding-bottom: 12px;"  @click="next">Next</b-button>
+   padding-top: 18px;
+    padding-bottom: 16px;"  @click="next">Next</b-button>
 
 
 </nuxt-link>
@@ -167,6 +173,7 @@ import axios from 'axios';
   export default {
     data () {
       return {
+        cansee: false,
         quizes: {},
         answers: [],
         qui:[],
@@ -251,19 +258,26 @@ axios.post('https://chatpor.herokuapp.com/quiz/populate', data).then((res) => {
     }
     },
     methods: {
+
+  nowcansee(){
+   this.cansee = !this.cansee
+
+  },      
  nextstuff(){
 MathJax.Hub.Queue(["Typeset",MathJax.Hub])
     },
      next() {
+              this.cansee = false
+
      this.questionindex++;
       // console.log(this.questionindex);
       console.log(this.score);
-     
    
     },
     // Go to previous question
     prev() {
       this.questionindex--;
+      this.cansee = false
     },
     // Return "true" count in userResponses
     //  score() {
@@ -300,6 +314,12 @@ MathJax.Hub.Queue(["Typeset",MathJax.Hub])
     font-size: 2em;
     padding: 20px;
   }
+
+.btn-secondary:focus, .btn-secondary.focus {
+box-shadow: 0 0 0 0.2rem rgba(240, 240, 243, 0.5);
+
+}
+
 
 .admin2{
   color: red;
