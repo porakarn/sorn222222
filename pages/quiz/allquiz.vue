@@ -1,8 +1,9 @@
 <template>
 <b-container fluid>
+    <br>
     <b-row>
          <b-col cols="12"  sm="6" offset-sm="3" >
-  <b-card @click="gotocourse(course._id)" style="box-shadow: -1px 1px 6px 0px #f3f3f3; border-radius:4px;
+  <b-card @click="gotocourse(course._id)" style="box-shadow: -1px 1px 8px 0px #f3f3f3; border-radius:12px;
 " v-for="course in courses" :title="course.name"
           :img-src="course.picture"
           img-alt="Image"
@@ -15,6 +16,15 @@
     </p>
      
   </b-card>
+<br>
+  <p style="text-align:center;color:grey;">เตรียมพบกับแบบฝึกหัดออนไลน์อีกมากมายเร็วๆนี้</p>
+ <div style="text-align:center;">
+  <a href="https://line.me/R/ti/p/%40dxc2481h"> <b-button style="    color: #477e56;
+    background-color: #cafbd7;
+    border-color: #f0f0f0;
+">เข้าร่วมกลุ่ม Line</b-button></a>
+ </div>
+    <br><br><br>
 </b-col>
     </b-row>
 </b-container>    
@@ -54,7 +64,7 @@ gotocourse(x){
 },
 
 
-         layout: 'auth'
+         layout: 'student'
   }
 
   
