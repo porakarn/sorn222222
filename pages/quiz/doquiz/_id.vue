@@ -66,6 +66,8 @@
     <!-- {{answers[index]}} -->
    <p v-show="cansee" > {{quiz.correct_answer.toString().split(',').join(' ')}}</p> 
    <p v-show="cansee">{{quiz.answerdetail}}</p> 
+      <p v-show="cansee">เฉลยละเอียดเร็วๆนี้</p> 
+
   </div>
 
 

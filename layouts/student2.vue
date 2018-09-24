@@ -92,9 +92,7 @@
 
 <b-col cols="3" style="text-align: center;"  >    
  <nuxt-link  to="/student/profile">
-<div>
-  <i style=" font-size: 28px; color: #7f8082;"  class="fa fa-user-circle mx-auto nav-item" aria-hidden="true"></i>
-</div>
+<div><i style=" font-size: 28px; color: #7f8082;"  class="fa fa-user-circle mx-auto nav-item" aria-hidden="true"></i></div>
 
 </nuxt-link>
 
