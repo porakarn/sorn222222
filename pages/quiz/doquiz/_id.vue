@@ -2,7 +2,7 @@
 
 
   <b-container fluid>
-  
+  <br><br>
      
   <!-- index is used to check with current question index -->
   
@@ -25,10 +25,10 @@
         <label style="width:100%" class="container1">
             <div class="pora" style="  padding: 7px; margin-top:-44px; 
     padding-right:15px; 
-    padding-top:22px;
+    padding-top:15px;
     border-radius: 0px;
     margin: 0px;
-    padding-bottom: 22px; border-bottom: 2px solid #f1efef;">
+    padding-bottom: 15px; border-bottom: 2px solid #f1efef;">
           <!-- <input   type="checkbox"  :key="key"  :name="index"  :value="answer"  :v-model="answers[index2]"   > {{answer}} -->
         <input  type="radio" 
                    v-bind:value="answer" 
@@ -59,17 +59,17 @@
   </div>
   <br> -->
   <div style="text-align: center; margin-bottom: -33px;">
-    <button style="; color:grey; font-size: 18px;  border: 1px solid  #dae0dd; padding: 3px; margin-top: 20px; padding-left:8px; padding-right:8px;  border-radius: 6px;" @click="next">
+    <button style="; background-color:white; color:grey; font-size: 18px;  border: 1px solid  #dae0dd; padding: 3px; margin-top: 20px; padding-left:8px; padding-right:8px;  border-radius: 6px;" @click="next">
           ดูคำตอบ
 
       </button>
       </div>
 
    <div  v-if="questionindex < quizes.length">
-      <button style=" color:grey ;font-size: 18px; float:left; border: 1px solid #dae0dd; padding: 3px; border-radius: 6px;" v-if="questionindex > 0" @click="prev">
+      <button style="background-color:white; color:grey ;font-size: 18px; float:left; border: 1px solid #dae0dd; padding: 3px; border-radius: 6px;" v-if="questionindex > 0" @click="prev">
         Prev
       </button>
-      <button style=" color:grey; font-size: 18px; float:right; border: 1px solid  #dae0dd; padding: 3px;  border-radius: 6px;" @click="next">
+      <button style="background-color:white; color:grey; font-size: 18px; float:right; border: 1px solid  #dae0dd; padding: 3px;  border-radius: 6px;" @click="next">
         Next
       </button>
     </div>
@@ -82,7 +82,11 @@
 
 <br>
 <br>
-
+<br>
+<br>
+<br>
+<br>
+<br>
   </b-container>
  
 
@@ -221,7 +225,8 @@ MathJax.Hub.Queue(["Typeset",MathJax.Hub])
   
 
 
-    }, layout: 'auth'
+    }, layout: 'student'
+
   }
 </script>
 
@@ -293,6 +298,7 @@ input{
     margin-top: 3px;
 }
 .container1 {
+        margin-bottom: 0px;
     position: relative;
     /* padding-left: 35px;
     margin-bottom: 12px; */
