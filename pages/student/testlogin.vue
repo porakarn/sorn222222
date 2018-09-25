@@ -86,7 +86,9 @@ const response6 = {
    this.$store.dispatch('setToken', res.data.token)
    this.$store.dispatch('setStudent', res.data.user)
         console.log('res444')
-this.$router.go(-2)
+// this.$router.go(-2)
+     this.$router.push('/student/alltutorstudent')
+
 
         console.log('res444')
         // this.$router.push('/user/seeall')
