@@ -5,7 +5,8 @@
         <b-container fluid  >
 
   <br><br>
-     
+     <b-row>
+<b-col  md="6" offset-md="3">
   <!-- index is used to check with current question index -->
   
   <!-- <preview-quiz v-for="(quiz, index, key) in filterQuizes" :quiz="quiz" :index="index" v-model="answers[index]" :key="key"  v-show="index === questionindex"></preview-quiz> -->
@@ -88,7 +89,8 @@
         prev
       </button> -->
 </div>
-
+</b-col>
+     </b-row>
 
 <br>
 <br>
@@ -149,6 +151,7 @@
 </b-col>
 
 </b-row>
+
   </b-container>
 
 
