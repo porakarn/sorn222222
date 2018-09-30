@@ -6,7 +6,7 @@
 
   <br><br>
      <b-row>
-<b-col  md="6" offset-md="3">
+<b-col  md="8" offset-md="2">
   <!-- index is used to check with current question index -->
   
   <!-- <preview-quiz v-for="(quiz, index, key) in filterQuizes" :quiz="quiz" :index="index" v-model="answers[index]" :key="key"  v-show="index === questionindex"></preview-quiz> -->
@@ -332,6 +332,7 @@ box-shadow: 0 0 0 0.2rem rgba(240, 240, 243, 0.5);
 
 .wrap{
    white-space: pre !important;
+   font-size:18px !important;
 }
 
 
