@@ -83,6 +83,13 @@
       ]
     }
   },
+   mounted() {
+    axios.get('https://frozen-mesa-40722.herokuapp.com/tutor/all')
+    .then((res) => { console.log(res.data)
+      
+   })
+   ,
+
 
     methods: {
  onSlideStart (slide) {
