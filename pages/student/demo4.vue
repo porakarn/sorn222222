@@ -8,70 +8,96 @@
         <!-- <p style=" color:#86a5ca ; text-align: center;
 " >
  ติวเตอร์ทั้งหมด ({{ tutors.length }})</p> -->
-         <a class="mybtn" style="background-color:#EEC0BB;" >All</a>    
-                 <a class="mybtn" >Eng</a>    
-        <a class="mybtn" >คณิต</a>    
-        <a class="mybtn" >วิทย์</a>    
-               <a class="mybtn" >จีน</a>    
-        <a class="mybtn" >ญี่ปุ่น</a>    
+<div style="text-align:center;">
+     <b-button v-b-modal.modal1  class="responsive" style="font-size: 17px;
+    color: #5f5f5f; 
+    background-color: #f5f5f5;
+    border-color: rgba(108, 117, 125, 0);
+    border-radius: 18px;
+    padding-left: 17px;
+    padding-right: 20px;
+"><i style=" font-size: 20px; color: #5f5f5f;   " class="fa fa-search nav-item " aria-hidden="true"></i> ค้นหาติวเตอร์ตามวิชา</b-button>
+<div v-show="selected.length >0">
+ <br> <strong  v-for="selecting in selected" style="    background-color: #c6f1d0;
+    padding: 5px;
+    border-radius: 9px;
+    color: #086542;
+    margin-left: 5px;
+    padding-right: 10px;"> {{ selecting.toString() }}</strong>
+</div>
 
+  </div>
     <br>
 
  <b-col style="    padding-left: 0px;
     padding-right: 0px;" md="6" offset-md="3">
 
 
+ <b-modal no-fade hide-header  hide-footer ref="myModalRef4"  id="modal1" >
+
+<div>
+  <p style="font-size:20px;"> ค้นหาติวเตอร์ตามวิชา <i style=" font-size: 20px; color: #667a6b;" class="fa fa-search nav-item " aria-hidden="true"></i></p>
+
+    <b-form-select style="  padding-top: 10px;
+    padding-bottom: 10px;" multiple :select-size="6"    v-model="selected" :options="options" class="mb-3">
+    </b-form-select>
+  <strong  v-for="selecting in selected" style="    background-color: #c6f1d0;
+    padding: 5px;
+    border-radius: 9px;
+    color: #086542;
+    margin-left: 5px;
+    padding-right: 10px;"> {{ selecting.toString() }}</strong></div>
+  </div>
 
 
-     <b-card @click="seeeach(tutor._id)"  style="margin-bottom:0px;   border: 0px solid;     border-bottom-width: 1px;
-    border-bottom: 1px solid whitesmoke !important;        
+
+
+
+
+
+
    
+<br>
+  <!-- <button @click="sendout">send</button> -->
+    <b-button  @click="sendout" style="    width: 100%;  background-color: #33C1C1; border: 0px; padding-left: 66px;
+    padding-right: 66px;">ทำการค้นหา</b-button>  
+      <div style="color: grey" class="loading-page" v-if="loading">
+    Loading...
+  </div>
+  </div>
+  </b-modal>
+
+
+     <b-card @click="seeeach(tutor._id)"  style="margin-bottom:0px;     border: 1px solid rgba(164, 164, 164, 0.125);
+    border-radius: 1px;     box-shadow: rgba(148, 142, 142, 0) 0px 1px 3px -1px, rgba(255, 251, 251, 0) 0px 4px 5px 0px, rgba(0, 0, 0, 0.01) 0px 1px 10px 0px;
 
 "  v-for="tutor in tutors" :key="tutor._id"  v-if="tutor.subject" >
          
         
        <b-row style="margin-top: 10px;">
 
-        <b-col style="padding-left: 18px;" cols="2">
-                     <img :src="tutor.picture" style="width: 48px;
-  height: 48px;margin-top: 3px;
-  border-radius: 14px;
-  box-shadow: 0 1px 1px 0 rgba(205, 205, 205, 0.24);" width="100%"> 
+        <b-col cols="4">
+                     <img :src="tutor.picture" style="border-radius: 5px" width="100%"> 
 
         </b-col>
-         <b-col cols="10" style="margin-left: -1px;padding-left: 12px; padding-right: 2px;">
-<p style="
-  font-family: Roboto;
-  font-size: 16px;
-  font-weight: bold;
-  font-style: normal;
-  font-stretch: normal;
-  line-height: 1.31;
-  letter-spacing: normal;
-  text-align: left;
-  margin-bottom: 0px;
-  color: #2c2929;">{{tutor.name.substring(0,21)}}   <strong style=" background-color:#EEC0BB;
+         <b-col cols="8" style="margin-left:-5px;padding-left: 0px; padding-right: 2px;">
+<p style=" padding-left: 0px;margin-bottom: 0px; font-weight:600; font-size:17px; margin-top: -6px;">{{tutor.name.substring(0,21)}}   <strong style=" background-color: #ffc107;
     border-radius: 4px;
     color: white;
     font-weight: 500;
-    padding-right: 3px;
-    padding-left: 5px;
-    font-size: 15px;    float: right;
-    margin-right: 10px;
-        padding-top: 3px;
-        padding-bottom: 3px;
-    margin-top: 0px;"> 500 - 
+    padding-right: 5px;
+    padding-left: 4px;
+    font-size: 14px;    float: right;
+    margin-right: 4px;
+        padding-top: 2px;
+    margin-top: 4px;">{{ calculateScore(tutor.reviewscore)}} <i style="color:white;" class="fa fa-star" aria-hidden="true"></i>
  </strong></p>
 <p style="color:#545454; font-size:16px;margin-bottom: 0px;margin-bottom: 3px;
 " v-if="tutor.subject">
-    {{tutor.subject.substring(0,70)}}</p>
-<p style="color:#545454; font-size:14px   ;  margin-bottom: 0px;" v-if="tutor.profile">
-    {{tutor.profile.substring(0,15)}}...</p>   <strong style="float: right;
-    margin-top: -18px;
-    font-weight: 400;
-    font-size: 13px;
-    color: grey;
-    padding-right: 13px;">11.22</strong>
+    <i style=" font-size:15px;       color:#9dd8bf;" class="fa fa-graduation-cap" aria-hidden="true"></i> {{tutor.subject.substring(0,70)}}</p>
+<p style="color:#545454; font-size:16px   ;  margin-bottom: 0px;" v-if="tutor.profile">
+    {{tutor.profile.substring(0,65)}}...</p>
+
 
         </b-col>
 
@@ -101,7 +127,20 @@
     font-size: 15px;
     border-radius: 11px;"  href="#" 
            class="card-link">{{tag.toString()}}</a> -->
-
+<div style="    background-color: #f9fbfa;
+    border-radius: 13px;
+" class=" scrolling-wrapper">
+               <a   style=" color: #9dd8bf;
+    text-decoration: none;
+   
+    padding: 3px 8px;
+    margin-left: 6px;
+    margin-top: 7px;
+    font-size: 16px;
+    border-radius: 11px;"  href="#" 
+           class="card-link"><i class="fa fa-map-marker" aria-hidden="true"></i>
+{{tutor.location}}</a>
+</div>
               <!-- <a v-for="tag in tutor.tag" v-show="tutor.tag.length >0" style="    color: rgb(255, 255, 255);
     text-decoration: none;
     background-color: rgb(130, 217, 217);
@@ -116,7 +155,16 @@
            class="card-link">{{tag.toString()}}</a> -->
               <br>  
 </b-col>
+<b-col cols="3" style="  padding-left: 20px; ">
 
+
+   <!-- <strong style="color:#cbcdd0;  font-size: 14px; margin-top: -0px;  float:right;   margin-bottom: 0px; font-weight:400">
+ {{sheet.owner.replace(/\w+[.!?]?$/, '')}}  </strong>  -->
+<!-- color:#a5cae4; -->
+  <strong style=" color:#a5cae4;  font-size: 15px; margin-top: -0px; 
+  float:right;  margin-bottom: 0px; font-weight:400"><i class="fa fa-eye" aria-hidden="true"></i>
+ {{tutor.view }}  </strong>  
+</b-col>
 
      </b-row>
     
@@ -330,7 +378,7 @@ nextPage2(){
      
 }
 ,
-    layout: 'studentapp'
+    layout: 'student2'
 
 
 
@@ -403,23 +451,11 @@ border-top: 0px;
 a{
 /* color: #708f7e; */
 /* color: #ffffff; */
-    color: #4159539c;
+  
     font-weight: 600;
     font-size: 18px;
     font-family:"Sukhumvit Set",sans-serif; 
 }
 
-.mybtn{
-    border:1px solid #F3F3F3;
-    margin-left: 4px;
-    font-size: 19px; 
-    font-weight: 400;
-    padding: 5px;
-    padding-right: 14px;
-    padding-left: 14px; 
-    border-radius: 17px;
-    margin-bottom: 6px;
-    color:#BEBABA!important;
-}
 
 </style>
