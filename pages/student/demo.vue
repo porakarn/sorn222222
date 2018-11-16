@@ -8,7 +8,7 @@
         <!-- <p style=" color:#86a5ca ; text-align: center;
 " >
  ติวเตอร์ทั้งหมด ({{ tutors.length }})</p> -->
-         <a class="mybtn" style="background-color:#EEC0BB;" >All</a>    
+         <a class="mybtn" style="background-color:#EEC0BB; color:white;" >All</a>    
                  <a class="mybtn" >Eng</a>    
         <a class="mybtn" >คณิต</a>    
         <a class="mybtn" >วิทย์</a>    
@@ -16,6 +16,8 @@
         <a class="mybtn" >ญี่ปุ่น</a>    
 
     <br>
+    <br>
+
 
  <b-col style="    padding-left: 0px;
     padding-right: 0px;" md="6" offset-md="3">
@@ -39,7 +41,7 @@
   box-shadow: 0 1px 1px 0 rgba(205, 205, 205, 0.24);" width="100%"> 
 
         </b-col>
-         <b-col cols="10" style="margin-left: -1px;padding-left: 12px; padding-right: 2px;">
+         <b-col cols="10" style="margin-left: -1px;padding-left: 15px; padding-right: 2px;">
 <p style="
   font-family: Roboto;
   font-size: 16px;
@@ -51,7 +53,7 @@
   text-align: left;
   margin-bottom: 0px;
   color: #2c2929;">{{tutor.name.substring(0,21)}}   <strong style=" background-color:#EEC0BB;
-    border-radius: 4px;
+    border-radius: 6px;
     color: white;
     font-weight: 500;
     padding-right: 3px;
@@ -415,10 +417,10 @@ a{
     font-size: 19px; 
     font-weight: 400;
     padding: 5px;
-    padding-right: 14px;
-    padding-left: 14px; 
+    padding-right: 16px;
+    padding-left: 16px; 
     border-radius: 17px;
-    margin-bottom: 6px;
+    margin-bottom: 10px;
     color:#BEBABA!important;
 }
 

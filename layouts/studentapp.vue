@@ -12,21 +12,7 @@
      <!-- color: #a5efe3; -->
     <!-- background-color: #effdf3; -->
 
-   <b-button   style="   font-size: 21px;
-           color: #b7e8d9;
-    background-color: #eefdf8;
-     
-    font-weight: 500;
-    border-color: #6c757d00;
-    border-radius: 18px;
-    padding-top: 0px;
-    padding-bottom: 0px;
-    padding-left: 8px;
-    padding-right: 8px;
-    font-family: kanit;
-    border-top-width: 0px;
-    border-bottom-width: 0px
-"> sorns</b-button>
+
         <b-collapse is-nav id="nav_text_collapse">
             <b-navbar-nav class="ml-auto">
                  <!-- <b-nav-item href="#">ค้นหางาน</b-nav-item>
