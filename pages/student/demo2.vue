@@ -1,7 +1,9 @@
 <template>
 
 <b-container fluid style="padding:0px; background-color:#FAFAFA;">
-
+<div style="width: 100%;
+    height: 122px;
+    background-color: #efbab5;"></div>
 
 <b-container fluid style="padding:0px;" >
        <br>
@@ -15,7 +17,7 @@
  <b-col style="    padding-left: 0px;
     padding-right: 0px;" md="6" offset-md="3">
 
-<b-container >
+<b-container  style="margin-top :-26px;">
 
 
      <b-card @click="seeeach(tutor._id)" class="card1" >
@@ -68,12 +70,15 @@
    </b-col>
     </b-row>
     <br>
- <p style=" color:#86a5ca ; text-align: center;
-" >
- มีติวเตอร์อีกมากกว่า 200 คน</p>
+ 
      
-   <div  style="text-align :center">       <nuxt-link class="nav-item" style="color:#345d46; " to="/student/createjob">   <b-button style="background-color: #33C1C1; border: 0px; padding-left: 46px;
-    padding-right: 46px;">โพสหาติวเตอร์</b-button></nuxt-link> </div> 
+   <div  style="text-align :center">       <nuxt-link class="nav-item" style="color:#345d46; " to="/student/createjob">   <b-button 
+   style="background-color: #EFBAB5; border: 0px;     padding-left: 64px;
+    padding-right: 64px;
+    
+    padding-top: 11px;
+    padding-bottom: 11px;
+    border-radius: 22px;">ลงประกาศหาติวเตอร์</b-button></nuxt-link> </div> 
 
 <br>
    <b-modal no-fade hide-header  hide-footer  centered ref="myModalRef" hide-footer title="Using Component Methods">
@@ -239,7 +244,7 @@ nextPage2(){
      
 }
 ,
-    layout: 'student2'
+    layout: 'auth'
 
 
 
