@@ -18,7 +18,8 @@
 
 
 
-     <b-card @click="seeeach(tutor._id)"  style="margin-bottom:0px;       border: 0px solid;     
+     <b-card @click="seeeach(tutor._id)"  style="margin-bottom:0px;   border: 0px solid;     border-bottom-width: 1px;
+    border-bottom: 1px solid whitesmoke !important;        
    
 
 "  v-for="tutor in tutors" :key="tutor._id"  v-if="tutor.subject" >
@@ -44,7 +45,7 @@
   letter-spacing: normal;
   text-align: left;
   margin-bottom: 0px;
-  color: #2c2929;">{{tutor.name.substring(0,21)}}   <strong style=" background-color: #ffc107;
+  color: #2c2929;">{{tutor.name.substring(0,21)}}   <strong style=" background-color:#EEC0BB;
     border-radius: 4px;
     color: white;
     font-weight: 500;
