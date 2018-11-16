@@ -18,91 +18,52 @@
 <b-container >
 
 
-     <b-card @click="seeeach(tutor._id)"  style="margin-bottom:0px;   border: 0px solid;     border-bottom-width: 1px;
-    border-bottom: 1px solid whitesmoke !important;   margin-bottom:5px;    padding-top: 7px;
-    padding-bottom: 7px;
-    
-    border-radius: 5px;      
-   
-
-" >
+     <b-card @click="seeeach(tutor._id)" class="card1" >
          
-      kkkk  
-     
-    
+วิชาที่อยากเรียน      <i style="    float: right;
+    margin-top: 5px;
+    color: grey;
+    font-size: 19px;" class="fa fa-angle-right" aria-hidden="true"></i>
 
-
-    </b-row>
 
     </b-card>
-      <b-card @click="seeeach(tutor._id)"  style="margin-bottom:0px;   border: 0px solid;     border-bottom-width: 1px;
-    border-bottom: 1px solid whitesmoke !important;   margin-bottom:5px;    padding-top: 7px;
-    padding-bottom: 7px;
-    
-    border-radius: 5px;      
-   
-
-" >
+      <b-card @click="seeeach(tutor._id)" class="card1" >
          
-      kkkk  
-     
-    
-
-
-    </b-row>
-
+จุดประสงค์ในการเรียน     
+<i style="    float: right;
+    margin-top: 5px;
+    color: grey;
+    font-size: 19px;" class="fa fa-angle-right" aria-hidden="true"></i>
     </b-card>
-      <b-card @click="seeeach(tutor._id)"  style="margin-bottom:0px;   border: 0px solid;     border-bottom-width: 1px;
-    border-bottom: 1px solid whitesmoke !important;   margin-bottom:5px;    padding-top: 7px;
-    padding-bottom: 7px;
-    
-    border-radius: 5px;      
-   
-
-" >
-         
-      kkkk  
-     
-    
-
-
-    </b-row>
-
+      <b-card @click="seeeach(tutor._id)" class="card1" >
+ระดับชั้น    
+<i style="    float: right;
+    margin-top: 5px;
+    color: grey;
+    font-size: 19px;" class="fa fa-angle-right" aria-hidden="true"></i>
     </b-card>
- <b-card @click="seeeach(tutor._id)"  style="margin-bottom:0px;   border: 0px solid;     border-bottom-width: 1px;
-    border-bottom: 1px solid whitesmoke !important;   margin-bottom:5px;    padding-top: 7px;
-    padding-bottom: 7px;
-    
-    border-radius: 5px;      
-   
-
-" >
-         
-      kkkk  
-     
-    
-
-
-    </b-row>
-
+       <b-card @click="seeeach(tutor._id)" class="card1" >
+วัน เวลา ที่สะดวก
+<i style="    float: right;
+    margin-top: 5px;
+    color: grey;
+    font-size: 19px;" class="fa fa-angle-right" aria-hidden="true"></i>
     </b-card>
-     <b-card @click="seeeach(tutor._id)"  style="margin-bottom:0px;   border: 0px solid;     border-bottom-width: 1px;
-    border-bottom: 1px solid whitesmoke !important;   margin-bottom:5px;    padding-top: 7px;
-    padding-bottom: 7px;
-    
-    border-radius: 5px;      
-   
-
-" >
-         
-      kkkk  
-     
-    
-
-
-    </b-row>
-
+       <b-card @click="seeeach(tutor._id)" class="card1" >
+สถานที่เรียน  
+<i style="    float: right;
+    margin-top: 5px;
+    color: grey;
+    font-size: 19px;" class="fa fa-angle-right" aria-hidden="true"></i>
     </b-card>
+       <b-card @click="seeeach(tutor._id)" class="card1" >
+เพิ่มเติม (ถ้ามี)
+<i style="    float: right;
+    margin-top: 5px;
+    color: grey;
+    font-size: 19px;" class="fa fa-angle-right" aria-hidden="true"></i>
+    </b-card>
+    
      </b-container>
    </b-col>
     </b-row>
@@ -357,5 +318,17 @@ a{
     font-family:"Sukhumvit Set",sans-serif; 
 }
 
+.card1{
+    margin-bottom:0px;  
+     border: 0px solid;  
+        border-bottom-width: 1px;
+    border-bottom: 1px solid whitesmoke !important;  
+     margin-bottom:5px;  
+       padding-top: 9px;
+    padding-bottom: 9px;
+    
+    border-radius: 5px;      
+   
+}
 
 </style>
