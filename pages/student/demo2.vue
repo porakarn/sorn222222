@@ -348,7 +348,8 @@ a{
      margin-bottom:5px;  
        padding-top: 9px;
     padding-bottom: 9px;
-    
+    box-shadow: 0 0 6px 0px #f7f7f7;
+
     border-radius: 5px;      
    
 }
