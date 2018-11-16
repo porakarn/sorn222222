@@ -1,9 +1,16 @@
 <template>
 
-<b-container fluid style="padding:0px; background-color:#FAFAFA;">
+<b-container fluid style="padding:0px; background-color:#F6F6F6;">
 <div style="width: 100%;
     height: 122px;
     background-color: #efbab5;">
+     <i @click="goback" style="     padding-left: 12px;
+    padding-up: 7px;
+    font-size: 22px;
+    color: white;
+    padding-top: 7px;
+" class="fa fa-angle-left" aria-hidden="true"></i>  <strong style=" font-size: 21px;color:white; font-weight: 400">
+สร้างประกาศหาติวเตอร์</strong>
   <!-- <Strong style="color:white; font-weight:300px; font-size:18px;">  <i class="fa fa-arrow-left" aria-hidden="true"></i>
  สร้างประกาศหาติวเตอร์
 </Strong> -->
@@ -21,7 +28,8 @@
  <b-col style="    padding-left: 0px;
     padding-right: 0px;" md="6" offset-md="3">
 
-<b-container  style="margin-top :-26px;">
+<b-container  style="margin-top :-26px;    padding-left: 16px;
+    padding-right: 16px;">
 
 
     <b-card @click="seeeach()" class="card1" >
@@ -346,7 +354,7 @@ a{
     padding-bottom: 10px;
     box-shadow: 0 0 6px 0px #f7f7f7;
 
-    border-radius: 5px;      
+    border-radius: 6px;      
    
 }
 
