@@ -32,7 +32,7 @@
 <i style="    float: right;
     margin-top: 5px;
 color: #afafaf;
-    font-size: 19px;" class="fa fa-angle-right" aria-hidden="true"></i>
+    font-size: 20px;" class="fa fa-angle-right" aria-hidden="true"></i>
     </b-card>
       <b-card @click="seeeach(tutor._id)" class="card1" >
          <strong style="    color: rgb(109, 109, 109);
@@ -42,7 +42,7 @@ color: #afafaf;
 <i style="    float: right;
     margin-top: 5px;
 color: #afafaf;
-    font-size: 19px;" class="fa fa-angle-right" aria-hidden="true"></i>
+    font-size: 20px;" class="fa fa-angle-right" aria-hidden="true"></i>
     </b-card>
       <b-card @click="seeeach(tutor._id)" class="card1" >
            <strong style="    color: rgb(109, 109, 109);
@@ -51,7 +51,7 @@ color: #afafaf;
 ระดับชั้น    </strong>
 <i style="    float: right;
     margin-top: 5px;
-color: #afafaf;    font-size: 19px;" class="fa fa-angle-right" aria-hidden="true"></i>
+color: #afafaf;    font-size: 20px;" class="fa fa-angle-right" aria-hidden="true"></i>
     </b-card>
        <b-card @click="seeeach(tutor._id)" class="card1" >
            <strong style="    color: rgb(109, 109, 109);
@@ -60,7 +60,7 @@ color: #afafaf;    font-size: 19px;" class="fa fa-angle-right" aria-hidden="true
 วัน เวลา ที่สะดวก </strong>
 <i style="    float: right;
     margin-top: 5px;
-color: #afafaf;    font-size: 19px;" class="fa fa-angle-right" aria-hidden="true"></i>
+color: #afafaf;    font-size: 20px;" class="fa fa-angle-right" aria-hidden="true"></i>
     </b-card>
        <b-card @click="seeeach(tutor._id)" class="card1" >
            <strong style="    color: rgb(109, 109, 109);
@@ -70,7 +70,7 @@ color: #afafaf;    font-size: 19px;" class="fa fa-angle-right" aria-hidden="true
 <i style="    float: right;
     margin-top: 5px;
 color: #afafaf;
-    font-size: 19px;" class="fa fa-angle-right" aria-hidden="true"></i>
+    font-size: 20px;" class="fa fa-angle-right" aria-hidden="true"></i>
     </b-card>
        <b-card @click="seeeach(tutor._id)" class="card1" >
            <strong style="    color: rgb(109, 109, 109);
@@ -80,7 +80,7 @@ color: #afafaf;
 <i style="    float: right;
     margin-top: 5px;
 color: #afafaf;
-    font-size: 19px;" class="fa fa-angle-right" aria-hidden="true"></i>
+    font-size: 20px;" class="fa fa-angle-right" aria-hidden="true"></i>
     </b-card>
     
      </b-container>
@@ -346,8 +346,8 @@ a{
         border-bottom-width: 1px;
     border-bottom: 1px solid whitesmoke !important;  
      margin-bottom:5px;  
-       padding-top: 9px;
-    padding-bottom: 9px;
+       padding-top: 10px;
+    padding-bottom: 10px;
     box-shadow: 0 0 6px 0px #f7f7f7;
 
     border-radius: 5px;      
