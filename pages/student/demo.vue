@@ -26,14 +26,14 @@
         
        <b-row style="margin-top: 10px;">
 
-        <b-col cols="2">
+        <b-col style="padding-left: 18px;" cols="2">
                      <img :src="tutor.picture" style="width: 48px;
-  height: 48px;
+  height: 48px;margin-top: 3px;
   border-radius: 14px;
   box-shadow: 0 1px 1px 0 rgba(205, 205, 205, 0.24);" width="100%"> 
 
         </b-col>
-         <b-col cols="10" style="margin-left: -1px;padding-left: 6px; padding-right: 2px;">
+         <b-col cols="10" style="margin-left: -1px;padding-left: 12px; padding-right: 2px;">
 <p style="
   font-family: Roboto;
   font-size: 16px;
@@ -44,7 +44,6 @@
   letter-spacing: normal;
   text-align: left;
   margin-bottom: 0px;
-  padding-left:4px;
   color: #2c2929;">{{tutor.name.substring(0,21)}}   <strong style=" background-color: #ffc107;
     border-radius: 4px;
     color: white;
