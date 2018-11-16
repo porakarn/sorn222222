@@ -24,7 +24,7 @@
 <b-container  style="margin-top :-26px;">
 
 
-    <b-card @click="seeeach(tutor._id)" class="card1" >
+    <b-card @click="seeeach()" class="card1" >
          <strong style="    color: rgb(109, 109, 109);
     font-weight: 400;
     padding-left: 9px;">
@@ -34,7 +34,7 @@
 color: #afafaf;
     font-size: 20px;" class="fa fa-angle-right" aria-hidden="true"></i>
     </b-card>
-      <b-card @click="seeeach(tutor._id)" class="card1" >
+      <b-card @click="seeeach()" class="card1" >
          <strong style="    color: rgb(109, 109, 109);
     font-weight: 400;
     padding-left: 9px;">
@@ -44,7 +44,7 @@ color: #afafaf;
 color: #afafaf;
     font-size: 20px;" class="fa fa-angle-right" aria-hidden="true"></i>
     </b-card>
-      <b-card @click="seeeach(tutor._id)" class="card1" >
+      <b-card @click="seeeach()" class="card1" >
            <strong style="    color: rgb(109, 109, 109);
     font-weight: 400;
     padding-left: 9px;">
@@ -53,7 +53,7 @@ color: #afafaf;
     margin-top: 5px;
 color: #afafaf;    font-size: 20px;" class="fa fa-angle-right" aria-hidden="true"></i>
     </b-card>
-       <b-card @click="seeeach(tutor._id)" class="card1" >
+       <b-card @click="seeeach()" class="card1" >
            <strong style="    color: rgb(109, 109, 109);
     font-weight: 400;
     padding-left: 9px;">
@@ -62,7 +62,7 @@ color: #afafaf;    font-size: 20px;" class="fa fa-angle-right" aria-hidden="true
     margin-top: 5px;
 color: #afafaf;    font-size: 20px;" class="fa fa-angle-right" aria-hidden="true"></i>
     </b-card>
-       <b-card @click="seeeach(tutor._id)" class="card1" >
+       <b-card @click="seeeach()" class="card1" >
            <strong style="    color: rgb(109, 109, 109);
     font-weight: 400;
     padding-left: 9px;">
@@ -72,7 +72,7 @@ color: #afafaf;    font-size: 20px;" class="fa fa-angle-right" aria-hidden="true
 color: #afafaf;
     font-size: 20px;" class="fa fa-angle-right" aria-hidden="true"></i>
     </b-card>
-       <b-card @click="seeeach(tutor._id)" class="card1" >
+       <b-card @click="seeeach()" class="card1" >
            <strong style="    color: rgb(109, 109, 109);
     font-weight: 400;
     padding-left: 9px;">
@@ -231,12 +231,8 @@ let createPost = {
    seeeach(x){
  
 
-       if (this.$store.state.isUserLoggedIn) {
- this.$router.push(`/tutor/${x}`)
-       } else{
-                                    this.$refs.myModalRef.show() 
+     this.$router.push('/student/demo3')
 
-       }
        
    },
 
