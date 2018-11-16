@@ -3,7 +3,11 @@
 <b-container fluid style="padding:0px; background-color:#FAFAFA;">
 <div style="width: 100%;
     height: 122px;
-    background-color: #efbab5;"></div>
+    background-color: #efbab5;">
+  <!-- <Strong style="color:white; font-weight:300px; font-size:18px;">  <i class="fa fa-arrow-left" aria-hidden="true"></i>
+ สร้างประกาศหาติวเตอร์
+</Strong> -->
+    </div>
 
 <b-container fluid style="padding:0px;" >
        <br>
