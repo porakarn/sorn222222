@@ -24,49 +24,62 @@
 <b-container  style="margin-top :-26px;">
 
 
-     <b-card @click="seeeach(tutor._id)" class="card1" >
-         
-วิชาที่อยากเรียน      <i style="    float: right;
-    margin-top: 5px;
-    color: grey;
-    font-size: 19px;" class="fa fa-angle-right" aria-hidden="true"></i>
-
-
-    </b-card>
-      <b-card @click="seeeach(tutor._id)" class="card1" >
-         
-จุดประสงค์ในการเรียน     
+    <b-card @click="seeeach(tutor._id)" class="card1" >
+         <strong style="    color: rgb(109, 109, 109);
+    font-weight: 400;
+    padding-left: 9px;">
+วิชาที่อยากเรียน   </strong>  
 <i style="    float: right;
     margin-top: 5px;
-    color: grey;
+color: #afafaf;
     font-size: 19px;" class="fa fa-angle-right" aria-hidden="true"></i>
     </b-card>
       <b-card @click="seeeach(tutor._id)" class="card1" >
-ระดับชั้น    
+         <strong style="    color: rgb(109, 109, 109);
+    font-weight: 400;
+    padding-left: 9px;">
+จุดประสงค์ในการเรียน    </strong>  
 <i style="    float: right;
     margin-top: 5px;
-    color: grey;
+color: #afafaf;
+    font-size: 19px;" class="fa fa-angle-right" aria-hidden="true"></i>
+    </b-card>
+      <b-card @click="seeeach(tutor._id)" class="card1" >
+           <strong style="    color: rgb(109, 109, 109);
+    font-weight: 400;
+    padding-left: 9px;">
+ระดับชั้น    </strong>
+<i style="    float: right;
+    margin-top: 5px;
+color: #afafaf;    font-size: 19px;" class="fa fa-angle-right" aria-hidden="true"></i>
+    </b-card>
+       <b-card @click="seeeach(tutor._id)" class="card1" >
+           <strong style="    color: rgb(109, 109, 109);
+    font-weight: 400;
+    padding-left: 9px;">
+วัน เวลา ที่สะดวก </strong>
+<i style="    float: right;
+    margin-top: 5px;
+color: #afafaf;    font-size: 19px;" class="fa fa-angle-right" aria-hidden="true"></i>
+    </b-card>
+       <b-card @click="seeeach(tutor._id)" class="card1" >
+           <strong style="    color: rgb(109, 109, 109);
+    font-weight: 400;
+    padding-left: 9px;">
+สถานที่เรียน  </strong>
+<i style="    float: right;
+    margin-top: 5px;
+color: #afafaf;
     font-size: 19px;" class="fa fa-angle-right" aria-hidden="true"></i>
     </b-card>
        <b-card @click="seeeach(tutor._id)" class="card1" >
-วัน เวลา ที่สะดวก
+           <strong style="    color: rgb(109, 109, 109);
+    font-weight: 400;
+    padding-left: 9px;">
+เพิ่มเติม (ถ้ามี)</strong>
 <i style="    float: right;
     margin-top: 5px;
-    color: grey;
-    font-size: 19px;" class="fa fa-angle-right" aria-hidden="true"></i>
-    </b-card>
-       <b-card @click="seeeach(tutor._id)" class="card1" >
-สถานที่เรียน  
-<i style="    float: right;
-    margin-top: 5px;
-    color: grey;
-    font-size: 19px;" class="fa fa-angle-right" aria-hidden="true"></i>
-    </b-card>
-       <b-card @click="seeeach(tutor._id)" class="card1" >
-เพิ่มเติม (ถ้ามี)
-<i style="    float: right;
-    margin-top: 5px;
-    color: grey;
+color: #afafaf;
     font-size: 19px;" class="fa fa-angle-right" aria-hidden="true"></i>
     </b-card>
     
