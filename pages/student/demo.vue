@@ -33,8 +33,8 @@
        <b-row style="margin-top: 10px;">
 
         <b-col style="padding-left: 18px;" cols="2">
-                     <img :src="tutor.picture" style="width: 48px;
-  height: 48px;margin-top: 3px;
+                     <img :src="tutor.picture" style="width: 53px;
+  height: 53px;margin-top: 3px;
   border-radius: 14px;
   box-shadow: 0 1px 1px 0 rgba(205, 205, 205, 0.24);" width="100%"> 
 
@@ -57,9 +57,9 @@
     padding-right: 3px;
     padding-left: 5px;
     font-size: 15px;    float: right;
-    margin-right: 10px;
+    margin-right: 8px;
         padding-top: 3px;
-        padding-bottom: 3px;
+        padding-bottom: 1px;
     margin-top: 0px;"> 500 - 
  </strong></p>
 <p style="color:#545454; font-size:16px;margin-bottom: 0px;margin-bottom: 3px;
