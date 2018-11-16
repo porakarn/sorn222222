@@ -8,8 +8,13 @@
         <!-- <p style=" color:#86a5ca ; text-align: center;
 " >
  ติวเตอร์ทั้งหมด ({{ tutors.length }})</p> -->
+         <a class="mybtn" >All</a>    
+                 <a class="mybtn" >Eng</a>    
+        <a class="mybtn" >คณิต</a>    
+        <a class="mybtn" >วิทย์</a>    
+               <a class="mybtn" >จีน</a>    
+        <a class="mybtn" >ญี่ปุ่น</a>    
 
-  
     <br>
 
  <b-col style="    padding-left: 0px;
@@ -403,5 +408,15 @@ a{
     font-family:"Sukhumvit Set",sans-serif; 
 }
 
+.mybtn{
+    border:1px solid #F3F3F3;
+    margin-left: 4px;
+    font-size: 19px; 
+    padding: 5px;
+    padding-right: 14px;
+    padding-left: 14px; 
+    border-radius: 17px;
+    color:#BEBABA!important;
+}
 
 </style>
