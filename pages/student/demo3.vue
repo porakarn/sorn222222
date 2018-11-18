@@ -17,8 +17,20 @@
 
 <b-container fluid>
   <br><br>
-    <div>จังหวัด: <strong>{{ selected2 }}</strong></div>
-        <div>เขต: <strong>{{ selected }}</strong></div>    
+    <div>จังหวัด: <strong style="    background-color: #c6f1d0;
+    padding: 5px;
+    border-radius: 9px;
+    color: #086542;
+    margin-left: 5px;
+    padding-right: 10px;" v-for="selecting2 in selected2" >{{selecting2}}</strong></div>
+        <div>เขต: <strong style="    background-color: #c6f1d0;
+    padding: 5px;
+    border-radius: 9px;
+    color: #086542;
+    margin-left: 5px;
+    padding-right: 10px;"  v-for="selecting in selected">{{ selecting }}</strong></div>    
+
+       
 
  <b-form-select multiple :select-size="2" v-model="selected" :options="options" class="mb-3">
     </b-form-select>
@@ -27,13 +39,13 @@
     </b-form-select>
 
 
-  <b-form-textarea style="  white-space: pre-wrap;   padding-top: 0px;
+  <!-- <b-form-textarea style="  white-space: pre-wrap;   padding-top: 0px;
 " class="formpor" id="textarea1"
                      
                      placeholder=""
                      :rows="2"
                      :max-rows="6">
-    </b-form-textarea>
+    </b-form-textarea> -->
 
 <br><br>
 
@@ -62,18 +74,24 @@ import moment from 'moment';
            selected: null,
       options: [
         { value: null, text: 'จังหวัด' },
-        { value: 'a', text: 'This is First option' },
-        { value: 'b', text: 'Selected Option' },
-        { value: {'C': '3PO'}, text: 'This is an option with object value' },
-        { value: 'd', text: 'This one is disabled', disabled: true }
+        { value: 'กรุงเทพมหานคร', text: 'กรุงเทพมหานคร' },
+        { value: 'นนทบุรี', text: 'นนทบุรี' },
+        { value: 'ปทุมธานี', text: 'ปทุมธานี' },
+        { value: 'สมุทรปราการ', text: 'สมุทรปราการ' },
+        { value: 'ขอนแก่น', text: 'ขอนแก่น' },
+        { value: 'เชียงใหม่', text: 'เชียงใหม่' }
+
+    
       ],
         selected2: null,
       options2: [
         { value: null, text: 'เขต' },
-        { value: 'a', text: 'This is First option' },
-        { value: 'b', text: 'Selected Option' },
-        { value: {'C': '3PO'}, text: 'This is an option with object value' },
-        { value: 'd', text: 'This one is disabled', disabled: true }
+        { value: 'สยาม', text: 'สยาม' },
+        { value: 'อโศก', text: 'อโศก' },
+        { value: 'บางซื่อ', text: 'บางซื่อ' },
+        { value: 'ราชเทวี', text: 'ราชเทวี' },
+        { value: 'พญาไท', text: 'พญาไท' },
+
       ],
     
     

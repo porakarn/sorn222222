@@ -12,7 +12,7 @@ module.exports = {
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       { hid: 'description', name: 'description', content: 'Sorns community ของการสอน' },
-      { name: 'theme-color', content: '#DFAEA9' }
+      { name: 'theme-color', content: '#C67F76' }
 
     ],
     link: [
