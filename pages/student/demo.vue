@@ -58,7 +58,7 @@
   letter-spacing: normal;
   text-align: left;
   margin-bottom: 0px;
-  color: #2c2929;">{{tutor.name.substring(0,21)}}   <strong style=" background-color:#EEC0BB;
+  color: #2c2929;">{{tutor.name.substring(0,21)}}    <strong style=" background-color:#EEC0BB;
     border-radius: 6px;
     color: white;
     font-weight: 500;

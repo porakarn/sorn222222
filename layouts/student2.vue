@@ -43,14 +43,14 @@
     <b-container fluid class="bv-example-row responsive "   style="box-shadow: rgba(0, 0, 0, 0.2) 0px 3px 8px 0px, rgba(0, 0, 0, 0) 0px 4px 5px 0px, rgba(0, 0, 0, 0.01) 0px 1px 10px 0px; position: fixed;     width: 100%;
 
   bottom: 0px; 
-  background-color: white;
+ background-color: #DFAEA9;
   height: 58px;">
 
 <b-row style="    margin-top: 13px;">    
         
 <b-col cols="3" style="text-align: center;" >
 
-<nuxt-link class="porakarn" to="/student/alltutorstudent"><div><i style=" font-size: 28px; color: #7f8082;" class="fa fa-search nav-item " aria-hidden="true"></i>
+<nuxt-link class="porakarn" to="/student/alltutorstudent"><div><i style=" font-size: 28px; color: white;" class="fa fa-search nav-item " aria-hidden="true"></i>
 </div></nuxt-link>
 
 
@@ -61,7 +61,7 @@
 
 <b-col class="porakarn"  cols="3" style="text-align: center;" >
 
-<nuxt-link  to="/student/createjob"><div><i style="font-size: 31px; color: #7f8082;"  class="fa fa-plus-square-o nav-item " aria-hidden="true"></i>
+<nuxt-link  to="/student/createjob"><div><i style="font-size: 31px; color: white;"  class="fa fa-plus-square-o nav-item " aria-hidden="true"></i>
 </div>
 </nuxt-link>
 
@@ -69,7 +69,7 @@
 
 </b-col>
 <b-col cols="3" style="text-align: center;" >
-<nuxt-link  to="/student/yourjob"><div><i style=" font-size: 28px; color: #7f8082;"  class="fa fa-bell-o mx-auto nav-item " aria-hidden="true"></i>
+<nuxt-link  to="/student/yourjob"><div><i style=" font-size: 28px;color: white;"  class="fa fa-bell-o mx-auto nav-item " aria-hidden="true"></i>
 </div>
 </nuxt-link>
 
@@ -79,7 +79,7 @@
 <b-col cols="3" style="text-align: center;"  >    
  <nuxt-link  to="/student/profile">
 <div>
-  <i style=" font-size: 28px; color: #7f8082;"  class="fa fa-user-circle mx-auto nav-item" aria-hidden="true"></i>
+  <i style=" font-size: 28px; color: white;"  class="fa fa-user-circle mx-auto nav-item" aria-hidden="true"></i>
 </div>
 
 </nuxt-link>
