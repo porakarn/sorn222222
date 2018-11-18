@@ -77,12 +77,12 @@
        <b-row style="margin-top: 10px;">
 
         <b-col cols="4">
-                     <img :src="tutor.picture" style="border-radius: 5px" width="100%"> 
+                     <img :src="tutor.picture" style="border-radius: 5px" width="93%"> 
 
         </b-col>
-         <b-col cols="8" style="margin-left:-5px;padding-left: 0px; padding-right: 2px;">
+         <b-col cols="8" style="margin-left:-7px;padding-left: 0px; padding-right: 2px;">
 <p style=" padding-left: 0px;margin-bottom: 0px; font-weight:600; font-size:17px; margin-top: -6px;">{{tutor.name.substring(0,21)}}   <strong style=" background-color: #EEC0BB;
-    border-radius: 4px;
+    border-radius: 6px;
     color: white;
     font-weight: 500;
     padding-right: 5px;
@@ -92,7 +92,7 @@
         padding-top: 2px;
     margin-top: 4px;">{{ calculateScore(tutor.reviewscore)}} <i style="color:white;" class="fa fa-star" aria-hidden="true"></i>
  </strong></p>
-<p style="color:#545454; font-size:16px;margin-bottom: 0px;margin-bottom: 3px;
+<p style="color:#545454; font-family:Roboto; font-size:15.5px;margin-bottom: 0px;margin-bottom: 3px;
 " v-if="tutor.subject">
    {{tutor.subject.substring(0,70)}}</p>
 <p style="color:#545454; font-size:16px   ;  margin-bottom: 0px;" v-if="tutor.profile">
