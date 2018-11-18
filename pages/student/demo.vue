@@ -8,17 +8,23 @@
         <!-- <p style=" color:#86a5ca ; text-align: center;
 " >
  ติวเตอร์ทั้งหมด ({{ tutors.length }})</p> -->
-         <a class="mybtn" style="background-color:#EEC0BB; color:white;" >All</a>    
+         <!-- <a class="mybtn" style="background-color:#EEC0BB; color:white;" >All</a>    
                  <a class="mybtn" >Eng</a>    
         <a class="mybtn" >คณิต</a>    
         <a class="mybtn" >วิทย์</a>    
                <a class="mybtn" >จีน</a>    
-        <a class="mybtn" >ญี่ปุ่น</a>    
+        <a class="mybtn" >ญี่ปุ่น</a>     -->
+<div style=" text-align:center;">
+     <b-button v-b-modal.modal1  class="responsive" style="font-size: 17px;
+    color: #5f5f5f; 
+    background-color: #f5f5f5;
+    border-color: rgb(239, 239, 239);
+    border-radius: 22px;
+    width: 87%;
+"><i style=" font-size: 20px; color: #5f5f5f;   " class="fa fa-search nav-item " aria-hidden="true"></i> ค้นหาติวเตอร์ตามวิชา</b-button>
 
-    <br>
-    <br>
-
-
+</div>
+<br>
  <b-col style="    padding-left: 0px;
     padding-right: 0px;" md="6" offset-md="3">
 
