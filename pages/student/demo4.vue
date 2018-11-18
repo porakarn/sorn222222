@@ -81,7 +81,7 @@
 
         </b-col>
          <b-col cols="8" style="margin-left:-5px;padding-left: 0px; padding-right: 2px;">
-<p style=" padding-left: 0px;margin-bottom: 0px; font-weight:600; font-size:17px; margin-top: -6px;">{{tutor.name.substring(0,21)}}   <strong style=" background-color: #ffc107;
+<p style=" padding-left: 0px;margin-bottom: 0px; font-weight:600; font-size:17px; margin-top: -6px;">{{tutor.name.substring(0,21)}}   <strong style=" background-color: #EEC0BB;
     border-radius: 4px;
     color: white;
     font-weight: 500;
@@ -94,7 +94,7 @@
  </strong></p>
 <p style="color:#545454; font-size:16px;margin-bottom: 0px;margin-bottom: 3px;
 " v-if="tutor.subject">
-    <i style=" font-size:15px;       color:#9dd8bf;" class="fa fa-graduation-cap" aria-hidden="true"></i> {{tutor.subject.substring(0,70)}}</p>
+   {{tutor.subject.substring(0,70)}}</p>
 <p style="color:#545454; font-size:16px   ;  margin-bottom: 0px;" v-if="tutor.profile">
     {{tutor.profile.substring(0,65)}}...</p>
 
@@ -127,10 +127,9 @@
     font-size: 15px;
     border-radius: 11px;"  href="#" 
            class="card-link">{{tag.toString()}}</a> -->
-<div style="    background-color: #f9fbfa;
-    border-radius: 13px;
+<div style="   
 " class=" scrolling-wrapper">
-               <a   style=" color: #9dd8bf;
+               <a   style=" color: #ECC1BC;
     text-decoration: none;
    
     padding: 3px 8px;

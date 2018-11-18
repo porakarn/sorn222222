@@ -2,25 +2,11 @@
   <div>
     <div>
    <b-navbar  style="    padding-bottom: 12px;
-    padding-top: 12px;  background-color:#cdf4d7!important; "toggleable variant="light">
-        <b-navbar-toggle style="border-color: rgba(0, 0, 0, 0);    padding-left: 0px;
+    padding-top: 12px;  background-color:#DFAEA9!important; "toggleable variant="light">
+        <b-navbar-toggle style="border-color: rgba(0, 0, 0, 0); color:white;    padding-left: 0px;
     padding-right: 0px;" target="nav_text_collapse"></b-navbar-toggle>
         <!-- <b-navbar-brand>BootstrapVue</b-navbar-brand> -->
-     <b-button  class="responsive2" style="  font-size: 21px;
-         color: #b7e8d9;
-    background-color: #eefdf8;
-    font-weight: 500;
- 
-    border-color: #6c757d00;
-    border-radius: 18px;
-    padding-top: 0px;
-    padding-bottom: 0px;
-    padding-left: 8px;
-    padding-right: 8px;
-    font-family: kanit;
-    border-top-width: 0px;
-        border-bottom-width: 0px
-"> sorns</b-button>
+    
         
          
         <b-collapse is-nav id="nav_text_collapse">
@@ -40,7 +26,7 @@
 
 
 
-<b-nav fill tabs  style="margin-top:-7px;    background-color: #cdf4d7; box-shadow: 0px 2px 3px -1px rgba(126, 126, 126, 0.2), 0px 4px 5px 0px rgba(0, 0, 0, 0), 0px 1px 10px 0px #00000003;">
+<b-nav fill tabs  style="margin-top:-7px;    background-color: #DFAEA9; box-shadow: 0px 2px 3px -1px rgba(126, 126, 126, 0.2), 0px 4px 5px 0px rgba(0, 0, 0, 0), 0px 1px 10px 0px #00000003;">
    <b-nav-item  class="responsive"  style="
     color: #ffffff; padding-right: 12px;
     padding-left: 12px;border-bottom: 4px solid;
@@ -183,7 +169,7 @@ html
 
 a{
 
-    color: #4159539c;
+    color: white;
 
     font-weight: 600;
     font-size: 18px;
