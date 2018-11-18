@@ -17,6 +17,16 @@
 
 <b-container fluid>
   <br><br>
+    <div>จังหวัด: <strong>{{ selected2 }}</strong></div>
+        <div>เขต: <strong>{{ selected }}</strong></div>    
+
+ <b-form-select multiple :select-size="2" v-model="selected" :options="options" class="mb-3">
+    </b-form-select>
+
+ <b-form-select multiple :select-size="2" v-model="selected2" :options="options2" class="mb-3">
+    </b-form-select>
+
+
   <b-form-textarea style="  white-space: pre-wrap;   padding-top: 0px;
 " class="formpor" id="textarea1"
                      
@@ -25,6 +35,15 @@
                      :max-rows="6">
     </b-form-textarea>
 
+<br><br>
+
+ <div  style="text-align :center">       <nuxt-link class="nav-item" style="color:#345d46; " to="/student/createjob">   <b-button 
+   style="background-color: #EFBAB5; border: 0px;     padding-left: 64px;
+    padding-right: 64px;
+    
+    padding-top: 11px;
+    padding-bottom: 11px;
+    border-radius: 22px;">ลงประกาศหาติวเตอร์</b-button></nuxt-link> </div> 
 </b-container>
 </b-container>
 </template>
@@ -40,21 +59,21 @@ import moment from 'moment';
       tutors:{},
        loading: false,
            profile2: false,
-        selected: [], // Array reference
+           selected: null,
       options: [
-        { value: 'ENG', text: 'ENG' },
-        { value: 'คณิต', text: 'คณิตศาสตร์' },
-        { value: 'วิทย์', text: 'วิทยาศาสตร์' },
-        { value: 'ไทย', text: 'ไทย' },
-        { value: 'สังคม', text: 'สังคม' },
-        { value: 'ฟิสิกส์', text: 'ฟิสิกส์' },
-        { value: 'เคมี', text: 'เคมี' },
-        { value: 'ชีวะ', text: 'ชีวะ' },
-        { value: 'จีน', text: 'ภาษาจีน' },
-        { value: 'ญี่ปุ่น', text: 'ภาษาญี่ปุ่น' },
-        { value: 'เกาหลี', text: 'ภาษาเกาหลี' },
-
-
+        { value: null, text: 'จังหวัด' },
+        { value: 'a', text: 'This is First option' },
+        { value: 'b', text: 'Selected Option' },
+        { value: {'C': '3PO'}, text: 'This is an option with object value' },
+        { value: 'd', text: 'This one is disabled', disabled: true }
+      ],
+        selected2: null,
+      options2: [
+        { value: null, text: 'เขต' },
+        { value: 'a', text: 'This is First option' },
+        { value: 'b', text: 'Selected Option' },
+        { value: {'C': '3PO'}, text: 'This is an option with object value' },
+        { value: 'd', text: 'This one is disabled', disabled: true }
       ],
     
     
