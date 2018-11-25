@@ -22,18 +22,19 @@ color: rgb(117, 119, 120); border:1px !important;">วิชาที่สอ�
 
 
    <br>
-<b-container fluid style="   padding: 0!important">
+<b-container fluid style=" border-top: 1px solid #f1f1f1!important;    margin-top: 10px;  padding: 0!important">
       <p style=" margin-bottom: 0px; margin-top:6px;  white-space: pre-wrap;  padding-top: 0px !important;
-color: rgb(117, 119, 120); border:1px !important;">วิชาที่สอน</p>
+color: rgb(117, 119, 120); border:1px !important;margin-bottom: 0px;
+ ">วิชาที่สอน</p>
     <strong class="tagsmall" >คณิต</strong>
     <strong class="tagsmall" >คณิต</strong>
     <strong class="tagsmall" >คณิต</strong>
     <strong style="float:right; font-weight:600; background-color:#EEEEEE; color:#A8A8A8; padding-left:10px;padding-right:10px; " class="tagsmall" >+</strong>
 
  </b-container>
+<b-container fluid style=" border-top: 1px solid #f1f1f1!important;    margin-top: 10px;  padding: 0!important">
 
-
-
+</b-container>
 
 
  
@@ -45,7 +46,7 @@ color: rgb(117, 119, 120); border:1px !important;">โปรไฟล์ขอ�
                      :rows="5"
                      :max-rows="9">
     </b-form-textarea>
-    <br>
+ 
 <br>
      <b-form-group  id="exampleInputGroup1"
                     
@@ -161,6 +162,8 @@ box-shadow: 0 0 0 0rem rgba(0, 123, 255, .25) !important;
     padding-right:6px;
     padding-left:6px; 
     border-radius:9px;
-    margin-right: 4px;
+    margin-right: 7px;
+        padding-top: 2px;
+    padding-bottom: 2px;
 }
 </style>
