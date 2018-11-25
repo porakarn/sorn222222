@@ -66,9 +66,21 @@ color: rgb(117, 119, 120); border:1px !important;">โปรไฟล์ขอ�
         id="input-large"   
         type="text" 
         placeholder="ค่าสอน">{{location}}</b-form-input></b-form-group>
-    <b-button @click="onSubmit"  style="background-color: #33C1C1; border: 0px; padding-left: 66px;
+
+          <b-form-group  id="exampleInputGroup1"
+                    
+                    label-for="exampleInput1"
+                    description="สามารถอัพโหลด video แนะนำตัวเอง">
+      <b-form-input
+       style="margin-top: -6px;"
+     
+        class="formpor"
+        id="input-large"   
+        type="text" 
+        placeholder="Youtube url">{{location}}</b-form-input></b-form-group>
+    <!-- <b-button @click="onSubmit"  style="background-color: #33C1C1; border: 0px; padding-left: 66px;
     padding-right: 66px;    box-shadow: 0 1px 1px 1px rgba(111, 111, 111, 0.23);
-">สมัคร</b-button>
+">สมัคร</b-button> -->
  <div style="color: grey" class="loading-page" v-if="loading">
     <p>Loading...</p>
   </div>
