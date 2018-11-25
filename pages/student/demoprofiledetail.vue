@@ -34,8 +34,8 @@ color: rgb(117, 119, 120); border:1px !important;margin-bottom: 0px;
     <strong class="tagsmall" >สีลม</strong>
     <strong style="float:right; font-weight:600; background-color:#EEEEEE;
      color:#A8A8A8;     padding-left: 15px;
-    padding-right: 6px;
-    border-radius: 15px;       padding-top: 2px;
+    padding-right: 15px;
+    border-radius: 6px;       padding-top: 2px;
     padding-bottom: 2px;" class="tagsmall" >+</strong>
 
  </b-container>
@@ -176,13 +176,16 @@ box-shadow: 0 0 0 0rem rgba(0, 123, 255, .25) !important;
 
 .tagsmall{
     font-weight:400;
-    color:#D59E99;
-    background-color:#F9ECEA; 
+    color:white;
+    background-color:#E9BAB6; 
     padding-right:9px;
     padding-left:9px; 
-    border-radius:4px;
+    border-radius:5px;
     margin-right: 7px;
         padding-top: 4px;
     padding-bottom: 4px;
+}
+.text-muted {
+    color: #adadad !important;
 }
 </style>
