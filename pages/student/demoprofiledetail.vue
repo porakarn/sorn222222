@@ -180,7 +180,7 @@ box-shadow: 0 0 0 0rem rgba(0, 123, 255, .25) !important;
     background-color:#E9BAB6; 
     padding-right:9px;
     padding-left:9px; 
-    border-radius:7px;
+    border-radius:6px;
     margin-right: 7px;
         padding-top: 4px;
     padding-bottom: 4px;
