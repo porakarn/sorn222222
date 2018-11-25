@@ -4,10 +4,11 @@
 <b-navbar  style="     border: 3px solid #DFAEA9;
     padding-bottom: 13px;
     padding-top: 15px;
-    background-color: #DFAEA9!important; "toggleable variant="light">
+    background-color: #DFAEA9!important; ; height: 150px; margin-bottom: -110px; "toggleable variant="light">
      <i @click="goback" style=" font-size: 25px;
     padding-left: 4px;
     color: white;
+    margin-top:-84px;
 " class="fa fa-arrow-left responsive" aria-hidden="true"></i>
         <!-- <b-navbar-brand>BootstrapVue</b-navbar-brand> -->
       <!-- <b-button   style="   font-size: 21px;
@@ -32,9 +33,9 @@
 
 
 <b-container fluid style="padding:0px">
-  <div style="   background-color: #dfaea9;; height: 130px; margin-bottom: -110px;">
+  <!-- <div style="   background-color: #dfaea9;; height: 130px; margin-bottom: -110px;"> -->
 
-  </div>
+  <!-- </div> -->
 <b-container fluid>
   <br><br>
   <b-row>
@@ -42,7 +43,7 @@
 <b-col md="6" offset-md="3">
 
 <div style="text-align:center" >
-                     <img :src="courses.picture" style="border-radius: 5px" height="150"> 
+                     <img :src="courses.picture" style="border-radius: 8px" height="150"> 
 </div>
 <br>
  <div style="text-align:center;">
