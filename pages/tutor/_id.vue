@@ -29,6 +29,10 @@
     </b-navbar>
 
 
+<b-container fluid style="padding:0px">
+  <div style="background-color:#f7f7f7; height: 130px; margin-bottom: -110px;">
+
+  </div>
 <b-container fluid>
   <br><br>
   <b-row>
@@ -48,15 +52,15 @@
    
 <div style="text-align:center;">
   <b-row class="my-1">
-    <b-col cols="12" >
+    <!-- <b-col cols="12" >
     <i class="fa fa-phone" aria-hidden="true"></i> {{courses.phone}}  &nbsp;&nbsp; Line: <a :href="linelink">{{courses.line}}</a>
-    </b-col>
+    </b-col> -->
 
   </b-row>
  </div>
 
  <div  @click="track" style="text-align:center; margin-top:10px;">
-     <b-button  :href="linelink" size="lg" style=" width:60%;     color: white; background-color: #33C1C1; border: 0px; 
+     <b-button  :href="linelink" size="lg" style=" width:60%;     color: white; background-color: #DFAEA9; border: 0px; 
  ">ติดต่อ</b-button>  
 </div>
 
@@ -292,7 +296,7 @@ color: #484848; border:1px !important;">โปรไฟล์ของคุณ<
     </b-row>
 </b-container>
 
-
+</b-container>
 
 </b-container>
 </template>
