@@ -30,6 +30,7 @@
 
 
 
+<b-container fluid style="padding:4px;">
 
      <b-card @click="seeeach(tutor._id)"  style="margin-bottom:0px;   border: 0px solid;     border-bottom-width: 1px;
     border-bottom: 1px solid whitesmoke !important;        
@@ -56,7 +57,7 @@
     border-radius: 6px;
     color: white;
     font-weight: 500;
-    padding-right: 7px;
+    padding-right: 9px;
     padding-left: 9px;
     font-size: 15px;    float: right;
     margin-right: 8px;
@@ -73,7 +74,7 @@
     border-radius: 6px;
     color: white;
     font-weight: 500;
-    padding-right: 3px;
+    padding-right: 9px;
     padding-left: 9px;
     font-size: 15px;  
     margin-right: 12px;
@@ -140,7 +141,7 @@
     </b-row>
 
     </b-card>
-
+</b-container>
    </b-col>
     </b-row>
     <br>
