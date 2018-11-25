@@ -12,29 +12,31 @@
 
          <b-col cols="12"  sm="6" offset-sm="3" >
       <!-- <p style="color: rgb(117, 119, 120);">{{ this.$store.state.user.name}}</p> -->
-      <p style=" margin-bottom: 0px;  white-space: pre-wrap;  padding-top: 0px !important;
+      <p style=" margin-bottom: 2px;  white-space: pre-wrap;  padding-top: 0px !important;
 color: rgb(117, 119, 120); border:1px !important;">วิชาที่สอน</p>
   
     <strong class="tagsmall" >คณิต</strong>
-    <strong class="tagsmall" >คณิต</strong>
-    <strong class="tagsmall" >คณิต</strong>
+    <strong class="tagsmall" >Eng</strong>
+    <strong class="tagsmall" >ไทย</strong>
   <strong style="float:right; font-weight:600; background-color:#EEEEEE;
      color:#A8A8A8;     padding-left: 15px;
     padding-right: 15px;
-    border-radius: 15px;" class="tagsmall" >+</strong>
+    border-radius: 15px;   padding-top: 2px;
+    padding-bottom: 2px;" class="tagsmall" >+</strong>
 
    <br>
-<b-container fluid style=" border-top: 1px solid #f1f1f1!important;    margin-top: 10px;  padding: 0!important">
-      <p style=" margin-bottom: 0px; margin-top:6px;  white-space: pre-wrap;  padding-top: 0px !important;
+<b-container fluid style="  padding: 0!important">
+      <p style=" margin-bottom: 2px; margin-top:6px;  white-space: pre-wrap;  padding-top: 0px !important;
 color: rgb(117, 119, 120); border:1px !important;margin-bottom: 0px;
- ">วิชาที่สอน</p>
-    <strong class="tagsmall" >คณิต</strong>
-    <strong class="tagsmall" >คณิต</strong>
-    <strong class="tagsmall" >คณิต</strong>
+ ">สถานที่สอน</p>
+    <strong class="tagsmall" >สยาม</strong>
+    <strong class="tagsmall" >อโศก</strong>
+    <strong class="tagsmall" >สีลม</strong>
     <strong style="float:right; font-weight:600; background-color:#EEEEEE;
      color:#A8A8A8;     padding-left: 15px;
     padding-right: 15px;
-    border-radius: 15px;" class="tagsmall" >+</strong>
+    border-radius: 15px;       padding-top: 2px;
+    padding-bottom: 2px;" class="tagsmall" >+</strong>
 
  </b-container>
 <b-container fluid style=" border-top: 1px solid #f1f1f1!important;    margin-top: 10px;  padding: 0!important">
@@ -48,7 +50,7 @@ color: rgb(117, 119, 120); border:1px !important;margin-bottom: 0px;
 color: rgb(117, 119, 120); border:1px !important;">โปรไฟล์ของคุณ</p>
     <b-form-textarea class="formpor"  id="textarea1"
                      
-                     :rows="5"
+                     :rows="4"
                      :max-rows="9">
     </b-form-textarea>
  
@@ -168,7 +170,7 @@ box-shadow: 0 0 0 0rem rgba(0, 123, 255, .25) !important;
     padding-left:9px; 
     border-radius:14px;
     margin-right: 7px;
-        padding-top: 2px;
-    padding-bottom: 2px;
+        padding-top: 4px;
+    padding-bottom: 4px;
 }
 </style>
