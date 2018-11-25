@@ -11,7 +11,7 @@
     <b-row>
         <b-col cols="4">
           
-  <b-img rounded="circle" style="width: 74px" :src="picture"/>
+  <b-img rounded="circle" style="width: 74px;    margin-left: 17px;" src="https://scontent.fbkk5-6.fna.fbcdn.net/v/t1.0-1/p240x240/15873069_1211350558943201_5314025003629794223_n.jpg?_nc_cat=101&_nc_ht=scontent.fbkk5-6.fna&oh=1109718a0bb183379afb401a1b5d3c3a&oe=5C695BF5"/>
     <!-- <b-img  style="width: 90px; " rounded="circle" :src="$store.state.user.picture" /> -->
 
         </b-col>
@@ -48,7 +48,8 @@
   </p> -->
   <nuxt-link to="/tutor/profile/edit">
   <b-button size="lg" @click="onSubmit" style="background-color: #DFAEA9; border-radius:25px;     margin-top: 9px;  box-shadow: 0 1px 1px 1px rgba(111, 111, 111, 0.23);
-; border: 0px;     width: -webkit-fill-available;">เขียนโปรไฟล์</b-button>
+; border: 0px;      padding-top: 12px;
+    padding-bottom: 12px;   width: -webkit-fill-available;">เขียนโปรไฟล์</b-button>
 </nuxt-link>
 
   
@@ -64,7 +65,7 @@
   <b-row> <b-col >
 
   <b-card class="card1" >
-      <i class="fa fa-bandcamp" aria-hidden="true"></i>
+      <i style="color:#959595;" class="fa fa-bandcamp" aria-hidden="true"></i>
          <strong style="    color: rgb(109, 109, 109);
     font-weight: 400;
     padding-left: 9px;">
@@ -76,7 +77,7 @@ color: #afafaf;
     </b-card>
 
       <b-card class="card1" >
-          <i class="fa fa-credit-card" aria-hidden="true"></i>
+          <i style="color:#959595;"  class="fa fa-credit-card" aria-hidden="true"></i>
 
          <strong style="    color: rgb(109, 109, 109);
     font-weight: 400;
@@ -100,7 +101,7 @@ color: #afafaf;
     </b-card> -->
 
       <b-card class="card1" >
-          <i class="fa fa-user-circle-o" aria-hidden="true"></i>
+          <i style="color:#959595;"  class="fa fa-user-circle-o" aria-hidden="true"></i>
 
          <strong style="    color: rgb(109, 109, 109);
     font-weight: 400;
