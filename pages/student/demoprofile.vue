@@ -251,7 +251,7 @@ export default {
       }
 
   },
-    layout: 'student2'
+    layout: 'studentapp'
 
 }
 </script>
