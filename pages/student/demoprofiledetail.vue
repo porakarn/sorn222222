@@ -18,8 +18,10 @@ color: rgb(117, 119, 120); border:1px !important;">วิชาที่สอ�
     <strong class="tagsmall" >คณิต</strong>
     <strong class="tagsmall" >คณิต</strong>
     <strong class="tagsmall" >คณิต</strong>
-    <strong style="float:right; font-weight:600; background-color:#EEEEEE; color:#A8A8A8; padding-left:10px;padding-right:10px; " class="tagsmall" >+</strong>
-
+  <strong style="float:right; font-weight:600; background-color:#EEEEEE;
+     color:#A8A8A8;     padding-left: 15px;
+    padding-right: 15px;
+    border-radius: 15px;" class="tagsmall" >+</strong>
 
    <br>
 <b-container fluid style=" border-top: 1px solid #f1f1f1!important;    margin-top: 10px;  padding: 0!important">
@@ -29,7 +31,10 @@ color: rgb(117, 119, 120); border:1px !important;margin-bottom: 0px;
     <strong class="tagsmall" >คณิต</strong>
     <strong class="tagsmall" >คณิต</strong>
     <strong class="tagsmall" >คณิต</strong>
-    <strong style="float:right; font-weight:600; background-color:#EEEEEE; color:#A8A8A8; padding-left:10px;padding-right:10px; " class="tagsmall" >+</strong>
+    <strong style="float:right; font-weight:600; background-color:#EEEEEE;
+     color:#A8A8A8;     padding-left: 15px;
+    padding-right: 15px;
+    border-radius: 15px;" class="tagsmall" >+</strong>
 
  </b-container>
 <b-container fluid style=" border-top: 1px solid #f1f1f1!important;    margin-top: 10px;  padding: 0!important">
@@ -159,9 +164,9 @@ box-shadow: 0 0 0 0rem rgba(0, 123, 255, .25) !important;
     font-weight:400;
     color:#D59E99;
     background-color:#F9ECEA; 
-    padding-right:6px;
-    padding-left:6px; 
-    border-radius:9px;
+    padding-right:9px;
+    padding-left:9px; 
+    border-radius:14px;
     margin-right: 7px;
         padding-top: 2px;
     padding-bottom: 2px;
