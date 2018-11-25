@@ -16,19 +16,23 @@
         <a class="mybtn" >ญี่ปุ่น</a>     -->
 <div style=" text-align:center;">
      <b-button v-b-modal.modal1  class="responsive" style="font-size: 17px;
-    color: #5f5f5f; 
-    background-color: #f5f5f5;
+    color: white; 
+    background-color: #DFAEA9;
     border-color: rgb(239, 239, 239);
-    border-radius: 22px;
-    width: 87%;
-"><i style=" font-size: 20px; color: #5f5f5f;   " class="fa fa-search nav-item " aria-hidden="true"></i> ค้นหาติวเตอร์ตามวิชา</b-button>
+    border-radius: 25px;
+    width: 67%;
+    padding-top:9px;
+    padding-bottom:9px;
+"> สร้างประกาศหาติวเตอร์</b-button>
 
 </div>
 <br>
  <b-col style="    padding-left: 0px;
     padding-right: 0px;" md="6" offset-md="3">
 
-
+<div style="text-align:center;">
+    <p style="margin-bottom: 0px;">ประกาศของคุณ (3)</p>
+</div>
 
 <b-container fluid style="padding:4px;">
 
