@@ -32,12 +32,23 @@
 
         -->
 
- <b-form-select  :select-size="2" v-model="selected" :options="options" class="mb-3">
+ <b-form-select  :select-size="2" v-model="selected" size="lg"  :options="options" class="mb-3">
     </b-form-select>
 
- <b-form-select  :select-size="2" v-model="selected2" :options="options2" class="mb-3">
-    </b-form-select>
+ <!-- <b-form-select  :select-size="2" v-model="selected2" :options="options2" class="mb-3">
+    </b-form-select> -->
 
+  <b-form-group v-if="selected"  id="exampleInputGroup1"
+                    
+                    label-for="exampleInput1"
+                    description=" ตัวอย่าง ภาษาอังกฤษ GAT ENG">
+        <b-form-input  class="formpor" id="exampleInput1" size="lg" 
+                      type="text"
+                      required
+                      v-model="form"
+                      placeholder="รายละเอียดวิชา">
+        </b-form-input>
+      </b-form-group>
 
   <!-- <b-form-textarea style="  white-space: pre-wrap;   padding-top: 0px;
 " class="formpor" id="textarea1"
@@ -70,30 +81,37 @@ import moment from 'moment';
     data(){
     return {
       tutors:{},
+      forms: '',
        loading: false,
            profile2: false,
            selected: null,
       options: [
-        { value: null, text: 'จังหวัด' },
-        { value: 'กรุงเทพมหานคร', text: 'กรุงเทพมหานคร' },
-        { value: 'นนทบุรี', text: 'นนทบุรี' },
-        { value: 'ปทุมธานี', text: 'ปทุมธานี' },
-        { value: 'สมุทรปราการ', text: 'สมุทรปราการ' },
-        { value: 'ขอนแก่น', text: 'ขอนแก่น' },
-        { value: 'เชียงใหม่', text: 'เชียงใหม่' }
+        { value: null, text: 'วิชา' },
+        { value: 'ENG', text: 'ENG' },
+        { value: 'คณิต', text: 'คณิตศาสตร์' },
+        { value: 'วิทย์', text: 'วิทยาศาสตร์' },
+        { value: 'ไทย', text: 'ไทย' },
+        { value: 'สังคม', text: 'สังคม' },
+        { value: 'ฟิสิกส์', text: 'ฟิสิกส์' },
+        { value: 'เคมี', text: 'เคมี' },
+        { value: 'ชีวะ', text: 'ชีวะ' },
+        { value: 'จีน', text: 'ภาษาจีน' },
+        { value: 'ญี่ปุ่น', text: 'ภาษาญี่ปุ่น' },
+        { value: 'เกาหลี', text: 'ภาษาเกาหลี' },
+        { value: 'อื่นๆ', text: 'อื่นๆ' },
 
     
       ],
-        selected2: null,
-      options2: [
-        { value: null, text: 'เขต' },
-        { value: 'สยาม', text: 'สยาม' },
-        { value: 'อโศก', text: 'อโศก' },
-        { value: 'บางซื่อ', text: 'บางซื่อ' },
-        { value: 'ราชเทวี', text: 'ราชเทวี' },
-        { value: 'พญาไท', text: 'พญาไท' },
+    //     selected2: null,
+    //   options2: [
+    //     { value: null, text: 'เขต' },
+    //     { value: 'สยาม', text: 'สยาม' },
+    //     { value: 'อโศก', text: 'อโศก' },
+    //     { value: 'บางซื่อ', text: 'บางซื่อ' },
+    //     { value: 'ราชเทวี', text: 'ราชเทวี' },
+    //     { value: 'พญาไท', text: 'พญาไท' },
 
-      ],
+    //   ],
     
     
 
