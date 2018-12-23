@@ -46,11 +46,11 @@
  "><i style="color: #F1F182;" class="fa fa-star" aria-hidden="true"></i>
 </i> 4.6 (10)  	&nbsp;&nbsp; <i class="fa fa-user" aria-hidden="true"></i> 12 (30 ครั้ง)
   </p> -->
-  <nuxt-link to="/tutor/profile/edit">
+  <!-- <nuxt-link to="/tutor/profile/edit"> -->
   <b-button size="lg" @click="onSubmit" style="background-color: #DFAEA9; border-radius:25px;     margin-top: 9px;  box-shadow: 0 1px 1px 1px rgba(111, 111, 111, 0.23);
 ; border: 0px;      padding-top: 12px;
     padding-bottom: 12px;   width: -webkit-fill-available;">เขียนโปรไฟล์</b-button>
-</nuxt-link>
+<!-- </nuxt-link> -->
 
   
   <!-- <p  v-if="isUserLoggedIn"
@@ -234,6 +234,14 @@ export default {
       ,
 
       onSubmit(){
+        axios.post('http://localhost:8000/sms').then((res) => { 
+              
+              console.log(res.data)
+             
+  
+          })
+          .catch(error => console.log(error))
+
            var data = {
              profile : this.profile, 
              phone : this.phone,
