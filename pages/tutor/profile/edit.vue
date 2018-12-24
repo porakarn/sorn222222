@@ -79,6 +79,21 @@ color: rgb(117, 119, 120); border:1px !important;">โปรไฟล์ขอ�
     </b-form-textarea>
     <br>
 <br>
+  <b-row class="my-1">
+    <b-col >
+       <b-form-textarea style="  white-space: pre-wrap;   padding-top: 0px;
+" class="formpor" id="textarea1"
+                     v-model="price"
+                     placeholder=""
+                     :rows="2"
+                     :max-rows="6">
+    </b-form-textarea>
+      <!-- <b-form-input focus="false"  class="formpor" id="input-large"  type="text" :placeholder="this.$store.state.user.email"></b-form-input> -->
+    </b-col>
+  </b-row>
+  <br>
+  <br>
+
      <b-form-group  id="exampleInputGroup1"
                     
                     label-for="exampleInput1"
@@ -90,6 +105,21 @@ color: rgb(117, 119, 120); border:1px !important;">โปรไฟล์ขอ�
         id="input-large"   
         type="text" 
         placeholder="สถานที่สอน">{{location}}</b-form-input></b-form-group>
+
+<br><br>
+
+  <b-form-group  id="exampleInputGroup1"
+                    
+                    label-for="exampleInput1"
+                    description="Youtube URL">
+      <b-form-input
+       style="margin-top: -6px;"
+       v-model="youtube_url"
+        class="formpor"
+        id="input-large"   
+        type="text" 
+        placeholder="Youtube Url">{{youtube_url}}</b-form-input></b-form-group>
+
     <b-button @click="onSubmit"  style="background-color: #33C1C1; border: 0px; padding-left: 66px;
     padding-right: 66px;    box-shadow: 0 1px 1px 1px rgba(111, 111, 111, 0.23);
 ">สมัคร</b-button>
@@ -115,7 +145,8 @@ export default {
     subject: '',
     text2: '',
     location: '',
-    
+    price:'',
+    youtube_url:'',
     line:''
 
   
@@ -127,6 +158,9 @@ export default {
     this.subject = this.$store.state.user.subject
     this.line = this.$store.state.user.line
     this.location = this.$store.state.user.location
+    this.price = this.$store.state.user.price
+    this.youtube_url = this.$store.state.user.youtube_url
+
   },
 //   asyncData (context, callback) {
 //  var por = ';;'
@@ -232,7 +266,10 @@ console.log(tag);
              line: this.line,
             _id: this.$store.state.user._id,
             profile_length: this.profile.length,
-            location: this.location
+            location: this.location,
+            price: this.price,
+            youtube_url: this.youtube_url,
+            
            }
 
 console.log(data);
@@ -248,7 +285,9 @@ console.log(data);
              tag: tag,
              canseesheet: this.$store.state.user.canseesheet,
             line: this.line,
-            location : this.location
+            location : this.location,
+             price: this.price,
+            youtube_url: this.youtube_url,
 
            }
                        console.log(data2);
