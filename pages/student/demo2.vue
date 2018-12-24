@@ -106,6 +106,8 @@ color: #afafaf;
     padding-bottom: 11px;
     border-radius: 22px;">ลงประกาศหาติวเตอร์</b-button> </div> 
 
+    <button @click="clearup">Clear</button>
+
 <br>
    <b-modal no-fade hide-header  hide-footer  centered ref="myModalRef" hide-footer title="Using Component Methods">
     <div style="text-align:center;">
@@ -196,6 +198,9 @@ this.extra = this.$store.state.job.extra
 
 
   methods: {
+      clearup(){
+   this.$store.dispatch('setJob', null)
+      },
  
    onSubmit(){
 var job = {
