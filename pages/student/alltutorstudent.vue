@@ -6,9 +6,11 @@
 <div style="text-align:center!important;">
      <b-button v-b-modal.modal1  class="responsive" style="font-size: 17px;
     color:#A5A5A5; 
+    padding-top: 7px;
+    padding-bottom: 7px;
     background-color: #FCF9F9;
     border-color: rgba(108, 117, 125, 0);
-    border-radius: 14px;
+    border-radius: 18px;
     width:89%;
 "><i style=" font-size: 20px; color: #A5A5A5;   " class="fa fa-search nav-item " aria-hidden="true"></i> ค้นหาติวเตอร์ตามวิชา</b-button></div>
 </div>
@@ -87,12 +89,12 @@
        <b-row style="margin-top: 10px;">
 
         <b-col cols="4">
-                     <img :src="tutor.picture" style="border-radius: 5px" width="100%"> 
+                     <img :src="tutor.picture" style="border-radius: 3px" width="100%"> 
 
         </b-col>
          <b-col cols="8" style="margin-left:-5px;padding-left: 0px; padding-right: 2px;">
 <p style=" padding-left: 0px;margin-bottom: 0px; font-weight:600; font-size:17px; margin-top: -6px;">{{tutor.name.replace(/ .*/,'')}}   <strong style=" background-color:#EEC0BB;
-    border-radius: 4px;
+    border-radius: 2px;
     color: white;
     font-weight: 500;
     padding-right: 5px;
@@ -452,7 +454,7 @@ border-top: 0px;
 .card-body{
   padding-left: 8px;
     padding-top: 2px;
-    padding-right: 7px;
+    padding-right: 10px;
       padding-bottom: 8px;
       margin-top: 2px;
 }
