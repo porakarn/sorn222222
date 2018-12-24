@@ -69,7 +69,7 @@ color: #afafaf;    font-size: 20px;" class="fa fa-angle-right" aria-hidden="true
 วัน เวลา ที่สะดวก </strong>
 <i style="    float: right;
     margin-top: 5px;
-color: #afafaf;    font-size: 20px;" class="fa fa-angle-right" aria-hidden="true"></i><Strong style="float:right; font-weight:400;color:#c1c1c1;margin-right:13px;">{{day.toString()}}</Strong>
+color: #afafaf;    font-size: 20px;" class="fa fa-angle-right" aria-hidden="true"></i><Strong v-if="day" style="float:right; font-weight:400;color:#c1c1c1;margin-right:13px;">{{day.toString()}}</Strong>
     </b-card>
        <b-card @click="seeeach('location')" class="card1" >
            <strong style="    color: rgb(109, 109, 109);
@@ -176,12 +176,36 @@ import moment from 'moment';
 
 
 mounted() {
-this.subject = this.$store.state.job.subject
-this.purpose = this.$store.state.job.purpose
-this.level = this.$store.state.job.level
-this.day = this.$store.state.job.day
-this.location = this.$store.state.job.location
-this.extra = this.$store.state.job.extra
+      if (this.$store.state.job) {
+  this.subject = this.$store.state.job.subject
+   this.purpose = this.$store.state.job.purpose
+   this.level = this.$store.state.job.level
+   this.day = this.$store.state.job.day
+   this.location = this.$store.state.job.location
+   this.extra = this.$store.state.job.extra
+    }
+//         if (this.$store.state.job.subject) {
+//     this.subject = this.$store.state.job.subject
+//     }
+//         if (this.$store.state.job.purpose) {
+//     this.purpose = this.$store.state.job.purpose
+// }
+//       if (this.$store.state.job.level) {
+// this.level = this.$store.state.job.level
+// }
+
+// if (this.$store.state.job.day) {
+// this.day = this.$store.state.job.day
+// }
+
+// if (this.$store.state.job.location) {
+// this.location = this.$store.state.job.location
+// }
+
+// if (this.$store.state.job.extra) {
+// this.extra = this.$store.state.job.extra
+// }
+
 
 
 },
@@ -199,7 +223,13 @@ this.extra = this.$store.state.job.extra
 
   methods: {
       clearup(){
-   this.$store.dispatch('setJob', null)
+var job = {
+
+
+}
+
+
+   this.$store.dispatch('setJob', '')
       },
  
    onSubmit(){

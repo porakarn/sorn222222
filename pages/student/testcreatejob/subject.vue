@@ -123,10 +123,11 @@ import moment from 'moment';
 
 
 mounted() {
+      if (this.$store.state.job) {
     if (this.$store.state.job.subject) {
      this.selected = this.$store.state.job.subject  
     }
-
+}
 
 },
 //   computed: {
@@ -155,7 +156,7 @@ mounted() {
 
 //       }
 
-
+    // var name = person ? person.name : "stranger";
 var job = {
 subject : this.selected,
 subjectDetail : this.subjectDetail,

@@ -12,7 +12,7 @@ const store = () => {
       haveProfile: false,
       agent: null,
       student: null,
-      job: null,
+      job: '',
       alltutor: []
 
     },
