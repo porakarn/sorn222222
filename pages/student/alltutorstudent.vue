@@ -1,7 +1,17 @@
 <template>
 
 <b-container fluid style="padding:0px;">
-
+<div style="margin-top:-6x;    padding-top: 8px;
+    padding-bottom: 9px; width:100%;   background-color: #DFAEA9; box-shadow: 0px 2px 3px -1px rgba(126, 126, 126, 0.2), 0px 4px 5px 0px rgba(0, 0, 0, 0), 0px 1px 10px 0px #00000003;">
+<div style="text-align:center!important;">
+     <b-button v-b-modal.modal1  class="responsive" style="font-size: 17px;
+    color:#A5A5A5; 
+    background-color: #FCF9F9;
+    border-color: rgba(108, 117, 125, 0);
+    border-radius: 14px;
+    width:89%;
+"><i style=" font-size: 20px; color: #A5A5A5;   " class="fa fa-search nav-item " aria-hidden="true"></i> ค้นหาติวเตอร์ตามวิชา</b-button></div>
+</div>
 
 <b-container fluid style="padding:0px;" >
        <br>
@@ -9,14 +19,14 @@
 " >
  ติวเตอร์ทั้งหมด ({{ tutors.length }})</p> -->
 <div style="text-align:center;">
-     <b-button v-b-modal.modal1  class="responsive" style="font-size: 17px;
+     <!-- <b-button v-b-modal.modal1  class="responsive" style="font-size: 17px;
     color: #5f5f5f; 
     background-color: #f5f5f5;
     border-color: rgba(108, 117, 125, 0);
     border-radius: 18px;
     padding-left: 17px;
     padding-right: 20px;
-"><i style=" font-size: 20px; color: #5f5f5f;   " class="fa fa-search nav-item " aria-hidden="true"></i> ค้นหาติวเตอร์ตามวิชา</b-button>
+"><i style=" font-size: 20px; color: #5f5f5f;   " class="fa fa-search nav-item " aria-hidden="true"></i> ค้นหาติวเตอร์ตามวิชา</b-button> -->
 <div v-show="selected.length >0">
  <br> <strong  v-for="selecting in selected" style="    background-color: #c6f1d0;
     padding: 5px;
@@ -81,8 +91,8 @@
 
         </b-col>
          <b-col cols="8" style="margin-left:-5px;padding-left: 0px; padding-right: 2px;">
-<p style=" padding-left: 0px;margin-bottom: 0px; font-weight:600; font-size:17px; margin-top: -6px;">{{tutor.name.substring(0,21)}}   <strong style=" background-color: #ffc107;
-    border-radius: 4px;
+<p style=" padding-left: 0px;margin-bottom: 0px; font-weight:600; font-size:17px; margin-top: -6px;">{{tutor.name.substring(0,21)}}   <strong style=" background-color:#EEC0BB;
+    border-radius: 6px;
     color: white;
     font-weight: 500;
     padding-right: 5px;
@@ -94,7 +104,7 @@
  </strong></p>
 <p style="color:#545454; font-size:16px;margin-bottom: 0px;margin-bottom: 3px;
 " v-if="tutor.subject">
-    <i style=" font-size:15px;       color:#9dd8bf;" class="fa fa-graduation-cap" aria-hidden="true"></i> {{tutor.subject.substring(0,70)}}</p>
+    {{tutor.subject.substring(0,70)}}</p>
 <p style="color:#545454; font-size:16px   ;  margin-bottom: 0px;" v-if="tutor.profile">
     {{tutor.profile.substring(0,65)}}...</p>
 
@@ -130,15 +140,15 @@
 <div style="    background-color: #f9fbfa;
     border-radius: 13px;
 " class=" scrolling-wrapper">
-               <a   style=" color: #9dd8bf;
+               <a   style=" color: #ECC1BC;
     text-decoration: none;
    
     padding: 3px 8px;
-    margin-left: 6px;
+    margin-left: 2px;
     margin-top: 7px;
     font-size: 16px;
     border-radius: 11px;"  href="#" 
-           class="card-link"><i class="fa fa-map-marker" aria-hidden="true"></i>
+           class="card-link">
 {{tutor.location}}</a>
 </div>
               <!-- <a v-for="tag in tutor.tag" v-show="tutor.tag.length >0" style="    color: rgb(255, 255, 255);
@@ -378,7 +388,7 @@ nextPage2(){
      
 }
 ,
-    layout: 'student2'
+    layout: 'studentnoshadow'
 
 
 
