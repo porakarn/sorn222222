@@ -156,7 +156,7 @@ mounted() {
 var job = {
 subject : this.selected,
 subjectDetail : this.subjectDetail,
-// purpose : this.$store.state.job.purpose,
+purpose : this.$store.state.job.purpose,
 // gradelevel :this.$store.state.job.gradelevel, 
 // day : this.$store.state.job.day, 
 // time : this.$store.state.job.time, 
@@ -167,7 +167,7 @@ subjectDetail : this.subjectDetail,
 }
 
    this.$store.dispatch('setJob', job)
-//  this.$router.push('/student/demo2')
+ this.$router.push('/student/demo2')
 console.log(job);
 
 

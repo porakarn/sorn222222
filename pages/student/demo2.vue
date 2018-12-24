@@ -36,11 +36,11 @@
          <strong style="    color: rgb(109, 109, 109);
     font-weight: 400;
     padding-left: 9px;">
-วิชาที่อยากเรียน   </strong> <Strong style="flaot:right; font-weight:400;color:grey;">{{subject}}</Strong> 
+วิชาที่อยากเรียน   </strong>
 <i style="    float: right;
     margin-top: 5px;
 color: #afafaf;
-    font-size: 20px;" class="fa fa-angle-right" aria-hidden="true"></i>
+    font-size: 20px;" class="fa fa-angle-right" aria-hidden="true"></i> <Strong style="float:right; font-weight:400;color:#c1c1c1;margin-right:13px;">{{subject}}</Strong> 
     </b-card>
       <b-card @click="seeeach('purpose')" class="card1" >
          <strong style="    color: rgb(109, 109, 109);
@@ -50,7 +50,7 @@ color: #afafaf;
 <i style="    float: right;
     margin-top: 5px;
 color: #afafaf;
-    font-size: 20px;" class="fa fa-angle-right" aria-hidden="true"></i>
+    font-size: 20px;" class="fa fa-angle-right" aria-hidden="true"></i> <Strong style="float:right; font-weight:400;color:#c1c1c1;margin-right:13px;">{{purpose}}</Strong>
     </b-card>
       <b-card @click="seeeach('level')" class="card1" >
            <strong style="    color: rgb(109, 109, 109);
@@ -137,6 +137,7 @@ import moment from 'moment';
       tutors:{},
        loading: false,
        subject:'',
+       purpose:'',
            profile2: false,
         selected: [], // Array reference
       options: [
@@ -163,7 +164,8 @@ import moment from 'moment';
 
 
 mounted() {
-this.subject = this.$store.state.job.subject
+this.subject = this.$store.state.job.subject,
+this.purpose = this.$store.state.job.purpose
 
 },
 //   computed: {
