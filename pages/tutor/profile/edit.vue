@@ -84,10 +84,12 @@ color: rgb(117, 119, 120); border:1px !important;">โปรไฟล์ขอ�
        <b-form-textarea style="  white-space: pre-wrap;   padding-top: 0px;
 " class="formpor" id="textarea1"
                      v-model="price"
-                     placeholder=""
-                     :rows="2"
+                     placeholder="ค่าสอน"
+                     :rows="1"
                      :max-rows="6">
     </b-form-textarea>
+    <p style="color:grey; font-size:14px; margin-top:2px;">เช่น คณิตศาสตร์ Pat1 300 บาท / ชม</p>
+
       <!-- <b-form-input focus="false"  class="formpor" id="input-large"  type="text" :placeholder="this.$store.state.user.email"></b-form-input> -->
     </b-col>
   </b-row>
