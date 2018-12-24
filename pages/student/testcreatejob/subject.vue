@@ -123,6 +123,9 @@ import moment from 'moment';
 
 
 mounted() {
+    if (this.$store.state.job.subject) {
+     this.selected = this.$store.state.job.subject  
+    }
 
 
 },
@@ -157,13 +160,13 @@ var job = {
 subject : this.selected,
 subjectDetail : this.subjectDetail,
 purpose : this.$store.state.job.purpose,
-// gradelevel :this.$store.state.job.gradelevel, 
-// day : this.$store.state.job.day, 
-// time : this.$store.state.job.time, 
-// duration : this.$store.state.job.duration, 
-// province: this.$store.state.job.province, 
-// location: this.$store.state.job.location, 
-// extra : this.$store.state.job.extra, 
+level :this.$store.state.job.level, 
+day : this.$store.state.job.day, 
+time : this.$store.state.job.time, 
+duration : this.$store.state.job.duration, 
+province: this.$store.state.job.province, 
+location: this.$store.state.job.location, 
+extra : this.$store.state.job.extra, 
 }
 
    this.$store.dispatch('setJob', job)

@@ -33,7 +33,7 @@
         -->
 
  <b-form-textarea id="textarea1"
-                     v-model="text"
+                     v-model="extra"
                      placeholder="รายละเอียดเพิ่มเติม (ถ้ามี)"
                      :rows="3"
                      :max-rows="6">
@@ -50,13 +50,13 @@
 <br><br>
 <!-- <button @click="testbtn">Test</button> -->
 
- <div  style="text-align :center">       <nuxt-link class="nav-item" style="color:#345d46; " to="/student/createjob">   <b-button 
+ <div  style="text-align :center">          <b-button @click="onSubmit"
    style="background-color: #EFBAB5; border: 0px;     padding-left: 64px;
     padding-right: 64px;
     
     padding-top: 11px;
     padding-bottom: 11px;
-    border-radius: 22px;">ลงประกาศหาติวเตอร์</b-button></nuxt-link> </div> 
+    border-radius: 22px;">ลงประกาศหาติวเตอร์</b-button> </div> 
 </b-container>
 </b-container>
 </template>
@@ -70,7 +70,7 @@ import moment from 'moment';
     data(){
     return {
       tutors:{},
-      forms: '',
+      extra: '',
        loading: false,
            profile2: false,
            selected: null,
@@ -106,6 +106,9 @@ import moment from 'moment';
 
 
 mounted() {
+ if (this.$store.state.job.extra) {
+     this.extra = this.$store.state.job.extra   
+    }
 
 
 },
@@ -122,9 +125,23 @@ mounted() {
 
 
   methods: {
-  testbtn(){
-console.log(this.selected);
+ onSubmit(){
 
+var job = {
+subject : this.$store.state.job.subject,
+subjectDetail : this.$store.state.job.subjectDetail,
+purpose : this.$store.state.job.purpose,
+level :this.$store.state.job.level,
+day : this.$store.state.job.day, 
+time : this.$store.state.job.time, 
+duration : this.$store.state.job.duration, 
+province: this.$store.state.job.province, 
+location: this.$store.state.job.location, 
+extra : this.extra, 
+}
+
+   this.$store.dispatch('setJob', job)
+ this.$router.push('/student/demo2')
   },
 
   goback(){

@@ -4,12 +4,13 @@
 <div style="width: 100%;
     height: 122px;
     background-color: #efbab5;">
+  
      <i  style="     padding-left: 12px;
     padding-up: 7px;
     font-size: 22px;
     color: white;
     padding-top: 7px;
-" class="fa fa-angle-left" aria-hidden="true"></i>  <strong style=" font-size: 21px;color:white; font-weight: 400">
+" class="fa fa-arrow-left responsive" aria-hidden="true"></i>  <strong style=" font-size: 18px;color:white; font-weight: 400">
 สร้างประกาศหาติวเตอร์</strong>
   <!-- <Strong style="color:white; font-weight:300px; font-size:18px;">  <i class="fa fa-arrow-left" aria-hidden="true"></i>
  สร้างประกาศหาติวเตอร์
@@ -59,7 +60,7 @@ color: #afafaf;
 ระดับชั้น    </strong>
 <i style="    float: right;
     margin-top: 5px;
-color: #afafaf;    font-size: 20px;" class="fa fa-angle-right" aria-hidden="true"></i>
+color: #afafaf;    font-size: 20px;" class="fa fa-angle-right" aria-hidden="true"></i><Strong style="float:right; font-weight:400;color:#c1c1c1;margin-right:13px;">{{level}}</Strong>
     </b-card>
        <b-card @click="seeeach('datetime')" class="card1" >
            <strong style="    color: rgb(109, 109, 109);
@@ -68,7 +69,7 @@ color: #afafaf;    font-size: 20px;" class="fa fa-angle-right" aria-hidden="true
 วัน เวลา ที่สะดวก </strong>
 <i style="    float: right;
     margin-top: 5px;
-color: #afafaf;    font-size: 20px;" class="fa fa-angle-right" aria-hidden="true"></i>
+color: #afafaf;    font-size: 20px;" class="fa fa-angle-right" aria-hidden="true"></i><Strong style="float:right; font-weight:400;color:#c1c1c1;margin-right:13px;">{{day.toString()}}</Strong>
     </b-card>
        <b-card @click="seeeach('location')" class="card1" >
            <strong style="    color: rgb(109, 109, 109);
@@ -78,7 +79,7 @@ color: #afafaf;    font-size: 20px;" class="fa fa-angle-right" aria-hidden="true
 <i style="    float: right;
     margin-top: 5px;
 color: #afafaf;
-    font-size: 20px;" class="fa fa-angle-right" aria-hidden="true"></i>
+    font-size: 20px;" class="fa fa-angle-right" aria-hidden="true"></i><Strong style="float:right; font-weight:400;color:#c1c1c1;margin-right:13px;">{{location}}</Strong>
     </b-card>
        <b-card @click="seeeach('extra')" class="card1" >
            <strong style="    color: rgb(109, 109, 109);
@@ -88,7 +89,7 @@ color: #afafaf;
 <i style="    float: right;
     margin-top: 5px;
 color: #afafaf;
-    font-size: 20px;" class="fa fa-angle-right" aria-hidden="true"></i>
+    font-size: 20px;" class="fa fa-angle-right" aria-hidden="true"></i><Strong style="float:right; font-weight:400;color:#c1c1c1;margin-right:13px;">{{extra}}</Strong>
     </b-card>
     
      </b-container>
@@ -137,7 +138,16 @@ import moment from 'moment';
       tutors:{},
        loading: false,
        subject:'',
+       subjectDetail:'',
        purpose:'',
+       level:'',
+       day:'',
+       time:'',
+       duration: '',
+       province:'',
+       location:'',
+       extra:'',
+
            profile2: false,
         selected: [], // Array reference
       options: [
@@ -164,8 +174,13 @@ import moment from 'moment';
 
 
 mounted() {
-this.subject = this.$store.state.job.subject,
+this.subject = this.$store.state.job.subject
 this.purpose = this.$store.state.job.purpose
+this.level = this.$store.state.job.level
+this.day = this.$store.state.job.day
+this.location = this.$store.state.job.location
+this.extra = this.$store.state.job.extra
+
 
 },
 //   computed: {
