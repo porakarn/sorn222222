@@ -228,8 +228,8 @@ mounted() {
 
   methods: {
       clearup(){
-          console.log(this.$store.state.user.picture);
-                    console.log(this.$store.state.user);
+          console.log(this.$store.state.student.picture);
+                    console.log(this.$store.state.student);
 
 var job = {
 
@@ -254,11 +254,11 @@ province: this.$store.state.job.province,
 location: this.$store.state.job.location, 
 extra : this.$store.state.job.extra, 
 
-creator_pic:this.$store.state.user.picture,
-creator_contact:this.$store.state.user.phone,
-creator_line: this.$store.state.user.line,
-creator_name: this.$store.state.user.name,
-creator_id_student: this.$store.state.user._id,
+creator_pic:this.$store.state.student.picture,
+creator_contact:this.$store.state.student.phone,
+creator_line: this.$store.state.student.line,
+creator_name: this.$store.state.student.name,
+creator_id_student: this.$store.state.student._id,
 // creator_id_tutor: { type: Schema.ObjectId, ref: 'Tutor2'},
 }
 //   axios.post('http://localhost:8000/job2/create', job)
