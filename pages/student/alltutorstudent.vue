@@ -78,7 +78,7 @@
   </b-modal>
 
 
-     <b-card @click="seeeach(tutor._id)"  style="margin-bottom:0px;     border: 1px solid rgba(164, 164, 164, 0.125);
+     <b-card @click="seeeach(tutor._id)"  style="margin-bottom:0px;     padding-left: 8px;   border: 1px solid rgba(255, 255, 255, 0.125);
     border-radius: 1px;     box-shadow: rgba(148, 142, 142, 0) 0px 1px 3px -1px, rgba(255, 251, 251, 0) 0px 4px 5px 0px, rgba(0, 0, 0, 0.01) 0px 1px 10px 0px;
 
 "  v-for="tutor in tutors" :key="tutor._id"  v-if="tutor.subject" >
@@ -91,8 +91,8 @@
 
         </b-col>
          <b-col cols="8" style="margin-left:-5px;padding-left: 0px; padding-right: 2px;">
-<p style=" padding-left: 0px;margin-bottom: 0px; font-weight:600; font-size:17px; margin-top: -6px;">{{tutor.name.substring(0,21)}}   <strong style=" background-color:#EEC0BB;
-    border-radius: 6px;
+<p style=" padding-left: 0px;margin-bottom: 0px; font-weight:600; font-size:17px; margin-top: -6px;">{{tutor.name.replace(/ .*/,'')}}   <strong style=" background-color:#EEC0BB;
+    border-radius: 4px;
     color: white;
     font-weight: 500;
     padding-right: 5px;
