@@ -4,7 +4,7 @@
 <div style="width: 100%;
     height: 122px;
     background-color: #efbab5;">
-     <i @click="goback" style="     padding-left: 12px;
+     <i  style="     padding-left: 12px;
     padding-up: 7px;
     font-size: 22px;
     color: white;
@@ -36,7 +36,7 @@
          <strong style="    color: rgb(109, 109, 109);
     font-weight: 400;
     padding-left: 9px;">
-วิชาที่อยากเรียน   </strong>  
+วิชาที่อยากเรียน   </strong> <Strong style="flaot:right; font-weight:400;color:grey;">{{subject}}</Strong> 
 <i style="    float: right;
     margin-top: 5px;
 color: #afafaf;
@@ -136,6 +136,7 @@ import moment from 'moment';
     return {
       tutors:{},
        loading: false,
+       subject:'',
            profile2: false,
         selected: [], // Array reference
       options: [
@@ -162,7 +163,7 @@ import moment from 'moment';
 
 
 mounted() {
-
+this.subject = this.$store.state.job.subject
 
 },
 //   computed: {

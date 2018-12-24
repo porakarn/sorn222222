@@ -12,6 +12,7 @@ const store = () => {
       haveProfile: false,
       agent: null,
       student: null,
+      job: null,
       alltutor: []
 
     },
@@ -30,6 +31,9 @@ const store = () => {
        setUser(state, user) {
          state.user = user
        },
+      setJob(state, job) {
+        state.job = job
+      },
        setAgent(state, agent) {
          state.agent = agent
        },
@@ -51,6 +55,9 @@ const store = () => {
       },
       setUser({commit}, user) {
         commit('setUser', user)
+      },
+      setJob({ commit }, job) {
+        commit('setJob', job)
       },
       setAgent({commit}, agent) {
          commit('setAgent', agent)
