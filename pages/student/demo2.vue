@@ -98,13 +98,13 @@ color: #afafaf;
     <br>
  
      
-   <div  style="text-align :center">       <nuxt-link class="nav-item" style="color:#345d46; " to="/student/createjob">   <b-button 
+   <div  style="text-align :center">        <b-button @click="onSubmit"
    style="background-color: #EFBAB5; border: 0px;     padding-left: 64px;
     padding-right: 64px;
     
     padding-top: 11px;
     padding-bottom: 11px;
-    border-radius: 22px;">ลงประกาศหาติวเตอร์</b-button></nuxt-link> </div> 
+    border-radius: 22px;">ลงประกาศหาติวเตอร์</b-button> </div> 
 
 <br>
    <b-modal no-fade hide-header  hide-footer  centered ref="myModalRef" hide-footer title="Using Component Methods">
@@ -197,6 +197,53 @@ this.extra = this.$store.state.job.extra
 
   methods: {
  
+   onSubmit(){
+var job = {
+subject : this.$store.state.job.subject,
+subjectDetail : this.$store.state.job.subjectDetail,
+purpose : this.$store.state.job.purpose,
+level :this.$store.state.job.level, 
+day : this.$store.state.job.day, 
+time : this.$store.state.job.time, 
+duration : this.$store.state.job.duration, 
+province: this.$store.state.job.province, 
+location: this.$store.state.job.location, 
+extra : this.$store.state.job.extra, 
+
+creator_pic:this.$store.state.user.picture,
+creator_contact:this.$store.state.user.phone,
+creator_line: this.$store.state.user.line,
+creator_name: this.$store.state.user.name,
+creator_id_student: this.$store.state.user._id,
+// creator_id_tutor: { type: Schema.ObjectId, ref: 'Tutor2'},
+}
+//   axios.post('http://localhost:8000/job2/create', job)
+
+  axios.post('https://frozen-mesa-40722.herokuapp.com/job2/create', job)
+          .then((res) => { 
+              console.log(job);
+              
+              console.log(res.data)
+                  
+ 
+     
+    //    this.form.email = ''
+    //    this.form.subject = ''
+    //     this.form.note = ''
+    //     this.form.tuitionfee = ''
+    //     this.form.school = ''
+    //    this.form.dayandtime = ''
+    //     this.form.location = ''
+    //     this.form.food = null
+    //     this.form.gender = null
+     
+              
+
+  
+          })
+          .catch(error => console.log(error))
+
+   },
 
     sendout(){
 this.loading = true
