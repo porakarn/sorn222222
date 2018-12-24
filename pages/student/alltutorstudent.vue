@@ -1,7 +1,7 @@
 <template>
 
 <b-container fluid style="padding:0px;">
-<div style="margin-top:-6x;    padding-top: 8px;
+<div style="margin-top:-5x;    padding-top: 7px;
     padding-bottom: 9px; width:100%;   background-color: #DFAEA9; box-shadow: 0px 2px 3px -1px rgba(126, 126, 126, 0.2), 0px 4px 5px 0px rgba(0, 0, 0, 0), 0px 1px 10px 0px #00000003;">
 <div style="text-align:center!important;">
      <b-button v-b-modal.modal1  class="responsive" style="font-size: 17px;
@@ -137,8 +137,8 @@
     font-size: 15px;
     border-radius: 11px;"  href="#" 
            class="card-link">{{tag.toString()}}</a> -->
-<div style="    background-color: #f9fbfa;
-    border-radius: 13px;
+<div style="   
+    
 " class=" scrolling-wrapper">
                <a   style=" color: #ECC1BC;
     text-decoration: none;
