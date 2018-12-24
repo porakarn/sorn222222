@@ -32,7 +32,7 @@
     padding-right: 16px;">
 
 
-    <b-card @click="seeeach()" class="card1" >
+    <b-card @click="seeeach('subject')" class="card1" >
          <strong style="    color: rgb(109, 109, 109);
     font-weight: 400;
     padding-left: 9px;">
@@ -42,7 +42,7 @@
 color: #afafaf;
     font-size: 20px;" class="fa fa-angle-right" aria-hidden="true"></i>
     </b-card>
-      <b-card @click="seeeach()" class="card1" >
+      <b-card @click="seeeach('purpose')" class="card1" >
          <strong style="    color: rgb(109, 109, 109);
     font-weight: 400;
     padding-left: 9px;">
@@ -52,7 +52,7 @@ color: #afafaf;
 color: #afafaf;
     font-size: 20px;" class="fa fa-angle-right" aria-hidden="true"></i>
     </b-card>
-      <b-card @click="seeeach()" class="card1" >
+      <b-card @click="seeeach('level')" class="card1" >
            <strong style="    color: rgb(109, 109, 109);
     font-weight: 400;
     padding-left: 9px;">
@@ -61,7 +61,7 @@ color: #afafaf;
     margin-top: 5px;
 color: #afafaf;    font-size: 20px;" class="fa fa-angle-right" aria-hidden="true"></i>
     </b-card>
-       <b-card @click="seeeach()" class="card1" >
+       <b-card @click="seeeach('datetime')" class="card1" >
            <strong style="    color: rgb(109, 109, 109);
     font-weight: 400;
     padding-left: 9px;">
@@ -70,7 +70,7 @@ color: #afafaf;    font-size: 20px;" class="fa fa-angle-right" aria-hidden="true
     margin-top: 5px;
 color: #afafaf;    font-size: 20px;" class="fa fa-angle-right" aria-hidden="true"></i>
     </b-card>
-       <b-card @click="seeeach()" class="card1" >
+       <b-card @click="seeeach('location')" class="card1" >
            <strong style="    color: rgb(109, 109, 109);
     font-weight: 400;
     padding-left: 9px;">
@@ -80,7 +80,7 @@ color: #afafaf;    font-size: 20px;" class="fa fa-angle-right" aria-hidden="true
 color: #afafaf;
     font-size: 20px;" class="fa fa-angle-right" aria-hidden="true"></i>
     </b-card>
-       <b-card @click="seeeach()" class="card1" >
+       <b-card @click="seeeach('extra')" class="card1" >
            <strong style="    color: rgb(109, 109, 109);
     font-weight: 400;
     padding-left: 9px;">
@@ -238,9 +238,11 @@ let createPost = {
 
    seeeach(x){
  
-
-     this.$router.push('/student/demo3')
-
+     this.$router.push(`/student/testcreatejob/${x}`)
+    // console.log(`${x}`);
+    
+    // //  this.$router.push('/student/testcreatejob')
+    //  alert(`${x}`)
        
    },
 

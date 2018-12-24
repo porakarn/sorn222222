@@ -59,7 +59,7 @@
     </b-form-textarea> -->
 
 <br><br>
-<button @click="testbtn">Test</button>
+<!-- <button @click="testbtn">Test</button> -->
 
  <div  style="text-align :center">       <nuxt-link class="nav-item" style="color:#345d46; " to="/student/createjob">   <b-button 
    style="background-color: #EFBAB5; border: 0px;     padding-left: 64px;
@@ -86,7 +86,7 @@ import moment from 'moment';
            profile2: false,
            selected: null,
       options: [
-        { value: null, text: 'วิชา' },
+        { value: null, text: 'วิชาที่อยากเรียน' },
         { value: 'ENG', text: 'ENG' },
         { value: 'คณิต', text: 'คณิตศาสตร์' },
         { value: 'วิทย์', text: 'วิทยาศาสตร์' },
