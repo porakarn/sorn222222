@@ -176,6 +176,11 @@ import moment from 'moment';
 
 
 mounted() {
+
+ if (!this.$store.state.job) {
+   this.$store.dispatch('setJob', '')
+}
+
       if (this.$store.state.job) {
   this.subject = this.$store.state.job.subject
    this.purpose = this.$store.state.job.purpose
@@ -223,7 +228,11 @@ mounted() {
 
   methods: {
       clearup(){
+          console.log(this.$store.state.user.picture);
+                    console.log(this.$store.state.user);
+
 var job = {
+
 
 
 }
