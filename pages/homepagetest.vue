@@ -33,7 +33,7 @@
         </b-form-select>
       </b-form-group>
 
- <b-button @click="totutor" size="lg" style="  background-color: #DFAEA9; border: 0px; 
+ <b-button @click="totutor" size="lg" style=" color:white;  background-color: #DFAEA9; border: 0px; 
     width:80%;">ค้นหา</b-button>  
         <!-- <b-button size="lg" style="  background-color: white; border: 0px; padding-left: 66px; color:#33C1C1;
     padding-right: 66px;">สมัครนักเรียน</b-button>   -->
@@ -299,6 +299,13 @@ export default {
     color: #a6a6a6;
     background-color: #ffffff;
     border-color: #ffffff;
+}
+.card-header {
+    padding: 12px 20px;
+    padding: 0.75rem 1.25rem;
+    margin-bottom: 0;
+    background-color: rgba(255, 255, 255, 0.03);
+    /* border-bottom: 1px solid rgba(222, 222, 222, 0.125); */
 }
 
 </style>
