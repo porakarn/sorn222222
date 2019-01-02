@@ -1,8 +1,43 @@
 <template>
 <b-container fluid style="padding:0px">
-    <b-container fluid>
-        <br>
+    <b-navbar  style="  box-shadow: rgba(255, 255, 255, 0.267) -1px 2px 6px 0px;  
+    padding-top: 12px;  background-color:white!important; "toggleable >
+        <b-navbar-toggle style="border-color: rgba(0, 0, 0, 0);    padding-left: 0px;
+    padding-right: 0px;" target="nav_text_collapse"></b-navbar-toggle>
+        <!-- <b-navbar-brand>BootstrapVue</b-navbar-brand> -->
+         <!-- <b-navbar-brand style="    color: rgb(51, 193, 193);
+    font-size: 28px;
+    font-weight: 500;margin-left: 55px;" href="#">Sorns</b-navbar-brand> -->
+     <!-- color: #a5efe3; -->
+    <!-- background-color: #effdf3; -->
 
+ 
+        <b-collapse is-nav id="nav_text_collapse">
+            <b-navbar-nav class="ml-auto">
+                 <!-- <b-nav-item href="#">ค้นหางาน</b-nav-item>
+                <b-nav-item href="#">สร้างงานใหม่</b-nav-item>
+                <b-nav-item href="#">งานของคุณ</b-nav-item>
+                <b-nav-item href="#">โปรไฟล์ของคุณ</b-nav-item> -->
+            <b-nav-item  style=" color:#345d46;   padding-right: 65px;">   <nuxt-link class="nav-item" style="color:#345d46; " to="/student/alltutorstudent">  <i class="fa fa-search " aria-hidden="true"></i>  Search Tutor </nuxt-link></b-nav-item>
+             <b-nav-item  style="    padding-right: 65px;">  <nuxt-link class="nav-item" style="color:#345d46; " to="/student/createjob">  <i class="fa fa-pencil" aria-hidden="true"></i> Create Post  </nuxt-link></b-nav-item>
+             <b-nav-item  style="    padding-right: 65px;"><nuxt-link class="nav-item" style="color:#345d46; " to="/student/yourjob"> <i class="fa fa-book" aria-hidden="true"></i> Message </nuxt-link></b-nav-item>
+             <b-nav-item style="    padding-right: 65px;"><nuxt-link class="nav-item" style="color:#345d46; " to="/student/profile"><i class="fa fa-user-circle" aria-hidden="true"></i> Profile </nuxt-link></b-nav-item>
+              <b-nav-item  @click="logout" style="    padding-right: 100px;"><nuxt-link  style="color:#345d46; " to="/choose"><i class="fa fa-sign-out" aria-hidden="true"></i> Logout </nuxt-link></b-nav-item>
+
+                
+                
+                
+
+
+            </b-navbar-nav>
+        </b-collapse>
+    </b-navbar>
+    <b-container fluid>
+
+        
+        <br>
+ <b-col style="    padding-left: 0px;
+    padding-right: 0px;" md="6" offset-md="3">
         <div style="text-align:center" >
                      <img src="/Sornstutorlogo.png" style="border-radius: 5px" height="85"> 
 </div>
@@ -42,7 +77,10 @@
 
 
 </div>
+</b-col>
 <br>
+ <b-col style="    padding-left: 0px;
+    padding-right: 0px;" md="6" offset-md="3">
 <p style="font-weight:bold">ดูติวเตอร์ทั้งหมด (300)</p>
 <b-row>
   <b-col style="padding-right:10px" cols="6" >
@@ -151,15 +189,16 @@ GAT PAT SAT CU-TEP IELTS 9 วิชาสามัญ
 ภาษาญี่ปุ่น เกาหลี ฝรั่งเศษ</p>
 <br><br>
 
-
+ </b-col>
 
    </b-container>
 
    <b-container fluid style="padding:0px">
        <div style=" padding:0px; background-color:#FFF2F2">
     <br>
-   
-<template   >
+   <b-col style="    padding-left: 0px;
+    padding-right: 0px;" md="6" offset-md="3">
+<template>
   <div style="background-color:#FFF2F2;     padding-left: 20px;
     padding-right: 20px;" role="tablist">
  <h1 style="text-align:center;font-size :20px; color:#DFAEA9; margin-bottom:15px;">คำถามที่พบบ่อย</h1>
@@ -236,17 +275,26 @@ GAT PAT SAT CU-TEP IELTS 9 วิชาสามัญ
   </div>
   <br><br>
 </template>
-
+</b-col>
 </div><br><br>
   <b-container fluid>
+      <b-col style="    padding-left: 0px;
+    padding-right: 0px;" md="6" offset-md="3">
 <div style="text-align:center">
    
                      <img src="/Sornstutorlogo.png" style="border-radius: 5px ;margin-bottom:16px;" height="75"> 
 
-<h1 style="font-size:19px;margin-bottom:22px;" > รับส่วนลดสูงสุด 200 บาท ดูรายละเอียดได้ที่   </h1>
+<h1 style="font-size:19px;margin-bottom:22px;" > ใช้ครั้งแรก รับส่วนลดสูงสุด 200 บาท   </h1>
   <b-button @click="totutor" size="lg" style=" color:white;  background-color: #DFAEA9; border: 0px; 
-    width:70%;">สอบถามเพิ่มเติม</b-button>
+    width:70%;">ดูรายละเอียดส่วนลด</b-button>
+    <b-button @click="totutor" size="lg" style="    color: #dfaea9;
+    background-color: rgb(255, 255, 255);
+    border: 0px;
+    width: 70%;
+    margin-top: 8px;
+    border: solid 1px;">เข้าสู่ระบบ</b-button>
 </div>
+</b-col>
 </b-container>
 <br><br><br>
   <b-container fluid style="padding:0px">
