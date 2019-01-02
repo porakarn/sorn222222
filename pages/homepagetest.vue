@@ -10,7 +10,12 @@
     font-weight: 500;margin-left: 55px;" href="#">Sorns</b-navbar-brand> -->
      <!-- color: #a5efe3; -->
     <!-- background-color: #effdf3; -->
-
+<b-button @click="totutor" size="lg" style="    color: #dfaea9;
+    background-color: rgb(255, 255, 255);     padding-top: 5px;
+    padding-bottom: 5px;
+    border-radius: 25px;
+    margin-top: 4px;
+    border: solid 1px;">เข้าสู่ระบบ</b-button>
  
         <b-collapse is-nav id="nav_text_collapse">
             <b-navbar-nav class="ml-auto">
