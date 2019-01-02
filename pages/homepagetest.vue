@@ -249,6 +249,22 @@ GAT PAT SAT CU-TEP IELTS 9 วิชาสามัญ
 </div>
 </b-container>
 <br><br><br>
+  <b-container fluid style="padding:0px">
+       <div style=" padding:0px; background-color:#000000">
+<br>
+
+<p style="color:white ; margin-left: 13px;">ติดต่อเรา </p>
+<p style="color:white; margin-left: 13px;">เข้ากลุ่มไลน์ </p>
+<p style="color:white; margin-left: 13px;">สมัครเป็นติวเตอร์</p>
+<p style="color:white; margin-left: 13px;">ทีมงาน</p>
+<p style="color:white; margin-left: 13px;">Sorns.co</p>
+
+<br>
+<br>
+<br>
+           </div>
+           </b-container>
+
        </b-container>
        </b-container>
 </template>
