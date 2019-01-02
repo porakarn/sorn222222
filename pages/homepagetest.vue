@@ -163,7 +163,8 @@ GAT PAT SAT CU-TEP IELTS 9 วิชาสามัญ
     padding-right: 15px;" role="tablist">
     <b-card no-body class="mb-1">
       <b-card-header  header-tag="header" class="p-1" role="tab">
-        <b-btn style="text-align: left;" block href="#" v-b-toggle.accordion1 >วิธีการใช้งาน</b-btn>
+        <b-btn style="text-align: left;" block href="#" v-b-toggle.accordion1 >วิธีการใช้งาน <i style="float:right;padding-top: 4px;" class="fa fa-caret-down" aria-hidden="true"></i>
+</b-btn>
       </b-card-header>
       <b-collapse id="accordion1" visible accordion="my-accordion" role="tabpanel">
         <b-card-body>
@@ -178,7 +179,7 @@ GAT PAT SAT CU-TEP IELTS 9 วิชาสามัญ
     </b-card>
     <b-card no-body class="mb-1">
       <b-card-header  header-tag="header" class="p-1" role="tab">
-        <b-btn style="text-align: left;" block href="#" v-b-toggle.accordion2 >Accordion 2</b-btn>
+        <b-btn style="text-align: left;" block href="#" v-b-toggle.accordion2 >สมัครเป็นติวเตอร์อย่างไร  <i style="float:right;padding-top: 4px;" class="fa fa-caret-down" aria-hidden="true"></i></b-btn>
       </b-card-header>
       <b-collapse id="accordion2" accordion="my-accordion" role="tabpanel">
         <b-card-body>
@@ -190,7 +191,7 @@ GAT PAT SAT CU-TEP IELTS 9 วิชาสามัญ
     </b-card>
     <b-card no-body class="mb-1">
       <b-card-header header-tag="header" class="p-1" role="tab">
-        <b-btn  style="text-align: left;" block href="#" v-b-toggle.accordion3 >Accordion 3</b-btn>
+        <b-btn  style="text-align: left;" block href="#" v-b-toggle.accordion3 >เปลี่ยนติวเตอร์ได้ไหม  <i style="float:right;padding-top: 4px;" class="fa fa-caret-down" aria-hidden="true"></i></b-btn>
       </b-card-header>
       <b-collapse id="accordion3" accordion="my-accordion" role="tabpanel">
         <b-card-body>
@@ -305,7 +306,13 @@ export default {
     padding: 0.75rem 1.25rem;
     margin-bottom: 0;
     background-color: rgba(255, 255, 255, 0.03);
-    /* border-bottom: 1px solid rgba(222, 222, 222, 0.125); */
+    border-bottom: 0px solid rgba(222, 222, 222, 0.125);
 }
+
+.mb-1, .my-1 {
+    margin-bottom: -1px !important;
+}
+
+
 
 </style>
