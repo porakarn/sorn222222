@@ -3,10 +3,10 @@
         <br>
 
         <div style="text-align:center" >
-                     <img src="/Sornstutorlogo.png" style="border-radius: 5px" height="90"> 
+                     <img src="/Sornstutorlogo.png" style="border-radius: 5px" height="85"> 
 </div>
         <div style="text-align: center;">
-         <h1 style="font-size: 20px; margin-top: 10px;">ค้นหาติวเตอร์ตัวต่อตัว</h1>
+         <h1 style="font-size: 20px; margin-top: 10px;  font-family: 'Roboto';">ค้นหาติวเตอร์ตัวต่อตัว</h1>
 
    
 <br>
@@ -14,24 +14,24 @@
 <b-form-group  id="exampleInputGroup3"
                   
                     label-for="exampleInput3">
-        <b-form-select  class="formpor" id="exampleInput3" size="lg"
+        <b-form-select style="width:80%;    border-radius: 7px;" class="formpor" id="exampleInput3" size="lg"
                       :options="options"
                     
                       v-model="selected">
         </b-form-select>
       </b-form-group>
-<b-form-group  id="exampleInputGroup3"
+<b-form-group   id="exampleInputGroup3"
                   
                     label-for="exampleInput3">
-        <b-form-select  class="formpor" id="exampleInput3" size="lg"
+        <b-form-select style="width:80%;    border-radius: 7px;" class="formpor" id="exampleInput3" size="lg"
                       :options="locations"
                     
                       v-model="location">
         </b-form-select>
       </b-form-group>
 
- <b-button @click="totutor" size="lg" style="  background-color: #DFAEA9; border: 0px; padding-left: 66px;
-    padding-right: 66px;">ค้นหา</b-button>  
+ <b-button @click="totutor" size="lg" style="  background-color: #DFAEA9; border: 0px; 
+    width:80%;">ค้นหา</b-button>  
         <!-- <b-button size="lg" style="  background-color: white; border: 0px; padding-left: 66px; color:#33C1C1;
     padding-right: 66px;">สมัครนักเรียน</b-button>   -->
 <br><br>
