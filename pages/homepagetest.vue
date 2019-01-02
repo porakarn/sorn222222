@@ -1,4 +1,5 @@
 <template>
+<b-container fluid style="padding:0px">
     <b-container fluid>
         <br>
 
@@ -148,8 +149,64 @@ Eng คณิต วิทย์ ฟิสิกซ์ เคมี ชีวะ
 <p><i style="color:#EF9087" class="fa fa-check-square" aria-hidden="true"></i>
 GAT PAT SAT CU-TEP IELTS 9 วิชาสามัญ
 ภาษาญี่ปุ่น เกาหลี ฝรั่งเศษ</p>
-<br><br><br><br><br>
+<br><br>
+
+
+
    </b-container>
+
+   <b-container fluid style="padding:0px">
+       <div style=" padding:0px; background-color:#FFF2F2">
+    <br>
+<template   >
+  <div style="background-color:#FFF2F2;     padding-left: 15px;
+    padding-right: 15px;" role="tablist">
+    <b-card no-body class="mb-1">
+      <b-card-header  header-tag="header" class="p-1" role="tab">
+        <b-btn style="text-align: left;" block href="#" v-b-toggle.accordion1 >วิธีการใช้งาน</b-btn>
+      </b-card-header>
+      <b-collapse id="accordion1" visible accordion="my-accordion" role="tabpanel">
+        <b-card-body>
+          <p class="card-text">
+            I start opened because <code>visible</code> is <code>true</code>
+          </p>
+          <p class="card-text">
+            gggg
+          </p>
+        </b-card-body>
+      </b-collapse>
+    </b-card>
+    <b-card no-body class="mb-1">
+      <b-card-header  header-tag="header" class="p-1" role="tab">
+        <b-btn style="text-align: left;" block href="#" v-b-toggle.accordion2 >Accordion 2</b-btn>
+      </b-card-header>
+      <b-collapse id="accordion2" accordion="my-accordion" role="tabpanel">
+        <b-card-body>
+          <p class="card-text">
+            ddddd
+          </p>
+        </b-card-body>
+      </b-collapse>
+    </b-card>
+    <b-card no-body class="mb-1">
+      <b-card-header header-tag="header" class="p-1" role="tab">
+        <b-btn  style="text-align: left;" block href="#" v-b-toggle.accordion3 >Accordion 3</b-btn>
+      </b-card-header>
+      <b-collapse id="accordion3" accordion="my-accordion" role="tabpanel">
+        <b-card-body>
+          <p class="card-text">
+           ddddd
+          </p>
+        </b-card-body>
+      </b-collapse>
+    </b-card>
+  </div>
+</template>
+
+</div><br><br>
+<br><br><br>
+       </b-container>
+       </b-container>
 </template>
 
 
@@ -236,6 +293,12 @@ export default {
     display: none!important;
   }
  
+}
+
+.btn-secondary {
+    color: #a6a6a6;
+    background-color: #ffffff;
+    border-color: #ffffff;
 }
 
 </style>
