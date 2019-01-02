@@ -158,9 +158,11 @@ GAT PAT SAT CU-TEP IELTS 9 วิชาสามัญ
    <b-container fluid style="padding:0px">
        <div style=" padding:0px; background-color:#FFF2F2">
     <br>
+    <br><br>
+
 <template   >
-  <div style="background-color:#FFF2F2;     padding-left: 15px;
-    padding-right: 15px;" role="tablist">
+  <div style="background-color:#FFF2F2;     padding-left: 20px;
+    padding-right: 20px;" role="tablist">
     <b-card no-body class="mb-1">
       <b-card-header  header-tag="header" class="p-1" role="tab">
         <b-btn style="text-align: left;" block href="#" v-b-toggle.accordion1 >วิธีการใช้งาน <i style="float:right;padding-top: 4px;" class="fa fa-caret-down" aria-hidden="true"></i>
@@ -201,7 +203,32 @@ GAT PAT SAT CU-TEP IELTS 9 วิชาสามัญ
         </b-card-body>
       </b-collapse>
     </b-card>
+    <b-card no-body class="mb-1">
+      <b-card-header header-tag="header" class="p-1" role="tab">
+        <b-btn  style="text-align: left;" block href="#" v-b-toggle.accordion4 >คิดราคาค่าเรียนอย่างไร  <i style="float:right;padding-top: 4px;" class="fa fa-caret-down" aria-hidden="true"></i></b-btn>
+      </b-card-header>
+      <b-collapse id="accordion4" accordion="my-accordion" role="tabpanel">
+        <b-card-body>
+          <p class="card-text">
+           ddddd
+          </p>
+        </b-card-body>
+      </b-collapse>
+    </b-card>
+     <b-card no-body class="mb-1">
+      <b-card-header header-tag="header" class="p-1" role="tab">
+        <b-btn  style="text-align: left;" block href="#" v-b-toggle.accordion5 >ทำไมต้อง Sorns  <i style="float:right;padding-top: 4px;" class="fa fa-caret-down" aria-hidden="true"></i></b-btn>
+      </b-card-header>
+      <b-collapse id="accordion5" accordion="my-accordion" role="tabpanel">
+        <b-card-body>
+          <p class="card-text">
+           ddddd
+          </p>
+        </b-card-body>
+      </b-collapse>
+    </b-card>
   </div>
+  <br><br><br>
 </template>
 
 </div><br><br>
@@ -313,6 +340,14 @@ export default {
     margin-bottom: -1px !important;
 }
 
+.btn-secondary:not(:disabled):not(.disabled):active:focus, .btn-secondary:not(:disabled):not(.disabled).active:focus, .show > .btn-secondary.dropdown-toggle:focus {
+    box-shadow: 0 0 0 0.2rem rgb(223, 174, 169);
+}
+.btn-secondary:not(:disabled):not(.disabled):active, .btn-secondary:not(:disabled):not(.disabled).active, .show > .btn-secondary.dropdown-toggle {
+    color: #fff;
+    background-color: #dfaea9;
+    border-color: #dfaea9;
+}
 
 
 </style>
