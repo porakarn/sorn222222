@@ -15,7 +15,7 @@
 <b-form-group  id="exampleInputGroup3"
                   
                     label-for="exampleInput3">
-        <b-form-select style="width:80%;     font-size: 18px;
+        <b-form-select style="width:80%;     font-size: 17px;
     color: #858484;   border-radius: 7px;" class="formpor" id="exampleInput3" size="lg"
                       :options="options"
                     
@@ -25,7 +25,7 @@
 <b-form-group   id="exampleInputGroup3"
                   
                     label-for="exampleInput3">
-        <b-form-select style="width:80%;      font-size: 18px;
+        <b-form-select style="width:80%;      font-size: 17px;
     color: #858484;  border-radius: 7px;" class="formpor" id="exampleInput3" size="lg"
                       :options="locations"
                     
@@ -240,7 +240,10 @@ GAT PAT SAT CU-TEP IELTS 9 วิชาสามัญ
 </div><br><br>
   <b-container fluid>
 <div style="text-align:center">
-<h1 style="font-size:20px;" > รับส่วนลดสูงสุด 200 บาท ดูรายละเอียดได้ที่   </h1>
+   
+                     <img src="/Sornstutorlogo.png" style="border-radius: 5px ;margin-bottom:16px;" height="75"> 
+
+<h1 style="font-size:19px;margin-bottom:22px;" > รับส่วนลดสูงสุด 200 บาท ดูรายละเอียดได้ที่   </h1>
   <b-button @click="totutor" size="lg" style=" color:white;  background-color: #DFAEA9; border: 0px; 
     width:70%;">สอบถามเพิ่มเติม</b-button>
 </div>
@@ -367,5 +370,10 @@ export default {
     background-color: #dfaea9;
     border-color: #dfaea9;
 }
-
+.btn-secondary:focus, .btn-secondary.focus {
+    box-shadow: 0 0 0 0.2rem rgba(255, 255, 255, 0.5);
+}
+.card {
+    border: 1px solid rgb(255, 255, 255);
+}
 </style>
