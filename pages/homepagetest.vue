@@ -36,11 +36,107 @@
     padding-right: 66px;">สมัครนักเรียน</b-button>   -->
 <br><br>
      
+
+
 </div>
 <br>
+<p style="font-weight:bold">ดูติวเตอร์ทั้งหมด (300)</p>
+<b-row>
+  <b-col style="padding-right:10px" cols="6" >
+
+    <div style="display:inline!important;">
+<img src="https://graph.facebook.com/10214656830593206/picture?type=large" style="border-radius: 5px" width="100%"> 
+<div style="margin-top :3px;">
+<strong >Porakarn</strong>   <strong style=" background-color:#EEC0BB; float:right;
+    border-radius: 2px;
+    color: white;
+    font-weight: 500;
+    padding-right: 5px;
+    padding-left: 4px;
+    font-size: 14px;
+    margin-left: 8px;   
+    margin-right: 0px;
+        padding-top: 1px;
+    margin-top: 4px;"> 4.5 <i style="color:white;" class="fa fa-star" aria-hidden="true"></i></strong>
+</div>
+<p>จบจากแพทย์จุฬา เกรียตินิยม อันดับหนึ่ง</p>
+
+</div>
+  </b-col>
+
+ <b-col style="padding-left:10px" cols="6" >
+
+    <div style="display:inline!important;">
+<img src="https://graph.facebook.com/2152888421419243/picture?type=large" style="border-radius: 5px" width="100%"> 
+<div style="margin-top :3px;">
+<strong >Porakarn</strong>   <strong style=" background-color:#EEC0BB;float:right;
+    border-radius: 2px;
+    color: white;
+    font-weight: 500;
+    padding-right: 5px;
+    padding-left: 4px;
+    font-size: 14px;
+    margin-left: 8px;   
+    margin-right: 0px;
+        padding-top: 1px;
+    margin-top: 4px;"> 4.5 <i style="color:white;" class="fa fa-star" aria-hidden="true"></i></strong>
+</div>
+<p>จบจากแพทย์จุฬา เกรียตินิยม อันดับหนึ่ง</p>
+
+</div>
+  </b-col>
+ <b-col style="padding-right:10px" cols="6" >
+
+    <div style="display:inline!important;">
+<img src="https://graph.facebook.com/2162552630429629/picture?type=large" style="border-radius: 5px" width="100%"> 
+<div style="margin-top :3px;">
+<strong >Porakarn</strong>   <strong style=" background-color:#EEC0BB;float:right;
+    border-radius: 2px;
+    color: white;
+    font-weight: 500;
+    padding-right: 5px;
+    padding-left: 4px;
+    font-size: 14px;
+    margin-left: 8px;   
+    margin-right: 0px;
+        padding-top: 1px;
+    margin-top: 4px;"> 4.5 <i style="color:white;" class="fa fa-star" aria-hidden="true"></i></strong>
+</div>
+<p>จบจากแพทย์จุฬา เกรียตินิยม อันดับหนึ่ง</p>
+
+</div>
+  </b-col>
+ <b-col style="padding-left:10px" cols="6" >
+
+    <div style="display:inline!important;">
+<img src="https://graph.facebook.com/1962031117153451/picture?type=large" style="border-radius: 5px" width="100%"> 
+<div style="margin-top :3px;">
+<strong >Porakarn</strong>   <strong style=" background-color:#EEC0BB;float:right;
+    border-radius: 2px;
+    color: white;
+    font-weight: 500;
+    padding-right: 5px;
+    padding-left: 4px;
+    font-size: 14px;
+    margin-left: 8px;   
+    margin-right: 0px;
+        padding-top: 1px;
+    margin-top: 4px;"> 4.5 <i style="color:white;" class="fa fa-star" aria-hidden="true"></i></strong>
+</div>
+<p>จบจากแพทย์จุฬา เกรียตินิยม อันดับหนึ่ง</p>
+
+</div>
+  </b-col>
 
 
 
+
+   </b-row>
+
+
+
+
+<br><br><br><br><br>
    </b-container>
 </template>
 
@@ -119,5 +215,15 @@ export default {
   padding-top: 15px;
 }
 
+
+.scrolling-wrapper {
+   overflow-x: scroll !important;
+  overflow-y: hidden !important;
+  white-space: nowrap !important;
+ &::-webkit-scrollbar {
+    display: none!important;
+  }
+ 
+}
 
 </style>
