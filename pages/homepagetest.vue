@@ -158,17 +158,18 @@ GAT PAT SAT CU-TEP IELTS 9 วิชาสามัญ
    <b-container fluid style="padding:0px">
        <div style=" padding:0px; background-color:#FFF2F2">
     <br>
-    <br><br>
-
+   
 <template   >
   <div style="background-color:#FFF2F2;     padding-left: 20px;
     padding-right: 20px;" role="tablist">
+ <h1 style="text-align:center;font-size :20px; color:#DFAEA9; margin-bottom:15px;">คำถามที่พบบ่อย</h1>
+
     <b-card no-body class="mb-1">
       <b-card-header  header-tag="header" class="p-1" role="tab">
         <b-btn style="text-align: left;" block href="#" v-b-toggle.accordion1 >วิธีการใช้งาน <i style="float:right;padding-top: 4px;" class="fa fa-caret-down" aria-hidden="true"></i>
 </b-btn>
       </b-card-header>
-      <b-collapse id="accordion1" visible accordion="my-accordion" role="tabpanel">
+      <b-collapse id="accordion1"  accordion="my-accordion" role="tabpanel">
         <b-card-body>
           <p class="card-text">
             I start opened because <code>visible</code> is <code>true</code>
@@ -227,8 +228,13 @@ GAT PAT SAT CU-TEP IELTS 9 วิชาสามัญ
         </b-card-body>
       </b-collapse>
     </b-card>
+    <br>
+    <div style="text-align:center;">
+     <b-button @click="totutor" size="lg" style=" color:white;  background-color: #DFAEA9; border: 0px; 
+    width:70%;">สอบถามเพิ่มเติม</b-button>
+    </div>
   </div>
-  <br><br><br>
+  <br><br>
 </template>
 
 </div><br><br>
@@ -349,5 +355,10 @@ export default {
     border-color: #dfaea9;
 }
 
+.btn-secondary:hover {
+    color: #fff;
+    background-color: #dfaea9;
+    border-color: #dfaea9;
+}
 
 </style>
