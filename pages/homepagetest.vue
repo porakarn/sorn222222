@@ -238,6 +238,13 @@ GAT PAT SAT CU-TEP IELTS 9 วิชาสามัญ
 </template>
 
 </div><br><br>
+  <b-container fluid>
+<div style="text-align:center">
+<h1 style="font-size:20px;" > รับส่วนลดสูงสุด 200 บาท ดูรายละเอียดได้ที่   </h1>
+  <b-button @click="totutor" size="lg" style=" color:white;  background-color: #DFAEA9; border: 0px; 
+    width:70%;">สอบถามเพิ่มเติม</b-button>
+</div>
+</b-container>
 <br><br><br>
        </b-container>
        </b-container>
