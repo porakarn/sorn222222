@@ -14,7 +14,8 @@
 <b-form-group  id="exampleInputGroup3"
                   
                     label-for="exampleInput3">
-        <b-form-select style="width:80%;    border-radius: 7px;" class="formpor" id="exampleInput3" size="lg"
+        <b-form-select style="width:80%;     font-size: 18px;
+    color: #858484;   border-radius: 7px;" class="formpor" id="exampleInput3" size="lg"
                       :options="options"
                     
                       v-model="selected">
@@ -23,7 +24,8 @@
 <b-form-group   id="exampleInputGroup3"
                   
                     label-for="exampleInput3">
-        <b-form-select style="width:80%;    border-radius: 7px;" class="formpor" id="exampleInput3" size="lg"
+        <b-form-select style="width:80%;      font-size: 18px;
+    color: #858484;  border-radius: 7px;" class="formpor" id="exampleInput3" size="lg"
                       :options="locations"
                     
                       v-model="location">
@@ -134,8 +136,18 @@
    </b-row>
 
 
+<br>
+<br>
+<p style="font-weight:bold;">ดูวิชา คอร์สเรียนทั้งหมด</p>
+<p><i style="color:#EF9087" class="fa fa-check-square" aria-hidden="true"></i>
+Eng คณิต วิทย์ ฟิสิกซ์ เคมี ชีวะ สังคม ไทย </p>
 
+<p><i style="color:#EF9087" class="fa fa-check-square" aria-hidden="true"></i>
+อนุบาล ประถม มัธยม มหาลัย หรือ บุคคลทั่วไป หลักสูตรไทย และ หลักสูตร Inter</p>
 
+<p><i style="color:#EF9087" class="fa fa-check-square" aria-hidden="true"></i>
+GAT PAT SAT CU-TEP IELTS 9 วิชาสามัญ
+ภาษาญี่ปุ่น เกาหลี ฝรั่งเศษ</p>
 <br><br><br><br><br>
    </b-container>
 </template>
