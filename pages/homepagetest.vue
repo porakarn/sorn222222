@@ -47,7 +47,7 @@
                      <img src="/Sornstutorlogo.png" style="border-radius: 5px" height="85"> 
 </div>
         <div style="text-align: center;">
-         <h1 style="font-size: 20px; margin-top: 10px;  font-family: 'Roboto';">ค้นหาติวเตอร์ตัวต่อตัว</h1>
+         <h1 style="font-size: 20px; margin-top: 10px;     margin-bottom: 0px; font-family: 'Roboto';">ค้นหาติวเตอร์ตัวต่อตัว สำหรับคุณ</h1>
 
    
 <br>
@@ -310,7 +310,7 @@ GAT PAT SAT CU-TEP IELTS 9 วิชาสามัญ
 <p style="color:white; margin-left: 20px;">เข้ากลุ่ม Line </p>
 <p style="color:white; margin-left: 20px;">สมัครเป็นติวเตอร์</p>
 <p style="color:white; margin-left: 20px;">เกี่ยวกับเรา</p>
-<p style=" text-align:center;color:white;     margin-bottom: 0px;
+<p style=" font-size: 14px;text-align:center;color:white;     margin-bottom: 0px;
     padding-bottom: 8px;">Copyright 2019 Sorns.co </p>
 
 
