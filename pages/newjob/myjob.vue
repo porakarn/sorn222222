@@ -205,7 +205,7 @@ export default {
 //   ,
     methods: {
        seeeach(x){
-           this.$router.push(`/newjob/myjob/${x}`)
+           this.$router.push(`/newjob/seemyjob/${x}`)
        },
 
 
