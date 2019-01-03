@@ -229,7 +229,8 @@ mounted() {
   methods: {
 
         goback(){
-            this.$router.go(-1)
+              this.$router.push('/student/demo2')
+
 
         },
       clearup(){
