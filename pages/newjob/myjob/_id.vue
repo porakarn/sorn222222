@@ -16,25 +16,18 @@
 
 
 
-    
-  <div style="text-align:center;">
-  <b-button size="lg" @click="onSubmit" style=" font-size:18px;background-color: #DFAEA9; border-radius:25px;     margin-top: 9px;  box-shadow: 0 1px 1px 1px rgba(111, 111, 111, 0.23);
-; border: 0px;      padding-top: 12px;
-    padding-bottom: 12px;   width:80%">สร้างประกาศหาติวเตอร์</b-button>
-    </div>
 
              
   
 <br><br>
    <br>
-  <p style="padding-left:23px;">ประกาศที่คุณโพส (0)</p>
 
 
-     <b-card @click="seeeach(job._id)"  style="margin-bottom:0px;   border: 0px solid;     border-bottom-width: 1px;
+     <b-card @click="seeeach(tutor._id)"  style="margin-bottom:0px;   border: 0px solid;     border-bottom-width: 1px;
     border-bottom: 1px solid whitesmoke !important;        
    
 
-"  v-for="job in jobs" :key="job._id"  v-if="job.subject" >
+"    v-if="job.subject" >
          
         
        <b-row style="margin-top: 10px;">
@@ -86,41 +79,7 @@
      <b-row style=" margin-bottom:-23px;   margin-top: 4px;">
   <b-col cols="9" style="    padding-left: 9px;
     padding-right: 0px;">
- <!-- <a v-show="tutor.tag.length >0" style="    color: rgb(255, 255, 255);
-    text-decoration: none;
-    background-color: rgb(130, 217, 217);
-    padding-top: 3px;
-        margin-top: 7px;
-    padding-bottom: 3px;
-    font-size: 16px;
-    padding-right: 6px;
-    border-radius: 7px;
-    font-weight:400;
-    padding-left: 6px;"  href="#" 
-           class="card-link">{{tutor.tag.toString().split(',').join(' ')}}</a> -->
 
-      <!-- <a v-for="tag in tutor.tag" v-show="tutor.tag.length >0" style=" color: #9dd8bf;
-    text-decoration: none;
-    border: 1px solid #8bd2b4;
-    padding: 3px 8px;
-    margin-left: 6px;
-    margin-top: 7px;
-    font-size: 15px;
-    border-radius: 11px;"  href="#" 
-           class="card-link">{{tag.toString()}}</a> -->
-
-              <!-- <a v-for="tag in tutor.tag" v-show="tutor.tag.length >0" style="    color: rgb(255, 255, 255);
-    text-decoration: none;
-    background-color: rgb(130, 217, 217);
-    padding-top: 3px;
-    margin-left: 6px;
-    margin-top: 7px;
-    padding-bottom: 3px;
-    font-size: 16px;
-    padding-right: 8px;
-    border-radius: 5px;
-    padding-left: 8px;"  href="#" 
-           class="card-link">{{tag.toString()}}</a> -->
               <br>  
 </b-col>
 
@@ -135,6 +94,15 @@
 
   </div>
    
+    
+  <div style="text-align:center;">
+  <b-button size="lg" @click="onSubmit" style=" font-size:18px;background-color: #DFAEA9; border-radius:3px;     margin-top: 9px;  box-shadow: 0 1px 1px 1px rgba(111, 111, 111, 0.23);
+; border: 0px;      padding-top: 12px;
+    padding-bottom: 12px;   width:80%">สร้างประกาศหาติวเตอร์</b-button>
+    </div>
+
+
+
 
 </b-container>
 
@@ -171,6 +139,11 @@ export default {
  
   mounted() {
       
+console.log(this.$route.params.id);
+
+
+
+
       console.log(this.$store.state.student._id);
       
       var myid = {
@@ -204,11 +177,6 @@ export default {
 //   }
 //   ,
     methods: {
-       seeeach(x){
-           this.$router.push(`/myjob/${x}`)
-       },
-
-
        displayTimestamp(t){
                 return moment(t).fromNow()
             },
