@@ -1,6 +1,6 @@
 <template>
 
-<b-container fluid style="padding:0px; background-color:#F6F6F6;">
+<b-container fluid style="padding:0px; background-color:#DFAEA9;">
 <div style="width: 100%;
     height: 122px;
     background-color: #efbab5;">
@@ -466,9 +466,9 @@ a{
      border: 0px solid;  
         border-bottom-width: 1px;
     border-bottom: 1px solid whitesmoke !important;  
-     margin-bottom:5px;  
-       padding-top: 10px;
-    padding-bottom: 10px;
+   padding-top: 9px;
+    padding-bottom: 9px;
+    margin-bottom: 6px;
     box-shadow: 0 0 6px 0px #f7f7f7;
 
     border-radius: 6px;      
