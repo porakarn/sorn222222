@@ -1,9 +1,9 @@
 <template>
 
-<b-container fluid style="padding:0px; background-color:#DFAEA9;">
+<b-container fluid style="padding:0px; background-color:#F6F6F6;">
 <div style="width: 100%;
     height: 122px;
-    background-color: #efbab5;">
+    background-color: #DFAEA9;">
   
      <i @click="goback" style="     padding-left: 12px;
     padding-up: 7px;
@@ -466,9 +466,9 @@ a{
      border: 0px solid;  
         border-bottom-width: 1px;
     border-bottom: 1px solid whitesmoke !important;  
-   padding-top: 9px;
-    padding-bottom: 9px;
-    margin-bottom: 6px;
+     margin-bottom:5px;  
+       padding-top: 10px;
+    padding-bottom: 10px;
     box-shadow: 0 0 6px 0px #f7f7f7;
 
     border-radius: 6px;      
