@@ -7,27 +7,11 @@
  
     <br>
 
-
-
-       <p>sdsd</p>
-       
-
-
-
-
-
-
-             
-  
-<br><br>
-   <br>
-
-
-     <b-card @click="seeeach(tutor._id)"  style="margin-bottom:0px;   border: 0px solid;     border-bottom-width: 1px;
+    <b-card   style="margin-bottom:0px;   border: 0px solid;     border-bottom-width: 1px;
     border-bottom: 1px solid whitesmoke !important;        
    
 
-"    v-if="job.subject" >
+"   v-if="job.subject" >
          
         
        <b-row style="margin-top: 10px;">
@@ -90,19 +74,43 @@
 
     </b-row>
 
-    </b-card>
+    </b-card> 
 
   </div>
    
-    
-  <div style="text-align:center;">
+    <!-- <b-row>
+  <b-col style="" cols="6" >
+ <div style="text-align:center">
   <b-button size="lg" @click="onSubmit" style=" font-size:18px;background-color: #DFAEA9; border-radius:3px;     margin-top: 9px;  box-shadow: 0 1px 1px 1px rgba(111, 111, 111, 0.23);
 ; border: 0px;      padding-top: 12px;
-    padding-bottom: 12px;   width:80%">สร้างประกาศหาติวเตอร์</b-button>
+    padding-bottom: 12px;   width:90%">แก้ไข</b-button>
+</div>
+  </b-col>
+   <b-col style="" cols="6" >
+  <div style="text-align:center">
+  <b-button size="lg" @click="onSubmit" style=" font-size:18px;background-color: #DFAEA9; border-radius:3px;     margin-top: 9px;  box-shadow: 0 1px 1px 1px rgba(111, 111, 111, 0.23);
+; border: 0px;      padding-top: 12px;
+    padding-bottom: 12px;   width:90%">ปิดโพส</b-button>
+  </div>
+  </b-col>
+    </b-row> -->
+<br>
+<div style="text-align:center;">
+  <b-button  size="lg" style=" color:white;  background-color: #DFAEA9; border: 0px; 
+    width:60%;">แก้ไข</b-button>
+    <b-button  size="lg" style="    color: #dfaea9;
+    background-color: rgb(255, 255, 255);
+    border: 0px;
+    width: 60%;
+    margin-top: 8px;
+    border: solid 1px;">ปิดงาน</b-button>
+</div>
     </div>
+<br>
+<b-container fluid>
+<p>ติวเตอร์ที่สนใจ (0)</p>
 
-
-
+</b-container>
 
 </b-container>
 
@@ -121,7 +129,9 @@ export default {
   
    data () {
     return {
-      jobs:{},
+      job:{
+
+      },
     course: {},
     phone: '',
     profile: '',
@@ -139,23 +149,24 @@ export default {
  
   mounted() {
       
-console.log(this.$route.params.id);
+console.log('sds'+ this.$route.params.id);
 
 
 
 
-      console.log(this.$store.state.student._id);
+    //   console.log(this.$store.state.student._id);
       
       var myid = {
-          myid : this.$store.state.student._id,
+          route_id :  this.$route.params.id,
       }
-      axios.post('http://localhost:8000/job2/studentown', myid)
+      axios.post('https://frozen-mesa-40722.herokuapp.com/findjob2/byid', myid)
 
 // axios.post('https://frozen-mesa-40722.herokuapp.com/job2/studentown')
     .then((res) => {
       
        console.log(res.data)
-      this.jobs = res.data
+      this.job = res.data
+         console.log(this.job);
                
   }).catch(error => console.log(error))
   }

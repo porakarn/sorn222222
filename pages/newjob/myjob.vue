@@ -176,7 +176,7 @@ export default {
       var myid = {
           myid : this.$store.state.student._id,
       }
-      axios.post('http://localhost:8000/job2/studentown', myid)
+      axios.post('https://frozen-mesa-40722.herokuapp.com/job2/studentown', myid)
 
 // axios.post('https://frozen-mesa-40722.herokuapp.com/job2/studentown')
     .then((res) => {
