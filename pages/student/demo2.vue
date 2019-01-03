@@ -5,7 +5,7 @@
     height: 122px;
     background-color: #efbab5;">
   
-     <i  style="     padding-left: 12px;
+     <i @click="goback" style="     padding-left: 12px;
     padding-up: 7px;
     font-size: 22px;
     color: white;
@@ -227,6 +227,11 @@ mounted() {
 
 
   methods: {
+
+        goback(){
+            this.$router.go(-1)
+
+        },
       clearup(){
           console.log(this.$store.state.student.picture);
                     console.log(this.$store.state.student);

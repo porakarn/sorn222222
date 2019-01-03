@@ -1,84 +1,146 @@
 <template>
 <b-container fluid style="padding: 0px;">
 
-<b-container fluid>
+<b-container fluid style=" padding-left: 0px;
+    padding-right: 0px;">
 
-  <b-row>
-<b-col md="6" offset-md="3">
+ 
     <br>
 
 
-    <b-row>
+
        
        
 
-<b-row>
-<!-- <b-col cols="4" style="    padding-right: 0px;">
-<p style="  font-size :18px;
-     text-align: center; font-weight: bold; margin-bottom: 0px;">4.6</p>
-<p style=" 
-   color:#949494;  text-align: center;  font-size:14px;  margin-bottom: 0px;"><i style="color: #F1F182;" class="fa fa-star" aria-hidden="true"></i> รีวิว</p>
-</b-col> -->
-<!-- <b-col cols="4">
-<p style="  font-size :18px;
-     text-align: center; font-weight: bold; margin-bottom: 0px;">12</p>
-<p style=" 
-   color:#949494;   text-align: center; font-size:14px;  margin-bottom: 0px;">นักเรียน</p>
-</b-col> -->
-<!-- <b-col cols="4" style="padding-left: 0px;"    >
-<p style="  font-size :18px;
-     text-align: center; font-weight: bold;  margin-bottom: 0px;">12</p>
-<p style=" 
-    color:#949494;  text-align: center; font-size:14px;   margin-bottom: 0px;">ครั้งที่สอน</p>
-</b-col> -->
 
 
-</b-row>
 
-      <!-- <p style="color: rgb(117, 119, 120);">{{ this.$store.state.user.name}}</p> -->
-      <!-- <p style="color:#484848;  font-size: 16px;     margin-bottom: 0px;
-    margin-top: 12px;
- "><i style="color: #F1F182;" class="fa fa-star" aria-hidden="true"></i>
-</i> 4.6 (10)  	&nbsp;&nbsp; <i class="fa fa-user" aria-hidden="true"></i> 12 (30 ครั้ง)
-  </p> -->
-  <!-- <nuxt-link to="/tutor/profile/edit"> -->
-  <b-button size="lg" @click="onSubmit" style="background-color: #DFAEA9; border-radius:25px;     margin-top: 9px;  box-shadow: 0 1px 1px 1px rgba(111, 111, 111, 0.23);
+
+    
+  <div style="text-align:center;">
+  <b-button size="lg" @click="onSubmit" style=" font-size:18px;background-color: #DFAEA9; border-radius:25px;     margin-top: 9px;  box-shadow: 0 1px 1px 1px rgba(111, 111, 111, 0.23);
 ; border: 0px;      padding-top: 12px;
-    padding-bottom: 12px;   width: -webkit-fill-available;">สร้างประกาศหาติวเตอร์</b-button>
-<!-- </nuxt-link> -->
+    padding-bottom: 12px;   width:80%">สร้างประกาศหาติวเตอร์</b-button>
+    </div>
 
-  
-  <!-- <p  v-if="isUserLoggedIn"
-> {{this.$store.state.user.name}} </p>
- <p  v-if="this.$store.state.haveProfile"
-> {{this.$store.state.user.subject}} </p> -->
              
+  
+<br><br>
+   <br>
+  <p style="padding-left:23px;">ประกาศที่คุณโพส (0)</p>
+
+
+     <b-card @click="seeeach(tutor._id)"  style="margin-bottom:0px;   border: 0px solid;     border-bottom-width: 1px;
+    border-bottom: 1px solid whitesmoke !important;        
+   
+
+"  v-for="job in jobs" :key="job._id"  v-if="job.subject" >
+         
+        
+       <b-row style="margin-top: 10px;">
+
+        <b-col style="padding-left: 18px;" cols="2">
+                     <img :src="job.creator_pic" style="width: 53px;
+  height: 53px;margin-top: 3px;
+  border-radius: 14px;
+  box-shadow: 0 1px 1px 0 rgba(205, 205, 205, 0.24);" width="100%"> 
+
+        </b-col>
+         <b-col cols="10" style="margin-left: -1px;padding-left: 15px; padding-right: 2px;">
+<p style="
+  font-family: Roboto;
+  font-size: 16px;
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.31;
+  letter-spacing: normal;
+  text-align: left;
+  margin-bottom: 0px;
+  color: #2c2929;">{{job.subject+ ''+ job.subjectDetail}}    <strong style=" background-color:#EEC0BB;
+    border-radius: 6px;
+    color: white;
+    font-weight: 500;
+    padding-right: 3px;
+    padding-left: 5px;
+    font-size: 15px;    float: right;
+    margin-right: 8px;
+        padding-top: 3px;
+        padding-bottom: 1px;
+    margin-top: 0px;"> 500 - 
+ </strong></p>
+<p style="color:#545454; font-size:16px;margin-bottom: 0px;margin-bottom: 3px;
+" v-if="job.day">
+    {{job.day.toString()}} {{job.time}}</p>
+<p style="color:#545454; font-size:14px   ;  margin-bottom: 0px;" >
+   {{job.location}} ...</p>   <strong style="float: right;
+    margin-top: -18px;
+    font-weight: 400;
+    font-size: 13px;
+    color: grey;
+    padding-right: 13px;">11.22</strong>
+
+        </b-col>
+
+     </b-row>
+     <b-row style=" margin-bottom:-23px;   margin-top: 4px;">
+  <b-col cols="9" style="    padding-left: 9px;
+    padding-right: 0px;">
+ <!-- <a v-show="tutor.tag.length >0" style="    color: rgb(255, 255, 255);
+    text-decoration: none;
+    background-color: rgb(130, 217, 217);
+    padding-top: 3px;
+        margin-top: 7px;
+    padding-bottom: 3px;
+    font-size: 16px;
+    padding-right: 6px;
+    border-radius: 7px;
+    font-weight:400;
+    padding-left: 6px;"  href="#" 
+           class="card-link">{{tutor.tag.toString().split(',').join(' ')}}</a> -->
+
+      <!-- <a v-for="tag in tutor.tag" v-show="tutor.tag.length >0" style=" color: #9dd8bf;
+    text-decoration: none;
+    border: 1px solid #8bd2b4;
+    padding: 3px 8px;
+    margin-left: 6px;
+    margin-top: 7px;
+    font-size: 15px;
+    border-radius: 11px;"  href="#" 
+           class="card-link">{{tag.toString()}}</a> -->
+
+              <!-- <a v-for="tag in tutor.tag" v-show="tutor.tag.length >0" style="    color: rgb(255, 255, 255);
+    text-decoration: none;
+    background-color: rgb(130, 217, 217);
+    padding-top: 3px;
+    margin-left: 6px;
+    margin-top: 7px;
+    padding-bottom: 3px;
+    font-size: 16px;
+    padding-right: 8px;
+    border-radius: 5px;
+    padding-left: 8px;"  href="#" 
+           class="card-link">{{tag.toString()}}</a> -->
+              <br>  
+</b-col>
+
+
+     </b-row>
+    
+
+
     </b-row>
 
-   <br>
- 
-
-
+    </b-card>
 
   </div>
-     </b-col></b-row>
-  <br><br><br> 
-</b-col></b-row>
+   
+
 </b-container>
 
 
 
-<b-nav fill tabs style=" position: fixed;    width:100%;
-  border-top:1px solid;
-  border-top-color:rgba(241, 242, 243, 1);
-  border-color: #e2e5e957;
-  bottom: 44px; 
-  background-color: white;
-  height: 58px;">
-  <b-nav-item  >   <nuxt-link to="/tutor/givelink"> ให้นักเรียนรีวิว </nuxt-link>  </b-nav-item>
- <b-nav-item @click="nextPage">งานของคุณ</b-nav-item>
- 
-</b-nav>
+
 </b-container>
 </template>
 
@@ -91,6 +153,7 @@ export default {
   
    data () {
     return {
+      jobs:{},
     course: {},
     phone: '',
     profile: '',
@@ -107,8 +170,15 @@ export default {
   
  
   mounted() {
-
-  },
+axios.get('https://frozen-mesa-40722.herokuapp.com/job2/all')
+    .then((res) => {
+      
+       console.log(res.data)
+      this.jobs = res.data
+               
+  }).catch(error => console.log(error))
+  }
+  ,
     computed: {
     isUserLoggedIn () {
       return this.$store.state.isUserLoggedIn
@@ -152,31 +222,8 @@ export default {
       ,
 
       onSubmit(){
-        axios.post('http://localhost:8000/sms').then((res) => { 
-              
-              console.log(res.data)
-             
-  
-          })
-          .catch(error => console.log(error))
-
-           var data = {
-             profile : this.profile, 
-             phone : this.phone,
-             name: this.$store.state.user.username 
-              
-           }
-
-           axios.patch('https://frozen-mesa-40722.herokuapp.com/update', data).then((res) =>
-           {
-            console.log(res.data);
-            
-
-           }).catch((error) =>{ console.log(error) })
-           
-
-      }
-
+       this.$router.push('/student/demo2')
+},
   },
     layout: 'studentapp'
 
@@ -225,6 +272,8 @@ box-shadow: 0 0 0 0rem rgba(0, 123, 255, .25) !important;
     box-shadow: 0 0 0 0.2rem rgba(255, 255, 255, 0.5);
 }
 
+
+
 .card1{
     margin-bottom:0px;  
      border: 0px solid;  
@@ -239,5 +288,19 @@ box-shadow: 0 0 0 0rem rgba(0, 123, 255, .25) !important;
    
 }
 
+.card-body{
+  padding-left: 10px;
+    padding-top: 2px;
+    padding-right: 10px;
+      padding-bottom: 8px;
+      margin-top: 2px;
+}
+
+.card-title {
+    margin-bottom: 12px;
+    margin-bottom: 0.75rem;
+    font-size: 20px;
+    color: #5a5a5a;
+}
 
 </style>
