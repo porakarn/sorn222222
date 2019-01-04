@@ -99,7 +99,7 @@ import moment from 'moment';
     return {
       tutors:{},
       time: '',
-      value:80;
+      value:80,
        loading: false,
            profile2: false,
             selected2: [], // Must be an array reference!

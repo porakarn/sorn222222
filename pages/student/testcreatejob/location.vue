@@ -95,7 +95,7 @@ import moment from 'moment';
     return {
       tutors:{},
       location:'',
-      value:95;
+      value:95,
        loading: false,
            profile2: false,
            selected: null,
