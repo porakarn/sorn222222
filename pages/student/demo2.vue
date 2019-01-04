@@ -1,22 +1,15 @@
 <template>
 
-<b-container fluid style="padding:0px; background-color:#F6F6F6;">
-<div style="width: 100%;
-    height: 122px;
-    background-color: #DFAEA9;">
-  
-     <i @click="goback" style="     padding-left: 12px;
-    padding-up: 7px;
-    font-size: 22px;
-    color: white;
-    padding-top: 7px;
-" class="fa fa-arrow-left responsive" aria-hidden="true"></i>  <strong style=" font-size: 18px;color:white; font-weight: 400">
-สร้างประกาศหาติวเตอร์</strong>
-  <!-- <Strong style="color:white; font-weight:300px; font-size:18px;">  <i class="fa fa-arrow-left" aria-hidden="true"></i>
- สร้างประกาศหาติวเตอร์
-</Strong> -->
-    </div>
+<b-container fluid style="padding: 0px; background-image: linear-gradient(to bottom, #fff0f0, #fef4f6, #fdf8fb, #fdfcfe, #ffffff);">
 
+<b-navbar  style=" background-color:#ffffff00!important;   padding-bottom: 15px;
+    padding-top: 15px;   "toggleable variant="light">
+     <i @click="goback" style=" font-size: 21px;
+    padding-left: 4px;
+    color: #c1c1c1;
+" class="fa fa-arrow-left responsive" aria-hidden="true"> สร้างประกาศหาติวเตอร์</i> 
+
+   </b-navbar>
 <b-container fluid style="padding:0px;" >
        <br>
         <!-- <p style=" color:#86a5ca ; text-align: center;
