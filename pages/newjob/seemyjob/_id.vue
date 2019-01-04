@@ -46,7 +46,7 @@
         padding-bottom: 1px;
     margin-top: 0px;"> {{job.status}}
  </strong></p>
-<p style="color:#545454; font-size:16px;margin-bottom: 0px;margin-bottom: 1px;
+<p style="color:#545454; font-size:16px;margin-bottom: 0px;
 " v-if="job.day">
 {{job.day.toString()}} {{job.time}} {{job.location}}</p>
 <p style="color:#545454; font-size:16px ; margin-bottom: 0px;" >
@@ -99,7 +99,7 @@
 <div style="text-align:center;">
   <b-button  size="lg" style=" color:white;  background-color: #DFAEA9; border: 0px; 
     width:60%;">แก้ไข</b-button>
-    <b-button v-if="job.status = 'ว่าง'" @click="changestatus" size="lg" style="    color: #dfaea9;
+    <b-button  @click="changestatus" size="lg" style="    color: #dfaea9;
     background-color: rgb(255, 255, 255);
     border: 0px;
     width: 60%;

@@ -57,8 +57,8 @@
   letter-spacing: normal;
   text-align: left;
   margin-bottom: 0px;
-  color: #2c2929;">{{job.subject+ ''+ job.subjectDetail}}    <strong style=" background-color:#EEC0BB;
-    border-radius: 4px;
+  color: #2c2929;">{{job.subject+ ' '+ job.subjectDetail}}    <strong v-if="status= 'ว่าง'" style=" background-color:#EEC0BB;
+    border-radius: 6px;
     color: white;
     font-weight: 500;
     padding-right: 7px;
@@ -69,16 +69,17 @@
         padding-bottom: 1px;
     margin-top: 0px;"> {{job.status}}
  </strong></p>
-<p style="color:#545454; font-size:16px;margin-bottom: 0px;margin-bottom: 3px;
+<p style="color:#545454; font-size:16px;margin-bottom: 0px;margin-bottom: 1px;
 " v-if="job.day">
-    {{job.day.toString()}} {{job.time}}</p>
-<p style="color:#545454; font-size:14px   ;  margin-bottom: 0px;" >
-   {{job.location}} ...</p>   <strong style="float: right;
+{{job.day.toString()}} {{job.time}} {{job.location}}</p>
+<p style="color:#545454; font-size:16px ; margin-bottom: 0px;" >
+{{job.creator_gender}} {{job.creator_grade}} {{job.purpose}} </p> 
+ <strong style="float: right;
     margin-top: -18px;
     font-weight: 400;
     font-size: 13px;
     color: grey;
-    padding-right: 13px;">11.22</strong>
+    padding-right: 13px;">{{ displayTimestamp(job.createdAt) }} </strong>
 
         </b-col>
 
