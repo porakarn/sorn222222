@@ -9,7 +9,7 @@
     padding-left: 4px;
     color: #c1c1c1;
 " class="fa fa-arrow-left responsive" aria-hidden="true"> สร้างประกาศหาติวเตอร์</i> 
-
+</b-navbar>
 <b-container fluid style="padding:0px;" >
        <br>
         <!-- <p style=" color:#86a5ca ; text-align: center;
