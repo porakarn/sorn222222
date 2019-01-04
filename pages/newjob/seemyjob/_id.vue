@@ -190,7 +190,8 @@ console.log('sds'+ this.$route.params.id);
     methods: {
      changestutus(){
     var data = {
-     status: ปิด
+     status: ปิด,
+     _id: this.job._id
     }
 
   axios.patch('https://frozen-mesa-40722.herokuapp.com/job2/update', data).then((res) =>{
