@@ -66,14 +66,19 @@
     
     padding-top: 11px;
     padding-bottom: 11px;
-    border-radius: 22px;"เรียบร้อย</b-button> </div> 
+    border-radius: 22px;">เรียบร้อย</b-button> </div> 
 </b-container>
 
-<b-container fluid class="bv-example-row  "   style="padding-left:28px;padding-rigth:28px; position: fixed;     width: 100%;
-
-  bottom: 0px; 
-  background-color: white;
-  height: 58px;">
+<b-container fluid class="bv-example-row  " style="    padding-left: 28px;
+    
+    position: fixed;
+    width: 100%;
+    bottom: 0px;
+    background-color: white;
+    height: 58px;
+    padding-right: 28px;
+    right: 10px;
+    left: 0px;">
 <Strong style="font-weight:400; font-size:13px; color:#929292; padding-left:23px;padding-right: 25px;">วิชา </Strong>
   <Strong style="font-weight:400; font-size:13px;color:#929292; padding-right: 17px;"> จุดประสงค์ </Strong>
    <Strong style="font-weight:400; font-size:13px;color:#929292; padding-right: 26px;"> ระดับชั้น </Strong>
@@ -164,7 +169,8 @@ extra : this.$store.state.job.extra,
 }
 
    this.$store.dispatch('setJob', job)
- this.$router.push('/student/demo2')
+//  this.$router.push('/student/demo2')
+   this.$router.push('/student/testcreatejob/datetime')
 
   },
 
