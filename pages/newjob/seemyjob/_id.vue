@@ -1,6 +1,7 @@
 <template>
 <b-container fluid style="padding: 0px;">
-
+{{job.status}}  {{status}}
+<button @click="fuck"> sdsds </button> 
 <b-container fluid style=" padding-left: 0px;
     padding-right: 0px;">
 
@@ -34,7 +35,7 @@
   letter-spacing: normal;
   text-align: left;
   margin-bottom: 0px;
-  color: #2c2929;">{{job.subject+ ''+ job.subjectDetail}}    <strong style=" background-color:#EEC0BB;
+  color: #2c2929;">{{job.subject+ ''+ job.subjectDetail}}    <strong v-if="status= 'ว่าง'" style=" background-color:#EEC0BB;
     border-radius: 6px;
     color: white;
     font-weight: 500;
@@ -190,6 +191,10 @@ console.log('sds'+ this.$route.params.id);
 //   }
 //   ,
     methods: {
+    fuck(){
+    this.status = 'ควย'
+    }, 
+
      changestatus(){
     var data = {
      status: 'ปิด',

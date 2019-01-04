@@ -58,11 +58,11 @@
   text-align: left;
   margin-bottom: 0px;
   color: #2c2929;">{{job.subject+ ''+ job.subjectDetail}}    <strong style=" background-color:#EEC0BB;
-    border-radius: 6px;
+    border-radius: 4px;
     color: white;
     font-weight: 500;
-    padding-right: 3px;
-    padding-left: 5px;
+    padding-right: 7px;
+    padding-left: 7px;
     font-size: 15px;    float: right;
     margin-right: 8px;
         padding-top: 3px;
