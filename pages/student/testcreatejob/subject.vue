@@ -1,7 +1,7 @@
 <template>
 <b-container fluid style="padding: 0px;">
 
-<b-navbar  style="    padding-bottom: 15px;
+<b-navbar  style=" background-color:white!important;   padding-bottom: 15px;
     padding-top: 15px;   "toggleable variant="light">
      <i @click="goback" style=" font-size: 25px;
     padding-left: 4px;
@@ -15,7 +15,7 @@
     </b-navbar>
 
 
-<b-container fluid>
+<b-container fluid style="padding:35px!important;">
   <br><br>
     <!-- <div>จังหวัด: <strong style="    background-color: #c6f1d0;
     padding: 5px;
@@ -31,11 +31,11 @@
     padding-right: 10px;"  v-for="selecting in selected">{{ selecting }}</strong></div>    
 
         -->
- <div  style="text-align :center"> 
+ <div  style="text-align :center; "> 
 <b-form-group  id="exampleInputGroup3"
                   
                     label-for="exampleInput3">
-        <b-form-select style="width:85%;     font-size: 17px;
+        <b-form-select style="     font-size: 17px;
     color: #858484;   border-radius: 7px;" class="formpor" id="exampleInput3" size="lg"
                       :options="options"
                     
@@ -50,7 +50,7 @@
                     
                     label-for="exampleInput1"
                     description=" ตัวอย่าง ภาษาอังกฤษ GAT ENG">
-        <b-form-input style="width: 80%" class="formpor" id="exampleInput1" size="lg" 
+        <b-form-input style="border-radius:7px;" class="formpor" id="exampleInput1" size="lg" 
                       type="text"
                       required
                       v-model="subjectDetail"
@@ -60,11 +60,7 @@
  </div>
 
 
-<div style="text-align:center"></div>
-  <b-form-input v-model="text1"
-                  type="text"
-                  placeholder="Enter your name"></b-form-input>
-</div>
+
   <!-- <b-form-textarea style="  white-space: pre-wrap;   padding-top: 0px;
 " class="formpor" id="textarea1"
                      
@@ -76,9 +72,11 @@
 <br><br>
 <!-- <button @click="testbtn">Test</button> -->
 
+
+<br><br><br><br>
  <div  style="text-align :center">        <b-button  @click="onSubmit"
    style="background-color: #EFBAB5; border: 0px;   
-    width:85%;
+    width:100%;
     
     padding-top: 13px;
     padding-bottom: 13px;
