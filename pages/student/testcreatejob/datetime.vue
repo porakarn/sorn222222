@@ -40,7 +40,7 @@
 <br>
   <b-form-group >
 
- <b-form-group   id="exampleInputGroup1"
+ <b-form-group v-if="selected2"  id="exampleInputGroup1"
                     
                     label-for="exampleInput1"
                     description="เช่น 5-7 โมงเย็น">
@@ -54,7 +54,7 @@
       </b-form-group>
 
 
-      <b-form-radio-group v-model="selected"
+      <b-form-radio-group  v-if="selected2" v-model="selected"
                           :options="options"
                           plain
                           stacked
@@ -70,13 +70,8 @@
 <br>
 
 
- <div  style="text-align :center">         <b-button @click="onSubmit"
-   style="background-color: #EFBAB5; border: 0px;     padding-left: 64px;
-    padding-right: 64px;
-    width:90%
-    padding-top: 11px;
-    padding-bottom: 11px;
-    border-radius: 4px;">เรียบร้อย</b-button> </div> 
+ <div  style="text-align :center">       <b-button @click="onSubmit" size="lg" style=" color:white;  background-color: #DFAEA9; border: 0px; 
+    width:80%;">เรียบร้อย</b-button>   </div> 
 </b-container>
 </b-container>
 </template>
