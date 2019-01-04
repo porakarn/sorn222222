@@ -1,6 +1,7 @@
 <template>
 <b-container fluid style="padding: 0px;">
 
+{{job.status}}{{status}}
 <b-container fluid style=" padding-left: 0px;
     padding-right: 0px;">
 
@@ -50,7 +51,7 @@
 " v-if="job.day">
     {{job.day.toString()}} {{job.time}} {{job.location}}</p>
 <p style="color:#545454; font-size:16px   ;  margin-bottom: 0px;" >
-   {{job.creator_gender}} {{job.creator_grade}} ...</p>   <strong style="float: right;
+   {{job.creator_gender}} {{job.creator_grade}} {{job.purpose}} </p>   <strong style="float: right;
     margin-top: -18px;
     font-weight: 400;
     font-size: 13px;
