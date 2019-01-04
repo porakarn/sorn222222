@@ -44,7 +44,7 @@
     margin-right: 8px;
         padding-top: 3px;
         padding-bottom: 1px;
-    margin-top: 0px;"> {{job.status}}
+    margin-top: 0px;"> {{status}}
  </strong></p>
 <p style="color:#545454; font-size:16px;margin-bottom: 0px;margin-bottom: 3px;
 " v-if="job.day">
@@ -98,7 +98,7 @@
 <div style="text-align:center;">
   <b-button  size="lg" style=" color:white;  background-color: #DFAEA9; border: 0px; 
     width:60%;">แก้ไข</b-button>
-    <b-button v-if="job.status = 'ว่าง'" @click="changestatus" size="lg" style="    color: #dfaea9;
+    <b-button v-if="status = 'ว่าง'" @click="changestatus" size="lg" style="    color: #dfaea9;
     background-color: rgb(255, 255, 255);
     border: 0px;
     width: 60%;
@@ -132,6 +132,7 @@ export default {
       job:{
 
       },
+    status: '',
     course: {},
     phone: '',
     profile: '',
@@ -166,6 +167,7 @@ console.log('sds'+ this.$route.params.id);
       
        console.log(res.data)
       this.job = res.data
+      this.status = res.data.status
          console.log(this.job);
                
   }).catch(error => console.log(error))
@@ -197,7 +199,7 @@ console.log('sds'+ this.$route.params.id);
   axios.patch('https://frozen-mesa-40722.herokuapp.com/job2/update', data).then((res) =>{
 
             console.log(res.data)
-             this.job.status = res.data.status 
+             this.status = res.data.status 
             
 
            }).catch((error) =>{ console.log(error) })

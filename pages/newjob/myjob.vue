@@ -204,6 +204,12 @@ export default {
 //   }
 //   ,
     methods: {
+
+       fuck(){
+     console.log(this.job.status);
+     
+       },
+
        seeeach(x){
            this.$router.push(`/newjob/seemyjob/${x}`)
        },
