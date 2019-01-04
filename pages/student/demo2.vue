@@ -1,6 +1,6 @@
 <template>
 
-<b-container fluid style="padding: 0px;    background-image: linear-gradient(to bottom, #efbab5a3, #fbe6ea, #fdf8fb, #f7f7f7, #ffffff);
+<b-container fluid style="padding: 0px; background-color:#FAFAFA  ;
 ">
 
 <b-navbar  style=" background-color:#ffffff00!important;   padding-bottom: 15px;
