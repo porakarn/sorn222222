@@ -157,8 +157,8 @@ color: #484848; border:1px !important;">โปรไฟล์ของคุณ<
   bottom: 44px; 
   background-color: white;
   height: 58px;">
-  <b-nav-item  >   <nuxt-link to="/tutor/givelink"> ให้นักเรียนรีวิว </nuxt-link>  </b-nav-item>
- <b-nav-item @click="nextPage">งานของคุณ</b-nav-item>
+ 
+ <b-nav-item @click="nextPage">เข้ากลุ่ม Line</b-nav-item>
  
 </b-nav>
 </b-container>
@@ -246,19 +246,22 @@ return
       ,
 
       onSubmit(){
-           var data = {
-             profile : this.profile, 
-             phone : this.phone,
-             name: this.$store.state.user.username 
-              
-           }
+             this.$router.push('/tutor/profile/edit')
 
-           axios.patch('https://frozen-mesa-40722.herokuapp.com/update', data).then((res) =>
-           {
-            console.log(res.data);
+
+          //  var data = {
+          //    profile : this.profile, 
+          //    phone : this.phone,
+          //    name: this.$store.state.user.username 
+              
+          //  }
+
+          //  axios.patch('https://frozen-mesa-40722.herokuapp.com/update', data).then((res) =>
+          //  {
+          //   console.log(res.data);
             
 
-           }).catch((error) =>{ console.log(error) })
+          //  }).catch((error) =>{ console.log(error) })
            
 
       }
@@ -276,6 +279,20 @@ return
     opacity: 1; /* Firefox */
 }
 
+
+.card1{
+    margin-bottom:0px;  
+     border: 0px solid;  
+        border-bottom-width: 1px;
+    border-bottom: 1px solid whitesmoke !important;  
+     margin-bottom:5px;  
+       padding-top: 1px;
+    padding-bottom: 1px;
+ 
+
+    border-radius: 6px;      
+   
+}
 .formpor{
 border-top: 0px;
     border-right: 0px;
