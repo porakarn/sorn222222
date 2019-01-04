@@ -291,9 +291,11 @@ li{
 input{
     margin-right: 10px;
     
-    margin-bottom: 12px;}
-
-
+    margin-bottom: 12px;
+    }
+.form-check-input {
+    position: inherit;
+}
 .container input {
     position: absolute;
     opacity: 0
