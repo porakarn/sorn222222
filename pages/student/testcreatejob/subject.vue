@@ -1,11 +1,11 @@
 <template>
 <b-container fluid style="padding: 0px;">
 
-<b-navbar  style="  box-shadow: 0px 2px 3px -1px rgba(126, 126, 126, 0.2), 0px 4px 5px 0px rgba(0, 0, 0, 0), 0px 1px 10px 0px #00000003;   padding-bottom: 15px;
-    padding-top: 15px;  background-color:#DFAEA9!important; "toggleable variant="light">
+<b-navbar  style="    padding-bottom: 15px;
+    padding-top: 15px;   "toggleable variant="light">
      <i @click="goback" style=" font-size: 25px;
     padding-left: 4px;
-    color: white;
+    color: grey;
 " class="fa fa-arrow-left responsive" aria-hidden="true"></i>
         <!-- <b-navbar-brand>BootstrapVue</b-navbar-brand> -->
    
@@ -32,12 +32,20 @@
 
         -->
  <div  style="text-align :center"> 
- <b-form-select style="width: 80%"  :select-size="2" v-model="selected" size="lg"  :options="options" class="mb-3">
-    </b-form-select>
-
+<b-form-group  id="exampleInputGroup3"
+                  
+                    label-for="exampleInput3">
+        <b-form-select style="width:85%;     font-size: 17px;
+    color: #858484;   border-radius: 7px;" class="formpor" id="exampleInput3" size="lg"
+                      :options="options"
+                    
+                      v-model="selected">
+        </b-form-select>
+      </b-form-group>
+ </div>
  <!-- <b-form-select  :select-size="2" v-model="selected2" :options="options2" class="mb-3">
     </b-form-select> -->
-
+ <div  style="text-align :center"> 
   <b-form-group v-if="selected"  id="exampleInputGroup1"
                     
                     label-for="exampleInput1"
@@ -50,6 +58,13 @@
         </b-form-input>
       </b-form-group>
  </div>
+
+
+<div style="text-align:center"></div>
+  <b-form-input v-model="text1"
+                  type="text"
+                  placeholder="Enter your name"></b-form-input>
+</div>
   <!-- <b-form-textarea style="  white-space: pre-wrap;   padding-top: 0px;
 " class="formpor" id="textarea1"
                      
@@ -63,7 +78,7 @@
 
  <div  style="text-align :center">        <b-button  @click="onSubmit"
    style="background-color: #EFBAB5; border: 0px;   
-    width:80%;
+    width:85%;
     
     padding-top: 13px;
     padding-bottom: 13px;
