@@ -1,7 +1,7 @@
 <template>
 <b-container fluid style="padding: 0px;">
-
-{{job.status}}{{status}}
+{{job.status}}  {{status}}
+<button @click="fuck"> sdsds </button> 
 <b-container fluid style=" padding-left: 0px;
     padding-right: 0px;">
 
@@ -35,7 +35,7 @@
   letter-spacing: normal;
   text-align: left;
   margin-bottom: 0px;
-  color: #2c2929;">{{job.subject+' '+ job.subjectDetail}}    <strong v-if="status= 'ว่าง'" style=" background-color:#EEC0BB;
+  color: #2c2929;">{{job.subject+ ''+ job.subjectDetail}}    <strong v-if="status= 'ว่าง'" style=" background-color:#EEC0BB;
     border-radius: 6px;
     color: white;
     font-weight: 500;
@@ -51,7 +51,7 @@
 " v-if="job.day">
     {{job.day.toString()}} {{job.time}} {{job.location}}</p>
 <p style="color:#545454; font-size:16px   ;  margin-bottom: 0px;" >
-   {{job.creator_gender}} {{job.creator_grade}} {{job.purpose}} </p>   <strong style="float: right;
+   {{job.creator_gender}} {{job.creator_grade}} ...</p>   <strong style="float: right;
     margin-top: -18px;
     font-weight: 400;
     font-size: 13px;
@@ -99,28 +99,17 @@
 <div style="text-align:center;">
   <b-button  size="lg" style=" color:white;  background-color: #DFAEA9; border: 0px; 
     width:60%;">แก้ไข</b-button>
-    <b-button v-if="job.status = 'ว่าง'" @click="changestatus" size="lg" style="    color: #dfaea9;
+    <b-button v-if="status = 'ว่าง'" @click="changestatus" size="lg" style="    color: #dfaea9;
     background-color: rgb(255, 255, 255);
     border: 0px;
     width: 60%;
     margin-top: 8px;
     border: solid 1px;">ปิดงาน</b-button>
-     <!-- <b-button v-if="job.status = 'ปิด'" @click="changestatus2" size="lg" style="    color: #dfaea9;
-    background-color: rgb(255, 255, 255);
-    border: 0px;
-    width: 60%;
-    margin-top: 8px;
-    border: solid 1px;">เปิดงาน</b-button> -->
 </div>
     </div>
 <br>
 <b-container fluid>
-<!-- <p>ติวเตอร์ที่สนใจ (0)</p> -->
-
-<p style="text-align:center">หากมีติวเตอร์สนใจ ทีมงานจะติดต่อหาท่านทาง Line </p>
-
-<p style="text-align:center">กรุณากดปิดงาน หากคุณอยากยกเลิกการหาติวเตอร์ </p>
-
+<p>ติวเตอร์ที่สนใจ (0)</p>
 
 </b-container>
 
@@ -223,22 +212,7 @@ console.log('sds'+ this.$route.params.id);
            
 
      },
-  changestatus2(){
-    var data = {
-     status: 'ว่าง',
-     _id: this.job._id
-    }
 
-  axios.patch('https://frozen-mesa-40722.herokuapp.com/job2/update', data).then((res) =>{
-
-            console.log(res.data)
-             this.status = res.data.status 
-            this.$router.go(0)
-
-           }).catch((error) =>{ console.log(error) })
-           
-
-     },
 
        displayTimestamp(t){
                 return moment(t).fromNow()
