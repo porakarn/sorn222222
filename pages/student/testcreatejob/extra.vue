@@ -1,5 +1,5 @@
 <template>
-<b-container fluid style="padding: 0px; ">
+<b-container fluid style="padding: 10px; ">
 
 <b-navbar  style=" background-color:#ffffff00!important;   padding-bottom: 15px;
     padding-top: 15px;   "toggleable variant="light">
@@ -38,7 +38,7 @@
                      :rows="4"
                      :max-rows="6">
     </b-form-textarea>
-<p style="color:#b9b9b9; font-size:13px; margin-top:2px;">เช่น อยากได้ติวเตอร์ ญ อยากได้ติวเตอร์ใจดี</p>
+<p style="color:#b9b9b9; font-size:13px; margin-top:2px; text-align:center;">เช่น อยากได้ติวเตอร์ ญ อยากได้ติวเตอร์ใจดี</p>
   <!-- <b-form-textarea style="  white-space: pre-wrap;   padding-top: 0px;
 " class="formpor" id="textarea1"
                      
