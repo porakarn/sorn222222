@@ -1,5 +1,5 @@
 <template>
-<b-container fluid style="padding: 10px; background-image: linear-gradient(to bottom, #ffffff, #fdfcfe, #fdf8fb, #fef4f6, #fff0f0);">
+<b-container fluid style="padding: 10px; ">
 
 <b-navbar  style=" background-color:#ffffff00!important;   padding-bottom: 15px;
     padding-top: 15px;   "toggleable variant="light">
