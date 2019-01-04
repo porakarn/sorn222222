@@ -56,7 +56,7 @@
   line-height: 1.31;
   letter-spacing: normal;
   text-align: left;
-  margin-bottom: 0px;
+  margin-bottom: 2px;
   color: #2c2929;">{{job.subject+ ' '+ job.subjectDetail}}    <strong v-if="status= 'ว่าง'" style=" background-color:#EEC0BB;
     border-radius: 6px;
     color: white;
@@ -69,12 +69,12 @@
         padding-bottom: 1px;
     margin-top: 0px;"> {{job.status}}
  </strong></p>
-<p style="    color: grey;
+<p style="    color: #464646;
     font-size: 15px;
     margin-bottom: 0px;margin-bottom: 0px;margin-bottom: 1px;
 " v-if="job.day">
 {{job.day.toString()}} {{job.time}} {{job.location}}</p>
-<p style=" color: grey;margin-top:-1px; font-size:16px ; margin-bottom: 0px;" >
+<p style=" color: #464646;margin-top:-2px; font-size:16px ; margin-bottom: 0px;" >
 {{job.creator_gender}} {{job.creator_grade}} {{job.purpose}} </p> 
  <strong style="float: right;
     margin-top: -18px;
@@ -315,7 +315,9 @@ box-shadow: 0 0 0 0rem rgba(0, 123, 255, .25) !important;
     padding-top: 2px;
     padding-right: 10px;
       padding-bottom: 8px;
-      margin-top: 2px;
+      
+          margin-top: 7px;
+    margin-bottom: 5px;
 }
 
 .card-title {
