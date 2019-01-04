@@ -1,6 +1,7 @@
 <template>
 
-<b-container fluid style="padding: 0px; background-image: linear-gradient(to bottom, #fff0f0, #fef4f6, #fdf8fb, #fdfcfe, #ffffff);">
+<b-container fluid style="padding: 0px;    background-image: linear-gradient(to bottom, #efbab5a3, #fbe6ea, #fdf8fb, #f7f7f7, #ffffff);
+">
 
 <b-navbar  style=" background-color:#ffffff00!important;   padding-bottom: 15px;
     padding-top: 15px;   "toggleable variant="light">
@@ -9,14 +10,13 @@
     color: #c1c1c1;
 " class="fa fa-arrow-left responsive" aria-hidden="true"> สร้างประกาศหาติวเตอร์</i> 
 
-   </b-navbar>
 <b-container fluid style="padding:0px;" >
        <br>
         <!-- <p style=" color:#86a5ca ; text-align: center;
 " >
  ติวเตอร์ทั้งหมด ({{ tutors.length }})</p> -->
 
-  
+  <br>
     <br>
 
  <b-col style="    padding-left: 0px;
