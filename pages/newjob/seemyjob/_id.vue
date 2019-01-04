@@ -104,12 +104,12 @@
     width: 60%;
     margin-top: 8px;
     border: solid 1px;">ปิดงาน</b-button>
-     <b-button v-if="job.status = 'ปิด'" @click="changestatus2" size="lg" style="    color: #dfaea9;
+     <!-- <b-button v-if="job.status = 'ปิด'" @click="changestatus2" size="lg" style="    color: #dfaea9;
     background-color: rgb(255, 255, 255);
     border: 0px;
     width: 60%;
     margin-top: 8px;
-    border: solid 1px;">เปิดงาน</b-button>
+    border: solid 1px;">เปิดงาน</b-button> -->
 </div>
     </div>
 <br>
