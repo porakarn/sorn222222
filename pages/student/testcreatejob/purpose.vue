@@ -6,7 +6,7 @@
      <i @click="goback" style=" font-size: 23px;
     padding-left: 4px;
     color: #c1c1c1;
-" class="fa fa-arrow-left responsive" aria-hidden="true"> วิชา</i> 
+" class="fa fa-arrow-left responsive" aria-hidden="true"></i> 
         <!-- <b-navbar-brand>BootstrapVue</b-navbar-brand> -->
    
         
@@ -53,6 +53,7 @@
                       v-model="form"
                       placeholder="อื่นๆ">
         </b-form-input>
+
       </b-form-group>
 
 
@@ -65,7 +66,7 @@
     
     padding-top: 11px;
     padding-bottom: 11px;
-    border-radius: 4px;">ลงประกาศหาติวเตอร์</b-button> </div> 
+    border-radius: 4px;">เรียบร้อย</b-button> </div> 
 </b-container>
 </b-container>
 </template>
@@ -251,3 +252,87 @@ nextPage2(){
 
 }
 </script>
+
+<style>
+
+.wrap{
+   white-space: pre !important;
+   font-size:18px !important;
+}
+
+
+label{
+   
+   font-size: 18px;
+    
+}
+
+label:checked {
+  background-color: #8a86dd;
+    border: 1px solid #d9e3d9;
+    padding: 7px;
+    padding-right:15px; 
+    border-radius: 6px;
+    margin: 5px;
+    margin-top: 7px;
+
+    
+}
+
+li{
+  margin: 23px;
+}
+
+input{
+  margin-right: 7px;
+}
+
+
+.container input {
+    position: absolute;
+    opacity: 0
+    
+    ;
+    cursor: pointer;
+}
+
+.checkmark {
+    position: absolute;
+    margin-right: 24px;
+    height: 25px;
+    width: 25px;
+    background-color: #eee;
+    border-radius: 30%;
+    float:left;
+    margin-top: 3px;
+}
+.container1 {
+        margin-bottom: 0px;
+    position: relative;
+    /* padding-left: 35px;
+    margin-bottom: 12px; */
+    cursor: pointer;
+    font-size: 22px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+
+
+
+.container1:hover input ~ .checkmark {
+    background-color: #ccc;
+}
+
+.container1 input:checked ~ .checkmark {
+    background-color: #2196F3;
+}
+
+.container1 input:checked ~ .pora {
+    color: #96b3bc;
+}
+
+
+</style>
