@@ -169,6 +169,9 @@ mounted() {
     if (this.$store.state.job.subject) {
      this.selected = this.$store.state.job.subject  
     }
+     if (this.$store.state.job.subjectDetail) {
+     this.subjectDetail = this.$store.state.job.subjectDetail  
+    }
 }
 
 },

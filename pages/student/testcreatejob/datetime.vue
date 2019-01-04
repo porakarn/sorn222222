@@ -32,7 +32,7 @@
 
         -->
 
-  <p style="font-size:20px;">วันที่สะดวก</p>
+ 
    <b-form-group >
       <b-form-checkbox-group plain stacked v-model="selected2" name="flavour2" :options="options2">
       </b-form-checkbox-group>

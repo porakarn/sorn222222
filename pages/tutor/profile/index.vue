@@ -11,7 +11,7 @@
     <b-row>
         <b-col cols="4">
           
-  <b-img rounded="circle" style="width: 70px" :src="picture"/>
+  <b-img rounded="circle" style="width: 74px;    margin-left: 17px;" src="https://scontent.fbkk5-6.fna.fbcdn.net/v/t1.0-1/p240x240/15873069_1211350558943201_5314025003629794223_n.jpg?_nc_cat=101&_nc_ht=scontent.fbkk5-6.fna&oh=1109718a0bb183379afb401a1b5d3c3a&oe=5C695BF5"/>
     <!-- <b-img  style="width: 90px; " rounded="circle" :src="$store.state.user.picture" /> -->
 
         </b-col>
@@ -46,10 +46,11 @@
  "><i style="color: #F1F182;" class="fa fa-star" aria-hidden="true"></i>
 </i> 4.6 (10)  	&nbsp;&nbsp; <i class="fa fa-user" aria-hidden="true"></i> 12 (30 ครั้ง)
   </p> -->
-  <nuxt-link to="/tutor/profile/edit">
-  <b-button size="lg" @click="onSubmit" style="background-color: #33C1C1;      margin-top: 9px;  box-shadow: 0 1px 1px 1px rgba(111, 111, 111, 0.23);
-; border: 0px;     width: -webkit-fill-available;">เขียนโปรไฟล์</b-button>
-</nuxt-link>
+  <!-- <nuxt-link to="/tutor/profile/edit"> -->
+  <b-button size="lg" @click="onSubmit" style="background-color: #DFAEA9; border-radius:25px;     margin-top: 9px;  box-shadow: 0 1px 1px 1px rgba(111, 111, 111, 0.23);
+; border: 0px;      padding-top: 12px;
+    padding-bottom: 12px;   width: -webkit-fill-available;">เขียนโปรไฟล์</b-button>
+<!-- </nuxt-link> -->
 
   
   <!-- <p  v-if="isUserLoggedIn"
@@ -62,8 +63,55 @@
 
    <br>
   <b-row> <b-col >
-         <p style="color: #484848; font-size: 17px;margin-bottom: 7px;font-weight: bold;">{{name}}</p>
 
+  <b-card class="card1" >
+      <i style="color:#959595;" class="fa fa-bandcamp" aria-hidden="true"></i>
+         <strong style="    color: rgb(109, 109, 109);
+    font-weight: 400;
+    padding-left: 9px;">
+ดูโปรไฟล์คุณ  </strong>  
+<i style="    float: right;
+    margin-top: 5px;
+color: #afafaf;
+    font-size: 20px;" class="fa fa-angle-right" aria-hidden="true"></i>
+    </b-card>
+
+      <b-card class="card1" >
+          <i style="color:#959595;"  class="fa fa-credit-card" aria-hidden="true"></i>
+
+         <strong style="    color: rgb(109, 109, 109);
+    font-weight: 400;
+    padding-left: 9px;">
+เติมเงิน   </strong>  
+<i style="    float: right;
+    margin-top: 5px;
+color: #afafaf;
+    font-size: 20px;" class="fa fa-angle-right" aria-hidden="true"></i>
+    </b-card>
+
+      <!-- <b-card class="card1" >
+         <strong style="    color: rgb(109, 109, 109);
+    font-weight: 400;
+    padding-left: 9px;">
+วิชาที่อยากเรียน   </strong>  
+<i style="    float: right;
+    margin-top: 5px;
+color: #afafaf;
+    font-size: 20px;" class="fa fa-angle-right" aria-hidden="true"></i>
+    </b-card> -->
+
+      <b-card class="card1" >
+          <i style="color:#959595;"  class="fa fa-user-circle-o" aria-hidden="true"></i>
+
+         <strong style="    color: rgb(109, 109, 109);
+    font-weight: 400;
+    padding-left: 9px;"> 
+โปรไฟล์ส่วนตัว  </strong>  
+<i style="    float: right;
+    margin-top: 5px;
+color: #afafaf;
+    font-size: 20px;" class="fa fa-angle-right" aria-hidden="true"></i>
+    </b-card>
  <!-- <p style="margin-bottom: 0px; color:#484848;  margin-top: 17px; font-size: 19px">วิชาที่คุณสอน
 </p> -->
 
@@ -71,14 +119,7 @@
 
   <b-row class="my-1">
     <b-col >
- <nuxt-link  v-if="this.$store.state.haveProfile" to="/tutor/profile/edit">  <p v-if="!location" style=" color:#86a5ca"><i class="fa fa-plus-circle" aria-hidden="true"></i>
- เพิ่มสถานที่สอน</p></nuxt-link>
-  <nuxt-link v-if="this.$store.state.haveProfile" to="/tutor/sharesheet">  <p v-if="location" style=" color:#86a5ca"><i class="fa fa-plus-circle" aria-hidden="true"></i>
- อัพโหลดชีทสอน</p></nuxt-link>
-    <a href="https://line.me/R/ti/p/%40dxc2481h">  <p  style=" color:#86a5ca"><i class="fa fa-plus-circle" aria-hidden="true"></i>
- เข้าร่วมกลุ่ม Line</p></a>
-     <p style=" white-space: pre-wrap;"  v-if="this.$store.state.haveProfile"
-> {{this.$store.state.user.subject}} </p>
+
 
       <!-- <b-form-input focus="false"  class="formpor" id="input-large"  type="text" :placeholder="this.$store.state.user.email"></b-form-input> -->
     </b-col>
@@ -96,43 +137,9 @@
 
                  <!-- <p style=" margin-bottom: 0px;   padding-top: 0px !important; font-size: 19px;
 color: #484848; border:1px !important;">โปรไฟล์ของคุณ</p> -->
-   <p style=" white-space: pre-wrap;" v-if="this.$store.state.haveProfile"
-> {{this.$store.state.user.profile}} </p>
+
  </b-col></b-row>
 
-  <b-row> <b-col >
-    <b-button v-if="review" style="color: #2b92ff;
-    background-color: #ffffff;
-    border-color: #ffffff;" @click="porakarn">รีวิว</b-button> 
-    <br><br>
-
-  <div v-for="review in reviews" >
-    <b-row style="margin-bottom: 12px;">
-   <b-col cols="2">
-    <img  style="width: 60px;     border-radius: 50%;"  :src="review.studentid.picture"  alt="">
-
-   </b-col>
-     <b-col  cols="10" style="padding-left: 20px ;    flex: none; width: fit-content;">
-     <div style="font-weight: 400;
-    font-size: 17px;
-    background-color: #f5f5f5;
-    padding: 8px;
-    padding-left: 12px;
-    padding-right: 12px;
-    border-radius: 14px;
- ">{{review.review_write}}  </div>
-
-     <p style="     margin-top: 6px;   font-size: 17px;">{{review.studentid.name.split(" ").slice(0, -1).join(" ")}} <i style="color: #F8E217;" class="fa fa-star" aria-hidden="true"></i> {{ review.rating}}   </p>  
-</p>
-
-
-
-   </b-col>
-    <!-- <b-col  cols="2" style="    padding-right: 9px;" >
-<p><i style="color: #F8E217;" class="fa fa-star" aria-hidden="true"></i> {{ review.rating}} </p>
-   </b-col> -->
-
-    </b-row>
 
 
   </div>
