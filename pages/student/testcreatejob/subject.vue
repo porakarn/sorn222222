@@ -1,12 +1,12 @@
 <template>
-<b-container fluid style="padding: 0px;">
+<b-container fluid style="padding: 0px; background-image: linear-gradient(to bottom, #fff0f0, #fef4f6, #fdf8fb, #fdfcfe, #ffffff);">
 
-<b-navbar  style=" background-color:white!important;   padding-bottom: 15px;
+<b-navbar  style=" background-color:#ffffff00!important;   padding-bottom: 15px;
     padding-top: 15px;   "toggleable variant="light">
-     <i @click="goback" style=" font-size: 25px;
+     <i @click="goback" style=" font-size: 23px;
     padding-left: 4px;
-    color: grey;
-" class="fa fa-arrow-left responsive" aria-hidden="true"></i>
+    color: #c1c1c1;
+" class="fa fa-arrow-left responsive" aria-hidden="true"> วิชา</i> 
         <!-- <b-navbar-brand>BootstrapVue</b-navbar-brand> -->
    
         
@@ -36,7 +36,9 @@
                   
                     label-for="exampleInput3">
         <b-form-select style="     font-size: 17px;
-    color: #858484;   border-radius: 7px;" class="formpor" id="exampleInput3" size="lg"
+    color: #858484;   border-radius: 7px; 
+    box-shadow: 0px 2px 2px 0px #d0d0d0;
+    border: 1px solid #fdfdfd;" class="formpor" id="exampleInput3" size="lg"
                       :options="options"
                     
                       v-model="selected">
@@ -50,7 +52,9 @@
                     
                     label-for="exampleInput1"
                     description=" ตัวอย่าง ภาษาอังกฤษ GAT ENG">
-        <b-form-input style="border-radius:7px;" class="formpor" id="exampleInput1" size="lg" 
+        <b-form-input style="border-radius:7px;  
+    box-shadow: 0px 2px 2px 0px #d0d0d0;
+    border: 1px solid #fdfdfd;" class="formpor" id="exampleInput1" size="lg" 
                       type="text"
                       required
                       v-model="subjectDetail"
