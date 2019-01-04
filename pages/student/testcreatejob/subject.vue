@@ -38,7 +38,8 @@
         <b-form-select style="     font-size: 17px;
     color: #858484;   border-radius: 5px; 
     
-    border: 1px solid #e4e4e4;" class="formpor" id="exampleInput3" size="lg"
+        border: 0px;
+    box-shadow: 0 1px 3px #74686833;" class="formpor" id="exampleInput3" size="lg"
                       :options="options"
                     
                       v-model="selected">
@@ -54,7 +55,8 @@
                     description=" ตัวอย่าง ภาษาอังกฤษ GAT ENG">
         <b-form-input style="border-radius:5px;  
       font-size: 17px;
-    border: 1px solid #e4e4e4;    padding-top: 10px;
+    border: 0px;    
+    box-shadow: 0 1px 3px #74686833;   padding-top: 10px;
     padding-bottom: 10px;" class="formpor" id="exampleInput1" size="lg" 
                       type="text"
                       required
