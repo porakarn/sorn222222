@@ -38,8 +38,8 @@
     border-radius: 6px;
     color: white;
     font-weight: 500;
-    padding-right: 3px;
-    padding-left: 5px;
+    padding-right: 7px;
+    padding-left: 7px;
     font-size: 15px;    float: right;
     margin-right: 8px;
         padding-top: 3px;
@@ -98,7 +98,7 @@
 <div style="text-align:center;">
   <b-button  size="lg" style=" color:white;  background-color: #DFAEA9; border: 0px; 
     width:60%;">แก้ไข</b-button>
-    <b-button @click="changestatus" size="lg" style="    color: #dfaea9;
+    <b-button v-if="job.status = 'ว่าง'" @click="changestatus" size="lg" style="    color: #dfaea9;
     background-color: rgb(255, 255, 255);
     border: 0px;
     width: 60%;
@@ -188,7 +188,7 @@ console.log('sds'+ this.$route.params.id);
 //   }
 //   ,
     methods: {
-     changestutus(){
+     changestatus(){
     var data = {
      status: ปิด,
      _id: this.job._id
