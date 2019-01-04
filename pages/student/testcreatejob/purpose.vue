@@ -32,7 +32,7 @@
 
         -->
 
-  <b-form-group style="    font-size: 21px;" label="จุดประสงค์ของการเรียน">
+  <b-form-group style=" " label="จุดประสงค์ของการเรียน">
       <b-form-radio-group v-model="selected"
                           :options="options"
                           plain
@@ -64,8 +64,8 @@
  <div  style="text-align :center">       <b-button @click="onSubmit"
    style="background-color: #EFBAB5; border: 0px;  width:80%
     
-    padding-top: 11px;
-    padding-bottom: 11px;
+    padding-top: 11px!important;
+    padding-bottom: 11px!important;
     border-radius: 4px;">เรียบร้อย</b-button> </div> 
 </b-container>
 </b-container>
@@ -279,13 +279,19 @@ label:checked {
     
 }
 
+.pt-0, .py-0 {
+    font-size:21px;
+    padding-bottom: 6px;
+    padding-top: 0 !important;
+}
 li{
   margin: 23px;
 }
 
 input{
-  margin-right: 7px;
-}
+    margin-right: 10px;
+    
+    margin-bottom: 12px;}
 
 
 .container input {
