@@ -190,7 +190,7 @@ console.log('sds'+ this.$route.params.id);
     methods: {
      changestatus(){
     var data = {
-     status: ปิด,
+     status: 'ปิด',
      _id: this.job._id
     }
 
