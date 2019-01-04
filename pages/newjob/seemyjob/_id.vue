@@ -51,7 +51,7 @@
 " v-if="job.day">
     {{job.day.toString()}} {{job.time}} {{job.location}}</p>
 <p style="color:#545454; font-size:16px   ;  margin-bottom: 0px;" >
-    ...</p>   <strong style="float: right;
+   {{job.gender}} {{job.grade}} {{job.duration}} ...</p>   <strong style="float: right;
     margin-top: -18px;
     font-weight: 400;
     font-size: 13px;
