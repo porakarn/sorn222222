@@ -44,7 +44,7 @@
     margin-right: 8px;
         padding-top: 3px;
         padding-bottom: 1px;
-    margin-top: 0px;"> 500 - 
+    margin-top: 0px;"> {{job.status}}
  </strong></p>
 <p style="color:#545454; font-size:16px;margin-bottom: 0px;margin-bottom: 3px;
 " v-if="job.day">
@@ -98,7 +98,7 @@
 <div style="text-align:center;">
   <b-button  size="lg" style=" color:white;  background-color: #DFAEA9; border: 0px; 
     width:60%;">แก้ไข</b-button>
-    <b-button  size="lg" style="    color: #dfaea9;
+    <b-button @click="changestatus" size="lg" style="    color: #dfaea9;
     background-color: rgb(255, 255, 255);
     border: 0px;
     width: 60%;
@@ -188,6 +188,23 @@ console.log('sds'+ this.$route.params.id);
 //   }
 //   ,
     methods: {
+     changestutus(){
+    var data = {
+     status: ปิด;
+    }
+
+  axios.patch('https://frozen-mesa-40722.herokuapp.com/job2/update', data).then((res) =>{
+
+            console.log(res.data)
+             this.job.status = res.data.status 
+            
+
+           }).catch((error) =>{ console.log(error) })
+           
+
+     },
+
+
        displayTimestamp(t){
                 return moment(t).fromNow()
             },
