@@ -265,6 +265,8 @@ creator_contact:this.$store.state.student.phone,
 creator_line: this.$store.state.student.line,
 creator_name: this.$store.state.student.name,
 creator_id_student: this.$store.state.student._id,
+creator_gender: this.$store.state.student.gender,
+creator_grade: this.$store.state.student.grade,
 // creator_id_tutor: { type: Schema.ObjectId, ref: 'Tutor2'},
 }
 //   axios.post('http://localhost:8000/job2/create', job)
