@@ -43,7 +43,7 @@
  <!-- <b-form-select  :select-size="2" v-model="selected2" :options="options2" class="mb-3">
     </b-form-select> -->
 
-  <b-form-group v-if="selected"  id="exampleInputGroup1"
+  <!-- <b-form-group v-if="selected"  id="exampleInputGroup1"
                     
                     label-for="exampleInput1"
                     description="เช่น ต้องการสอบเข้าเตรียมอุดม">
@@ -53,7 +53,7 @@
                       v-model="form"
                       placeholder="อื่นๆ">
         </b-form-input>
-      </b-form-group>
+      </b-form-group> -->
 
 
 

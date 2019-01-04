@@ -16,7 +16,7 @@
 
 
 <b-container fluid>
-  <br>
+  
     <!-- <div>จังหวัด: <strong style="    background-color: #c6f1d0;
     padding: 5px;
     border-radius: 9px;
@@ -32,12 +32,12 @@
 
         -->
 
-
-   <b-form-group label="วันที่สะดวก">
+  <p style="font-size:20px;">วันที่สะดวก</p>
+   <b-form-group >
       <b-form-checkbox-group plain stacked v-model="selected2" name="flavour2" :options="options2">
       </b-form-checkbox-group>
     </b-form-group>
-<br>
+
   <b-form-group >
 
  <b-form-group v-if="selected2"  id="exampleInputGroup1"
