@@ -67,7 +67,7 @@
     margin-right: 8px;
         padding-top: 3px;
         padding-bottom: 1px;
-    margin-top: 0px;"> 500 - 
+    margin-top: 0px;"> {{job.status}}
  </strong></p>
 <p style="color:#545454; font-size:16px;margin-bottom: 0px;margin-bottom: 3px;
 " v-if="job.day">
