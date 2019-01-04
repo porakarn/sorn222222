@@ -3,8 +3,8 @@
 <b-container fluid style="padding: 0px; background-color:#FAFAFA  ;
 ">
 
-<b-navbar  style=" background-color:#DFAEA9!important;   padding-bottom: 21px;
-    padding-top: 21px; box-shadow: 0px 2px 3px #d2d2d2;  "toggleable variant="light">
+<b-navbar  style=" background-color:#DFAEA9!important;   padding-bottom: 22px;
+    padding-top: 22px; box-shadow: 0px 2px 3px #d2d2d2;  "toggleable variant="light">
      <i @click="goback" style=" font-size: 19px;
     padding-left: 4px;
     color: white;

@@ -69,10 +69,12 @@
         padding-bottom: 1px;
     margin-top: 0px;"> {{job.status}}
  </strong></p>
-<p style="color:#545454; font-size:16px;margin-bottom: 0px;margin-bottom: 1px;
+<p style="    color: grey;
+    font-size: 15px;
+    margin-bottom: 0px;margin-bottom: 0px;margin-bottom: 1px;
 " v-if="job.day">
 {{job.day.toString()}} {{job.time}} {{job.location}}</p>
-<p style="color:#545454; font-size:16px ; margin-bottom: 0px;" >
+<p style=" color: grey;margin-top:-1px; font-size:16px ; margin-bottom: 0px;" >
 {{job.creator_gender}} {{job.creator_grade}} {{job.purpose}} </p> 
  <strong style="float: right;
     margin-top: -18px;
