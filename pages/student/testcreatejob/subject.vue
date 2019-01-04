@@ -31,8 +31,8 @@
     padding-right: 10px;"  v-for="selecting in selected">{{ selecting }}</strong></div>    
 
         -->
-
- <b-form-select  :select-size="2" v-model="selected" size="lg"  :options="options" class="mb-3">
+ <div  style="text-align :center"> 
+ <b-form-select style="width: 80%"  :select-size="2" v-model="selected" size="lg"  :options="options" class="mb-3">
     </b-form-select>
 
  <!-- <b-form-select  :select-size="2" v-model="selected2" :options="options2" class="mb-3">
@@ -42,14 +42,14 @@
                     
                     label-for="exampleInput1"
                     description=" ตัวอย่าง ภาษาอังกฤษ GAT ENG">
-        <b-form-input  class="formpor" id="exampleInput1" size="lg" 
+        <b-form-input style="width: 80%" class="formpor" id="exampleInput1" size="lg" 
                       type="text"
                       required
                       v-model="subjectDetail"
                       placeholder="รายละเอียดวิชา">
         </b-form-input>
       </b-form-group>
-
+ </div>
   <!-- <b-form-textarea style="  white-space: pre-wrap;   padding-top: 0px;
 " class="formpor" id="textarea1"
                      
@@ -62,12 +62,12 @@
 <!-- <button @click="testbtn">Test</button> -->
 
  <div  style="text-align :center">        <b-button  @click="onSubmit"
-   style="background-color: #EFBAB5; border: 0px;     padding-left: 64px;
-    padding-right: 64px;
+   style="background-color: #EFBAB5; border: 0px;   
+    width:80%;
     
-    padding-top: 11px;
-    padding-bottom: 11px;
-    border-radius: 22px;">ลงประกาศหาติวเตอร์</b-button> </div> 
+    padding-top: 13px;
+    padding-bottom: 13px;
+    border-radius: 4px;">เรียบร้อย</b-button> </div> 
 </b-container>
 </b-container>
 </template>
