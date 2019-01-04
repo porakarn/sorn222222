@@ -105,6 +105,12 @@
     width: 60%;
     margin-top: 8px;
     border: solid 1px;">ปิดงาน</b-button>
+     <b-button  @click="changestatus2" size="lg" style="    color: #dfaea9;
+    background-color: rgb(255, 255, 255);
+    border: 0px;
+    width: 60%;
+    margin-top: 8px;
+    border: solid 1px;">เปิดงาน</b-button>
 </div>
     </div>
 <br>
@@ -200,6 +206,22 @@ console.log('sds'+ this.$route.params.id);
      changestatus(){
     var data = {
      status: 'ปิด',
+     _id: this.job._id
+    }
+
+  axios.patch('https://frozen-mesa-40722.herokuapp.com/job2/update', data).then((res) =>{
+
+            console.log(res.data)
+             this.status = res.data.status 
+            this.$router.go(0)
+
+           }).catch((error) =>{ console.log(error) })
+           
+
+     },
+  changestatus2(){
+    var data = {
+     status: 'เปิด',
      _id: this.job._id
     }
 
