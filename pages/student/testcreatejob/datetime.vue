@@ -3,7 +3,7 @@
 
 <b-navbar  style=" background-color:#ffffff00!important;   padding-bottom: 15px;
     padding-top: 15px;   "toggleable variant="light">
-     <i @click="goback" style=" font-size: 23px;
+     <i @click="goback" style=" font-size: 21px;
     padding-left: 4px;
     color: #c1c1c1;
 " class="fa fa-arrow-left responsive" aria-hidden="true"> วัน เวลาที่สะดวก</i>
@@ -40,7 +40,7 @@
 
   <b-form-group >
 
- <b-form-group v-if="selected2"  id="exampleInputGroup1"
+ <b-form-group v-if="selected2.length >0"  id="exampleInputGroup1"
                     
                     label-for="exampleInput1"
                     description="เช่น 5-7 โมงเย็น">
@@ -54,7 +54,7 @@
       </b-form-group>
 
 
-      <b-form-radio-group  v-if="selected2" v-model="selected"
+      <b-form-radio-group  v-if="selected2.length >0" v-model="selected"
                           :options="options"
                           plain
                           stacked
@@ -67,11 +67,13 @@
  
 
 
-<br>
+
 
 
  <div  style="text-align :center">       <b-button @click="onSubmit" size="lg" style=" color:white;  background-color: #DFAEA9; border: 0px; 
     width:80%;">เรียบร้อย</b-button>   </div> 
+
+    <br> <br> <br>
 </b-container>
 <b-container fluid class="bv-example-row  "  style="    padding-left: 28px;
     

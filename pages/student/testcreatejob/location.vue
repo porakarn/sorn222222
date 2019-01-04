@@ -3,7 +3,7 @@
 
 <b-navbar  style=" background-color:#ffffff00!important;   padding-bottom: 15px;
     padding-top: 15px;   "toggleable variant="light">
-     <i @click="goback" style=" font-size: 23px;
+     <i @click="goback" style=" font-size: 21px;
     padding-left: 4px;
     color: #c1c1c1;
 " class="fa fa-arrow-left responsive" aria-hidden="true"> สถานที่เรียน</i> 

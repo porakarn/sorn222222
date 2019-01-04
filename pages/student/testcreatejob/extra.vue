@@ -3,7 +3,7 @@
 
 <b-navbar  style=" background-color:#ffffff00!important;   padding-bottom: 15px;
     padding-top: 15px;   "toggleable variant="light">
-     <i @click="goback" style=" font-size: 23px;
+     <i @click="goback" style=" font-size: 21px;
     padding-left: 4px;
     color: #c1c1c1;
 " class="fa fa-arrow-left responsive" aria-hidden="true"> เพิ่มเติม</i> 
@@ -35,10 +35,10 @@
  <b-form-textarea id="textarea1"
                      v-model="extra"
                      placeholder="รายละเอียดเพิ่มเติม (ถ้ามี)"
-                     :rows="3"
+                     :rows="4"
                      :max-rows="6">
     </b-form-textarea>
-<p style="color:grey; font-size:14px; margin-top:2px;">เช่น อยากได้ติวเตอร์ ญ อยากได้ติวเตอร์ใจดี</p>
+<p style="color:#b9b9b9; font-size:13px; margin-top:2px;">เช่น อยากได้ติวเตอร์ ญ อยากได้ติวเตอร์ใจดี</p>
   <!-- <b-form-textarea style="  white-space: pre-wrap;   padding-top: 0px;
 " class="formpor" id="textarea1"
                      
@@ -56,7 +56,7 @@
     
     padding-top: 11px;
     padding-bottom: 11px;
-    border-radius: 22px;">ลงประกาศหาติวเตอร์</b-button> </div> 
+    border-radius: 22px;">เรียบร้อย</b-button> </div> 
 </b-container>
 <b-container fluid class="bv-example-row  "   style="    padding-left: 28px;
     

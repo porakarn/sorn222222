@@ -3,11 +3,11 @@
 <b-container fluid style="padding: 0px; background-color:#FAFAFA  ;
 ">
 
-<b-navbar  style=" background-color:#DFAEA9!important;   padding-bottom: 15px;
-    padding-top: 15px;   "toggleable variant="light">
+<b-navbar  style=" background-color:#DFAEA9!important;   padding-bottom: 20px;
+    padding-top: 20px;   "toggleable variant="light">
      <i @click="goback" style=" font-size: 21px;
     padding-left: 4px;
-    color: #c1c1c1;
+    color: white;
 " class="fa fa-arrow-left responsive" aria-hidden="true"> สร้างประกาศหาติวเตอร์</i> 
 </b-navbar>
 <b-container fluid style="padding:0px;" >
