@@ -1,316 +1,213 @@
 <template>
+
 <b-container fluid style="padding:0px;">
-  <!-- <b-nav tabs>
-  <b-nav-item>All</b-nav-item>
-    <b-nav-item>ว่าง</b-nav-item>
-  <b-nav-item>รอจ่ายเงิน</b-nav-item>
-  <b-nav-item>ปิดแล้ว</b-nav-item>
-</b-nav> -->
-<b-navbar  style="    padding-bottom: 12px;
+ <b-navbar  style="   box-shadow: -1px 2px 6px 0px #9c9c9c44   padding-bottom: 12px;
     padding-top: 12px;  background-color:#dfaea9!important; "toggleable variant="light">
         <b-navbar-toggle style="border-color: rgba(0, 0, 0, 0);    padding-left: 0px;
     padding-right: 0px;" target="nav_text_collapse"></b-navbar-toggle>
         <!-- <b-navbar-brand>BootstrapVue</b-navbar-brand> -->
-     <b-button  class="responsive2" style="  font-size: 21px;
-         color: #b7e8d9;
-    background-color: #eefdf8;
-    font-weight: 500;
- 
-    border-color: #6c757d00;
-    border-radius: 18px;
-    padding-top: 0px;
-    padding-bottom: 0px;
-    padding-left: 8px;
-    padding-right: 8px;
-    font-family: kanit;
-    border-top-width: 0px;
-        border-bottom-width: 0px
-"> sorns</b-button>
-        
-          <b-button v-b-modal.modal1  class="responsive" style="font-size: 17px; color: #667a6b; float:right;
-    background-color: rgb(250, 255, 252);
-    border-color: #6c757d00;
-    border-radius: 18px;
-      padding-left: 17px;
-    padding-right: 20px;
-"><i style=" font-size: 20px; color: #667a6b;   " class="fa fa-search nav-item " aria-hidden="true"></i> ลองค้นหางานดูสิ</b-button>
+         <!-- <b-navbar-brand style="    color: rgb(51, 193, 193);
+    font-size: 28px;
+    font-weight: 500;margin-left: 55px;" href="#">Sorns</b-navbar-brand> -->
+     <!-- color: #a5efe3; -->
+    <!-- background-color: #effdf3; -->
+
+  
         <b-collapse is-nav id="nav_text_collapse">
             <b-navbar-nav class="ml-auto">
-               <b-nav-item  style=" color:#345d46;   padding-right: 65px;">   <nuxt-link class="nav-item" style="color:#345d46; font-weight: 400; font-size:16px " to="/user/seeall">  <i class="fa fa-search " aria-hidden="true"></i>  Search  </nuxt-link></b-nav-item>
-             <b-nav-item  style="    padding-right: 65px;">  <nuxt-link class="nav-item" style="color:#345d46;  font-weight: 400; font-size:16px" to="/user/create">  <i class="fa fa-pencil" aria-hidden="true"></i> Add New  </nuxt-link></b-nav-item>
-             <b-nav-item  style="    padding-right: 65px;"><nuxt-link class="nav-item" style="color:#345d46; font-weight: 400; font-size:16px font-weight: 400; font-size:16px " to="/user/alltutor"> <i class="fa fa-book" aria-hidden="true"></i> All Tutor </nuxt-link></b-nav-item>
-             <b-nav-item style="    padding-right: 65px;"><nuxt-link class="nav-item" style="color:#345d46; font-weight: 400; font-size:16px " to="/tutor/profile"><i class="fa fa-user-circle" aria-hidden="true"></i> Profile </nuxt-link></b-nav-item>
-              <b-nav-item  @click="logout" style="    padding-right: 100px;"><nuxt-link  style="color:#345d46;  font-weight: 400; font-size:16px" to="/tutor/createprofile"><i class="fa fa-sign-out" aria-hidden="true"></i> Logout </nuxt-link></b-nav-item>
+                 <!-- <b-nav-item href="#">ค้นหางาน</b-nav-item>
+                <b-nav-item href="#">สร้างงานใหม่</b-nav-item>
+                <b-nav-item href="#">งานของคุณ</b-nav-item>
+                <b-nav-item href="#">โปรไฟล์ของคุณ</b-nav-item> -->
+            <b-nav-item  style=" color:#345d46;   padding-right: 65px;">   <nuxt-link class="nav-item" style="color:#345d46; " to="/user/seeall">  <i class="fa fa-search " aria-hidden="true"></i>  Search  </nuxt-link></b-nav-item>
+             <b-nav-item  style="    padding-right: 65px;">  <nuxt-link class="nav-item" style="color:#345d46; " to="/user/create">  <i class="fa fa-pencil" aria-hidden="true"></i> Add New  </nuxt-link></b-nav-item>
+             <b-nav-item  style="    padding-right: 65px;"><nuxt-link class="nav-item" style="color:#345d46; " to="/user/alltutor"> <i class="fa fa-book" aria-hidden="true"></i> All Tutor </nuxt-link></b-nav-item>
+             <b-nav-item style="    padding-right: 65px;"><nuxt-link class="nav-item" style="color:#345d46; " to="/tutor/profile"><i class="fa fa-user-circle" aria-hidden="true"></i> Profile </nuxt-link></b-nav-item>
+              <b-nav-item  @click="logout" style="    padding-right: 100px;"><nuxt-link  style="color:#345d46; " to="/choose"><i class="fa fa-sign-out" aria-hidden="true"></i> Logout </nuxt-link></b-nav-item>
 
-    
+                
+                
+                
+
 
             </b-navbar-nav>
         </b-collapse>
     </b-navbar>
 
+<b-container fluid style="padding:0px;" >
+       <br>
+        <!-- <p style=" color:#86a5ca ; text-align: center;
+" >
+ ติวเตอร์ทั้งหมด ({{ tutors.length }})</p> -->
+         <!-- <a class="mybtn" style="background-color:#EEC0BB; color:white;" >All</a>    
+                 <a class="mybtn" >Eng</a>    
+        <a class="mybtn" >คณิต</a>    
+        <a class="mybtn" >วิทย์</a>    
+               <a class="mybtn" >จีน</a>    
+        <a class="mybtn" >ญี่ปุ่น</a>     -->
+<div style=" text-align:center;">
+     <b-button v-b-modal.modal1  class="responsive" style="font-size: 17px;
+    color: #5f5f5f; 
+    background-color: #f5f5f5;
+    border-color: rgb(239, 239, 239);
+    border-radius: 22px;
+    width: 87%;
+"><i style=" font-size: 20px; color: #5f5f5f;   " class="fa fa-search nav-item " aria-hidden="true"></i> ค้นหาติวเตอร์ตามวิชา</b-button>
 
-
-
-<b-nav fill tabs  style="margin-top:-7px;    background-color: #dfaea9; box-shadow: 0px 2px 3px -1px rgba(126, 126, 126, 0.2), 0px 4px 5px 0px rgba(0, 0, 0, 0), 0px 1px 10px 0px #00000003;">
-   <b-nav-item  class="responsive"  style="border-bottom: 4px solid;
-    border-bottom-color: #ffffff; color: #ffffff; padding-right: 12px;
-    padding-left: 12px;
-">ทั้งหมด </b-nav-item>
- <b-nav-item class="responsive"  @click="nextPage">งานแนะนำ</b-nav-item>
- 
-</b-nav>
- <b-modal no-fade hide-header  hide-footer ref="myModalRef4"  id="modal1" >
-
-<div>
-  <p style="font-size:20px;"> เลือกวิชาที่อยากสอน <i style=" font-size: 20px; color: #667a6b;" class="fa fa-search nav-item " aria-hidden="true"></i></p>
-
-    <b-form-select style="  padding-top: 10px;
-    padding-bottom: 10px;" multiple :select-size="6"    v-model="selected" :options="options" class="mb-3">
-    </b-form-select>
-   <strong v-show="selected.length >0" style="    background-color: #c6f1d0;
-    padding: 5px;
-    border-radius: 4px;
-    color: #086542;"> {{ selected.toString().split(',').join(' ') }}</strong></div>
-  </div>
-
-
-
-
-
-<br><br>
-      <input type="checkbox" id="jack" value="จันทร์" v-model="checkedNames">
-  <label for="jack">จันทร์</label> &nbsp;&nbsp;&nbsp;
-  <input step="    height: 31px;
-    width: 31px;" type="checkbox" id="john" value="อังคาร" v-model="checkedNames">
-  <label for="john">อังคาร</label>&nbsp;&nbsp;&nbsp;
-  <input type="checkbox" id="mike" value="พุธ" v-model="checkedNames">
-  <label for="mike">พุธ</label>&nbsp;&nbsp;&nbsp;
-  <input type="checkbox" id="mike" value="พฤหัส" v-model="checkedNames">
-  <label for="mike">พฤหัส</label>
-  <br>
-  <input type="checkbox" id="mike" value="ศุกร์" v-model="checkedNames">
-  <label for="mike">ศุกร์</label>&nbsp;&nbsp;&nbsp;
-  <input type="checkbox" id="mike" value="เสาร์" v-model="checkedNames">
-  <label for="mike">เสาร์</label>&nbsp;&nbsp;&nbsp;
-  <input type="checkbox" id="mike" value="อาทิตย์" v-model="checkedNames">
-  <label for="mike">อาทิตย์</label>
-   <br>
+</div>
 <br>
-  <!-- <button @click="sendout">send</button> -->
-    <b-button  @click="sendout" style="    width: 100%;  background-color: #33C1C1; border: 0px; padding-left: 66px;
-    padding-right: 66px;">ทำการค้นหา</b-button>  
-      <div style="color: grey" class="loading-page" v-if="loading">
-    Loading...
-  </div>
-  </div>
-  </b-modal>
+ <b-col style="    padding-left: 0px;
+    padding-right: 0px;" md="6" offset-md="3">
 
 
-<b-container fluid style="padding-left: 13px;
-    padding-right: 13px; margin-top: 5px;"> 
-<br> 
-  <b-row class="responsive2">
- <b-col offset-lg="3" lg="6">
-   <div style="text-align: center;">
- <b-button v-b-modal.modal1   style="font-size: 17px; 
-  font-size: 18px;
-        color: #616161;
-    background-color: white;
-    border-color: #6c757d00;
-    border-radius: 18px;
-    padding-left: 60px;
-    padding-right: 60px;
 
-"><i style=" font-size: 20px; color: #667a6b;" class="fa fa-search nav-item " aria-hidden="true"></i> ลองค้นหางานดูสิ</b-button>
-   </div> <br>
- </b-col></b-row>
+
+     <b-card @click="seeeach(tutor._id)"  style="margin-bottom:0px;   border: 0px solid;     border-bottom-width: 1px;
+    border-bottom: 1px solid whitesmoke !important;        
    
+
+"  v-for="job in jobs" :key="job._id"  v-if="job.subject" >
+         
+        
+       <b-row style="margin-top: 10px;">
+
+        <b-col style="padding-left: 18px;" cols="2">
+                     <img :src="job.creator_pic" style="width: 53px;
+  height: 53px;margin-top: 3px;
+  border-radius: 14px;
+  box-shadow: 0 1px 1px 0 rgba(205, 205, 205, 0.24);" width="100%"> 
+
+        </b-col>
+         <b-col cols="10" style="margin-left: -1px;padding-left: 15px; padding-right: 2px;">
+<p style="
+  font-family: Roboto;
+  font-size: 16px;
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.31;
+  letter-spacing: normal;
+  text-align: left;
+  margin-bottom: 0px;
+  color: #2c2929;">{{job.subject+ ''+ job.subjectDetail}}    <strong style=" background-color:#EEC0BB;
+    border-radius: 6px;
+    color: white;
+    font-weight: 500;
+    padding-right: 3px;
+    padding-left: 5px;
+    font-size: 15px;    float: right;
+    margin-right: 8px;
+        padding-top: 3px;
+        padding-bottom: 1px;
+    margin-top: 0px;"> 500 - 
+ </strong></p>
+<p style="color:#545454; font-size:16px;margin-bottom: 0px;margin-bottom: 3px;
+" v-if="job.day">
+    {{job.day.toString()}} {{job.time}}</p>
+<p style="color:#545454; font-size:14px   ;  margin-bottom: 0px;" >
+   {{job.location}} ...</p>   <strong style="float: right;
+    margin-top: -18px;
+    font-weight: 400;
+    font-size: 13px;
+    color: grey;
+    padding-right: 13px;">11.22</strong>
+
+        </b-col>
+
+     </b-row>
+     <b-row style=" margin-bottom:-23px;   margin-top: 4px;">
+  <b-col cols="9" style="    padding-left: 9px;
+    padding-right: 0px;">
+ <!-- <a v-show="tutor.tag.length >0" style="    color: rgb(255, 255, 255);
+    text-decoration: none;
+    background-color: rgb(130, 217, 217);
+    padding-top: 3px;
+        margin-top: 7px;
+    padding-bottom: 3px;
+    font-size: 16px;
+    padding-right: 6px;
+    border-radius: 7px;
+    font-weight:400;
+    padding-left: 6px;"  href="#" 
+           class="card-link">{{tutor.tag.toString().split(',').join(' ')}}</a> -->
+
+      <!-- <a v-for="tag in tutor.tag" v-show="tutor.tag.length >0" style=" color: #9dd8bf;
+    text-decoration: none;
+    border: 1px solid #8bd2b4;
+    padding: 3px 8px;
+    margin-left: 6px;
+    margin-top: 7px;
+    font-size: 15px;
+    border-radius: 11px;"  href="#" 
+           class="card-link">{{tag.toString()}}</a> -->
+
+              <!-- <a v-for="tag in tutor.tag" v-show="tutor.tag.length >0" style="    color: rgb(255, 255, 255);
+    text-decoration: none;
+    background-color: rgb(130, 217, 217);
+    padding-top: 3px;
+    margin-left: 6px;
+    margin-top: 7px;
+    padding-bottom: 3px;
+    font-size: 16px;
+    padding-right: 8px;
+    border-radius: 5px;
+    padding-left: 8px;"  href="#" 
+           class="card-link">{{tag.toString()}}</a> -->
+              <br>  
+</b-col>
+
+
+     </b-row>
     
 
-
-   <div v-for="course in courses" >
-
-
-   <b-row>
-   <b-col offset-lg="3" lg="6">
-    <b-card @click="showModal(course)" style="   margin-bottom: 5px; 
-    box-shadow: rgba(146, 146, 146, 0.1) 0px 1px 3px 0px;
-" 
-           > <b-row>  <b-col cols="12" style="   
-">
-        <p style=" white-space: pre-wrap; font-size: 16px; font-family:roboto;  color:#2f2f2f"  class="card-text">{{ course.job.substring(0,170)}}<strong v-if="course.job.length > 170" style="color:grey; font-size:15px; font-weight:400;">...ดูเพิ่มเติม</strong></p>
- <div class="por" >
-       
-</div></b-col> 
-                       </b-row>
-    <b-row>
-      <b-col cols="8" style="padding-left: 8px;">
- <a   href="#" v-show="course.subject.length >0"
-           class="card-link">{{course.subject.toString().split(',').join(' ')}}</a>
-        <b-link href="#" v-show="course.day.length >0"
-                class="card-link"   >{{course.day.toString().split(',').join(' ')}}</b-link> 
-                        <b-link href="#" style=" font-size:16px; color: rgba(102, 117, 113, 0.61176);
-  margin-left: 8px; font-weight:400"
-                  >{{course.status}}</b-link> 
-</b-col>
-
-
-<b-col cols="4" style="margin-top: -15px; padding-left: 20px; ">
-    <strong v-if="course._creator" style="color:#cbcdd0;  font-size: 14px; margin-top: -0px;  float:right;   margin-bottom: 0px; font-weight:400">
- {{course.creator_name.substring(0,20)}}  </strong> 
-
-   <strong v-else style="color:#cbcdd0;  font-size: 14px; margin-top: -0px;  float:right;   margin-bottom: 0px; font-weight:400">
- {{course.creator_name.replace(/\w+[.!?]?$/, '')}}  </strong>  
-
- <strong style="color:#a5cae4;  font-size: 14px; margin-top: -0px;  float:right;  margin-bottom: 0px; font-weight:400">{{ displayTimestamp(course.createdAt) }}  </strong>  
-</b-col>
 
     </b-row>
 
     </b-card>
 
    </b-col>
+    </b-row>
+    <br>
+ <p style=" color:#86a5ca ; text-align: center;
+" >
+ มีติวเตอร์อีกมากกว่า 200 คน</p>
+     
+   <div  style="text-align :center">       <nuxt-link class="nav-item" style="color:#345d46; " to="/student/createjob">   <b-button style="background-color: #33C1C1; border: 0px; padding-left: 46px;
+    padding-right: 46px;">โพสหาติวเตอร์</b-button></nuxt-link> </div> 
 
-
-
-</b-row>
-    
-   
-
-    
-   
-   
-
-
-
-
-
-
-</div>
- <b-modal no-fade hide-header  hide-footer  centered ref="myModalRef" hide-footer title="Using Component Methods">
-      <div class="d-block ">
-        <div v-if="profile2">
-          <div style="font-size: 14px;   margin-bottom: 10px;white-space: pre-wrap;">{{job3}}</div>
-
-      
-             <strong style="color: grey"> Copy โปรไฟล์ของคุณ</strong>
-          <nuxt-link v-if="tutorid2"  :to="tutorid3">    <strong style="    color: rgb(49, 103, 183);
-    font-size: 17px;
-    margin-top: 0px;
-    float: right;
-    margin-bottom: 3px;
-    font-weight: 400;
-    padding-right: 10px;
-"> <i class="fa fa-user-o" style="    font-size: 16px;
-    color: grey;" aria-hidden="true"></i> {{creator_name2.replace(/\w+[.!?]?$/, '') }}  </strong> </nuxt-link>
-
-    <nuxt-link v-if="agentid2"  :to="agentid3">    <strong style="    color: rgb(49, 103, 183);
-    font-size: 17px;
-    margin-top: 0px;
-    float: right;
-    margin-bottom: 3px;
-    font-weight: 400;
-    padding-right: 10px;
-"> <i class="fa fa-user-o" style="    font-size: 16px;
-    color: grey;" aria-hidden="true"></i> {{creator_name2.replace(/\w+[.!?]?$/, '') }}  </strong> </nuxt-link>
-
-
-         <b-form-textarea id="textarea1"
-                     v-model="text"
-                     style="font-size: 14px;"
-                     placeholder="Enter something"
-                     :rows="5"
-                     :max-rows="6">
-    </b-form-textarea>
-
-
-
-
-<b-row style="    margin-bottom: 16px;">
-
-     <b-col cols="12">
-      <!-- <b-img style="border-radius: 5px" width="50px" height="50px" fluid src="https://picsum.photos/250/250/?image=54" alt="Thumbnail" /> -->
-        <p style="    color: rgb(49, 103, 183);
-    font-size: 16px;
-     margin-top: 6px;
-    margin-bottom: 0px;
-    font-weight: 400;
-    padding-right: 10px;
-"> ช่องทางการติดต่อ
-   </p>  
-      
-         <strong style="    color: rgb(49, 103, 183);
-    font-size: 16px;
-  
-    margin-bottom: 0px;
-    font-weight: 400;
-    padding-right: 10px;
-"> <i class="fa fa-phone" aria-hidden="true"></i> {{  contact2 }}
-   </strong>  
-
-       <strong style="    color: rgb(49, 103, 183);
-    font-size: 16px;
-  
-    margin-bottom: 0px;
-    font-weight: 400;
-    padding-right: 10px;
-">Line: {{ line2 }}
-   </strong>  
-               </b-col>   
-</b-row>
-
-   <b-row>
-             <b-col cols="12" >
-
-
-
-     <b-button  :href="linelink" style=" width:100%;     color: white; background-color: #33C1C1; border: 0px; padding-left: 66px;
-    padding-right: 66px;">ติดต่อ</b-button>  
-
-             </b-col>
-                  
-
-         </b-row>
-
-
-           </div>
-
-           <div v-if="!profile2">
-      <h5 style="margin-bottom: 25px;"> กรุณาสร้างโปรไฟล์ติวเตอร์ </h5>
-      <p> หลังจากนั้นคุณสามารถส่งโปรไฟล์ ที่คุณกรอกไว้ ส่งให้เจ้าของงาน หรือ สามารถติดต่อเจ้าของงานได้โดยตรงเลยครับ</p>
-          <br>
-        <nuxt-link to="/tutor/profile/edit">    <b-button  style="  background-color: #33C1C1; border: 0px; padding-left: 86px;
-    padding-right: 86px;">สร้างโปรไฟล์</b-button>  </nuxt-link> <br>
-           </div>
-      </div>
-    </b-modal>
-
+<br>
+   <b-modal no-fade hide-header  hide-footer  centered ref="myModalRef" hide-footer title="Using Component Methods">
+    <div style="text-align:center;">
+     <p> หลังจากที่คุณ Login แล้ว จะสามารถดูโปรไฟล์ + contact ติวเตอร์ได้ </p> 
  
- 
-      <!-- <br><br> -->
+      <nuxt-link  to="/student/profile">   <b-button style="background-color: #33C1C1; border: 0px; padding-left: 46px;
+    padding-right: 46px;">Login</b-button></nuxt-link>
+    </div>  
+    <br>
+   </b-modal>
+<br>
+<br>
+<br>
+<br>
 
-
-
+    </b-col>
 
 </b-container>
-<br><br>
-</b-container fluid>
-
+</b-container>
 </template>
+
 <script>
 import axios from 'axios';
-import moment from 'moment'
+import moment from 'moment';
 
 
-export default {
-   data () {
+ export default {
+    data(){
     return {
-        
-
-     
- loading: false,
-      status: 'not_accepted',
-       selected: [], // Array reference
+      jobs:{},
+       loading: false,
+           profile2: false,
+        selected: [], // Array reference
       options: [
         { value: 'ENG', text: 'ENG' },
         { value: 'คณิต', text: 'คณิตศาสตร์' },
@@ -326,130 +223,74 @@ export default {
 
 
       ],
-       checkedNames: [],
-      checkedsubjects: [],
-      courses: null,
-      job3: '',
-      isblank: '',
-      text:'',
-      profile2: false,
-      creator_name2 : '',
-      contact2:'',
-      line2 :'',
-      linelink:'',
-      tutorid2:'',
-      tutorid3:'',
-      agentid2:'',
-      agentid3:'',
-      adminlink: '',
-
-  
-    }
-  },
-
-mounted() {
-  
-     axios.get('https://frozen-mesa-40722.herokuapp.com/tutor/all')
-    .then((res) => { console.log(res.data)
-      //  tutors: res.data,
-      var por = res.data
-           this.$store.dispatch('setalltutor', por)
-})
-          var data = {  
-            who :  this.$store.state.user.name,
-            image :    this.$store.state.user.picture,
-            tutorid : this.$store.state.user._id,
-          }
-             axios.post('https://frozen-mesa-40722.herokuapp.com/stat', data)
-    .then((res) => { console.log(res.data)
-      //  tutors: res.data,
-      // var por = res.data
-      //      this.$store.dispatch('setalltutor', por)
-})
-        
-
-
-},
-
-
-
-// mounted() {
-  
-
-     
-
-      
-//     return axios.get('https://frozen-mesa-40722.herokuapp.com/job/all')
-//     .then((res) => { 
-//       console.log(res.data)
-//      this.courses = res.data
-               
-//             })        
-
     
-  
+    
 
-
-// },
-
-
-
-  //  fetch ({ context, params }) {
-  //   return axios.get('https://frozen-mesa-40722.herokuapp.com/job/all')
-  //   .then((res) => {
-  //     console.log(context.store.state.user.tag);
-      
-
-  //   })
-  // },
-
+    }
+},
   asyncData (context) {
 
-    
-   
-          // return axios.get('http://localhost:8000/job/all')
-
-    return axios.get('https://frozen-mesa-40722.herokuapp.com/job/all')
+    return axios.get('https://frozen-mesa-40722.herokuapp.com/job2/all')
     .then((res) => { console.log(res.data)
-      return { courses: res.data,
+      return { jobs: res.data,
                
             }        
 
     })
-  
-
-
   },
 
- 
 
-    methods: {
-logout(){
-  this.$store.dispatch('setToken', null)
-              this.$store.dispatch('setAgent', null)
+mounted() {
 
-      this.$store.dispatch('setUser', null)
-       this.$store.dispatch('setStudent', null)
-     this.$router.push('/')
 
-      },
-
-      displayTimestamp(t){
-                return moment(t).locale('th').fromNow()
-            },
+},
+//   computed: {
+//     calculateScore (x) {
+//      console.log(x);
      
+// // this.sum = x.reduce(function(a, b) {
+// //   return a + b;
+// // });
+//     }
+//   },
 
-        sendout(){
+
+
+  methods: {
+    calculateScore (x) {
+console.log( x.length);
+
+if (x.length > 0) {
+      var por2 =   x.reduce((a, b) => ( (a + b)     ) , 0) 
+     var por3 = por2 / x.length
+     var por = por3.toFixed(1)
+} else {
+     var por = 0
+}
+    // var por =   x.reduce((a, b) => ( (a + b)     ) , 0) / 
+   
+  
+// console.log(por);
+
+
+      
+  return por
+// this.sum = x.reduce(function(a, b) {
+//   return a + b;
+// });
+    },
+
+    sendout(){
 this.loading = true
   this.$nuxt.$loading.start()
-      console.log(this.checkedNames);
+    
             console.log(this.selected);
          
 
 let createPost = {
       
     
-        day : this.checkedNames,
+  
         subject :this.selected,
      
 
@@ -458,150 +299,166 @@ let createPost = {
       }
       console.log(createPost);
       
- axios.post('https://frozen-mesa-40722.herokuapp.com/multi3', createPost)
+
+      if (this.selected.length > 0) {
+           axios.post('https://frozen-mesa-40722.herokuapp.com/tutor/filter', createPost)
                 // axios.get('http://localhost:8000/job/all')
 
           .then((res) => { 
               
               console.log(res.data)
-              this.courses = res.data
+            //   this.courses = res.data
+              this.tutors = res.data,
              this.$refs.myModalRef4.hide()
              this.loading = false
                this.$nuxt.$loading.finish()
 
           })
           .catch(error => console.log(error))
-      
-    },
-// 
+      } else {
+            axios.get('https://frozen-mesa-40722.herokuapp.com/tutor/all')
+                // axios.get('http://localhost:8000/job/all')
 
+          .then((res) => { 
+              
+              console.log(res.data)
+            //   this.courses = res.data
+              this.tutors = res.data,
+             this.$refs.myModalRef4.hide()
+             this.loading = false
+               this.$nuxt.$loading.finish()
 
-  nextPage(){
-                    this.$router.push('/user/suggest')
-
-      },
-
-
-    showModal (item) {
-      this.$refs.myModalRef.show(item) 
-      this.job3 = item.job
-      console.log(item.job  );
-           
-  this.text = this.$store.state.user.profile + '\n ' + 'วิชาที่สอน: ' + this.$store.state.user.subject + '\n ' +'เบอร์ติดต่อ: '+ this.$store.state.user.phone 
-    this.creator_name2 = item.creator_name
-    this.contact2 = item.contact
-    this.line2 = item.line
-    this.linelink = 'http://line.me/ti/p/~' + item.line
-    this.tutorid2 = item.tutorid
-    this.tutorid3 = '/tutor/' + item.tutorid
-    this.agentid2  = item._creator 
-    this.agentid3 = '/agent/' + item._creator
-    // if(item.contact = 'ติดต่อตรงปุ่มข้างล่าง'){
-    //    this.linelink = item.line
-    // } else {
-    //       this.linelink = 'http://line.me/ti/p/~' + item.line
-
-    // }
-    
-    
-      if (this.$store.state.user.profile) {
-        this.profile2 = true
+          })
+          .catch(error => console.log(error))
       }
 
-    
-    
+      
     },
-    hideModal () {
-      this.$refs.myModalRef.hide()
-    }
-  },
-    layout: 'noheadtutor'
+
+
+   seeeach(x){
+ 
+
+       if (this.$store.state.isUserLoggedIn) {
+ this.$router.push(`/tutor/${x}`)
+       } else{
+                                    this.$refs.myModalRef.show() 
+
+       }
+       
+   },
+
+       displayTimestamp(t){
+                return moment(t).locale('th').fromNow()
+            },
+            nextPage(){
+    this.$router.push('/tutor/sheetall')
+},
+nextPage2(){
+    this.$router.push('/tutor/job')
+
+
+}, 
+
+ 
+
+
+
+                         // axios.get('http://localhost:8000/job/all')
+
+     
+}
+,
+    layout: 'studentapp'
+
+
+
 }
 </script>
 
 
+
 <style scoped>
-.card-body {
-    -ms-flex: 1 1 auto;
-    flex: 1 1 auto;
-    padding: 11px;
-    padding-top: 6px;
+::placeholder {
+    color: #C9C9C9;
+    opacity: 1; /* Firefox */
+}
+
+.form-control{
+border-top: 0px;
+    border-right: 0px;
+    border-left: 0px;
+    border-radius: 0;
+}
+
+.scrolling-wrapper {
+   overflow-x: scroll !important;
+  overflow-y: hidden !important;
+  white-space: nowrap !important;
+ &::-webkit-scrollbar {
+    display: none!important;
+  }
+ 
 }
 
 
-
-.card-text{
-        color: #2f2f2f;
-    margin-bottom: 6px;
-}
-
-.card-link{
-        margin-left: 7px;
-         color: #ffffff;
-    text-decoration: none;
-    background-color: #72d1d0;
-    padding: 2px;
-    padding-left: 7px;
-    padding-right: 7px;
-    border-radius: 4px;
-    font-size: 15px;
+.formpor{
+border-top: 0px;
+    border-right: 0px;
+    border-left: 0px;
+    border-radius: 0;
+   padding-left: 4px;
 
 }
 
-.por{
-    margin-left: -7px
-}
-.card{
-      margin-bottom: 5px;
-box-shadow: 0 1px 2px 0px rgba(0, 0, 0, 0.1);
-border: 1px solid rgba(193, 193, 193, 0.12);
-    border-radius: 6px;
+.btn-secondary:focus, .btn-secondary.focus {
+    box-shadow: 0 0 0 0.2rem rgba(255, 255, 255, 0.5);
 }
 
-.responsive {
-  display: none;
+.form-control:focus {
+    color: #495057;
+    background-color: #fff;
+    border-color: #80bdff;
+    /* border-bottom: 2px; */
+    
+    outline: 0;
+    box-shadow: 0px 1px 0px 0rem rgba(199, 199, 199, 0.25);
 }
 
-.responsive2 {
-  display: block;
+.card-body{
+  padding-left: 10px;
+    padding-top: 2px;
+    padding-right: 10px;
+      padding-bottom: 8px;
+      margin-top: 2px;
 }
 
-.btn-secondary{
-  border-color: #effdf3;
+.card-title {
+    margin-bottom: 12px;
+    margin-bottom: 0.75rem;
+    font-size: 20px;
+    color: #5a5a5a;
 }
-/*show for small screens */
-@media screen and (max-width: 1023px) { /* I've given 1023px but you can change to proper width */
-    .responsive {
-        display: block;
-    }
-    .responsive2 {
-  display: none;
-}
-}
-
-
 a{
-
+/* color: #708f7e; */
+/* color: #ffffff; */
     color: #4159539c;
-
     font-weight: 600;
     font-size: 18px;
     font-family:"Sukhumvit Set",sans-serif; 
 }
 
-
-label{
-
-  margin-left: 6px!important;
+.mybtn{
+    border:1px solid #F3F3F3;
+    margin-left: 4px;
+    font-size: 19px; 
+    font-weight: 400;
+    padding: 5px;
+    padding-right: 16px;
+    padding-left: 16px; 
+    border-radius: 17px;
+    margin-bottom: 10px;
+    color:#BEBABA!important;
 }
-.btn-secondary:focus, .btn-secondary.focus {
-    box-shadow: 0 0 0 0.2rem rgba(108, 117, 125, 0);
-}
 
-:focus {
-    outline: -webkit-focus-ring-color auto 5px;
-    outline-color:#ffffff00;
-    outline-style: auto;
-    outline-width: 5px;
-}
 </style>

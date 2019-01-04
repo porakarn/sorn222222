@@ -338,7 +338,7 @@ nextPage2(){
      
 }
 ,
-    layout: 'studentapp'
+    layout: 'noheadtutor'
 
 
 
