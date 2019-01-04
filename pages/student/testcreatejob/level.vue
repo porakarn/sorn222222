@@ -6,7 +6,7 @@
      <i @click="goback" style=" font-size: 23px;
     padding-left: 4px;
     color: #c1c1c1;
-" class="fa fa-arrow-left responsive" aria-hidden="true"></i> 
+" class="fa fa-arrow-left responsive" aria-hidden="true"> ระดับชั้น</i> 
         <!-- <b-navbar-brand>BootstrapVue</b-navbar-brand> -->
    
         
@@ -66,7 +66,7 @@
     
     padding-top: 11px;
     padding-bottom: 11px;
-    border-radius: 22px;">ลงประกาศหาติวเตอร์</b-button> </div> 
+    border-radius: 22px;"เรียบร้อย</b-button> </div> 
 </b-container>
 </b-container>
 </template>
