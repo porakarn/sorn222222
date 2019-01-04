@@ -68,6 +68,20 @@
     padding-bottom: 11px;
     border-radius: 22px;"เรียบร้อย</b-button> </div> 
 </b-container>
+
+<b-container fluid class="bv-example-row  "   style="padding-left:28px;padding-rigth:28px; position: fixed;     width: 100%;
+
+  bottom: 0px; 
+  background-color: white;
+  height: 58px;">
+<Strong style="font-weight:400; font-size:13px; color:#929292; padding-left:23px;padding-right: 25px;">วิชา </Strong>
+  <Strong style="font-weight:400; font-size:13px;color:#929292; padding-right: 17px;"> จุดประสงค์ </Strong>
+   <Strong style="font-weight:400; font-size:13px;color:#929292; padding-right: 26px;"> ระดับชั้น </Strong>
+    <Strong style="font-weight:400; font-size:13px;color:#929292; padding-right: 23px;"> วัน เวลา </Strong>
+        <Strong style="font-weight:400; font-size:13px;color:#929292;"> สถานที่ </Strong>
+
+    <b-progress style="margin-top:1px;" height="4px" :value="value"></b-progress>
+    </b-container>
 </b-container>
 </template>
 
@@ -81,6 +95,7 @@ import moment from 'moment';
     return {
       tutors:{},
       forms: '',
+      value: 60;
        loading: false,
            profile2: false,
            selected: null,
