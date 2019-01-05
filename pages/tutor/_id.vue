@@ -283,6 +283,14 @@ color: #484848; border:1px !important;">โปรไฟล์ของคุณ<
     padding-right: 46px;">สมัครโปรไฟล์นักเรียน</b-button> 
     </b-modal>
 
+   
+<b-modal  hide-header  hide-footer  centered ref="myModalRef2" hide-footer title="Using Component Methods">
+      <div class="d-block ">
+         <div style="white-space: pre-wrap;">หากคุณสนใจเรียนกับติวเตอร์ กรุณากดปุ่มด้านล่างนี้ พร้อมกับบอกชื่อติวเตอร์ทที่สนใจเรียนเข้ามาถามทีมงาน</div> 
+      </div>  <br>
+          <b-button @click="onSubmit" style="background-color: #33C1C1; border: 0px; padding-left: 46px;
+    padding-right: 46px;">สนใจเรียน</b-button> 
+    </b-modal>
 
 
 
@@ -436,11 +444,15 @@ console.log('sss');
     track(){
       
 if (this.$store.state.user.name) {
- this.$refs.myModalRef.show() 
-}
+ this.$refs.myModalRef.show() }
 
 
 if (this.$store.state.student.name) {
+
+ this.$refs.myModalRef2.show() 
+
+
+
   var data = {
     studentname:  this.$store.state.student.name,
     picture: this.$store.state.student.picture, 
