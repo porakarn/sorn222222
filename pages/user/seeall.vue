@@ -1,8 +1,8 @@
 <template>
 
 <b-container fluid style="padding:0px;">
- <b-navbar  style="   box-shadow: -1px 2px 6px 0px #9c9c9c44   padding-bottom: 12px;
-    padding-top: 12px;  background-color:#dfaea9!important; "toggleable variant="light">
+ <b-navbar  style="   box-shadow: -1px 2px 6px 0px #9c9c9c44   padding-bottom: 13px;
+    padding-top: 13px;  background-color:#dfaea9!important; "toggleable variant="light">
         <b-navbar-toggle style="border-color: rgba(0, 0, 0, 0);    padding-left: 0px;
     padding-right: 0px;" target="nav_text_collapse"></b-navbar-toggle>
         <!-- <b-navbar-brand>BootstrapVue</b-navbar-brand> -->
@@ -171,12 +171,7 @@
    </b-col>
     </b-row>
     <br>
- <p style=" color:#86a5ca ; text-align: center;
-" >
- มีติวเตอร์อีกมากกว่า 200 คน</p>
-     
-   <div  style="text-align :center">       <nuxt-link class="nav-item" style="color:#345d46; " to="/student/createjob">   <b-button style="background-color: #33C1C1; border: 0px; padding-left: 46px;
-    padding-right: 46px;">โพสหาติวเตอร์</b-button></nuxt-link> </div> 
+
 
 <br>
    <b-modal no-fade hide-header  hide-footer  centered ref="myModalRef" hide-footer title="Using Component Methods">
@@ -433,7 +428,9 @@ border-top: 0px;
     padding-top: 2px;
     padding-right: 10px;
       padding-bottom: 8px;
-      margin-top: 2px;
+      
+          margin-top: 7px;
+    margin-bottom: 5px;
 }
 
 .card-title {

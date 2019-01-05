@@ -69,9 +69,9 @@
 
 <br>
 
-   
- 
-
+   <div style="text-align:center;">
+ <iframe width="100%" height="230" :src="youtubeurl" frameborder="0" allowfullscreen></iframe>
+</div>
 
    <br>
   <b-row> <b-col >
@@ -356,7 +356,8 @@ export default {
           linelink: 'http://line.me/ti/p/~' + res.data.line,   
           phoneprompt : 'tel:' + res.data.phone,
           reviews: res.data._review,
-          title: 'สมัครเรียนติวเตอร์กับ ' + res.data.name 
+          title: 'สมัครเรียนติวเตอร์กับ ' + res.data.name,
+          youtubeurl: res.data.youtube_url.replace(/(?:https:\/\/)?(?:www\.)?(?:youtube\.com|youtu\.be)\/(?:watch\?v=)?(.+)/g,'http://www.youtube.com/embed/$1')
             }        
 
     })
