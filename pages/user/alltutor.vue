@@ -286,6 +286,7 @@ kuytest(){
 // https://sorns-co-beta.herokuapp.com/tutor/5b524e926f31160014f2f13a
        this.$router.push('tutor/5b524e926f31160014f2f13a')
 
+
 },
 
 
