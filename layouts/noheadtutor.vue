@@ -25,7 +25,7 @@
 
 <b-col class="porakarn"  cols="3" style="text-align: center;" >
 
-<nuxt-link  to="/user/create"><div><i style="font-size: 31px; color: white;"  class="fa fa-plus-square-o nav-item " aria-hidden="true"></i>
+<nuxt-link  to="/user/alltutor"><div><i style="font-size: 31px; color: white;"  class="fa fa-plus-square-o nav-item " aria-hidden="true"></i>
 </div>
 </nuxt-link>
 

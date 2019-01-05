@@ -246,7 +246,7 @@ methods: {
       this.step++;
     },
     nextPage(){
-   this.$router.push('/user/create')
+   this.$router.push('/user/alltutor')
 
     }
 

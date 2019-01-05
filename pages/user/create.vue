@@ -92,7 +92,7 @@ export default {
    },
   
     nextPage(){
-   this.$router.push('/user/createform')
+   this.$router.push('/user/alltutorform')
 
     }
 

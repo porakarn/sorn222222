@@ -76,7 +76,7 @@
   </b-modal>
 
 
-     <b-card @click="seeeach(tutor._id)"  style="margin-bottom:0px;     border: 1px solid rgba(164, 164, 164, 0.125);
+    <b-card @click="seeeach(tutor._id)"  style="margin-bottom:0px;     border: 1px solid rgba(255, 255, 255, 0.125);
     border-radius: 1px;     box-shadow: rgba(148, 142, 142, 0) 0px 1px 3px -1px, rgba(255, 251, 251, 0) 0px 4px 5px 0px, rgba(0, 0, 0, 0.01) 0px 1px 10px 0px;
 
 "  v-for="tutor in tutors" :key="tutor._id"  v-if="tutor.subject" >
@@ -85,24 +85,24 @@
        <b-row style="margin-top: 10px;">
 
         <b-col cols="4">
-                     <img :src="tutor.picture" style="border-radius: 5px" width="100%"> 
+                     <img :src="tutor.picture" style="border-radius: 3px" width="100%"> 
 
         </b-col>
          <b-col cols="8" style="margin-left:-5px;padding-left: 0px; padding-right: 2px;">
-<p style=" padding-left: 0px;margin-bottom: 0px; font-weight:600; font-size:17px; margin-top: -6px;">{{tutor.name.substring(0,21)}}   <strong style=" background-color: #ffc107;
-    border-radius: 4px;
+<p style=" padding-left: 0px;margin-bottom: 0px; font-weight:600; font-size:17px; margin-top: -6px;">{{tutor.name.replace(/ .*/,'')}}   <strong style=" background-color:#EEC0BB;
+    border-radius: 2px;
     color: white;
     font-weight: 500;
     padding-right: 5px;
     padding-left: 4px;
     font-size: 14px;    float: right;
     margin-right: 4px;
-        padding-top: 2px;
+        padding-top: 1px;
     margin-top: 4px;">{{ calculateScore(tutor.reviewscore)}} <i style="color:white;" class="fa fa-star" aria-hidden="true"></i>
  </strong></p>
 <p style="color:#545454; font-size:16px;margin-bottom: 0px;margin-bottom: 3px;
 " v-if="tutor.subject">
-    <i style=" font-size:15px;       color:#9dd8bf;" class="fa fa-graduation-cap" aria-hidden="true"></i> {{tutor.subject.substring(0,70)}}</p>
+    {{tutor.subject.substring(0,70)}}</p>
 <p style="color:#545454; font-size:16px   ;  margin-bottom: 0px;" v-if="tutor.profile">
     {{tutor.profile.substring(0,65)}}...</p>
 
@@ -110,7 +110,7 @@
         </b-col>
 
      </b-row>
-      <b-row style=" margin-bottom:-23px;   margin-top: 4px;">
+     <b-row style=" margin-bottom:-23px;   margin-top: 4px;">
   <b-col cols="9" style="    padding-left: 9px;
     padding-right: 0px;">
  <!-- <a v-show="tutor.tag.length >0" style="    color: rgb(255, 255, 255);
@@ -135,18 +135,18 @@
     font-size: 15px;
     border-radius: 11px;"  href="#" 
            class="card-link">{{tag.toString()}}</a> -->
-<div style="    background-color: #f9fbfa;
-    border-radius: 13px;
+<div style="   
+    
 " class=" scrolling-wrapper">
-               <a   style=" color: #9dd8bf;
+               <a   style=" color: #ECC1BC;
     text-decoration: none;
    
     padding: 3px 8px;
-    margin-left: 6px;
+    margin-left: 2px;
     margin-top: 7px;
     font-size: 16px;
     border-radius: 11px;"  href="#" 
-           class="card-link"><i class="fa fa-map-marker" aria-hidden="true"></i>
+           class="card-link">
 {{tutor.location}}</a>
 </div>
               <!-- <a v-for="tag in tutor.tag" v-show="tutor.tag.length >0" style="    color: rgb(255, 255, 255);
@@ -175,8 +175,6 @@
 </b-col>
 
      </b-row>
-    
-
     
 
 

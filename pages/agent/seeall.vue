@@ -50,7 +50,7 @@ background-color: rgb(250, 254, 251);
                 <nuxt-link to="/profile">Profile</nuxt-link>
                 <nuxt-link to="/tutor/job">job</nuxt-link>
                 <nuxt-link to="/user/seeall">Seeall</nuxt-link>
-                <nuxt-link to="/user/createprofile">Createprofileagent</nuxt-link>
+                <nuxt-link to="/user/alltutorprofile">Createprofileagent</nuxt-link>
                 <nuxt-link to="/agent/signup">Signup</nuxt-link>
                 <nuxt-link to="/choose">Choose</nuxt-link>
                 <nuxt-link to="/agent/myjob">myjob</nuxt-link>
