@@ -10,24 +10,7 @@
     color: white;
     margin-top:-84px;
 " class="fa fa-arrow-left responsive" aria-hidden="true"></i>
-        <!-- <b-navbar-brand>BootstrapVue</b-navbar-brand> -->
-      <!-- <b-button   style="   font-size: 21px;
-  
-    font-weight: 500;
-         color: #b7e8d9;
-    background-color: #eefdf8;
-    border-color: #6c757d00;
-    border-radius: 18px;
-    padding-top: 0px;
-    padding-bottom: 0px;
-    padding-left: 8px;
-    padding-right: 8px;
-    font-family: kanit;
-    border-top-width: 0px;
-    border-bottom-width: 0px
-"> sorns</b-button> -->
-        
-       
+
        
     </b-navbar>
 
@@ -77,8 +60,6 @@
   <b-row> <b-col >
        
 
- <!-- <p style="margin-bottom: 0px; color:#484848;  margin-top: 17px; font-size: 19px">วิชาที่คุณสอน
-</p> -->
 
   
 
@@ -420,10 +401,6 @@ var data = {
 //   ,
     methods: {
     track(){
-      
-
-
-
 
 if (this.$store.state.student.name) {
   var data = {
