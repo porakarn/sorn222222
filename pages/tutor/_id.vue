@@ -357,7 +357,7 @@ export default {
           phoneprompt : 'tel:' + res.data.phone,
           reviews: res.data._review,
           title: 'สมัครเรียนติวเตอร์กับ ' + res.data.name,
-          youtubeurl: res.data.youtube_url.replace(/(?:https:\/\/)?(?:www\.)?(?:youtube\.com|youtu\.be)\/(?:watch\?v=)?(.+)/g,'http://www.youtube.com/embed/$1')
+          youtubeurl: res.data.youtube_url.replace(/(?:https:\/\/)?(?:www\.)?(?:youtube\.com|youtu\.be)\/(?:watch\?v=)?(.+)/g,'https://www.youtube.com/embed/$1')
             }        
 
     })
