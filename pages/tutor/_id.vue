@@ -9,7 +9,7 @@
     padding-left: 4px;
     color: white;
     margin-top:-84px;
-" class="fa fa-long-arrow-left responsive" aria-hidden="true"></i>
+" class="fa fa-arrow-left responsive" aria-hidden="true"></i>
         <!-- <b-navbar-brand>BootstrapVue</b-navbar-brand> -->
       <!-- <b-button   style="   font-size: 21px;
   

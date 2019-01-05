@@ -6,7 +6,7 @@
      <i @click="goback" style=" font-size: 23px;
     padding-left: 4px;
     color: #c1c1c1;
-" class="fa fa-long-arrow-left responsive" aria-hidden="true"> วิชา</i> 
+" class="fa fa-arrow-left responsive" aria-hidden="true"> วิชา</i> 
         <!-- <b-navbar-brand>BootstrapVue</b-navbar-brand> -->
    
         

@@ -295,6 +295,17 @@ console.log('sds'+ this.$route.params.id);
     isUserLoggedIn () {
       return this.$store.state.isUserLoggedIn
     }
+
+    calculateScore (x) {
+     console.log(x);
+     
+this.sum = x.reduce(function(a, b) {
+  return a + b;
+});
+    },
+  
+
+
   },
 //   asyncData (context, callback) {
 //  var por = ';;'
