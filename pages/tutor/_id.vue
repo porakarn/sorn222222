@@ -9,7 +9,7 @@
     padding-left: 4px;
     color: white;
     margin-top:-84px;
-" class="fa fa-arrow-left responsive" aria-hidden="true"></i>
+" class="fa fa-long-arrow-left responsive" aria-hidden="true"></i>
         <!-- <b-navbar-brand>BootstrapVue</b-navbar-brand> -->
       <!-- <b-button   style="   font-size: 21px;
   
@@ -63,7 +63,7 @@
  </div>
 
  <div  @click="track" style="text-align:center; margin-top:10px;">
-     <b-button  :href="linelink" size="lg" style=" width:60%;     color: white; background-color: #DFAEA9; border: 0px; 
+     <b-button   size="lg" style=" width:60%;     color: white; background-color: #DFAEA9; border: 0px; 
  ">ติดต่อ</b-button>  
 </div>
 
@@ -277,10 +277,10 @@ color: #484848; border:1px !important;">โปรไฟล์ของคุณ<
    
 <b-modal  hide-header  hide-footer  centered ref="myModalRef" hide-footer title="Using Component Methods">
       <div class="d-block ">
-         <div style="white-space: pre-wrap;">sss</div> 
+         <div style="white-space: pre-wrap;">คุณสามารถเรียนกับติวเตอร์ได้ กรุณาเข้าไปสมัครโปรไฟล์นักเรียนก่อน</div> 
       </div>  <br>
           <b-button @click="onSubmit" style="background-color: #33C1C1; border: 0px; padding-left: 46px;
-    padding-right: 46px;">ยืนยัน</b-button> 
+    padding-right: 46px;">สมัครโปรไฟล์นักเรียน</b-button> 
     </b-modal>
 
 

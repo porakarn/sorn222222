@@ -6,7 +6,7 @@
      <i @click="goback" style=" font-size: 25px;
     padding-left: 4px;
     color: white;
-" class="fa fa-arrow-left responsive" aria-hidden="true"></i>
+" class="fa fa-long-arrow-left responsive" aria-hidden="true"></i>
         <!-- <b-navbar-brand>BootstrapVue</b-navbar-brand> -->
    
         

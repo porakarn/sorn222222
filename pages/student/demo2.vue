@@ -8,7 +8,7 @@
      <i @click="goback" style=" font-size: 19px;
     padding-left: 4px;
     color: white;
-" class="fa fa-arrow-left responsive" aria-hidden="true"> สร้างประกาศหาติวเตอร์</i> 
+" class="fa fa-long-arrow-left responsive" aria-hidden="true"> สร้างประกาศหาติวเตอร์</i> 
 </b-navbar>
 <b-container fluid style="padding:0px;" >
        <br>
