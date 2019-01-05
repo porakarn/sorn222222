@@ -338,7 +338,7 @@ let createPost = {
  
 
        if (this.$store.state.isUserLoggedIn) {
- this.$router.push(`/tutor/${x}`)
+ this.$router.push(`/newjob/tutorseejob/${x}`)
        } else{
                                     this.$refs.myModalRef.show() 
 
