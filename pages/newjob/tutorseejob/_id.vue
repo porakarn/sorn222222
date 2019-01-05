@@ -207,7 +207,7 @@ console.log('sds'+ this.$route.params.id);
      interest(){
     var data = {
      
-     jobid: this.job._id
+     jobid: this.job._id,
      tutorid: this.$store.state.tutor._id
     }
 
