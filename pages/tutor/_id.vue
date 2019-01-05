@@ -275,7 +275,13 @@ color: #484848; border:1px !important;">โปรไฟล์ของคุณ<
     
    
    
-
+<b-modal  hide-header  hide-footer  centered ref="myModalRef" hide-footer title="Using Component Methods">
+      <div class="d-block ">
+         <div style="white-space: pre-wrap;">sss</div> 
+      </div>  <br>
+          <b-button @click="onSubmit" style="background-color: #33C1C1; border: 0px; padding-left: 46px;
+    padding-right: 46px;">ยืนยัน</b-button> 
+    </b-modal>
 
 
 
@@ -419,7 +425,20 @@ var data = {
 //   }
 //   ,
     methods: {
+
+onSubmit(){
+
+console.log('sss');
+
+},
+
+
     track(){
+      
+if (this.$store.state.user.name) {
+ this.$refs.myModalRef.show() 
+}
+
 
 if (this.$store.state.student.name) {
   var data = {
