@@ -32,10 +32,9 @@
         <b-row>
        <b-col cols="6" style="padding-right: 6px;" >  
  <b-button @click="otherpage" v-b-modal.modal1  class="responsive" style="font-size: 17px;
-    color: white; 
-    background-color: #dfaea9;
-       border: 0px solid #EFBAB5;
-
+ color: #dfaea9; 
+    background-color:white ;
+    border: 1px solid #dfaea9;
     border-radius: 6px;
     width: 100%;
 "> งานทั้งหมด</b-button>
@@ -44,9 +43,11 @@
        </b-col>
         <b-col style="padding-left: 6px;" cols="6" >  
  <b-button v-b-modal.modal1  class="responsive" style="font-size: 17px;
-    color: #dfaea9; 
-    background-color:white ;
-    border: 1px solid #dfaea9;
+   
+     color: white; 
+    background-color: #dfaea9;
+       border: 0px solid #EFBAB5;
+
     border-radius: 6px;
     width: 100%;
 "> งานที่สมัคร</b-button>
