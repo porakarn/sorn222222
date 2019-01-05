@@ -367,7 +367,8 @@ nextPage2(){
      
 }
 ,
-    layout: 'noheadtutor'
+    // layout: 'noheadtutor'
+    layout: 'auth'
 
 
 
