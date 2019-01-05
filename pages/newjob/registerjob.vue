@@ -5,20 +5,11 @@
     padding-top: 13px;  background-color:#dfaea9!important; "toggleable variant="light">
         <b-navbar-toggle style="border-color: rgba(0, 0, 0, 0);    padding-left: 0px;
     padding-right: 0px;" target="nav_text_collapse"></b-navbar-toggle>
-        <!-- <b-navbar-brand>BootstrapVue</b-navbar-brand> -->
-         <!-- <b-navbar-brand style="    color: rgb(51, 193, 193);
-    font-size: 28px;
-    font-weight: 500;margin-left: 55px;" href="#">Sorns</b-navbar-brand> -->
-     <!-- color: #a5efe3; -->
-    <!-- background-color: #effdf3; -->
-
+ 
   
         <b-collapse is-nav id="nav_text_collapse">
             <b-navbar-nav class="ml-auto">
-                 <!-- <b-nav-item href="#">ค้นหางาน</b-nav-item>
-                <b-nav-item href="#">สร้างงานใหม่</b-nav-item>
-                <b-nav-item href="#">งานของคุณ</b-nav-item>
-                <b-nav-item href="#">โปรไฟล์ของคุณ</b-nav-item> -->
+              
             <b-nav-item  style=" color:#345d46;   padding-right: 65px;">   <nuxt-link class="nav-item" style="color:#345d46; " to="/user/seeall">  <i class="fa fa-search " aria-hidden="true"></i>  Search  </nuxt-link></b-nav-item>
              <b-nav-item  style="    padding-right: 65px;">  <nuxt-link class="nav-item" style="color:#345d46; " to="/user/create">  <i class="fa fa-pencil" aria-hidden="true"></i> Add New  </nuxt-link></b-nav-item>
              <b-nav-item  style="    padding-right: 65px;"><nuxt-link class="nav-item" style="color:#345d46; " to="/user/alltutor"> <i class="fa fa-book" aria-hidden="true"></i> All Tutor </nuxt-link></b-nav-item>
@@ -36,15 +27,7 @@
 
 <b-container fluid style="padding:0px;" >
        <br>
-        <!-- <p style=" color:#86a5ca ; text-align: center;
-" >
- ติวเตอร์ทั้งหมด ({{ tutors.length }})</p> -->
-         <!-- <a class="mybtn" style="background-color:#EEC0BB; color:white;" >All</a>    
-                 <a class="mybtn" >Eng</a>    
-        <a class="mybtn" >คณิต</a>    
-        <a class="mybtn" >วิทย์</a>    
-               <a class="mybtn" >จีน</a>    
-        <a class="mybtn" >ญี่ปุ่น</a>     -->
+
 <b-container fluid>
         <b-row>
        <b-col cols="6" style="padding-right: 6px;" >  
@@ -75,18 +58,9 @@
         </b-row> 
 </b-container>
 <br>
-<!-- <div style=" text-align:center;">
-     <b-button v-b-modal.modal1  class="responsive" style="font-size: 17px;
-    color: #5f5f5f; 
-    background-color: #f5f5f5;
-    border-color: rgb(239, 239, 239);
-    border-radius: 22px;
-    width: 87%;
-"><i style=" font-size: 20px; color: #5f5f5f;   " class="fa fa-search nav-item " aria-hidden="true"></i> ค้นหาติวเตอร์ตามวิชา</b-button>
 
-</div> -->
 <br>
- <b-col style="    padding-left: 0px;
+ <!-- <b-col style="    padding-left: 0px;
     padding-right: 0px;" md="6" offset-md="3">
 
 
@@ -151,54 +125,20 @@
      <b-row style=" margin-bottom:-23px;   margin-top: 4px;">
   <b-col cols="9" style="    padding-left: 9px;
     padding-right: 0px;">
- <!-- <a v-show="tutor.tag.length >0" style="    color: rgb(255, 255, 255);
-    text-decoration: none;
-    background-color: rgb(130, 217, 217);
-    padding-top: 3px;
-        margin-top: 7px;
-    padding-bottom: 3px;
-    font-size: 16px;
-    padding-right: 6px;
-    border-radius: 7px;
-    font-weight:400;
-    padding-left: 6px;"  href="#" 
-           class="card-link">{{tutor.tag.toString().split(',').join(' ')}}</a> -->
-
-      <!-- <a v-for="tag in tutor.tag" v-show="tutor.tag.length >0" style=" color: #9dd8bf;
-    text-decoration: none;
-    border: 1px solid #8bd2b4;
-    padding: 3px 8px;
-    margin-left: 6px;
-    margin-top: 7px;
-    font-size: 15px;
-    border-radius: 11px;"  href="#" 
-           class="card-link">{{tag.toString()}}</a> -->
-
-              <!-- <a v-for="tag in tutor.tag" v-show="tutor.tag.length >0" style="    color: rgb(255, 255, 255);
-    text-decoration: none;
-    background-color: rgb(130, 217, 217);
-    padding-top: 3px;
-    margin-left: 6px;
-    margin-top: 7px;
-    padding-bottom: 3px;
-    font-size: 16px;
-    padding-right: 8px;
-    border-radius: 5px;
-    padding-left: 8px;"  href="#" 
-           class="card-link">{{tag.toString()}}</a> -->
+ 
               <br>  
 </b-col>
 
 
      </b-row>
     
-<!-- ddd -->
+
 
     </b-row>
 
     </b-card>
 
-   </b-col>
+   </b-col> -->
     </b-row>
     <br>
 
@@ -273,7 +213,7 @@ mounted() {
     var data = {
         tutorid : this.$store.state.user._id
     }
-  axios.post('https://frozen-mesa-40722.herokuapp.com/myregisterjob', data)
+  axios.post('http://localhost:8000/myregisterjob', data)
                 // axios.get('http://localhost:8000/job/all')
 
           .then((res) => { 
