@@ -85,7 +85,7 @@
 "><i style=" font-size: 20px; color: #5f5f5f;   " class="fa fa-search nav-item " aria-hidden="true"></i> ค้นหาติวเตอร์ตามวิชา</b-button>
 
 </div> -->
-<br>
+
  <b-col style="    padding-left: 0px;
     padding-right: 0px;" md="6" offset-md="3">
 
