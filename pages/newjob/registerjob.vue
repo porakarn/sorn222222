@@ -60,7 +60,7 @@
 <br>
 
 <br>
- <!-- <b-col style="    padding-left: 0px;
+ <b-col style="    padding-left: 0px;
     padding-right: 0px;" md="6" offset-md="3">
 
 
@@ -138,7 +138,7 @@
 
     </b-card>
 
-   </b-col> -->
+   </b-col>
     </b-row>
     <br>
 
@@ -222,7 +222,7 @@ mounted() {
               
               console.log(res.data)
             //   this.courses = res.data
-              this.jobs = res.data
+              this.jobs = res.data.job_enroll
        
 
           })
