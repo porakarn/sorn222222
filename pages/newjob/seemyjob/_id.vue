@@ -168,7 +168,7 @@ console.log('sds'+ this.$route.params.id);
       var myid = {
           route_id :  this.$route.params.id,
       }
-      axios.post('https://frozen-mesa-40722.herokuapp.com/findjob2/byid', myid)
+      axios.post('https://frozen-mesa-40722.herokuapp.com/findjob2/byid/populate', myid)
 
 // axios.post('https://frozen-mesa-40722.herokuapp.com/job2/studentown')
     .then((res) => {
@@ -176,6 +176,7 @@ console.log('sds'+ this.$route.params.id);
        console.log(res.data)
       this.job = res.data
       this.status = res.data.status
+      this.tutorz = res.data.tutor_interest
          console.log(this.job);
                
   }).catch(error => console.log(error))
