@@ -60,7 +60,7 @@
 
        </b-col>
         <b-col style="padding-left: 6px;" cols="6" >  
- <b-button v-b-modal.modal1  class="responsive" style="font-size: 17px;
+ <b-button @click="otherpage" v-b-modal.modal1  class="responsive" style="font-size: 17px;
     color: #dfaea9; 
     background-color:white ;
     border: 1px solid #dfaea9;
@@ -387,6 +387,12 @@ nextPage2(){
 
 
 }, 
+
+otherpage(){
+    this.$router.push('/newjob/registerjob')
+
+
+},
 
  
 

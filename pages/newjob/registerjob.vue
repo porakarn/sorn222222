@@ -31,7 +31,7 @@
 <b-container fluid>
         <b-row>
        <b-col cols="6" style="padding-right: 6px;" >  
- <b-button v-b-modal.modal1  class="responsive" style="font-size: 17px;
+ <b-button @click="otherpage" v-b-modal.modal1  class="responsive" style="font-size: 17px;
     color: white; 
     background-color: #dfaea9;
        border: 0px solid #EFBAB5;
@@ -264,6 +264,11 @@ if (x.length > 0) {
 //   return a + b;
 // });
     },
+    otherpage(){
+    this.$router.push('/user/seeall')
+
+
+},
 
     sendout(){
 this.loading = true
