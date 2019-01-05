@@ -45,7 +45,37 @@
         <a class="mybtn" >วิทย์</a>    
                <a class="mybtn" >จีน</a>    
         <a class="mybtn" >ญี่ปุ่น</a>     -->
-<div style=" text-align:center;">
+<b-container fluid>
+        <b-row>
+       <b-col cols="6" style="padding-right: 6px;" >  
+ <b-button v-b-modal.modal1  class="responsive" style="font-size: 17px;
+    color: white; 
+    background-color: #dfaea9;
+       border: 0px solid #EFBAB5;
+
+    border-radius: 6px;
+    width: 100%;
+"> งานทั้งหมด</b-button>
+
+
+       </b-col>
+        <b-col style="padding-left: 6px;" cols="6" >  
+ <b-button v-b-modal.modal1  class="responsive" style="font-size: 17px;
+    color: #dfaea9; 
+    background-color:white ;
+    border: 1px solid #dfaea9;
+    border-radius: 6px;
+    width: 100%;
+"> งานที่สมัคร</b-button>
+
+
+
+       </b-col>
+       
+        </b-row> 
+</b-container>
+<br>
+<!-- <div style=" text-align:center;">
      <b-button v-b-modal.modal1  class="responsive" style="font-size: 17px;
     color: #5f5f5f; 
     background-color: #f5f5f5;
@@ -54,7 +84,7 @@
     width: 87%;
 "><i style=" font-size: 20px; color: #5f5f5f;   " class="fa fa-search nav-item " aria-hidden="true"></i> ค้นหาติวเตอร์ตามวิชา</b-button>
 
-</div>
+</div> -->
 <br>
  <b-col style="    padding-left: 0px;
     padding-right: 0px;" md="6" offset-md="3">
