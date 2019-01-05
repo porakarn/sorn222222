@@ -213,6 +213,8 @@ mounted() {
     var data = {
         tutorid : this.$store.state.user._id
     }
+    console.log(data);
+    
   axios.post('http://localhost:8000/myregisterjob', data)
                 // axios.get('http://localhost:8000/job/all')
 
