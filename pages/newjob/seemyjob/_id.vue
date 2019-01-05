@@ -120,9 +120,118 @@
 <p style="text-align:center">กรุณากดปิดงาน หากคุณอยากยกเลิกการหาติวเตอร์ </p>
 </b-container>
 
+
+
+
 </b-container>
 
+//ssssssssssssssssss
 
+  <b-card  style="margin-bottom:0px;     border: 1px solid rgba(255, 255, 255, 0.125);
+    border-radius: 1px;     box-shadow: rgba(148, 142, 142, 0) 0px 1px 3px -1px, rgba(255, 251, 251, 0) 0px 4px 5px 0px, rgba(0, 0, 0, 0.01) 0px 1px 10px 0px;
+
+"  v-for="tutor in tutors" :key="tutor._id"  v-if="tutor.subject" >
+         
+        
+       <b-row style="margin-top: 10px;">
+
+        <b-col cols="4">
+                     <img :src="tutor.picture" style="border-radius: 3px" width="100%"> 
+
+        </b-col>
+         <b-col cols="8" style="margin-left:-5px;padding-left: 0px; padding-right: 2px;">
+<p style=" padding-left: 0px;margin-bottom: 0px; font-weight:600; font-size:17px; margin-top: -6px;">{{tutor.name.replace(/ .*/,'')}}   <strong style=" background-color:#EEC0BB;
+    border-radius: 2px;
+    color: white;
+    font-weight: 500;
+    padding-right: 5px;
+    padding-left: 4px;
+    font-size: 14px;    float: right;
+    margin-right: 4px;
+        padding-top: 1px;
+    margin-top: 4px;">{{ calculateScore(tutor.reviewscore)}} <i style="color:white;" class="fa fa-star" aria-hidden="true"></i>
+ </strong></p>
+<p style="color:#545454; font-size:16px;margin-bottom: 0px;margin-bottom: 3px;
+" v-if="tutor.subject">
+    {{tutor.subject.substring(0,70)}}</p>
+<p style="color:#545454; font-size:16px   ;  margin-bottom: 0px;" v-if="tutor.profile">
+    {{tutor.profile.substring(0,65)}}...</p>
+
+
+        </b-col>
+
+     </b-row>
+     <b-row style=" margin-bottom:-23px;   margin-top: 4px;">
+  <b-col cols="9" style="    padding-left: 9px;
+    padding-right: 0px;">
+ <!-- <a v-show="tutor.tag.length >0" style="    color: rgb(255, 255, 255);
+    text-decoration: none;
+    background-color: rgb(130, 217, 217);
+    padding-top: 3px;
+        margin-top: 7px;
+    padding-bottom: 3px;
+    font-size: 16px;
+    padding-right: 6px;
+    border-radius: 7px;
+    font-weight:400;
+    padding-left: 6px;"  href="#" 
+           class="card-link">{{tutor.tag.toString().split(',').join(' ')}}</a> -->
+
+      <!-- <a v-for="tag in tutor.tag" v-show="tutor.tag.length >0" style=" color: #9dd8bf;
+    text-decoration: none;
+    border: 1px solid #8bd2b4;
+    padding: 3px 8px;
+    margin-left: 6px;
+    margin-top: 7px;
+    font-size: 15px;
+    border-radius: 11px;"  href="#" 
+           class="card-link">{{tag.toString()}}</a> -->
+<div style="   
+    
+" class=" scrolling-wrapper">
+               <a   style=" color: #ECC1BC;
+    text-decoration: none;
+   
+    padding: 3px 8px;
+    margin-left: 2px;
+    margin-top: 7px;
+    font-size: 16px;
+    border-radius: 11px;"  href="#" 
+           class="card-link">
+{{tutor.location}}</a>
+</div>
+              <!-- <a v-for="tag in tutor.tag" v-show="tutor.tag.length >0" style="    color: rgb(255, 255, 255);
+    text-decoration: none;
+    background-color: rgb(130, 217, 217);
+    padding-top: 3px;
+    margin-left: 6px;
+    margin-top: 7px;
+    padding-bottom: 3px;
+    font-size: 16px;
+    padding-right: 8px;
+    border-radius: 5px;
+    padding-left: 8px;"  href="#" 
+           class="card-link">{{tag.toString()}}</a> -->
+              <br>  
+</b-col>
+<b-col cols="3" style="  padding-left: 20px; ">
+
+
+   <!-- <strong style="color:#cbcdd0;  font-size: 14px; margin-top: -0px;  float:right;   margin-bottom: 0px; font-weight:400">
+ {{sheet.owner.replace(/\w+[.!?]?$/, '')}}  </strong>  -->
+<!-- color:#a5cae4; -->
+  <strong style=" color:#a5cae4;  font-size: 15px; margin-top: -0px; 
+  float:right;  margin-bottom: 0px; font-weight:400"><i class="fa fa-eye" aria-hidden="true"></i>
+ {{tutor.view }}  </strong>  
+</b-col>
+
+     </b-row>
+    
+
+
+    </b-row>
+
+    </b-card>
 
 
 </b-container>
@@ -176,7 +285,7 @@ console.log('sds'+ this.$route.params.id);
        console.log(res.data)
       this.job = res.data
       this.status = res.data.status
-      this.tutorz = res.data.tutor_interest
+      this.tutors = res.data.tutor_interest
          console.log(this.job);
                
   }).catch(error => console.log(error))

@@ -35,7 +35,7 @@
  color: #dfaea9; 
     background-color:white ;
     border: 1px solid #dfaea9;
-    border-radius: 6px;
+    border-radius: 10px;
     width: 100%;
 "> งานทั้งหมด</b-button>
 
@@ -48,7 +48,7 @@
     background-color: #dfaea9;
        border: 0px solid #EFBAB5;
 
-    border-radius: 6px;
+    border-radius: 10px;
     width: 100%;
 "> งานที่สมัคร</b-button>
 
@@ -58,9 +58,7 @@
        
         </b-row> 
 </b-container>
-<br>
 
-<br>
  <b-col style="    padding-left: 0px;
     padding-right: 0px;" md="6" offset-md="3">
 
@@ -197,16 +195,16 @@ import moment from 'moment';
 
     }
 },
-  asyncData (context) {
+//   asyncData (context) {
 
-    return axios.get('https://frozen-mesa-40722.herokuapp.com/job2/all')
-    .then((res) => { console.log(res.data)
-      return { jobs: res.data,
+//     return axios.get('https://frozen-mesa-40722.herokuapp.com/job2/all')
+//     .then((res) => { console.log(res.data)
+//       return { jobs: res.data,
                
-            }        
+//             }        
 
-    })
-  },
+//     })
+//   },
 
 
 mounted() {
@@ -216,7 +214,7 @@ mounted() {
     }
     console.log(data);
     
-  axios.post('http://localhost:8000/myregisterjob', data)
+  axios.post('https://frozen-mesa-40722.herokuapp.com/myregisterjob', data)
                 // axios.get('http://localhost:8000/job/all')
 
           .then((res) => { 
