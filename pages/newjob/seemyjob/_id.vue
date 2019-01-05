@@ -294,7 +294,7 @@ console.log('sds'+ this.$route.params.id);
     computed: {
     isUserLoggedIn () {
       return this.$store.state.isUserLoggedIn
-    }
+    },
 
     calculateScore (x) {
      console.log(x);
