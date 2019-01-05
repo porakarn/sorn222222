@@ -208,7 +208,7 @@ console.log('sds'+ this.$route.params.id);
     var data = {
      
      jobid: this.job._id,
-     tutorid: this.$store.state.tutor._id
+     tutorid: this.$store.state.user._id
     }
 
   axios.patch('https://frozen-mesa-40722.herokuapp.com/tutorinterestinjob', data).then((res) =>{
