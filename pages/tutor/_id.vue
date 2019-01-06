@@ -52,8 +52,8 @@
 
 <br>
 
-   <div style="text-align:center;">
- <iframe width="100%" height="230" :src="youtubeurl" frameborder="0" allowfullscreen></iframe>
+   <div v-if="youtubeurl2" style="text-align:center;">
+ <iframe width="100%" height="230" :src="youtubeurl2" frameborder="0" allowfullscreen></iframe>
 </div>
 
    <br>
@@ -314,7 +314,7 @@ export default {
     showreview: false,
     url:'',
     line: '',
-    
+    youtubeurl2: '',
  
 
   
@@ -338,7 +338,7 @@ export default {
           phoneprompt : 'tel:' + res.data.phone,
           reviews: res.data._review,
           title: 'สมัครเรียนติวเตอร์กับ ' + res.data.name,
-          youtubeurl: res.data.youtube_url.replace(/(?:https:\/\/)?(?:www\.)?(?:youtube\.com|youtu\.be)\/(?:watch\?v=)?(.+)/g,'https://www.youtube.com/embed/$1')
+          youtubeurl: res.data.youtube_url,
             }        
 
     })
@@ -348,6 +348,10 @@ export default {
   },
   mounted() {
 
+    if (this.youtubeurl) {
+this.youtubeurl2 = this.youtubeurl.replace(/(?:https:\/\/)?(?:www\.)?(?:youtube\.com|youtu\.be)\/(?:watch\?v=)?(.+)/g,'https://www.youtube.com/embed/$1')
+      
+    }
 
 var data5 = {
   tutorid : this.$route.params.id
