@@ -141,39 +141,78 @@
 
    <div v-if="step === 4">
 
-        <b-form-group  id="exampleInputGroup1"
-                    
-                    label-for="exampleInput1"
-                    description=" ตัวอย่าง ค่าสอน 300/ชม ค่าแนะนำ 600 บาท (ถ้ามี)">
-        <b-form-input class="formpor" id="exampleInput1" size="lg" 
-                      type="text"
-                      v-model="form.tuitionfee"
-                      required
-                      placeholder="ค่าสอน ค่าแนะนำ">
-        </b-form-input>
-      </b-form-group>
+      <div>
+    <b-form-select multiple :select-size="4" v-model="selected_date" :options="options_date" class="mb-3">
+    </b-form-select>
+  </div>
 
-       <b-form-group  id="exampleInputGroup1"
+
+ <b-form-group   id="exampleInputGroup1"
                     
                     label-for="exampleInput1"
-                    description=" เช่น ขอติวเตอร์หญิง">
-        <b-form-input id="exampleInput1" size="lg"  class="formpor"
+                    description="เช่น 5-7 โมงเย็น">
+        <b-form-input  class="formpor" id="exampleInput1" 
                       type="text"
-                      v-model="form.note"
                       required
-                      placeholder="หมายเหตุเพิ่มเติม (ถ้ามี)">
+                       size="lg" 
+                      v-model="time"
+                      placeholder="เวลาที่สะดวก">
         </b-form-input>
       </b-form-group>
+ <div  style="text-align :center; "> 
+<b-form-group  id="exampleInputGroup3"
+                  
+                    label-for="exampleInput3">
+        <b-form-select style="     font-size: 17px;
+    color: #858484;   border-radius: 5px; 
+    
+        border: 0px;
+    box-shadow: 0 1px 3px #74686833;" class="formpor" id="exampleInput3" size="lg"
+                      :options="options_duration"
+                    
+                      v-model="selected_duration">
+        </b-form-select>
+      </b-form-group>
+ </div>
+   
+      
        <b-button  type="submit" style="background-color: #33C1C1; border: 0px; padding-left: 46px;
     padding-right: 46px;">เรียบร้อย</b-button>
          <b-button style="background-color: white; border: 0px; padding-left: 36px; color: grey;
     padding-right: 36px;" @click.prevent="prev()">กลับ</b-button>
             </div>
+
+   <div v-if="step === 5">
+
+
+<b-form-select  :select-size="2" v-model="selected" size="lg"  :options="options" class="mb-3">
+    </b-form-select>
+
+ <!-- <b-form-select  :select-size="2" v-model="selected2" :options="options2" class="mb-3">
+    </b-form-select> -->
+
+  <b-form-group v-if="selected"  id="exampleInputGroup1"
+                    
+                    label-for="exampleInput1"
+                    description=" เช่น สยาม">
+        <b-form-input  class="formpor" id="exampleInput1" size="lg" 
+                      type="text"
+                      required
+                      v-model="location"
+                      placeholder="สถานที่เรียน">
+        </b-form-input>
+      </b-form-group>
+
+ <b-button  type="submit" style="background-color: #33C1C1; border: 0px; padding-left: 46px;
+    padding-right: 46px;">เรียบร้อย</b-button>
+         <b-button style="background-color: white; border: 0px; padding-left: 36px; color: grey;
+    padding-right: 36px;" @click.prevent="prev()">กลับ</b-button>
+
               <div class="loading-page" v-if="loading">
     <p>Loading...</p>
   </div>
     
-
+   </div>
     
     <br>
   </b-col></b-row>
@@ -204,7 +243,7 @@ export default {
     return {
       loading: false,
       loading2: false,
-    
+      time: '',
        step:1,
        str5:'',
        subject:'',
@@ -272,7 +311,27 @@ export default {
 
     
       ],
-  
+    selected_duration: null,
+      options_duration: [
+      
+        { value: ' เรียนสั้น 1- 3 ครั้ง', text: 'เรียนสั้น 1- 3 ครั้ง' },
+        { value: 'เรียน 4 - 7 ครั้ง', text: 'เรียน 4 - 7 ครั้ง' },
+        { value: 'เรียนยาว ( 8 ครั้งขึ้นไป )', text: 'เรียนยาว ( 8 ครั้งขึ้นไป )' },
+       
+
+    
+      ],
+       selected_date: [], // Must be an array reference!
+      options_date: [
+        {text: 'จันทร์', value: 'จันทร์'},
+        {text: 'อังคาร', value: 'อังคาร'},
+        {text: 'พุธ', value: 'พุธ'},
+        {text: 'พฤหัส', value: 'พฤหัส'},
+        {text: 'ศุกร์', value: 'ศุกร์'},
+        {text: 'เสาร์', value: 'เสาร์'},
+        {text: 'อาทิตย์', value: 'อาทิตย์'},
+
+      ],
     }
   },
 
