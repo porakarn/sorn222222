@@ -16,10 +16,10 @@
                   
                     label-for="exampleInput3">
         <b-form-select style="     font-size: 17px;
-    color: #858484;   border-radius: 5px; 
-    
-        border: 0px;
-    box-shadow: 0 1px 3px #74686833;" class="formpor" id="exampleInput3" size="lg"
+    color: #858484;   
+    border-radius:6px;  
+     
+    " class="formpor" id="exampleInput3" size="lg"
                       :options="options"
                     
                       v-model="selected">
@@ -33,10 +33,10 @@
                     
                     label-for="exampleInput1"
                     description=" ตัวอย่าง ภาษาอังกฤษ GAT ENG">
-        <b-form-input style="border-radius:5px;  
+        <b-form-input style="border-radius:6px;  
       font-size: 17px;
-    border: 0px;    
-    box-shadow: 0 1px 3px #74686833;   padding-top: 10px;
+   
+    padding-top: 10px;
     padding-bottom: 10px;" class="formpor" id="exampleInput1" size="lg" 
                       type="text"
                       required
@@ -531,8 +531,8 @@ methods: {
 
 .formpor{
 
-   
-    border-radius: 3;
+  
+    border-radius: 6;
    
 }
 
