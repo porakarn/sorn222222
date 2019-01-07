@@ -175,9 +175,9 @@
       </b-form-group>
  </div>
    
-      
-       <b-button  type="submit" style="background-color: #33C1C1; border: 0px; padding-left: 46px;
-    padding-right: 46px;">เรียบร้อย</b-button>
+       <b-button style="background-color: #33C1C1; border: 0px; padding-left: 46px;
+    padding-right: 46px;" @click.prevent="next()">ต่อไป</b-button>
+
          <b-button style="background-color: white; border: 0px; padding-left: 36px; color: grey;
     padding-right: 36px;" @click.prevent="prev()">กลับ</b-button>
             </div>
@@ -185,13 +185,13 @@
    <div v-if="step === 5">
 
 
-<b-form-select  :select-size="2" v-model="selected" size="lg"  :options="options" class="mb-3">
+<b-form-select  :select-size="2" v-model="selected_province" size="lg"  :options="options_province" class="mb-3">
     </b-form-select>
 
  <!-- <b-form-select  :select-size="2" v-model="selected2" :options="options2" class="mb-3">
     </b-form-select> -->
 
-  <b-form-group v-if="selected"  id="exampleInputGroup1"
+  <b-form-group   id="exampleInputGroup1"
                     
                     label-for="exampleInput1"
                     description=" เช่น สยาม">
@@ -203,16 +203,104 @@
         </b-form-input>
       </b-form-group>
 
- <b-button  type="submit" style="background-color: #33C1C1; border: 0px; padding-left: 46px;
-    padding-right: 46px;">เรียบร้อย</b-button>
+  <b-button style="background-color: #33C1C1; border: 0px; padding-left: 46px;
+    padding-right: 46px;" @click.prevent="next()">ต่อไป</b-button>
+
          <b-button style="background-color: white; border: 0px; padding-left: 36px; color: grey;
     padding-right: 36px;" @click.prevent="prev()">กลับ</b-button>
 
-              <div class="loading-page" v-if="loading">
-    <p>Loading...</p>
-  </div>
-    
    </div>
+    
+ <div v-if="step === 6">
+
+<b-form-textarea id="textarea1"
+                     v-model="extra"
+                     placeholder="รายละเอียดเพิ่มเติม (ถ้ามี)"
+                     :rows="4"
+                     :max-rows="6">
+    </b-form-textarea>
+<p style="color:#b9b9b9; font-size:13px; margin-top:2px; text-align:center;">เช่น อยากได้ติวเตอร์ ญ อยากได้ติวเตอร์ใจดี</p>
+
+
+  <b-button style="background-color: #33C1C1; border: 0px; padding-left: 46px;
+    padding-right: 46px;" @click.prevent="next()">ต่อไป</b-button>
+
+         <b-button style="background-color: white; border: 0px; padding-left: 36px; color: grey;
+    padding-right: 36px;" @click.prevent="prev()">กลับ</b-button>
+
+   </div>
+    
+<div v-if="step === 7">
+
+
+<b-form-group   id="exampleInputGroup1"
+                    
+                    label-for="exampleInput1"
+                    description="เบอร์ติดต่อ">
+        <b-form-input  class="formpor" id="exampleInput1" size="lg" 
+                      type="text"
+                      v-model="phone"
+                      required
+                      placeholder="เบอร์ติดต่อ">
+        </b-form-input>
+      </b-form-group>
+     
+
+  <b-form-group   id="exampleInputGroup1"
+                    
+                    label-for="exampleInput1"
+                    description="Line">
+        <b-form-input  class="formpor" id="exampleInput1" size="lg" 
+                      type="text"
+                      v-model="line"
+                      required
+                      placeholder="Line">
+        </b-form-input>
+      </b-form-group>
+     
+
+
+ <b-row v-if="line"  class="my-1">
+    <b-col cols="6" >
+
+
+<b-form-group  id="exampleInputGroup3"
+                  
+                    label-for="exampleInput3">
+        <b-form-select  class="formpor" id="exampleInput3" size="lg"
+                      :options="genders"
+                      required
+                      v-model="gender">
+        </b-form-select>
+      </b-form-group>
+
+    </b-col>
+ <b-col cols="6" >
+   <b-form-group  id="exampleInputGroup3"
+                  
+                    label-for="exampleInput3">
+        <b-form-select  class="formpor" id="exampleInput3" size="lg"
+                      :options="grades"
+                      required
+                      v-model="grade">
+        </b-form-select>
+      </b-form-group>
+
+ </b-col>
+ </b-row>
+
+
+
+
+  <b-button style="background-color: #33C1C1; border: 0px; padding-left: 46px;
+    padding-right: 46px;" @click.prevent="next()">ต่อไป</b-button>
+
+         <b-button style="background-color: white; border: 0px; padding-left: 36px; color: grey;
+    padding-right: 36px;" @click.prevent="prev()">กลับ</b-button>
+
+   </div>
+    
+
     
     <br>
   </b-col></b-row>
@@ -247,6 +335,10 @@ export default {
        step:1,
        str5:'',
        subject:'',
+       phone:'',
+       line: '',
+       gender: '',
+       grade: '',
       job: '',
       day: '',
        form: {
@@ -332,6 +424,30 @@ export default {
         {text: 'อาทิตย์', value: 'อาทิตย์'},
 
       ],
+selected_province: null,
+      options_province: [
+        { value: null, text: 'จังหวัด' },
+        { value: 'กรุงเทพ', text: 'กรุงเทพ' },
+        { value: 'นนทบุรี', text: 'นนทบุรี' },
+        { value: 'ปทุมธานี', text: 'ปทุมธานี' },
+        { value: 'สมุทรปราการ', text: 'สมุทรปราการ' },
+        { value: 'เชียงใหม่', text: 'เชียงใหม่' },
+        { value: 'ขอนแก่น', text: 'ขอนแก่น' },
+        { value: 'อื่นๆ', text: 'อื่นๆ' },
+       
+
+    
+      ],
+
+        genders: [
+        { text: 'เพศนักเรียน', value: null },
+       'ชาย', 'หญิง',
+      ],
+        grades: [
+         { text: 'ระดับชั้น', value: null },
+       'มหาลัย', 'ม.6', 'ม.5', 'ม.4', 'ม.3', 'ม.2', 'ม.1', 'ป.6','ป.5','ป.4','ป.3','ป.2','ป.1','อนุบาล','อื่นๆ',
+      ],
+
     }
   },
 
@@ -414,11 +530,10 @@ methods: {
 
 
 .formpor{
-border-top: 0px;
-    border-right: 0px;
-    border-left: 0px;
-    border-radius: 0;
-    padding-left: 4px;
+
+   
+    border-radius: 3;
+   
 }
 
 
