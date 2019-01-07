@@ -531,7 +531,8 @@ methods: {
 
 .formpor{
 
-  
+    font-size: 17px;
+    color: #858484;   
     border-radius: 6;
    
 }
