@@ -122,14 +122,32 @@ var data = {
  
 
 //for createjob to database
-var data234 ={
-_id : 'sdds',
-}
+   var data234 ={
+subject : this.$store.state.testform.subject,
+subjectDetail : this.$store.state.testform.subjectDetail,
+purpose : this.$store.state.testform.purpose,
+level :this.$store.state.testform.level, 
+day : this.$store.state.testform.day, 
+time : this.$store.state.testform.time, 
+duration : this.$store.state.testform.duration, 
+province: this.$store.state.testform.province, 
+location: this.$store.state.testform.location, 
+extra : this.$store.state.testform.extra, 
+
+creator_pic: res.data.user.picture,
+creator_contact: this.$store.state.testform.phone,
+creator_line: this.$store.state.testform.line,
+creator_name: res.data.user.name,
+creator_id_student: res.data.user._id,
+creator_gender: this.$store.state.testform.gender,
+creator_grade: this.$store.state.testform.gender,
+   }
 
 
 
  console.log(data);
  console.log(createPost2);
+ console.log(data234);
  
  
 //   axios.patch('https://frozen-mesa-40722.herokuapp.com/student/update', data)
