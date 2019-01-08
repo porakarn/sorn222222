@@ -286,6 +286,10 @@
         </b-form-select>
       </b-form-group>
 
+<b-button @click="onSubmit" style="background-color: #33C1C1; border: 0px; padding-left: 46px;
+    padding-right: 46px;">ยืนยัน</b-button>
+
+
  </b-col>
  </b-row>
 
@@ -300,8 +304,21 @@
 
    </div>
     
+<div v-if="step === 8">
 
-    
+<p style="text-align:center">ขั้นตอนสุดท้าย 
+ทำการ login Facebook login </p>
+ <div  style="text-align :center">        <b-button  @click.prevent="next()"
+   style="background-color: #415DAE; border: 0px;   
+    width:100%;
+    color:white;
+    font-weight:bold;
+    padding-top: 13px;
+    padding-bottom: 13px;
+    border-radius: 4px;">Facebook Login</b-button> </div> 
+
+
+    </div>
     <br>
   </b-col></b-row>
           </form>
@@ -332,6 +349,7 @@ export default {
       loading: false,
       loading2: false,
       time: '',
+      extra:'',
        step:1,
        str5:'',
        subject:'',
@@ -340,6 +358,7 @@ export default {
        gender: null,
        grade: null,
       job: '',
+      subjectDetail: '',
       day: '',
        form: {
         email: '',
@@ -482,48 +501,57 @@ methods: {
         this.$refs.myModalRef.show() 
     },
     onSubmit(){
-    
+     var por = this.selected_date.filter((obj) => obj );
 
   let createPost = {
       
-        job: this.str5,
-        _creator: this.$store.state.agent._id,
-        day : day,
-        subject : subject,
-        contact: this.$store.state.agent.contact,
-        line: this.$store.state.agent.line,
-        creator_name : this.$store.state.agent.pagename,
-         picture: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTlxhsGV-_-Fxr0-74drOlYw5pi21K32Hq7FZMfk9VzAZTrvLJufg',
-         is_student: 'Agent'
+        subject: this.selected,
+        subjectDetail: this.subjectDetail,
+        purpose : this.selected_purpose,
+        level : this.selected_level,
+        day: por,
+        time: this.time,
+        duration: this.selected_duration,
+        province: this.selected_province,
+        location: this.location,
+        extra: this.extra,
+        phone: this.phone,
+        line: this.line,
+        gender: this.gender,
+        grade: this.grade,
+        
+        
 
       }
    console.log(createPost);
    
+ this.$store.dispatch('settestform', createPost)
+
    
-        axios.post('https://frozen-mesa-40722.herokuapp.com/job/create', createPost)
-          .then((res) => { 
+  //       axios.post('https://frozen-mesa-40722.herokuapp.com/job/create', createPost)
+  //         .then((res) => { 
               
-              console.log(res.data)
+  //             console.log(res.data)
                   
-   this.$refs.myModalRef.hide()
+  //  this.$refs.myModalRef.hide()
      
-       this.form.email = ''
-       this.form.subject = ''
-        this.form.note = ''
-        this.form.tuitionfee = ''
-        this.form.school = ''
-       this.form.dayandtime = ''
-        this.form.location = ''
-        this.form.food = null
-        this.form.gender = null
+  //      this.form.email = ''
+  //      this.form.subject = ''
+  //       this.form.note = ''
+  //       this.form.tuitionfee = ''
+  //       this.form.school = ''
+  //      this.form.dayandtime = ''
+  //       this.form.location = ''
+  //       this.form.food = null
+  //       this.form.gender = null
      
-              this.loading = false
-               this.loading2 = true
-                this.$nuxt.$loading.finish()
+  //             this.loading = false
+  //              this.loading2 = true
+  //               this.$nuxt.$loading.finish()
 
   
-          })
-          .catch(error => console.log(error))
+  //         })
+  //         .catch(error => console.log(error))
     
     }
 },

@@ -13,7 +13,8 @@ const store = () => {
       agent: null,
       student: null,
       job: '',
-      alltutor: []
+      alltutor: [],
+      testform: null,
 
     },
     mutations: {
@@ -42,7 +43,11 @@ const store = () => {
         },
         setalltutor(state, alltutor) {
           state.alltutor = alltutor
-        }
+        },
+      settestform(state, testform) {
+        state.testform = testform
+      }
+
         
     },
     actions: {
@@ -68,6 +73,9 @@ const store = () => {
          setalltutor({commit}, alltutor) {
          commit('setalltutor', alltutor)
        },
+      settestform({ commit }, testform) {
+        commit('settestform', testform)
+      },
 
     }
 
