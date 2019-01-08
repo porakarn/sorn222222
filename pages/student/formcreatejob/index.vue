@@ -1,6 +1,7 @@
 <template>
 <b-container fluid style="padding:0px">
- 
+ <i @click="gohome" style="color:#cacaca; padding:10px; font-size:23px;" class="fa fa-times" aria-hidden="true"> </i>
+
 <b-container fluid>
 <br><br>
   <div> <div class="my-3">
@@ -462,8 +463,14 @@ methods: {
    this.$router.push('/agent/create')
 
     }
+    
 
    ,
+   gohome(){
+   this.$router.push('/homepagetest')
+
+
+   },
      hideModal () {
       this.$refs.myModalRef.hide()
     },

@@ -51,6 +51,7 @@
 
    
 <br>
+<div @click="gokuy">
     <!-- <b-form-select v-model="selected" :options="options" class="mb-3" /> -->
 <b-form-group  id="exampleInputGroup3"
                   
@@ -77,6 +78,7 @@
     width:80%;">ค้นหา</b-button>  
         <!-- <b-button size="lg" style="  background-color: white; border: 0px; padding-left: 66px; color:#33C1C1;
     padding-right: 66px;">สมัครนักเรียน</b-button>   -->
+</div>
 <br><br>
      
 
@@ -345,6 +347,10 @@ export default {
     }
   },
    methods: {
+     gokuy(){
+ this.$router.push('/student/formcreatejob')
+
+     },
      totutor(){
  this.$router.push('/user/fblogin')
 
