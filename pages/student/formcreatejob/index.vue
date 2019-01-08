@@ -140,14 +140,14 @@
        <p style="margin-bottom:15px;color:#dea29c;" v-show="selected_date.length >0"> {{selected_date.toString().split(',').join(' ')}} </p>
         <i  style="float:right; padding-right:12px;font-size:15px; color:grey; margin-bottom:-12px;" class="fa fa-caret-down" aria-hidden="true"></i>
 
-    <b-form-select size="lg" style="border-radius: 6;padding-top: 7px; font-size:17px; margin-bottom: 15px;
-    padding-bottom: 7px;color: #858484;   " multiple :select-size="4" v-model="selected_date" :options="options_date" class="mb-3">
+    <b-form-select size="lg" style="border-radius: 6;padding-top: 10px; font-size:17px; margin-bottom: 15px;
+    padding-bottom: 10px;color: #858484;   " multiple :select-size="4" v-model="selected_date" :options="options_date" class="mb-3">
    
     </b-form-select>
   </div>
 
 
- <b-form-group   id="exampleInputGroup1"
+ <b-form-group v-if="selected_date"   id="exampleInputGroup1"
                     
                     label-for="exampleInput1"
                     description="เช่น 5-7 โมงเย็น">
@@ -160,7 +160,7 @@
         </b-form-input>
       </b-form-group>
  <div  style="text-align :center; "> 
-<b-form-group  id="exampleInputGroup3"
+<b-form-group v-if="time" id="exampleInputGroup3"
                   
                     label-for="exampleInput3">
         <b-form-select style="    
@@ -191,7 +191,7 @@
  <!-- <b-form-select  :select-size="2" v-model="selected2" :options="options2" class="mb-3">
     </b-form-select> -->
 
-  <b-form-group   id="exampleInputGroup1"
+  <b-form-group  v-if="selected_province" id="exampleInputGroup1"
                     
                     label-for="exampleInput1"
                     description=" เช่น สยาม">
@@ -254,7 +254,7 @@
       </b-form-group>
      
 
-  <b-form-group   id="exampleInputGroup1"
+  <b-form-group v-if="phone"id="exampleInputGroup1"
                     
                     label-for="exampleInput1"
                   >
@@ -617,8 +617,8 @@ if (!this.line || !this.phone) {
     font-size: 17px;
     color: #858484;   
     border-radius: 6;
-   padding-top: 7px;
-    padding-bottom: 7px;
+  padding-top: 10px;
+    padding-bottom: 10px;
 }
 
 
