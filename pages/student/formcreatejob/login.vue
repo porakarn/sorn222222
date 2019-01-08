@@ -151,7 +151,7 @@ creator_grade: this.$store.state.testform.gender,
  console.log(data234);
  
  //update student profile in database
-  axios.patch('https://frozen-mesa-40722.herokuapp.com/student/update', data234)
+  axios.patch('https://frozen-mesa-40722.herokuapp.com/student/update', data)
           .then((res) => {   
               console.log(res.data)  
             //   this.loading = false
@@ -163,7 +163,7 @@ creator_grade: this.$store.state.testform.gender,
 
 //create job
 
-  axios.post('https://frozen-mesa-40722.herokuapp.com/job2/create', job)
+  axios.post('https://frozen-mesa-40722.herokuapp.com/job2/create', data234)
           .then((res) => { 
               console.log(job);
               
