@@ -40,6 +40,7 @@ import axios from 'axios';
     mounted() {
         
 
+console.log(this.$store.state.testform);
 
 
 
