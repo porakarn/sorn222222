@@ -306,7 +306,7 @@
     
 <div v-if="step === 8">
 
-<p style="text-align:center">ขั้นตอนสุดท้าย 
+<p style="text-align:center">ขั้นตอนสุดท้าย ระบบจะทำการสร้างโปรไฟล์ให้คุณ กรุณา
 ทำการ login Facebook login </p>
  <div  style="text-align :center">        <b-button  @click.prevent="next()"
    style="background-color: #415DAE; border: 0px;   
