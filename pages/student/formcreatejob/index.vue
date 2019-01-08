@@ -2,7 +2,7 @@
 <b-container fluid style="padding:0px">
  <i @click="gohome" style="color:#eaeaea; padding:10px; font-size:23px;" class="fa fa-times" aria-hidden="true"> </i>
 
-<b-container fluid style="padding:35px!important;">
+<b-container fluid style="padding:30px!important;">
 <br>
   <div> <div class="my-3">
  
