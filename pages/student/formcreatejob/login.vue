@@ -81,6 +81,8 @@ const response6 = {
  axios.post('https://frozen-mesa-40722.herokuapp.com/student/login', response6)
           .then((res) => { 
               console.log(res.data);
+              console.log(res.data.user);
+              
               
                   // var vm = this
                                 //  this.login()
@@ -91,31 +93,41 @@ const response6 = {
   //             console.log(res.data)
 
 
-  //Update profile
+  //Update profile to store and database
   // create real job 
 
+//for update student profile in database
 var data = {
     // name: res.name
-    _id: res.user._id,
+    _id: res.data.user._id,
     phone: this.$store.state.testform.phone,
     line: this.$store.state.testform.line,
     gender: this.$store.state.testform.gender,
     grade: this.$store.state.testform.grade,
 }
 
+//for update student profile in store
   let createPost2 = {
        
-         _id:  res.user._id,
+         _id:  res.data.user._id,
          phone: this.$store.state.testform.phone,
          line: this.$store.state.testform.line,
          gender: this.$store.state.testform.gender,
          grade: this.$store.state.testform.grade,
-        name: res.user.name,
-        email : res.user.email,
-        picture: res.user.picture,
-        fbid: res.user.fbid
+        name: res.data.user.name,
+        email : res.data.user.email,
+        picture: res.data.user.picture,
+        fbid: res.data.user.fbid
       }
  
+
+//for createjob to database
+var data234 ={
+_id : 'sdds',
+}
+
+
+
  console.log(data);
  console.log(createPost2);
  
