@@ -150,25 +150,39 @@ creator_grade: this.$store.state.testform.gender,
  console.log(createPost2);
  console.log(data234);
  
- 
-//   axios.patch('https://frozen-mesa-40722.herokuapp.com/student/update', data)
-//           .then((res) => {   
-//               console.log(res.data)  
-//             //   this.loading = false
-//             //    this.loading2 = true
-//             //     this.$nuxt.$loading.finish()
-//           })
-//           .catch(error => console.log(error))
+ //update student profile in database
+  axios.patch('https://frozen-mesa-40722.herokuapp.com/student/update', data234)
+          .then((res) => {   
+              console.log(res.data)  
+            //   this.loading = false
+            //    this.loading2 = true
+            //     this.$nuxt.$loading.finish()
+          })
+          .catch(error => console.log(error))
+
+
+//create job
+
+  axios.post('https://frozen-mesa-40722.herokuapp.com/job2/create', job)
+          .then((res) => { 
+              console.log(job);
+              
+              console.log(res.data)
+
+          })
+          .catch(error => console.log(error))
 
 
 
-//testfornow
-//      this.$store.dispatch('setToken', res.data.token)
-  
-//    this.$router.push('/agent/createprofilefirst')
-//     this.$store.dispatch('setUser', null)
-//         console.log('res444')
-//         console.log('res444')
+
+//update student profile in store
+     this.$store.dispatch('setToken', res.data.token)
+     this.$store.dispatch('setStudent', createPost2 )
+
+  //  this.$router.push('/agent/createprofilefirst')
+    this.$store.dispatch('setUser', null)
+        console.log('res444')
+        console.log('res444')
 
 //testfornow
 
@@ -190,7 +204,11 @@ creator_grade: this.$store.state.testform.gender,
 console.log(error) 
 console.log('error');
 
-          } )
+          } ).then((res) => {
+   this.$router.push('/student/formcreatejob/success')
+
+
+          }) 
 
 
 console.log('r6');
