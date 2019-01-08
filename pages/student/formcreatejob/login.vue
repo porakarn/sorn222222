@@ -96,7 +96,7 @@ const response6 = {
 
 var data = {
     // name: res.name
-    _id: this.res._id,
+    _id: res.user._id,
     phone: this.$store.state.testform.phone,
     line: this.$store.state.testform.line,
     gender: this.$store.state.testform.gender,
@@ -105,16 +105,20 @@ var data = {
 
   let createPost2 = {
        
-         _id: this.res._id,
+         _id:  res.user._id,
          phone: this.$store.state.testform.phone,
          line: this.$store.state.testform.line,
          gender: this.$store.state.testform.gender,
          grade: this.$store.state.testform.grade,
-        // name: this.$store.state.student.name,
-        // email : this.$store.state.student.email,
-        // picture: this.$store.state.student.picture,
-        // fbid: this.$store.state.student.fbid
+        name: res.user.name,
+        email : res.user.email,
+        picture: res.user.picture,
+        fbid: res.user.fbid
       }
+ 
+ console.log(data);
+ console.log(createPost2);
+ 
  
 //   axios.patch('https://frozen-mesa-40722.herokuapp.com/student/update', data)
 //           .then((res) => {   

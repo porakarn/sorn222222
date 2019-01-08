@@ -308,7 +308,7 @@
 
 <p style="text-align:center">ขั้นตอนสุดท้าย ระบบจะทำการสร้างโปรไฟล์ให้คุณ กรุณา
 ทำการ login Facebook login </p>
- <div  style="text-align :center">        <b-button  @click.prevent="next()"
+ <div  style="text-align :center">        <b-button @click="tofblogin"
    style="background-color: #415DAE; border: 0px;   
     width:100%;
     color:white;
@@ -488,6 +488,10 @@ methods: {
    gohome(){
    this.$router.push('/homepagetest')
 
+
+   },
+   tofblogin(){
+   this.$router.push('/student/formcreatejob/login')
 
    },
      hideModal () {
