@@ -3,7 +3,7 @@
  <i @click="gohome" style="color:#eaeaea; padding:10px; font-size:23px;" class="fa fa-times" aria-hidden="true"> </i>
 
 <b-container fluid style="padding:35px!important;">
-<br><br>
+<br>
   <div> <div class="my-3">
  
 </div>
@@ -11,7 +11,7 @@
 <b-row>
   <b-col offset-lg="3" lg="6">
               <div v-if="step === 1">
-
+<br>
   <div  style="text-align :center; "> 
 <b-form-group  id="exampleInputGroup3"
                   
@@ -62,13 +62,8 @@
 
 
 <br><br><br><br>
- <div  style="text-align :center">        <b-button  @click.prevent="next()"
-   style="background-color: #EFBAB5; border: 0px;   
-    width:100%;
-    
-    padding-top: 13px;
-    padding-bottom: 13px;
-    border-radius: 4px;">เรียบร้อย</b-button> </div> 
+ <div  style="text-align :center">        <b-button class="bnbred"  @click.prevent="next()"
+   >เรียบร้อย</b-button> </div> 
 <br><br><br><br><br>
     
  
@@ -77,7 +72,7 @@
               </div>
 
  <div v-if="step === 2">
-   <p style="font-size:20px"></p>
+   <p style="font-size:20px"> จุดประสงค์การเรียน</p>
  <b-form-group >
       <b-form-radio-group v-model="selected_purpose"
                           :options="options_purpose"
@@ -107,19 +102,14 @@
 <br><br>
 
 
- <div  style="text-align :center">       <b-button  @click.prevent="next()"
-   style="background-color: #EFBAB5; border: 0px;  width:80%
-    
-    padding-top: 11px!important;
-    padding-bottom: 11px!important;
-    border-radius: 4px;">เรียบร้อย</b-button> 
+
+
+ <div  style="text-align :center">        <b-button class="bnbred"  @click.prevent="next()"
+   >เรียบร้อย</b-button> </div> 
+  
+ <div  style="text-align :center">  
+        <b-button class="bnbback" @click.prevent="prev()">กลับ</b-button>
  </div>
-        <b-button style="background-color: #33C1C1; border: 0px; padding-left: 46px;
-    padding-right: 46px;" @click.prevent="next()">ต่อไป</b-button>
-
-        <b-button style="background-color: white; border: 0px; padding-left: 36px;  color: grey;
-    padding-right: 36px;" @click.prevent="prev()">กลับ</b-button>
-
     </div>
 
 
@@ -134,18 +124,24 @@
                           name="plainStacked" />
     </b-form-group>
 
-        <b-button style="background-color: #33C1C1; border: 0px; padding-left: 46px;
-    padding-right: 46px;" @click.prevent="next()">ต่อไป</b-button>
-
-        <b-button style="background-color: white; border: 0px; padding-left: 36px;  color: grey;
-    padding-right: 36px;" @click.prevent="prev()">กลับ</b-button>
-
+        <div  style="text-align :center">        <b-button class="bnbred"  @click.prevent="next()"
+   >เรียบร้อย</b-button> </div> 
+  
+ <div  style="text-align :center">  
+        <b-button class="bnbback" @click.prevent="prev()">กลับ</b-button>
+ </div>
     </div>
 
    <div v-if="step === 4">
 
       <div>
-    <b-form-select size="lg" style="border-radius: 6;" multiple :select-size="4" v-model="selected_date" :options="options_date" class="mb-3">
+
+       <p style="margin-bottom:15px;color:#dea29c;" v-show="selected_date.length >0"> {{selected_date.toString().split(',').join(' ')}} </p>
+        <i  style="float:right; padding-right:12px;font-size:15px; color:grey; margin-bottom:-12px;" class="fa fa-caret-down" aria-hidden="true"></i>
+
+    <b-form-select size="lg" style="border-radius: 6;padding-top: 7px; font-size:17px; margin-bottom: 15px;
+    padding-bottom: 7px;color: #858484;   " multiple :select-size="4" v-model="selected_date" :options="options_date" class="mb-3">
+   
     </b-form-select>
   </div>
 
@@ -177,11 +173,12 @@
       </b-form-group>
  </div>
    
-       <b-button style="background-color: #33C1C1; border: 0px; padding-left: 46px;
-    padding-right: 46px;" @click.prevent="next()">ต่อไป</b-button>
-
-         <b-button style="background-color: white; border: 0px; padding-left: 36px; color: grey;
-    padding-right: 36px;" @click.prevent="prev()">กลับ</b-button>
+      <div  style="text-align :center">        <b-button class="bnbred"  @click.prevent="next()"
+   >เรียบร้อย</b-button> </div> 
+  
+ <div  style="text-align :center">  
+        <b-button class="bnbback" @click.prevent="prev()">กลับ</b-button>
+ </div>
             </div>
 
    <div v-if="step === 5">
@@ -205,12 +202,17 @@
         </b-form-input>
       </b-form-group>
 
-  <b-button style="background-color: #33C1C1; border: 0px; padding-left: 46px;
+  <!-- <b-button style="background-color: #33C1C1; border: 0px; padding-left: 46px;
     padding-right: 46px;" @click.prevent="next()">ต่อไป</b-button>
 
          <b-button style="background-color: white; border: 0px; padding-left: 36px; color: grey;
-    padding-right: 36px;" @click.prevent="prev()">กลับ</b-button>
-
+    padding-right: 36px;" @click.prevent="prev()">กลับ</b-button> -->
+ <div  style="text-align :center">        <b-button class="bnbred"  @click.prevent="next()"
+   >เรียบร้อย</b-button> </div> 
+  
+ <div  style="text-align :center">  
+        <b-button class="bnbback" @click.prevent="prev()">กลับ</b-button>
+ </div>
    </div>
     
  <div v-if="step === 6">
@@ -224,11 +226,12 @@
 <p style="color:#b9b9b9; font-size:13px; margin-top:2px; text-align:center;">เช่น อยากได้ติวเตอร์ ญ อยากได้ติวเตอร์ใจดี</p>
 
 
-  <b-button style="background-color: #33C1C1; border: 0px; padding-left: 46px;
-    padding-right: 46px;" @click.prevent="next()">ต่อไป</b-button>
-
-         <b-button style="background-color: white; border: 0px; padding-left: 36px; color: grey;
-    padding-right: 36px;" @click.prevent="prev()">กลับ</b-button>
+  <div  style="text-align :center">        <b-button class="bnbred"  @click.prevent="next()"
+   >เรียบร้อย</b-button> </div> 
+  
+ <div  style="text-align :center">  
+        <b-button class="bnbback" @click.prevent="prev()">กลับ</b-button>
+ </div>
 
    </div>
     
@@ -238,7 +241,7 @@
 <b-form-group   id="exampleInputGroup1"
                     
                     label-for="exampleInput1"
-                    description="เบอร์ติดต่อ">
+                   >
         <b-form-input  class="formpor" id="exampleInput1" size="lg" 
                       type="text"
                       v-model="phone"
@@ -251,7 +254,7 @@
   <b-form-group   id="exampleInputGroup1"
                     
                     label-for="exampleInput1"
-                    description="Line">
+                  >
         <b-form-input  class="formpor" id="exampleInput1" size="lg" 
                       type="text"
                       v-model="line"
@@ -293,14 +296,12 @@
  </b-col>
  </b-row>
 
-<b-button @click="onSubmit" style="background-color: #33C1C1; border: 0px; padding-left: 46px;
-    padding-right: 46px;">ยืนยัน</b-button>
-
-
-
-
-         <b-button style="background-color: white; border: 0px; padding-left: 36px; color: grey;
-    padding-right: 36px;" @click.prevent="prev()">กลับ</b-button>
+ <div  style="text-align :center">        <b-button class="bnbred"  @click.prevent="onSubmit()"
+   >เรียบร้อย</b-button> </div> 
+  
+ <div  style="text-align :center">  
+        <b-button class="bnbback" @click.prevent="prev()">กลับ</b-button>
+ </div>
 
    </div>
     
@@ -487,7 +488,7 @@ methods: {
     },
      nextlast() {
 if (!this.line || !this.phone) {
-  this.string6 = 'กรุณากรอกข้อมูลให้ครบ'
+  this.string6 = 'กรุณากรอกข้อมูลให้ครบน้า :)'
 }  else {
         this.step++;
    this.string6 = ''
@@ -589,14 +590,32 @@ if (!this.line || !this.phone) {
       
 <style scoped>
 
+.bnbred{
+  background-color: #EFBAB5; border: 0px;   
+    width:100%;
+    color:white!important;
+    padding-top: 13px;
+    padding-bottom: 13px;
+    border-radius: 4px;
+}
 
+.bnbback{
+    background-color: #fafafa; border: 0px;   
+    width:100%;
+    color:#c6c6c6!important;
+    padding-top: 13px;
+    padding-bottom: 13px;
+    border-radius: 4px;
+    margin-top:10px;
+}
 
 .formpor{
 
     font-size: 17px;
     color: #858484;   
     border-radius: 6;
-   
+   padding-top: 7px;
+    padding-bottom: 7px;
 }
 
 
