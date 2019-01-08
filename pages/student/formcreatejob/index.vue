@@ -101,14 +101,15 @@
 
 <br><br>
 
-
+<br>
 
 
  <div  style="text-align :center">        <b-button class="bnbred"  @click.prevent="next()"
    >เรียบร้อย</b-button> </div> 
   
- <div  style="text-align :center">  
-        <b-button class="bnbback" @click.prevent="prev()">กลับ</b-button>
+ <div style="text-align :center" >  
+        <b-button class="bnbback" @click.prevent="prev()">
+ กลับ</b-button>
  </div>
     </div>
 
@@ -123,7 +124,7 @@
                           stacked
                           name="plainStacked" />
     </b-form-group>
-
+<br><br>
         <div  style="text-align :center">        <b-button class="bnbred"  @click.prevent="next()"
    >เรียบร้อย</b-button> </div> 
   
@@ -172,7 +173,7 @@
         </b-form-select>
       </b-form-group>
  </div>
-   
+   <br><br>
       <div  style="text-align :center">        <b-button class="bnbred"  @click.prevent="next()"
    >เรียบร้อย</b-button> </div> 
   
@@ -207,6 +208,8 @@
 
          <b-button style="background-color: white; border: 0px; padding-left: 36px; color: grey;
     padding-right: 36px;" @click.prevent="prev()">กลับ</b-button> -->
+<br>
+<br>
  <div  style="text-align :center">        <b-button class="bnbred"  @click.prevent="next()"
    >เรียบร้อย</b-button> </div> 
   
@@ -225,7 +228,7 @@
     </b-form-textarea>
 <p style="color:#b9b9b9; font-size:13px; margin-top:2px; text-align:center;">เช่น อยากได้ติวเตอร์ ญ อยากได้ติวเตอร์ใจดี</p>
 
-
+<br><br>
   <div  style="text-align :center">        <b-button class="bnbred"  @click.prevent="next()"
    >เรียบร้อย</b-button> </div> 
   
@@ -295,7 +298,7 @@
 
  </b-col>
  </b-row>
-
+<br><br>
  <div  style="text-align :center">        <b-button class="bnbred"  @click.prevent="onSubmit()"
    >เรียบร้อย</b-button> </div> 
   
@@ -600,13 +603,13 @@ if (!this.line || !this.phone) {
 }
 
 .bnbback{
-    background-color: #fafafa; border: 0px;   
-    width:100%;
+    background-color: white; border: 0px;   
+    width:30%;
     color:#c6c6c6!important;
     padding-top: 13px;
     padding-bottom: 13px;
     border-radius: 4px;
-    margin-top:10px;
+    margin-top:20px;
 }
 
 .formpor{
