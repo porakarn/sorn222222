@@ -165,7 +165,6 @@ creator_grade: this.$store.state.testform.gender,
 
   axios.post('https://frozen-mesa-40722.herokuapp.com/job2/create', data234)
           .then((res) => { 
-              console.log(job);
               
               console.log(res.data)
 

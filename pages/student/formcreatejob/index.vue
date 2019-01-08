@@ -2,7 +2,7 @@
 <b-container fluid style="padding:0px">
  <i @click="gohome" style="color:#eaeaea; padding:10px; font-size:23px;" class="fa fa-times" aria-hidden="true"> </i>
 
-<b-container fluid>
+<b-container fluid style="padding:35px!important;">
 <br><br>
   <div> <div class="my-3">
  
@@ -77,7 +77,8 @@
               </div>
 
  <div v-if="step === 2">
- <b-form-group style=" " label="จุดประสงค์ของการเรียน">
+   <p style="font-size:20px"></p>
+ <b-form-group >
       <b-form-radio-group v-model="selected_purpose"
                           :options="options_purpose"
                           plain
@@ -88,14 +89,14 @@
  <!-- <b-form-select  :select-size="2" v-model="selected2" :options="options2" class="mb-3">
     </b-form-select> -->
 
-  <b-form-group v-if="selected"  id="exampleInputGroup1"
-                    
+  <b-form-group   id="exampleInputGroup1"
+                    style="margin-top:-7px;"
                     label-for="exampleInput1"
                     description="เช่น ต้องการสอบเข้าเตรียมอุดม">
         <b-form-input  class="formpor" id="exampleInput1" size="lg" 
                       type="text"
                       required
-                      v-model="form"
+                      v-model="other"
                       placeholder="อื่นๆ">
         </b-form-input>
 
@@ -124,6 +125,7 @@
 
     <div v-if="step === 3">
 
+<p style="font-size:20px;">ระดับชั้น</p>
  <b-form-group >
       <b-form-radio-group v-model="selected_level"
                           :options="options_level"
@@ -143,7 +145,7 @@
    <div v-if="step === 4">
 
       <div>
-    <b-form-select style="border-radius: 6;" multiple :select-size="4" v-model="selected_date" :options="options_date" class="mb-3">
+    <b-form-select size="lg" style="border-radius: 6;" multiple :select-size="4" v-model="selected_date" :options="options_date" class="mb-3">
     </b-form-select>
   </div>
 
@@ -286,18 +288,16 @@
         </b-form-select>
       </b-form-group>
 
-<b-button @click="onSubmit" style="background-color: #33C1C1; border: 0px; padding-left: 46px;
-    padding-right: 46px;">ยืนยัน</b-button>
 
 
  </b-col>
  </b-row>
 
+<b-button @click="onSubmit" style="background-color: #33C1C1; border: 0px; padding-left: 46px;
+    padding-right: 46px;">ยืนยัน</b-button>
 
 
 
-  <b-button style="background-color: #33C1C1; border: 0px; padding-left: 46px;
-    padding-right: 46px;" @click.prevent="next()">ต่อไป</b-button>
 
          <b-button style="background-color: white; border: 0px; padding-left: 36px; color: grey;
     padding-right: 36px;" @click.prevent="prev()">กลับ</b-button>
@@ -322,6 +322,8 @@
     <br>
   </b-col></b-row>
           </form>
+
+          <P style="color:red; text-align:center;">{{string6}}</P>
           <div class="loading-page" v-if="loading2">
     <p style="color: #54c686; margin-top: 7px;"><i class="fa fa-check-circle" aria-hidden="true"></i>
  เรียบร้อย</p>
@@ -360,10 +362,12 @@ export default {
       job: '',
       subjectDetail: '',
       day: '',
+      string6:'',
        form: {
         email: '',
         subject: '',
         note: '',
+        other: '',
         tuitionfee: '',
         school: '',
         dayandtime: '',
@@ -476,8 +480,20 @@ methods: {
       this.step--;
     },
     next() {
+
+
+
       this.step++;
     },
+     nextlast() {
+if (!this.line || !this.phone) {
+  this.string6 = 'กรุณากรอกข้อมูลให้ครบ'
+}  else {
+        this.step++;
+   this.string6 = ''
+}
+
+     },
     nextPage(){
    this.$router.push('/agent/create')
 
@@ -511,7 +527,7 @@ methods: {
       
         subject: this.selected,
         subjectDetail: this.subjectDetail,
-        purpose : this.selected_purpose,
+        purpose : this.other ? this.other : this.selected_purpose ,
         level : this.selected_level,
         day: por,
         time: this.time,
@@ -528,8 +544,15 @@ methods: {
 
       }
    console.log(createPost);
+   if (!this.line || !this.phone) {
+  this.string6 = 'กรุณากรอกข้อมูลให้ครบ'
+}  else {
+        this.step++;
+         this.$store.dispatch('settestform', createPost)
+
+   this.string6 = ''
+}
    
- this.$store.dispatch('settestform', createPost)
 
    
   //       axios.post('https://frozen-mesa-40722.herokuapp.com/job/create', createPost)
