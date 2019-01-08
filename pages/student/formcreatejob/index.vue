@@ -1,6 +1,6 @@
 <template>
 <b-container fluid style="padding:0px">
- <i @click="gohome" style="color:#cacaca; padding:10px; font-size:23px;" class="fa fa-times" aria-hidden="true"> </i>
+ <i @click="gohome" style="color:#eaeaea; padding:10px; font-size:23px;" class="fa fa-times" aria-hidden="true"> </i>
 
 <b-container fluid>
 <br><br>
@@ -143,7 +143,7 @@
    <div v-if="step === 4">
 
       <div>
-    <b-form-select multiple :select-size="4" v-model="selected_date" :options="options_date" class="mb-3">
+    <b-form-select style="border-radius: 6;" multiple :select-size="4" v-model="selected_date" :options="options_date" class="mb-3">
     </b-form-select>
   </div>
 
@@ -164,12 +164,11 @@
 <b-form-group  id="exampleInputGroup3"
                   
                     label-for="exampleInput3">
-        <b-form-select style="     font-size: 17px;
-    color: #858484;   border-radius: 5px; 
-    
-        border: 0px;
-    box-shadow: 0 1px 3px #74686833;" class="formpor" id="exampleInput3" size="lg"
-                      :options="options_duration"
+        <b-form-select style="    
+       border-radius: 6;
+     
+       " class="formpor" id="exampleInput3" size="lg"
+                      :options="options_duration" 
                     
                       v-model="selected_duration">
         </b-form-select>
@@ -186,7 +185,7 @@
    <div v-if="step === 5">
 
 
-<b-form-select  :select-size="2" v-model="selected_province" size="lg"  :options="options_province" class="mb-3">
+<b-form-select style="border-radius: 6;"  :select-size="2" v-model="selected_province" size="lg"  :options="options_province" class="mb-3">
     </b-form-select>
 
  <!-- <b-form-select  :select-size="2" v-model="selected2" :options="options2" class="mb-3">
@@ -268,7 +267,7 @@
 <b-form-group  id="exampleInputGroup3"
                   
                     label-for="exampleInput3">
-        <b-form-select  class="formpor" id="exampleInput3" size="lg"
+        <b-form-select style="border-radius: 6;"  class="formpor" id="exampleInput3" size="lg"
                       :options="genders"
                       required
                       v-model="gender">
@@ -280,7 +279,7 @@
    <b-form-group  id="exampleInputGroup3"
                   
                     label-for="exampleInput3">
-        <b-form-select  class="formpor" id="exampleInput3" size="lg"
+        <b-form-select  style="border-radius: 6;" class="formpor" id="exampleInput3" size="lg"
                       :options="grades"
                       required
                       v-model="grade">
@@ -338,8 +337,8 @@ export default {
        subject:'',
        phone:'',
        line: '',
-       gender: '',
-       grade: '',
+       gender: null,
+       grade: null,
       job: '',
       day: '',
        form: {
@@ -355,16 +354,16 @@ export default {
         checked: []
       },
       foods: [
-        { text: 'ระดับชั้น', value: null },
+        { text: 'ระดับชั้น', value: null , disabled: true },
        'มหาลัย', 'ม.6', 'ม.5', 'ม.4', 'ม.3', 'ม.2', 'ม.1', 'ป.6','ป.5','ป.4','ป.3','ป.2','ป.1','อนุบาล','อื่นๆ',
       ],
        genders: [
-        { text: 'เพศนักเรียน', value: null },
+        { text: 'เพศนักเรียน', value: null, disabled: true },
        'ชาย', 'หญิง',
       ],
        selected: null,
       options: [
-        { value: null, text: 'วิชาที่อยากเรียน' },
+        { value: null, text: 'วิชาที่อยากเรียน', disabled: true },
         { value: 'ENG', text: 'ENG' },
         { value: 'คณิต', text: 'คณิตศาสตร์' },
         { value: 'วิทย์', text: 'วิทยาศาสตร์' },
@@ -406,7 +405,7 @@ export default {
       ],
     selected_duration: null,
       options_duration: [
-      
+        { value:  null , text: 'สนใจเรียนแบบไหน', disabled: true },
         { value: ' เรียนสั้น 1- 3 ครั้ง', text: 'เรียนสั้น 1- 3 ครั้ง' },
         { value: 'เรียน 4 - 7 ครั้ง', text: 'เรียน 4 - 7 ครั้ง' },
         { value: 'เรียนยาว ( 8 ครั้งขึ้นไป )', text: 'เรียนยาว ( 8 ครั้งขึ้นไป )' },
@@ -414,8 +413,9 @@ export default {
 
     
       ],
-       selected_date: [], // Must be an array reference!
+       selected_date: [null], // Must be an array reference!
       options_date: [
+        {text: 'วันที่เรียน', value: null , disabled: true},
         {text: 'จันทร์', value: 'จันทร์'},
         {text: 'อังคาร', value: 'อังคาร'},
         {text: 'พุธ', value: 'พุธ'},
@@ -427,7 +427,7 @@ export default {
       ],
 selected_province: null,
       options_province: [
-        { value: null, text: 'จังหวัด' },
+        { value: null, text: 'จังหวัด', disabled: true },
         { value: 'กรุงเทพ', text: 'กรุงเทพ' },
         { value: 'นนทบุรี', text: 'นนทบุรี' },
         { value: 'ปทุมธานี', text: 'ปทุมธานี' },
@@ -441,11 +441,11 @@ selected_province: null,
       ],
 
         genders: [
-        { text: 'เพศนักเรียน', value: null },
+        { text: 'เพศนักเรียน', value: null, disabled: true },
        'ชาย', 'หญิง',
       ],
         grades: [
-         { text: 'ระดับชั้น', value: null },
+         { text: 'ระดับชั้น', value: null, disabled: true },
        'มหาลัย', 'ม.6', 'ม.5', 'ม.4', 'ม.3', 'ม.2', 'ม.1', 'ป.6','ป.5','ป.4','ป.3','ป.2','ป.1','อนุบาล','อื่นๆ',
       ],
 
