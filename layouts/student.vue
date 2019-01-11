@@ -20,7 +20,7 @@
                 <b-nav-item href="#">งานของคุณ</b-nav-item>
                 <b-nav-item href="#">โปรไฟล์ของคุณ</b-nav-item> -->
             <b-nav-item  style=" color:#345d46;   padding-right: 65px;">   <nuxt-link class="nav-item" style="color:#345d46; " to="/student/alltutorstudent">  <i class="fa fa-search " aria-hidden="true"></i>  Search Tutor </nuxt-link></b-nav-item>
-             <b-nav-item  style="    padding-right: 65px;">  <nuxt-link class="nav-item" style="color:#345d46; " to="/student/createjob">  <i class="fa fa-pencil" aria-hidden="true"></i> Create Post  </nuxt-link></b-nav-item>
+             <b-nav-item  style="    padding-right: 65px;">  <nuxt-link class="nav-item" style="color:#345d46; " to="/newjob/myjob">  <i class="fa fa-pencil" aria-hidden="true"></i> Create Post  </nuxt-link></b-nav-item>
              <b-nav-item  style="    padding-right: 65px;"><nuxt-link class="nav-item" style="color:#345d46; " to="/student/yourjob"> <i class="fa fa-book" aria-hidden="true"></i> Message </nuxt-link></b-nav-item>
              <b-nav-item style="    padding-right: 65px;"><nuxt-link class="nav-item" style="color:#345d46; " to="/student/profile"><i class="fa fa-user-circle" aria-hidden="true"></i> Profile </nuxt-link></b-nav-item>
               <b-nav-item  @click="logout" style="    padding-right: 100px;"><nuxt-link  style="color:#345d46; " to="/choose"><i class="fa fa-sign-out" aria-hidden="true"></i> Logout </nuxt-link></b-nav-item>
@@ -58,7 +58,7 @@
 
 <b-col class="porakarn"  cols="3" style="text-align: center;" >
 
-<nuxt-link  to="/student/createjob"><div><i style="font-size: 31px; color: #7f8082;"  class="fa fa-plus-square-o nav-item " aria-hidden="true"></i>
+<nuxt-link  to="/newjob/myjob"><div><i style="font-size: 31px; color: #7f8082;"  class="fa fa-plus-square-o nav-item " aria-hidden="true"></i>
 </div>
 </nuxt-link>
 

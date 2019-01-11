@@ -33,7 +33,7 @@
 
 <br><br>
 
- <div  style="text-align :center">       <nuxt-link class="nav-item" style="color:#345d46; " to="/student/createjob">   <b-button 
+ <div  style="text-align :center">       <nuxt-link class="nav-item" style="color:#345d46; " to="/newjob/myjob">   <b-button 
    style="background-color: #EFBAB5; border: 0px;     padding-left: 64px;
     padding-right: 64px;
     

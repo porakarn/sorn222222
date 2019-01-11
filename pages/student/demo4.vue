@@ -180,7 +180,7 @@
 " >
  มีติวเตอร์อีกมากกว่า 200 คน</p>
      
-   <div  style="text-align :center">       <nuxt-link class="nav-item" style="color:#345d46; " to="/student/createjob">   <b-button style="background-color: #33C1C1; border: 0px; padding-left: 46px;
+   <div  style="text-align :center">       <nuxt-link class="nav-item" style="color:#345d46; " to="/newjob/myjob">   <b-button style="background-color: #33C1C1; border: 0px; padding-left: 46px;
     padding-right: 46px;">โพสหาติวเตอร์</b-button></nuxt-link> </div> 
 
 <br>

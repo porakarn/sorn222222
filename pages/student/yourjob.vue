@@ -11,7 +11,7 @@
 
    <p style="    text-align: center;
 " v-if="courses.length < 1" >คุณยังไม่มีงานที่โพสไว้</p>
-   <div v-if="courses.length < 1" style="text-align :center">       <nuxt-link class="nav-item" style="color:#345d46; " to="/student/createjob">   <b-button style="background-color: #33C1C1; border: 0px; padding-left: 46px;
+   <div v-if="courses.length < 1" style="text-align :center">       <nuxt-link class="nav-item" style="color:#345d46; " to="/newjob/myjob">   <b-button style="background-color: #33C1C1; border: 0px; padding-left: 46px;
     padding-right: 46px;">โพสงาน</b-button></nuxt-link> </div>  
  <div v-for="course in courses" >
 
