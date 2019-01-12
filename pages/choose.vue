@@ -16,6 +16,7 @@
 <b-col md="6" offset-md="3">
 <img centered style="width :95%" src="https://www.sorns.co/wp-content/uploads/2018/01/sds.png" alt="">
     
+    
 </b-col></b-row>
     </b-container>
 </template>
